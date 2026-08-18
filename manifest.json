@@ -1,0 +1,21 @@
+{
+  "name": "Bible Stories Comics",
+  "short_name": "Bible Comics",
+  "description": "An interactive comic book experience bringing classic Bible stories to life. Play offline!",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "portrait-primary",
+  "background_color": "#1a1a2e",
+  "theme_color": "#e94560",
+  "categories": ["games", "entertainment", "comics", "books"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "100x100",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    }
+  ]
+}

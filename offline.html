@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Bible Stories Comics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@700;900&family=Bangers&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            background: radial-gradient(circle at 50% 50%, #0f3460, #1a1a2e);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .offline-card {
+            background: #fff;
+            color: #000;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 0 0 4px #e94560;
+            max-width: 480px;
+            border: 4px solid #e94560;
+            transform: rotate(-2deg);
+        }
+
+        .offline-card h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 3rem;
+            color: #e94560;
+            margin: 0 0 1rem;
+            text-shadow: 3px 3px 0 #000;
+        }
+
+        .offline-card .subtitle {
+            font-family: 'Baloo 2', cursive;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .offline-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        .offline-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: #0f3460;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.9rem;
+            border: 3px solid #000;
+            box-shadow: 4px 4px 0 #000;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .offline-card a:hover {
+            transform: translateY(-3px) translateX(-3px);
+            box-shadow: 6px 6px 0 #000;
+        }
+
+        .comic-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#e94560">
+</head>
+
+<body>
+    <div class="offline-card">
+        <div class="comic-icon">📡</div>
+        <h1>You're Offline!</h1>
+        <div class="subtitle">No Internet Connection</div>
+        <p>It looks like you're not connected to the internet. But don't worry — the Bible Stories Comics have been
+            cached and are ready to read offline!</p>
+        <p>Navigate to any of the stories below or use the back button to return to a previously loaded page.</p>
+        <a href="/">Back to Bible Stories</a>
+    </div>
+</body>
+
+</html>
