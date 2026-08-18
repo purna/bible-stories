@@ -1,7 +1,7 @@
 const CACHE_VERSION = 'v1';
 const CACHE_NAME = 'bible-stories-cache-' + CACHE_VERSION;
 const RUNTIME_CACHE_NAME = 'bible-stories-runtime-' + CACHE_VERSION;
-const OFFLINE_PAGE = 'offline.html';
+const OFFLINE_PAGE = new URL('offline.html', self.location).href;
 
 const MANIFEST_URLS = [
   'precache-manifest.json',
