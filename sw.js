@@ -1,14 +1,14 @@
 const CACHE_VERSION = 'v1';
 const CACHE_NAME = 'bible-stories-cache-' + CACHE_VERSION;
 const RUNTIME_CACHE_NAME = 'bible-stories-runtime-' + CACHE_VERSION;
-const OFFLINE_PAGE = '/offline.html';
+const OFFLINE_PAGE = 'offline.html';
 
 const MANIFEST_URLS = [
-  '/precache-manifest.json',
-  '/Daniel/precache-manifest.json',
-  '/Eiljah/precache-manifest.json',
-  '/Jonah/precache-manifest.json',
-  '/Noah/precache-manifest.json'
+  'precache-manifest.json',
+  'Daniel/precache-manifest.json',
+  'Eiljah/precache-manifest.json',
+  'Jonah/precache-manifest.json',
+  'Noah/precache-manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
