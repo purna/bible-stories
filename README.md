@@ -2,7 +2,7 @@
 
 Welcome to the Bible Stories Interactive Comics project! This repository contains a collection of web-based, interactive comics that bring classic stories from the Bible to life.
 
-You can view the main index of all comics [here](https://nigel-morris.github.io/bible-stories/).
+You can view the main index of all comics [here](https://purna.github.io/bible-stories/).
 
 ## Available Comics
 
