@@ -7,21 +7,38 @@
     <title>Bible Stories Comics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@700;900&family=Bangers&family=Space+Mono:wght@400;700&family=Press+Start+2P&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@700;900&family=Bangers&family=Space+Mono:wght@400;700&family=Press+Start+2P&family=Pixelify+Sans&display=swap"
         rel="stylesheet">
     <style>
+        html {
+            min-height: 100%;
+            /* This technique uses multiple backgrounds, a blend mode, and a contrast filter */
+            background:
+                /* 1. Halftone dot pattern (radial gradient tiled) */
+                radial-gradient(circle, rgba(0, 0, 0, 0.5) 0.1em, transparent 0.15em) 0 0 / 0.5em 0.5em,
+                /* 2. Color map, positioned by JS-updated custom properties */
+                radial-gradient(circle at var(--x, 50%) var(--y, 50%), #4a90e2, #00438b);
+            background-blend-mode: multiply;
+            filter: contrast(15);
+        }
+
         body {
             font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            background: radial-gradient(circle, #5a5a5a, #1a1a1a);
+            /* Reset default margin */
+            /* The background is now on the HTML element */
+            background: none;
             color: #fff;
+            /* Default text color for the page */
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             overflow: hidden;
-            /* Hide scrollbars from gradient */
+            /* Hide scrollbars */
+            position: relative;
+            /* Needed for pseudo-elements */
         }
 
         .comic-cover {
@@ -35,6 +52,8 @@
             max-width: 500px;
             margin: 3em;
             transform: rotate(-2deg);
+            position: relative;
+            /* Ensure cover is in the same stacking context */
             transition: transform 0.3s ease-in-out;
         }
 
@@ -72,24 +91,57 @@
         }
 
         .comic-list a {
+            position: relative;
+            /* Needed for the pseudo-element */
             display: block;
-            background-color: #f0ad4e;
-            /* Orange */
-            color: #fff;
+            color: #1a1a1a;
+            /* Darker text for better contrast */
             padding: 0.75rem 1.5rem;
             border-radius: 5px;
             text-decoration: none;
             font-family: 'Press Start 2P', cursive;
             font-size: 1rem;
-            transition: transform 0.2s, background-color 0.2s;
+            transition: transform 0.2s, background 0.2s;
             border: 3px solid #000;
             box-shadow: 4px 4px 0px #000;
+            background: #78a878;
+            /* Desaturated green */
+            /* Base color for the button */
+            overflow: hidden;
+            /* Keep the effect contained */
+            z-index: 1;
+            /* Ensure it's on top of the page background */
+        }
+
+        /* Create a pseudo-element for the halftone effect */
+        .comic-list a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                /* 1. Halftone dot pattern */
+                radial-gradient(circle, #000 0.05em, transparent 0.08em) 0 0 / 0.4em 0.4em,
+                /* 2. Button color map */
+                linear-gradient(var(--btn-color, #78a878), var(--btn-color, #78a878));
+            background-blend-mode: multiply;
+            filter: contrast(10);
+            z-index: -1;
+            /* Place it behind the button's text */
+            transition: background 0.2s;
         }
 
         .comic-list a:hover {
-            background-color: #ec971f;
             transform: translateY(-4px) translateX(-4px);
             box-shadow: 8px 8px 0px #000;
+        }
+
+        /* Update the color variable on hover for the pseudo-element */
+        .comic-list a:hover::before {
+            --btn-color: #6a9a6a;
+            /* Desaturated hover green */
         }
 
         @keyframes title-throb {
@@ -105,6 +157,29 @@
                 transform: scale(1);
             }
         }
+
+        .copyright-notice {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: white;
+            color: black;
+            font-family: 'Pixelify Sans', sans-serif;
+            padding: 0.5rem 1rem;
+            border: 2px solid black;
+            border-radius: 4px;
+            z-index: 1000;
+            font-size: 1rem;
+        }
+
+        .copyright-notice a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .copyright-notice a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -119,6 +194,16 @@
             <li><a href="./Noah/">The Book of Noah</a></li>
         </ul>
     </div>
+
+    <div class="copyright-notice">Copyright 2026 <a href="http://www.pixelagent.co.uk" target="_blank"
+            rel="noopener noreferrer">Pixelagent.co.uk</a></div>
+
+    <script>
+        addEventListener('mousemove', e => {
+            document.documentElement.style.setProperty('--x', `${e.clientX}px`);
+            document.documentElement.style.setProperty('--y', `${e.clientY}px`);
+        });
+    </script>
 </body>
 
 </html>
