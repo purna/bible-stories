@@ -1,0 +1,84 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Twilight / Sunset sky gradient for the prophetic parting moment -->
+        <linearGradient id="skyJordan" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#2c1b4d"/>
+            <stop offset="45%" stop-color="#5c3756"/>
+            <stop offset="80%" stop-color="#b85d33"/>
+            <stop offset="100%" stop-color="#f5a342"/>
+        </linearGradient>
+
+        <!-- Shimmering water gradient -->
+        <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#3b7a82"/>
+            <stop offset="50%" stop-color="#2a5a62"/>
+            <stop offset="100%" stop-color="#18363a"/>
+        </linearGradient>
+
+        <!-- Dry riverbed / miraculous path gradient -->
+        <linearGradient id="dryBedGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#735235"/>
+            <stop offset="100%" stop-color="#3d2818"/>
+        </linearGradient>
+
+        <!-- Mystic prophetic glow filter -->
+        <filter id="jordanGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="2.5" result="blur1"/>
+            <feGaussianBlur stdDeviation="5" result="blur2"/>
+            <feMerge>
+                <feMergeNode in="blur2"/>
+                <feMergeNode in="blur1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Scenic Twilight Sky -->
+    <rect width="200" height="100" fill="url(#skyJordan)"/>
+
+    <!-- Sun setting over the horizon -->
+    <circle cx="100" cy="55" r="18" fill="#ffd54f" opacity="0.6" filter="url(#jordanGlow)"/>
+
+    <!-- Riverbanks / Hills of Jordan -->
+    <path d="M 0 75 Q 40 68 85 72 L 85 100 L 0 100 Z" fill="#2d382e"/>
+    <path d="M 115 72 Q 160 68 200 75 L 200 100 L 115 100 Z" fill="#2d382e"/>
+
+    <!-- Dry Riverbed Path Down the Center (Miraculously parted waters - 2 Kings 2:8) -->
+    <path d="M 85 72 Q 95 85 90 100 L 110 100 Q 105 85 115 72 Z" fill="url(#dryBedGrad)"/>
+
+    <!-- Rushing Water Walls on Left and Right -->
+    <path d="M 0 75 Q 40 68 85 72 Q 95 85 90 100 L 0 100 Z" fill="url(#waterGrad)" opacity="0.9"/>
+    <path d="M 115 72 Q 160 68 200 75 L 200 100 L 110 100 Q 105 85 115 72 Z" fill="url(#waterGrad)" opacity="0.9"/>
+    
+    <!-- Water surface ripples / foam lines -->
+    <path d="M 15 82 Q 45 78 75 80" fill="none" stroke="#84ffff" stroke-width="1.5" opacity="0.7"/>
+    <path d="M 185 82 Q 155 78 125 80" fill="none" stroke="#84ffff" stroke-width="1.5" opacity="0.7"/>
+
+    <!-- Elijah and Elisha standing near the parted waters -->
+    <!-- Elijah (Striking the water with his folded mantle) -->
+    <g transform="translate(62, 54)">
+        <!-- Robe -->
+        <path d="M 10 18 Q 4 12 0 18 L 4 26 L 14 26 Z" fill="#3e2723"/>
+        <path d="M 5 6 Q 9 0 13 5 Q 17 13 13 26 L 3 26 Q 0 13 5 6 Z" fill="#795548"/>
+        <!-- Head and arms swinging mantle toward water -->
+        <circle cx="8" cy="3" r="2.5" fill="#d1b399"/>
+        <path d="M 7 1 L 15 12" stroke="#5c3a21" stroke-width="2" stroke-linecap="round"/>
+        <path d="M 8 1 L 13 -2" stroke="#d1b399" stroke-width="1" stroke-linecap="round"/>
+    </g>
+
+    <!-- Elisha (Witnessing the miracle close behind) -->
+    <g transform="translate(122, 56)">
+        <!-- Robe -->
+        <path d="M 10 18 Q 4 12 0 18 L 4 24 L 14 24 Z" fill="#283593"/>
+        <path d="M 5 6 Q 9 0 13 5 Q 17 13 13 24 L 3 24 Q 0 13 5 6 Z" fill="#3f51b5"/>
+        <!-- Head and hands raised in reverence -->
+        <circle cx="8" cy="3" r="2.5" fill="#d1b399"/>
+        <path d="M 7 1 L 4 -2 M 9 1 L 12 -1" stroke="#d1b399" stroke-width="1" stroke-linecap="round"/>
+    </g>
+
+    <!-- Divine ripple / energy shimmer across the dry path -->
+    <g filter="url(#jordanGlow)" stroke="#ffe082" stroke-width="1" fill="none" opacity="0.8">
+        <path d="M 90 85 Q 100 83 110 85"/>
+        <path d="M 93 92 Q 100 90 107 92"/>
+    </g>
+</svg>

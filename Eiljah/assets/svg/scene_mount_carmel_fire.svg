@@ -1,0 +1,81 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Dramatic stormy sky gradient -->
+        <linearGradient id="skyCarmel" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#12151c"/>
+            <stop offset="40%" stop-color="#222836"/>
+            <stop offset="80%" stop-color="#3b2b25"/>
+            <stop offset="100%" stop-color="#542416"/>
+        </linearGradient>
+
+        <!-- Heavenly divine fire gradient -->
+        <linearGradient id="heavenFire" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="20%" stop-color="#ffeb3b"/>
+            <stop offset="60%" stop-color="#ff9800"/>
+            <stop offset="100%" stop-color="#d32f2f"/>
+        </linearGradient>
+
+        <!-- Altar stone gradient -->
+        <linearGradient id="altarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#78909c"/>
+            <stop offset="100%" stop-color="#37474f"/>
+        </linearGradient>
+
+        <!-- Glow filter for miraculous fire -->
+        <filter id="carmelGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur1"/>
+            <feGaussianBlur stdDeviation="6" result="blur2"/>
+            <feMerge>
+                <feMergeNode in="blur2"/>
+                <feMergeNode in="blur1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Dark Stormy Sky -->
+    <rect width="200" height="100" fill="url(#skyCarmel)"/>
+
+    <!-- Heavenly Light Beam Striking Down from Above -->
+    <polygon points="100,0 75,70 125,70" fill="#ffffff" opacity="0.2"/>
+    <polygon points="100,0 85,70 115,70" fill="#ffeb3b" opacity="0.3"/>
+
+    <!-- Mount Carmel Terrain & Altar Foundation -->
+    <path d="M 0 90 L 40 75 L 80 82 L 130 70 L 200 85 L 200 100 L 0 100 Z" fill="#1c1a17"/>
+    <path d="M 60 85 L 140 85 L 145 92 L 55 92 Z" fill="#2d2926"/>
+
+    <!-- The Stone Altar with Water Trenches (1 Kings 18:32-35) -->
+    <rect x="80" y="72" width="40" height="15" fill="url(#altarGrad)" stroke="#263238" stroke-width="1"/>
+    <!-- Altar blocks detail -->
+    <line x1="100" y1="72" x2="100" y2="87" stroke="#263238" stroke-width="1"/>
+    <line x1="80" y1="79.5" x2="120" y2="79.5" stroke="#263238" stroke-width="1"/>
+
+    <!-- Elijah Standing in Prayer (Left side) -->
+    <g transform="translate(38, 58)">
+        <!-- Robe -->
+        <path d="M 12 18 Q 6 12 2 18 L 6 27 L 16 27 Z" fill="#3e2723"/>
+        <path d="M 7 7 Q 11 1 15 6 Q 19 14 15 27 L 4 27 Q 0 14 7 7 Z" fill="#795548"/>
+        <!-- Head and hands lifted in supplication -->
+        <circle cx="10" cy="3" r="2.5" fill="#d1b399"/>
+        <path d="M 9 1 L 5 -3 M 11 1 L 15 -2" stroke="#d1b399" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+
+    <!-- THE MIRACULOUS FIRE FROM HEAVEN CONSUMING THE SACRIFICE -->
+    <g filter="url(#carmelGlow)">
+        <!-- Massive Column of Fire Striking Altar -->
+        <path d="M 92 72 Q 85 45 95 20 Q 90 40 100 10 Q 110 40 105 20 Q 115 45 108 72 Z" fill="url(#heavenFire)"/>
+        <path d="M 96 72 Q 90 50 100 30 Q 105 50 104 72 Z" fill="#ffffff" opacity="0.8"/>
+
+        <!-- Exploding Flame Bursts & Sparks around Altar -->
+        <path d="M 70 80 Q 60 65 75 55 Q 70 70 85 68 Z" fill="#ff9800" opacity="0.9"/>
+        <path d="M 130 80 Q 140 65 125 55 Q 130 70 115 68 Z" fill="#ff9800" opacity="0.9"/>
+        
+        <!-- Divine Embers / Sparks -->
+        <circle cx="70" cy="45" r="2" fill="#ffeb3b"/>
+        <circle cx="130" cy="40" r="1.5" fill="#ffeb3b"/>
+        <circle cx="85" cy="25" r="2.5" fill="#ffffff"/>
+        <circle cx="115" cy="22" r="2" fill="#ffffff"/>
+        <circle cx="100" cy="8" r="3" fill="#ffffff"/>
+    </g>
+</svg>

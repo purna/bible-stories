@@ -1,0 +1,71 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Arid desert daytime sky gradient -->
+        <linearGradient id="skyWilderness" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#4a6984"/>
+            <stop offset="50%" stop-color="#8fa3b8"/>
+            <stop offset="80%" stop-color="#d49b6a"/>
+            <stop offset="100%" stop-color="#e8b87d"/>
+        </linearGradient>
+
+        <!-- Desert ground gradient -->
+        <linearGradient id="desertGround" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#c28b53"/>
+            <stop offset="100%" stop-color="#7a4f27"/>
+        </linearGradient>
+
+        <!-- Broom tree foliage gradient (Sparse, hardy desert shrub/tree) -->
+        <linearGradient id="broomTree" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6b8e23"/>
+            <stop offset="50%" stop-color="#556b2f"/>
+            <stop offset="100%" stop-color="#2f4f2f"/>
+        </linearGradient>
+
+        <!-- Soft desert heat glow -->
+        <filter id="wildernessGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Vast Desert Sky -->
+    <rect width="200" height="100" fill="url(#skyWilderness)"/>
+
+    <!-- Bright Desert Sun -->
+    <circle cx="150" cy="25" r="12" fill="#fff9c4" opacity="0.9" filter="url(#wildernessGlow)"/>
+
+    <!-- Rolling Desert Dunes / Terrain -->
+    <path d="M 0 75 Q 60 65 130 78 T 200 70 L 200 100 L 0 100 Z" fill="url(#desertGround)"/>
+    <path d="M 0 85 Q 90 75 200 88 L 200 100 L 0 100 Z" fill="#5c381c" opacity="0.6"/>
+
+    <!-- The Broom Tree (Rovah tree where Elijah sat down to rest - 1 Kings 19:4-5) -->
+    <g transform="translate(100, 32)">
+        <!-- Gnarled Trunks and Branches -->
+        <path d="M 15 53 Q 10 35 2 25" fill="none" stroke="#3e2723" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 12 42 Q 22 25 35 18" fill="none" stroke="#3e2723" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M 18 48 Q 28 32 20 15" fill="none" stroke="#3e2723" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- Sparse, Wispy Desert Foliage Clusters -->
+        <g fill="url(#broomTree)" opacity="0.9">
+            <ellipse cx="0" cy="22" rx="14" ry="9"/>
+            <ellipse cx="15" cy="12" rx="16" ry="10"/>
+            <ellipse cx="32" cy="16" rx="13" ry="8"/>
+            <ellipse cx="20" cy="28" rx="12" ry="7"/>
+            <ellipse cx="-5" cy="30" rx="10" ry="6"/>
+        </g>
+    </g>
+
+    <!-- Elijah Sleeping/Resting under the Broom Tree -->
+    <g transform="translate(85, 66)">
+        <!-- Exhausted / Resting Posture (Lying down under shadow of tree) -->
+        <!-- Garment / Robe -->
+        <path d="M 0 12 Q 10 15 22 10 L 25 18 L 2 18 Z" fill="#5c3a21"/>
+        <path d="M 8 7 Q 16 10 22 5 L 24 14 L 6 14 Z" fill="#3e2723"/>
+        <!-- Head resting on arm -->
+        <circle cx="4" cy="9" r="2.3" fill="#d1b399"/>
+        <path d="M 2 11 Q 5 13 8 11" fill="#ffffff"/>
+    </g>
+</svg>

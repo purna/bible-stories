@@ -1,0 +1,82 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Warm afternoon Mediterranean sky gradient -->
+        <linearGradient id="skyZarephath" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#3d5a80"/>
+            <stop offset="40%" stop-color="#98c1d9"/>
+            <stop offset="75%" stop-color="#f4a261"/>
+            <stop offset="100%" stop-color="#e76f51"/>
+        </linearGradient>
+
+        <!-- Ancient Phoenician stone/mudbrick building gradient -->
+        <linearGradient id="buildingGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#d8b4a0"/>
+            <stop offset="100%" stop-color="#8d6e63"/>
+        </linearGradient>
+
+        <linearGradient id="buildingGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#b08968"/>
+            <stop offset="100%" stop-color="#5c4033"/>
+        </linearGradient>
+
+        <!-- Ground / Dust path gradient -->
+        <linearGradient id="townGround" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#c49a6c"/>
+            <stop offset="100%" stop-color="#7d532d"/>
+        </linearGradient>
+
+        <!-- Soft warm glow filter -->
+        <filter id="zarephathGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Mediterranean Town Sky -->
+    <rect width="200" height="100" fill="url(#skyZarephath)"/>
+
+    <!-- Setting Sun -->
+    <circle cx="30" cy="35" r="14" fill="#ffeedb" opacity="0.9" filter="url(#zarephathGlow)"/>
+
+    <!-- Distant Hills & Town Silhouette -->
+    <path d="M 0 75 L 45 65 L 90 72 L 140 60 L 200 70 L 200 100 L 0 100 Z" fill="#6b5b4e" opacity="0.5"/>
+
+    <!-- Ancient Phoenician Flat-Roofed Houses of Zarephath (1 Kings 17:9) -->
+    <!-- Building Left (Background with flat roof and parapet wall) -->
+    <rect x="25" y="42" width="35" height="38" fill="url(#buildingGrad2)"/>
+    <rect x="23" y="40" width="39" height="3" fill="#4a3319"/>
+    <rect x="35" y="52" width="8" height="10" fill="#2d1e12"/>
+
+    <!-- Building Right (Foreground House / City Gate Structure with Flat Roof / Terraced Level) -->
+    <rect x="125" y="35" width="55" height="45" fill="url(#buildingGrad1)"/>
+    <!-- Flat roof ledge / parapet typical of ancient Near-Eastern architecture -->
+    <rect x="122" y="32" width="61" height="5" fill="#5c3d2e"/>
+    <!-- Wooden door / archway -->
+    <path d="M 145 80 L 145 62 Q 152 55 158 62 L 158 80 Z" fill="#3e2723"/>
+    <!-- Window with warm light -->
+    <rect x="155" y="42" width="10" height="12" fill="#ffb703" opacity="0.8"/>
+
+    <!-- Town Street Ground / Dust Path -->
+    <path d="M 0 75 Q 70 68 200 80 L 200 100 L 0 100 Z" fill="url(#townGround)"/>
+
+    <!-- Elijah Meeting the Widow at the Town Gate (1 Kings 17:10) -->
+    <!-- Elijah (Standing on the left, asking for water/bread) -->
+    <g transform="translate(68, 60)">
+        <path d="M 10 18 Q 4 12 0 18 L 4 25 L 14 25 Z" fill="#3e2723"/>
+        <path d="M 5 6 Q 9 0 13 6 Q 17 14 13 25 L 3 25 Q 0 14 5 6 Z" fill="#795548"/>
+        <circle cx="8" cy="3" r="2.3" fill="#d1b399"/>
+        <path d="M 7 1 L 4 -2" stroke="#d1b399" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+
+    <!-- The Widow of Zarephath (Holding gathering sticks) -->
+    <g transform="translate(100, 61)">
+        <path d="M 10 17 Q 4 12 0 17 L 4 24 L 14 24 Z" fill="#5d4037"/>
+        <path d="M 5 6 Q 9 1 13 6 Q 17 13 13 24 L 3 24 Q 0 13 5 6 Z" fill="#8d6e63"/>
+        <circle cx="8" cy="3" r="2.3" fill="#d1b399"/>
+        <line x1="8" y1="5" x2="3" y2="15" stroke="#4e342e" stroke-width="1.5"/>
+        <line x1="9" y1="5" x2="13" y2="16" stroke="#4e342e" stroke-width="1.2"/>
+    </g>
+</svg>

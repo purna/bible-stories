@@ -1,0 +1,97 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Gradients for dramatic heavenly ascent -->
+        <linearGradient id="skyAscent" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#1f1a3a"/>
+            <stop offset="50%" stop-color="#3d2c54"/>
+            <stop offset="100%" stop-color="#5c3862"/>
+        </linearGradient>
+
+        <linearGradient id="divineBeam" x1="50%" y1="100%" x2="50%" y2="0%">
+            <stop offset="0%" stop-color="#ffecb3" stop-opacity="0.8"/>
+            <stop offset="50%" stop-color="#ffb300" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9"/>
+        </linearGradient>
+
+        <linearGradient id="fireTrailUp" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#d32f2f"/>
+            <stop offset="50%" stop-color="#f57c00"/>
+            <stop offset="100%" stop-color="#ffd54f"/>
+        </linearGradient>
+
+        <!-- Glow filter -->
+        <filter id="ascentGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Night / Twilight Sky Background -->
+    <rect width="200" height="100" fill="url(#skyAscent)"/>
+
+    <!-- Heavenly Light Beams Radiating Down -->
+    <polygon points="100,0 60,100 140,100" fill="url(#divineBeam)" opacity="0.35"/>
+    <polygon points="100,0 80,100 120,100" fill="#fff9c4" opacity="0.2"/>
+
+    <!-- Distant Mountains and Ground -->
+    <path d="M 0 90 L 40 75 L 80 85 L 120 78 L 160 88 L 200 80 L 200 100 L 0 100 Z" fill="#181324"/>
+    <path d="M 0 94 Q 60 88 120 92 T 200 90 L 200 100 L 0 100 Z" fill="#292038"/>
+
+    <!-- Elisha Below, Looking Up in Wonder / Holding Mantle -->
+    <g transform="translate(60, 68)">
+        <!-- Shadow / Ground base -->
+        <ellipse cx="10" cy="27" rx="8" ry="3" fill="#120e1a"/>
+        <!-- Robes -->
+        <path d="M 5 12 Q 2 20 0 25 L 18 25 Q 16 20 12 12 Z" fill="#4a3f6b"/>
+        <path d="M 6 5 Q 9 0 12 5 Q 16 14 14 25 L 4 25 Q 2 14 6 5 Z" fill="#7a6c9d"/>
+        <!-- Head & Arms Reaching Up -->
+        <circle cx="10" cy="2" r="2.5" fill="#e0c2a8"/>
+        <path d="M 8 1 L 3 -4 M 12 1 L 17 -4" stroke="#e0c2a8" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Falling Mantle (The Mantle Elijah Dropped - 2 Kings 2:13) -->
+        <path d="M 22 15 Q 28 20 32 25 Q 26 22 20 20 Z" fill="#8d6e63" filter="url(#ascentGlow)"/>
+    </g>
+
+    <!-- ELIJAH ASCENDING IN THE WHIRLWIND / CHARIOT OF FIRE -->
+    <g filter="url(#ascentGlow)" transform="translate(15, -5)">
+        
+        <!-- Upward Swirling Vortex Trail -->
+        <path d="M 85 90 Q 75 60 95 40 Q 115 20 100 5" fill="none" stroke="url(#fireTrailUp)" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+        <path d="M 95 95 Q 105 70 90 45 Q 75 20 105 2" fill="none" stroke="#ffb300" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+
+        <!-- Fiery Chariot & Wheels Lifting Off -->
+        <g>
+            <circle cx="95" cy="55" r="8" fill="none" stroke="url(#fireTrailUp)" stroke-width="3"/>
+            <circle cx="105" cy="52" r="10" fill="none" stroke="url(#fireTrailUp)" stroke-width="4"/>
+            <path d="M 85 58 L 115 55 L 110 65 L 90 65 Z" fill="#ff5722"/>
+        </g>
+
+        <!-- Elijah Ascending with Arms Raised Toward Heaven -->
+        <g transform="translate(90, 20)">
+            <!-- Robes glowing in fire/light -->
+            <path d="M 5 10 Q 12 0 18 10 L 22 35 L 2 35 Z" fill="#1976d2"/>
+            <path d="M 8 12 L 15 28 L 5 28 Z" fill="#64b5f6" opacity="0.6"/>
+            <!-- Arms Raised High -->
+            <path d="M 7 14 L -2 5 M 16 14 L 25 5" stroke="#e0c2a8" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Head & Beard -->
+            <circle cx="11.5" cy="6" r="3" fill="#e0c2a8"/>
+            <path d="M 10 8 Q 11.5 11 13 8" fill="#ffffff"/>
+        </g>
+
+        <!-- Burst of Glory at the Top / Cloud Entry -->
+        <ellipse cx="100" cy="8" rx="20" ry="8" fill="#ffffff" opacity="0.8" filter="url(#ascentGlow)"/>
+        <ellipse cx="100" cy="12" rx="30" ry="12" fill="#ffb300" opacity="0.4"/>
+
+    </g>
+
+    <!-- Ascending Sparks & Embers -->
+    <g fill="#ffe082" filter="url(#ascentGlow)">
+        <circle cx="92" cy="35" r="2"/>
+        <circle cx="108" cy="25" r="1.5"/>
+        <circle cx="98" cy="15" r="2.5"/>
+        <circle cx="85" cy="45" r="1"/>
+        <circle cx="112" cy="40" r="1.5"/>
+    </g>
+</svg>

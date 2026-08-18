@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Noah — The Warning (Narrative Prototype)</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; user-select:none; }
+  html,body { height:100%; overflow:hidden; background:#0a0a0a; font-family:Georgia,'Times New Roman',serif; }
+
+  #stage {
+    position:relative; width:100vw; height:100vh; overflow:hidden;
+    background:radial-gradient(ellipse at 50% 30%, #3a3226 0%, #14110d 75%);
+    transition:background 1.6s ease;
+    cursor:pointer;
+  }
+
+  /* atmospheric vignette + grain-ish overlay */
+  #vignette {
+    position:absolute; inset:0; pointer-events:none; z-index:5;
+    box-shadow: inset 0 0 180px 60px rgba(0,0,0,0.75);
+    transition:box-shadow 1.6s ease;
+  }
+  #tint {
+    position:absolute; inset:0; pointer-events:none; z-index:4; opacity:0; transition:opacity 1.6s ease;
+    background:radial-gradient(ellipse at 50% 100%, rgba(240,217,154,0.18), transparent 60%);
+  }
+
+  #chapterHeader {
+    position:absolute; top:22px; left:0; right:0; text-align:center; z-index:10;
+    color:rgba(240,217,154,0.55); letter-spacing:.14em; font-size:.72rem; text-transform:uppercase;
+    text-shadow:0 2px 8px rgba(0,0,0,.9);
+  }
+
+  #dots { position:absolute; top:48px; left:0; right:0; display:flex; justify-content:center; gap:6px; z-index:10; }
+  #dots span { width:5px; height:5px; border-radius:50%; background:rgba(240,217,154,0.25); transition:background .3s; }
+  #dots span.done { background:rgba(240,217,154,0.85); }
+
+  #figureLayer {
+    position:absolute; left:0; right:0; bottom:26vh; top:8vh; z-index:2;
+    display:flex; align-items:flex-end; justify-content:center;
+    opacity:0; transform:translateY(10px); transition:opacity 1.1s ease, transform 1.1s ease;
+  }
+  #figureLayer.show { opacity:1; transform:translateY(0); }
+  #figureLayer svg { max-height:52vh; filter:drop-shadow(0 10px 24px rgba(0,0,0,0.6)); }
+
+  #panel {
+    position:absolute; left:50%; bottom:0; transform:translateX(-50%);
+    width:min(680px, 92vw); z-index:10; padding:26px 30px 30px;
+    background:linear-gradient(180deg, rgba(10,8,6,0) 0%, rgba(8,7,5,0.82) 22%, rgba(8,7,5,0.94) 100%);
+  }
+  #speaker {
+    color:#f0d99a; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase;
+    margin-bottom:8px; opacity:0; transition:opacity .3s; min-height:1.1em;
+  }
+  #speaker.show { opacity:.85; }
+  #text {
+    color:#e9dcc0; font-size:1.05rem; line-height:1.6; min-height:3.2em;
+  }
+  #cite {
+    color:#9a8560; font-size:.75rem; font-style:italic; margin-top:10px; opacity:0; transition:opacity .6s ease;
+  }
+  #cite.show { opacity:.9; }
+
+  #advanceHint {
+    position:absolute; bottom:14px; right:22px; z-index:10; color:rgba(240,217,154,0.4);
+    font-size:.68rem; letter-spacing:.06em; transition:opacity .3s;
+  }
+
+  #choices {
+    display:flex; flex-direction:column; gap:10px; margin-top:16px;
+  }
+  #choices button {
+    font-family:Georgia,serif; text-align:left; background:rgba(240,217,154,0.06);
+    border:1px solid rgba(240,217,154,0.35); color:#e9dcc0; padding:12px 16px; border-radius:3px;
+    font-size:.92rem; cursor:pointer; letter-spacing:.01em; line-height:1.4;
+  }
+  #choices button:hover { background:rgba(240,217,154,0.16); border-color:rgba(240,217,154,0.6); }
+  #choices button .key { color:rgba(240,217,154,0.5); font-size:.7rem; margin-right:8px; }
+
+  #endScreen {
+    position:absolute; inset:0; z-index:20; display:flex; align-items:center; justify-content:center;
+    flex-direction:column; text-align:center; padding:30px; opacity:0; pointer-events:none;
+    background:rgba(6,5,3,0.55); transition:opacity 1.4s ease;
+  }
+  #endScreen.show { opacity:1; pointer-events:auto; }
+  #endScreen h2 { color:#f0d99a; font-weight:normal; font-size:1.3rem; letter-spacing:.06em; margin-bottom:14px; }
+  #endScreen .tone { color:#c8b07a; font-size:.85rem; font-style:italic; max-width:480px; line-height:1.7; margin-bottom:22px; }
+  #endScreen button { font-family:Georgia,serif; background:rgba(240,217,154,0.08); border:1px solid rgba(240,217,154,0.5);
+    color:#f0d99a; padding:10px 22px; font-size:.75rem; border-radius:3px; cursor:pointer; letter-spacing:.05em; }
+  #endScreen button:hover { background:rgba(240,217,154,0.2); }
+</style>
+</head>
+<body>
+
+<div id="stage">
+  <div id="vignette"></div>
+  <div id="tint"></div>
+  <div id="chapterHeader">Chapter I &nbsp;·&nbsp; The Warning</div>
+  <div id="dots"></div>
+  <div id="figureLayer"></div>
+
+  <div id="panel">
+    <div id="speaker"></div>
+    <div id="text"></div>
+    <div id="cite"></div>
+    <div id="choices" style="display:none;"></div>
+  </div>
+
+  <div id="advanceHint">click / tap / space ▸</div>
+
+  <div id="endScreen">
+    <h2>End of Chapter I</h2>
+    <div class="tone" id="toneText"></div>
+    <button id="restartBtn">Replay the Chapter</button>
+  </div>
+</div>
+
+<script>
+// ───────────────────────────────────────────────────────────────────────────
+// SILHOUETTE FIGURES (inline SVG, kept simple — Limbo-style flat black shapes)
+// ───────────────────────────────────────────────────────────────────────────
+const FIGURES = {
+  noah: `<svg viewBox="0 0 120 220" width="140"><g fill="#0c0c0e">
+    <ellipse cx="60" cy="30" rx="16" ry="18"/>
+    <path d="M40 46 Q60 40 80 46 L92 200 Q60 214 28 200 Z"/>
+    <path d="M28 200 L20 150 M92 200 L100 150" stroke="#0c0c0e" stroke-width="8" fill="none" stroke-linecap="round"/>
+  </g></svg>`,
+  wife: `<svg viewBox="0 0 120 220" width="120"><g fill="#0c0c0e">
+    <ellipse cx="60" cy="28" rx="14" ry="16"/>
+    <path d="M60 42 Q40 40 34 60 Q26 140 40 205 L80 205 Q94 140 86 60 Q80 40 60 42Z"/>
+  </g></svg>`,
+  son: `<svg viewBox="0 0 120 220" width="110"><g fill="#0c0c0e">
+    <ellipse cx="60" cy="30" rx="13" ry="15"/>
+    <path d="M45 44 Q60 39 75 44 L84 195 Q60 206 36 195 Z"/>
+  </g></svg>`,
+  crowd: `<svg viewBox="0 0 400 220" width="360"><g fill="#0c0c0e" opacity="0.92">
+    <g transform="translate(20,10)"><ellipse cx="30" cy="20" rx="12" ry="14"/><path d="M14 32 Q30 28 46 32 L52 150 Q30 158 8 150 Z"/></g>
+    <g transform="translate(110,26)"><ellipse cx="30" cy="16" rx="13" ry="15"/><path d="M13 30 Q30 25 47 30 L54 165 Q30 174 6 165 Z"/></g>
+    <g transform="translate(200,6)"><ellipse cx="30" cy="20" rx="12" ry="14"/><path d="M14 32 Q30 28 46 32 L50 148 Q30 156 10 148 Z"/></g>
+    <g transform="translate(290,22)"><ellipse cx="30" cy="17" rx="12" ry="14"/><path d="M14 30 Q30 26 46 30 L52 160 Q30 168 8 160 Z"/></g>
+  </g></svg>`,
+  scroll: `<svg viewBox="0 0 160 120" width="180"><g>
+    <rect x="20" y="30" width="120" height="60" rx="6" fill="#241c12" stroke="#5c4a2e" stroke-width="2"/>
+    <circle cx="20" cy="60" r="12" fill="#3a2c1a"/><circle cx="140" cy="60" r="12" fill="#3a2c1a"/>
+    <line x1="38" y1="46" x2="122" y2="46" stroke="#8a7550" stroke-width="1.5"/>
+    <line x1="38" y1="58" x2="110" y2="58" stroke="#8a7550" stroke-width="1.5"/>
+    <line x1="38" y1="70" x2="118" y2="70" stroke="#8a7550" stroke-width="1.5"/>
+  </g></svg>`,
+  light: `<svg viewBox="0 0 300 220" width="280"><g>
+    <polygon points="150,10 165,180 135,180" fill="rgba(240,217,154,0.55)"/>
+    <polygon points="150,10 200,170 100,170" fill="rgba(240,217,154,0.18)"/>
+    <circle cx="150" cy="30" r="18" fill="rgba(255,246,214,0.85)"/>
+  </g></svg>`,
+};
+
+function figureHTML(id){ return id ? FIGURES[id] || '' : ''; }
+
+// ───────────────────────────────────────────────────────────────────────────
+// STORY DATA — Chapter I: The Warning
+// ───────────────────────────────────────────────────────────────────────────
+const story = [
+  { type:'narration', mood:'corrupt', text:"The earth was filled with violence.", cite:"Genesis 6:11" },
+  { type:'narration', mood:'corrupt', figure:'crowd',
+    text:"Every inclination of the human heart was only evil, all the time.", cite:"Genesis 6:5" },
+  { type:'narration', mood:'corrupt',
+    text:"The LORD regretted that He had made humankind on the earth, and His heart was deeply troubled." , cite:"Genesis 6:6"},
+  { type:'narration', mood:'quiet', figure:'noah',
+    text:"But there was one man who walked differently than the rest." },
+  { type:'narration', mood:'quiet', figure:'noah',
+    text:"Noah was a righteous man, blameless among the people of his time.", cite:"Genesis 6:9" },
+  { type:'narration', mood:'night', figure:'light',
+    text:"Then, without warning, a voice reached him — not with thunder, but with weight." },
+  { type:'dialogue', mood:'night', figure:'light', speaker:'The LORD',
+    text:"The end of all flesh has come before me, for the earth is filled with violence." },
+  { type:'dialogue', mood:'night', figure:'light', speaker:'The LORD',
+    text:"Make yourself an ark of cypress wood. This is how you are to build it." , cite:"Genesis 6:14"},
+  { type:'choice', mood:'night', figure:'noah',
+    text:"The command settles into you. No rain like this has ever fallen — not once, in living memory. What do you do?",
+    choices:[
+      { label:"Doubt gnaws at you — but you pick up the axe anyway.", trust:-3 },
+      { label:"You steady yourself. If He said it, you'll do it.", trust:+5 },
+    ] },
+  { type:'narration', mood:'quiet', figure:'scroll',
+    text:"Three hundred cubits long. Fifty wide. Thirty high. Exact, strange, and utterly impossible to explain to a neighbor." },
+  { type:'dialogue', mood:'quiet', figure:'wife', speaker:"Noah's Wife",
+    text:"An ark? Here? Noah — they'll laugh us out of the valley." },
+  { type:'choice', mood:'quiet', figure:'wife',
+    text:"How do you answer her?",
+    choices:[
+      { label:"\u201CLet them laugh. I know what I heard.\u201D", trust:+4 },
+      { label:"\u201C...I don't fully understand it either.\u201D", trust:-2 },
+    ] },
+  { type:'dialogue', mood:'quiet', figure:'son', speaker:'His Son',
+    text:"Father, the others are already calling us fools. It's been said in the market." },
+  { type:'narration', mood:'quiet', figure:'noah',
+    text:"Still, Noah said nothing back to the market, and nothing back to the years ahead of him." },
+  { type:'narration', mood:'dawn', figure:'noah',
+    text:"He simply picked up his tools, and began." },
+  { type:'reflection', mood:'dawn',
+    text:"\u201CNoah did everything just as God commanded him.\u201D", cite:"Genesis 6:22" },
+];
+
+const MOOD_BG = {
+  corrupt: 'radial-gradient(ellipse at 50% 30%, #3a2426 0%, #120c0d 75%)',
+  quiet:   'radial-gradient(ellipse at 50% 30%, #3a3226 0%, #14110d 75%)',
+  night:   'radial-gradient(ellipse at 50% 20%, #1c2436 0%, #05070c 78%)',
+  dawn:    'radial-gradient(ellipse at 50% 35%, #4a3a28 0%, #1a140d 78%)',
+};
+
+// ───────────────────────────────────────────────────────────────────────────
+// ENGINE
+// ───────────────────────────────────────────────────────────────────────────
+let idx = 0;
+let trust = 50;
+let typing = false;
+let typeTimer = null;
+
+const stage = document.getElementById('stage');
+const tint = document.getElementById('tint');
+const figureLayer = document.getElementById('figureLayer');
+const speakerEl = document.getElementById('speaker');
+const textEl = document.getElementById('text');
+const citeEl = document.getElementById('cite');
+const choicesEl = document.getElementById('choices');
+const advanceHint = document.getElementById('advanceHint');
+const dotsEl = document.getElementById('dots');
+const endScreen = document.getElementById('endScreen');
+
+story.forEach(() => {
+  const d = document.createElement('span');
+  dotsEl.appendChild(d);
+});
+
+function renderBeat(){
+  const beat = story[idx];
+  [...dotsEl.children].forEach((d,i) => d.classList.toggle('done', i <= idx));
+
+  stage.style.background = MOOD_BG[beat.mood] || MOOD_BG.quiet;
+  tint.style.opacity = beat.type === 'reflection' ? 1 : 0;
+
+  figureLayer.innerHTML = figureHTML(beat.figure);
+  figureLayer.classList.toggle('show', !!beat.figure);
+
+  speakerEl.textContent = beat.speaker || '';
+  speakerEl.classList.toggle('show', !!beat.speaker);
+
+  citeEl.textContent = beat.cite || '';
+  citeEl.classList.remove('show');
+
+  choicesEl.style.display = 'none';
+  choicesEl.innerHTML = '';
+  advanceHint.style.opacity = beat.type === 'choice' ? 0 : 0.7;
+
+  typeText(beat.text, () => {
+    if (beat.cite) setTimeout(() => citeEl.classList.add('show'), 200);
+    if (beat.type === 'choice') showChoices(beat.choices);
+    if (beat.type === 'reflection') setTimeout(showEnd, 1800);
+  });
+}
+
+function typeText(full, onDone){
+  clearInterval(typeTimer);
+  textEl.textContent = '';
+  typing = true;
+  let i = 0;
+  typeTimer = setInterval(() => {
+    textEl.textContent = full.slice(0, i+1);
+    i++;
+    if (i >= full.length){
+      clearInterval(typeTimer);
+      typing = false;
+      if (onDone) onDone();
+    }
+  }, 22);
+}
+
+function skipTyping(){
+  clearInterval(typeTimer);
+  const beat = story[idx];
+  textEl.textContent = beat.text;
+  typing = false;
+  if (beat.cite) citeEl.classList.add('show');
+  if (beat.type === 'choice') showChoices(beat.choices);
+  if (beat.type === 'reflection') setTimeout(showEnd, 1800);
+}
+
+function showChoices(choices){
+  choicesEl.style.display = 'flex';
+  choices.forEach((c, i) => {
+    const btn = document.createElement('button');
+    btn.innerHTML = `<span class="key">[${i+1}]</span>${c.label}`;
+    btn.onclick = (e) => { e.stopPropagation(); pickChoice(c); };
+    choicesEl.appendChild(btn);
+  });
+}
+
+function pickChoice(choice){
+  trust = Math.max(0, Math.min(100, trust + (choice.trust||0)));
+  choicesEl.style.display = 'none';
+  choicesEl.innerHTML = '';
+  if (idx < story.length - 1){
+    idx++;
+    renderBeat();
+  }
+}
+
+function advance(){
+  if (typing){ skipTyping(); return; }
+  const beat = story[idx];
+  if (beat.type === 'choice') return; // must pick a choice, not click through
+  if (beat.type === 'reflection') return; // waits for showEnd timer
+  if (idx < story.length - 1){
+    idx++;
+    renderBeat();
+  }
+}
+
+function showEnd(){
+  const steady = trust >= 55;
+  const shaky  = trust <= 40;
+  let tone;
+  if (steady) tone = "Something in Noah had settled. Whatever came next, he would meet it having already chosen — not once, but many small times over.";
+  else if (shaky) tone = "Noah kept building. But some nights, the doubt he'd never quite answered came and sat beside him at the workbench.";
+  else tone = "Noah built on, one plank following the last, certainty and doubt taking their turns.";
+  document.getElementById('toneText').textContent = tone + `  (Trust in the Word: ${trust}/100)`;
+  endScreen.classList.add('show');
+}
+
+stage.addEventListener('click', (e) => {
+  if (endScreen.classList.contains('show')) return;
+  advance();
+});
+window.addEventListener('keydown', (e) => {
+  if (endScreen.classList.contains('show')) return;
+  if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); advance(); }
+  const beat = story[idx];
+  if (beat.type === 'choice' && ['1','2','3','4'].includes(e.key)){
+    const i = parseInt(e.key,10) - 1;
+    if (beat.choices[i]) pickChoice(beat.choices[i]);
+  }
+});
+document.getElementById('restartBtn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  idx = 0; trust = 50;
+  endScreen.classList.remove('show');
+  renderBeat();
+});
+
+renderBeat();
+</script>
+</body>
+</html>

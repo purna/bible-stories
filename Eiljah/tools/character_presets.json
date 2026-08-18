@@ -1,0 +1,42 @@
+{
+  "elijah": {
+    "name": "Elijah",
+    "head": "oval",
+    "eyes": "neutral",
+    "mouth": "neutral",
+    "beard": "wild",
+    "headwear": "wild_hair"
+  },
+  "ahab": {
+    "name": "Ahab",
+    "head": "oval",
+    "eyes": "narrow",
+    "mouth": "frown",
+    "beard": "short",
+    "headwear": "crown"
+  },
+  "jezebel": {
+    "name": "Jezebel",
+    "head": "thin",
+    "eyes": "angry",
+    "mouth": "smirk",
+    "beard": "none",
+    "headwear": "headdress"
+  },
+  "widow": {
+    "name": "Widow",
+    "head": "thin",
+    "eyes": "worried",
+    "mouth": "frown",
+    "beard": "none",
+    "headwear": "hood"
+  },
+  "elisha": {
+    "name": "Elisha",
+    "head": "round",
+    "eyes": "neutral",
+    "mouth": "neutral",
+    "beard": "none",
+    "headwear": "none"
+  }
+}

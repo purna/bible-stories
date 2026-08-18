@@ -1,0 +1,90 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Arid dawn sky gradient -->
+        <linearGradient id="skyKerithDeep" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#2d1c24"/>
+            <stop offset="40%" stop-color="#593427"/>
+            <stop offset="80%" stop-color="#9e4c27"/>
+            <stop offset="100%" stop-color="#db8033"/>
+        </linearGradient>
+
+        <!-- Deep canyon wall gradients for steep ravine sides -->
+        <linearGradient id="ravineLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#120806"/>
+            <stop offset="50%" stop-color="#2b1711"/>
+            <stop offset="100%" stop-color="#4a2c20"/>
+        </linearGradient>
+
+        <linearGradient id="ravineRight" x1="100%" y1="0%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#170c09"/>
+            <stop offset="50%" stop-color="#331c15"/>
+            <stop offset="100%" stop-color="#573426"/>
+        </linearGradient>
+
+        <!-- Narrow stream water gradient -->
+        <linearGradient id="ravineStream" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#4fc3f7"/>
+            <stop offset="50%" stop-color="#0288d1"/>
+            <stop offset="100%" stop-color="#01579b"/>
+        </linearGradient>
+
+        <!-- Morning atmospheric glow -->
+        <filter id="ravineGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Narrow opening of Dawn Sky visible at the top of the steep gorge -->
+    <rect width="200" height="100" fill="url(#skyKerithDeep)"/>
+
+    <!-- Morning Sun filtering down into the deep gorge center -->
+    <circle cx="100" cy="12" r="14" fill="#ffe082" opacity="0.9" filter="url(#ravineGlow)"/>
+
+    <!-- MASSIVE STEEP RAVINE WALLS (Enclosing the scene from left and right to form a true canyon/gorge) -->
+    <!-- Left Canyon Wall -->
+    <path d="M 0 0 L 80 0 L 70 35 L 85 65 L 60 100 L 0 100 Z" fill="url(#ravineLeft)"/>
+    <!-- Right Canyon Wall -->
+    <path d="M 200 0 L 120 0 L 130 35 L 115 65 L 140 100 L 200 100 Z" fill="url(#ravineRight)"/>
+
+    <!-- Deep Gorge Shadows (Vertical cliff strata lines) -->
+    <path d="M 50 0 L 45 40 L 60 70 L 40 100" fill="none" stroke="#0a0403" stroke-width="4" opacity="0.7"/>
+    <path d="M 150 0 L 155 40 L 140 70 L 160 100" fill="none" stroke="#0a0403" stroke-width="4" opacity="0.7"/>
+
+    <!-- Narrow Stream Bed at the bottom of the Ravine (1 Kings 17:4) -->
+    <path d="M 75 80 Q 90 90 70 100 L 130 100 Q 110 90 125 80 Z" fill="#1f110c"/>
+    <path d="M 92 82 Q 102 91 94 100" fill="none" stroke="url(#ravineStream)" stroke-width="3.5" filter="url(#ravineGlow)"/>
+
+    <!-- Elijah Sitting in Solitary Seclusion on a Rock Outcropping Inside the Gorge -->
+    <g transform="translate(56, 52)">
+        <!-- Seated Robe -->
+        <path d="M 10 14 Q 4 12 0 17 L 4 24 L 14 24 Z" fill="#1f120e"/>
+        <path d="M 4 4 Q 8 -1 12 4 Q 16 11 12 24 L 2 24 Q -2 11 4 4 Z" fill="#5c3a21"/>
+        <!-- Head, Beard, and thoughtful posture -->
+        <circle cx="7" cy="2" r="2.2" fill="#d1b399"/>
+        <path d="M 6 4 Q 7 6 9 4" fill="#ffffff"/>
+    </g>
+
+    <!-- Ravens Bringing Bread and Meat down into the Deep Ravine (1 Kings 17:6) -->
+    <g filter="url(#ravineGlow)">
+        <!-- Raven 1 (Descending through the narrow canyon opening) -->
+        <g transform="translate(105, 24)">
+            <path d="M 0 0 Q -10 -5 -18 -2 Q -10 2 0 5 Q 10 2 18 -2 Q 10 -5 0 0 Z" fill="#111111"/>
+            <!-- Wing Upstroke -->
+            <path d="M 0 0 Q -8 -12 -15 -8 Q -5 -4 0 0 Z" fill="#1f1f1f"/>
+            <path d="M 0 0 Q 8 -12 15 -8 Q 5 -4 0 0 Z" fill="#1f1f1f"/>
+            <!-- Provision / Bread morsel in beak -->
+            <circle cx="-19" cy="-1" r="1.8" fill="#d7ccc8"/>
+        </g>
+
+        <!-- Raven 2 (Soaring higher along the upper right cliff) -->
+        <g transform="translate(132, 14) scale(0.7)">
+            <path d="M 0 0 Q -10 -5 -18 -2 Q -10 2 0 5 Q 10 2 18 -2 Q 10 -5 0 0 Z" fill="#111111"/>
+            <path d="M 0 0 Q -6 10 -13 12 Q -4 4 0 0 Z" fill="#1f1f1f"/>
+            <path d="M 0 0 Q 6 10 13 12 Q 4 4 0 0 Z" fill="#1f1f1f"/>
+        </g>
+    </g>
+</svg>

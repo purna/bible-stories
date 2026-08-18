@@ -1,0 +1,512 @@
+[
+  {
+    "id": "drought",
+    "name": "The Drought",
+    "bg": "radial-gradient(circle at 50% 10%, #f2a65a, #774f38 80%)",
+    "particle": "dust",
+    "svg": "samaria_court",
+    "lines": [
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "In the northern kingdom of Israel, King Ahab had turned away from the LORD. Queen Jezebel had promoted the worship of Baal, and the nation was being led deeper into idolatry.",
+        "align": "left",
+        "svg": "samaria_court"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "type",
+        "text": "Then Elijah the Tishbite appeared before Ahab. He came with a warning from the living God.",
+        "align": "center",
+        "svg": "samaria_court"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "bounce",
+        "text": "As surely as the LORD, the God of Israel, lives—the God I serve—there will be no dew or rain unless the LORD gives the word.",
+        "align": "center",
+        "svg": "samaria_court",
+        "choices": [
+          {
+            "label": "Stand boldly on God's word",
+            "note": "Elijah's message is clear: Israel's drought is a direct challenge to Baal, the god they claimed controlled the rain."
+          },
+          {
+            "label": "Feel the weight of the king's threat",
+            "note": "Elijah is brave, but the story will soon show that even a courageous prophet can become afraid."
+          }
+        ]
+      },
+      {
+        "speaker": "god",
+        "fx": "fade",
+        "text": "Leave here. Go east and hide beside the Kerith Ravine. You will drink from the brook, and I have commanded ravens to provide food for you there.",
+        "align": "center",
+        "svg": "kerith_ravine"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "type",
+        "text": "Elijah obeyed. Morning and evening the ravens brought him bread and meat, and he drank from the brook.",
+        "align": "left",
+        "svg": "kerith_ravine"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "But after a time the brook dried up. The drought had reached even the place where God had provided for Elijah.",
+        "align": "right",
+        "svg": "kerith_ravine"
+      }
+    ]
+  },
+  {
+    "id": "widow",
+    "name": "The Widow of Zarephath",
+    "bg": "radial-gradient(circle at 50% 20%, #c6a776, #8c6c4f 70%, #594236)",
+    "particle": "dream",
+    "svg": "zarephath_town",
+    "lines": [
+      {
+        "speaker": "god",
+        "fx": "type",
+        "text": "Go at once to Zarephath in Sidon. I have directed a widow there to provide for you.",
+        "align": "center",
+        "svg": "zarephath_town"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "At the town gate Elijah found a widow gathering sticks. She was preparing what she believed would be the last meal for herself and her son.",
+        "align": "right",
+        "svg": "zarephath_town"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "fade",
+        "text": "Please bring me a little water—and while you are going, bring me a small piece of bread.",
+        "align": "center",
+        "svg": "zarephath_town",
+        "choices": [
+          {
+            "label": "Trust God's promise",
+            "note": "The widow is asked to trust before she can see the provision."
+          },
+          {
+            "label": "Hold on to what little remains",
+            "note": "Her fear is understandable. She has almost nothing left, yet God's provision is about to become visible."
+          }
+        ]
+      },
+      {
+        "speaker": "widow",
+        "fx": "bounce",
+        "text": "I have no bread. Only a handful of flour and a little oil. I was gathering sticks to prepare one final meal for my son and me.",
+        "align": "center",
+        "svg": "zarephath_town"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "type",
+        "text": "Do not be afraid. The LORD says the flour will not run out and the oil will not fail until rain returns to the land.",
+        "align": "center",
+        "svg": "zarephath_town"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "She trusted the word of the LORD. Day after day there was enough flour and oil for Elijah, the widow, and her household.",
+        "align": "center",
+        "svg": "zarephath_town"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "shake",
+        "text": "Then tragedy struck: the widow's son became ill and died. Elijah carried the boy upstairs, prayed to the LORD, and pleaded for his life.",
+        "align": "left",
+        "svg": "zarephath_town"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "fade",
+        "text": "LORD my God, let this child's life return to him.",
+        "align": "center",
+        "svg": "zarephath_town"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "bounce",
+        "text": "The LORD heard Elijah's prayer. The child's life returned, and Elijah brought him back to his mother.",
+        "align": "center",
+        "svg": "zarephath_town"
+      },
+      {
+        "speaker": "widow",
+        "fx": "fade",
+        "text": "Now I know that you are a man of God and that the word of the LORD from your mouth is true.",
+        "align": "center",
+        "svg": "zarephath_town"
+      }
+    ]
+  },
+  {
+    "id": "carmel",
+    "name": "Mount Carmel",
+    "bg": "radial-gradient(circle at 50% 80%, #8b2500, #3d1200 60%, #1a0700)",
+    "particle": "wind_carmel",
+    "svg": "mount_carmel_altars",
+    "lines": [
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "After a long drought, the LORD told Elijah to show himself to Ahab. The time had come to announce that rain would return.",
+        "align": "left",
+        "svg": "samaria_court"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "type",
+        "text": "Ahab's official Obadiah had secretly protected a hundred prophets of the LORD from Jezebel. But now Elijah stood openly before the king.",
+        "align": "center",
+        "svg": "samaria_court"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "bounce",
+        "text": "Gather all Israel on Mount Carmel. Bring the prophets of Baal. Let the people see who truly answers prayer.",
+        "align": "center",
+        "svg": "mount_carmel_altars"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "type",
+        "text": "How long will you keep wavering? If the LORD is God, follow him. If Baal is God, follow him.",
+        "align": "right",
+        "svg": "mount_carmel_altars"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "The prophets of Baal cried out from morning until noon. They called, shouted, and performed their rituals—but there was no answer.",
+        "align": "center",
+        "svg": "mount_carmel_altars"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "bounce",
+        "text": "Cry louder! Perhaps your god is busy, travelling, or asleep and needs to be awakened.",
+        "align": "center",
+        "svg": "mount_carmel_altars"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "Then Elijah repaired the LORD's broken-down altar. He used twelve stones, one for each tribe of Israel, and had the sacrifice and wood soaked with water.",
+        "align": "center",
+        "svg": "mount_carmel_altars"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "fly",
+        "text": "LORD, God of Abraham, Isaac and Israel, show today that you are God in Israel and that I am your servant. Answer me, LORD!",
+        "align": "center",
+        "svg": "mount_carmel_altars",
+        "choices": [
+          {
+            "label": "Pray with confidence",
+            "note": "Elijah's prayer is not a performance. He asks God to turn the people's hearts back to him."
+          },
+          {
+            "label": "Remember who must receive the glory",
+            "note": "The sign is meant to reveal the LORD—not to make Elijah famous."
+          }
+        ]
+      },
+      {
+        "speaker": "narrator",
+        "fx": "shake",
+        "sfx": "WHOOSH!",
+        "text": "Then the fire of the LORD fell. It consumed the sacrifice, the wood, the stones, the soil, and even the water in the trench.",
+        "align": "center",
+        "svg": "mount_carmel_fire"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "The people fell facedown and cried out: The LORD—he is God! The LORD—he is God!",
+        "align": "center",
+        "svg": "mount_carmel_fire"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "type",
+        "text": "Go back and look toward the sea. The drought is ending.",
+        "align": "right",
+        "svg": "mount_carmel_fire"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "A small cloud appeared. The sky grew dark, the wind rose, and soon the land was filled with rain.",
+        "align": "center",
+        "svg": "mount_carmel_fire"
+      }
+    ]
+  },
+  {
+    "id": "flight",
+    "name": "The Flight to Horeb",
+    "bg": "radial-gradient(circle at 50% 50%, #5a3e2b, #3b2a1a 80%)",
+    "particle": "dust",
+    "svg": "wilderness_tree",
+    "lines": [
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "When Jezebel heard what had happened on Mount Carmel, she sent Elijah a deadly threat.",
+        "align": "left",
+        "svg": "samaria_court"
+      },
+      {
+        "speaker": "jezebel",
+        "fx": "shake",
+        "text": "By tomorrow, I will make your life like the lives of the prophets you have defeated!",
+        "align": "center",
+        "svg": "samaria_court"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "type",
+        "text": "Elijah was afraid. The prophet who had stood before Ahab now ran into the wilderness for his life.",
+        "align": "right",
+        "svg": "wilderness_tree"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "fade",
+        "text": "I have had enough, LORD. Take my life. I am no better than my ancestors.",
+        "align": "center",
+        "svg": "wilderness_tree"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "Exhausted, Elijah lay down beneath a broom bush and fell asleep. An angel touched him and told him to eat.",
+        "align": "center",
+        "svg": "wilderness_tree"
+      },
+      {
+        "speaker": "angel",
+        "fx": "bounce",
+        "text": "Get up and eat, for the journey is too much for you.",
+        "align": "center",
+        "svg": "wilderness_tree"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "The angel came again with food and water. Strengthened by it, Elijah travelled forty days and forty nights to Horeb, the mountain of God.",
+        "align": "center",
+        "svg": "horeb_cave"
+      }
+    ]
+  },
+  {
+    "id": "voice",
+    "name": "The Still, Small Voice",
+    "bg": "radial-gradient(circle at 50% 20%, #0d1b2a, #061224 65%, #030b18)",
+    "particle": "constellation",
+    "svg": "horeb_cave",
+    "lines": [
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "At Horeb, Elijah entered a cave and spent the night. God asked him a question that reached beyond the storm outside.",
+        "align": "left",
+        "svg": "horeb_cave"
+      },
+      {
+        "speaker": "god",
+        "fx": "type",
+        "text": "What are you doing here, Elijah?",
+        "align": "center",
+        "svg": "horeb_cave"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "bounce",
+        "text": "I have been zealous for the LORD. Israel has broken your covenant, destroyed your altars, and killed your prophets. I am the only one left, and they are trying to kill me too.",
+        "align": "center",
+        "svg": "horeb_cave"
+      },
+      {
+        "speaker": "god",
+        "fx": "fade",
+        "text": "Go out and stand on the mountain. The LORD is about to pass by.",
+        "align": "center",
+        "svg": "horeb_cave"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "shake",
+        "text": "A powerful wind tore at the mountain. But the LORD was not in the wind. Then came an earthquake—but the LORD was not in the earthquake.",
+        "align": "center",
+        "svg": "horeb_cave"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "shake",
+        "text": "Then came fire. But the LORD was not in the fire. After the fire came a gentle whisper.",
+        "align": "center",
+        "svg": "horeb_cave"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "When Elijah heard it, he covered his face with his cloak and stood at the entrance of the cave.",
+        "align": "center",
+        "svg": "horeb_cave",
+        "choices": [
+          {
+            "label": "Listen for God in the quiet",
+            "note": "Elijah discovers that God's presence is not limited to spectacular signs. The quiet voice matters too."
+          },
+          {
+            "label": "Expect another great sign",
+            "note": "Elijah has seen fire, rain, wind, and earthquakes. Now the story turns his attention from spectacle to listening."
+          }
+        ]
+      },
+      {
+        "speaker": "god",
+        "fx": "type",
+        "text": "Go back. Anoint Hazael king over Aram, Jehu king over Israel, and Elisha to succeed you as prophet. And remember: I have kept seven thousand in Israel who have not bowed to Baal.",
+        "align": "center",
+        "svg": "horeb_cave"
+      }
+    ]
+  },
+  {
+    "id": "vineyard",
+    "name": "Naboth's Vineyard",
+    "bg": "radial-gradient(circle at 20% 80%, #4a6b3c, #2d4a2c 70%)",
+    "particle": "dream",
+    "svg": "naboths_vineyard",
+    "lines": [
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "Later, Ahab wanted Naboth's vineyard because it was beside the king's palace. Naboth refused to sell the inheritance that belonged to his family.",
+        "align": "left",
+        "svg": "naboths_vineyard"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "type",
+        "text": "Jezebel arranged false accusations against Naboth. He was condemned and killed, and Ahab took possession of the vineyard.",
+        "align": "center",
+        "svg": "naboths_vineyard"
+      },
+      {
+        "speaker": "god",
+        "fx": "fade",
+        "text": "Go down to meet Ahab in Naboth's vineyard. He has gone there to take possession of it.",
+        "align": "right",
+        "svg": "naboths_vineyard"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "bounce",
+        "text": "This is what the LORD says: You have murdered Naboth and taken his land. Because you have given yourself to evil, judgment is coming upon your house.",
+        "align": "center",
+        "svg": "naboths_vineyard"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "Elijah's ministry was not only about miracles. He also confronted kings when power was used to crush the innocent.",
+        "align": "center",
+        "svg": "naboths_vineyard"
+      }
+    ]
+  },
+  {
+    "id": "chariot",
+    "name": "The Chariot of Fire",
+    "bg": "radial-gradient(circle at 50% 50%, #ffde7d, #ff914d 80%)",
+    "particle": "wind_chariot",
+    "svg": "jordan_river",
+    "lines": [
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "The time came for the LORD to take Elijah up to heaven in a whirlwind. Elijah and Elisha travelled together from Gilgal.",
+        "align": "left",
+        "svg": "jordan_river"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "type",
+        "text": "At the Jordan, Elijah struck the water with his cloak. The river divided, and they crossed on dry ground.",
+        "align": "center",
+        "svg": "jordan_river"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "fade",
+        "text": "Tell me what I can do for you before I am taken from you.",
+        "align": "right",
+        "svg": "jordan_river"
+      },
+      {
+        "speaker": "elisha",
+        "fx": "bounce",
+        "text": "Please let me inherit a double portion of your spirit.",
+        "align": "center",
+        "svg": "jordan_river"
+      },
+      {
+        "speaker": "elijah",
+        "fx": "fade",
+        "text": "You have asked for something difficult. Yet if you see me when I am taken from you, it will be granted.",
+        "align": "center",
+        "svg": "jordan_river"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "shake",
+        "text": "Suddenly a chariot of fire and horses of fire appeared. They separated Elijah and Elisha, and Elijah was carried up into heaven in a whirlwind.",
+        "align": "center",
+        "svg": "chariot_of_fire"
+      },
+      {
+        "speaker": "elisha",
+        "fx": "fly",
+        "text": "My father! My father! The chariots and horsemen of Israel!",
+        "align": "center",
+        "svg": "elijah_ascends"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fade",
+        "text": "Elisha picked up Elijah's cloak. The prophetic mission did not end—it passed to the next generation.",
+        "align": "center",
+        "svg": "elisha_mantle"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "type",
+        "text": "The story of Elijah ends with a prophet taken from the earth, but God's work continues through Elisha.",
+        "align": "center",
+        "svg": "elisha_mantle"
+      },
+      {
+        "speaker": "narrator",
+        "fx": "fly",
+        "text": "THE END",
+        "align": "center",
+        "svg": "elisha_mantle"
+      }
+    ]
+  }
+]

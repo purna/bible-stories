@@ -1,0 +1,102 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Dramatic stormy sky gradient for the contest on Mount Carmel -->
+        <linearGradient id="skyCarmelAltars" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#181c24"/>
+            <stop offset="40%" stop-color="#2d3545"/>
+            <stop offset="80%" stop-color="#4d3831"/>
+            <stop offset="100%" stop-color="#6e311e"/>
+        </linearGradient>
+
+        <!-- Stone altar gradients -->
+        <linearGradient id="altarStone1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#8a9ea8"/>
+            <stop offset="100%" stop-color="#455a64"/>
+        </linearGradient>
+
+        <linearGradient id="altarStone2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#70655a"/>
+            <stop offset="100%" stop-color="#3b322b"/>
+        </linearGradient>
+
+        <!-- Baalim futile altar fireless / cold gradient vs divine fire -->
+        <linearGradient id="divineFireCarmel" x1="50%" y1="100%" x2="50%" y2="0%">
+            <stop offset="0%" stop-color="#d32f2f"/>
+            <stop offset="40%" stop-color="#ff9800"/>
+            <stop offset="80%" stop-color="#ffeb3b"/>
+            <stop offset="100%" stop-color="#ffffff"/>
+        </linearGradient>
+
+        <!-- Glow filter for miraculous fire -->
+        <filter id="carmelAltarsGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur1"/>
+            <feGaussianBlur stdDeviation="6" result="blur2"/>
+            <feMerge>
+                <feMergeNode in="blur2"/>
+                <feMergeNode in="blur1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Stormy Sky Background -->
+    <rect width="200" height="100" fill="url(#skyCarmelAltars)"/>
+
+    <!-- Heavenly Light Beam Striking Down Exclusively on Elijah's Altar -->
+    <polygon points="150,0 120,72 180,72" fill="#ffffff" opacity="0.25"/>
+    <polygon points="150,0 132,72 168,72" fill="#ffeb3b" opacity="0.35"/>
+
+    <!-- Mount Carmel Terrain Ground -->
+    <path d="M 0 88 L 60 76 L 130 82 L 200 85 L 200 100 L 0 100 Z" fill="#1b1815"/>
+
+    <!-- ALTAR 1: Prophets of Baal (Left Side - Cold, Unanswered, Wasted Sacrifice) -->
+    <g transform="translate(30, 68)">
+        <!-- Stone Altar Structure -->
+        <rect x="0" y="4" width="36" height="16" fill="url(#altarStone2)" stroke="#261f1b" stroke-width="1"/>
+        <!-- Unresponsive wood / silent sacrifice on top -->
+        <path d="M 6 4 L 30 4 L 28 -2 L 8 -2 Z" fill="#4e342e"/>
+        <line x1="10" y1="1" x2="26" y2="1" stroke="#3e2723" stroke-width="1.5"/>
+        <!-- Small wisps of smoke showing no fire / failure -->
+        <path d="M 15 2 Q 12 -5 18 -10 Q 15 -15 20 -20" fill="none" stroke="#cfd8dc" stroke-width="1" opacity="0.3"/>
+    </g>
+
+    <!-- ALTAR 2: Elijah's Altar (Right Side - 12 Stones with Water Trenches, Consumed by Fire) -->
+    <g transform="translate(120, 64)">
+        <!-- Stone Altar Structure (12 stones representing the tribes) -->
+        <rect x="0" y="8" width="45" height="18" fill="url(#altarStone1)" stroke="#263238" stroke-width="1"/>
+        <!-- Altar grid lines for stones -->
+        <line x1="15" y1="8" x2="15" y2="26" stroke="#263238" stroke-width="1"/>
+        <line x1="30" y1="8" x2="30" y2="26" stroke="#263238" stroke-width="1"/>
+        <line x1="0" y1="17" x2="45" y2="17" stroke="#263238" stroke-width="1"/>
+
+        <!-- Water Trench pooling around base -->
+        <rect x="-6" y="24" width="57" height="4" fill="#0288d1" opacity="0.8"/>
+    </g>
+
+    <!-- Elijah Standing in Triumphant Prayer (Center-Left) -->
+    <g transform="translate(75, 54)">
+        <!-- Robe -->
+        <path d="M 10 18 Q 4 12 0 18 L 4 28 L 14 28 Z" fill="#3e2723"/>
+        <path d="M 5 6 Q 9 0 13 6 Q 17 14 13 28 L 3 28 Q 0 14 5 6 Z" fill="#795548"/>
+        <!-- Head and hands lifted toward heaven -->
+        <circle cx="8" cy="3" r="2.3" fill="#d1b399"/>
+        <path d="M 7 1 L 3 -3 M 9 1 L 13 -3" stroke="#d1b399" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Frustrated Prophets of Baal standing near their silent altar -->
+    <g transform="translate(18, 56)" opacity="0.8">
+        <path d="M 6 15 Q 2 10 0 15 L 3 24 L 10 24 Z" fill="#b71c1c"/>
+        <circle cx="5" cy="2" r="2" fill="#d1b399"/>
+    </g>
+
+    <!-- MIRACULOUS FIRE FROM HEAVEN CONSUMING ELIJAH'S ALTAR (1 Kings 18:38) -->
+    <g filter="url(#carmelAltarsGlow)">
+        <path d="M 132 64 Q 125 40 142 18 Q 135 35 145 10 Q 155 35 150 18 Q 165 40 148 64 Z" fill="url(#divineFireCarmel)"/>
+        <path d="M 138 64 Q 132 45 142 28 Q 148 45 144 64 Z" fill="#ffffff" opacity="0.9"/>
+        
+        <!-- Blazing Sparks & Embers -->
+        <circle cx="120" cy="35" r="2" fill="#ffeb3b"/>
+        <circle cx="165" cy="30" r="1.5" fill="#ffeb3b"/>
+        <circle cx="142" cy="8" r="2.5" fill="#ffffff"/>
+    </g>
+</svg>

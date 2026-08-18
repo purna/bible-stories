@@ -1,0 +1,125 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Gradients for rich celestial sky and fiery radiance -->
+        <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1a1c38"/>
+            <stop offset="40%" stop-color="#2d3359"/>
+            <stop offset="70%" stop-color="#4a3b5c"/>
+            <stop offset="100%" stop-color="#6b3044"/>
+        </linearGradient>
+
+        <linearGradient id="fireGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#b83211"/>
+            <stop offset="40%" stop-color="#f57c00"/>
+            <stop offset="80%" stop-color="#ffd54f"/>
+            <stop offset="100%" stop-color="#fff9c4"/>
+        </linearGradient>
+
+        <linearGradient id="horseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffcc00"/>
+            <stop offset="50%" stop-color="#ff5722"/>
+            <stop offset="100%" stop-color="#d32f2f"/>
+        </linearGradient>
+
+        <radialGradient id="heavenlyLight" cx="80%" cy="15%" r="50%">
+            <stop offset="0%" stop-color="#fff59d" stop-opacity="0.9"/>
+            <stop offset="50%" stop-color="#ffb300" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#ffb300" stop-opacity="0"/>
+        </radialGradient>
+
+        <!-- Glow filter -->
+        <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Deep Atmospheric Sky -->
+    <rect width="200" height="100" fill="url(#skyGrad)"/>
+
+    <!-- Heavenly Light Burst from Above -->
+    <circle cx="160" cy="15" r="70" fill="url(#heavenlyLight)"/>
+    <path d="M 160 15 L 110 0 L 130 0 Z" fill="#ffecb3" opacity="0.3"/>
+    <path d="M 160 15 L 180 0 L 195 0 Z" fill="#ffecb3" opacity="0.3"/>
+
+    <!-- Stormy Clouds swirling in background -->
+    <g fill="#282242" opacity="0.7">
+        <ellipse cx="20" cy="20" rx="35" ry="15"/>
+        <ellipse cx="70" cy="15" rx="45" ry="18"/>
+        <ellipse cx="130" cy="25" rx="40" ry="14"/>
+        <ellipse cx="180" cy="20" rx="30" ry="12"/>
+    </g>
+
+    <!-- Mountain Landscape & Ground -->
+    <path d="M 0 85 L 30 70 L 60 82 L 95 65 L 130 80 L 170 72 L 200 85 L 200 100 L 0 100 Z" fill="#1b172a"/>
+    <path d="M 0 90 Q 50 82 100 88 T 200 86 L 200 100 L 0 100 Z" fill="#2d2640"/>
+
+    <!-- Elisha Kneeling on the Left, Watching -->
+    <g transform="translate(30, 68)">
+        <!-- Shadow/Robes -->
+        <path d="M 10 17 Q 5 12 0 17 L 3 22 L 15 22 Z" fill="#3e3252"/>
+        <path d="M 5 8 Q 8 2 12 7 Q 15 15 12 22 L 2 22 Q 0 15 5 8 Z" fill="#786c94"/>
+        <!-- Head & Hands raised in awe -->
+        <circle cx="8" cy="4" r="2.5" fill="#d1b399"/>
+        <path d="M 7 2 L 4 0 M 9 2 L 12 -1" stroke="#d1b399" stroke-width="1" stroke-linecap="round"/>
+    </g>
+
+    <!-- THE CHARIOT OF FIRE, HORSES, AND ELIJAH -->
+    <g filter="url(#glow)">
+        
+        <!-- Whirlwind / Fire Trail Background Swirl -->
+        <path d="M 40 85 Q 70 70 90 50 Q 110 30 140 35 Q 160 40 175 60" fill="none" stroke="url(#fireGrad)" stroke-width="12" stroke-linecap="round" opacity="0.6"/>
+
+        <!-- Fiery Horses leaping forward -->
+        <g fill="url(#horseGrad)">
+            <!-- Horse 2 (Background) -->
+            <path d="M 120 42 Q 130 35 142 38 Q 138 48 128 52 Z" opacity="0.8"/>
+            <path d="M 125 50 Q 135 48 145 58 L 135 68 L 118 60 Z" opacity="0.8"/>
+
+            <!-- Horse 1 (Foreground) -->
+            <path d="M 140 34 Q 155 25 165 38 Q 158 48 148 44 Q 152 38 145 36 Z"/> <!-- Head & Mane -->
+            <path d="M 135 42 Q 150 45 142 62 L 125 58 Q 132 48 135 42 Z"/> <!-- Body -->
+            <path d="M 140 58 L 155 70 M 145 60 L 138 74" stroke="url(#horseGrad)" stroke-width="3" stroke-linecap="round"/> <!-- Legs -->
+        </g>
+
+        <!-- Chariot Platform & Reins -->
+        <path d="M 100 55 L 128 52 L 132 65 L 102 68 Z" fill="#d84315" stroke="#ffb300" stroke-width="1.5"/>
+        <path d="M 115 53 Q 130 40 145 38" fill="none" stroke="#ffb300" stroke-width="1"/>
+
+        <!-- Elijah Standing Triumphant on Chariot -->
+        <g>
+            <!-- Robes -->
+            <path d="M 108 35 Q 115 25 122 35 L 125 55 L 105 55 Z" fill="#1565c0"/>
+            <!-- Arms Raised -->
+            <path d="M 110 38 L 100 30 M 120 38 L 130 30" stroke="#d1b399" stroke-width="2" stroke-linecap="round"/>
+            <!-- Head & Beard -->
+            <circle cx="115" cy="24" r="3.5" fill="#d1b399"/>
+            <path d="M 113 27 Q 115 30 117 27" fill="#ffffff"/>
+        </g>
+
+        <!-- Fiery Wheels (Blazing Orbs) -->
+        <circle cx="105" cy="67" r="10" fill="none" stroke="url(#fireGrad)" stroke-width="4"/>
+        <circle cx="105" cy="67" r="5" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="3 2"/>
+        <circle cx="132" cy="64" r="12" fill="none" stroke="url(#fireGrad)" stroke-width="5"/>
+        <circle cx="132" cy="64" r="6" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 2"/>
+
+        <!-- Explosive Flames & Plumes Erupting -->
+        <path d="M 95 60 Q 80 40 95 20 Q 90 45 105 35 Q 100 20 115 35 Q 110 50 100 60 Z" fill="url(#fireGrad)" opacity="0.9"/>
+        <path d="M 125 55 Q 115 30 135 12 Q 125 35 140 28 Q 130 15 150 25 Q 155 42 135 55 Z" fill="url(#fireGrad)"/>
+        <path d="M 155 50 Q 165 30 180 20 Q 170 38 185 35 Q 175 45 190 55 Z" fill="#ff5722" opacity="0.8"/>
+    </g>
+
+    <!-- Flying Sparks and Embers -->
+    <g fill="#ffe082" filter="url(#glow)">
+        <circle cx="75" cy="45" r="2"/>
+        <circle cx="95" cy="25" r="1.5"/>
+        <circle cx="130" cy="15" r="2.5"/>
+        <circle cx="165" cy="22" r="1.5"/>
+        <circle cx="185" cy="40" r="2"/>
+        <circle cx="60" cy="60" r="1"/>
+        <circle cx="85" cy="75" r="1.5"/>
+    </g>
+</svg>
