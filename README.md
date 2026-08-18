@@ -10,6 +10,10 @@ This repository contains the source code and assets for the following comic seri
 
 ---
 
+<img src="comic.png" alt="Bible Stories Comics - Interactive Comic Preview" style="width: 50%;">
+
+---
+
 ### [The Book of Daniel](./Daniel/)
 
 This series covers the major events from the life of Daniel and his friends during their time in Babylon.
