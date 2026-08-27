@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "name": "exile_eden",
+  "settings": {
+    "background": "#0a0812",
+    "fog": { "color": "#000000", "density": 0.003 }
+  },
+  "camera": { "distance": 90, "height": 20 },
+  "objects": [
+    {
+      "type": "light",
+      "lightType": "ambient",
+      "color": "#332244",
+      "intensity": 0.3
+    },
+    {
+      "type": "light",
+      "lightType": "point",
+      "color": "#FF6B35",
+      "intensity": 1.0,
+      "position": {"x": 0, "y": 15, "z": 0}
+    },
+    {
+      "type": "shape",
+      "shapeType": "box",
+      "scale": {"x": 30, "y": 40, "z": 5},
+      "color": "#8b5a2b",
+      "material": {"type": "toon", "outline": 0.05},
+      "position": {"x": 0, "y": 20, "z": 0},
+      "rotation": {"x": 0, "y": 1.57, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 3, "y": 3, "z": 3},
+      "color": "#FFD84D",
+      "material": {"type": "emissive", "outline": 0.1},
+      "position": {"x": 0, "y": 18, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": false, "receive": false}}}
+    },
+    {
+      "type": "decoration",
+      "decorationType": "stars",
+      "count": 200,
+      "spread": 400,
+      "color": "#FFFFFF",
+      "size": 0.8
+    },
+    {
+      "type": "shape",
+      "shapeType": "cylinder",
+      "scale": {"x": 5, "y": 50, "z": 5},
+      "color": "#8B0000",
+      "material": {"type": "emissive", "outline": 0.1},
+      "position": {"x": 0, "y": 25, "z": -15},
+      "userData": {"aframe": {"shadow": {"cast": false, "receive": false}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 25, "y": 25, "z": 25},
+      "color": "#C8956C",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": -30, "y": 15, "z": -20},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 24, "y": 24, "z": 24},
+      "color": "#DCB088",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": 30, "y": 14, "z": -25},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    }
+  ],
+  "cameraAnimation": {
+    "theta_speed": 0.03,
+    "distance_amp": 5,
+    "phi_amp": 0.1
+  }
+}

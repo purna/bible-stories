@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "name": "creation_cosmos",
+  "settings": {
+    "background": "#03010a",
+    "fog": { "color": "#000000", "density": 0.0025 }
+  },
+  "camera": { "distance": 100, "height": 20 },
+  "objects": [
+    {
+      "type": "light",
+      "lightType": "point",
+      "color": "#FFFFFF",
+      "intensity": 6,
+      "position": {"x": 0, "y": 10, "z": 0}
+    },
+    {
+      "type": "light",
+      "lightType": "ambient",
+      "color": "#FFFFFF",
+      "intensity": 0.4
+    },
+    {
+      "type": "light",
+      "lightType": "directional",
+      "color": "#FFFFFF",
+      "intensity": 0.8,
+      "position": {"x": 0, "y": 30, "z": 0}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 18, "y": 18, "z": 18},
+      "color": "#2a7d3a",
+      "material": { "type": "toon", "outline": 0.06 },
+      "position": {"x": -50, "y": -20, "z": 0},
+      "userData": { "aframe": { "shadow": { "cast": true, "receive": true } } }
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 8, "y": 8, "z": 8},
+      "color": "#cccccc",
+      "material": { "type": "toon", "outline": 0.05 },
+      "position": {"x": 60, "y": 30, "z": -40},
+      "userData": { "aframe": { "shadow": { "cast": true, "receive": true } } }
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 2, "y": 2, "z": 2},
+      "color": "#FFD84D",
+      "material": { "type": "emissive", "opacity": 0.6, "outline": 0.05 },
+      "position": {"x": 0, "y": 10, "z": 0},
+      "userData": { "aframe": { "shadow": { "cast": false, "receive": false } } }
+    },
+    {
+      "type": "decoration",
+      "decorationType": "stars",
+      "count": 200,
+      "spread": 160,
+      "color": "#FFFFFF",
+      "size": 0.8
+    },
+    {
+      "type": "decoration",
+      "decorationType": "stars",
+      "count": 80,
+      "spread": 180,
+      "color": "#FFD84D",
+      "size": 1
+    },
+    {
+      "type": "decoration",
+      "decorationType": "rays",
+      "count": 8,
+      "color": "#FFD84D",
+      "opacity": 0.15,
+      "radius": 12,
+      "height": 50
+    }
+  ],
+  "animations": {
+    "lightPulse": { "target": "light_0", "axis": "y", "amplitude": 0.5, "frequency": 0.5 },
+    "camera": {
+      "thetaSpeed": 0.05,
+      "distanceAmp": 3,
+      "distanceFreq": 0.2,
+      "phiBase": 0.785,
+      "phiAmp": 0.1,
+      "phiFreq": 0.15,
+      "rollAmp": 0.03,
+      "rollFreq": 0.25,
+      "target": [0, 10, 0]
+    }
+  }
+}

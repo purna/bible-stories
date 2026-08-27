@@ -1,0 +1,33 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" data-parallax="true">
+  <!-- The Fall — shame, hiding, consequences -->
+  <!-- Dark, cold bg — static -->
+  <rect width="300" height="200" fill="#2a1008" data-depth="0"/>
+  <!-- Ground — foreground -->
+  <rect x="0" y="150" width="300" height="50" fill="#4a2010" stroke="#0A0812" stroke-width="2" data-depth="0.9"/>
+  <!-- Tree of Knowledge — wilted, in background, midground -->
+  <rect x="260" y="70" width="20" height="80" fill="#5c4033" stroke="#0A0812" stroke-width="2" data-depth="0.5"/>
+  <path d="M270 65 Q240 30 210 50 Q230 35 200 30 Q230 20 200 15 Q230 10 260 25 Q250 35 270 30" fill="#2a4a2a" opacity=".5" data-depth="0.5"/>
+  <!-- Adam figure — emphasis: hiding, shame, foreground -->
+  <!-- Torso twisted, covering -->
+  <rect x="120" y="100" width="34" height="60" fill="#5c4033" stroke="#0A0812" stroke-width="2.5" rx="4" data-depth="0.85"/>
+  <circle cx="137" cy="88" r="14" fill="#C8956C" stroke="#0A0812" stroke-width="2.5" data-depth="0.85"/>
+  <!-- Adam arms crossed over chest/shame -->
+  <path d="M120 105 Q100 100 90 115" fill="none" stroke="#5c4033" stroke-width="10" stroke-linecap="round" data-depth="0.9"/>
+  <path d="M154 105 Q174 100 184 115" fill="none" stroke="#5c4033" stroke-width="10" stroke-linecap="round" data-depth="0.9"/>
+  <!-- Eve figure — emphasis: hiding, shame, opposite side -->
+  <rect x="46" y="100" width="30" height="58" fill="#8a7a5a" stroke="#0A0812" stroke-width="2.5" rx="4" data-depth="0.85"/>
+  <circle cx="61" cy="88" r="12" fill="#dcb088" stroke="#0A0812" stroke-width="2" data-depth="0.85"/>
+  <!-- Eve arms covering herself -->
+  <path d="M76 100 Q92 95 100 110" fill="none" stroke="#8a7a5a" stroke-width="8" stroke-linecap="round" data-depth="0.9"/>
+  <!-- Fig leaves — variety: hastily made, foreground -->
+  <path d="M53 108 Q57 102 61 108" fill="#2a4a2a" stroke="#0A0812" stroke-width="1" data-depth="1.0"/>
+  <path d="M68 108 Q72 102 76 108" fill="#2a4a2a" stroke="#0A0812" stroke-width="1" data-depth="1.0"/>
+  <!-- Fallen fruit on ground — foreground -->
+  <ellipse cx="140" cy="155" rx="7" ry="8" fill="#FF6B5B" stroke="#0A0812" stroke-width="1.5" data-depth="1.0"/>
+  <!-- Shadows / shame — dark, heavy, foreground -->
+  <ellipse cx="140" cy="170" rx="20" ry="6" fill="#0A0812" opacity=".5" data-depth="0.95"/>
+  <ellipse cx="60" cy="168" rx="16" ry="5" fill="#0A0812" opacity=".4" data-depth="0.95"/>
+  <!-- Tree of Life — now distant, background -->
+  <rect x="15"  y="80" width="24" height="70" fill="#5c4033" stroke="#0A0812" stroke-width="2" data-depth="0.4"/>
+  <circle cx="27" cy="70" r="30" fill="#4a6a3a" opacity=".3" stroke="#0A0812" stroke-width="1.5" data-depth="0.4"/>
+</svg>

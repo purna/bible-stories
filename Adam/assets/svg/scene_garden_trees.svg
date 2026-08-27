@@ -1,0 +1,39 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="treeGreen2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a7a3a"/>
+      <stop offset="100%" stop-color="#3a5a3a"/>
+    </linearGradient>
+    <radialGradient id="forbiddenGlow" cx="50%" cy="55%" r="45%">
+      <stop offset="0%" stop-color="#FF6B5B" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#FF6B5B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Garden — warm earth bg --><!-- hierarchy: lush but orderly -->
+  <rect width="300" height="200" fill="#2b1d0c"/>
+  <!-- River --><!-- movement, rhythm -->
+  <path d="M150 20 Q135 45 140 75 Q145 110 135 145 Q125 170 140 185" fill="#4ECDC4" opacity=".5" stroke="#4ECDC4" stroke-width="3" stroke-linecap="round"/>
+  <!-- Left tree — Tree of the Knowledge of Good and Evil --><!-- emphasis: dark fruit -->
+  <rect x="80" y="95" width="24" height="65" fill="#5c4033" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="92" cy="82" r="40" fill="url(#treeGreen2)" stroke="#0A0812" stroke-width="2.5"/>
+  <!-- Forbidden fruit — emphasis: red glow, contrast to surroundings -->
+  <ellipse cx="80" cy="68" rx="8" ry="10" fill="#FF6B5B" stroke="#0A0812" stroke-width="2"/>
+  <ellipse cx="104" cy="72" rx="8" ry="10" fill="#FF6B5B" stroke="#0A0812" stroke-width="2"/>
+  <ellipse cx="92" cy="58" rx="8" ry="10" fill="#8B0000" stroke="#0A0812" stroke-width="1.5"/>
+  <!-- Right tree — Tree of Life --><!-- contrast: golden fruit -->
+  <rect x="196" y="88" width="24" height="72" fill="#5c4033" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="208" cy="75" r="38" fill="url(#treeGreen2)" stroke="#0A0812" stroke-width="2.5"/>
+  <!-- Life fruit — gold -->
+  <ellipse cx="196" cy="62" rx="8" ry="10" fill="#FFD84D" stroke="#0A0812" stroke-width="2"/>
+  <ellipse cx="220" cy="68" rx="8" ry="10" fill="#FFD84D" stroke="#0A0812" stroke-width="2"/>
+  <ellipse cx="208" cy="55" rx="8" ry="10" fill="#c8a45a" stroke="#0A0812" stroke-width="1.5"/>
+  <!-- Divine hand reaching — movement, emphasis: overhead -->
+  <ellipse cx="150" cy="20" rx="60" ry="30" fill="url(#forbiddenGlow)" transform="rotate(10 150 20)"/>
+  <!-- Background trees — rhythm, white space -->
+  <rect x="30"  y="100" width="20" height="60" fill="#3a5a3a" stroke="#0A0812" stroke-width="1.5"/>
+  <circle cx="40" cy="90" r="22" fill="url(#treeGreen2)" stroke="#0A0812" stroke-width="1.5"/>
+  <rect x="250" y="110" width="20" height="50" fill="#3a5a3a" stroke="#0A0812" stroke-width="1.5"/>
+  <circle cx="260" cy="100" r="20" fill="url(#treeGreen2)" stroke="#0A0812" stroke-width="1.5"/>
+  <!-- Ground -->
+  <rect x="0" y="170" width="300" height="30" fill="#6b3a18"/>
+</svg>

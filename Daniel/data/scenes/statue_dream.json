@@ -1,0 +1,16 @@
+{
+  "id": "statue_dream",
+  "chapter": 1,
+  "sceneSvg": "statue_dream",
+  "viewBox": "0 0 300 200",
+  "fragments": [
+    { "id": "gold_head", "position": { "x": 50, "y": 20 }, "meaning": "gold — the king's own kingdom", "isDecoy": false },
+    { "id": "silver_chest", "position": { "x": 50, "y": 35 }, "meaning": "silver — a second kingdom", "isDecoy": false },
+    { "id": "bronze_belly", "position": { "x": 50, "y": 50 }, "meaning": "bronze — a third kingdom", "isDecoy": false },
+    { "id": "iron_legs", "position": { "x": 50, "y": 63 }, "meaning": "iron — a fourth, strong kingdom", "isDecoy": false },
+    { "id": "clay_feet", "position": { "x": 50, "y": 75 }, "meaning": "clay — where God's kingdom will finish them all", "isDecoy": false },
+    { "id": "shining_bronze", "position": { "x": 30, "y": 50 }, "meaning": "a gleam of reflected glory", "isDecoy": true }
+  ],
+  "riskTimerSeconds": 60,
+  "stakesText": "Name the dream correctly — or every wise man in Babylon dies."
+}

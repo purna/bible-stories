@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "name": "garden_paradise",
+  "settings": {
+    "background": "#2b1d0c",
+    "fog": { "color": "#000000", "density": 0.0025 }
+  },
+  "camera": { "distance": 120, "height": 30 },
+  "objects": [
+    {
+      "type": "light",
+      "lightType": "directional",
+      "color": "#FFFFFF",
+      "intensity": 1.0,
+      "position": {"x": 40, "y": 80, "z": 20}
+    },
+    {
+      "type": "light",
+      "lightType": "ambient",
+      "color": "#FFFFFF",
+      "intensity": 0.5
+    },
+    {
+      "type": "light",
+      "lightType": "point",
+      "color": "#FFD84D",
+      "intensity": 1.2,
+      "position": {"x": 0, "y": 40, "z": 0}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 30, "y": 30, "z": 30},
+      "color": "#4a7a3a",
+      "material": { "type": "toon", "outline": 0.08 },
+      "position": {"x": -60, "y": 30, "z": 0},
+      "userData": { "aframe": { "shadow": { "cast": true, "receive": true } } }
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 30, "y": 30, "z": 30},
+      "color": "#4a7a3a",
+      "material": { "type": "toon", "outline": 0.08 },
+      "position": {"x": 60, "y": 30, "z": 30},
+      "userData": { "aframe": { "shadow": { "cast": true, "receive": true } } }
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 25, "y": 25, "z": 25},
+      "color": "#FFD84D",
+      "material": { "type": "emissive", "opacity": 0.4, "outline": 0.08 },
+      "position": {"x": 0, "y": 55, "z": -30},
+      "userData": { "aframe": { "shadow": { "cast": false, "receive": false } } }
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 60, "y": 55, "z": 14 },
+      "color": "#C8956C",
+      "material": { "type": "toon", "outline": 0.08 },
+      "position": {"x": -20, "y": 5, "z": 0},
+      "rotation": {"x": 0, "y": 0, "z": -0.3 },
+      "userData": { "aframe": { "shadow": { "cast": true, "receive": true } } }
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 55, "y": 55, "z": 14 },
+      "color": "#DCB088",
+      "material": { "type": "toon", "outline": 0.08 },
+      "position": {"x": 20, "y": 5, "z": 0},
+      "userData": { "aframe": { "shadow": { "cast": true, "receive": true } } }
+    },
+    {
+      "type": "decoration",
+      "decorationType": "stars",
+      "count": 300,
+      "spread": 400,
+      "color": "#FFFFFF",
+      "size": 1
+    },
+    {
+      "type": "shape",
+      "shapeType": "plane",
+      "scale": {"x": 500, "y": 500, "z": 1},
+      "color": "#8B4513",
+      "material": { "type": "toon", "outline": 0 },
+      "position": {"x": 0, "y": -1, "z": 0},
+      "rotation": {"x": -1.5708, "y": 0, "z": 0},
+      "userData": { "aframe": { "shadow": { "cast": false, "receive": true } } }
+    }
+  ],
+  "animations": {
+    "camera": {
+      "thetaSpeed": 0.06,
+      "phiBase": 0.942,
+      "phiAmp": 0.15,
+      "phiFreq": 0.12,
+      "rollAmp": 0.04,
+      "rollFreq": 0.18,
+      "target": [50, 5, 0]
+    }
+  }
+}

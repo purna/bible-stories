@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "id": "golden_statue",
+  "chapter": 3,
+  "name": "The Golden Statue on Dura",
+  "background": "#87CEEB",
+  "fog": { "color": "#87CEEB", "density": 0.005 },
+  "camera": { "distance": 60, "height": 15, "fov": 55 },
+  "objects": [
+    {
+      "id": "ground",
+      "type": "shape",
+      "shapeType": "plane",
+      "position": { "x": 0, "y": -14, "z": 0 },
+      "rotation": { "x": -1.5708, "y": 0, "z": 0 },
+      "scale": { "x": 200, "y": 200, "z": 1 },
+      "color": "#8b5a2b",
+      "material": "toon",
+      "metalness": 0.1,
+      "roughness": 0.7,
+      "castShadow": false,
+      "receiveShadow": true,
+      "outline": false
+    }
+  ],
+  "groups": [
+    {
+      "id": "statue",
+      "objects": [
+        {
+          "id": "base",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": -10, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 16, "y": 4, "z": 16 },
+          "color": "#8b5a2b",
+          "material": "toon",
+          "metalness": 0.1,
+          "roughness": 0.7,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        },
+        {
+          "id": "torso",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 12, "y": 20, "z": 8 },
+          "color": "#FFD84D",
+          "material": "toon",
+          "metalness": 0.9,
+          "roughness": 0.1,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        },
+        {
+          "id": "head",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": 14, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 6, "y": 6, "z": 6 },
+          "color": "#FFD84D",
+          "material": "toon",
+          "metalness": 0.9,
+          "roughness": 0.1,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        }
+      ],
+      "position": { "x": 0, "y": 0, "z": 0 },
+      "animation": { "type": "rotate", "property": "rotation.y", "speed": 0.05 }
+    },
+    {
+      "id": "crowd",
+      "objects": [
+        {
+          "id": "person",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 1, "y": 2, "z": 1 },
+          "color": "#4a4a4a",
+          "material": "toon",
+          "metalness": 0.1,
+          "roughness": 0.6,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        }
+      ],
+      "position": { "x": 0, "y": 0, "z": 30 }
+    }
+  ],
+  "lights": [
+    {
+      "type": "directional",
+      "color": "#ffffff",
+      "intensity": 1.5,
+      "position": { "x": 50, "y": 100, "z": 50 },
+      "castShadow": true
+    },
+    { "type": "ambient", "color": "#ffffff", "intensity": 0.5 }
+  ],
+  "particles": [
+    {
+      "id": "dust",
+      "count": 30,
+      "geometry": { "type": "plane", "params": [1, 1] },
+      "material": { "color": "#c8a45a", "transparent": true, "opacity": 0.3 },
+      "spread": { "x": 100, "y": 5, "z": 50 },
+      "animation": { "type": "rise", "speedRange": [0.1, 0.3] }
+    }
+  ]
+}

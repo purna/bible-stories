@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "name": "the_fall",
+  "settings": {
+    "background": "#2a1008",
+    "fog": { "color": "#0a0502", "density": 0.003 }
+  },
+  "camera": { "distance": 80, "height": 15 },
+  "objects": [
+    {
+      "type": "light",
+      "lightType": "ambient",
+      "color": "#331100",
+      "intensity": 0.3
+    },
+    {
+      "type": "light",
+      "lightType": "directional",
+      "color": "#661100",
+      "intensity": 0.4,
+      "position": {"x": 0, "y": 20, "z": 10}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 35, "y": 35, "z": 35},
+      "color": "#8B0000",
+      "material": {"type": "emissive", "outline": 0.08},
+      "position": {"x": -10, "y": 10, "z": -20},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 8, "y": 8, "z": 8},
+      "color": "#FF6B5B",
+      "material": {"type": "toon", "outline": 0.1},
+      "position": {"x": -15, "y": -5, "z": 10},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 40, "y": 60, "z": 14},
+      "color": "#C8956C",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": -40, "y": 5, "z": 0},
+      "rotation": {"x": 0, "y": 0, "z": 0.5},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 38, "y": 58, "z": 14},
+      "color": "#DCB088",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": 40, "y": 5, "z": 0},
+      "rotation": {"x": 0, "y": 0, "z": -0.3},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "plane",
+      "scale": {"x": 200, "y": 200, "z": 1},
+      "color": "#0a0502",
+      "material": {"type": "toon", "outline": 0},
+      "position": {"x": 0, "y": -1, "z": 0},
+      "rotation": {"x": -1.5708, "y": 0, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": false, "receive": true}}}
+    }
+  ],
+  "cameraAnimation": {
+    "theta_speed": 0.04,
+    "distance_amp": 10,
+    "roll_amp": 0.15
+  }
+}

@@ -1,0 +1,28 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Forming Sleep — deep sleep, Eve forming -->
+  <!-- Deep purple night -->
+  <rect width="300" height="200" fill="#160a14"/>
+  <!-- Stars -->
+  <circle cx="40" cy="20" r="1" fill="white" opacity=".6"/>
+  <circle cx="80" cy="12" r="0.8" fill="white" opacity=".5"/>
+  <circle cx="200" cy="18" r="1.2" fill="white" opacity=".6"/>
+  <circle cx="260" cy="25" r="0.8" fill="white" opacity=".4"/>
+  <!-- Ground -->
+  <rect x="0" y="150" width="300" height="50" fill="#5c4033"/>
+  <!-- Leaf shelter -->
+  <path d="M5 120 Q25 100 45 120 Q65 140 85 120" fill="#6a8a4a" opacity=".6" stroke="#0A0812" stroke-width="1"/>
+  <!-- Adam — sleeping -->
+  <rect x="80" y="100" width="30" height="55" fill="#5c4033" stroke="#0A0812" stroke-width="2" transform="rotate(-15 95 128)"/>
+  <circle cx="95" cy="90" r="12" fill="#C8956C" stroke="#0A0812" stroke-width="2"/>
+  <!-- Divine teal light forming Eve -->
+  <ellipse cx="190" cy="100" rx="30" ry="40" fill="#4ECDC4" opacity=".7"/>
+  <!-- Eve figure emerging -->
+  <rect x="175" y="100" width="26" height="55" fill="#DCB088" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="188" cy="88" r="11" fill="#DCB088" stroke="#0A0812" stroke-width="1.5"/>
+  <path d="M180 86 Q188 80 196 86" fill="none" stroke="#2a1e15" stroke-width="2.5"/>
+  <!-- Light particles -->
+  <circle cx="120" cy="50" r="1.5" fill="#FFD84D" opacity=".7"/>
+  <circle cx="200" cy="40" r="1.5" fill="#FFD84D" opacity=".6"/>
+  <circle cx="150" cy="30" r="1.5" fill="#FFD84D" opacity=".8"/>
+  <circle cx="170" cy="60" r="1.5" fill="#4ECDC4" opacity=".6"/>
+</svg>

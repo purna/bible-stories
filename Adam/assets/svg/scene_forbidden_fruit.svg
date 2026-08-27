@@ -1,0 +1,37 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="fruitSpotlight" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#FFD84D" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#FFD84D" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="treeGreen4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a7a3a"/>
+      <stop offset="100%" stop-color="#3a5a3a"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark bg — tension before the bite --><!-- emphasis: spotlight on fruit -->
+  <rect width="300" height="200" fill="#1a0700"/>
+  <!-- Tree trunk -->
+  <rect x="140" y="85" width="20" height="80" fill="#5c4033" stroke="#0A0812" stroke-width="3"/>
+  <!-- Tree canopy -->
+  <circle cx="150" cy="75" r="48" fill="url(#treeGreen4)" stroke="#0A0812" stroke-width="3"/>
+  <!-- Fruit spotlight -->
+  <ellipse cx="150" cy="55" rx="70" ry="40" fill="url(#fruitSpotlight)"/>
+  <!-- The forbidden fruit — emphasis: large, glowing, central -->
+  <ellipse cx="150" cy="50" rx="16" ry="18" fill="#FF6B5B" stroke="#0A0812" stroke-width="3"/>
+  <!-- Fruit highlight — variety: glossy surface -->
+  <ellipse cx="144" cy="44" rx="5" ry="6" fill="#FFD84D" opacity=".4"/>
+  <!-- Second fruit -->
+  <ellipse cx="170" cy="55" rx="12" ry="14" fill="#8B0000" stroke="#0A0812" stroke-width="2.5"/>
+  <!-- Eve's hand reaching — movement, temptation -->
+  <path d="M170 55 Q185 45 195 40" fill="none" stroke="#dcb088" stroke-width="10" stroke-linecap="round"/>
+  <!-- Fingers grasping -->
+  <path d="M192 42 Q198 38 205 42" fill="none" stroke="#dcb088" stroke-width="6" stroke-linecap="round"/>
+  <!-- Serpent half-visible — danger lurking -->
+  <path d="M80 105 Q85 120 80 135" fill="none" stroke="#6b3a18" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="80" cy="138" rx="10" ry="7" fill="#6b3a18" stroke="#0A0812" stroke-width="2"/>
+  <ellipse cx="76" cy="134" rx="3" ry="5" fill="#FF6B5B" stroke="#0A0812" stroke-width="1"/>
+  <ellipse cx="84" cy="134" rx="3" ry="5" fill="#FF6B5B" stroke="#0A0812" stroke-width="1"/>
+  <!-- Ground -->
+  <rect x="0" y="165" width="300" height="35" fill="#3d1200"/>
+</svg>

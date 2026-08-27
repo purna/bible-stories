@@ -908,8 +908,7 @@ function loadPresets() {
     if (typeof CHARACTER_PRESETS_DATA !== "undefined" && CHARACTER_PRESETS_DATA && Object.keys(CHARACTER_PRESETS_DATA).length) {
         presets = CHARACTER_PRESETS_DATA;
         populatePresetSelect();
-        const startKey = presets["daniel_statesman"] ? "daniel_statesman" : Object.keys(presets)[0];
-        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[startKey] };
+        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets["daniel"] };
         hidePresetError();
     } else {
         console.error("CHARACTER_PRESETS_DATA not found — character_presets.js did not load.");
@@ -924,8 +923,11 @@ function populatePresetSelect() {
     select.innerHTML = '<option value="">-- Select --</option>';
 
     const groups = {
-      "protagonists": { label: "Protagonists", characters: ["daniel_statesman", "shadrach"] },
-      "antagonists_and_kings": { label: "Kings & Authorities", characters: ["nebuchadnezzar", "belshazzar", "darius"] }
+      "protagonists": { label: "Protagonists", characters: ["daniel", "hananiah", "mishael", "azariah"] },
+      "kings_and_authorities": { label: "Kings & Authorities", characters: ["nebuchadnezzar", "belshazzar", "darius", "cyrus", "ashpenaz"] },
+      "court_figures": { label: "Court Figures", characters: ["wise_men", "chaldeans", "satraps", "false_accusers"] },
+      "angelic_and_supernatural": { label: "Angelic & Supernatural", characters: ["son_of_god", "gabriel", "heavenly_messenger", "michael"] },
+      "symbolic_visions": { label: "Symbolic Visions", characters: ["four_beasts", "ancient_of_days", "son_of_man", "little_horn", "ram", "goat", "king_of_north", "king_of_south"] }
     };
 
     Object.values(groups).forEach(group => {

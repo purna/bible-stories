@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "id": "hand_writing",
+  "chapter": 4,
+  "name": "The Writing on the Wall",
+  "background": "#160a14",
+  "fog": { "color": "#160a14", "density": 0.02 },
+  "camera": { "distance": 35, "height": 0, "fov": 55 },
+  "objects": [
+    {
+      "id": "floor",
+      "type": "shape",
+      "shapeType": "plane",
+      "position": { "x": 0, "y": -10, "z": 0 },
+      "rotation": { "x": -1.5708, "y": 0, "z": 0 },
+      "scale": { "x": 60, "y": 60, "z": 1 },
+      "color": "#8b5a2b",
+      "material": "toon",
+      "metalness": 0.1,
+      "roughness": 0.7,
+      "castShadow": false,
+      "receiveShadow": true,
+      "outline": false
+    }
+  ],
+  "groups": [
+    {
+      "id": "words",
+      "objects": [
+        {
+          "id": "mene",
+          "type": "shape",
+          "shapeType": "plane",
+          "position": { "x": 0, "y": 8, "z": -29.5 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 8, "y": 2, "z": 1 },
+          "color": "#FFD84D",
+          "material": "basic",
+          "transparent": true,
+          "opacity": 0.8,
+          "castShadow": false,
+          "receiveShadow": false,
+          "outline": false
+        },
+        {
+          "id": "tekel",
+          "type": "shape",
+          "shapeType": "plane",
+          "position": { "x": 0, "y": 0, "z": -29.5 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 8, "y": 2, "z": 1 },
+          "color": "#FFD84D",
+          "material": "basic",
+          "transparent": true,
+          "opacity": 0.8,
+          "castShadow": false,
+          "receiveShadow": false,
+          "outline": false
+        },
+        {
+          "id": "peres",
+          "type": "shape",
+          "shapeType": "plane",
+          "position": { "x": 0, "y": -8, "z": -29.5 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 8, "y": 2, "z": 1 },
+          "color": "#FFD84D",
+          "material": "basic",
+          "transparent": true,
+          "opacity": 0.8,
+          "castShadow": false,
+          "receiveShadow": false,
+          "outline": false
+        }
+      ]
+    },
+    {
+      "id": "hand",
+      "objects": [
+        {
+          "id": "arm",
+          "type": "shape",
+          "shapeType": "cylinder",
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 2, "y": 12, "z": 2 },
+          "color": "#C8956C",
+          "material": "toon",
+          "metalness": 0.2,
+          "roughness": 0.4,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        },
+        {
+          "id": "palm",
+          "type": "shape",
+          "shapeType": "sphere",
+          "position": { "x": 0, "y": 5, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 3.5, "y": 3.5, "z": 3.5 },
+          "color": "#C8956C",
+          "material": "toon",
+          "metalness": 0.2,
+          "roughness": 0.4,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        }
+      ],
+      "position": { "x": 20, "y": -3, "z": 5 },
+      "animation": { "type": "rotate", "property": "rotation.y", "speed": 0.5 }
+    }
+  ],
+  "lights": [
+    {
+      "id": "writingLight",
+      "type": "point",
+      "color": "#FFD84D",
+      "intensity": 2,
+      "position": { "x": 0, "y": 5, "z": -10 },
+      "distance": 40
+    },
+    { "type": "ambient", "color": "#ffffff", "intensity": 0.3 },
+    {
+      "id": "candleLight",
+      "type": "point",
+      "color": "#FF6B5B",
+      "intensity": 1,
+      "position": { "x": 0, "y": -4, "z": 0 },
+      "distance": 20
+    }
+  ],
+  "lightAnimations": [
+    { "id": "writingLight", "property": "intensity", "base": 2, "frequency": 1.5, "amplitude": 0.5 },
+    { "id": "candleLight", "property": "intensity", "base": 1, "frequency": 5, "amplitude": 0.3 }
+  ]
+}

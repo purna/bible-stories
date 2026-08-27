@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" data-parallax="true">
+  <defs>
+    <radialGradient id="skyGrad" cx="50%" cy="70%">
+      <stop offset="0%" stop-color="#1a0700"/>
+      <stop offset="100%" stop-color="#330000"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#skyGrad)" data-depth="0.1"/>
+  <g data-depth="0.5">
+    <path d="M180,320 Q220,300 260,320 Q300,340 340,310 Q380,290 420,310 Q460,330 500,300 Q540,270 580,300"
+          stroke="#8B0000" stroke-width="8" fill="none" opacity="0.6"/>
+  </g>
+  <g data-depth="0.7">
+    <circle cx="200" cy="350" r="30" fill="#4a7a3a"/>
+    <circle cx="200" cy="340" r="22" fill="#4a7a3a"/>
+    <circle cx="600" cy="320" r="35" fill="#4a7a3a"/>
+    <circle cx="600" cy="310" r="25" fill="#4a7a3a"/>
+    <circle cx="400" cy="340" r="8" fill="#FF6B5B"/>
+  </g>
+  <g data-depth="0.9">
+    <ellipse cx="220" cy="330" rx="26" ry="18" fill="#C8956C"/>
+    <ellipse cx="220" cy="315" rx="6" ry="4" fill="#000000"/>
+    <ellipse cx="220" cy="315" rx="2" ry="2" fill="#ffffff"/>
+    <ellipse cx="580" cy="310" rx="28" ry="19" fill="#DCB088"/>
+    <ellipse cx="580" cy="295" rx="6" ry="4" fill="#000000"/>
+    <ellipse cx="585" cy="295" rx="2" ry="2" fill="#ffffff"/>
+  </g>
+  <g data-depth="1.0">
+    <text x="400" y="560" text-anchor="middle" fill="#FF6B5B" font-size="24" font-family="Bangers">
+      She gave some to her husband...
+    </text>
+  </g>
+</svg>

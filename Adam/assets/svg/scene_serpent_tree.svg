@@ -1,0 +1,47 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="serpentGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6B5B" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#FF6B5B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fruitGlow" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#FFD84D" stop-opacity=".3"/>
+      <stop offset="100%" stop-color="#FFD84D" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="treeGreen3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a7a3a"/>
+      <stop offset="100%" stop-color="#3a5a3a"/>
+    </radialGradient>
+  </defs>
+  <!-- Dark, tense bg --><!-- emphasis: ominous atmosphere -->
+  <rect width="300" height="200" fill="#1a0700"/>
+  <!-- Tree of Knowledge — central, dominant -->
+  <rect x="140" y="70" width="20" height="90" fill="#5c4033" stroke="#0A0812" stroke-width="3"/>
+  <circle cx="150" cy="60" r="50" fill="url(#treeGreen3)" stroke="#0A0812" stroke-width="3"/>
+  <!-- Forbidden fruit — emphasis: glowing, enticing -->
+  <ellipse cx="130" cy="45" rx="10" ry="12" fill="#FF6B5B" stroke="#0A0812" stroke-width="2" opacity=".9"/>
+  <ellipse cx="170" cy="50" rx="10" ry="12" fill="#FF6B5B" stroke="#0A0812" stroke-width="2" opacity=".8"/>
+  <ellipse cx="150" cy="35" rx="10" ry="12" fill="#8B0000" stroke="#0A0812" stroke-width="1.5"/>
+  <!-- Fruit glow -->
+  <ellipse cx="150" cy="50" rx="30" ry="25" fill="url(#fruitGlow)"/>
+  <!-- Serpent coiled around tree --><!-- movement: sinuous, dangerous -->
+  <!-- Body -->
+  <path d="M140 75 Q115 100 120 130 Q125 155 150 160 Q175 155 180 130 Q185 100 160 75 Q150 70 140 75"
+        fill="none" stroke="#6b3a18" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Head — emphasis: raised, watching -->
+  <ellipse cx="130" cy="72" rx="14" ry="10" fill="#6b3a18" stroke="#0A0812" stroke-width="2"/>
+  <!-- Eyes — glowing, hypnotic -->
+  <ellipse cx="126" cy="68" rx="4" ry="6" fill="#FF6B5B" stroke="#0A0812" stroke-width="1"/>
+  <ellipse cx="134" cy="68" rx="4" ry="6" fill="#FF6B5B" stroke="#0A0812" stroke-width="1"/>
+  <!-- Tongue — variety: forked, tempting -->
+  <path d="M130 78 Q125 82 130 84" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round"/>
+  <path d="M130 78 Q135 82 130 84" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round"/>
+  <!-- Eve approaching — temptation -->
+  <rect x="95" y="95" width="20" height="55" fill="#8a7a5a" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="105" cy="85" r="8" fill="#dcb088" stroke="#0A0812" stroke-width="1.5"/>
+  <path d="M100 93 Q105 90 110 93" fill="none" stroke="#1a1410" stroke-width="2"/>
+  <!-- Serpent glow aura -->
+  <ellipse cx="130" cy="120" rx="35" ry="30" fill="url(#serpentGlow)"/>
+  <!-- Ground -->
+  <rect x="0" y="165" width="300" height="35" fill="#3d1200"/>
+</svg>

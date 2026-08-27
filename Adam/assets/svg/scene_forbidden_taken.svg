@@ -1,0 +1,22 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Forbidden Taken — Eve reaches for fruit -->
+  <!-- Dark, cold bg -->
+  <rect width="300" height="200" fill="#2a1008"/>
+  <!-- Ground -->
+  <rect x="0" y="150" width="300" height="50" fill="#3d1200"/>
+  <!-- Tree of Knowledge — emphasis: the fruit -->
+  <rect x="115" y="70" width="22" height="85" fill="#5c4033" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="126" cy="60" r="32" fill="#2a4a2a" opacity=".5" stroke="#0A0812" stroke-width="2"/>
+  <!-- Large glowing forbidden fruit -->
+  <circle cx="126" cy="50" r="10" fill="#FF6B5B" stroke="#0A0812" stroke-width="1.5"/>
+  <!-- Fruit glow -->
+  <ellipse cx="126" cy="50" rx="18" ry="22" fill="#FF6B5B" opacity=".4"/>
+  <!-- Eve's hand reaching -->
+  <circle cx="85" cy="100" r="7" fill="#dcb088" stroke="#0A0812" stroke-width="1.5"/>
+  <!-- Arm reaching -->
+  <line x1="80" y1="105" x2="65" y2="140" stroke="#dcb088" stroke-width="8" stroke-linecap="round"/>
+  <!-- Serpent watching from below -->
+  <path d="M120 150 Q100 140 90 155 Q110 155 120 145" fill="#8B0000" opacity=".6"/>
+  <!-- Red key light -->
+  <ellipse cx="110" cy="40" rx="15" ry="20" fill="#8B0000" opacity=".3"/>
+</svg>

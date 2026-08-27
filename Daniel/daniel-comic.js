@@ -22,12 +22,12 @@ async function getAsset(path) {
    CHARACTER & SCENE DATA
    ========================================================================= */
 const CHARACTERS = {
-    daniel: 'assets/svg/character_daniel.svg',
-    nebuchadnezzar: 'assets/svg/character_nebuchadnezzar.svg',
-    god: 'assets/svg/character_god.svg',
-    friends: 'assets/svg/character_friends.svg',
-    belshazzar: 'assets/svg/character_belshazzar.svg',
-    darius: 'assets/svg/character_darius.svg',
+    daniel: 'assets/characters/character_daniel.svg',
+    nebuchadnezzar: 'assets/characters/character_nebuchadnezzar.svg',
+    god: 'assets/characters/character_god.svg',
+    friends: 'assets/characters/character_friends.svg',
+    belshazzar: 'assets/characters/character_belshazzar.svg',
+    darius: 'assets/characters/character_darius.svg',
     narrator: null
 };
 
@@ -35,11 +35,12 @@ const CHARACTERS = {
    STORY DATA — 6 CHAPTERS
    ========================================================================= */
 let STORY = [];
+let VISION_SCENES = null;
 
 /* =========================================================================
    STATE MANAGEMENT & ENGINE
    ========================================================================= */
-let actIdx = 0, lineIdx = 0, transitioning = false, choicePending = false, nextLineTimeout = null;
+let actIdx = 0, lineIdx = 0, transitioning = false, choicePending = false, nextLineTimeout = null, hasChosen = false, visionMode = false;
 
 const el = s => document.querySelector(s);
 const stage = el('#stage');
@@ -50,6 +51,12 @@ const nextLineBtn = el('#nextLineBtn');
 const portal = el('#portal');
 const bgGradient = el('#bgGradient');
 const dotsBox = el('#dots');
+const visionOverlay = el('#visionOverlay');
+const fragmentCounter = el('#fragmentCounter');
+const fragCountSpan = el('#fragCount');
+const meterBar = el('#meterBar');
+const meterFill = el('#meterFill');
+const meterLabel = el('#meterLabel');
 
 function currentAct() { return STORY[actIdx]; }
 
@@ -87,14 +94,30 @@ function buildLineHTML(text, fx) {
 }
 function escapeHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 
+function resolveLine(data) {
+    if (!data.consequence) return data;
+    const god = DecisionLog.hasTag("loyalty:god");
+    const diplomatic = DecisionLog.hasTag("loyalty:diplomatic");
+    let key;
+    if (god && !diplomatic) key = "god_only";
+    else if (god && diplomatic) key = "mixed";
+    else if (diplomatic) key = "compromised";
+    else key = "default";
+    const text = data.consequence[key] || data.consequence["default"] || data.text;
+    return { ...data, text };
+}
+
 async function renderLine() {
     if (delayNote.parentNode) delayNote.parentNode.removeChild(delayNote);
     delayNote.className = '';
     delayNote.textContent = '';
     stage.innerHTML = '';
+    if (typeof Parallax !== 'undefined') Parallax.detach();
     if (nextLineTimeout) { clearTimeout(nextLineTimeout); nextLineTimeout = null; }
 
-    const data = currentAct().lines[lineIdx];
+    const data = resolveLine(currentAct().lines[lineIdx]);
+    const visionId = data.vision === true ? currentAct().vision : data.vision;
+    const visionScene = visionId && VISION_SCENES ? VISION_SCENES.find(s => s.id === visionId) : null;
 
     const frame = document.createElement('div');
     frame.className = `comic-frame popIn palette-act-${actIdx + 1}`;
@@ -102,11 +125,27 @@ async function renderLine() {
     const graphicContainer = document.createElement('div');
     graphicContainer.id = 'graphicContainer';
 
+    const targetSvgKey = visionScene ? visionScene.sceneSvg : (data.svg || currentAct().svg);
+
+    // Always load SVG background layer first (Adam-style: SVG behind transparent 3D)
     const svgLayer = document.createElement('div');
     svgLayer.id = 'svgLayer';
-    const targetSvgKey = data.svg || currentAct().svg;
+    svgLayer.classList.add('svg-behind');
     svgLayer.innerHTML = await getAsset(`assets/svg/scene_${targetSvgKey}.svg`);
     graphicContainer.appendChild(svgLayer);
+
+    // 3D scene path (toon shader) on top of SVG with transparent background
+    if (use3D && threeCanvas && window.SCENE_FACTORIES && SCENE_FACTORIES[targetSvgKey]) {
+        graphicContainer.classList.add('canvas-mode');
+        if (threeCanvas.parentNode) threeCanvas.parentNode.removeChild(threeCanvas);
+        graphicContainer.appendChild(threeCanvas);
+        loadScene3D(targetSvgKey);
+        requestAnimationFrame(resize3D);
+        if (typeof Parallax !== 'undefined') Parallax.detach();
+    } else {
+        // Attach SVG parallax to layers with data-depth when no 3D
+        if (typeof Parallax !== 'undefined') Parallax.attach(svgLayer);
+    }
     frame.appendChild(graphicContainer);
 
     // Set particle mode per act
@@ -119,6 +158,7 @@ async function renderLine() {
     overlay.appendChild(delayNote);
 
     setTimeout(async () => {
+        if (data.vision) return;
         if (data.speaker && CHARACTERS[data.speaker]) {
             const charBox = document.createElement('div');
             charBox.className = 'char-container';
@@ -168,7 +208,12 @@ async function renderLine() {
     }, 800);
 
     buildDots();
-    renderChoices(data);
+    updateMeter();
+    if (visionScene) {
+        startVisionMinigame(data, visionScene);
+    } else {
+        renderChoices(data);
+    }
 }
 
 function renderChoices(data) {
@@ -183,6 +228,7 @@ function renderChoices(data) {
             b.className = 'choiceBtn';
             b.textContent = c.label;
             b.onclick = () => {
+                handleChoiceSelected(c);
                 choicesBox.classList.remove('show');
                 delayNote.textContent = c.note;
                 delayNote.classList.add('show');
@@ -193,6 +239,222 @@ function renderChoices(data) {
         });
     } else {
         choicesBox.classList.remove('show');
+    }
+}
+
+function handleChoiceSelected(c) {
+    if (!c.decisionId) return;
+    hasChosen = true;
+
+    DecisionLog.record({
+        id: c.decisionId,
+        sceneId: currentAct().id,
+        chapter: actIdx,
+        tags: c.tags || [],
+    });
+
+    StateManager.write(c.decisionId, true, actIdx, c.tags || []);
+
+    if (c.tags) {
+        if (c.tags.includes('loyalty:god')) {
+            StateManager.incrementMeters({ setApart: 1 });
+        } else if (c.tags.includes('loyalty:diplomatic')) {
+            StateManager.incrementMeters({ fitIn: 1 });
+        }
+    }
+
+    const reign = currentAct().reign;
+    if (reign) {
+        if (c.tags && c.tags.includes('loyalty:god')) {
+            StateManager.adjustReign(reign, { suspicion: 2 });
+        } else if (c.tags && c.tags.includes('loyalty:diplomatic')) {
+            StateManager.adjustReign(reign, { favor: 3 });
+        }
+    }
+
+    updateMeter();
+    saveState();
+}
+
+function startVisionMinigame(data, visionScene) {
+    visionMode = true;
+    choicePending = true;
+    choicesBox.classList.remove('show');
+    delayNote.classList.remove('show');
+    delayNote.textContent = '';
+
+    VisionEngine.loadScene(visionScene);
+    VisionEngine.start();
+    if (typeof Parallax !== 'undefined') Parallax.detach();
+    if (typeof VFX !== 'undefined') VFX.enterVision();
+
+    fragmentCounter.classList.remove('hidden');
+    visionOverlay.classList.add('show');
+    visionOverlay.innerHTML = '';
+
+    const prompt = document.createElement('div');
+    prompt.className = 'vision-prompt';
+    prompt.textContent = visionScene.stakesText;
+    visionOverlay.appendChild(prompt);
+
+    const fragContainer = document.createElement('div');
+    fragContainer.className = 'vision-fragments';
+    if (visionScene.viewBox) {
+        const parts = visionScene.viewBox.split(/\s+/).map(Number);
+        if (parts.length >= 4 && parts[0] !== parts[2]) {
+            const w = parts[2] - parts[0];
+            const h = parts[3] - parts[1];
+            if (h > 0) fragContainer.style.aspectRatio = w / h;
+        }
+    }
+    visionScene.fragments.forEach(f => {
+        const hotspot = document.createElement('div');
+        hotspot.className = 'fragment-hotspot' + (f.isDecoy ? ' decoy' : '');
+        const icon = document.createElement('span');
+        icon.className = 'frag-icon';
+        icon.textContent = f.isDecoy ? '?' : '✦';
+        hotspot.appendChild(icon);
+        hotspot.dataset.fragmentId = f.id;
+        if (f.position) {
+            hotspot.style.left = f.position.x + '%';
+            hotspot.style.top = f.position.y + '%';
+        }
+        hotspot.addEventListener('click', () => collectFragment(f.id));
+        fragContainer.appendChild(hotspot);
+    });
+    visionOverlay.appendChild(fragContainer);
+
+    updateFragmentCounter();
+    tickVisionTimer();
+}
+
+function collectFragment(fragmentId) {
+    VisionEngine.collect(fragmentId);
+    updateFragmentCounter();
+    renderVisionHotspotState();
+    if (typeof VFX !== 'undefined') VFX.updateVisionVFX();
+
+    if (VisionEngine.canDeliver()) {
+        showDeliveryChoices();
+    } else {
+        tickVisionTimer();
+    }
+}
+
+function renderVisionHotspotState() {
+    const gathered = VisionEngine.getGathered();
+    const hotspots = visionOverlay.querySelectorAll('.fragment-hotspot');
+    hotspots.forEach(hotspot => {
+        const fragId = hotspot.dataset.fragmentId;
+        if (gathered.some(f => f.id === fragId)) {
+            hotspot.classList.add('collected');
+        }
+    });
+}
+
+function updateFragmentCounter() {
+    const gathered = VisionEngine.getGathered();
+    const total = VisionEngine.totalCount();
+    fragCountSpan.textContent = gathered.length + ' / ' + total;
+}
+
+let visionTimerTick = null;
+
+function tickVisionTimer() {
+    if (visionTimerTick) clearTimeout(visionTimerTick);
+    const remaining = VisionEngine.timeRemaining();
+    if (remaining <= 0) {
+        forceDelivery();
+        return;
+    }
+    if (remaining < 10) {
+        visionOverlay.classList.add('vision-urgent');
+    }
+    visionTimerTick = setTimeout(tickVisionTimer, 1000);
+}
+
+function forceDelivery() {
+    if (!VisionEngine.isRunning()) return;
+    showDeliveryChoices();
+}
+
+function showDeliveryChoices() {
+    if (visionTimerTick) clearTimeout(visionTimerTick);
+    visionOverlay.classList.remove('vision-urgent');
+    visionOverlay.innerHTML = '';
+    visionOverlay.classList.remove('show');
+
+    choicesBox.innerHTML = '';
+    delayNote.classList.remove('show');
+    delayNote.textContent = '';
+    const data = currentAct().lines[lineIdx];
+    if (!data.choices) {
+        choicePending = false;
+        updateNextBtn();
+        return;
+    }
+
+    choicePending = true;
+    choicesBox.classList.add('show');
+    data.choices.forEach(c => {
+        const b = document.createElement('button');
+        b.className = 'choiceBtn';
+        b.textContent = c.label;
+        b.onclick = () => {
+            onDeliverySelected(c);
+        };
+        choicesBox.appendChild(b);
+    });
+}
+
+function onDeliverySelected(c) {
+    const delivery = (c.tags && c.tags.includes('loyalty:god'))
+        ? VisionEngine.DELIVERY.PLAIN
+        : VisionEngine.DELIVERY.SOFTENED;
+
+    const accurate = VisionEngine.deliver(delivery);
+
+    hasChosen = true;
+    if (c.tags) {
+        if (c.tags.includes('loyalty:god')) {
+            StateManager.incrementMeters({ setApart: 1 });
+        } else if (c.tags.includes('loyalty:diplomatic')) {
+            StateManager.incrementMeters({ fitIn: 1 });
+        }
+    }
+
+    choicesBox.classList.remove('show');
+    delayNote.textContent = c.note;
+    if (!accurate) {
+        delayNote.textContent += ' [The meaning slipped — something was off…]';
+    }
+    delayNote.classList.add('show');
+    choicePending = false;
+    visionMode = false;
+    fragmentCounter.classList.add('hidden');
+    if (typeof Parallax !== 'undefined') Parallax.attach(el('#svgLayer'));
+    if (typeof VFX !== 'undefined') VFX.exitVision();
+    updateNextBtn();
+    updateMeter();
+    saveState();
+}
+
+function updateMeter() {
+    const meters = StateManager.getMeters();
+    const total = meters.setApart + meters.fitIn;
+    const ratio = total === 0 ? 0.5 : meters.setApart / total;
+    if (!hasChosen) {
+        meterBar.classList.add('hidden');
+        return;
+    }
+    meterBar.classList.remove('hidden');
+    meterFill.style.setProperty('--meter-ratio', Math.round(ratio * 100) + '%');
+    const label = ratio > 0.5 ? 'SET APART' : ratio < 0.5 ? 'FIT IN' : 'SET APART';
+    if (meterLabel) meterLabel.textContent = label;
+    const reign = currentAct().reign;
+    if (reign) {
+        const r = StateManager.getReign(reign);
+        meterBar.title = '♔ ' + reign + ': Favor ' + r.favor + ' | Suspicion ' + r.suspicion;
     }
 }
 
@@ -209,7 +471,7 @@ function updateNextBtn() {
 }
 
 async function goLine(delta) {
-    if (transitioning) return;
+    if (transitioning || visionMode) return;
     if (choicePending) { choicePending = false; choicesBox.classList.remove('show'); }
     delayNote.className = '';
     nextBtn.classList.remove('show');
@@ -233,18 +495,18 @@ async function goLine(delta) {
 }
 
 function goNextChapter() {
-    if (transitioning) return;
+    if (transitioning || visionMode) return;
     if (actIdx === STORY.length - 1) { fallTransition(() => { actIdx = 0; lineIdx = 0; loadAct(); }); return; }
     fallTransition(() => { actIdx++; lineIdx = 0; loadAct(); });
 }
 
 function jumpToChapter(newActIdx) {
-    if (transitioning || newActIdx < 0 || newActIdx >= STORY.length || newActIdx === actIdx) return;
+    if (transitioning || visionMode || newActIdx < 0 || newActIdx >= STORY.length || newActIdx === actIdx) return;
     fallTransition(() => { actIdx = newActIdx; lineIdx = 0; loadAct(); });
 }
 
 function goPrevChapter() {
-    if (transitioning || actIdx === 0) return;
+    if (transitioning || visionMode || actIdx === 0) return;
     fallTransition(() => { actIdx--; lineIdx = STORY[actIdx].lines.length - 1; loadAct(); });
 }
 
@@ -264,6 +526,11 @@ async function loadAct() {
     el('#chapterSelect').value = actIdx;
     bgGradient.style.background = act.bg;
     document.body.className = `palette-act-${actIdx + 1}`;
+    if (act.reign && typeof VFX !== 'undefined') {
+        VFX.setReignGrade(act.reign);
+    } else if (typeof VFX !== 'undefined') {
+        VFX.clearReignGrade();
+    }
     choicePending = false;
     nextBtn.classList.remove('show');
     nextLineBtn.classList.remove('show');
@@ -277,7 +544,9 @@ async function loadAct() {
             setTimeout(onEnd, 500);
         });
     }
+    StateManager.compactBefore(actIdx + 1);
     await renderLine();
+    updateMeter();
 }
 
 /* =========================================================================
@@ -349,6 +618,217 @@ setParticleMode('dusk');
 tickParticles();
 
 /* =========================================================================
+    3D SCENE ENGINE — Three.js toon-shader integration
+    ========================================================================= */
+let renderer3D = null, camera3D = null, scene3D = null;
+let threeCanvas = null;
+let use3D = false;
+let currentSceneKey = null;
+let sceneAnimations = [];
+let cameraAnim = null;
+
+let cameraTheta = 0;
+let cameraPhi = Math.PI / 4;
+let cameraDistance = 60;
+let cameraRoll = 0;
+let cameraConfig = { distance: 60, height: 15 };
+let orbitTarget = new THREE.Vector3(0, 0, 0);
+
+window._cinema = {
+    theta: 0,
+    phi: Math.PI / 4,
+    distance: 60,
+    roll: 0,
+    baseTheta: 0,
+    baseDistance: 60,
+    targetX: 0,
+    targetY: 0,
+    targetZ: 0
+};
+
+let isDragging = false;
+let dragStartX = 0, dragStartY = 0;
+let thetaStart = 0, phiStart = 0;
+let baseTheta = 0;
+const ORBIT_SPEED = 0.008;
+
+function init3D() {
+    if (typeof THREE === 'undefined') {
+        console.warn('Three.js not loaded, using SVG scenes');
+        return false;
+    }
+    renderer3D = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+    renderer3D.setClearColor(0x000000, 0);
+    renderer3D.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer3D.shadowMap.enabled = true;
+    renderer3D.outputEncoding = THREE.sRGBEncoding;
+    renderer3D.toneMapping = THREE.ACESFilmicToneMapping;
+
+    threeCanvas = renderer3D.domElement;
+    threeCanvas.classList.add('three-canvas');
+    threeCanvas.style.pointerEvents = 'auto';
+
+    threeCanvas.addEventListener('mousedown', onDragStart);
+    threeCanvas.addEventListener('mousemove', onDragMove);
+    threeCanvas.addEventListener('mouseup', onDragEnd);
+    threeCanvas.addEventListener('mouseleave', onDragEnd);
+
+    threeCanvas.addEventListener('touchstart', onTouchDragStart, { passive: true });
+    threeCanvas.addEventListener('touchmove', onTouchDragMove, { passive: true });
+    threeCanvas.addEventListener('touchend', onDragEnd);
+
+    camera3D = new THREE.PerspectiveCamera(55, 1, 0.1, 1000);
+    camera3D.position.set(0, 15, cameraDistance);
+    scene3D = new THREE.Scene();
+
+    use3D = true;
+    startRenderLoop();
+    return true;
+}
+
+function startRenderLoop() {
+    let lastTime = 0;
+    function render3D(time) {
+        requestAnimationFrame(render3D);
+        if (!renderer3D || !scene3D || !camera3D) return;
+        const dt = (time - lastTime) * 0.001;
+        lastTime = time;
+        const t = time * 0.001;
+
+        if (!isDragging && cameraAnim) {
+            try { cameraAnim(t); } catch (e) {}
+        }
+        cameraTheta = window._cinema.theta;
+        cameraPhi = window._cinema.phi;
+        cameraDistance = window._cinema.distance;
+        cameraRoll = window._cinema.roll;
+        orbitTarget.set(
+            window._cinema.targetX || 0,
+            window._cinema.targetY || 0,
+            window._cinema.targetZ || 0
+        );
+
+        updateCameraPosition();
+
+        if (sceneAnimations.length > 0) {
+            sceneAnimations.forEach(fn => { try { fn(t); } catch (e) {} });
+        }
+
+        renderer3D.render(scene3D, camera3D);
+    }
+    render3D(0);
+}
+
+function loadScene3D(key) {
+    if (!renderer3D || !window.SCENE_FACTORIES || !window.SCENE_FACTORIES[key]) {
+        return false;
+    }
+    if (scene3D) {
+        scene3D.traverse(child => {
+            if (child.geometry) child.geometry.dispose();
+            if (child.material) {
+                if (Array.isArray(child.material)) {
+                    child.material.forEach(m => m.dispose());
+                } else { child.material.dispose(); }
+            }
+        });
+    }
+    const result = SCENE_FACTORIES[key]();
+    scene3D = result.scene;
+    scene3D.background = null; // transparent so SVG background shows through
+    sceneAnimations = result.animate ? [result.animate] : [];
+    cameraAnim = result.cameraAnimation || null;
+    if (result.cameraConfig) {
+        cameraConfig = result.cameraConfig;
+        const d = cameraConfig.distance || 60;
+        cameraDistance = d;
+        window._cinema.distance = d;
+        window._cinema.baseDistance = d;
+        window._cinema.theta = baseTheta;
+        window._cinema.baseTheta = baseTheta;
+        window._cinema.phi = Math.PI / 4;
+        window._cinema.roll = 0;
+        window._cinema.targetX = 0;
+        window._cinema.targetY = 0;
+        window._cinema.targetZ = 0;
+    }
+    currentSceneKey = key;
+    return true;
+}
+
+function updateCameraPosition() {
+    const phi = cameraPhi;
+    const theta = cameraTheta;
+    const dist = cameraDistance;
+    camera3D.position.set(
+        orbitTarget.x + dist * Math.sin(phi) * Math.sin(theta),
+        orbitTarget.y + dist * Math.cos(phi) + (cameraConfig.height || 0),
+        orbitTarget.z + dist * Math.sin(phi) * Math.cos(theta)
+    );
+    if (cameraRoll !== 0) {
+        camera3D.up.set(Math.sin(cameraRoll), Math.cos(cameraRoll), 0);
+    } else {
+        camera3D.up.set(0, 1, 0);
+    }
+    camera3D.lookAt(orbitTarget);
+    if (cameraRoll !== 0) {
+        camera3D.up.set(0, 1, 0);
+    }
+}
+
+function resize3D() {
+    const gc = document.getElementById('graphicContainer');
+    if (renderer3D && camera3D && gc) {
+        const w = gc.clientWidth;
+        const h = gc.clientHeight;
+        renderer3D.setSize(w, h);
+        camera3D.aspect = w / h;
+        camera3D.updateProjectionMatrix();
+    }
+}
+
+function onDragStart(e) {
+    isDragging = true;
+    dragStartX = e.clientX;
+    dragStartY = e.clientY;
+    thetaStart = cameraTheta;
+    phiStart = cameraPhi;
+}
+function onDragMove(e) {
+    if (!isDragging) return;
+    const dx = e.clientX - dragStartX;
+    const dy = e.clientY - dragStartY;
+    cameraTheta = thetaStart - dx * ORBIT_SPEED;
+    cameraPhi = Math.max(0.1, Math.min(Math.PI / 2 - 0.1, phiStart + dy * ORBIT_SPEED));
+}
+function onDragEnd() {
+    isDragging = false;
+    baseTheta = cameraTheta;
+    window._cinema.baseTheta = baseTheta;
+}
+
+function onTouchDragStart(e) {
+    if (!e.touches[0]) return;
+    isDragging = true;
+    dragStartX = e.touches[0].clientX;
+    dragStartY = e.touches[0].clientY;
+    thetaStart = cameraTheta;
+    phiStart = cameraPhi;
+}
+function onTouchDragMove(e) {
+    if (!isDragging || !e.touches[0]) return;
+    const dx = e.touches[0].clientX - dragStartX;
+    const dy = e.touches[0].clientY - dragStartY;
+    cameraTheta = thetaStart - dx * ORBIT_SPEED;
+    cameraPhi = Math.max(0.1, Math.min(Math.PI / 2 - 0.1, phiStart + dy * ORBIT_SPEED));
+}
+
+window.addEventListener('resize', () => {
+    resizeCanvas();
+    resize3D();
+});
+
+/* =========================================================================
    KEYBOARD NAVIGATION
    ========================================================================= */
 document.addEventListener('keydown', e => {
@@ -373,11 +853,22 @@ document.addEventListener('touchend', e => {
 }, { passive: true });
 
 /* =========================================================================
-   SCROLL / WHEEL NAVIGATION
-   ========================================================================= */
+    SCROLL / WHEEL NAVIGATION — camera orbit in 3D, line nav otherwise
+    ========================================================================= */
 let wheelCooldown = false;
 document.addEventListener('wheel', e => {
     if (wheelCooldown) return;
+
+    if (use3D && currentSceneKey) {
+        wheelCooldown = true;
+        setTimeout(() => { wheelCooldown = false; }, 20);
+        const delta = e.deltaY > 0 ? 0.06 : -0.06;
+        cameraTheta += delta;
+        window._cinema.theta = cameraTheta;
+        e.preventDefault();
+        return;
+    }
+
     wheelCooldown = true;
     setTimeout(() => { wheelCooldown = false; }, 600);
     if (e.deltaY > 0) {
@@ -386,7 +877,7 @@ document.addEventListener('wheel', e => {
     } else {
         goLine(-1);
     }
-}, { passive: true });
+}, { passive: false });
 
 /* =========================================================================
    CHAPTER SELECT
@@ -402,17 +893,80 @@ nextBtn.addEventListener('click', goNextChapter);
 nextLineBtn.addEventListener('click', () => goLine(1));
 
 /* =========================================================================
-   BOOT
-   ========================================================================= */
+   SAVE / LOAD
+    ========================================================================= */
+const SAVE_KEY = 'daniel-comic-save';
+
+function saveState() {
+    try {
+        const save = {
+            state: StateManager.serialize(),
+            decisions: DecisionLog.serialize(),
+            actIdx, lineIdx, hasChosen,
+        };
+        localStorage.setItem(SAVE_KEY, JSON.stringify(save));
+    } catch (e) {
+        console.warn('Could not save state:', e);
+    }
+}
+
+function loadState() {
+    try {
+        const raw = localStorage.getItem(SAVE_KEY);
+        if (!raw) return false;
+        const save = JSON.parse(raw);
+        StateManager.deserialize(save.state);
+        DecisionLog.deserialize(save.decisions);
+        actIdx = save.actIdx || 0;
+        lineIdx = save.lineIdx || 0;
+        hasChosen = save.hasChosen || false;
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+
+function clearSave() {
+    localStorage.removeItem(SAVE_KEY);
+}
+
+/* =========================================================================
+    BOOT
+    ========================================================================= */
 el('#startBtn').addEventListener('click', () => {
     el('#startScreen').classList.add('hide');
 });
+
+async function loadVisionScenes() {
+    try {
+        const indexRes = await fetch('data/scenes/index.json');
+        const index = await indexRes.json();
+        const scenes = [];
+        for (const [id, filename] of Object.entries(index.scenes)) {
+            const sceneRes = await fetch(`${index.baseDir}/${filename}`);
+            scenes.push(await sceneRes.json());
+        }
+        return scenes;
+    } catch (error) {
+        console.warn('Scene index failed, trying legacy aggregate file:', error);
+        try {
+            const visionRes = await fetch('data/vision-scenes.json');
+            return await visionRes.json();
+        } catch (e2) {
+            console.warn('Legacy vision scenes also failed:', e2);
+            return null;
+        }
+    }
+}
 
 async function main() {
     try {
         const response = await fetch('daniel-story.json');
         STORY = await response.json();
+        VISION_SCENES = await loadVisionScenes();
         populateChapterSelect();
+        init3D();
+        loadState();
         loadAct();
     } catch (error) {
         console.error("Failed to load story data:", error);

@@ -1,0 +1,14 @@
+{
+  "id": "writing_wall",
+  "chapter": 3,
+  "sceneSvg": "hand_writing",
+  "viewBox": "0 0 300 200",
+  "fragments": [
+    { "id": "mene", "position": { "x": 50, "y": 25 }, "meaning": "MENE — God has numbered your kingdom", "isDecoy": false },
+    { "id": "tekel", "position": { "x": 50, "y": 45 }, "meaning": "TEKEL — you have been weighed and found wanting", "isDecoy": false },
+    { "id": "peres", "position": { "x": 50, "y": 65 }, "meaning": "PERES — your kingdom is divided and given away", "isDecoy": false },
+    { "id": "blood_wine", "position": { "x": 35, "y": 45 }, "meaning": "just a wine stain on the goblet", "isDecoy": true }
+  ],
+  "riskTimerSeconds": 45,
+  "stakesText": "The king waits. Speak the truth — there is nothing left to gain."
+}

@@ -1,0 +1,22 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Garden Placed — God places Adam -->
+  <rect width="300" height="200" fill="#2b1d0c"/>
+  <!-- Ground -->
+  <rect x="0" y="150" width="300" height="50" fill="#5c4033" stroke="#0A0812" stroke-width="2"/>
+  <!-- Adam — central, receiving breath of life -->
+  <rect x="135" y="90" width="30" height="65" fill="#C8956C" stroke="#0A0812" stroke-width="2" rx="4"/>
+  <circle cx="150" cy="80" r="14" fill="#C8956C" stroke="#0A0812" stroke-width="2"/>
+  <!-- Adam's hair -->
+  <path d="M140 78 Q150 72 160 78" fill="none" stroke="#2a1e15" stroke-width="3"/>
+  <!-- Divine light descending -->
+  <ellipse cx="150" cy="50" rx="35" ry="50" fill="#FFD84D" opacity=".6"/>
+  <!-- Light particles — divine breath -->
+  <circle cx="145" cy="40" r="2" fill="#FFD84D" opacity=".8"/>
+  <circle cx="155" cy="45" r="1.5" fill="#FFD84D" opacity=".7"/>
+  <circle cx="150" cy="30" r="2" fill="#FFD84D" opacity=".6"/>
+  <!-- Trees framing -->
+  <rect x="30" y="100" width="20" height="55" fill="#5c4033" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="40" cy="90" r="22" fill="#4a7a3a" opacity=".8" stroke="#0A0812" stroke-width="1.5"/>
+  <rect x="250" y="105" width="20" height="50" fill="#5c4033" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="260" cy="95" r="20" fill="#4a7a3a" opacity=".8" stroke="#0A0812" stroke-width="1.5"/>
+</svg>

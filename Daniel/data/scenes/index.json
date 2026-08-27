@@ -1,0 +1,8 @@
+{
+  "version": "1.0",
+  "baseDir": "data/scenes",
+  "scenes": {
+    "statue_dream": "statue_dream.json",
+    "writing_wall": "writing_wall.json"
+  }
+}

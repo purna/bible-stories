@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "id": "babylon_city",
+  "chapter": 1,
+  "name": "Babylon Cityscape",
+  "background": "#03010a",
+  "fog": { "color": "#03010a", "density": 0.008 },
+  "camera": { "distance": 80, "height": 10, "fov": 55 },
+  "objects": [
+    {
+      "id": "river",
+      "type": "shape",
+      "shapeType": "plane",
+      "position": { "x": 0, "y": -12, "z": 0 },
+      "rotation": { "x": -1.5708, "y": 0, "z": 0 },
+      "scale": { "x": 500, "y": 60, "z": 1 },
+      "color": "#4ECDC4",
+      "material": "basic",
+      "transparent": true,
+      "opacity": 0.4,
+      "side": "DoubleSide",
+      "depthWrite": false,
+      "castShadow": false,
+      "receiveShadow": false,
+      "outline": false
+    }
+  ],
+  "groups": [
+    {
+      "id": "wallGroup",
+      "objects": [
+        {
+          "id": "wall_0",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": -120, "y": -6, "z": -20 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 8, "y": 8, "z": 4 },
+          "color": "#8b5a2b",
+          "material": "toon",
+          "metalness": 0.1,
+          "roughness": 0.7,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        }
+      ],
+      "animation": { "type": "emissivePulse", "frequency": 0.5, "amplitude": 0.05 }
+    },
+    {
+      "id": "ziggurat",
+      "objects": [
+        {
+          "id": "z_0",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": -10, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 24, "y": 5, "z": 24 },
+          "color": "#8b5a2b",
+          "material": "toon",
+          "metalness": 0.1,
+          "roughness": 0.7,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        }
+      ],
+      "position": { "x": -60, "y": 0, "z": -30 }
+    },
+    {
+      "id": "gate",
+      "objects": [
+        {
+          "id": "gate_tower",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": -3, "z": -25 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 12, "y": 14, "z": 3 },
+          "color": "#8B0000",
+          "material": "toon",
+          "metalness": 0.2,
+          "roughness": 0.5,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        },
+        {
+          "id": "gate_gold",
+          "type": "shape",
+          "shapeType": "plane",
+          "position": { "x": 0, "y": 1, "z": -25.5 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 8, "y": 8, "z": 1 },
+          "color": "#FFD84D",
+          "material": "basic",
+          "transparent": true,
+          "opacity": 0.15,
+          "side": "DoubleSide",
+          "depthWrite": false,
+          "castShadow": false,
+          "receiveShadow": false,
+          "outline": false
+        }
+      ],
+      "position": { "x": 0, "y": -3, "z": -25 }
+    }
+  ],
+  "lights": [
+    { "type": "ambient", "color": "#ffffff", "intensity": 0.5 },
+    {
+      "type": "directional",
+      "color": "#FFD84D",
+      "intensity": 1.5,
+      "position": { "x": 100, "y": 80, "z": 50 },
+      "castShadow": true
+    }
+  ],
+  "particles": [
+    {
+      "id": "stars_white",
+      "count": 400,
+      "geometry": { "type": "sphere", "params": [0.3, 4, 4] },
+      "material": { "color": "#ffffff", "transparent": true, "opacity": 0.7 },
+      "spread": { "x": 500, "y": 500, "z": 500 }
+    },
+    {
+      "id": "stars_gold",
+      "count": 20,
+      "geometry": { "type": "sphere", "params": [0.5, 4, 4] },
+      "material": { "color": "#FFD84D", "transparent": true, "opacity": 1.5 },
+      "spread": { "x": 500, "y": 500, "z": 500 }
+    }
+  ],
+  "lightAnimations": [
+    { "id": "gateGlow", "property": "intensity", "base": 0.15, "frequency": 0.5, "amplitude": 0.05 }
+  ]
+}

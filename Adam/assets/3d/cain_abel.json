@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "name": "cain_abel",
+  "settings": {
+    "background": "#3d1200",
+    "fog": { "color": "#0a0502", "density": 0.003 }
+  },
+  "camera": { "distance": 80, "height": 10 },
+  "objects": [
+    {
+      "type": "light",
+      "lightType": "ambient",
+      "color": "#FFFFFF",
+      "intensity": 0.3
+    },
+    {
+      "type": "light",
+      "lightType": "directional",
+      "color": "#FFFFFF",
+      "intensity": 0.5,
+      "position": {"x": 10, "y": 30, "z": 10}
+    },
+    {
+      "type": "light",
+      "lightType": "point",
+      "color": "#8B0000",
+      "intensity": 0.4,
+      "position": {"x": 0, "y": 10, "z": -10}
+    },
+    {
+      "type": "shape",
+      "shapeType": "box",
+      "scale": {"x": 20, "y": 3, "z": 20},
+      "color": "#8b5a2b",
+      "material": {"type": "toon", "outline": 0.05},
+      "position": {"x": -25, "y": 1.5, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "box",
+      "scale": {"x": 20, "y": 3, "z": 20},
+      "color": "#8b5a2b",
+      "material": {"type": "toon", "outline": 0.05},
+      "position": {"x": 25, "y": 1.5, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 25, "y": 25, "z": 25},
+      "color": "#C8956C",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": -25, "y": 15, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 24, "y": 24, "z": 24},
+      "color": "#DCB088",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": 25, "y": 14, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "box",
+      "scale": {"x": 3, "y": 15, "z": 3},
+      "color": "#8B0000",
+      "material": {"type": "toon", "outline": 0.1},
+      "position": {"x": -25, "y": 22, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "box",
+      "scale": {"x": 3, "y": 18, "z": 3},
+      "color": "#4a7a3a",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": 25, "y": 23, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    }
+  ],
+  "cameraAnimation": {
+    "theta_speed": 0.05,
+    "roll_amp": 0.05,
+    "roll_freq": 0.3
+  }
+}

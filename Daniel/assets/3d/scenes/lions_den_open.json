@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "id": "lions_den_open",
+  "chapter": 5,
+  "name": "The Lions' Den Open",
+  "background": "#030b18",
+  "fog": { "color": "#030b18", "density": 0.02 },
+  "camera": { "distance": 30, "height": -5, "fov": 55 },
+  "objects": [
+    {
+      "id": "floor",
+      "type": "shape",
+      "shapeType": "plane",
+      "position": { "x": 0, "y": -10, "z": 0 },
+      "rotation": { "x": -1.5708, "y": 0, "z": 0 },
+      "scale": { "x": 60, "y": 60, "z": 1 },
+      "color": "#8b5a2b",
+      "material": "toon",
+      "metalness": 0.1,
+      "roughness": 0.7,
+      "castShadow": false,
+      "receiveShadow": true,
+      "outline": false
+    }
+  ],
+  "groups": [
+    {
+      "id": "den_walls",
+      "objects": [
+        {
+          "id": "wall_segment",
+          "type": "shape",
+          "shapeType": "cylinder",
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 24, "y": 16, "z": 24 },
+          "color": "#8b5a2b",
+          "material": "toon",
+          "metalness": 0.1,
+          "roughness": 0.7,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        }
+      ],
+      "position": { "x": 0, "y": -2, "z": 0 }
+    },
+    {
+      "id": "daniel",
+      "objects": [
+        {
+          "id": "body",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": -7.5, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 3, "y": 9, "z": 2 },
+          "color": "#4a2a04",
+          "material": "toon",
+          "metalness": 0.1,
+          "roughness": 0.6,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        },
+        {
+          "id": "head",
+          "type": "shape",
+          "shapeType": "sphere",
+          "position": { "x": 0, "y": 5.5, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 2.5, "y": 2.5, "z": 2.5 },
+          "color": "#C8956C",
+          "material": "toon",
+          "metalness": 0.2,
+          "roughness": 0.4,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        }
+      ],
+      "position": { "x": 0, "y": -7.5, "z": 0 },
+      "animation": { "type": "sway", "property": "rotation.z", "base": 0, "amplitude": 0.05, "frequency": 2 }
+    },
+    {
+      "id": "lions",
+      "objects": [
+        {
+          "id": "lion_body",
+          "type": "shape",
+          "shapeType": "sphere",
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 4, "y": 4, "z": 4 },
+          "color": "#6b4a0a",
+          "material": "toon",
+          "metalness": 0.1,
+          "roughness": 0.6,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        }
+      ],
+      "position": { "x": -15, "y": -9, "z": 0 },
+      "animation": { "type": "cower", "property": "scale.y", "base": 0.8, "amplitude": 0.1, "frequency": 2 }
+    }
+  ],
+  "lights": [
+    {
+      "id": "angelLight",
+      "type": "point",
+      "color": "#4ECDC4",
+      "intensity": 2,
+      "position": { "x": 0, "y": 0, "z": 0 },
+      "distance": 60
+    },
+    {
+      "id": "dawnLight",
+      "type": "directional",
+      "color": "#ffffff",
+      "intensity": 1,
+      "position": { "x": 0, "y": 50, "z": 0 },
+      "castShadow": true
+    },
+    { "type": "ambient", "color": "#ffffff", "intensity": 0.4 }
+  ],
+  "lightAnimations": [
+    { "id": "angelLight", "property": "intensity", "base": 2, "frequency": 1.5, "amplitude": 0.8 }
+  ]
+}

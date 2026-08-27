@@ -1,0 +1,8 @@
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <pattern id="wood" patternUnits="userSpaceOnUse" width="20" height="40" patternTransform="rotate(30)">
+            <path d="M 0,10 Q 5,0 10,10 T 20,10" stroke="rgba(0,0,0,0.1)" stroke-width="0.5" fill="none"/>
+            <path d="M 0,30 Q 5,20 10,30 T 20,30" stroke="rgba(0,0,0,0.1)" stroke-width="0.5" fill="none"/>
+        </pattern>
+    </defs>
+</svg>

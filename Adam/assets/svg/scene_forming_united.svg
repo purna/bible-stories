@@ -1,0 +1,22 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Forming United — Adam and Eve together -->
+  <rect width="300" height="200" fill="#2b1d0c"/>
+  <!-- Ground -->
+  <rect x="0" y="150" width="300" height="50" fill="#6b3a18" stroke="#0A0812" stroke-width="2"/>
+  <!-- Tree of Life behind -->
+  <rect x="120" y="90" width="20" height="60" fill="#5c4033" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="130" cy="80" r="28" fill="#4a6a3a" opacity=".5" stroke="#0A0812" stroke-width="1.5"/>
+  <!-- Golden fruits -->
+  <circle cx="120" cy="70" r="5" fill="#FFD84D"/>
+  <circle cx="140" cy="85" r="4" fill="#FFD84D" opacity=".7"/>
+  <!-- Adam — left -->
+  <rect x="65" y="100" width="28" height="55" fill="#5c4033" stroke="#0A0812" stroke-width="2.5" rx="4"/>
+  <circle cx="79" cy="88" r="13" fill="#C8956C" stroke="#0A0812" stroke-width="2"/>
+  <!-- Eve — right -->
+  <rect x="207" y="100" width="26" height="53" fill="#8a7a5a" stroke="#0A0812" stroke-width="2.5" rx="4"/>
+  <circle cx="220" cy="86" r="11" fill="#dcb088" stroke="#0A0812" stroke-width="2"/>
+  <!-- Divine light between them -->
+  <ellipse cx="150" cy="50" rx="35" ry="25" fill="#FFD84D" opacity=".4"/>
+  <!-- Soft glow bond -->
+  <rect x="50" y="155" width="200" height="5" fill="#FFD84D" opacity=".12"/>
+</svg>

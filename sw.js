@@ -5,9 +5,11 @@ const OFFLINE_PAGE = new URL('offline.html', self.location).href;
 
 const MANIFEST_URLS = [
   'precache-manifest.json',
+  'Adam/precache-manifest.json',
   'Daniel/precache-manifest.json',
   'Eiljah/precache-manifest.json',
   'Jonah/precache-manifest.json',
+  'Moses/precache-manifest.json',
   'Noah/precache-manifest.json'
 ];
 
@@ -18,16 +20,30 @@ self.addEventListener('install', (event) => {
         for (const manifestUrl of MANIFEST_URLS) {
           try {
             const response = await fetch(manifestUrl);
+            if (!response.ok) continue;
             const data = await response.json();
             const urls = data.urls || [];
-            await cache.addAll(urls);
+            for (const url of urls) {
+              try {
+                const res = await fetch(url);
+                if (res && res.status === 200) {
+                  await cache.put(url, res.clone());
+                }
+              } catch (e) {
+                console.warn('Failed to cache', url, e);
+              }
+            }
           } catch (error) {
             console.warn('Failed to cache manifest at', manifestUrl, error);
           }
         }
-        return cache.addAll([OFFLINE_PAGE]);
+        try {
+          await cache.addAll([OFFLINE_PAGE]);
+        } catch (e) {
+          console.warn('Failed to cache offline page', e);
+        }
+        return self.skipWaiting();
       })
-      .then(() => self.skipWaiting())
   );
 });
 

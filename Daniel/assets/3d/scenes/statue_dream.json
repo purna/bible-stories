@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "id": "statue_dream",
+  "chapter": 2,
+  "name": "The Statue Dream",
+  "background": "#1a0e06",
+  "fog": { "color": "#1a0e06", "density": 0.015 },
+  "camera": { "distance": 45, "height": 8, "fov": 55 },
+  "objects": [
+    {
+      "id": "platform",
+      "type": "shape",
+      "shapeType": "box",
+      "position": { "x": 0, "y": -8, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 20, "y": 2, "z": 14 },
+      "color": "#8b5a2b",
+      "material": "toon",
+      "metalness": 0.1,
+      "roughness": 0.7,
+      "castShadow": true,
+      "receiveShadow": true,
+      "outline": true,
+      "outlineScale": 0.08
+    }
+  ],
+  "groups": [
+    {
+      "id": "statue",
+      "objects": [
+        {
+          "id": "head",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 5, "y": 5, "z": 5 },
+          "color": "#FFD84D",
+          "material": "toon",
+          "metalness": 0.8,
+          "roughness": 0.2,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        },
+        {
+          "id": "crown",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": 3.5, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 7, "y": 1, "z": 5 },
+          "color": "#FFD84D",
+          "material": "toon",
+          "metalness": 0.8,
+          "roughness": 0.2,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        },
+        {
+          "id": "chest",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": -7, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 6, "y": 7, "z": 6 },
+          "color": "#C0C0C0",
+          "material": "toon",
+          "metalness": 0.7,
+          "roughness": 0.3,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        },
+        {
+          "id": "belly",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": -15, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 7, "y": 7, "z": 7 },
+          "color": "#cd7f32",
+          "material": "toon",
+          "metalness": 0.5,
+          "roughness": 0.4,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        },
+        {
+          "id": "legs",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": -24, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 8, "y": 8, "z": 8 },
+          "color": "#888888",
+          "material": "toon",
+          "metalness": 0.6,
+          "roughness": 0.5,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        },
+        {
+          "id": "feet",
+          "type": "shape",
+          "shapeType": "box",
+          "position": { "x": 0, "y": -32, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 9, "y": 3, "z": 9 },
+          "color": "#C8956C",
+          "material": "toon",
+          "metalness": 0.1,
+          "roughness": 0.7,
+          "castShadow": true,
+          "receiveShadow": true,
+          "outline": true,
+          "outlineScale": 0.08
+        }
+      ],
+      "position": { "x": 0, "y": 3, "z": 0 },
+      "animation": { "type": "rotate", "property": "rotation.y", "speed": 0.1 }
+    }
+  ],
+  "lights": [
+    {
+      "id": "lightBurst",
+      "type": "point",
+      "color": "#ffffff",
+      "intensity": 2,
+      "position": { "x": 0, "y": 15, "z": 0 },
+      "distance": 60
+    },
+    { "type": "ambient", "color": "#ffffff", "intensity": 0.4 },
+    {
+      "type": "directional",
+      "color": "#ffffff",
+      "intensity": 1.2,
+      "position": { "x": 50, "y": 100, "z": 50 },
+      "castShadow": true
+    }
+  ],
+  "particles": [
+    {
+      "id": "stars_white",
+      "count": 300,
+      "geometry": { "type": "sphere", "params": [0.3, 4, 4] },
+      "material": { "color": "#ffffff", "transparent": true, "opacity": 0.8 },
+      "spread": { "x": 400, "y": 400, "z": 400 }
+    },
+    {
+      "id": "stars_gold",
+      "count": 50,
+      "geometry": { "type": "sphere", "params": [0.3, 4, 4] },
+      "material": { "color": "#FFD84D", "transparent": true, "opacity": 1.2 },
+      "spread": { "x": 400, "y": 400, "z": 400 }
+    },
+    {
+      "id": "stars_purple",
+      "count": 30,
+      "geometry": { "type": "sphere", "params": [0.3, 4, 4] },
+      "material": { "color": "#B98CFF", "transparent": true, "opacity": 0.9 },
+      "spread": { "x": 400, "y": 400, "z": 400 }
+    }
+  ],
+  "lightAnimations": [
+    { "id": "lightBurst", "property": "intensity", "base": 2, "frequency": 3, "amplitude": 0.5 }
+  ]
+}

@@ -1,0 +1,52 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" data-parallax="true">
+  <defs>
+    <radialGradient id="offeringGlow" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#FFD84D" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#FFD84D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Cain and Abel — offering scene, tension -->
+  <!-- Desert hills bg — static -->
+  <rect width="300" height="200" fill="#2b1d0c" data-depth="0"/>
+  <!-- Sunset sky — far -->
+  <rect x="0" y="0" width="300" height="110" fill="#5c4033" opacity=".3" data-depth="0.1"/>
+  <!-- Distant hills — far -->
+  <path d="M0 130 Q50 115 100 125 Q150 110 200 125 Q250 110 300 125 L300 200 L0 200 Z" fill="#4a3010" data-depth="0.2"/>
+  <!-- Two altar stones — midground -->
+  <rect x="90"  y="125" width="24" height="16" fill="#8b5a2b" stroke="#0A0812" stroke-width="2" data-depth="0.5"/>
+  <rect x="186" y="125"  width="24" height="16" fill="#8b5a2b" stroke="#0A0812" stroke-width="2" data-depth="0.5"/>
+  <!-- Cain — emphasis: angry posture, foreground -->
+  <!-- Cain figure -->
+  <rect x="80" y="85" width="36" height="65" fill="#5c4033" stroke="#0A0812" stroke-width="2.5" rx="4" data-depth="0.85"/>
+  <circle cx="98" cy="72" r="14" fill="#b88353" stroke="#0A0812" stroke-width="2" data-depth="0.9"/>
+  <!-- Cain hair/beard -->
+  <path d="M88 70 Q98 62 108 70" fill="none" stroke="#8a8a8a" stroke-width="3" data-depth="0.9"/>
+  <!-- Cain arms crossed — anger, defiance -->
+  <path d="M80 90 Q60 85 55 100" fill="none" stroke="#5c4033" stroke-width="10" stroke-linecap="round" data-depth="0.95"/>
+  <path d="M116 90 Q136 85 141 100" fill="none" stroke="#5c4033" stroke-width="10" stroke-linecap="round" data-depth="0.95"/>
+  <!-- Cain's offering — rough, grain, midground -->
+  <rect x="88" y="125" width="20" height="12" fill="#8a7a5a" stroke="#0A0812" stroke-width="1.5" data-depth="0.6"/>
+  <!-- Grain heads -->
+  <line x1="90" y1="123" x2="90" y2="120" stroke="#6b5a3a" stroke-width="2" data-depth="0.6"/>
+  <line x1="95" y1="123" x2="95" y2="120" stroke="#6b5a3a" stroke-width="2" data-depth="0.6"/>
+  <line x1="100" y1="123" x2="100" y2="120" stroke="#6b5a3a" stroke-width="2" data-depth="0.6"/>
+  <!-- Offering glow (rejected) -->
+  <ellipse cx="100" cy="140" rx="28" ry="18" fill="url(#offeringGlow)" opacity=".5" data-depth="0.6"/>
+  <!-- Abel — emphasis: peaceful posture, foreground -->
+  <!-- Abel figure -->
+  <rect x="176" y="90" width="32" height="60" fill="#4a2e10" stroke="#0A0812" stroke-width="2.5" rx="4" data-depth="0.85"/>
+  <circle cx="192" cy="75" r="12" fill="#d2a679" stroke="#0A0812" stroke-width="2" data-depth="0.9"/>
+  <!-- Abel hair -->
+  <path d="M184 73 Q192 65 200 73" fill="none" stroke="#2a1e15" stroke-width="2.5" data-depth="0.9"/>
+  <!-- Abel arms extended — offering, peaceful -->
+  <path d="M176 95 Q150 80 140 95" fill="none" stroke="#4a2e10" stroke-width="8" stroke-linecap="round" data-depth="0.95"/>
+  <path d="M208 95 Q234 80 244 95" fill="none" stroke="#4a2e10" stroke-width="8" stroke-linecap="round" data-depth="0.95"/>
+  <!-- Abel's offering — blood, life, foreground -->
+  <ellipse cx="198" cy="128" rx="14" ry="8" fill="#8B0000" stroke="#0A0812" stroke-width="2" data-depth="1.0"/>
+  <!-- Abel's offering glow (accepted) -->
+  <ellipse cx="198" cy="150" rx="30" ry="20" fill="url(#offeringGlow)" opacity=".8" data-depth="1.0"/>
+  <!-- Ground — foreground -->
+  <rect x="0" y="160" width="300" height="40" fill="#3d1200" data-depth="0.95"/>
+  <!-- Tension line between them — movement: conflict simmering, midground -->
+  <path d="M120 115 Q150 110 180 115" fill="none" stroke="#8B0000" stroke-width="2" stroke-dasharray="3,3" opacity=".4" data-depth="0.55"/>
+</svg>

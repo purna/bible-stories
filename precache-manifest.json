@@ -3,9 +3,11 @@
   "description": "Root-level precache manifest for Bible Stories Comics PWA",
   "urls": [
     "precache-manifest.json",
+    "Adam/precache-manifest.json",
     "Daniel/precache-manifest.json",
     "Eiljah/precache-manifest.json",
     "Jonah/precache-manifest.json",
+    "Moses/precache-manifest.json",
     "Noah/precache-manifest.json",
     "sw.js",
     "offline.html",

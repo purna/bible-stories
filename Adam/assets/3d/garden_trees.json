@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "name": "garden_trees",
+  "settings": {
+    "background": "#2b1d0c",
+    "fog": { "color": "#1a0e06", "density": 0.0025 }
+  },
+  "camera": { "distance": 80, "height": 10 },
+  "objects": [
+    {
+      "type": "light",
+      "lightType": "directional",
+      "color": "#FFFFFF",
+      "intensity": 0.7,
+      "position": {"x": 20, "y": 50, "z": 10}
+    },
+    {
+      "type": "light",
+      "lightType": "ambient",
+      "color": "#FFFFFF",
+      "intensity": 0.5
+    },
+    {
+      "type": "light",
+      "lightType": "point",
+      "color": "#FFD84D",
+      "intensity": 0.8,
+      "position": {"x": 0, "y": 25, "z": 0}
+    },
+    {
+      "type": "light",
+      "lightType": "point",
+      "color": "#FF6B5B",
+      "intensity": 0.6,
+      "position": {"x": 0, "y": 20, "z": 0}
+    },
+    {
+      "type": "shape",
+      "shapeType": "cylinder",
+      "scale": {"x": 6, "y": 50, "z": 6},
+      "color": "#5c4033",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": -30, "y": 25, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 30, "y": 30, "z": 30},
+      "color": "#4a7a3a",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": -30, "y": 55, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 5, "y": 5, "z": 5},
+      "color": "#FF6B5B",
+      "material": {"type": "toon", "outline": 0.1},
+      "position": {"x": -15, "y": 50, "z": 15},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 5, "y": 5, "z": 5},
+      "color": "#FF6B5B",
+      "material": {"type": "toon", "outline": 0.1},
+      "position": {"x": -35, "y": 52, "z": -10},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "cylinder",
+      "scale": {"x": 6, "y": 50, "z": 6},
+      "color": "#5c4033",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": 30, "y": 25, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 30, "y": 30, "z": 30},
+      "color": "#FFD84D",
+      "material": {"type": "emissive", "outline": 0.08},
+      "position": {"x": 30, "y": 55, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": false, "receive": false}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 5, "y": 5, "z": 5},
+      "color": "#FFD84D",
+      "material": {"type": "emissive", "outline": 0.1},
+      "position": {"x": 15, "y": 50, "z": 15},
+      "userData": {"aframe": {"shadow": {"cast": false, "receive": false}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 40, "y": 60, "z": 14},
+      "color": "#C8956C",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": 0, "y": 30, "z": -20},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 38, "y": 58, "z": 14},
+      "color": "#DCB088",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": 0, "y": 30, "z": 20},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "plane",
+      "scale": {"x": 200, "y": 200, "z": 1},
+      "color": "#8B4513",
+      "material": {"type": "toon", "outline": 0},
+      "position": {"x": 0, "y": -1, "z": 0},
+      "rotation": {"x": -1.5708, "y": 0, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": false, "receive": true}}}
+    }
+  ],
+  "cameraAnimation": {
+    "theta_speed": 0.05,
+    "phi_amp": 0.05
+  }
+}

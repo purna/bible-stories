@@ -1,0 +1,36 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="swordFlame" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFD84D" stop-opacity=".4"/>
+      <stop offset="100%" stop-color="#FF6B5B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Exile — gates closing, Adam and Eve driven out -->
+  <!-- Dark bg --><!-- emphasis: loss, finality -->
+  <rect width="300" height="200" fill="#061224"/>
+  <!-- Flaming sword — emphasis: barrier, divine protection -->
+  <ellipse cx="150" cy="70" rx="35" ry="55" fill="url(#swordFlame)"/>
+  <path d="M148 20 Q152 25 150 30 Q155 25 152 20" fill="#FFD84D" stroke="#0A0812" stroke-width="1.5"/>
+  <!-- Sword blade --><!-- emphasis: vertical, gleaming -->
+  <rect x="146" y="15" width="8" height="90" fill="#FFD84D" stroke="#0A0812" stroke-width="2" transform="rotate(-10 150 60)"/>
+  <path d="M142 15 Q150 10 158 15" fill="#FFD84D" stroke="#0A0812" stroke-width="2"/>
+  <!-- Adam figure — emphasis: walking away, head bowed -->
+  <rect x="205" y="105" width="32" height="60" fill="#5c4033" stroke="#0A0812" stroke-width="2.5" rx="4"/>
+  <circle cx="221" cy="92" r="12" fill="#C8956C" stroke="#0A0812" stroke-width="2"/>
+  <!-- Adam beard/hair -->
+  <path d="M214 88 Q221 82 228 88" fill="none" stroke="#2a1e15" stroke-width="2"/>
+  <!-- Eve figure — beside Adam, head bowed -->
+  <rect x="242" y="110" width="28" height="55" fill="#8a7a5a" stroke="#0A0812" stroke-width="2.5" rx="4"/>
+  <circle cx="256" cy="98" r="10" fill="#dcb088" stroke="#0A0812" stroke-width="2"/>
+  <!-- Eve hair -->
+  <path d="M250 96 Q256 90 262 96" fill="none" stroke="#1a1410" stroke-width="2"/>
+  <!-- Distant garden — fading behind them -->
+  <rect x="20" y="110" width="120" height="50" fill="#3a5a3a" opacity=".3" stroke="#0A0812" stroke-width="1"/>
+  <circle cx="50" cy="100" r="18" fill="#5a7a3a" opacity=".2"/>
+  <circle cx="80" cy="105" r="14" fill="#5a7a3a" opacity=".2"/>
+  <!-- Ground -->
+  <rect x="0" y="165" width="300" height="35" fill="#030b18"/>
+  <!-- Footprints — movement: leaving -->
+  <ellipse cx="220" cy="165" rx="8" ry="4" fill="#0A0812" opacity=".6"/>
+  <ellipse cx="255" cy="165" rx="7" ry="3" fill="#0A0812" opacity=".5"/>
+</svg>

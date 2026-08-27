@@ -1,0 +1,27 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Serpent Deceive — temptation -->
+  <!-- Dark, ominous bg -->
+  <rect width="300" height="200" fill="#1a0700"/>
+  <!-- Ground -->
+  <rect x="0" y="150" width="300" height="50" fill="#3d1200"/>
+  <!-- Tree of Knowledge — large, central -->
+  <rect x="115" y="75" width="22" height="80" fill="#5c4033" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="126" cy="65" r="30" fill="#5a7a3a" stroke="#0A0812" stroke-width="2.5"/>
+  <!-- Fruit on tree -->
+  <circle cx="105" cy="70" r="6" fill="#FF6B5B"/>
+  <circle cx="140" cy="85" r="6" fill="#FF6B5B"/>
+  <circle cx="120" cy="55" r="6" fill="#FF6B5B"/>
+  <!-- Serpent coiled around tree -->
+  <path d="M120 65 Q150 50 180 65 Q200 80 190 100 Q170 120 150 110" fill="#8B0000" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="185" cy="100" r="4" fill="#8B0000"/>
+  <!-- Serpent eyes -->
+  <circle cx="187" cy="98" r="1.5" fill="#FF6B5B"/>
+  <circle cx="183" cy="98" r="1.5" fill="#FF6B5B"/>
+  <!-- Eve approaching -->
+  <rect x="40" y="100" width="26" height="53" fill="#8a7a5a" stroke="#0A0812" stroke-width="2.5" rx="4"/>
+  <circle cx="53" cy="88" r="11" fill="#dcb088" stroke="#0A0812" stroke-width="2"/>
+  <!-- Ominous red glow -->
+  <ellipse cx="80" cy="30" rx="20" ry="25" fill="#8B0000" opacity=".3"/>
+  <!-- Red light -->
+  <ellipse cx="120" cy="70" rx="15" ry="20" fill="#FF6B5B" opacity=".4"/>
+</svg>

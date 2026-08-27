@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "name": "exile_garments",
+  "settings": {
+    "background": "#0a0502",
+    "fog": { "color": "#0a0502", "density": 0.0035 }
+  },
+  "camera": { "distance": 70, "height": 15 },
+  "objects": [
+    {
+      "type": "light",
+      "lightType": "ambient",
+      "color": "#443311",
+      "intensity": 0.4
+    },
+    {
+      "type": "light",
+      "lightType": "directional",
+      "color": "#FFD84D",
+      "intensity": 0.6,
+      "position": {"x": 10, "y": 30, "z": 10}
+    },
+    {
+      "type": "light",
+      "lightType": "point",
+      "color": "#8B4513",
+      "intensity": 0.8,
+      "position": {"x": 0, "y": 5, "z": 0}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 40, "y": 60, "z": 14},
+      "color": "#C8956C",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": -20, "y": 5, "z": 0},
+      "rotation": {"x": 0, "y": 0, "z": 0.3},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 38, "y": 58, "z": 14},
+      "color": "#DCB088",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": 20, "y": 5, "z": 0},
+      "rotation": {"x": 0, "y": 0, "z": -0.2},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 20, "y": 20, "z": 20},
+      "color": "#FFD84D",
+      "material": {"type": "emissive", "outline": 0.08},
+      "position": {"x": 0, "y": 30, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": false, "receive": false}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "box",
+      "scale": {"x": 15, "y": 3, "z": 15},
+      "color": "#5c4033",
+      "material": {"type": "toon", "outline": 0.05},
+      "position": {"x": 0, "y": 0, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "decoration",
+      "decorationType": "stars",
+      "count": 100,
+      "spread": 300,
+      "color": "#FFD84D",
+      "size": 0.5
+    },
+    {
+      "type": "shape",
+      "shapeType": "plane",
+      "scale": {"x": 200, "y": 200, "z": 1},
+      "color": "#0a0502",
+      "material": {"type": "toon", "outline": 0},
+      "position": {"x": 0, "y": -1, "z": 0},
+      "rotation": {"x": -1.5708, "y": 0, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": false, "receive": true}}}
+    }
+  ],
+  "cameraAnimation": {
+    "theta_speed": 0.03,
+    "distance_amp": 5,
+    "phi_base": 0.78,
+    "phi_amp": 0.08,
+    "target_x": 0,
+    "target_y": 5,
+    "target_z": 0
+  }
+}

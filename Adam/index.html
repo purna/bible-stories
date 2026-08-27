@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The Story of Adam and Eve — An interactive comic book experience covering Creation, the Garden of Eden, the Fall, and Exile. Read offline with our PWA service worker!">
+    <meta name="theme-color" content="#FFD84D">
+    <meta name="color-scheme" content="dark">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Adam &amp; Eve — Interactive Comic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@700;900&family=Bangers&family=Space+Mono:wght@400;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="stylesheet" href="adam-comic.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div id="startScreen">
+        <div class="comic-cover">
+            <div class="issue">SPECIAL EDITION #1</div>
+            <h1>ADAM & EVE!</h1>
+            <div class="subtitle">CREATION</div>
+            <div class="bigicon">✨</div>
+            <p>An interactive comic book experience! Navigate using arrows, swipes, or scroll.</p>
+            <button id="startBtn">LAUNCH COMIC</button>
+        </div>
+    </div>
+
+    <div id="app">
+        <div id="bgGradient"></div>
+        <canvas id="particles"></canvas>
+        <div id="halftoneOverlay"></div>
+
+        <div id="hud">
+            <select id="chapterSelect"></select>
+            <div id="dots"></div>
+        </div>
+
+        <div id="stageWrap">
+            <div id="stage"></div>
+        </div>
+
+        <div id="choices"></div>
+        <div id="delayNote"></div>
+
+        <div id="navHints">
+            <span>◀ Use Left/Right Arrow keys or swipe ▶</span>
+            <span>· Drag / scroll the scene to view it in 3D ·</span>
+            <span>· ↓ Scroll at line end to drop into next chapter ·</span>
+        </div>
+        <button id="audioToggle" title="Toggle Audio">🔊</button>
+        <button id="nextBtn">Next Chapter ↴</button>
+        <button id="nextLineBtn">Next →</button>
+    </div>
+
+    <div id="portal"></div>
+    
+    
+    <script src="audio-manager.js"></script>
+    <script src="adam-scenes-helpers.js"></script>
+    <script src="scenes/creation_cosmos.js"></script>
+    <script src="scenes/creation_light.js"></script>
+    <script src="scenes/creation_separation.js"></script>
+    <script src="scenes/creation_days.js"></script>
+    <script src="scenes/garden_eden.js"></script>
+    <script src="scenes/garden_placed.js"></script>
+    <script src="scenes/garden_tended.js"></script>
+    <script src="scenes/garden_paradise.js"></script>
+    <script src="scenes/garden_trees.js"></script>
+    <script src="scenes/garden_command.js"></script>
+    <script src="scenes/garden_warning.js"></script>
+    <script src="scenes/forming_eve.js"></script>
+    <script src="scenes/forming_names.js"></script>
+    <script src="scenes/forming_sleep.js"></script>
+    <script src="scenes/forming_united.js"></script>
+    <script src="scenes/serpent_tree.js"></script>
+    <script src="scenes/serpent_deceive.js"></script>
+    <script src="scenes/serpent_taken.js"></script>
+    <script src="scenes/forbidden_fruit.js"></script>
+    <script src="scenes/forbidden_taken.js"></script>
+    <script src="scenes/the_fall.js"></script>
+    <script src="scenes/the_hiding.js"></script>
+    <script src="scenes/exile_eden.js"></script>
+    <script src="scenes/exile_judged.js"></script>
+    <script src="scenes/exile_garments.js"></script>
+    <script src="scenes/exile_dawn.js"></script>
+    <script src="scenes/exile_driven.js"></script>
+    <script src="scenes/cain_abel.js"></script>
+    <script src="adam-comic.js" defer></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('../sw.js');
+            });
+        }
+    </script>
+</body>
+
+</html>

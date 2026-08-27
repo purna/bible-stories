@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "name": "serpent_tree",
+  "settings": {
+    "background": "#1a0700",
+    "fog": { "color": "#220000", "density": 0.003 }
+  },
+  "camera": { "distance": 70, "height": 10 },
+  "objects": [
+    {
+      "type": "light",
+      "lightType": "ambient",
+      "color": "#442200",
+      "intensity": 0.3
+    },
+    {
+      "type": "light",
+      "lightType": "point",
+      "color": "#FF0000",
+      "intensity": 0.5,
+      "position": {"x": 0, "y": 20, "z": 0}
+    },
+    {
+      "type": "shape",
+      "shapeType": "cylinder",
+      "scale": {"x": 5, "y": 40, "z": 5},
+      "color": "#5c4033",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": -20, "y": 20, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 30, "y": 30, "z": 30},
+      "color": "#4a7a3a",
+      "material": {"type": "toon", "outline": 0.08},
+      "position": {"x": -20, "y": 50, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 4, "y": 4, "z": 4},
+      "color": "#8B0000",
+      "material": {"type": "toon", "outline": 0.1},
+      "position": {"x": 0, "y": 30, "z": -5},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 4, "y": 4, "z": 4},
+      "color": "#8B0000",
+      "material": {"type": "toon", "outline": 0.1},
+      "position": {"x": 0, "y": 27, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 4, "y": 4, "z": 4},
+      "color": "#8B0000",
+      "material": {"type": "toon", "outline": 0.1},
+      "position": {"x": 0, "y": 24, "z": 5},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 4, "y": 4, "z": 4},
+      "color": "#8B0000",
+      "material": {"type": "toon", "outline": 0.1},
+      "position": {"x": 0, "y": 21, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "sphere",
+      "scale": {"x": 6, "y": 6, "z": 6},
+      "color": "#FF6B5B",
+      "material": {"type": "toon", "outline": 0.1},
+      "position": {"x": 15, "y": 30, "z": 10},
+      "userData": {"aframe": {"shadow": {"cast": true, "receive": true}}}
+    },
+    {
+      "type": "shape",
+      "shapeType": "plane",
+      "scale": {"x": 180, "y": 180, "z": 1},
+      "color": "#1a0700",
+      "material": {"type": "toon", "outline": 0},
+      "position": {"x": 0, "y": -0.5, "z": 0},
+      "rotation": {"x": -1.5708, "y": 0, "z": 0},
+      "userData": {"aframe": {"shadow": {"cast": false, "receive": true}}}
+    }
+  ],
+  "cameraAnimation": {
+    "theta_speed": 0.08,
+    "roll_amp": 0.1,
+    "distance_amp": 5
+  }
+}

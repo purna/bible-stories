@@ -1,0 +1,27 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Garden Tended — Adam among creatures -->
+  <rect width="300" height="200" fill="#2b1d0c"/>
+  <!-- Ground -->
+  <rect x="0" y="150" width="300" height="50" fill="#6b3a18" stroke="#0A0812" stroke-width="2"/>
+  <!-- Adam — central, gesturing -->
+  <rect x="135" y="95" width="30" height="60" fill="#5c4033" stroke="#0A0812" stroke-width="2.5" rx="4"/>
+  <circle cx="150" cy="82" r="14" fill="#C8956C" stroke="#0A0812" stroke-width="2"/>
+  <path d="M140 80 Q150 74 160 80" fill="none" stroke="#2a1e15" stroke-width="3"/>
+  <!-- Sheep -->
+  <circle cx="60" cy="140" r="10" fill="#e8e0cf" stroke="#0A0812" stroke-width="1"/>
+  <circle cx="52" cy="142" r="4" fill="#0A0812" opacity=".5"/>
+  <circle cx="68" cy="142" r="4" fill="#0A0812" opacity=".5"/>
+  <circle cx="240" cy="145" r="9" fill="#e8e0cf" stroke="#0A0812" stroke-width="1"/>
+  <circle cx="233" cy="147" r="3.5" fill="#0A0812" opacity=".5"/>
+  <circle cx="247" cy="147" r="3.5" fill="#0A0812" opacity=".5"/>
+  <!-- Birds on trees -->
+  <circle cx="50" cy="60" r="5" fill="#8b6010" stroke="#0A0812" stroke-width="1"/>
+  <circle cx="250" cy="65" r="5" fill="#8b6010" stroke="#0A0812" stroke-width="1"/>
+  <!-- Lion -->
+  <circle cx="180" cy="135" r="12" fill="#8b4513" stroke="#0A0812" stroke-width="1.5"/>
+  <!-- Trees -->
+  <rect x="25" y="110" width="18" height="45" fill="#5c4033" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="34" cy="100" r="20" fill="#4a7a3a" stroke="#0A0812" stroke-width="1.5"/>
+  <rect x="255" y="110" width="18" height="45" fill="#5c4033" stroke="#0A0812" stroke-width="2"/>
+  <circle cx="264" cy="100" r="20" fill="#4a7a3a" stroke="#0A0812" stroke-width="1.5"/>
+</svg>

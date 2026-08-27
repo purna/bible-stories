@@ -5,6 +5,7 @@
     "bg": "radial-gradient(circle at 30% 20%, #5c4033, #2b1d0c 65%, #1a0e06)",
     "particle": "dusk",
     "svg": "babylon_court",
+    "reign": "nebuchadnezzar",
     "lines": [
       { "speaker": "narrator", "fx": "fade", "text": "Babylon, 605 BCE. The young men of Judah had been taken far from home.", "align": "left", "svg": "babylon_city" },
       { "speaker": "narrator", "fx": "type", "text": "King Nebuchadnezzar ordered his best captives trained for royal service. Among them: Daniel, Hananiah, Mishael, and Azariah.", "align": "center", "svg": "training_house" },
@@ -17,8 +18,8 @@
         "align": "center",
         "svg": "daniel_decides",
         "choices": [
-          { "label": "Tell the guard directly 🗣️", "note": "Daniel speaks plainly. The guard is surprised but hears him out." },
-          { "label": "Request a test instead 🌿", "note": "Daniel proposes ten days of simple food. The guard nervously agrees." }
+          { "label": "Tell the guard directly 🗣️", "note": "Daniel speaks plainly. The guard is surprised but hears him out.", "decisionId": "table_direct", "tags": ["loyalty:god", "cost:public", "risk:immediate"] },
+          { "label": "Request a test instead 🌿", "note": "Daniel proposes ten days of simple food. The guard nervously agrees.", "decisionId": "table_test", "tags": ["loyalty:diplomatic", "cost:private"] }
         ]
       },
       { "speaker": "daniel", "fx": "fade", "text": "Give us vegetables and water for ten days. Then judge us against the others.", "svg": "daniel_vegetable_test" },
@@ -33,6 +34,8 @@
     "bg": "radial-gradient(circle at 50% 20%, #3d1c08, #1e0f0a 65%, #0d0705)",
     "particle": "dream",
     "svg": "throne_room",
+    "reign": "nebuchadnezzar",
+    "vision": "statue_dream",
     "lines": [
       { "speaker": "narrator", "fx": "shake", "text": "The king had a dream that terrified him. He demanded his wise men tell him not just what it meant — but what it was.", "align": "left", "svg": "throne_room" },
       { "sfx": "TELL ME!", "speaker": "nebuchadnezzar", "fx": "shake", "text": "Interpret my dream — or ALL the wise men of Babylon die. Including you, Daniel.", "align": "center", "svg": "throne_room" },
@@ -46,9 +49,10 @@
         "text": "The king could have been angry at the news. Instead, he did something no one expected.",
         "align": "center",
         "svg": "nebuchadnezzar_bows",
+        "vision": true,
         "choices": [
-          { "label": "Daniel softens the message 😬", "note": "If Daniel had flattered the king here, later chapters would ring hollow. He didn't." },
-          { "label": "Daniel delivers it plainly ✅", "note": "The true reading, even the uncomfortable parts. That's what earns the king's respect." }
+          { "label": "Daniel softens the message 😬", "note": "A flattering reading protects favor with the king now — but dents Discernment.", "decisionId": "statue_softened", "tags": ["loyalty:diplomatic", "cost:private"] },
+          { "label": "Daniel delivers it plainly ✅", "note": "The true reading, even the uncomfortable parts. That's what earns the king's respect.", "decisionId": "statue_plain", "tags": ["loyalty:god", "cost:public", "risk:self"] }
         ]
       },
       { "speaker": "nebuchadnezzar", "fx": "bounce", "text": "Your God is the God of gods and Lord of kings — a revealer of mysteries!", "svg": "nebuchadnezzar_bows" },
@@ -61,6 +65,7 @@
     "bg": "radial-gradient(circle at 50% 80%, #8b2500, #3d1200 60%, #1a0700)",
     "particle": "fire",
     "svg": "plain_of_dura",
+    "reign": null,
     "lines": [
       { "speaker": "narrator", "fx": "fade", "text": "Years later, Nebuchadnezzar built a colossal golden statue on the plain of Dura.", "align": "left", "svg": "golden_statue" },
       { "sfx": "BOW DOWN!", "speaker": "nebuchadnezzar", "fx": "shake", "text": "When the music plays — EVERYONE bows to my image. Anyone who doesn't will be thrown into the furnace!", "align": "center", "svg": "golden_statue" },
@@ -76,8 +81,8 @@
         "align": "center",
         "svg": "four_in_furnace",
         "choices": [
-          { "label": "They are rescued before the fire 🙏", "note": "No. They walk IN it. The rescue happens inside the thing they refused to avoid." },
-          { "label": "They walk out unharmed ✅", "note": "Not a hair singed. No smell of smoke. The fire had no power over them." }
+          { "label": "They are rescued before the fire 🙏", "note": "No. They walk IN it. The rescue happens inside the thing they refused to avoid.", "decisionId": "furnace_rescue_inside", "tags": ["loyalty:god", "faith:witnessed"] },
+          { "label": "They walk out unharmed ✅", "note": "Not a hair singed. No smell of smoke. The fire had no power over them.", "decisionId": "furnace_unharmed", "tags": ["loyalty:god", "faith:delivered"] }
         ]
       },
       { "speaker": "friends", "fx": "bounce", "text": "We told you. Whether he saves us or not — we will not bow.", "svg": "friends_standing" },
@@ -90,6 +95,8 @@
     "bg": "radial-gradient(circle at 30% 30%, #2b1220, #160a14 60%, #090510)",
     "particle": "constellation",
     "svg": "belshazzar_feast",
+    "reign": "belshazzar",
+    "vision": "writing_wall",
     "lines": [
       { "speaker": "narrator", "fx": "fade", "text": "Decades later. Babylon was falling. And Belshazzar, its last king, held a feast — using the sacred cups stolen from Jerusalem's temple.", "align": "left", "svg": "belshazzar_feast" },
       { "speaker": "belshazzar", "fx": "bounce", "text": "BRING the gold and silver cups from the temple! Tonight we drink from the vessels of Judah's God!", "align": "center", "svg": "belshazzar_feast" },
@@ -102,13 +109,14 @@
         "text": "Keep your gold, O King. I'll tell you what it means anyway.",
         "align": "left",
         "svg": "daniel_reads",
+        "vision": true,
         "choices": [
-          { "label": "Daniel asks for the reward 💰", "note": "He doesn't. When there's nothing left to gain, the truth still costs something to tell." },
-          { "label": "Daniel refuses the reward ✅", "note": "Integrity in a moment with no long game left to protect. That's the point." }
+          { "label": "Daniel asks for the reward 💰", "note": "He doesn't. When there's nothing left to gain, the truth still costs something to tell.", "decisionId": "writing_reward", "tags": ["loyalty:diplomatic", "cost:private"] },
+          { "label": "Daniel refuses the reward ✅", "note": "Integrity in a moment with no long game left to protect. That's the point.", "decisionId": "writing_refuse", "tags": ["loyalty:god", "cost:public", "risk:self"] }
         ]
       },
       { "speaker": "daniel", "fx": "fade", "text": "MENE: God has numbered your kingdom and brought it to an end. TEKEL: You have been weighed and found wanting. PERES: Your kingdom is divided and given to the Medes and Persians.", "svg": "daniel_reads" },
-      { "speaker": "narrator", "fx": "type", "text": "That very night, Belshazzar was killed. And Babylon fell to the Persians.", "svg": "babylon_falls" }
+      { "speaker": "narrator", "fx": "type", "text": "That very night, Belshazzar was killed. And Babylon fell to the Persians.", "svg": "babylon_falls", "consequence": { "god_only": "That very night, Belshazzar was killed. Babylon fell — and the court recalled how Daniel's words had always cut true, never softened for safety.", "mixed": "That very night, Belshazzar was killed. Babylon fell — and those who remembered Daniel's earlier compromises wondered if this last, unflinching reading had been worth the risk.", "compromised": "That very night, Belshazzar was killed. Babylon fell — and for a moment Daniel wondered if a different path might have spared more than he could save." } }
     ]
   },
   {
@@ -117,6 +125,7 @@
     "bg": "radial-gradient(circle at 50% 20%, #0d1b2a, #061224 65%, #030b18)",
     "particle": "stars",
     "svg": "persian_court",
+    "reign": "darius",
     "lines": [
       { "speaker": "narrator", "fx": "fade", "text": "Under King Darius the Mede, Daniel rose again to the highest rank. And the satraps hated him for it.", "align": "left", "svg": "persian_court" },
       { "speaker": "narrator", "fx": "type", "text": "They searched for something — anything — to accuse him of. But they found no fault. Not one.", "align": "center", "svg": "satraps_plotting" },
@@ -128,8 +137,8 @@
         "align": "center",
         "svg": "satraps_plotting",
         "choices": [
-          { "label": "Daniel closes his window 🪟", "note": "He didn't. They couldn't find fault in him by catching him pray — so the window was always open." },
-          { "label": "Daniel prays as usual ✅", "note": "Three times a day. Window open. Facing Jerusalem. Exactly as he always had. Because that's what faithfulness looks like." }
+          { "label": "Daniel closes his window 🪟", "note": "He didn't. They couldn't find fault in him by catching him pray — so the window was always open.", "decisionId": "den_window", "tags": ["loyalty:diplomatic", "cost:private", "risk:legal"] },
+          { "label": "Daniel prays as usual ✅", "note": "Three times a day. Window open. Facing Jerusalem. Exactly as he always had. Because that's what faithfulness looks like.", "decisionId": "den_pray", "tags": ["loyalty:god", "cost:public", "risk:self"] }
         ]
       },
       { "speaker": "narrator", "fx": "fade", "text": "Daniel went home. He opened the window facing Jerusalem. He got down on his knees. And he prayed.", "svg": "daniel_praying_window" },
@@ -140,8 +149,8 @@
       { "speaker": "darius", "fx": "bounce", "text": "DANIEL! Servant of the living God — has your God been able to save you?!", "svg": "darius_running" },
       { "speaker": "daniel", "fx": "bounce", "text": "O king, live forever. My God sent his angel, and the lions' mouths were shut. Because I was found innocent before him.", "svg": "lions_den_open" },
       { "speaker": "narrator", "fx": "fade", "text": "Daniel was lifted out. Not a scratch on him. Because he had trusted in his God.", "svg": "lions_den_open" },
-      { "speaker": "narrator", "fx": "type", "text": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires — seventy years of exile — he held the line.", "svg": "daniel_old_man" },
-      { "speaker": "narrator", "fx": "fade", "text": "THE END", "svg": "daniel_old_man" }
+      { "speaker": "narrator", "fx": "type", "text": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires — seventy years of exile — he held the line.", "svg": "daniel_old_man", "consequence": { "god_only": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires — seventy years of exile — he held the line, unbent and unbroken.", "mixed": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires — seventy years of exile — he held the line, faithful despite the compromises.", "compromised": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires — seventy years of exile — he held the line, a pragmatic path but a faithful one." } },
+      { "speaker": "narrator", "fx": "fade", "text": "THE END", "svg": "daniel_old_man", "consequence": { "god_only": "THE END — Conviction sustained across seven decades, unbroken.", "mixed": "THE END — Faithfulness threaded through with compromise, but the line held.", "compromised": "THE END — A different kind of faithfulness, but faithful nonetheless." } }
     ]
   }
 ]

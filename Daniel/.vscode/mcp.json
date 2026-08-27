@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"kody": {
+			"type": "http",
+			"url": "https://kody.codes/mcp"
+		}
+	},
+	"inputs": []
+}

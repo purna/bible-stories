@@ -90,7 +90,7 @@ const svgCache = {};
 async function loadSvg(key) {
   if (svgCache[key]) return svgCache[key];
   try {
-    const res = await fetch(`svg/${key}.svg`);
+    const res = await fetch(`assets/svg/${key}.svg`);
     if (!res.ok) throw new Error();
     svgCache[key] = await res.text();
   } catch {

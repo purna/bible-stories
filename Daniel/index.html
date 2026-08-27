@@ -40,10 +40,18 @@
         <div id="hud">
             <select id="chapterSelect"></select>
             <div id="dots"></div>
+            <div id="meterBar" class="hidden">
+                <div id="meterFill"></div>
+                <div id="meterLabel">SET APART</div>
+            </div>
         </div>
 
         <div id="stageWrap">
             <div id="stage"></div>
+            <div id="visionOverlay"></div>
+            <div id="fragmentCounter" class="hidden">
+                    <span id="fragCount">0 / 0</span>
+            </div>
         </div>
 
         <div id="choices"></div>
@@ -59,6 +67,26 @@
 
     <div id="portal"></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="daniel-scenes-helpers.js"></script>
+    <script src="scenes/statue_dream.js"></script>
+    <script src="scenes/hand_writing.js"></script>
+    <script src="scenes/throne_room.js"></script>
+    <script src="scenes/babylon_city.js"></script>
+    <script src="scenes/furnace_lit.js"></script>
+    <script src="scenes/babylon_falls.js"></script>
+    <script src="scenes/lions_den_open.js"></script>
+    <script src="scenes/golden_statue.js"></script>
+    <script src="scenes/babylon_court.js"></script>
+    <script src="scenes/persian_court.js"></script>
+    <script src="scenes/daniel_prays.js"></script>
+    <script src="scenes/nebuchadnezzar_bows.js"></script>
+    <script src="scenes/daniel_praying_window.js"></script>
+    <script src="stateManager.js" defer></script>
+    <script src="decisionLog.js" defer></script>
+    <script src="visionEngine.js" defer></script>
+    <script src="parallax.js" defer></script>
+    <script src="vfx.js" defer></script>
     <script src="daniel-comic.js" defer></script>
     <script>
         if ('serviceWorker' in navigator) {
