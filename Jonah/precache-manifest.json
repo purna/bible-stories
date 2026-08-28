@@ -101,6 +101,7 @@
     "Jonah/assets/fonts/space-mono-400.ttf",
     "Jonah/assets/fonts/space-mono-700.ttf",
     "Jonah/vendor/three.r128.min.js",
+    "Jonah/vendor/jszip.3.10.1.min.js",
     "Jonah/favicon.svg",
     "Jonah/manifest.json",
     "Jonah/offline.html",

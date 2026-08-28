@@ -16,6 +16,7 @@
     "Noah/assets/fonts/press-start-2p-400.ttf",
     "Noah/assets/fonts/space-mono-400.ttf",
     "Noah/assets/fonts/space-mono-700.ttf",
+    "Noah/vendor/jszip.3.10.1.min.js",
     "Noah/favicon.svg",
     "Noah/manifest.json",
     "Noah/offline.html",

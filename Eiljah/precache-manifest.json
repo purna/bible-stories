@@ -86,6 +86,7 @@
     "Eiljah/assets/fonts/space-mono-400.ttf",
     "Eiljah/assets/fonts/space-mono-700.ttf",
     "Eiljah/vendor/gsap.3.12.5.min.js",
+    "Eiljah/vendor/jszip.3.10.1.min.js",
     "Eiljah/favicon.svg",
     "Eiljah/manifest.json",
     "Eiljah/offline.html",

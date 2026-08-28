@@ -91,6 +91,7 @@
     "Daniel/assets/fonts/space-mono-400.ttf",
     "Daniel/assets/fonts/space-mono-700.ttf",
     "Daniel/vendor/three.r128.min.js",
+    "Daniel/vendor/jszip.3.10.1.min.js",
     "Daniel/favicon.svg",
     "Daniel/manifest.json",
     "Daniel/offline.html",
