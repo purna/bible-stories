@@ -129,8 +129,10 @@
     const portal = el('#portal');
     const bgGradient = el('#bgGradient');
     const dotsBox = el('#dots');
+    const audio = new AudioManager();
 
     function currentAct() { return STORY[actIdx]; }
+    window.__comic = { currentAct };
 
     function buildDots() {
       dotsBox.innerHTML = '';
@@ -428,6 +430,7 @@
 
     async function loadAct() {
       const act = currentAct();
+      audio.playAct(act);
       el('#chapterSelect').value = actIdx;
       bgGradient.style.background = act.bg;
 
@@ -962,7 +965,13 @@
        ========================================================================= */
     let hAccum = 0, vAccum = 0, navLocked = false;
 
+    function advanceChapter() {
+      if (window.JonahGame && JonahGame.shouldLaunch(actIdx)) JonahGame.launch(actIdx, goNextChapter);
+      else goNextChapter();
+    }
+
     window.addEventListener('wheel', e => {
+      if (window.JonahGame && JonahGame.isActive()) return;
       if (transitioning) return;
       const atEnd = lineIdx === currentAct().lines.length - 1 && !choicePending;
 
@@ -970,7 +979,7 @@
         vAccum += e.deltaY;
         if (!navLocked && vAccum > 120) {
           navLocked = true; vAccum = 0;
-          goNextChapter();
+          advanceChapter();
           setTimeout(() => navLocked = false, 1400);
         }
         return;
@@ -986,16 +995,21 @@
     }, { passive: true });
 
     window.addEventListener('keydown', e => {
+      if (window.JonahGame && JonahGame.isActive()) return;
       const atEnd = lineIdx === currentAct().lines.length - 1 && !choicePending;
       if (e.key === 'ArrowRight') goLine(1);
       if (e.key === 'ArrowLeft') goLine(-1);
-      if (e.key === 'ArrowDown' && atEnd) goNextChapter();
+      if (e.key === 'ArrowDown' && atEnd) advanceChapter();
       if (e.key === 'ArrowUp' && lineIdx === 0) goPrevChapter();
     });
 
     let touchStartX = 0;
-    window.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX);
+    window.addEventListener('touchstart', e => {
+      if (window.JonahGame && JonahGame.isActive()) return;
+      touchStartX = e.touches[0].clientX;
+    });
     window.addEventListener('touchend', e => {
+      if (window.JonahGame && JonahGame.isActive()) return;
       const dx = e.changedTouches[0].clientX - touchStartX;
       if (Math.abs(dx) > 50) goLine(dx < 0 ? 1 : -1);
     });
@@ -1005,7 +1019,7 @@
       jumpToChapter(newActIdx);
     });
 
-    nextBtn.addEventListener('click', goNextChapter);
+    nextBtn.addEventListener('click', advanceChapter);
     nextLineBtn.addEventListener('click', () => goLine(1));
     el('#startBtn').addEventListener('click', () => {
       el('#startScreen').classList.add('hide');

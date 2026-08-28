@@ -9,12 +9,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <title>NOAH! — An Interactive Comic Book</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@700;900&family=Bangers&family=Space+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <link rel="manifest" href="../manifest.json">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="styles/noah-comic.css">
+    <link rel="stylesheet" href="info-modal.css">
 </head>
 <body>
 
@@ -86,7 +85,8 @@
       <span>· ↓ Arrow Down to next chapter ·</span>
     </div>
 
-    <!-- chapter-end button -->
+  <!-- chapter-end button -->
+    <button id="audioToggle" type="button" title="Turn audio off" aria-label="Turn audio off"></button>
     <button id="nextBtn" aria-label="Next chapter">Next Chapter ↴</button>
 
     <!-- line-advance button -->
@@ -97,11 +97,20 @@
   <!-- portal iris transition overlay -->
   <div id="portal"></div>
 
+  <footer class="tools-footer" aria-label="Story creation tools">
+    <span>Create assets</span>
+    <a href="tools/texture-forge.html">Texture Forge</a>
+    <a href="tools/character_head_generator.html">Character Generator</a>
+    <a href="tools/animal_pair_generator.html">Animal Pair Generator</a>
+  </footer>
+
+  <script src="audio-manager.js"></script>
+  <script src="info-modal.js"></script>
   <script src="noah-story.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js');
+        navigator.serviceWorker.register('sw.js');
       });
     }
   </script>

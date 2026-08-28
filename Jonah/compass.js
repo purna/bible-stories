@@ -28,11 +28,9 @@ const Compass = (function () {
         const el = document.querySelector(CONFIG.compass.indicatorSelector);
         if (!el) return;
 
-        const tilt = (state.fearTrust / CONFIG.compass.axisMax) * 45;
-        el.style.transform = `rotate(${tilt}deg)`;
-
         const mercyRatio = (state.justiceMercy - CONFIG.compass.axisMin) /
             (CONFIG.compass.axisMax - CONFIG.compass.axisMin);
+        el.style.setProperty('--compass-position', `${mercyRatio * 100}%`);
         const r = Math.round(70 + mercyRatio * 180);
         const g = Math.round(90 + mercyRatio * 130);
         const b = Math.round(180 - mercyRatio * 120);

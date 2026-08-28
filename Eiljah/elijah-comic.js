@@ -53,8 +53,10 @@ const nextLineBtn = el('#nextLineBtn');
 const portal = el('#portal');
 const bgGradient = el('#bgGradient');
 const dotsBox = el('#dots');
+const audio = new AudioManager();
 
 function currentAct() { return STORY[actIdx]; }
+window.__comic = { currentAct };
 
 function buildDots() {
     dotsBox.innerHTML = '';
@@ -403,6 +405,7 @@ function fallTransition(mid) {
 
 async function loadAct() {
     const act = currentAct();
+    audio.playAct(act);
     el('#chapterSelect').value = actIdx;
     bgGradient.style.background = act.bg;
     document.body.className = `palette-act-${actIdx + 1}`;

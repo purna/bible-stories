@@ -16,36 +16,42 @@
   --panel-dots: #5c4033;
   --accent-color: #FFD84D;
   --bubble-bg: #fefae0;
+  --chapter-text: #0A0812;
 }
 .palette-act-2 {
   --panel-bg: #1e0f0a;
   --panel-dots: #4a2010;
   --accent-color: #FF6B5B;
   --bubble-bg: #ffe8e0;
+  --chapter-text: #0A0812;
 }
 .palette-act-3 {
   --panel-bg: #1a0e03;
   --panel-dots: #3d1c08;
   --accent-color: #FF4500;
   --bubble-bg: #fff3e6;
+  --chapter-text: #0A0812;
 }
 .palette-act-4 {
   --panel-bg: #061224;
   --panel-dots: #0d2340;
   --accent-color: #4ECDC4;
   --bubble-bg: #e0fbfc;
+  --chapter-text: #0A0812;
 }
 .palette-act-5 {
   --panel-bg: #2b1220;
   --panel-dots: #4a1f35;
   --accent-color: #B98CFF;
   --bubble-bg: #f8f3ff;
+  --chapter-text: #0A0812;
 }
 .palette-act-6 {
   --panel-bg: #0d1b2a;
   --panel-dots: #1b4965;
   --accent-color: #FFD84D;
   --bubble-bg: #fff9e5;
+  --chapter-text: #0A0812;
 }
 
 * {
@@ -109,12 +115,13 @@ body {
   font-size: 10px;
   text-transform: uppercase;
   background-color: var(--accent-color);
-  color: var(--cream);
+  color: var(--chapter-text);
   border: 4px solid var(--ink);
   padding: 10px 16px;
   box-shadow: 4px 4px 0px var(--ink);
   cursor: pointer;
   transition: background-color 0.5s;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
 }
 #dots {
   display: flex;

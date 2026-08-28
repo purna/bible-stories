@@ -26,3 +26,4 @@ const Act1Beats = (function () {
 
     return { boardShip, brace, castLots };
 })();
+window.Act1Beats = Act1Beats;

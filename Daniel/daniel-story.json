@@ -6,6 +6,10 @@
     "particle": "dusk",
     "svg": "babylon_court",
     "reign": "nebuchadnezzar",
+    "audio": [
+      "assets/audio/music/Act1_Blue_Shadows_at_Noon.ogg",
+      "assets/audio/music/Act1_Blue_Shadows_at_Noon.mp3"
+    ],
     "lines": [
       { "speaker": "narrator", "fx": "fade", "text": "Babylon, 605 BCE. The young men of Judah had been taken far from home.", "align": "left", "svg": "babylon_city" },
       { "speaker": "narrator", "fx": "type", "text": "King Nebuchadnezzar ordered his best captives trained for royal service. Among them: Daniel, Hananiah, Mishael, and Azariah.", "align": "center", "svg": "training_house" },
@@ -36,6 +40,10 @@
     "svg": "throne_room",
     "reign": "nebuchadnezzar",
     "vision": "statue_dream",
+    "audio": [
+      "assets/audio/music/Act2_Where_the_Kings_Kneel.ogg",
+      "assets/audio/music/Act2_Where_the_Kings_Kneel.mp3"
+    ],
     "lines": [
       { "speaker": "narrator", "fx": "shake", "text": "The king had a dream that terrified him. He demanded his wise men tell him not just what it meant — but what it was.", "align": "left", "svg": "throne_room" },
       { "sfx": "TELL ME!", "speaker": "nebuchadnezzar", "fx": "shake", "text": "Interpret my dream — or ALL the wise men of Babylon die. Including you, Daniel.", "align": "center", "svg": "throne_room" },
@@ -66,6 +74,10 @@
     "particle": "fire",
     "svg": "plain_of_dura",
     "reign": null,
+    "audio": [
+      "assets/audio/music/Act3_Seven_Times_Heated.ogg",
+      "assets/audio/music/Act3_Seven_Times_Heated.mp3"
+    ],
     "lines": [
       { "speaker": "narrator", "fx": "fade", "text": "Years later, Nebuchadnezzar built a colossal golden statue on the plain of Dura.", "align": "left", "svg": "golden_statue" },
       { "sfx": "BOW DOWN!", "speaker": "nebuchadnezzar", "fx": "shake", "text": "When the music plays — EVERYONE bows to my image. Anyone who doesn't will be thrown into the furnace!", "align": "center", "svg": "golden_statue" },
@@ -97,6 +109,10 @@
     "svg": "belshazzar_feast",
     "reign": "belshazzar",
     "vision": "writing_wall",
+    "audio": [
+      "assets/audio/music/Act4_Seven_Lamps_Burning.ogg",
+      "assets/audio/music/Act4_Seven_Lamps_Burning.mp3"
+    ],
     "lines": [
       { "speaker": "narrator", "fx": "fade", "text": "Decades later. Babylon was falling. And Belshazzar, its last king, held a feast — using the sacred cups stolen from Jerusalem's temple.", "align": "left", "svg": "belshazzar_feast" },
       { "speaker": "belshazzar", "fx": "bounce", "text": "BRING the gold and silver cups from the temple! Tonight we drink from the vessels of Judah's God!", "align": "center", "svg": "belshazzar_feast" },
@@ -126,6 +142,17 @@
     "particle": "stars",
     "svg": "persian_court",
     "reign": "darius",
+    "audio": [
+      "assets/audio/music/Act5_Shadows_on_the_Ridge.ogg",
+      "assets/audio/music/Act5_Shadows_on_the_Ridge.mp3"
+    ],
+    "audioShift": {
+      "line": 8,
+      "audio": [
+        "assets/audio/music/Act6_Sunlight_on_the_Threshold.ogg",
+        "assets/audio/music/Act6_Sunlight_on_the_Threshold.mp3"
+      ]
+    },
     "lines": [
       { "speaker": "narrator", "fx": "fade", "text": "Under King Darius the Mede, Daniel rose again to the highest rank. And the satraps hated him for it.", "align": "left", "svg": "persian_court" },
       { "speaker": "narrator", "fx": "type", "text": "They searched for something — anything — to accuse him of. But they found no fault. Not one.", "align": "center", "svg": "satraps_plotting" },

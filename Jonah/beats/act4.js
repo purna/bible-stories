@@ -34,9 +34,10 @@ const Act4Beats = (function () {
         }
         Compass.recordBeat('act4_final');
 
-        const dialogueResult = DialogueEngine.choose(choiceIndex);
+        const dialogueResult = typeof DialogueEngine !== 'undefined' ? DialogueEngine.choose(choiceIndex) : null;
         return { dialogueResult, summary: Compass.getSummary() };
     }
 
     return { loadDialogue, plantTree, revealWorm, finalChoice };
 })();
+window.Act4Beats = Act4Beats;

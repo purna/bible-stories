@@ -27,3 +27,4 @@ const Act2Beats = (function () {
 
     return { descend, collectFragment, prayer };
 })();
+window.Act2Beats = Act2Beats;

@@ -10,15 +10,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <title>The Adventures of Jonah — Enhanced Single Panel Comic</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@700;900&family=Bangers&family=Space+Mono:wght@400;700&family=Press+Start+2P&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <link rel="manifest" href="../manifest.json">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="styles/jonah-story_10.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="styles/jonah-game.css">
+    <link rel="stylesheet" href="info-modal.css">
+    <script src="vendor/three.r128.min.js"></script>
 </head>
 
 <body>
@@ -76,17 +74,70 @@
           class="arrowR">▶</span></span>
       <span>· ↓ Scroll down at line end to drop into next act ·</span>
     </div>
+    <button id="audioToggle" type="button" title="Turn audio off" aria-label="Turn audio off"></button>
     <button id="nextBtn">Next Chapter ↴</button>
     <button id="nextLineBtn">Next →</button>
   </div>
 
   <div id="portal"></div>
 
+  <section id="jonahGame" class="jonah-game" hidden aria-label="Jonah story challenge">
+    <div id="isometric-container" class="game-world" aria-hidden="true"></div>
+    <div class="game-ink" aria-hidden="true"></div>
+    <div id="iso-loader" class="game-loader">Drawing the next panel…</div>
+
+    <div class="game-objective">
+      <span class="game-kicker">PLAYABLE PANEL</span>
+      <strong id="game-title">Jonah's Journey</strong>
+      <span id="game-instructions">Move Jonah toward the glowing story marks.</span>
+      <span id="game-progress">0 of 0 moments found</span>
+    </div>
+
+    <div id="compass-indicator" class="story-compass" aria-label="Jonah's direction">
+      <span>RUNNING</span><i></i><span>LISTENING</span>
+    </div>
+
+    <button id="game-skip-btn" class="game-skip" type="button">Skip panel →</button>
+    <div id="game-choice" class="game-prompt" hidden>
+      <strong>What should Jonah do?</strong>
+      <div id="game-choice-buttons"></div>
+    </div>
+    <div id="game-hold" class="game-prompt" hidden>
+      <strong>Hold to pray</strong>
+      <button id="game-hold-btn" type="button"><span>HOLD</span></button>
+    </div>
+    <button id="game-complete-btn" class="game-complete" type="button" hidden>Turn the page →</button>
+
+    <div class="game-dpad" aria-label="Movement controls">
+      <button type="button" data-key="arrowup" aria-label="Move up">▲</button>
+      <button type="button" data-key="arrowleft" aria-label="Move left">◀</button>
+      <button type="button" data-key="arrowdown" aria-label="Move down">▼</button>
+      <button type="button" data-key="arrowright" aria-label="Move right">▶</button>
+    </div>
+    <div class="game-controls-hint">WASD / ARROWS</div>
+  </section>
+
+  <footer class="tools-footer" aria-label="Story creation tools">
+    <span>Create assets</span>
+    <a href="tools/texture-forge.html">Texture Forge</a>
+    <a href="tools/character_head_generator.html">Character Generator</a>
+  </footer>
+
+  <script src="audio-manager.js"></script>
+  <script src="info-modal.js"></script>
+  <script src="config.js"></script>
+  <script src="compass.js"></script>
+  <script src="beats/act1.js"></script>
+  <script src="beats/act2.js"></script>
+  <script src="beats/act3.js"></script>
+  <script src="beats/act4.js"></script>
+  <script src="isometricEngine.js"></script>
+  <script src="jonah-game-integration.js"></script>
   <script src="jonah-story.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js');
+        navigator.serviceWorker.register('sw.js');
       });
     }
   </script>

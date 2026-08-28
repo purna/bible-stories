@@ -1,0 +1,33 @@
+{
+  "story": "David",
+  "defaultPreset": "david_shepherd",
+  "schema": "base-plus-overrides-v1",
+  "base": {
+    "noseScale": 1, "noseShape": "straight", "eyeShape": "almond", "eyeSpacing": 1,
+    "eyebrowStyle": "arched", "mouthStyle": "neutral", "hairStyle": "wavy", "beardStyle": "short",
+    "hatStyle": "none", "clothingType": "tunic", "faceShape": "oval", "foreheadHeight": "medium",
+    "chinShape": "rounded", "earSize": 1, "earShape": "round", "headSize": 1, "hairSize": 1,
+    "hatSize": 1, "hatMatchHair": false, "dualStripe": false,
+    "colorInner": "#c49b63", "colorOuter": "#735037", "colorCloak": "#493528",
+    "colorAccent": "#b88b45", "colorGarment2": "#d8c59b", "colorSkin": "#b87954",
+    "colorHair": "#3b2418", "colorEye": "#4b3327", "colorLip": "#98584c"
+  },
+  "presets": {
+    "david_shepherd": { "name": "David — Shepherd", "faceShape": "round", "eyeShape": "upturned", "mouthStyle": "smile", "hairStyle": "curly", "beardStyle": "none", "clothingType": "peasant_rags", "headSize": 0.96, "colorHair": "#71361f", "colorAccent": "#8fa05b" },
+    "david_warrior": { "name": "David — Warrior", "eyebrowStyle": "thick", "hairStyle": "curly", "clothingType": "military_lorica", "colorHair": "#62301f", "colorOuter": "#4e4939" },
+    "king_david": { "name": "David — King", "noseShape": "aquiline", "eyebrowStyle": "thick", "hairStyle": "curly", "beardStyle": "full_round", "clothingType": "layered_robe", "colorOuter": "#6d2840", "colorCloak": "#401b2b", "colorAccent": "#d3ab43", "dualStripe": true },
+    "samuel": { "name": "Samuel — Prophet", "foreheadHeight": "high", "hairStyle": "receding", "beardStyle": "long", "hatStyle": "hood", "clothingType": "layered_robe", "colorHair": "#d2cbc0" },
+    "jesse": { "name": "Jesse", "faceShape": "square", "noseShape": "wide", "eyebrowStyle": "thick", "hairStyle": "receding", "beardStyle": "full_round", "colorHair": "#a79b8d" },
+    "eliab": { "name": "Eliab — David's Brother", "faceShape": "square", "chinShape": "square", "eyebrowStyle": "furrowed", "mouthStyle": "frown", "hairStyle": "short", "clothingType": "military_lorica", "headSize": 1.06 },
+    "saul": { "name": "King Saul", "faceShape": "square", "chinShape": "cleft", "noseShape": "aquiline", "eyebrowStyle": "furrowed", "hairStyle": "flowing", "beardStyle": "full_round", "clothingType": "military_lorica", "headSize": 1.08, "colorOuter": "#55354f", "dualStripe": true },
+    "jonathan": { "name": "Jonathan", "eyebrowStyle": "straight", "hairStyle": "wavy", "clothingType": "military_lorica", "colorOuter": "#3f5360" },
+    "goliath": { "name": "Goliath", "noseScale": 1.2, "noseShape": "wide", "eyeShape": "narrow", "eyebrowStyle": "thick", "mouthStyle": "frown", "hairStyle": "curly", "beardStyle": "full_round", "hatStyle": "helmet", "clothingType": "military_lorica", "faceShape": "square", "chinShape": "square", "headSize": 1.2, "colorSkin": "#a66a49" },
+    "michal": { "name": "Michal", "hairStyle": "braids", "beardStyle": "none", "hatStyle": "headscarf", "clothingType": "layered_robe", "faceShape": "heart", "colorOuter": "#5a304e" },
+    "abigail": { "name": "Abigail", "eyeShape": "upturned", "mouthStyle": "smile", "hairStyle": "tied_back", "beardStyle": "none", "hatStyle": "headscarf", "clothingType": "layered_robe", "faceShape": "heart", "colorSkin": "#ad704e" },
+    "bathsheba": { "name": "Bathsheba", "hairStyle": "flowing", "beardStyle": "none", "hatStyle": "headscarf", "clothingType": "layered_robe", "colorSkin": "#a96e50", "colorOuter": "#32596a" },
+    "uriah": { "name": "Uriah the Hittite", "faceShape": "square", "eyebrowStyle": "straight", "hairStyle": "short", "beardStyle": "medium", "clothingType": "military_lorica", "colorSkin": "#9e6348" },
+    "joab": { "name": "Joab", "faceShape": "square", "chinShape": "cleft", "noseShape": "aquiline", "eyebrowStyle": "furrowed", "hairStyle": "short", "beardStyle": "full_round", "clothingType": "military_lorica", "colorOuter": "#3c3d38" },
+    "nathan": { "name": "Nathan — Prophet", "foreheadHeight": "high", "noseShape": "aquiline", "eyeShape": "hooded", "eyebrowStyle": "thick", "hairStyle": "receding", "beardStyle": "long", "clothingType": "layered_robe", "colorHair": "#b9afa3" },
+    "absalom": { "name": "Absalom", "faceShape": "heart", "eyeShape": "upturned", "hairStyle": "flowing", "hairSize": 1.25, "clothingType": "layered_robe", "colorHair": "#2a1712", "colorOuter": "#4f315c" }
+  }
+}

@@ -19,7 +19,10 @@ const CONFIG = {
 
     compass: {
         indicatorSelector: '#compass-indicator',
-        neutralThreshold: 15
+        neutralThreshold: 15,
+        axisMin: -100,
+        axisMax: 100,
+        totalBeats: 14
     },
 
     isometric: {

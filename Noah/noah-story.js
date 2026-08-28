@@ -84,6 +84,7 @@ const nextLineBtn= el('#nextLineBtn');
 const portal     = el('#portal');
 const bgGradient = el('#bgGradient');
 const dotsBox    = el('#dots');
+const audio = new AudioManager();
 
 /* ── SVG cache ─────────────────────────────────── */
 const svgCache = {};
@@ -100,6 +101,7 @@ async function loadSvg(key) {
 }
 
 function currentAct() { return STORY[actIdx]; }
+window.__comic = { currentAct };
 
 /* ── Dot progress bar ─────────────────────────── */
 function buildDots() {
@@ -187,6 +189,7 @@ async function renderLine() {
 
   const act  = currentAct();
   const data = act.lines[lineIdx];
+  audio.playAct(act);
 
   bgGradient.style.background = act.bg;
   document.body.className = `palette-act-${actIdx + 1}`;

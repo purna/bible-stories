@@ -1,0 +1,68 @@
+.jonah-game {
+  --game-ink: #17131f;
+  --game-paper: #fff3cf;
+  --game-gold: #ffd342;
+  --game-blue: #1da7c9;
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 30%, #276d86, #092837 70%);
+  color: var(--game-ink);
+  font-family: "Nunito", sans-serif;
+}
+
+.jonah-game[hidden] { display: none; }
+.game-world, .game-world canvas { width: 100%; height: 100%; display: block; }
+.game-world canvas { filter: saturate(1.14) contrast(1.08); }
+.game-ink { position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 7px var(--game-ink), inset 0 0 80px #0009; }
+.game-ink::after { content: ""; position: absolute; inset: 0; opacity: .14; background-image: radial-gradient(#10101a 1px, transparent 1px); background-size: 6px 6px; mix-blend-mode: multiply; }
+
+.game-objective {
+  position: absolute; top: max(18px, env(safe-area-inset-top)); left: 20px;
+  width: min(340px, calc(100vw - 130px)); padding: 12px 16px 11px;
+  border: 4px solid var(--game-ink); border-radius: 10px 18px 12px 7px;
+  background: var(--game-paper); box-shadow: 7px 7px 0 var(--game-ink);
+  transform: rotate(-.5deg);
+}
+.game-kicker { display: block; width: max-content; margin: -25px 0 4px -7px; padding: 3px 8px; color: white; background: #e94335; border: 3px solid var(--game-ink); font: 700 10px "Press Start 2P", monospace; }
+.game-objective strong { display: block; font: 32px/1 "Bangers", sans-serif; letter-spacing: 1px; }
+.game-objective > span:not(.game-kicker) { display: block; font-size: 13px; line-height: 1.25; }
+#game-progress { margin-top: 5px; font-weight: 900; color: #8d251d; }
+
+.story-compass { position: absolute; top: 22px; left: 50%; translate: -50% 0; display: flex; align-items: center; gap: 7px; padding: 6px 10px; color: white; background: #17131fd9; border: 2px solid white; border-radius: 99px; font: 700 9px "Space Mono", monospace; }
+.story-compass i { position: relative; width: 66px; height: 7px; background: linear-gradient(90deg,#e94335,#ffd342,#42d99a); border-radius: 9px; }
+.story-compass i::after { content: ""; position: absolute; left: var(--compass-position, 50%); top: -5px; width: 5px; height: 17px; background: white; border: 2px solid var(--game-ink); translate: -50% 0; transition: left .35s; }
+
+.game-skip, .game-complete, .game-prompt button { cursor: pointer; border: 4px solid var(--game-ink); color: var(--game-ink); background: var(--game-gold); box-shadow: 5px 5px 0 var(--game-ink); font: 900 14px "Nunito", sans-serif; text-transform: uppercase; }
+.game-skip { position: absolute; top: 20px; right: 20px; padding: 9px 12px; }
+.game-complete { position: absolute; right: 24px; bottom: 25px; padding: 15px 20px; font: 24px "Bangers", sans-serif; animation: game-pop .7s both; }
+
+.game-prompt { position: absolute; left: 50%; bottom: 24px; translate: -50% 0; min-width: min(420px, 82vw); padding: 16px; text-align: center; background: white; border: 5px solid var(--game-ink); box-shadow: 8px 8px 0 var(--game-ink); }
+.game-prompt strong { display: block; margin-bottom: 10px; font: 25px "Bangers", sans-serif; }
+#game-choice-buttons { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.game-prompt button { min-height: 44px; padding: 9px 14px; }
+#game-hold-btn { width: 92px; height: 58px; border-radius: 50%; background: conic-gradient(#42d99a var(--hold-progress, 0%), var(--game-gold) 0); }
+
+.game-dpad { position: absolute; left: 22px; bottom: 22px; width: 132px; display: grid; grid-template: repeat(2, 48px) / repeat(3, 42px); gap: 3px; }
+.game-dpad button { touch-action: none; user-select: none; border: 3px solid var(--game-ink); border-radius: 7px; background: #fff3cfdd; box-shadow: 3px 3px 0 var(--game-ink); font-size: 19px; }
+.game-dpad button:active { translate: 2px 2px; box-shadow: 1px 1px 0 var(--game-ink); }
+.game-dpad [data-key="arrowup"] { grid-column: 2; }
+.game-dpad [data-key="arrowleft"] { grid-column: 1; }
+.game-dpad [data-key="arrowdown"] { grid-column: 2; }
+.game-dpad [data-key="arrowright"] { grid-column: 3; }
+.game-controls-hint { position: absolute; left: 166px; bottom: 27px; color: white; text-shadow: 2px 2px var(--game-ink); font: 10px "Press Start 2P", monospace; }
+.game-loader { position: absolute; inset: 0; display: grid; place-items: center; color: white; background: #092837; font: 28px "Bangers", sans-serif; letter-spacing: 2px; z-index: 5; }
+.game-loader.hidden { display: none; }
+
+@keyframes game-pop { from { opacity: 0; transform: scale(.7) rotate(3deg); } }
+@media (max-width: 700px) {
+  .game-objective { top: 15px; left: 13px; width: min(265px, calc(100vw - 105px)); padding: 9px 11px; }
+  .game-objective strong { font-size: 24px; }
+  .game-objective > span:not(.game-kicker) { font-size: 11px; }
+  .story-compass { display: none; }
+  .game-skip { top: 14px; right: 12px; width: 78px; padding: 7px; font-size: 10px; }
+  .game-controls-hint { display: none; }
+  .game-complete { right: 15px; bottom: 22px; font-size: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .game-complete { animation: none; } }

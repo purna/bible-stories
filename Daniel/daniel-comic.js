@@ -57,8 +57,10 @@ const fragCountSpan = el('#fragCount');
 const meterBar = el('#meterBar');
 const meterFill = el('#meterFill');
 const meterLabel = el('#meterLabel');
+const audio = new AudioManager();
 
 function currentAct() { return STORY[actIdx]; }
+window.__comic = { currentAct };
 
 function buildDots() {
     dotsBox.innerHTML = '';
@@ -116,6 +118,10 @@ async function renderLine() {
     if (nextLineTimeout) { clearTimeout(nextLineTimeout); nextLineTimeout = null; }
 
     const data = resolveLine(currentAct().lines[lineIdx]);
+    const actAudio = currentAct().audioShift && lineIdx >= currentAct().audioShift.line
+        ? currentAct().audioShift
+        : currentAct();
+    audio.playAct(actAudio);
     const visionId = data.vision === true ? currentAct().vision : data.vision;
     const visionScene = visionId && VISION_SCENES ? VISION_SCENES.find(s => s.id === visionId) : null;
 

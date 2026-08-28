@@ -10,7 +10,7 @@ const Act3Beats = (function () {
         return DialogueEngine.load('act3_nineveh');
     }
 
-    function walkTheCity(daysRemainingWhenSolved) {
+    function walkTheCity(daysRemainingWhenSolved = 40) {
         Compass.setAct3Days(daysRemainingWhenSolved);
         Compass.recordBeat('act3_gates');
     }
@@ -30,8 +30,9 @@ const Act3Beats = (function () {
             Compass.nudge('justice', 10);
         }
         Compass.recordBeat('act3_watch');
-        return DialogueEngine.choose(choiceIndex);
+        return typeof DialogueEngine !== 'undefined' ? DialogueEngine.choose(choiceIndex) : null;
     }
 
     return { loadDialogue, walkTheCity, preachSermon, watchOrTurnAway };
 })();
+window.Act3Beats = Act3Beats;

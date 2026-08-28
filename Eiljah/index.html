@@ -10,15 +10,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <title>Elijah — Interactive Comic</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@700;900&family=Bangers&family=Space+Mono:wght@400;700&family=Press+Start+2P&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <link rel="manifest" href="../manifest.json">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="elijah-comic.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="info-modal.css">
+    <script src="vendor/gsap.3.12.5.min.js"></script>
 </head>
 
 <body>
@@ -54,17 +51,26 @@
       <span>◀ Use Left/Right Arrow keys or swipe ▶</span>
       <span>· ↓ Scroll down at line end to drop into next chapter ·</span>
     </div>
+    <button id="audioToggle" type="button" title="Turn audio off" aria-label="Turn audio off"></button>
     <button id="nextBtn">Next Chapter ↴</button>
     <button id="nextLineBtn">Next →</button>
   </div>
 
   <div id="portal"></div>
 
+  <footer class="tools-footer" aria-label="Story creation tools">
+    <span>Create assets</span>
+    <a href="tools/texture-forge.html">Texture Forge</a>
+    <a href="tools/character_head_generator.html">Character Generator</a>
+  </footer>
+
+  <script src="audio-manager.js"></script>
+  <script src="info-modal.js"></script>
   <script src="elijah-comic.js" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js');
+        navigator.serviceWorker.register('sw.js');
       });
     }
   </script>

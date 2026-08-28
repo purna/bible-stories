@@ -18,6 +18,7 @@ const IsometricEngine = (function () {
     let keysDown = {};
     let triggeredHotspots = new Set();
     let currentActId = null;
+    let inputEnabled = false;
 
     async function init(containerEl) {
         const res = await fetch(CONFIG.paths.tileset);
@@ -109,8 +110,9 @@ const IsometricEngine = (function () {
             // TODO: Hotspots and player spawn need to be defined in map data
             spawnPlayer();
             spawnHotspots();
+            emitProgress();
 
-            if (typeof PostProduction !== 'undefined') {
+            if (typeof PostProduction !== 'undefined' && typeof StoryEngine !== 'undefined') {
                 PostProduction.init(renderer, sceneObj, camera);
                 // The palette is now on the storyEngine's scene, not the iso scene
                 const storyScene = StoryEngine.getCurrentScene();
@@ -194,19 +196,37 @@ const IsometricEngine = (function () {
 
     function spawnPlayer() {
         if (!currentScene.spawn) return; // No spawn point defined
-        
-        // The visible cone mesh
-        const geo = new THREE.ConeGeometry(0.3, 0.8, 8);
-        const mat = new THREE.MeshStandardMaterial({ color: 0xf1c40f });
-        const coneMesh = new THREE.Mesh(geo, mat);
-        coneMesh.rotation.x = Math.PI / 2; // Point the cone forward (along parent's Z)
 
-        // A group to act as the main player object for position and rotation
+        // A deliberately chunky, ink-outlined Jonah silhouette that reads like
+        // the comic even at isometric scale.
         playerMesh = new THREE.Group();
-        playerMesh.add(coneMesh);
+        const robeMat = new THREE.MeshToonMaterial({ color: 0xe9b63f });
+        const skinMat = new THREE.MeshToonMaterial({ color: 0xd89562 });
+        const hairMat = new THREE.MeshToonMaterial({ color: 0x251b22 });
+        const inkMat = new THREE.MeshBasicMaterial({ color: 0x17131f, side: THREE.BackSide });
+        const addInked = (geometry, material, y, scale = 1) => {
+            const part = new THREE.Mesh(geometry, material);
+            part.position.y = y;
+            const outline = new THREE.Mesh(geometry, inkMat);
+            outline.scale.multiplyScalar(1.12);
+            part.add(outline);
+            part.scale.multiplyScalar(scale);
+            playerMesh.add(part);
+            return part;
+        };
+        addInked(new THREE.ConeGeometry(0.38, 0.9, 8), robeMat, 0.45);
+        addInked(new THREE.SphereGeometry(0.25, 12, 10), skinMat, 1.03);
+        const hair = addInked(new THREE.SphereGeometry(0.265, 12, 8, 0, Math.PI * 2, 0, Math.PI / 2), hairMat, 1.11);
+        hair.rotation.x = -0.12;
+        const beard = addInked(new THREE.ConeGeometry(0.19, 0.34, 8), hairMat, 0.88);
+        beard.rotation.x = Math.PI;
+        const nose = new THREE.Mesh(new THREE.ConeGeometry(0.07, 0.18, 6), skinMat);
+        nose.position.set(0, 1.03, 0.24);
+        nose.rotation.x = Math.PI / 2;
+        playerMesh.add(nose);
 
         const { x, y, z } = currentScene.spawn; // Assumes spawn is in world coords
-        playerMesh.position.set(x, y + 0.4, z);
+        playerMesh.position.set(x, y, z);
         playerMesh.renderOrder = 1; // Ensure player is part of the sorting context
         sceneObj.add(playerMesh);
     }
@@ -219,30 +239,24 @@ const IsometricEngine = (function () {
             mesh.position.set(h.position.x, h.position.y + 0.5, h.position.z);
             mesh.userData.hotspot = h;
             mesh.userData.triggered = false;
+            mesh.userData.pending = false;
+            mesh.userData.baseY = h.position.y + 0.5;
             sceneObj.add(mesh);
             hotspotMeshes.push(mesh);
-
-            // gentle bob via anime.js so hotspots read as interactive
-            anime({
-                targets: mesh.position,
-                y: [h.position.y + 0.5, h.position.y + 0.75],
-                duration: 1200,
-                easing: 'easeInOutSine',
-                direction: 'alternate',
-                loop: true
-            });
         });
     }
 
     function createMaterialFromDefinition(matDef) {
         const material = new THREE.MeshStandardMaterial({
+            color: new THREE.Color(matDef.baseColor || '#777777'),
             roughness: 0.6,
             metalness: 0.1,
         });
 
         // This is the magic part: we patch the material's shader
         // just like in the isometric-cube8.html tool.
-        material.onBeforeCompile = (shader) => {
+        const shaderLogic = document.getElementById('tile-shader-logic');
+        if (shaderLogic) material.onBeforeCompile = (shader) => {
             shader.uniforms.baseColor = { value: new THREE.Color(matDef.baseColor) };
             shader.uniforms.colorA = { value: new THREE.Color(matDef.colorA) };
             shader.uniforms.colorB = { value: new THREE.Color(matDef.colorB) };
@@ -274,7 +288,7 @@ const IsometricEngine = (function () {
             `;
 
             // Inject fragment shader logic (simplified from the tool)
-            const fs = document.getElementById('tile-shader-logic').textContent;
+            const fs = shaderLogic.textContent;
             shader.fragmentShader = `varying float vLocalY; varying vec2 myUv;\n${uniformDeclarations}` + shader.fragmentShader.replace(`vec4 diffuseColor = vec4( diffuse, opacity );`, fs);
         };
 
@@ -283,7 +297,7 @@ const IsometricEngine = (function () {
 
 
     function updateMovement(deltaSeconds) {
-        if (!playerMesh) return;
+        if (!playerMesh || !inputEnabled) return;
         const speed = CONFIG.isometric.movement.speed * deltaSeconds;
         let dx = 0, dz = 0;
         const nextPos = playerMesh.position.clone();
@@ -311,6 +325,8 @@ const IsometricEngine = (function () {
         const halfH = currentScene.size.height / 2;
         const targetC = Math.floor(nextPos.x + halfW);
         const targetR = Math.floor(nextPos.z + halfH);
+
+        if (targetR < 0 || targetC < 0 || targetR >= currentScene.size.height || targetC >= currentScene.size.width) return;
 
         playerGridPos = { r: targetR, c: targetC }; // Update player's grid position
 
@@ -358,7 +374,7 @@ const IsometricEngine = (function () {
         if (!playerMesh) return;
         hotspotMeshes.forEach(mesh => {
             const h = mesh.userData.hotspot;
-            if (mesh.userData.triggered && h.triggerOnce) return;
+            if (mesh.userData.triggered || mesh.userData.pending) return;
 
             const dist = playerMesh.position.distanceTo(mesh.position);
             if (dist <= CONFIG.isometric.movement.hotspotRadius) {
@@ -368,23 +384,42 @@ const IsometricEngine = (function () {
     }
 
     function triggerHotspot(mesh, hotspot) {
-        mesh.userData.triggered = true;
-        triggeredHotspots.add(hotspot.id);
-
         if (hotspot.choiceHotspot) {
-            renderChoicePrompt(hotspot);
-            checkActCompletion();
+            mesh.userData.pending = true;
+            renderChoicePrompt(mesh, hotspot);
             return;
         }
 
         if (hotspot.requiresHold) {
-            invokeBeat(hotspot, [CONFIG.beats.act2.prayerFullHoldMs]);
-            checkActCompletion();
+            mesh.userData.pending = true;
+            window.dispatchEvent(new CustomEvent('isometric:holdPrompt', {
+                detail: {
+                    hotspotId: hotspot.id,
+                    durationMs: CONFIG.beats.act2.prayerFullHoldMs,
+                    onComplete: duration => completeHotspot(mesh, hotspot, [duration])
+                }
+            }));
             return;
         }
 
-        invokeBeat(hotspot, hotspot.beatArgs || []);
+        completeHotspot(mesh, hotspot, hotspot.beatArgs || []);
+    }
+
+    function completeHotspot(mesh, hotspot, args) {
+        mesh.userData.pending = false;
+        mesh.userData.triggered = true;
+        mesh.visible = false;
+        triggeredHotspots.add(hotspot.id);
+        invokeBeat(hotspot, args);
+        emitProgress();
         checkActCompletion();
+    }
+
+    function emitProgress() {
+        if (!currentScene) return;
+        const required = (currentScene.hotspots || []).filter(h => h.triggerOnce);
+        const completed = required.filter(h => triggeredHotspots.has(h.id)).length;
+        window.dispatchEvent(new CustomEvent('isometric:progress', { detail: { completed, total: required.length } }));
     }
 
     function checkActCompletion() {
@@ -412,7 +447,7 @@ const IsometricEngine = (function () {
         }
     }
 
-    function renderChoicePrompt(hotspot) {
+    function renderChoicePrompt(mesh, hotspot) {
         // Hook point for UI: dispatch a custom event so storyEngine/UI code
         // can render the actual choice buttons without this engine knowing
         // about DOM structure.
@@ -420,7 +455,7 @@ const IsometricEngine = (function () {
             detail: {
                 hotspotId: hotspot.id,
                 choices: hotspot.choices,
-                onChoose: (choiceIndex) => invokeBeat(hotspot, [choiceIndex])
+                onChoose: (choiceIndex) => completeHotspot(mesh, hotspot, [choiceIndex])
             }
         }));
     }
@@ -433,6 +468,9 @@ const IsometricEngine = (function () {
         lastTime = now;
 
         updateMovement(delta);
+        hotspotMeshes.forEach((mesh, index) => {
+            if (!mesh.userData.triggered) mesh.position.y = mesh.userData.baseY + Math.sin(now * 0.002 + index) * 0.13;
+        });
         updateRenderOrder();
         updateCamera(delta);
 
@@ -444,8 +482,17 @@ const IsometricEngine = (function () {
     }
 
     function goToScene(sceneId) {
-        loadScene(sceneId);
+        return loadScene(sceneId);
     }
 
-    return { init, goToScene, getCurrentScene: () => currentScene };
+    function setEnabled(value) {
+        inputEnabled = Boolean(value);
+        if (!inputEnabled) keysDown = {};
+    }
+
+    function setInput(key, down) {
+        keysDown[key.toLowerCase()] = Boolean(down);
+    }
+
+    return { init, goToScene, setEnabled, setInput, getCurrentScene: () => currentScene };
 })();

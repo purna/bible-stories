@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Noah's Ark Animal Pair Generator</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+:root{--ink:#171411;--paper:#efe4c7;--panel:#2b261f;--panel2:#393128;--gold:#e2b84e;--green:#748e52;--muted:#b9ad95}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#171612;color:#f3ead6;font:15px/1.4 system-ui,sans-serif}
+button,select,input{font:inherit}.app{min-height:100vh;display:grid;grid-template-columns:330px 1fr 300px}
+.panel{background:var(--panel);padding:20px;overflow:auto}.panel.left{border-right:2px solid #4b4033}.panel.right{border-left:2px solid #4b4033}
+h1{margin:0;font:800 27px/1.05 Georgia,serif;color:var(--gold)}.intro{color:var(--muted);margin:8px 0 20px}
+.group{padding:14px 0;border-top:1px solid #4b4033}.group h2{margin:0 0 10px;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)}
+label{display:grid;gap:5px;margin:10px 0;color:#ddd1bb;font-size:13px}select,input[type=color],input[type=range],input[type=number]{width:100%}
+select,input[type=number]{background:#181612;color:#f3ead6;border:1px solid #655744;border-radius:6px;padding:9px}input[type=color]{height:38px;border:1px solid #655744;background:none;border-radius:6px}
+.stage{position:relative;display:grid;place-items:center;padding:30px;background:radial-gradient(circle at 50% 35%,#5b6f52,#242a22 70%);overflow:hidden}
+.stage:after{content:"";position:absolute;inset:0;background:radial-gradient(transparent,#1119);pointer-events:none}.card{position:relative;z-index:1;width:min(820px,100%);aspect-ratio:16/10;background:var(--paper);border:8px solid var(--ink);border-radius:24px;box-shadow:14px 16px 0 #0d0c0a;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px}
+#preview{width:100%;height:78%;display:block}.caption{text-align:center;color:var(--ink);font:800 clamp(20px,3vw,32px) Georgia,serif}.caption small{display:block;font:600 12px system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#65553e;margin-top:5px}
+.actions{display:grid;gap:9px}.actions button{border:2px solid var(--ink);border-radius:7px;padding:11px 12px;background:#d6c49b;color:var(--ink);font-weight:800;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}.actions button.primary{background:var(--gold)}.actions button:hover{transform:translateY(-1px)}
+.pair-note{font-size:12px;color:var(--muted);margin-top:14px}.value{float:right;color:#fff}.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,20px);opacity:0;background:#111;color:#fff;padding:9px 14px;border-radius:30px;transition:.2s;z-index:10}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){.app{grid-template-columns:1fr}.panel{border:0!important}.stage{min-height:520px;order:-1}.panel.left,.panel.right{overflow:visible}.card{max-width:680px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="panel left">
+    <h1>Animal Pair Forge</h1>
+    <p class="intro">Create coordinated but distinct animal couples for Noah's ark.</p>
+    <div class="group"><h2>Species</h2>
+      <label>Animal<select id="species"></select></label>
+      <label>Pair variation <span class="value" id="variationValue">18%</span><input id="variation" type="range" min="0" max="50" value="18"></label>
+      <label>Seed<input id="seed" type="number" min="1" max="99999" value="1"></label>
+      <button id="randomize">Randomize pair</button>
+    </div>
+    <div class="group"><h2>Palette</h2>
+      <label>Coat / feathers<input id="primary" type="color"></label>
+      <label>Secondary colour<input id="secondary" type="color"></label>
+      <label>Eyes<input id="eyes" type="color" value="#241d17"></label>
+    </div>
+    <div class="group"><h2>Presentation</h2>
+      <label>Pose<select id="pose"><option value="together">Close together</option><option value="inward">Facing inward</option><option value="outward">Facing outward</option></select></label>
+      <label><input id="labels" type="checkbox" checked> Include pair labels in exported SVG</label>
+    </div>
+  </aside>
+
+  <main class="stage">
+    <div class="card"><svg id="preview" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420"></svg><div class="caption" id="caption"></div></div>
+  </main>
+
+  <aside class="panel right">
+    <div class="group"><h2>Export</h2><div class="actions">
+      <button class="primary" id="downloadPair">Download pair SVG</button>
+      <button id="downloadA">Download animal A</button>
+      <button id="downloadB">Download animal B</button>
+      <button id="copySvg">Copy pair SVG</button>
+      <button id="downloadAll">Download every species</button>
+    </div></div>
+    <p class="pair-note">Both animals share the same species design. Seeded colour, marking, ear and head variations keep them recognisably paired without making them identical.</p>
+  </aside>
+</div>
+<div class="toast" id="toast">Copied</div>
+
+<script>
+const SPECIES={
+ sheep:{name:'Sheep',kind:'mammal',primary:'#e7dfcd',secondary:'#9a876c',ears:'side',feature:'wool'},
+ goat:{name:'Goats',kind:'mammal',primary:'#b9a78e',secondary:'#5b4a38',ears:'side',feature:'goat'},
+ cattle:{name:'Cattle',kind:'mammal',primary:'#8b654e',secondary:'#3f2e27',ears:'side',feature:'horns'},
+ donkey:{name:'Donkeys',kind:'mammal',primary:'#91877b',secondary:'#4a433d',ears:'long',feature:'muzzle'},
+ horse:{name:'Horses',kind:'mammal',primary:'#995d36',secondary:'#342219',ears:'top',feature:'mane'},
+ camel:{name:'Camels',kind:'mammal',primary:'#bd8d59',secondary:'#6f4d32',ears:'top',feature:'camel'},
+ elephant:{name:'Elephants',kind:'mammal',primary:'#8e9390',secondary:'#5d625f',ears:'wide',feature:'trunk'},
+ giraffe:{name:'Giraffes',kind:'mammal',primary:'#d0a052',secondary:'#845326',ears:'top',feature:'giraffe'},
+ lion:{name:'Lions',kind:'mammal',primary:'#c58c43',secondary:'#6d451f',ears:'round',feature:'lion'},
+ bear:{name:'Bears',kind:'mammal',primary:'#73513a',secondary:'#3e2d24',ears:'round',feature:'muzzle'},
+ deer:{name:'Deer',kind:'mammal',primary:'#aa7748',secondary:'#533b29',ears:'top',feature:'antlers'},
+ rabbit:{name:'Rabbits',kind:'mammal',primary:'#c7baa6',secondary:'#8e7863',ears:'long',feature:'rabbit'},
+ pig:{name:'Pigs',kind:'mammal',primary:'#d49a87',secondary:'#965f55',ears:'side',feature:'snout'},
+ dog:{name:'Dogs',kind:'mammal',primary:'#a97950',secondary:'#543724',ears:'drop',feature:'muzzle'},
+ cat:{name:'Cats',kind:'mammal',primary:'#a98d70',secondary:'#544438',ears:'point',feature:'cat'},
+ raven:{name:'Ravens',kind:'bird',primary:'#202228',secondary:'#08090b',ears:'none',feature:'raven'},
+ dove:{name:'Doves',kind:'bird',primary:'#e4e1d8',secondary:'#a5aaa3',ears:'none',feature:'dove'},
+ eagle:{name:'Eagles',kind:'bird',primary:'#765237',secondary:'#d3c6a5',ears:'none',feature:'eagle'},
+ peacock:{name:'Peafowl',kind:'bird',primary:'#26756d',secondary:'#174e72',ears:'none',feature:'peacock'},
+ crocodile:{name:'Crocodiles',kind:'reptile',primary:'#66764a',secondary:'#34412c',ears:'none',feature:'crocodile'},
+ tortoise:{name:'Tortoises',kind:'reptile',primary:'#77764b',secondary:'#45452e',ears:'none',feature:'tortoise'},
+ snake:{name:'Snakes',kind:'reptile',primary:'#71834d',secondary:'#394a2e',ears:'none',feature:'snake'}
+};
+const $=id=>document.getElementById(id);let lastPair='';
+function rng(seed){let a=seed>>>0;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function shade(hex,amount){const n=parseInt(hex.slice(1),16),r=Math.max(0,Math.min(255,(n>>16)+amount)),g=Math.max(0,Math.min(255,((n>>8)&255)+amount)),b=Math.max(0,Math.min(255,(n&255)+amount));return'#'+[r,g,b].map(v=>v.toString(16).padStart(2,'0')).join('')}
+function varied(hex,random,amount,side){return shade(hex,Math.round((random()-.5)*amount+(side?amount*.18:-amount*.12)))}
+function ears(type,c,d){const shapes={side:`<path d="M48 80 14 62 38 104Zm104 0 34-18-24 42Z" fill="${c}"/>`,long:`<path d="M64 70 48 4 82 52Zm72 0 16-66-34 48Z" fill="${d}"/>`,top:`<path d="M65 60 54 25 84 48Zm70 0 11-35-30 23Z" fill="${c}"/>`,wide:`<ellipse cx="44" cy="86" rx="38" ry="48" fill="${d}"/><ellipse cx="156" cy="86" rx="38" ry="48" fill="${d}"/>`,round:`<circle cx="55" cy="61" r="22" fill="${d}"/><circle cx="145" cy="61" r="22" fill="${d}"/>`,drop:`<path d="M54 62Q16 62 30 124l37-32Zm92 0q38 0 24 62l-37-32Z" fill="${d}"/>`,point:`<path d="M58 66 45 20 82 51Zm84 0 13-46-37 31Z" fill="${d}"/>`,none:''};return shapes[type]||''}
+function markings(feature,c,d,light,random,side){
+ let out='';
+ if(feature==='wool')for(const [x,y] of [[62,60],[82,47],[104,45],[128,54],[145,72]])out+=`<circle cx="${x}" cy="${y}" r="24" fill="${light}"/>`;
+ if(feature==='goat')out+=`<path d="M66 52 52 8 82 47m52 5 14-44-30 39" fill="${d}"/><path d="M88 148 100 181 112 148Z" fill="${d}"/>`;
+ if(feature==='horns')out+=`<path d="M72 62Q35 36 28 10q35 9 57 42m43 10q37-26 44-52-35 9-57 42" fill="${light}"/>`;
+ if(feature==='mane'||feature==='lion')out+=`<circle cx="100" cy="91" r="74" fill="${d}"/>`;
+ if(feature==='antlers'&&side)out+=`<path d="M74 58Q54 28 48 5m10 25-20-8m88 36q20-30 26-53m-10 25 20-8" stroke="${d}" stroke-width="7" fill="none" stroke-linecap="round"/>`;
+ if(feature==='giraffe')out+=`<path d="M72 58V24m56 34V24" stroke="${d}" stroke-width="9"/><circle cx="72" cy="20" r="7" fill="${d}"/><circle cx="128" cy="20" r="7" fill="${d}"/>`;
+ if(feature==='peacock')out+=`<path d="M92 42Q100 8 108 42m-8-2V5" stroke="${light}" stroke-width="4"/><circle cx="100" cy="5" r="5" fill="${d}"/>`;
+ for(let i=0;i<3+(side?1:0);i++){const x=64+random()*72,y=62+random()*58,rx=5+random()*12;out+=`<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="${rx.toFixed(1)}" ry="${(rx*.55).toFixed(1)}" fill="${d}" opacity=".42"/>`;}
+ return out;
+}
+function headSvg(key,side,seed){const s=SPECIES[key],random=rng(seed+side*971),v=+$('variation').value,p=varied($('primary').value,random,v,side),d=varied($('secondary').value,random,v,side),light=shade(p,35),eye=$('eyes').value;
+ if(s.kind==='bird')return `<g>${markings(s.feature,p,d,light,random,side)}<path d="M54 94Q55 34 100 28q45 6 46 66l-12 67q-34 28-68 0Z" fill="${p}"/><path d="M116 88 184 108l-68 22Z" fill="${s.feature==='dove'?light:d}"/><circle cx="80" cy="91" r="5" fill="${eye}"/><circle cx="119" cy="91" r="5" fill="${eye}"/>${markings(s.feature,p,d,light,random,side)}</g>`;
+ if(s.kind==='reptile'){const shape=s.feature==='snake'?`<path d="M50 112Q56 32 100 28q44 4 50 84-8 61-50 68-42-7-50-68Z"/>`:`<path d="M25 110Q38 42 100 38q62 4 75 72-20 57-75 59-55-2-75-59Z"/>`;return `<g fill="${p}">${shape}<path d="M45 112Q100 82 155 112-100 52-110 0Z" fill="${light}" opacity=".45"/><circle cx="75" cy="89" r="6" fill="${eye}"/><circle cx="125" cy="89" r="6" fill="${eye}"/>${markings(s.feature,p,d,light,random,side)}</g>`;}
+ const trunk=s.feature==='trunk'?`<path d="M88 116q10 75 38 42-18 4-14-48Z" fill="${p}"/>`:'';
+ const snout=s.feature==='snout'?`<ellipse cx="100" cy="128" rx="30" ry="22" fill="${light}"/><circle cx="90" cy="128" r="4" fill="${d}"/><circle cx="110" cy="128" r="4" fill="${d}"/>`:`<ellipse cx="100" cy="126" rx="24" ry="20" fill="${light}"/><path d="M92 120h16l-8 9Z" fill="${d}"/>`;
+ return `<g>${markings(s.feature,p,d,light,random,side)}${ears(s.ears,p,d)}<path d="M57 87Q58 38 100 32q42 6 43 55l-10 70q-33 28-66 0Z" fill="${p}"/>${markings(s.feature,p,d,light,random,side)}<circle cx="80" cy="94" r="5" fill="${eye}"/><circle cx="120" cy="94" r="5" fill="${eye}"/>${trunk||snout}</g>`}
+function animalDocument(markup,label){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260"><rect width="240" height="260" rx="24" fill="#efe4c7"/><g transform="translate(20 20)">${markup}</g>${label?`<text x="120" y="242" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="16" fill="#171411">${label}</text>`:''}</svg>`}
+function render(){const key=$('species').value,s=SPECIES[key],seed=+$('seed').value||1,a=headSvg(key,0,seed),b=headSvg(key,1,seed),pose=$('pose').value;let ax=105,bx=455,ar=-4,br=4;if(pose==='inward'){ar=5;br=-5}else if(pose==='outward'){ar=-9;br=9}else{ax=125;bx=435}const labels=$('labels').checked;lastPair=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420"><rect width="760" height="420" rx="28" fill="#efe4c7"/><ellipse cx="380" cy="350" rx="270" ry="28" fill="#9b8c68" opacity=".28"/><g transform="translate(${ax} 75) rotate(${ar} 100 100)">${a}</g><g transform="translate(${bx} 75) rotate(${br} 100 100)">${b}</g>${labels?`<text x="225" y="365" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="20" fill="#171411">A</text><text x="535" y="365" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="20" fill="#171411">B</text>`:''}</svg>`;$('preview').innerHTML=lastPair.replace(/^<svg[^>]*>|<\/svg>$/g,'');$('caption').innerHTML=`${s.name}<small>two by two · seed ${seed}</small>`;$('variationValue').textContent=$('variation').value+'%';}
+function download(name,text){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'image/svg+xml'}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
+function slug(){return $('species').value.replace(/[^a-z0-9]+/g,'_')}
+Object.entries(SPECIES).forEach(([key,s])=>$('species').add(new Option(s.name,key)));
+function applySpecies(){const s=SPECIES[$('species').value];$('primary').value=s.primary;$('secondary').value=s.secondary;render()}
+$('species').onchange=applySpecies;['variation','seed','primary','secondary','eyes','pose','labels'].forEach(id=>$(id).addEventListener('input',render));
+$('randomize').onclick=()=>{$('seed').value=Math.floor(Math.random()*99999)+1;render()};
+$('downloadPair').onclick=()=>download(slug()+'_pair.svg',lastPair);
+$('downloadA').onclick=()=>download(slug()+'_a.svg',animalDocument(headSvg($('species').value,0,+$('seed').value),'A'));
+$('downloadB').onclick=()=>download(slug()+'_b.svg',animalDocument(headSvg($('species').value,1,+$('seed').value),'B'));
+$('copySvg').onclick=async()=>{await navigator.clipboard.writeText(lastPair);$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1200)};
+$('downloadAll').onclick=async()=>{if(typeof JSZip==='undefined'){alert('Batch export needs an internet connection for JSZip.');return}const zip=new JSZip(),old=$('species').value;for(const key of Object.keys(SPECIES)){$('species').value=key;applySpecies();zip.file(key+'_pair.svg',lastPair)}$('species').value=old;applySpecies();const blob=await zip.generateAsync({type:'blob'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='noahs_ark_animal_pairs.zip';a.click()};
+applySpecies();
+</script>
+</body>
+</html>

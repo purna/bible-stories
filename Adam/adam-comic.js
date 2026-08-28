@@ -51,6 +51,7 @@ const dotsBox = el('#dots');
 const audio = new AudioManager();
 
 function currentAct() { return STORY[actIdx]; }
+window.__comic = { currentAct };
 
 function buildDots() {
     dotsBox.innerHTML = '';
@@ -703,11 +704,9 @@ el('#chapterSelect').addEventListener('change', e => {
     NEXT / PREV BUTTONS
    ========================================================================= */
 nextBtn.addEventListener('click', () => {
-    audio.playSfx('assets/audio/ping_pong.mp3');
     goNextChapter();
 });
 nextLineBtn.addEventListener('click', () => {
-    audio.playSfx('assets/audio/ping_pong.mp3');
     goLine(1);
 });
 

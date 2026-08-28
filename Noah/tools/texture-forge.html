@@ -142,7 +142,7 @@
 <div id="app">
   <header>
     <h1>Texture Forge</h1>
-    <div class="sub">Seamless SVG material patterns for Jonah &amp; Miracle Maker.</div>
+    <div class="sub">Seamless SVG materials for Noah, the ark and the flood.</div>
   </header>
 
   <div id="groupRow"></div>
@@ -856,6 +856,42 @@ const LIB = {
         return {w,h,body};
       }}
     ]
+  },
+
+  gopher_wood_pitch: {
+    label:'Gopher Wood & Pitch', group:'Noah', colors:['#80502d','#2b211b','#b57b45'], colorNames:['timber','pitch','grain'],
+    params:{ grain:{label:'Wood grain',min:5,max:35,step:1,def:16}, seams:{label:'Pitch seams',min:2,max:8,step:1,def:4} },
+    shapes:[{key:'ark_planks',label:'Ark planks',build(rng,p,c){const w=140,h=100,row=h/p.seams;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let y=1;y<p.seams;y++)body+=`<path d="M0 ${fmt(y*row)} H140" stroke="${c[1]}" stroke-width="4"/>`;for(let i=0;i<p.grain;i++){const y=rnd(rng,0,h);body+=`<path d="M-5 ${fmt(y)} Q45 ${fmt(y+rnd(rng,-5,5))} 85 ${fmt(y)} T145 ${fmt(y)}" stroke="${c[2]}" opacity=".35" fill="none"/>`;}return{w,h,body};}}]
+  },
+  ark_straw: {
+    label:'Animal Bedding Straw', group:'Noah', colors:['#b88b3e','#715129','#dfb95d'], colorNames:['straw','shadow','dry tip'],
+    params:{ stalks:{label:'Straw stalks',min:12,max:90,step:2,def:44}, length:{label:'Stalk length',min:8,max:35,step:1,def:22} },
+    shapes:[{key:'scattered',label:'Scattered bedding',build(rng,p,c){const w=120,h=90;let body=`<rect width="${w}" height="${h}" fill="${c[1]}"/>`;for(let i=0;i<p.stalks;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h),len=rnd(rng,p.length*.55,p.length),a=rnd(rng,0,Math.PI*2),x2=x+Math.cos(a)*len,y2=y+Math.sin(a)*len;body+=`<path d="M${fmt(x)} ${fmt(y)} L${fmt(x2)} ${fmt(y2)}" stroke="${rng()>.25?c[0]:c[2]}" stroke-width="${fmt(rnd(rng,1,2.2))}" stroke-linecap="round"/>`;}return{w,h,body};}}]
+  },
+  rain_soaked_deck: {
+    label:'Rain-Soaked Deck', group:'Noah', colors:['#563b2b','#211f1d','#7795a1'], colorNames:['wet wood','shadow','rain glint'],
+    params:{ boards:{label:'Deck boards',min:3,max:9,step:1,def:5}, droplets:{label:'Water droplets',min:4,max:60,step:2,def:24} },
+    shapes:[{key:'wet_planks',label:'Wet planks',build(rng,p,c){const w=140,h=100,row=h/p.boards;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let y=1;y<p.boards;y++)body+=`<path d="M0 ${fmt(y*row)} H140" stroke="${c[1]}" stroke-width="3"/>`;for(let i=0;i<p.droplets;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h);body+=`<ellipse cx="${fmt(x)}" cy="${fmt(y)}" rx="${fmt(rnd(rng,.5,2.5))}" ry="${fmt(rnd(rng,1,4))}" fill="${c[2]}" opacity=".55"/>`;}return{w,h,body};}}]
+  },
+  flood_water: {
+    label:'Flood Water', group:'Noah', colors:['#183f53','#34778b','#c4e1df'], colorNames:['depth','wave','foam'],
+    params:{ waves:{label:'Wave bands',min:3,max:14,step:1,def:7}, foam:{label:'Foam flecks',min:0,max:60,step:2,def:20} },
+    shapes:[{key:'storm_swell',label:'Storm swell',build(rng,p,c){const w=140,h=90;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.waves;i++){const y=(i+.5)*h/p.waves,amp=rnd(rng,4,11);body+=`<path d="M-10 ${fmt(y)} Q20 ${fmt(y-amp)} 45 ${fmt(y)} T100 ${fmt(y)} T150 ${fmt(y)}" stroke="${c[1]}" stroke-width="${fmt(rnd(rng,1.5,4))}" opacity=".75" fill="none"/>`;}for(let i=0;i<p.foam;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.4,1.8))}" fill="${c[2]}" opacity=".7"/>`;return{w,h,body};}}]
+  },
+  olive_branch: {
+    label:'Olive Branch', group:'Noah', colors:['#586f3d','#293a25','#a8b56a'], colorNames:['leaf','stem','highlight'],
+    params:{ leaves:{label:'Leaves',min:4,max:24,step:2,def:12}, spread:{label:'Branch spread',min:8,max:30,step:1,def:18} },
+    shapes:[{key:'sprigs',label:'Olive sprigs',build(rng,p,c){const w=120,h=90;let body=`<rect width="${w}" height="${h}" fill="#d4c99f"/>`;for(let b=0;b<3;b++){const y=15+b*30;body+=`<path d="M-10 ${y+18} Q55 ${y-10} 130 ${y+12}" stroke="${c[1]}" stroke-width="2" fill="none"/>`;for(let i=0;i<p.leaves/3;i++){const x=i*24+rnd(rng,0,10),up=i%2?-1:1;body+=`<ellipse cx="${fmt(x)}" cy="${fmt(y+up*rnd(rng,3,p.spread))}" rx="8" ry="3" fill="${rng()>.25?c[0]:c[2]}" transform="rotate(${up*25} ${fmt(x)} ${fmt(y)})"/>`;}}return{w,h,body};}}]
+  },
+  rainbow_covenant: {
+    label:'Rainbow Covenant', group:'Noah', colors:['#d95757','#e5b84d','#4f83c2'], colorNames:['warm','gold','cool'],
+    params:{ bands:{label:'Colour bands',min:3,max:9,step:1,def:7}, glow:{label:'Glow',min:.1,max:.9,step:.05,def:.4} },
+    shapes:[{key:'prismatic',label:'Prismatic bands',build(rng,p,c){const w=140,h=90,pal=[c[0],'#e88a45',c[1],'#62a95a',c[2],'#6a5aa8','#ad5b93'];let body=`<rect width="${w}" height="${h}" fill="#202d3b"/>`;for(let i=0;i<p.bands;i++){const col=pal[i%pal.length],bh=h/p.bands;body+=`<path d="M-10 ${fmt(i*bh+bh/2)} Q70 ${fmt(i*bh-12)} 150 ${fmt(i*bh+bh/2)}" stroke="${col}" stroke-width="${fmt(bh+2)}" opacity="${fmt(.55+p.glow*.35)}" fill="none"/>`;}return{w,h,body};}}]
+  },
+  altar_stone: {
+    label:'Post-Flood Altar', group:'Noah', colors:['#716a5f','#3d3a35','#a59c8b'], colorNames:['stone','mortar','edge'],
+    params:{ blocks:{label:'Stone blocks',min:3,max:9,step:1,def:5}, scorch:{label:'Scorch marks',min:0,max:35,step:1,def:14} },
+    shapes:[{key:'rough_blocks',label:'Rough altar blocks',build(rng,p,c){const w=120,h=90,row=h/p.blocks;let body=`<rect width="${w}" height="${h}" fill="${c[1]}"/>`;for(let y=0;y<p.blocks;y++){const off=y%2?18:0;for(let x=-36;x<w+36;x+=36)body+=`<rect x="${x+off+1}" y="${fmt(y*row+1)}" width="34" height="${fmt(row-2)}" rx="${fmt(rnd(rng,1,4))}" fill="${mix(c[0],c[2],rnd(rng,0,.25))}"/>`;}for(let i=0;i<p.scorch;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,1,5))}" fill="#231f1b" opacity=".24"/>`;return{w,h,body};}}]
   }
 
 };
@@ -864,12 +900,12 @@ const LIB = {
    State
 ============================================================ */
 let state = {
-  texKey: 'water_still',
-  shapeKey: 'calm',
+  texKey: 'gopher_wood_pitch',
+  shapeKey: 'ark_planks',
   seed: 1,
   colors: [],
   params: {},
-  activeGroup: 'Water'
+  activeGroup: 'Noah'
 };
 
 function currentTex(){ return LIB[state.texKey]; }

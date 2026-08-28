@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v3';
 const CACHE_NAME = 'bible-stories-cache-' + CACHE_VERSION;
 const RUNTIME_CACHE_NAME = 'bible-stories-runtime-' + CACHE_VERSION;
 const OFFLINE_PAGE = new URL('offline.html', self.location).href;
@@ -127,6 +127,8 @@ function isLocalStaticAsset(url) {
     url.pathname.endsWith('.css') ||
     url.pathname.endsWith('.js') ||
     url.pathname.endsWith('.html') ||
+    url.pathname.endsWith('.mp3') ||
+    url.pathname.endsWith('.ogg') ||
     url.pathname.endsWith('.ink') ||
     url.pathname.endsWith('.ico')
   );
