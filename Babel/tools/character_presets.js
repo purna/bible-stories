@@ -1,10 +1,10 @@
-// Canonical character inventory for Babel. Generated from __docs/babel-design-source-of-truth.md.
+// Canonical character inventory for Babel. Loaded directly by the browser generator.
 const CHARACTER_PRESETS_META = {
   "story": "Babel",
   "defaultPreset": "nimrod",
   "groupLabel": "Babel characters"
 };
-const STORY_CHARACTER_BASE = {
+const BABEL_BASE = {
   "noseScale": 1,
   "noseShape": "straight",
   "eyeShape": "almond",
@@ -33,15 +33,16 @@ const STORY_CHARACTER_BASE = {
   "colorSkin": "#b9825d",
   "colorHair": "#2a1d16",
   "colorEye": "#3d2d24",
-  "colorLip": "#985e50"
+  "colorLip": "#985e50",
+  "materialStyle": "woven_linen"
 };
-const storyPreset=(name,overrides={})=>({...STORY_CHARACTER_BASE,name,...overrides});
+const babelPreset = (name, overrides = {}) => ({ ...BABEL_BASE, name, ...overrides });
 const CHARACTER_PRESETS_DATA = {
-  "nimrod": storyPreset("Nimrod", {}),
-  "builder": storyPreset("Builder", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "brickmaker": storyPreset("Brickmaker", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "city_elder": storyPreset("City Elder", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
-  "traveller": storyPreset("Traveller", {}),
-  "mother": storyPreset("Mother", {"beardStyle":"none","hairStyle":"braids","hatStyle":"headscarf","noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "child": storyPreset("Child", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
+  "nimrod": babelPreset("Nimrod", {"hairStyle":"curly","hatStyle":"royal_diadem","clothingType":"royal_robes","materialStyle":"fine_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":0.9}),
+  "builder": babelPreset("Builder", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"wavy","hatStyle":"none","clothingType":"work_tunic","materialStyle":"basket_weave","colorInner":"#b78d58","colorOuter":"#365f67","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1}),
+  "brickmaker": babelPreset("Brickmaker", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"curly","hatStyle":"none","clothingType":"work_tunic","materialStyle":"woven_linen","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1,"hairSize":1.1}),
+  "city_elder": babelPreset("City Elder", {"hairStyle":"shoulder_waves","colorOuter":"#53613a","hatStyle":"skullcap","clothingType":"work_tunic","materialStyle":"basket_weave","colorInner":"#c2a36b","colorCloak":"#354229","colorAccent":"#b99045","hatSize":0.9,"hairSize":1.2}),
+  "traveller": babelPreset("Traveller", {"hairStyle":"receding","hatStyle":"none","clothingType":"work_tunic","materialStyle":"woven_linen","colorInner":"#d8c39b","colorOuter":"#67547a","colorCloak":"#40364f","colorAccent":"#d0ad58","hatSize":1,"hairSize":0.9}),
+  "mother": babelPreset("Mother", {"beardStyle":"none","hairStyle":"flowing","hatStyle":"none","noseShape":"aquiline","eyebrowStyle":"thick","clothingType":"traveller_cloak","materialStyle":"tartan","colorInner":"#c1a178","colorOuter":"#875b34","colorCloak":"#533920","colorAccent":"#d0a34c","hatSize":1,"hairSize":1}),
+  "child": babelPreset("Child", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"curly","hatStyle":"none","clothingType":"tunic","materialStyle":"fine_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":1,"hairSize":1.1}),
 };

@@ -1,10 +1,10 @@
-// Canonical character inventory for Daniel. Generated from __docs/daniel-design-source-of-truth.md.
+// Canonical character inventory for Daniel. Loaded directly by the browser generator.
 const CHARACTER_PRESETS_META = {
   "story": "Daniel",
   "defaultPreset": "daniel_young",
   "groupLabel": "Daniel characters"
 };
-const STORY_CHARACTER_BASE = {
+const DANIEL_BASE = {
   "noseScale": 1,
   "noseShape": "straight",
   "eyeShape": "almond",
@@ -33,19 +33,20 @@ const STORY_CHARACTER_BASE = {
   "colorSkin": "#b9825d",
   "colorHair": "#2a1d16",
   "colorEye": "#3d2d24",
-  "colorLip": "#985e50"
+  "colorLip": "#985e50",
+  "materialStyle": "woven_linen"
 };
-const storyPreset=(name,overrides={})=>({...STORY_CHARACTER_BASE,name,...overrides});
+const danielPreset = (name, overrides = {}) => ({ ...DANIEL_BASE, name, ...overrides });
 const CHARACTER_PRESETS_DATA = {
-  "daniel_young": storyPreset("Daniel Young", {}),
-  "daniel": storyPreset("Daniel", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "hananiah": storyPreset("Hananiah", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "mishael": storyPreset("Mishael", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
-  "azariah": storyPreset("Azariah", {}),
-  "nebuchadnezzar": storyPreset("Nebuchadnezzar", {"clothingType":"layered_robe","colorOuter":"#395b7a","colorAccent":"#d4aa45","dualStripe":true,"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "belshazzar": storyPreset("Belshazzar", {"clothingType":"layered_robe","colorOuter":"#395b7a","colorAccent":"#d4aa45","dualStripe":true,"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "darius": storyPreset("Darius", {"clothingType":"layered_robe","colorOuter":"#6d3f48","colorAccent":"#d4aa45","dualStripe":true,"hairStyle":"curly"}),
-  "court_official": storyPreset("Court Official", {}),
-  "accusers": storyPreset("Accusers", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "angel": storyPreset("Angel", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
+  "daniel_young": danielPreset("Daniel Young", {"hairStyle":"curly","hatStyle":"shepherd_wrap","clothingType":"desert_mantle","materialStyle":"herringbone","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":0.9}),
+  "daniel": danielPreset("Daniel", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"wavy","hatStyle":"hood","clothingType":"prophet_mantle","materialStyle":"herringbone","colorInner":"#b78d58","colorOuter":"#365f67","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1}),
+  "hananiah": danielPreset("Hananiah", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"curly","hatStyle":"wrapped_scarf","clothingType":"desert_mantle","materialStyle":"herringbone","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1.1,"hairSize":1.1}),
+  "mishael": danielPreset("Mishael", {"hairStyle":"shoulder_waves","colorOuter":"#53613a","hatStyle":"skullcap","clothingType":"work_tunic","materialStyle":"basket_weave","colorInner":"#c2a36b","colorCloak":"#354229","colorAccent":"#b99045","hatSize":0.9,"hairSize":1.2}),
+  "azariah": danielPreset("Azariah", {"hairStyle":"receding","hatStyle":"hood","clothingType":"tunic","materialStyle":"dotted","colorInner":"#d8c39b","colorOuter":"#67547a","colorCloak":"#40364f","colorAccent":"#d0ad58","hatSize":1,"hairSize":0.9}),
+  "nebuchadnezzar": danielPreset("Nebuchadnezzar", {"clothingType":"royal_robes","colorOuter":"#875b34","colorAccent":"#d0a34c","dualStripe":true,"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"shoulder_waves","hatStyle":"royal_diadem","materialStyle":"dotted","colorInner":"#c1a178","colorCloak":"#533920","hatSize":1.1,"hairSize":1}),
+  "belshazzar": danielPreset("Belshazzar", {"clothingType":"royal_robes","colorOuter":"#6f4b32","colorAccent":"#c99b46","dualStripe":true,"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"curly","hatStyle":"royal_diadem","materialStyle":"fine_linen","colorInner":"#d6b477","colorCloak":"#3f3027","hatSize":0.9,"hairSize":1.1}),
+  "darius": danielPreset("Darius", {"clothingType":"royal_robes","colorOuter":"#365f67","colorAccent":"#d3ad53","dualStripe":true,"hairStyle":"shoulder_waves","hatStyle":"royal_diadem","materialStyle":"dotted","colorInner":"#b78d58","colorCloak":"#263f47","hatSize":1,"hairSize":1.2}),
+  "court_official": danielPreset("Court Official", {"hairStyle":"short","hatStyle":"skullcap","clothingType":"tunic","materialStyle":"herringbone","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1.1,"hairSize":0.9}),
+  "accusers": danielPreset("Accusers", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"wavy","hatStyle":"hood","clothingType":"traveller_cloak","materialStyle":"basket_weave","colorInner":"#c2a36b","colorOuter":"#53613a","colorCloak":"#354229","colorAccent":"#b99045","hatSize":0.9,"hairSize":1}),
+  "angel": danielPreset("Angel", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"curly","hatStyle":"none","clothingType":"desert_mantle","materialStyle":"dotted","colorInner":"#d8c39b","colorOuter":"#67547a","colorCloak":"#40364f","colorAccent":"#d0ad58","hatSize":1,"hairSize":1.1}),
 };

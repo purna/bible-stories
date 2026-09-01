@@ -1,10 +1,10 @@
-// Canonical character inventory for Ruth. Generated from __docs/ruth-design-source-of-truth.md.
+// Canonical character inventory for Ruth. Loaded directly by the browser generator.
 const CHARACTER_PRESETS_META = {
   "story": "Ruth",
   "defaultPreset": "ruth",
   "groupLabel": "Ruth characters"
 };
-const STORY_CHARACTER_BASE = {
+const RUTH_BASE = {
   "noseScale": 1,
   "noseShape": "straight",
   "eyeShape": "almond",
@@ -33,16 +33,17 @@ const STORY_CHARACTER_BASE = {
   "colorSkin": "#b9825d",
   "colorHair": "#2a1d16",
   "colorEye": "#3d2d24",
-  "colorLip": "#985e50"
+  "colorLip": "#985e50",
+  "materialStyle": "woven_linen"
 };
-const storyPreset=(name,overrides={})=>({...STORY_CHARACTER_BASE,name,...overrides});
+const ruthPreset = (name, overrides = {}) => ({ ...RUTH_BASE, name, ...overrides });
 const CHARACTER_PRESETS_DATA = {
-  "ruth": storyPreset("Ruth", {"beardStyle":"none","hairStyle":"tied_back","hatStyle":"headscarf"}),
-  "naomi": storyPreset("Naomi", {"beardStyle":"none","hairStyle":"braids","hatStyle":"headscarf","noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "orpah": storyPreset("Orpah", {"beardStyle":"none","hairStyle":"tied_back","hatStyle":"headscarf","faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "boaz": storyPreset("Boaz", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
-  "kinsman_redeemer": storyPreset("Kinsman Redeemer", {}),
-  "field_overseer": storyPreset("Field Overseer", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "bethlehem_woman": storyPreset("Bethlehem Woman", {"beardStyle":"none","hairStyle":"tied_back","hatStyle":"headscarf","faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "obed": storyPreset("Obed", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
+  "ruth": ruthPreset("Ruth", {"beardStyle":"none","hairStyle":"side_braid","hatStyle":"none","clothingType":"tunic","materialStyle":"woven_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":1,"hairSize":0.9}),
+  "naomi": ruthPreset("Naomi", {"beardStyle":"none","hairStyle":"crown_braids","hatStyle":"shepherd_wrap","noseShape":"aquiline","eyebrowStyle":"thick","clothingType":"traveller_cloak","materialStyle":"fine_linen","colorInner":"#b78d58","colorOuter":"#365f67","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1}),
+  "orpah": ruthPreset("Orpah", {"beardStyle":"none","hairStyle":"shoulder_waves","hatStyle":"wrapped_scarf","faceShape":"square","chinShape":"square","colorSkin":"#9d6748","clothingType":"desert_mantle","materialStyle":"herringbone","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1.1,"hairSize":1.1}),
+  "boaz": ruthPreset("Boaz", {"hairStyle":"shoulder_waves","colorOuter":"#53613a","hatStyle":"shepherd_wrap","clothingType":"traveller_cloak","materialStyle":"basket_weave","colorInner":"#c2a36b","colorCloak":"#354229","colorAccent":"#b99045","hatSize":0.9,"hairSize":1.2}),
+  "kinsman_redeemer": ruthPreset("Kinsman Redeemer", {"hairStyle":"receding","hatStyle":"hood","clothingType":"tunic","materialStyle":"dotted","colorInner":"#d8c39b","colorOuter":"#67547a","colorCloak":"#40364f","colorAccent":"#d0ad58","hatSize":1,"hairSize":0.9}),
+  "field_overseer": ruthPreset("Field Overseer", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"shaved_sides","hatStyle":"battle_helmet","clothingType":"military_lorica","materialStyle":"scales","colorInner":"#c1a178","colorOuter":"#875b34","colorCloak":"#533920","colorAccent":"#d0a34c","hatSize":1.1,"hairSize":1}),
+  "bethlehem_woman": ruthPreset("Bethlehem Woman", {"beardStyle":"none","hairStyle":"side_braid","hatStyle":"shepherd_wrap","faceShape":"square","chinShape":"square","colorSkin":"#9d6748","clothingType":"desert_mantle","materialStyle":"woven_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":1.1}),
+  "obed": ruthPreset("Obed", {"hairStyle":"flowing","colorOuter":"#365f67","hatStyle":"wrapped_scarf","clothingType":"work_tunic","materialStyle":"fine_linen","colorInner":"#b78d58","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1.2}),
 };

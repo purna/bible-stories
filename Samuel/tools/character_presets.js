@@ -1,10 +1,10 @@
-// Canonical character inventory for Samuel. Generated from __docs/samuel-design-source-of-truth.md.
+// Canonical character inventory for Samuel. Loaded directly by the browser generator.
 const CHARACTER_PRESETS_META = {
   "story": "Samuel",
   "defaultPreset": "samuel_child",
   "groupLabel": "Samuel characters"
 };
-const STORY_CHARACTER_BASE = {
+const SAMUEL_BASE = {
   "noseScale": 1,
   "noseShape": "straight",
   "eyeShape": "almond",
@@ -33,18 +33,19 @@ const STORY_CHARACTER_BASE = {
   "colorSkin": "#b9825d",
   "colorHair": "#2a1d16",
   "colorEye": "#3d2d24",
-  "colorLip": "#985e50"
+  "colorLip": "#985e50",
+  "materialStyle": "woven_linen"
 };
-const storyPreset=(name,overrides={})=>({...STORY_CHARACTER_BASE,name,...overrides});
+const samuelPreset = (name, overrides = {}) => ({ ...SAMUEL_BASE, name, ...overrides });
 const CHARACTER_PRESETS_DATA = {
-  "samuel_child": storyPreset("Samuel Child", {}),
-  "samuel": storyPreset("Samuel", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "hannah": storyPreset("Hannah", {"beardStyle":"none","hairStyle":"tied_back","hatStyle":"headscarf","faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "eli": storyPreset("Eli", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
-  "saul": storyPreset("Saul", {"clothingType":"layered_robe","colorOuter":"#395b7a","colorAccent":"#d4aa45","dualStripe":true}),
-  "david_young": storyPreset("David Young", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "jonathan": storyPreset("Jonathan", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "jesse": storyPreset("Jesse", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
-  "agag": storyPreset("Agag", {}),
-  "israelite_elder": storyPreset("Israelite Elder", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
+  "samuel_child": samuelPreset("Samuel Child", {"hairStyle":"curly","hatStyle":"shepherd_wrap","clothingType":"desert_mantle","materialStyle":"herringbone","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":0.9}),
+  "samuel": samuelPreset("Samuel", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"wavy","hatStyle":"hood","clothingType":"prophet_mantle","materialStyle":"herringbone","colorInner":"#b78d58","colorOuter":"#365f67","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1}),
+  "hannah": samuelPreset("Hannah", {"beardStyle":"none","hairStyle":"shoulder_waves","hatStyle":"none","faceShape":"square","chinShape":"square","colorSkin":"#9d6748","clothingType":"desert_mantle","materialStyle":"herringbone","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1,"hairSize":1.1}),
+  "eli": samuelPreset("Eli", {"hairStyle":"shoulder_waves","colorOuter":"#53613a","hatStyle":"turban","clothingType":"priestly_ephod","materialStyle":"fine_linen","colorInner":"#c2a36b","colorCloak":"#354229","colorAccent":"#b99045","hatSize":0.9,"hairSize":1.2}),
+  "saul": samuelPreset("Saul", {"clothingType":"royal_robes","colorOuter":"#67547a","colorAccent":"#d0ad58","dualStripe":true,"hairStyle":"curly","hatStyle":"royal_diadem","materialStyle":"fine_linen","colorInner":"#d8c39b","colorCloak":"#40364f","hatSize":1,"hairSize":0.9}),
+  "david_young": samuelPreset("David Young", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"shaved_sides","hatStyle":"battle_helmet","clothingType":"military_lorica","materialStyle":"scales","colorInner":"#c1a178","colorOuter":"#875b34","colorCloak":"#533920","colorAccent":"#d0a34c","hatSize":1.1,"hairSize":1}),
+  "jonathan": samuelPreset("Jonathan", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"short","hatStyle":"none","clothingType":"military_lorica","materialStyle":"scales","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":1,"hairSize":1.1}),
+  "jesse": samuelPreset("Jesse", {"hairStyle":"flowing","colorOuter":"#365f67","hatStyle":"wrapped_scarf","clothingType":"work_tunic","materialStyle":"fine_linen","colorInner":"#b78d58","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1.2}),
+  "agag": samuelPreset("Agag", {"hairStyle":"shaved_sides","hatStyle":"none","clothingType":"military_lorica","materialStyle":"scales","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1,"hairSize":0.9}),
+  "israelite_elder": samuelPreset("Israelite Elder", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"wavy","hatStyle":"hood","clothingType":"traveller_cloak","materialStyle":"basket_weave","colorInner":"#c2a36b","colorOuter":"#53613a","colorCloak":"#354229","colorAccent":"#b99045","hatSize":0.9,"hairSize":1}),
 };

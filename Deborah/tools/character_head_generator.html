@@ -272,6 +272,11 @@
           <option value="flowing">Flowing</option>
           <option value="braids">Braids</option>
           <option value="tied_back">Tied Back</option>
+          <option value="shoulder_waves">Shoulder-Length Waves</option>
+          <option value="side_braid">Side Braid</option>
+          <option value="crown_braids">Crown Braids</option>
+          <option value="locs">Locs</option>
+          <option value="shaved_sides">Shaved Sides</option>
         </select>
       </label>
       <label class="field">
@@ -297,6 +302,12 @@
           <option value="skullcap">Skullcap</option>
           <option value="headscarf">Headscarf</option>
           <option value="helmet">Roman Helmet</option>
+          <option value="veil">Light Veil</option>
+          <option value="wrapped_scarf">Wrapped Scarf</option>
+          <option value="shepherd_wrap">Shepherd Wrap</option>
+          <option value="royal_diadem">Royal Diadem</option>
+          <option value="pharaoh_crown">Egyptian Crown</option>
+          <option value="battle_helmet">Bronze Battle Helmet</option>
         </select>
       </label>
       <label class="field">
@@ -319,6 +330,24 @@
           <option value="military_lorica">Military Lorica</option>
           <option value="merchant_sash">Merchant Sash</option>
           <option value="peasant_rags">Peasant Rags</option>
+          <option value="work_tunic">Work Tunic</option>
+          <option value="traveller_cloak">Traveller Cloak</option>
+          <option value="desert_mantle">Desert Mantle</option>
+          <option value="prophet_mantle">Prophet Mantle</option>
+          <option value="court_dress">Court Dress</option>
+          <option value="royal_robes">Royal Robes</option>
+        </select>
+      </label>
+      <label class="field">Garment Texture
+        <select id="material-style">
+          <option value="woven_linen">Woven Linen</option>
+          <option value="fine_linen">Fine Linen</option>
+          <option value="herringbone">Herringbone</option>
+          <option value="basket_weave">Basket Weave</option>
+          <option value="dotted">Dotted Textile</option>
+          <option value="tartan">Tartan / Checked</option>
+          <option value="scales">Armour Scales</option>
+          <option value="plain">Plain Cloth</option>
         </select>
       </label>
     </div>
@@ -577,6 +606,24 @@ function wardrobeMarkup(style, cInner, cOuter, cCloak, cAccent) {
                 <path d="M170,240 L155,190 L145,200 L130,180 L120,240 Z" fill="${cInner}" opacity="0.7"/>
             `;
             break;
+        case "work_tunic":
+            result += `<path d="M28,240 Q34,184 61,170 L86,174 L100,194 L114,174 L139,170 Q166,184 172,240Z" fill="${cOuter}"/><path d="M61,170L82,168L100,194L118,168L139,170L128,240H72Z" fill="${cInner}"/><path d="M42,205H158V216H42Z" fill="${cAccent}" opacity=".75"/><rect x="28" y="168" width="144" height="72" fill="url(#cloth-texture)"/>`;
+            break;
+        case "traveller_cloak":
+            result += `<path d="M20,240Q25,178 61,163Q80,154 100,171Q120,154 139,163Q175,178 180,240Z" fill="${cCloak}"/><path d="M52,240L61,168L100,205L139,168L148,240Z" fill="${cInner}"/><path d="M28,182Q64,151 96,176L67,240H24Z" fill="${cOuter}"/><circle cx="91" cy="174" r="7" fill="${cAccent}"/><rect x="20" y="155" width="160" height="85" fill="url(#cloth-texture)"/>`;
+            break;
+        case "desert_mantle":
+            result += `<path d="M18,240Q26,180 57,164L100,187L143,164Q174,180 182,240Z" fill="${cCloak}"/><path d="M48,240L57,166L100,190L143,166L152,240Z" fill="${cOuter}"/><path d="M77,171L100,198L123,171L116,240H84Z" fill="${cInner}"/><path d="M25,208Q100,188 175,208" fill="none" stroke="${cAccent}" stroke-width="8"/><rect x="18" y="160" width="164" height="80" fill="url(#cloth-texture)"/>`;
+            break;
+        case "prophet_mantle":
+            result += `<path d="M16,240Q25,176 58,158L100,179L142,158Q175,176 184,240Z" fill="${cCloak}"/><path d="M31,240L58,162L100,184L142,162L169,240Z" fill="${cOuter}"/><path d="M76,170L100,197L124,170L118,240H82Z" fill="${cInner}"/><path d="M39,196L69,170M161,196L131,170" stroke="${cAccent}" stroke-width="5" opacity=".7"/><rect x="16" y="156" width="168" height="84" fill="url(#cloth-texture)"/>`;
+            break;
+        case "court_dress":
+            result += `<path d="M25,240Q31,180 58,164L100,174L142,164Q169,180 175,240Z" fill="${cOuter}"/><path d="M61,164L100,199L139,164L132,240H68Z" fill="${cInner}"/><path d="M78,178L100,197L122,178L116,240H84Z" fill="${cAccent}" opacity=".75"/><path d="M40,207H160" stroke="${cAccent}" stroke-width="6"/><rect x="25" y="160" width="150" height="80" fill="url(#cloth-texture)"/>`;
+            break;
+        case "royal_robes":
+            result += `<path d="M14,240Q20,174 56,155L100,175L144,155Q180,174 186,240Z" fill="${cCloak}"/><path d="M42,240L56,160L100,188L144,160L158,240Z" fill="${cOuter}"/><path d="M72,165L100,197L128,165L120,240H80Z" fill="${cInner}"/><path d="M29,199Q100,177 171,199" fill="none" stroke="${cAccent}" stroke-width="9"/><circle cx="100" cy="181" r="9" fill="url(#metal-texture)"/><rect x="14" y="153" width="172" height="87" fill="url(#cloth-texture)"/>`;
+            break;
     }
 
     return result;
@@ -697,6 +744,14 @@ function hairBackMarkup(style, colorHair, headSize, hairSize) {
         markup = `<path d="M100,25 C60,22 35,50 35,90 L35,130 L60,130 L60,90 Z" fill="${colorHair}"/>` + 
                mirror(`<path d="M100,25 C60,22 35,50 35,90 L35,130 L60,130 L60,90 Z" fill="${colorHair}"/>`) +
                braidStr + mirror(braidStr);
+    } else if (style === "shoulder_waves") {
+        markup = `<path d="M100,22C61,20 39,49 42,91L35,181Q34,207 57,215L72,211Q63,166 65,112Q66,65 100,48Q134,65 135,112Q137,166 128,211L143,215Q166,207 165,181L158,91Q161,20 100,22Z" fill="${colorHair}"/>`;
+    } else if (style === "side_braid") {
+        markup = `<path d="M100,24Q55,24 47,79L53,124H70L68,78Q78,48 100,43Q129,48 138,82L139,118H154L154,75Q145,24 100,24Z" fill="${colorHair}"/><g fill="${colorHair}"><ellipse cx="145" cy="116" rx="11" ry="13"/><ellipse cx="148" cy="138" rx="10" ry="12"/><ellipse cx="146" cy="159" rx="9" ry="11"/><ellipse cx="149" cy="178" rx="8" ry="10"/><ellipse cx="147" cy="195" rx="7" ry="9"/></g>`;
+    } else if (style === "crown_braids") {
+        markup = `<path d="M100,23Q58,23 48,73L52,123H70L68,77Q77,48 100,43Q123,48 132,77L130,123H148L152,73Q142,23 100,23Z" fill="${colorHair}"/>`;
+    } else if (style === "locs") {
+        markup = Array.from({length:8},(_,i)=>`<path d="M${50+i*14},58Q${44+i*15},118 ${48+i*14},192" fill="none" stroke="${colorHair}" stroke-width="9" stroke-linecap="round"/>`).join('');
     } else {
         markup = "";
     }
@@ -737,6 +792,21 @@ function hairFrontMarkup(style, colorHair, headSize, hairSize) {
             break;
         case "tied_back":
             markup = `<path d="M100,28 C130,28 145,45 145,75 C145,65 140,55 130,50 C125,55 120,58 115,58 C115,45 108,40 100,40 C92,40 85,45 85,58 C80,58 75,55 70,50 C60,55 55,65 55,75 C55,45 70,28 100,28 Z" fill="${colorHair}"/>`;
+            break;
+        case "shoulder_waves":
+            markup = `<path d="M100,21Q139,21 155,60Q145,51 137,54Q139,61 134,67Q127,44 102,39Q82,45 68,66Q62,62 64,53Q54,58 47,75Q46,40 71,27Q84,20 100,21Z" fill="${colorHair}"/><path d="M54,70q10 10 19 0M127,70q10 10 19 0" fill="none" stroke="${shadeColor(colorHair,18)}" stroke-width="4"/>`;
+            break;
+        case "side_braid":
+            markup = `<path d="M100,22Q139,22 155,74Q145,58 135,53Q138,61 133,68Q126,48 103,39Q81,45 66,67Q59,63 62,53Q51,62 47,82Q44,47 67,30Q81,21 100,22Z" fill="${colorHair}"/>`;
+            break;
+        case "crown_braids":
+            markup = `<path d="M47,66Q51,27 100,22Q149,27 153,66Q139,48 126,44Q112,40 100,39Q88,40 74,44Q61,48 47,66Z" fill="${colorHair}"/><path d="M55,48Q100,18 145,48" fill="none" stroke="${shadeColor(colorHair,20)}" stroke-width="9" stroke-dasharray="5 3"/>`;
+            break;
+        case "locs":
+            markup = `<path d="M100,17Q145,17 159,76Q146,57 136,53Q138,62 132,68Q126,45 100,38Q74,45 68,68Q62,62 64,53Q54,57 41,76Q55,17 100,17Z" fill="${colorHair}"/><path d="M52,42l8-12M70,32l3-15M91,27V12M110,27l3-15M130,32l4-15M145,43l8-11" stroke="${shadeColor(colorHair,15)}" stroke-width="6" stroke-linecap="round"/>`;
+            break;
+        case "shaved_sides":
+            markup = `<path d="M67,61Q69,23 100,18Q131,23 133,61Q119,40 100,38Q81,40 67,61Z" fill="${colorHair}"/><path d="M52,72Q55,50 68,43M148,72Q145,50 132,43" fill="none" stroke="${colorHair}" stroke-width="4" opacity=".45"/>`;
             break;
         case "short":
         default:
@@ -815,6 +885,24 @@ function hatMarkup(style, cInner, cOuter, headSize, hatSize) {
                 <path d="M92,2 C92,-10 108,-10 108,2 L108,12 L92,12 Z" fill="${cOuter}"/><path d="M92,2 C92,-10 108,-10 108,2 L108,12 L92,12 Z" fill="url(#cloth-texture)"/>
             `;
             break;
+        case "veil":
+            markup = `<path d="M100,12Q62,12 48,52L42,177Q40,193 58,201L69,197Q63,137 67,81Q70,50 100,34Q130,50 133,81Q137,137 131,197L142,201Q160,193 158,177L152,52Q138,12 100,12Z" fill="${cOuter}" opacity=".88"/><path d="M60,58Q100,40 140,58" fill="none" stroke="${cInner}" stroke-width="6"/><rect x="40" y="12" width="120" height="190" fill="url(#cloth-texture)" opacity=".55"/>`;
+            break;
+        case "wrapped_scarf":
+            markup = `<path d="M52,61Q52,18 100,12Q148,18 148,61Q134,44 100,39Q66,44 52,61Z" fill="${cOuter}"/><path d="M55,39Q100,20 145,39M58,52Q100,34 142,52" fill="none" stroke="${cInner}" stroke-width="7"/><path d="M135,47Q155,91 146,145L129,139Q139,88 125,55Z" fill="${cOuter}"/><rect x="50" y="10" width="106" height="138" fill="url(#cloth-texture)" opacity=".5"/>`;
+            break;
+        case "shepherd_wrap":
+            markup = `<path d="M58,54Q61,20 100,16Q139,20 142,54Q126,39 100,38Q74,39 58,54Z" fill="${cOuter}"/><path d="M59,47Q100,30 141,47" fill="none" stroke="${cInner}" stroke-width="8"/><path d="M62,45L48,117L64,125L79,52Z" fill="${cOuter}"/><rect x="48" y="14" width="96" height="112" fill="url(#cloth-texture)" opacity=".5"/>`;
+            break;
+        case "royal_diadem":
+            markup = `<path d="M58,54L64,25L82,40L100,15L118,40L136,25L142,54Z" fill="${cOuter}" stroke="${cInner}" stroke-width="3"/><path d="M62,50H138" stroke="${cInner}" stroke-width="8"/><circle cx="100" cy="35" r="6" fill="url(#metal-texture)"/>`;
+            break;
+        case "pharaoh_crown":
+            markup = `<path d="M61,69Q57,26 75,10H125Q143,26 139,69L124,58Q117,38 100,34Q83,38 76,58Z" fill="${cOuter}"/><path d="M75,10H125L117,29H83Z" fill="${cInner}"/><path d="M100,9Q94,-5 100,-12Q106,-5 100,9" fill="none" stroke="${cInner}" stroke-width="5"/><rect x="59" y="8" width="82" height="63" fill="url(#cloth-texture)" opacity=".45"/>`;
+            break;
+        case "battle_helmet":
+            markup = `<path d="M57,72Q55,20 100,8Q145,20 143,72L126,66Q121,34 100,29Q79,34 74,66Z" fill="#8b6330" stroke="${cInner}" stroke-width="3"/><path d="M51,68H149V80H51Z" fill="${cOuter}"/><path d="M100,7Q86,-7 82,-18Q100,-12 118,-18Q114,-7 100,7Z" fill="${cOuter}"/><rect x="55" y="7" width="90" height="74" fill="url(#metal-texture)" opacity=".7"/>`;
+            break;
         default: markup = "";
     }
     const hatScaled = hatSize !== 1.0 ? `<g transform="translate(100,30) scale(${hatSize}) translate(-100,-30)">${markup}</g>` : markup;
@@ -826,10 +914,17 @@ function buildSVG(s) {
     const hatOuter = s.hatMatchHair ? s.colorHair : s.colorOuter;
     const materialDefs = `
       <defs>
-        <!-- A subtle, generic woven cloth texture. -->
+        <pattern id="tex-plain" patternUnits="userSpaceOnUse" width="8" height="8"><rect width="8" height="8" fill="transparent"/></pattern>
+        <pattern id="tex-woven_linen" patternUnits="userSpaceOnUse" width="8" height="8"><path d="M0 0H8M0 2H8M0 4H8M0 6H8M0 0V8M2 0V8M4 0V8M6 0V8" stroke="#000" stroke-width=".45" opacity=".13"/></pattern>
+        <pattern id="tex-fine_linen" patternUnits="userSpaceOnUse" width="5" height="5"><path d="M0 1H5M1 0V5" stroke="#fff" stroke-width=".35" opacity=".14"/><path d="M0 4H5M4 0V5" stroke="#000" stroke-width=".3" opacity=".08"/></pattern>
+        <pattern id="tex-herringbone" patternUnits="userSpaceOnUse" width="12" height="8"><path d="M0 0L6 4L12 0M0 8L6 4L12 8" fill="none" stroke="#000" stroke-width="1" opacity=".16"/></pattern>
+        <pattern id="tex-basket_weave" patternUnits="userSpaceOnUse" width="12" height="12"><path d="M0 2H12M0 8H12M2 0V12M8 0V12" stroke="#000" stroke-width="2" opacity=".13"/></pattern>
+        <pattern id="tex-dotted" patternUnits="userSpaceOnUse" width="10" height="10"><circle cx="2.5" cy="2.5" r="1.2" fill="#fff" opacity=".2"/><circle cx="7.5" cy="7.5" r="1.2" fill="#000" opacity=".12"/></pattern>
+        <pattern id="tex-tartan" patternUnits="userSpaceOnUse" width="14" height="14"><path d="M0 3H14M0 10H14M3 0V14M10 0V14" stroke="#000" stroke-width="2" opacity=".14"/><path d="M0 6H14M6 0V14" stroke="#fff" stroke-width="1" opacity=".12"/></pattern>
+        <pattern id="tex-scales" patternUnits="userSpaceOnUse" width="12" height="8"><path d="M0 0Q3 6 6 0Q9 6 12 0M-6 8Q-3 2 0 8Q3 2 6 8Q9 2 12 8" fill="none" stroke="#000" stroke-width="1" opacity=".2"/></pattern>
+        <!-- Alias selected by the character preset. -->
         <pattern id="cloth-texture" patternUnits="userSpaceOnUse" width="8" height="8">
-          <path d="M0,0 H8 M0,2 H8 M0,4 H8 M0,6 H8" stroke-width="0.5" stroke="#000" opacity="0.1" />
-          <path d="M0,0 V8 M2,0 V8 M4,0 V8 M6,0 V8" stroke-width="0.5" stroke="#000" opacity="0.1" />
+          <rect width="8" height="8" fill="url(#tex-${s.materialStyle || 'woven_linen'})"/>
         </pattern>
         <!-- A hammered or burnished metal texture. -->
         <pattern id="metal-texture" patternUnits="userSpaceOnUse" width="20" height="20">
@@ -891,7 +986,7 @@ const FALLBACK_PRESET = {
     eyeShape: "almond", eyeSpacing: 1.0,
     eyebrowStyle: "arched", mouthStyle: "neutral",
     hairStyle: "short", beardStyle: "none", hatStyle: "none",
-    clothingType: "tunic",
+    clothingType: "tunic", materialStyle: "woven_linen",
     faceShape: "oval", foreheadHeight: "medium", chinShape: "rounded",
     earSize: 1.0, earShape: "round", headSize: 1.0, hairSize: 1.0, hatSize: 1.0,
     hatMatchHair: false,
@@ -956,7 +1051,7 @@ function hidePresetError() {
 /* ==========================================================
    UI CONTROLLER
    ========================================================== */
-const ids = ["face-shape:faceShape","forehead-height:foreheadHeight","eye-spacing:eyeSpacing","ear-size:earSize","head-size:headSize","hair-size:hairSize","hat-size:hatSize","chin-shape:chinShape","eye-shape:eyeShape","eyebrow-style:eyebrowStyle","nose-shape:noseShape","mouth-style:mouthStyle","hair-style:hairStyle","beard-style:beardStyle","hat-style:hatStyle","clothing-type:clothingType","ear-shape:earShape"];
+const ids = ["face-shape:faceShape","forehead-height:foreheadHeight","eye-spacing:eyeSpacing","ear-size:earSize","head-size:headSize","hair-size:hairSize","hat-size:hatSize","chin-shape:chinShape","eye-shape:eyeShape","eyebrow-style:eyebrowStyle","nose-shape:noseShape","mouth-style:mouthStyle","hair-style:hairStyle","beard-style:beardStyle","hat-style:hatStyle","clothing-type:clothingType","material-style:materialStyle","ear-shape:earShape"];
 const colorIds = ["color-inner:colorInner","color-outer:colorOuter","color-cloak:colorCloak","color-accent:colorAccent","color-skin:colorSkin","color-hair:colorHair","color-eye:colorEye","color-lip:colorLip","color-garment2:colorGarment2"];
 
 function formatName(str) { return str.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase()); }

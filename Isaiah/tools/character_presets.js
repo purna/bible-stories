@@ -1,10 +1,10 @@
-// Canonical character inventory for Isaiah. Generated from __docs/isaiah-design-source-of-truth.md.
+// Canonical character inventory for Isaiah. Loaded directly by the browser generator.
 const CHARACTER_PRESETS_META = {
   "story": "Isaiah",
   "defaultPreset": "isaiah",
   "groupLabel": "Isaiah characters"
 };
-const STORY_CHARACTER_BASE = {
+const ISAIAH_BASE = {
   "noseScale": 1,
   "noseShape": "straight",
   "eyeShape": "almond",
@@ -33,17 +33,18 @@ const STORY_CHARACTER_BASE = {
   "colorSkin": "#b9825d",
   "colorHair": "#2a1d16",
   "colorEye": "#3d2d24",
-  "colorLip": "#985e50"
+  "colorLip": "#985e50",
+  "materialStyle": "woven_linen"
 };
-const storyPreset=(name,overrides={})=>({...STORY_CHARACTER_BASE,name,...overrides});
+const isaiahPreset = (name, overrides = {}) => ({ ...ISAIAH_BASE, name, ...overrides });
 const CHARACTER_PRESETS_DATA = {
-  "isaiah": storyPreset("Isaiah", {}),
-  "uzziah": storyPreset("Uzziah", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "ahaz": storyPreset("Ahaz", {"clothingType":"layered_robe","colorOuter":"#395b7a","colorAccent":"#d4aa45","dualStripe":true,"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "hezekiah": storyPreset("Hezekiah", {"clothingType":"layered_robe","colorOuter":"#6d3f48","colorAccent":"#d4aa45","dualStripe":true,"hairStyle":"curly"}),
-  "shear_jashub": storyPreset("Shear Jashub", {}),
-  "mahershalalhashbaz": storyPreset("Mahershalalhashbaz", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "seraph": storyPreset("Seraph", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "royal_envoy": storyPreset("Royal Envoy", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
-  "sennacherib": storyPreset("Sennacherib", {}),
+  "isaiah": isaiahPreset("Isaiah", {"hairStyle":"short","hatStyle":"shepherd_wrap","clothingType":"desert_mantle","materialStyle":"herringbone","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":0.9}),
+  "uzziah": isaiahPreset("Uzziah", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"shoulder_waves","hatStyle":"royal_diadem","clothingType":"royal_robes","materialStyle":"dotted","colorInner":"#b78d58","colorOuter":"#365f67","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1}),
+  "ahaz": isaiahPreset("Ahaz", {"clothingType":"royal_robes","colorOuter":"#77414b","colorAccent":"#c89749","dualStripe":true,"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"curly","hatStyle":"royal_diadem","materialStyle":"fine_linen","colorInner":"#d0aa78","colorCloak":"#4c2d36","hatSize":1.1,"hairSize":1.1}),
+  "hezekiah": isaiahPreset("Hezekiah", {"clothingType":"royal_robes","colorOuter":"#53613a","colorAccent":"#b99045","dualStripe":true,"hairStyle":"shoulder_waves","hatStyle":"royal_diadem","materialStyle":"dotted","colorInner":"#c2a36b","colorCloak":"#354229","hatSize":0.9,"hairSize":1.2}),
+  "shear_jashub": isaiahPreset("Shear Jashub", {"hairStyle":"receding","hatStyle":"hood","clothingType":"tunic","materialStyle":"dotted","colorInner":"#d8c39b","colorOuter":"#67547a","colorCloak":"#40364f","colorAccent":"#d0ad58","hatSize":1,"hairSize":0.9}),
+  "mahershalalhashbaz": isaiahPreset("Mahershalalhashbaz", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"locs","hatStyle":"none","clothingType":"traveller_cloak","materialStyle":"tartan","colorInner":"#c1a178","colorOuter":"#875b34","colorCloak":"#533920","colorAccent":"#d0a34c","hatSize":1,"hairSize":1}),
+  "seraph": isaiahPreset("Seraph", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"shaved_sides","hatStyle":"shepherd_wrap","clothingType":"desert_mantle","materialStyle":"woven_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":1.1}),
+  "royal_envoy": isaiahPreset("Royal Envoy", {"hairStyle":"flowing","colorOuter":"#365f67","hatStyle":"wrapped_scarf","clothingType":"work_tunic","materialStyle":"fine_linen","colorInner":"#b78d58","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1.2}),
+  "sennacherib": isaiahPreset("Sennacherib", {"hairStyle":"short","hatStyle":"skullcap","clothingType":"tunic","materialStyle":"herringbone","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1.1,"hairSize":0.9}),
 };

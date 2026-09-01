@@ -1,10 +1,10 @@
-// Canonical character inventory for Esther. Generated from __docs/esther-design-source-of-truth.md.
+// Canonical character inventory for Esther. Loaded directly by the browser generator.
 const CHARACTER_PRESETS_META = {
   "story": "Esther",
   "defaultPreset": "esther",
   "groupLabel": "Esther characters"
 };
-const STORY_CHARACTER_BASE = {
+const ESTHER_BASE = {
   "noseScale": 1,
   "noseShape": "straight",
   "eyeShape": "almond",
@@ -33,16 +33,17 @@ const STORY_CHARACTER_BASE = {
   "colorSkin": "#b9825d",
   "colorHair": "#2a1d16",
   "colorEye": "#3d2d24",
-  "colorLip": "#985e50"
+  "colorLip": "#985e50",
+  "materialStyle": "woven_linen"
 };
-const storyPreset=(name,overrides={})=>({...STORY_CHARACTER_BASE,name,...overrides});
+const estherPreset = (name, overrides = {}) => ({ ...ESTHER_BASE, name, ...overrides });
 const CHARACTER_PRESETS_DATA = {
-  "esther": storyPreset("Esther", {"beardStyle":"none","hairStyle":"tied_back","hatStyle":"headscarf"}),
-  "mordecai": storyPreset("Mordecai", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "ahasuerus": storyPreset("Ahasuerus", {"clothingType":"layered_robe","colorOuter":"#395b7a","colorAccent":"#d4aa45","dualStripe":true,"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "vashti": storyPreset("Vashti", {"beardStyle":"none","hairStyle":"flowing","hatStyle":"headscarf","colorOuter":"#6d3f48"}),
-  "haman": storyPreset("Haman", {}),
-  "zeresh": storyPreset("Zeresh", {"beardStyle":"none","hairStyle":"braids","hatStyle":"headscarf","noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "hathach": storyPreset("Hathach", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "palace_guard": storyPreset("Palace Guard", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
+  "esther": estherPreset("Esther", {"beardStyle":"none","hairStyle":"crown_braids","hatStyle":"royal_diadem","clothingType":"court_dress","materialStyle":"fine_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":0.9}),
+  "mordecai": estherPreset("Mordecai", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"wavy","hatStyle":"shepherd_wrap","clothingType":"traveller_cloak","materialStyle":"fine_linen","colorInner":"#b78d58","colorOuter":"#365f67","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1}),
+  "ahasuerus": estherPreset("Ahasuerus", {"clothingType":"royal_robes","colorOuter":"#77414b","colorAccent":"#c89749","dualStripe":true,"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"curly","hatStyle":"royal_diadem","materialStyle":"fine_linen","colorInner":"#d0aa78","colorCloak":"#4c2d36","hatSize":1.1,"hairSize":1.1}),
+  "vashti": estherPreset("Vashti", {"beardStyle":"none","hairStyle":"crown_braids","hatStyle":"royal_diadem","colorOuter":"#53613a","clothingType":"court_dress","materialStyle":"dotted","colorInner":"#c2a36b","colorCloak":"#354229","colorAccent":"#b99045","hatSize":0.9,"hairSize":1.2}),
+  "haman": estherPreset("Haman", {"hairStyle":"receding","hatStyle":"hood","clothingType":"tunic","materialStyle":"dotted","colorInner":"#d8c39b","colorOuter":"#67547a","colorCloak":"#40364f","colorAccent":"#d0ad58","hatSize":1,"hairSize":0.9}),
+  "zeresh": estherPreset("Zeresh", {"beardStyle":"none","hairStyle":"crown_braids","hatStyle":"royal_diadem","noseShape":"aquiline","eyebrowStyle":"thick","clothingType":"court_dress","materialStyle":"dotted","colorInner":"#c1a178","colorOuter":"#875b34","colorCloak":"#533920","colorAccent":"#d0a34c","hatSize":1.1,"hairSize":1}),
+  "hathach": estherPreset("Hathach", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"shaved_sides","hatStyle":"shepherd_wrap","clothingType":"desert_mantle","materialStyle":"woven_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":1.1}),
+  "palace_guard": estherPreset("Palace Guard", {"hairStyle":"shaved_sides","colorOuter":"#365f67","hatStyle":"battle_helmet","clothingType":"military_lorica","materialStyle":"scales","colorInner":"#b78d58","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1.2}),
 };

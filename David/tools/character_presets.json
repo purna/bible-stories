@@ -31,83 +31,186 @@
     "colorSkin": "#b9825d",
     "colorHair": "#2a1d16",
     "colorEye": "#3d2d24",
-    "colorLip": "#985e50"
+    "colorLip": "#985e50",
+    "materialStyle": "woven_linen"
   },
   "presets": {
     "david_young": {
-      "name": "David Young"
+      "name": "David Young",
+      "hairStyle": "short",
+      "hatStyle": "none",
+      "clothingType": "military_lorica",
+      "materialStyle": "scales",
+      "colorInner": "#d6b477",
+      "colorOuter": "#6f4b32",
+      "colorCloak": "#3f3027",
+      "colorAccent": "#c99b46",
+      "hatSize": 1,
+      "hairSize": 0.9
     },
     "david": {
       "name": "David",
-      "clothingType": "layered_robe",
-      "colorOuter": "#395b7a",
-      "colorAccent": "#d4aa45",
+      "clothingType": "royal_robes",
+      "colorOuter": "#365f67",
+      "colorAccent": "#d3ad53",
       "dualStripe": true,
       "noseShape": "aquiline",
-      "eyebrowStyle": "thick"
+      "eyebrowStyle": "thick",
+      "hairStyle": "shoulder_waves",
+      "hatStyle": "royal_diadem",
+      "materialStyle": "dotted",
+      "colorInner": "#b78d58",
+      "colorCloak": "#263f47",
+      "hatSize": 1,
+      "hairSize": 1
     },
     "samuel": {
       "name": "Samuel",
       "faceShape": "square",
       "chinShape": "square",
-      "colorSkin": "#9d6748"
+      "colorSkin": "#9d6748",
+      "hairStyle": "curly",
+      "hatStyle": "none",
+      "clothingType": "desert_mantle",
+      "materialStyle": "herringbone",
+      "colorInner": "#d0aa78",
+      "colorOuter": "#77414b",
+      "colorCloak": "#4c2d36",
+      "colorAccent": "#c89749",
+      "hatSize": 1,
+      "hairSize": 1.1
     },
     "saul": {
       "name": "Saul",
-      "clothingType": "layered_robe",
-      "colorOuter": "#6d3f48",
-      "colorAccent": "#d4aa45",
+      "clothingType": "royal_robes",
+      "colorOuter": "#53613a",
+      "colorAccent": "#b99045",
       "dualStripe": true,
-      "hairStyle": "curly"
+      "hairStyle": "shoulder_waves",
+      "hatStyle": "royal_diadem",
+      "materialStyle": "dotted",
+      "colorInner": "#c2a36b",
+      "colorCloak": "#354229",
+      "hatSize": 0.9,
+      "hairSize": 1.2
     },
     "jonathan": {
-      "name": "Jonathan"
+      "name": "Jonathan",
+      "hairStyle": "shaved_sides",
+      "hatStyle": "none",
+      "clothingType": "military_lorica",
+      "materialStyle": "scales",
+      "colorInner": "#d8c39b",
+      "colorOuter": "#67547a",
+      "colorCloak": "#40364f",
+      "colorAccent": "#d0ad58",
+      "hatSize": 1,
+      "hairSize": 0.9
     },
     "goliath": {
       "name": "Goliath",
       "noseShape": "aquiline",
-      "eyebrowStyle": "thick"
+      "eyebrowStyle": "thick",
+      "hairStyle": "shaved_sides",
+      "hatStyle": "battle_helmet",
+      "clothingType": "military_lorica",
+      "materialStyle": "scales",
+      "colorInner": "#c1a178",
+      "colorOuter": "#875b34",
+      "colorCloak": "#533920",
+      "colorAccent": "#d0a34c",
+      "hatSize": 1.1,
+      "hairSize": 1
     },
     "abigail": {
       "name": "Abigail",
       "beardStyle": "none",
-      "hairStyle": "tied_back",
-      "hatStyle": "headscarf",
+      "hairStyle": "side_braid",
+      "hatStyle": "shepherd_wrap",
       "faceShape": "square",
       "chinShape": "square",
-      "colorSkin": "#9d6748"
+      "colorSkin": "#9d6748",
+      "clothingType": "desert_mantle",
+      "materialStyle": "woven_linen",
+      "colorInner": "#d6b477",
+      "colorOuter": "#6f4b32",
+      "colorCloak": "#3f3027",
+      "colorAccent": "#c99b46",
+      "hatSize": 0.9,
+      "hairSize": 1.1
     },
     "michal": {
       "name": "Michal",
       "beardStyle": "none",
-      "hairStyle": "flowing",
-      "hatStyle": "headscarf",
-      "colorOuter": "#6d3f48"
+      "hairStyle": "crown_braids",
+      "hatStyle": "wrapped_scarf",
+      "colorOuter": "#365f67",
+      "clothingType": "work_tunic",
+      "materialStyle": "fine_linen",
+      "colorInner": "#b78d58",
+      "colorCloak": "#263f47",
+      "colorAccent": "#d3ad53",
+      "hatSize": 1,
+      "hairSize": 1.2
     },
     "bathsheba": {
       "name": "Bathsheba",
       "beardStyle": "none",
-      "hairStyle": "tied_back",
-      "hatStyle": "headscarf"
+      "hairStyle": "shoulder_waves",
+      "hatStyle": "skullcap",
+      "clothingType": "tunic",
+      "materialStyle": "herringbone",
+      "colorInner": "#d0aa78",
+      "colorOuter": "#77414b",
+      "colorCloak": "#4c2d36",
+      "colorAccent": "#c89749",
+      "hatSize": 1.1,
+      "hairSize": 0.9
     },
     "nathan": {
       "name": "Nathan",
       "noseShape": "aquiline",
-      "eyebrowStyle": "thick"
+      "eyebrowStyle": "thick",
+      "hairStyle": "wavy",
+      "hatStyle": "shepherd_wrap",
+      "clothingType": "prophet_mantle",
+      "materialStyle": "herringbone",
+      "colorInner": "#c2a36b",
+      "colorOuter": "#53613a",
+      "colorCloak": "#354229",
+      "colorAccent": "#b99045",
+      "hatSize": 0.9,
+      "hairSize": 1
     },
     "absalom": {
       "name": "Absalom",
       "faceShape": "square",
       "chinShape": "square",
-      "colorSkin": "#9d6748"
+      "colorSkin": "#9d6748",
+      "hairStyle": "curly",
+      "hatStyle": "none",
+      "clothingType": "desert_mantle",
+      "materialStyle": "dotted",
+      "colorInner": "#d8c39b",
+      "colorOuter": "#67547a",
+      "colorCloak": "#40364f",
+      "colorAccent": "#d0ad58",
+      "hatSize": 1,
+      "hairSize": 1.1
     },
     "solomon": {
       "name": "Solomon",
-      "clothingType": "layered_robe",
-      "colorOuter": "#6d3f48",
-      "colorAccent": "#d4aa45",
+      "clothingType": "royal_robes",
+      "colorOuter": "#875b34",
+      "colorAccent": "#d0a34c",
       "dualStripe": true,
-      "hairStyle": "curly"
+      "hairStyle": "shoulder_waves",
+      "hatStyle": "royal_diadem",
+      "materialStyle": "dotted",
+      "colorInner": "#c1a178",
+      "colorCloak": "#533920",
+      "hatSize": 1.1,
+      "hairSize": 1.2
     }
   }
 }

@@ -31,71 +31,170 @@
     "colorSkin": "#b9825d",
     "colorHair": "#2a1d16",
     "colorEye": "#3d2d24",
-    "colorLip": "#985e50"
+    "colorLip": "#985e50",
+    "materialStyle": "woven_linen"
   },
   "presets": {
     "daniel_young": {
-      "name": "Daniel Young"
+      "name": "Daniel Young",
+      "hairStyle": "curly",
+      "hatStyle": "shepherd_wrap",
+      "clothingType": "desert_mantle",
+      "materialStyle": "herringbone",
+      "colorInner": "#d6b477",
+      "colorOuter": "#6f4b32",
+      "colorCloak": "#3f3027",
+      "colorAccent": "#c99b46",
+      "hatSize": 0.9,
+      "hairSize": 0.9
     },
     "daniel": {
       "name": "Daniel",
       "noseShape": "aquiline",
-      "eyebrowStyle": "thick"
+      "eyebrowStyle": "thick",
+      "hairStyle": "wavy",
+      "hatStyle": "hood",
+      "clothingType": "prophet_mantle",
+      "materialStyle": "herringbone",
+      "colorInner": "#b78d58",
+      "colorOuter": "#365f67",
+      "colorCloak": "#263f47",
+      "colorAccent": "#d3ad53",
+      "hatSize": 1,
+      "hairSize": 1
     },
     "hananiah": {
       "name": "Hananiah",
       "faceShape": "square",
       "chinShape": "square",
-      "colorSkin": "#9d6748"
+      "colorSkin": "#9d6748",
+      "hairStyle": "curly",
+      "hatStyle": "wrapped_scarf",
+      "clothingType": "desert_mantle",
+      "materialStyle": "herringbone",
+      "colorInner": "#d0aa78",
+      "colorOuter": "#77414b",
+      "colorCloak": "#4c2d36",
+      "colorAccent": "#c89749",
+      "hatSize": 1.1,
+      "hairSize": 1.1
     },
     "mishael": {
       "name": "Mishael",
-      "hairStyle": "curly",
-      "colorOuter": "#6d3f48"
+      "hairStyle": "shoulder_waves",
+      "colorOuter": "#53613a",
+      "hatStyle": "skullcap",
+      "clothingType": "work_tunic",
+      "materialStyle": "basket_weave",
+      "colorInner": "#c2a36b",
+      "colorCloak": "#354229",
+      "colorAccent": "#b99045",
+      "hatSize": 0.9,
+      "hairSize": 1.2
     },
     "azariah": {
-      "name": "Azariah"
+      "name": "Azariah",
+      "hairStyle": "receding",
+      "hatStyle": "hood",
+      "clothingType": "tunic",
+      "materialStyle": "dotted",
+      "colorInner": "#d8c39b",
+      "colorOuter": "#67547a",
+      "colorCloak": "#40364f",
+      "colorAccent": "#d0ad58",
+      "hatSize": 1,
+      "hairSize": 0.9
     },
     "nebuchadnezzar": {
       "name": "Nebuchadnezzar",
-      "clothingType": "layered_robe",
-      "colorOuter": "#395b7a",
-      "colorAccent": "#d4aa45",
+      "clothingType": "royal_robes",
+      "colorOuter": "#875b34",
+      "colorAccent": "#d0a34c",
       "dualStripe": true,
       "noseShape": "aquiline",
-      "eyebrowStyle": "thick"
+      "eyebrowStyle": "thick",
+      "hairStyle": "shoulder_waves",
+      "hatStyle": "royal_diadem",
+      "materialStyle": "dotted",
+      "colorInner": "#c1a178",
+      "colorCloak": "#533920",
+      "hatSize": 1.1,
+      "hairSize": 1
     },
     "belshazzar": {
       "name": "Belshazzar",
-      "clothingType": "layered_robe",
-      "colorOuter": "#395b7a",
-      "colorAccent": "#d4aa45",
+      "clothingType": "royal_robes",
+      "colorOuter": "#6f4b32",
+      "colorAccent": "#c99b46",
       "dualStripe": true,
       "faceShape": "square",
       "chinShape": "square",
-      "colorSkin": "#9d6748"
+      "colorSkin": "#9d6748",
+      "hairStyle": "curly",
+      "hatStyle": "royal_diadem",
+      "materialStyle": "fine_linen",
+      "colorInner": "#d6b477",
+      "colorCloak": "#3f3027",
+      "hatSize": 0.9,
+      "hairSize": 1.1
     },
     "darius": {
       "name": "Darius",
-      "clothingType": "layered_robe",
-      "colorOuter": "#6d3f48",
-      "colorAccent": "#d4aa45",
+      "clothingType": "royal_robes",
+      "colorOuter": "#365f67",
+      "colorAccent": "#d3ad53",
       "dualStripe": true,
-      "hairStyle": "curly"
+      "hairStyle": "shoulder_waves",
+      "hatStyle": "royal_diadem",
+      "materialStyle": "dotted",
+      "colorInner": "#b78d58",
+      "colorCloak": "#263f47",
+      "hatSize": 1,
+      "hairSize": 1.2
     },
     "court_official": {
-      "name": "Court Official"
+      "name": "Court Official",
+      "hairStyle": "short",
+      "hatStyle": "skullcap",
+      "clothingType": "tunic",
+      "materialStyle": "herringbone",
+      "colorInner": "#d0aa78",
+      "colorOuter": "#77414b",
+      "colorCloak": "#4c2d36",
+      "colorAccent": "#c89749",
+      "hatSize": 1.1,
+      "hairSize": 0.9
     },
     "accusers": {
       "name": "Accusers",
       "noseShape": "aquiline",
-      "eyebrowStyle": "thick"
+      "eyebrowStyle": "thick",
+      "hairStyle": "wavy",
+      "hatStyle": "hood",
+      "clothingType": "traveller_cloak",
+      "materialStyle": "basket_weave",
+      "colorInner": "#c2a36b",
+      "colorOuter": "#53613a",
+      "colorCloak": "#354229",
+      "colorAccent": "#b99045",
+      "hatSize": 0.9,
+      "hairSize": 1
     },
     "angel": {
       "name": "Angel",
       "faceShape": "square",
       "chinShape": "square",
-      "colorSkin": "#9d6748"
+      "colorSkin": "#9d6748",
+      "hairStyle": "curly",
+      "hatStyle": "none",
+      "clothingType": "desert_mantle",
+      "materialStyle": "dotted",
+      "colorInner": "#d8c39b",
+      "colorOuter": "#67547a",
+      "colorCloak": "#40364f",
+      "colorAccent": "#d0ad58",
+      "hatSize": 1,
+      "hairSize": 1.1
     }
   }
 }

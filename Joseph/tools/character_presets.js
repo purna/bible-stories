@@ -1,10 +1,10 @@
-// Canonical character inventory for Joseph. Generated from __docs/joseph-design-source-of-truth.md.
+// Canonical character inventory for Joseph. Loaded directly by the browser generator.
 const CHARACTER_PRESETS_META = {
   "story": "Joseph",
   "defaultPreset": "joseph_young",
   "groupLabel": "Joseph characters"
 };
-const STORY_CHARACTER_BASE = {
+const JOSEPH_BASE = {
   "noseScale": 1,
   "noseShape": "straight",
   "eyeShape": "almond",
@@ -33,19 +33,20 @@ const STORY_CHARACTER_BASE = {
   "colorSkin": "#b9825d",
   "colorHair": "#2a1d16",
   "colorEye": "#3d2d24",
-  "colorLip": "#985e50"
+  "colorLip": "#985e50",
+  "materialStyle": "woven_linen"
 };
-const storyPreset=(name,overrides={})=>({...STORY_CHARACTER_BASE,name,...overrides});
+const josephPreset = (name, overrides = {}) => ({ ...JOSEPH_BASE, name, ...overrides });
 const CHARACTER_PRESETS_DATA = {
-  "joseph_young": storyPreset("Joseph Young", {}),
-  "joseph": storyPreset("Joseph", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "jacob": storyPreset("Jacob", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "reuben": storyPreset("Reuben", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
-  "judah": storyPreset("Judah", {}),
-  "benjamin": storyPreset("Benjamin", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "potiphar": storyPreset("Potiphar", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "potiphars_wife": storyPreset("Potiphars Wife", {"beardStyle":"none","hairStyle":"flowing","hatStyle":"headscarf","colorOuter":"#6d3f48"}),
-  "cupbearer": storyPreset("Cupbearer", {}),
-  "baker": storyPreset("Baker", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "pharaoh": storyPreset("Pharaoh", {"clothingType":"layered_robe","colorOuter":"#395b7a","colorAccent":"#d4aa45","dualStripe":true,"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
+  "joseph_young": josephPreset("Joseph Young", {"hairStyle":"curly","hatStyle":"none","clothingType":"tunic","materialStyle":"fine_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":1,"hairSize":0.9}),
+  "joseph": josephPreset("Joseph", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"wavy","hatStyle":"shepherd_wrap","clothingType":"traveller_cloak","materialStyle":"fine_linen","colorInner":"#b78d58","colorOuter":"#365f67","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1}),
+  "jacob": josephPreset("Jacob", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"curly","hatStyle":"none","clothingType":"traveller_cloak","materialStyle":"basket_weave","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1,"hairSize":1.1}),
+  "reuben": josephPreset("Reuben", {"hairStyle":"shoulder_waves","colorOuter":"#53613a","hatStyle":"skullcap","clothingType":"work_tunic","materialStyle":"basket_weave","colorInner":"#c2a36b","colorCloak":"#354229","colorAccent":"#b99045","hatSize":0.9,"hairSize":1.2}),
+  "judah": josephPreset("Judah", {"hairStyle":"receding","hatStyle":"hood","clothingType":"tunic","materialStyle":"dotted","colorInner":"#d8c39b","colorOuter":"#67547a","colorCloak":"#40364f","colorAccent":"#d0ad58","hatSize":1,"hairSize":0.9}),
+  "benjamin": josephPreset("Benjamin", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"locs","hatStyle":"none","clothingType":"traveller_cloak","materialStyle":"tartan","colorInner":"#c1a178","colorOuter":"#875b34","colorCloak":"#533920","colorAccent":"#d0a34c","hatSize":1,"hairSize":1}),
+  "potiphar": josephPreset("Potiphar", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"shaved_sides","hatStyle":"shepherd_wrap","clothingType":"desert_mantle","materialStyle":"woven_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":1.1}),
+  "potiphars_wife": josephPreset("Potiphars Wife", {"beardStyle":"none","hairStyle":"crown_braids","hatStyle":"wrapped_scarf","colorOuter":"#365f67","clothingType":"work_tunic","materialStyle":"fine_linen","colorInner":"#b78d58","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1.2}),
+  "cupbearer": josephPreset("Cupbearer", {"hairStyle":"short","hatStyle":"skullcap","clothingType":"tunic","materialStyle":"herringbone","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1.1,"hairSize":0.9}),
+  "baker": josephPreset("Baker", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"wavy","hatStyle":"hood","clothingType":"traveller_cloak","materialStyle":"basket_weave","colorInner":"#c2a36b","colorOuter":"#53613a","colorCloak":"#354229","colorAccent":"#b99045","hatSize":0.9,"hairSize":1}),
+  "pharaoh": josephPreset("Pharaoh", {"clothingType":"royal_robes","colorOuter":"#67547a","colorAccent":"#d0ad58","dualStripe":true,"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"curly","hatStyle":"pharaoh_crown","materialStyle":"fine_linen","colorInner":"#d8c39b","colorCloak":"#40364f","hatSize":1,"hairSize":1.1}),
 };

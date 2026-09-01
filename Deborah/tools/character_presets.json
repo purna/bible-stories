@@ -31,54 +31,114 @@
     "colorSkin": "#b9825d",
     "colorHair": "#2a1d16",
     "colorEye": "#3d2d24",
-    "colorLip": "#985e50"
+    "colorLip": "#985e50",
+    "materialStyle": "woven_linen"
   },
   "presets": {
     "deborah": {
       "name": "Deborah",
       "beardStyle": "none",
-      "hairStyle": "tied_back",
-      "hatStyle": "headscarf"
+      "hairStyle": "side_braid",
+      "hatStyle": "shepherd_wrap",
+      "clothingType": "desert_mantle",
+      "materialStyle": "herringbone",
+      "colorInner": "#d6b477",
+      "colorOuter": "#6f4b32",
+      "colorCloak": "#3f3027",
+      "colorAccent": "#c99b46",
+      "hatSize": 0.9,
+      "hairSize": 0.9
     },
     "barak": {
       "name": "Barak",
       "noseShape": "aquiline",
-      "eyebrowStyle": "thick"
+      "eyebrowStyle": "thick",
+      "hairStyle": "shaved_sides",
+      "hatStyle": "battle_helmet",
+      "clothingType": "military_lorica",
+      "materialStyle": "scales",
+      "colorInner": "#b78d58",
+      "colorOuter": "#365f67",
+      "colorCloak": "#263f47",
+      "colorAccent": "#d3ad53",
+      "hatSize": 1,
+      "hairSize": 1
     },
     "jael": {
       "name": "Jael",
       "beardStyle": "none",
-      "hairStyle": "tied_back",
-      "hatStyle": "headscarf",
+      "hairStyle": "shoulder_waves",
+      "hatStyle": "wrapped_scarf",
       "faceShape": "square",
       "chinShape": "square",
-      "colorSkin": "#9d6748"
+      "colorSkin": "#9d6748",
+      "clothingType": "desert_mantle",
+      "materialStyle": "herringbone",
+      "colorInner": "#d0aa78",
+      "colorOuter": "#77414b",
+      "colorCloak": "#4c2d36",
+      "colorAccent": "#c89749",
+      "hatSize": 1.1,
+      "hairSize": 1.1
     },
     "sisera": {
       "name": "Sisera",
-      "hairStyle": "curly",
-      "colorOuter": "#6d3f48"
+      "hairStyle": "short",
+      "colorOuter": "#53613a",
+      "hatStyle": "battle_helmet",
+      "clothingType": "military_lorica",
+      "materialStyle": "scales",
+      "colorInner": "#c2a36b",
+      "colorCloak": "#354229",
+      "colorAccent": "#b99045",
+      "hatSize": 0.9,
+      "hairSize": 1.2
     },
     "jabin": {
       "name": "Jabin",
-      "clothingType": "layered_robe",
-      "colorOuter": "#395b7a",
-      "colorAccent": "#d4aa45",
-      "dualStripe": true
+      "clothingType": "royal_robes",
+      "colorOuter": "#67547a",
+      "colorAccent": "#d0ad58",
+      "dualStripe": true,
+      "hairStyle": "curly",
+      "hatStyle": "royal_diadem",
+      "materialStyle": "fine_linen",
+      "colorInner": "#d8c39b",
+      "colorCloak": "#40364f",
+      "hatSize": 1,
+      "hairSize": 0.9
     },
     "israelite_scout": {
       "name": "Israelite Scout",
       "noseShape": "aquiline",
-      "eyebrowStyle": "thick"
+      "eyebrowStyle": "thick",
+      "hairStyle": "shaved_sides",
+      "hatStyle": "battle_helmet",
+      "clothingType": "military_lorica",
+      "materialStyle": "scales",
+      "colorInner": "#c1a178",
+      "colorOuter": "#875b34",
+      "colorCloak": "#533920",
+      "colorAccent": "#d0a34c",
+      "hatSize": 1.1,
+      "hairSize": 1
     },
     "village_woman": {
       "name": "Village Woman",
       "beardStyle": "none",
-      "hairStyle": "tied_back",
-      "hatStyle": "headscarf",
+      "hairStyle": "side_braid",
+      "hatStyle": "shepherd_wrap",
       "faceShape": "square",
       "chinShape": "square",
-      "colorSkin": "#9d6748"
+      "colorSkin": "#9d6748",
+      "clothingType": "desert_mantle",
+      "materialStyle": "woven_linen",
+      "colorInner": "#d6b477",
+      "colorOuter": "#6f4b32",
+      "colorCloak": "#3f3027",
+      "colorAccent": "#c99b46",
+      "hatSize": 0.9,
+      "hairSize": 1.1
     }
   }
 }

@@ -1,10 +1,10 @@
-// Canonical character inventory for Nehemiah. Generated from __docs/nehemiah-design-source-of-truth.md.
+// Canonical character inventory for Nehemiah. Loaded directly by the browser generator.
 const CHARACTER_PRESETS_META = {
   "story": "Nehemiah",
   "defaultPreset": "nehemiah",
   "groupLabel": "Nehemiah characters"
 };
-const STORY_CHARACTER_BASE = {
+const NEHEMIAH_BASE = {
   "noseScale": 1,
   "noseShape": "straight",
   "eyeShape": "almond",
@@ -33,17 +33,18 @@ const STORY_CHARACTER_BASE = {
   "colorSkin": "#b9825d",
   "colorHair": "#2a1d16",
   "colorEye": "#3d2d24",
-  "colorLip": "#985e50"
+  "colorLip": "#985e50",
+  "materialStyle": "woven_linen"
 };
-const storyPreset=(name,overrides={})=>({...STORY_CHARACTER_BASE,name,...overrides});
+const nehemiahPreset = (name, overrides = {}) => ({ ...NEHEMIAH_BASE, name, ...overrides });
 const CHARACTER_PRESETS_DATA = {
-  "nehemiah": storyPreset("Nehemiah", {}),
-  "artaxerxes": storyPreset("Artaxerxes", {"clothingType":"layered_robe","colorOuter":"#395b7a","colorAccent":"#d4aa45","dualStripe":true,"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "hanani": storyPreset("Hanani", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "sanballat": storyPreset("Sanballat", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
-  "tobiah": storyPreset("Tobiah", {}),
-  "geshem": storyPreset("Geshem", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "ezra": storyPreset("Ezra", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "eliashib": storyPreset("Eliashib", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
-  "wall_builder": storyPreset("Wall Builder", {}),
+  "nehemiah": nehemiahPreset("Nehemiah", {"hairStyle":"short","hatStyle":"none","clothingType":"tunic","materialStyle":"woven_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":1,"hairSize":0.9}),
+  "artaxerxes": nehemiahPreset("Artaxerxes", {"clothingType":"royal_robes","colorOuter":"#365f67","colorAccent":"#d3ad53","dualStripe":true,"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"shoulder_waves","hatStyle":"royal_diadem","materialStyle":"dotted","colorInner":"#b78d58","colorCloak":"#263f47","hatSize":1,"hairSize":1}),
+  "hanani": nehemiahPreset("Hanani", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"curly","hatStyle":"wrapped_scarf","clothingType":"desert_mantle","materialStyle":"herringbone","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1.1,"hairSize":1.1}),
+  "sanballat": nehemiahPreset("Sanballat", {"hairStyle":"shoulder_waves","colorOuter":"#53613a","hatStyle":"skullcap","clothingType":"work_tunic","materialStyle":"basket_weave","colorInner":"#c2a36b","colorCloak":"#354229","colorAccent":"#b99045","hatSize":0.9,"hairSize":1.2}),
+  "tobiah": nehemiahPreset("Tobiah", {"hairStyle":"receding","hatStyle":"hood","clothingType":"tunic","materialStyle":"dotted","colorInner":"#d8c39b","colorOuter":"#67547a","colorCloak":"#40364f","colorAccent":"#d0ad58","hatSize":1,"hairSize":0.9}),
+  "geshem": nehemiahPreset("Geshem", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"locs","hatStyle":"none","clothingType":"traveller_cloak","materialStyle":"tartan","colorInner":"#c1a178","colorOuter":"#875b34","colorCloak":"#533920","colorAccent":"#d0a34c","hatSize":1,"hairSize":1}),
+  "ezra": nehemiahPreset("Ezra", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"shaved_sides","hatStyle":"shepherd_wrap","clothingType":"desert_mantle","materialStyle":"woven_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":1.1}),
+  "eliashib": nehemiahPreset("Eliashib", {"hairStyle":"flowing","colorOuter":"#365f67","hatStyle":"wrapped_scarf","clothingType":"work_tunic","materialStyle":"fine_linen","colorInner":"#b78d58","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1.2}),
+  "wall_builder": nehemiahPreset("Wall Builder", {"hairStyle":"short","hatStyle":"none","clothingType":"work_tunic","materialStyle":"woven_linen","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1,"hairSize":0.9}),
 };

@@ -1,10 +1,10 @@
-// Canonical character inventory for Deborah. Generated from __docs/deborah-design-source-of-truth.md.
+// Canonical character inventory for Deborah. Loaded directly by the browser generator.
 const CHARACTER_PRESETS_META = {
   "story": "Deborah",
   "defaultPreset": "deborah",
   "groupLabel": "Deborah characters"
 };
-const STORY_CHARACTER_BASE = {
+const DEBORAH_BASE = {
   "noseScale": 1,
   "noseShape": "straight",
   "eyeShape": "almond",
@@ -33,15 +33,16 @@ const STORY_CHARACTER_BASE = {
   "colorSkin": "#b9825d",
   "colorHair": "#2a1d16",
   "colorEye": "#3d2d24",
-  "colorLip": "#985e50"
+  "colorLip": "#985e50",
+  "materialStyle": "woven_linen"
 };
-const storyPreset=(name,overrides={})=>({...STORY_CHARACTER_BASE,name,...overrides});
+const deborahPreset = (name, overrides = {}) => ({ ...DEBORAH_BASE, name, ...overrides });
 const CHARACTER_PRESETS_DATA = {
-  "deborah": storyPreset("Deborah", {"beardStyle":"none","hairStyle":"tied_back","hatStyle":"headscarf"}),
-  "barak": storyPreset("Barak", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "jael": storyPreset("Jael", {"beardStyle":"none","hairStyle":"tied_back","hatStyle":"headscarf","faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
-  "sisera": storyPreset("Sisera", {"hairStyle":"curly","colorOuter":"#6d3f48"}),
-  "jabin": storyPreset("Jabin", {"clothingType":"layered_robe","colorOuter":"#395b7a","colorAccent":"#d4aa45","dualStripe":true}),
-  "israelite_scout": storyPreset("Israelite Scout", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "village_woman": storyPreset("Village Woman", {"beardStyle":"none","hairStyle":"tied_back","hatStyle":"headscarf","faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
+  "deborah": deborahPreset("Deborah", {"beardStyle":"none","hairStyle":"side_braid","hatStyle":"shepherd_wrap","clothingType":"desert_mantle","materialStyle":"herringbone","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":0.9}),
+  "barak": deborahPreset("Barak", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"shaved_sides","hatStyle":"battle_helmet","clothingType":"military_lorica","materialStyle":"scales","colorInner":"#b78d58","colorOuter":"#365f67","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1}),
+  "jael": deborahPreset("Jael", {"beardStyle":"none","hairStyle":"shoulder_waves","hatStyle":"wrapped_scarf","faceShape":"square","chinShape":"square","colorSkin":"#9d6748","clothingType":"desert_mantle","materialStyle":"herringbone","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1.1,"hairSize":1.1}),
+  "sisera": deborahPreset("Sisera", {"hairStyle":"short","colorOuter":"#53613a","hatStyle":"battle_helmet","clothingType":"military_lorica","materialStyle":"scales","colorInner":"#c2a36b","colorCloak":"#354229","colorAccent":"#b99045","hatSize":0.9,"hairSize":1.2}),
+  "jabin": deborahPreset("Jabin", {"clothingType":"royal_robes","colorOuter":"#67547a","colorAccent":"#d0ad58","dualStripe":true,"hairStyle":"curly","hatStyle":"royal_diadem","materialStyle":"fine_linen","colorInner":"#d8c39b","colorCloak":"#40364f","hatSize":1,"hairSize":0.9}),
+  "israelite_scout": deborahPreset("Israelite Scout", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"shaved_sides","hatStyle":"battle_helmet","clothingType":"military_lorica","materialStyle":"scales","colorInner":"#c1a178","colorOuter":"#875b34","colorCloak":"#533920","colorAccent":"#d0a34c","hatSize":1.1,"hairSize":1}),
+  "village_woman": deborahPreset("Village Woman", {"beardStyle":"none","hairStyle":"side_braid","hatStyle":"shepherd_wrap","faceShape":"square","chinShape":"square","colorSkin":"#9d6748","clothingType":"desert_mantle","materialStyle":"woven_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":0.9,"hairSize":1.1}),
 };

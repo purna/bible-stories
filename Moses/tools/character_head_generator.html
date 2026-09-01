@@ -914,10 +914,17 @@ function buildSVG(s) {
     const hatOuter = s.hatMatchHair ? s.colorHair : s.colorOuter;
     const materialDefs = `
       <defs>
-        <!-- A subtle, generic woven cloth texture. -->
+        <pattern id="tex-plain" patternUnits="userSpaceOnUse" width="8" height="8"><rect width="8" height="8" fill="transparent"/></pattern>
+        <pattern id="tex-woven_linen" patternUnits="userSpaceOnUse" width="8" height="8"><path d="M0 0H8M0 2H8M0 4H8M0 6H8M0 0V8M2 0V8M4 0V8M6 0V8" stroke="#000" stroke-width=".45" opacity=".13"/></pattern>
+        <pattern id="tex-fine_linen" patternUnits="userSpaceOnUse" width="5" height="5"><path d="M0 1H5M1 0V5" stroke="#fff" stroke-width=".35" opacity=".14"/><path d="M0 4H5M4 0V5" stroke="#000" stroke-width=".3" opacity=".08"/></pattern>
+        <pattern id="tex-herringbone" patternUnits="userSpaceOnUse" width="12" height="8"><path d="M0 0L6 4L12 0M0 8L6 4L12 8" fill="none" stroke="#000" stroke-width="1" opacity=".16"/></pattern>
+        <pattern id="tex-basket_weave" patternUnits="userSpaceOnUse" width="12" height="12"><path d="M0 2H12M0 8H12M2 0V12M8 0V12" stroke="#000" stroke-width="2" opacity=".13"/></pattern>
+        <pattern id="tex-dotted" patternUnits="userSpaceOnUse" width="10" height="10"><circle cx="2.5" cy="2.5" r="1.2" fill="#fff" opacity=".2"/><circle cx="7.5" cy="7.5" r="1.2" fill="#000" opacity=".12"/></pattern>
+        <pattern id="tex-tartan" patternUnits="userSpaceOnUse" width="14" height="14"><path d="M0 3H14M0 10H14M3 0V14M10 0V14" stroke="#000" stroke-width="2" opacity=".14"/><path d="M0 6H14M6 0V14" stroke="#fff" stroke-width="1" opacity=".12"/></pattern>
+        <pattern id="tex-scales" patternUnits="userSpaceOnUse" width="12" height="8"><path d="M0 0Q3 6 6 0Q9 6 12 0M-6 8Q-3 2 0 8Q3 2 6 8Q9 2 12 8" fill="none" stroke="#000" stroke-width="1" opacity=".2"/></pattern>
+        <!-- Alias selected by the character preset. -->
         <pattern id="cloth-texture" patternUnits="userSpaceOnUse" width="8" height="8">
-          <path d="M0,0 H8 M0,2 H8 M0,4 H8 M0,6 H8" stroke-width="0.5" stroke="#000" opacity="0.1" />
-          <path d="M0,0 V8 M2,0 V8 M4,0 V8 M6,0 V8" stroke-width="0.5" stroke="#000" opacity="0.1" />
+          <rect width="8" height="8" fill="url(#tex-${s.materialStyle || 'woven_linen'})"/>
         </pattern>
         <!-- A hammered or burnished metal texture. -->
         <pattern id="metal-texture" patternUnits="userSpaceOnUse" width="20" height="20">
@@ -979,7 +986,7 @@ const FALLBACK_PRESET = {
     eyeShape: "almond", eyeSpacing: 1.0,
     eyebrowStyle: "arched", mouthStyle: "neutral",
     hairStyle: "short", beardStyle: "none", hatStyle: "none",
-    clothingType: "tunic",
+    clothingType: "tunic", materialStyle: "woven_linen",
     faceShape: "oval", foreheadHeight: "medium", chinShape: "rounded",
     earSize: 1.0, earShape: "round", headSize: 1.0, hairSize: 1.0, hatSize: 1.0,
     hatMatchHair: false,
@@ -1044,7 +1051,7 @@ function hidePresetError() {
 /* ==========================================================
    UI CONTROLLER
    ========================================================== */
-const ids = ["face-shape:faceShape","forehead-height:foreheadHeight","eye-spacing:eyeSpacing","ear-size:earSize","head-size:headSize","hair-size:hairSize","hat-size:hatSize","chin-shape:chinShape","eye-shape:eyeShape","eyebrow-style:eyebrowStyle","nose-shape:noseShape","mouth-style:mouthStyle","hair-style:hairStyle","beard-style:beardStyle","hat-style:hatStyle","clothing-type:clothingType","ear-shape:earShape"];
+const ids = ["face-shape:faceShape","forehead-height:foreheadHeight","eye-spacing:eyeSpacing","ear-size:earSize","head-size:headSize","hair-size:hairSize","hat-size:hatSize","chin-shape:chinShape","eye-shape:eyeShape","eyebrow-style:eyebrowStyle","nose-shape:noseShape","mouth-style:mouthStyle","hair-style:hairStyle","beard-style:beardStyle","hat-style:hatStyle","clothing-type:clothingType","material-style:materialStyle","ear-shape:earShape"];
 const colorIds = ["color-inner:colorInner","color-outer:colorOuter","color-cloak:colorCloak","color-accent:colorAccent","color-skin:colorSkin","color-hair:colorHair","color-eye:colorEye","color-lip:colorLip","color-garment2:colorGarment2"];
 
 function formatName(str) { return str.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase()); }
