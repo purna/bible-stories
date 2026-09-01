@@ -29,30 +29,42 @@
     modal.hidden = true;
     modal.innerHTML = `
       <section class="story-info-card" role="dialog" aria-modal="true" aria-labelledby="storyInfoTitle">
-        <button class="story-info-close" type="button" aria-label="Close information">×</button>
-        <span class="story-info-kicker">BEHIND THE PANELS</span>
-        <h2 id="storyInfoTitle">${escapeHtml(storyName)}</h2>
-        <p class="story-info-lead">An interactive comic from <a href="https://www.pixelagent.co.uk/" target="_blank" rel="noopener noreferrer">Pixel Agent</a>.</p>
+        <div class="story-info-header">
+          <button class="story-info-close" type="button" aria-label="Close information">×</button>
+          <span class="story-info-kicker">BEHIND THE PANELS</span>
+          <h2 id="storyInfoTitle">${escapeHtml(storyName)}</h2>
+          <p class="story-info-lead">An interactive comic from <a href="https://www.pixelagent.co.uk/" target="_blank" rel="noopener noreferrer">Pixel Agent</a>.</p>
+        </div>
 
-        <h3>Credits</h3>
-        <p><strong>Creative direction, illustration, animation and development:</strong> Pixel Agent</p>
-        <p><strong>Story:</strong> Adapted from the biblical account for an interactive comic experience.</p>
-        <p><strong>Music and sound:</strong> Original instrumental story music and interface sound design.</p>
+        <div class="story-info-scroll">
+          <h3>Credits</h3>
+          <p><strong>Creative direction, illustration, animation and development:</strong> Pixel Agent</p>
+          <p><strong>Story:</strong> Adapted from the biblical account for an interactive comic experience.</p>
+          <p><strong>Music and sound:</strong> Original instrumental story music and interface sound design.</p>
 
-        <h3>Built with</h3>
-        <ul class="story-info-libraries">${libraries.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+          <h3>Built with</h3>
+          <ul class="story-info-libraries">${libraries.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
 
-        ${toolLinks.length ? `<h3>Create story assets</h3><div class="story-info-links">${toolLinks.map(link => `<a href="${escapeAttribute(link.href)}">${escapeHtml(link.label)}</a>`).join('')}</div>` : ''}
+          ${toolLinks.length ? `<h3>Create story assets</h3><div class="story-info-links">${toolLinks.map(link => `<a href="${escapeAttribute(link.href)}">${escapeHtml(link.label)}</a>`).join('')}</div>` : ''}
 
-        <h3>About</h3>
-        <p>Explore more creative, interactive work at <a href="https://www.pixelagent.co.uk/" target="_blank" rel="noopener noreferrer">www.pixelagent.co.uk</a>.</p>
-        <p class="story-info-small">This project is an independent creative adaptation. Library names and trademarks belong to their respective owners.</p>
+          <h3>About</h3>
+          <p>Explore more creative, interactive work at <a href="https://www.pixelagent.co.uk/" target="_blank" rel="noopener noreferrer">www.pixelagent.co.uk</a>.</p>
+          <p class="story-info-small">This project is an independent creative adaptation. Library names and trademarks belong to their respective owners.</p>
+        </div>
       </section>`;
     document.body.appendChild(modal);
 
     const card = modal.querySelector('.story-info-card');
     const closeButton = modal.querySelector('.story-info-close');
+    const scrollArea = modal.querySelector('.story-info-scroll');
     let previousOverflow = '';
+
+    function updateScrollCue() {
+      const hasMore = scrollArea.scrollHeight - scrollArea.scrollTop - scrollArea.clientHeight > 2;
+      card.classList.toggle('has-more', hasMore);
+    }
+    scrollArea.addEventListener('scroll', updateScrollCue);
+    window.addEventListener('resize', () => { if (!modal.hidden) updateScrollCue(); });
 
     function openModal() {
       if (window.StoryRuntime) window.StoryRuntime.lock('info-modal');
@@ -60,6 +72,8 @@
       modal.hidden = false;
       document.body.style.overflow = 'hidden';
       infoButton.setAttribute('aria-expanded', 'true');
+      scrollArea.scrollTop = 0;
+      updateScrollCue();
       closeButton.focus();
     }
     function closeModal() {
