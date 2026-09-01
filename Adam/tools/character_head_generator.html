@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Character Profile SVG Generator — Front View</title>
+<title>Character Head Generator — Adam</title>
 <link href="../fonts.css" rel="stylesheet">
 <!-- JSZip for bulk exporting -->
 <script src="../vendor/jszip.3.10.1.min.js"></script>
@@ -154,7 +154,7 @@
 <div class="workspace">
   <!-- ============ SIDEBAR ============ -->
   <div class="sidebar">
-    <div class="brand">Head Forge <small>Front View</small></div>
+    <div class="brand">Adam Head Forge <small>Front View</small></div>
 
     <div class="control-group">
       <h3 class="section-title">Character Presets</h3>
@@ -907,8 +907,8 @@ function loadPresets() {
     if (typeof CHARACTER_PRESETS_DATA !== "undefined" && CHARACTER_PRESETS_DATA && Object.keys(CHARACTER_PRESETS_DATA).length) {
         presets = CHARACTER_PRESETS_DATA;
         populatePresetSelect();
-        const startKey = presets["adam"] ? "adam" : Object.keys(presets)[0];
-        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[startKey] };
+        const firstKey = (typeof CHARACTER_PRESETS_META !== "undefined" && CHARACTER_PRESETS_META.defaultPreset) || Object.keys(presets)[0];
+        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[firstKey] };
         hidePresetError();
     } else {
         console.error("CHARACTER_PRESETS_DATA not found — character_presets.js did not load.");
@@ -923,9 +923,7 @@ function populatePresetSelect() {
     select.innerHTML = '<option value="">-- Select --</option>';
 
     const groups = {
-      "patriarchs": { label: "Patriarchs", characters: ["adam", "eve"] },
-      "garden": { label: "Garden of Eden", characters: ["serpent", "god"] },
-      "offspring": { label: "Sons of Adam", characters: ["cain", "abel"] }
+      "story": { label: (typeof CHARACTER_PRESETS_META !== "undefined" ? CHARACTER_PRESETS_META.groupLabel : "Story characters"), characters: Object.keys(presets) }
     };
 
     Object.values(groups).forEach(group => {

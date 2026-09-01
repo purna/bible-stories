@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Character Profile SVG Generator — Front View</title>
+<title>Character Head Generator — Jonah</title>
 <link href="../fonts.css" rel="stylesheet">
 <!-- JSZip for bulk exporting -->
 <script src="../vendor/jszip.3.10.1.min.js"></script>
@@ -154,14 +154,14 @@
 <div class="workspace">
   <!-- ============ SIDEBAR ============ -->
   <div class="sidebar">
-    <div class="brand">Head Forge <small>Front View</small></div>
+    <div class="brand">Jonah Head Forge <small>Front View</small></div>
 
     <div class="control-group">
       <h3 class="section-title">Character Presets</h3>
       <label class="field" for="characterPresetSelect"><strong>Select Character</strong></label>
       <div class="preset-row">
         <select id="characterPresetSelect">
-          <option value="">-- Select a Character --</option>
+          <!-- Options will be dynamically populated by JavaScript -->
       </select>
       <button id="load-preset">Load</button>
       <div id="preset-status" style="display:none; font-size:.72rem; color:#c98a5a; margin-top:8px; line-height:1.4;"></div>
@@ -519,9 +519,9 @@ function chinMarkup(shape, colorSkin, headSize) {
 /* ---------- WARDROBE ---------- */
 function wardrobeMarkup(style, cInner, cOuter, cCloak, cAccent) {
     let result = "";
-
+    // Apply cloth texture to fabric-based base layers
     if (["layered_robe", "military_lorica", "priestly_ephod"].includes(style)) {
-        result += `<path d="M20,240 L30,165 C60,150 140,150 170,165 L180,240 Z" fill="${cCloak}" opacity="0.9"/>`;
+        result += `<path d="M20,240 L30,165 C60,150 140,150 170,165 L180,240 Z" fill="${cCloak}" /><rect x="20" y="150" width="160" height="90" fill="url(#cloth-texture)" />`;
     }
 
     switch (style) {
@@ -534,10 +534,10 @@ function wardrobeMarkup(style, cInner, cOuter, cCloak, cAccent) {
             break;
         case "layered_robe":
             result += `
-                <path d="M50,240 L60,165 L100,210 L140,165 L150,240 Z" fill="${cInner}" />
-                <path d="M30,240 L40,180 L80,210 L30,240 Z" fill="${cOuter}" />
-                <path d="M170,240 L160,180 L120,210 L170,240 Z" fill="${cOuter}" />
-                <path d="M70,240 L80,180 L120,180 L130,240 Z" fill="${cAccent}" opacity="0.6"/>
+                <path d="M50,240 L60,165 L100,210 L140,165 L150,240 Z" fill="${cInner}" /><rect x="50" y="165" width="100" height="75" fill="url(#cloth-texture)" />
+                <path d="M30,240 L40,180 L80,210 L30,240 Z" fill="${cOuter}" /><path d="M30,240 L40,180 L80,210 L30,240 Z" fill="url(#cloth-texture)" />
+                <path d="M170,240 L160,180 L120,210 L170,240 Z" fill="${cOuter}" /><path d="M170,240 L160,180 L120,210 L170,240 Z" fill="url(#cloth-texture)" />
+                <path d="M70,240 L80,180 L120,180 L130,240 Z" fill="${cAccent}" opacity="0.6"/><path d="M70,240 L80,180 L120,180 L130,240 Z" fill="url(#cloth-texture)" opacity="0.6"/>
             `;
             break;
         case "priestly_ephod":
@@ -545,10 +545,11 @@ function wardrobeMarkup(style, cInner, cOuter, cCloak, cAccent) {
                 <path d="M30,240 L45,180 C60,165 140,165 155,180 L170,240 Z" fill="${cInner}" />
                 <path d="M70,175 L130,175 L130,240 L70,240 Z" fill="${cOuter}" />
                 <rect x="85" y="185" width="30" height="30" fill="${cAccent}" rx="4"/>
-                <circle cx="92" cy="192" r="3" fill="#ffffff" opacity="0.5"/>
-                <circle cx="108" cy="192" r="3" fill="#ffffff" opacity="0.5"/>
-                <circle cx="92" cy="208" r="3" fill="#ffffff" opacity="0.5"/>
-                <circle cx="108" cy="208" r="3" fill="#ffffff" opacity="0.5"/>
+                <rect x="85" y="185" width="30" height="30" fill="url(#metal-texture)" rx="4"/>
+                <circle cx="92" cy="192" r="3" fill="#ffffff" opacity="0.3"/>
+                <circle cx="108" cy="192" r="3" fill="#ffffff" opacity="0.3"/>
+                <circle cx="92" cy="208" r="3" fill="#ffffff" opacity="0.3"/>
+                <circle cx="108" cy="208" r="3" fill="#ffffff" opacity="0.3"/>
             `;
             break;
         case "military_lorica":
@@ -558,7 +559,8 @@ function wardrobeMarkup(style, cInner, cOuter, cCloak, cAccent) {
                 <path d="M42,220 L158,220 L158,235 L42,235 Z" fill="${cOuter}" />
                 <path d="M30,240 C35,190 60,170 80,170 L85,210 C50,210 40,240 30,240 Z" fill="${cOuter}" />
                 <path d="M170,240 C165,190 140,170 120,170 L115,210 C150,210 160,240 170,240 Z" fill="${cOuter}" />
-                <circle cx="100" cy="185" r="10" fill="${cAccent}" />
+                <circle cx="100" cy="185" r="10" fill="${cAccent}" /><!-- Metal Brooch -->
+                <circle cx="100" cy="185" r="10" fill="url(#metal-texture)" />
             `;
             break;
         case "merchant_sash":
@@ -779,14 +781,14 @@ function hatMarkup(style, cInner, cOuter, headSize, hatSize) {
         case "none": markup = ""; break;
         case "turban":
             markup = `
-                <path d="M55,55 C55,30 75,15 100,15 C125,15 145,30 145,55 C145,65 140,70 133,68 C136,50 122,32 100,32 C78,32 64,50 67,68 C60,70 55,65 55,55 Z" fill="${cOuter}"/>
+                <path d="M55,55 C55,30 75,15 100,15 C125,15 145,30 145,55 C145,65 140,70 133,68 C136,50 122,32 100,32 C78,32 64,50 67,68 C60,70 55,65 55,55 Z" fill="${cOuter}"/><rect x="55" y="15" width="90" height="55" fill="url(#cloth-texture)" />
                 <path d="M62,42 C78,36 122,36 138,42 C138,46 134,48 128,46 C112,42 88,42 72,46 C66,48 62,46 62,42 Z" fill="${cOuter}" opacity="0.6"/>
-                <path d="M95,15 C90,20 90,28 96,32 L104,32 C110,28 110,20 105,15 Z" fill="${cInner}"/>
+                <path d="M95,15 C90,20 90,28 96,32 L104,32 C110,28 110,20 105,15 Z" fill="${cInner}"/><path d="M95,15 C90,20 90,28 96,32 L104,32 C110,28 110,20 105,15 Z" fill="url(#metal-texture)"/>
             `;
             break;
         case "hood":
             markup = `
-                <path d="M100,10 C60,10 42,42 44,85 C45,120 42,160 36,205 C34,222 42,236 58,236 L74,236 C68,195 68,140 72,100 C74,68 84,40 100,38 C116,40 126,68 128,100 C132,140 132,195 126,236 L142,236 C158,236 166,222 164,205 C158,160 155,120 156,85 C158,42 140,10 100,10 Z" fill="${cOuter}"/>
+                <path d="M100,10 C60,10 42,42 44,85 C45,120 42,160 36,205 C34,222 42,236 58,236 L74,236 C68,195 68,140 72,100 C74,68 84,40 100,38 C116,40 126,68 128,100 C132,140 132,195 126,236 L142,236 C158,236 166,222 164,205 C158,160 155,120 156,85 C158,42 140,10 100,10 Z" fill="${cOuter}"/><rect x="34" y="10" width="132" height="226" fill="url(#cloth-texture)" />
                 <path d="M70,60 C78,50 122,50 130,60 C130,64 126,66 120,63 C108,58 92,58 80,63 C74,66 70,64 70,60 Z" fill="${cInner}"/>
             `;
             break;
@@ -795,19 +797,22 @@ function hatMarkup(style, cInner, cOuter, headSize, hatSize) {
             break;
         case "headscarf":
             markup = `
-                <path d="M100,12 C65,12 46,38 47,72 C48,100 44,130 40,160 C38,175 46,186 60,186 C58,150 60,110 66,80 C70,55 82,38 100,36 C118,38 130,55 134,80 C140,110 142,150 140,186 C154,186 162,175 160,160 C156,130 152,100 153,72 C154,38 135,12 100,12 Z" fill="${cOuter}"/>
+                <path d="M100,12 C65,12 46,38 47,72 C48,100 44,130 40,160 C38,175 46,186 60,186 C58,150 60,110 66,80 C70,55 82,38 100,36 C118,38 130,55 134,80 C140,110 142,150 140,186 C154,186 162,175 160,160 C156,130 152,100 153,72 C154,38 135,12 100,12 Z" fill="${cOuter}"/><rect x="38" y="12" width="124" height="174" fill="url(#cloth-texture)" />
                 <path d="M64,66 C76,58 124,58 136,66 C136,71 131,73 124,69 C110,63 90,63 76,69 C69,73 64,71 64,66 Z" fill="${cInner}"/>
             `;
             break;
         case "helmet":
             markup = `
-                <path d="M62,50 C62,20 78,8 100,8 C122,8 138,20 138,50 L138,80 L120,80 C120,45 112,28 100,28 C88,28 80,45 80,80 L62,80 Z" fill="#666666"/>
-                <path d="M96,4 C90,4 86,8 86,60 L98,60 C99,40 99,20 100,4 Z" fill="#444444"/>
-                <path d="M102,4 C108,4 112,8 112,60 L100,60 C99,40 99,20 100,4 Z" fill="#444444"/>
-                <path d="M60,78 L140,78 L140,88 L60,88 Z" fill="#555555"/>
-                <path d="M60,50 L58,86 L68,86 L70,52 Z" fill="#555555"/>
-                <path d="M140,50 L142,86 L132,86 L130,52 Z" fill="#555555"/>
-                <path d="M92,2 C92,-10 108,-10 108,2 L108,12 L92,12 Z" fill="${cOuter}"/>
+                <g fill="#666666">
+                    <path d="M62,50 C62,20 78,8 100,8 C122,8 138,20 138,50 L138,80 L120,80 C120,45 112,28 100,28 C88,28 80,45 80,80 L62,80 Z"/>
+                    <rect x="58" y="8" width="84" height="80" fill="url(#metal-texture)"/>
+                </g>
+                <path d="M96,4 C90,4 86,8 86,60 L98,60 C99,40 99,20 100,4 Z" fill="#444444"/><path d="M96,4 C90,4 86,8 86,60 L98,60 C99,40 99,20 100,4 Z" fill="url(#metal-texture)"/>
+                <path d="M102,4 C108,4 112,8 112,60 L100,60 C99,40 99,20 100,4 Z" fill="#444444"/><path d="M102,4 C108,4 112,8 112,60 L100,60 C99,40 99,20 100,4 Z" fill="url(#metal-texture)"/>
+                <path d="M60,78 L140,78 L140,88 L60,88 Z" fill="#555555"/><path d="M60,78 L140,78 L140,88 L60,88 Z" fill="url(#metal-texture)"/>
+                <path d="M60,50 L58,86 L68,86 L70,52 Z" fill="#555555"/><path d="M60,50 L58,86 L68,86 L70,52 Z" fill="url(#metal-texture)"/>
+                <path d="M140,50 L142,86 L132,86 L130,52 Z" fill="#555555"/><path d="M140,50 L142,86 L132,86 L130,52 Z" fill="url(#metal-texture)"/>
+                <path d="M92,2 C92,-10 108,-10 108,2 L108,12 L92,12 Z" fill="${cOuter}"/><path d="M92,2 C92,-10 108,-10 108,2 L108,12 L92,12 Z" fill="url(#cloth-texture)"/>
             `;
             break;
         default: markup = "";
@@ -819,6 +824,30 @@ function hatMarkup(style, cInner, cOuter, headSize, hatSize) {
 function buildSVG(s) {
     const hatInner = s.hatMatchHair ? s.colorHair : s.colorInner;
     const hatOuter = s.hatMatchHair ? s.colorHair : s.colorOuter;
+    const materialDefs = `
+      <defs>
+        <!-- A subtle, generic woven cloth texture. -->
+        <pattern id="cloth-texture" patternUnits="userSpaceOnUse" width="8" height="8">
+          <path d="M0,0 H8 M0,2 H8 M0,4 H8 M0,6 H8" stroke-width="0.5" stroke="#000" opacity="0.1" />
+          <path d="M0,0 V8 M2,0 V8 M4,0 V8 M6,0 V8" stroke-width="0.5" stroke="#000" opacity="0.1" />
+        </pattern>
+        <!-- A hammered or burnished metal texture. -->
+        <pattern id="metal-texture" patternUnits="userSpaceOnUse" width="20" height="20">
+           <rect width="20" height="20" fill="transparent" />
+           <circle cx="5" cy="5" r="1.5" fill="#fff" opacity="0.08" />
+           <circle cx="15" cy="15" r="2" fill="#fff" opacity="0.05" />
+           <circle cx="10" cy="8" r="1" fill="#000" opacity="0.05" />
+           <circle cx="3" cy="18" r="1.2" fill="#000" opacity="0.06" />
+        </pattern>
+      </defs>
+    `;
+
+    // We'll create textured fills for our main materials.
+    const fill_inner = `fill="${s.colorInner}"`;
+    const fill_outer = `fill="${s.colorOuter}"`;
+    const fill_cloak = `fill="${s.colorCloak}"`;
+    const fill_accent_metal = `fill="${s.colorAccent}"`;
+
     return [
         `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">`,
         anatomyBase(s.colorSkin),
@@ -834,6 +863,7 @@ function buildSVG(s) {
         eyebrowMarkup(s.eyebrowStyle, s.colorHair),
         eyeMarkup(s.eyeShape, s.eyeSpacing, s.colorEye, shadeColor(s.colorSkin, -30)),
         hairFrontMarkup(s.hairStyle, s.colorHair, s.headSize, s.hairSize),
+        materialDefs, // Add the texture definitions
         hatMarkup(s.hatStyle, hatInner, hatOuter, s.headSize, s.hatSize),
         `</svg>`
     ].join("");
@@ -876,8 +906,9 @@ let state = { ...FALLBACK_PRESET };
 function loadPresets() {
     if (typeof CHARACTER_PRESETS_DATA !== "undefined" && CHARACTER_PRESETS_DATA && Object.keys(CHARACTER_PRESETS_DATA).length) {
         presets = CHARACTER_PRESETS_DATA;
-        const startKey = presets["jonah"] ? "jonah" : Object.keys(presets)[0];
-        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[startKey] };
+        populatePresetSelect();
+        const firstKey = (typeof CHARACTER_PRESETS_META !== "undefined" && CHARACTER_PRESETS_META.defaultPreset) || Object.keys(presets)[0];
+        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[firstKey] };
         hidePresetError();
     } else {
         console.error("CHARACTER_PRESETS_DATA not found — character_presets.js did not load.");
@@ -885,6 +916,29 @@ function loadPresets() {
     }
     writeStateIntoUI();
     render();
+}
+
+function populatePresetSelect() {
+    const select = document.getElementById("characterPresetSelect");
+    select.innerHTML = '<option value="">-- Select --</option>';
+
+    const groups = {
+      "story": { label: (typeof CHARACTER_PRESETS_META !== "undefined" ? CHARACTER_PRESETS_META.groupLabel : "Story characters"), characters: Object.keys(presets) }
+    };
+
+    Object.values(groups).forEach(group => {
+        const optgroup = document.createElement("optgroup");
+        optgroup.label = group.label;
+        group.characters.forEach(key => {
+            if (presets[key]) {
+                const option = document.createElement("option");
+                option.value = key;
+                option.textContent = presets[key].name;
+                optgroup.appendChild(option);
+            }
+        });
+        select.appendChild(optgroup);
+    });
 }
 
 function showPresetError() {

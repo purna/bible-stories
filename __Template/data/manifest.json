@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "acts": [
+    {
+      "id": "opening",
+      "name": "Ch.1 · Opening",
+      "file": "act1_opening.json",
+      "scene": "opening",
+      "foreground": "fg_opening"
+    },
+    {
+      "id": "decision",
+      "name": "Ch.2 · Decision",
+      "file": "act2_decision.json",
+      "scene": "decision",
+      "foreground": "fg_decision"
+    },
+    {
+      "id": "horizon",
+      "name": "Ch.3 · Resolution",
+      "file": "act3_horizon.json",
+      "scene": "horizon",
+      "foreground": "fg_horizon"
+    }
+  ]
+}

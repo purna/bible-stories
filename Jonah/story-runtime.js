@@ -10,12 +10,27 @@
   function blockWhenLocked(event) {
     if (!isInputLocked()) return;
     if (event.type === 'keydown' && (event.key === 'Escape' || event.key === 'Tab')) return;
+    if (isScrollableTarget(event.target)) return;
     event.stopImmediatePropagation();
     if (event.cancelable) event.preventDefault();
   }
 
   function isInteractiveTarget(target) {
     return Boolean(target && target.closest && target.closest('button, a, select, input, textarea, canvas, [role="dialog"], [contenteditable="true"]'));
+  }
+
+  function isScrollableTarget(target) {
+    if (!target || !target.closest) return false;
+    let node = target;
+    while (node && node !== document) {
+      if (node.scrollHeight > node.clientHeight) {
+        const style = window.getComputedStyle(node);
+        const overflowY = style.overflowY;
+        if (overflowY === 'auto' || overflowY === 'scroll' || overflowY === 'overlay') return true;
+      }
+      node = node.parentNode;
+    }
+    return false;
   }
 
   function setMode(nextMode, options = {}) {
@@ -28,7 +43,6 @@
   }
 
   window.addEventListener('keydown', blockWhenLocked, true);
-  window.addEventListener('wheel', blockWhenLocked, { capture: true, passive: false });
   window.addEventListener('touchstart', blockWhenLocked, { capture: true, passive: false });
   window.addEventListener('touchend', blockWhenLocked, { capture: true, passive: false });
 

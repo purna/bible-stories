@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Texture Forge — SVG Material Generator</title>
+<title>Texture Forge — Template</title>
 <style>
   :root{
     --bg: #14110f;
@@ -142,7 +142,7 @@
 <div id="app">
   <header>
     <h1>Texture Forge</h1>
-    <div class="sub">Seamless SVG materials for Moses, Egypt and the wilderness.</div>
+    <div class="sub">Seamless SVG materials used in the story of Template.</div>
   </header>
 
   <div id="groupRow"></div>
@@ -291,7 +291,8 @@ function diamondPath(r){
 /* ============================================================
    Texture Library
 ============================================================ */
-const LIB = {
+const STORY_TEXTURE_CONFIG = {"story":"Template","keys":["stone","wood_oak","fabric_weave","water_still","grass"]};
+const FULL_LIB = {
 
   water_still: {
     label:'Still Water', group:'Water',
@@ -890,17 +891,21 @@ const LIB = {
   }
 
 };
+const LIB = Object.fromEntries(STORY_TEXTURE_CONFIG.keys.filter(key => FULL_LIB[key]).map(key => {
+  const item = FULL_LIB[key];
+  return [key, {...item, group: STORY_TEXTURE_CONFIG.story}];
+}));
 
 /* ============================================================
    State
 ============================================================ */
 let state = {
-  texKey: 'egypt_mud_brick',
-  shapeKey: 'stretcher',
+  texKey: 'stone',
+  shapeKey: FULL_LIB['stone'].shapes[0].key,
   seed: 1,
   colors: [],
   params: {},
-  activeGroup: 'Moses'
+  activeGroup: 'Template'
 };
 
 function currentTex(){ return LIB[state.texKey]; }

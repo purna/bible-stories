@@ -4,6 +4,7 @@
     Daniel: { title: 'DANIEL', icon: '🦁', color: '#704b9f' },
     Eiljah: { title: 'ELIJAH', icon: '🔥', color: '#bd6a2d' },
     Jonah: { title: 'JONAH', icon: '🐋', color: '#197f9f' },
+    Moses: { title: 'MOSES', icon: '🔥', color: '#c87a30' },
     Noah: { title: 'NOAH', icon: '🚢', color: '#315f85' }
   };
   const parts = location.pathname.split('/').filter(Boolean);

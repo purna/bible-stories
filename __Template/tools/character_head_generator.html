@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moses Character Head Generator</title>
+<title>Character Head Generator — Template</title>
 <link href="../fonts.css" rel="stylesheet">
 <!-- JSZip for bulk exporting -->
 <script src="../vendor/jszip.3.10.1.min.js"></script>
@@ -154,7 +154,7 @@
 <div class="workspace">
   <!-- ============ SIDEBAR ============ -->
   <div class="sidebar">
-    <div class="brand">Moses Head Forge <small>Front View</small></div>
+    <div class="brand">Template Head Forge <small>Front View</small></div>
 
     <div class="control-group">
       <h3 class="section-title">Character Presets</h3>
@@ -907,7 +907,8 @@ function loadPresets() {
     if (typeof CHARACTER_PRESETS_DATA !== "undefined" && CHARACTER_PRESETS_DATA && Object.keys(CHARACTER_PRESETS_DATA).length) {
         presets = CHARACTER_PRESETS_DATA;
         populatePresetSelect();
-        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets["moses"] };
+        const firstKey = (typeof CHARACTER_PRESETS_META !== "undefined" && CHARACTER_PRESETS_META.defaultPreset) || Object.keys(presets)[0];
+        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[firstKey] };
         hidePresetError();
     } else {
         console.error("CHARACTER_PRESETS_DATA not found — character_presets.js did not load.");
@@ -922,10 +923,7 @@ function populatePresetSelect() {
     select.innerHTML = '<option value="">-- Select --</option>';
 
     const groups = {
-      "leaders": { label: "Moses, Family & Successors", characters: ["moses_young", "moses", "aaron", "miriam", "joshua", "caleb"] },
-      "egypt": { label: "Egypt", characters: ["pharaoh", "pharaohs_daughter", "egyptian_overseer"] },
-      "midian": { label: "Midian & the Journey", characters: ["zipporah", "jethro", "balaam"] },
-      "israel": { label: "Israel in the Wilderness", characters: ["israelite_elder", "israelite_woman", "korah"] }
+      "story": { label: (typeof CHARACTER_PRESETS_META !== "undefined" ? CHARACTER_PRESETS_META.groupLabel : "Story characters"), characters: Object.keys(presets) }
     };
 
     Object.values(groups).forEach(group => {

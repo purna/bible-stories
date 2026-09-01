@@ -40,8 +40,11 @@
   --modal-ink: #15121d;
   position: relative;
   width: min(690px, calc(100vw - 32px));
-  max-height: min(82vh, 760px);
-  overflow: auto;
+  max-height: min(70vh, 560px);
+  height: min(70vh, 560px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
   padding: 28px clamp(20px, 5vw, 42px) 32px;
   color: var(--modal-ink);
   background: #fff4ce;
@@ -60,6 +63,17 @@
   background-image: radial-gradient(#15121d 1px, transparent 1px);
   background-size: 7px 7px;
 }
+
+/* ── Scrollbar (WebKit + Firefox) ────────────── */
+.story-info-card { scrollbar-width: thin; scrollbar-color: #ef4b3f #fff4ce; }
+.story-info-card::-webkit-scrollbar { width: 12px; }
+.story-info-card::-webkit-scrollbar-track { background: #fff4ce; border-left: 2px solid var(--modal-ink); }
+.story-info-card::-webkit-scrollbar-thumb { background: #ef4b3f; border: 2px solid var(--modal-ink); border-radius: 4px; box-shadow: 2px 2px 0 var(--modal-ink); }
+.story-info-card::-webkit-scrollbar-thumb:hover { background: #d83a2e; }
+.story-info-card::-webkit-scrollbar-corner { background: #fff4ce; }
+/* Allow native wheel/touch scrolling inside the modal */
+.story-info-modal { overscroll-behavior: contain; }
+.story-info-card  { overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y; }
 .story-info-close {
   position: sticky;
   top: 0;

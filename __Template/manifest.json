@@ -1,1 +1,9 @@
-{"name":"Adam & Eve — Interactive Comic","short_name":"Adam & Eve","description":"The story of Adam and Eve as an interactive comic.","start_url":"./index.html","scope":"./","display":"standalone","orientation":"landscape","background_color":"#1a1a2e","theme_color":"#ffd84d","categories":["games","comics","books"],"icons":[{"src":"favicon.svg","sizes":"100x100","type":"image/svg+xml","purpose":"maskable any"}]}
+{
+  "name": "Interactive Bible Story Template",
+  "short_name": "Story Template",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#101927",
+  "theme_color": "#c87a30",
+  "icons": []
+}

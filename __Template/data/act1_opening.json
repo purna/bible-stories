@@ -1,0 +1,25 @@
+{
+  "id": "opening",
+  "name": "Ch.1 · Opening",
+  "bg": "radial-gradient(circle at 50% 25%, #24445a, #101927 70%)",
+  "particle": "dawn",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Introduce the setting, need, and central character here.",
+      "cite": "Book 1:1"
+    },
+    {
+      "speaker": "guide",
+      "fx": "type",
+      "align": "right",
+      "text": "Give the player one clear objective."
+    }
+  ],
+  "svg": "opening",
+  "scene": "opening",
+  "foreground": "fg_opening",
+  "index": 0
+}

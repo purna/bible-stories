@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Character Profile SVG Generator — Front View</title>
+<title>Character Head Generator — Noah</title>
 <link href="../fonts.css" rel="stylesheet">
 <!-- JSZip for bulk exporting -->
 <script src="../vendor/jszip.3.10.1.min.js"></script>
@@ -154,7 +154,7 @@
 <div class="workspace">
   <!-- ============ SIDEBAR ============ -->
   <div class="sidebar">
-    <div class="brand">Head Forge <small>Front View</small></div>
+    <div class="brand">Noah Head Forge <small>Front View</small></div>
 
     <div class="control-group">
       <h3 class="section-title">Character Presets</h3>
@@ -165,30 +165,6 @@
       </select>
       <button id="load-preset">Load</button>
       <div id="preset-status" style="display:none; font-size:.72rem; color:#c98a5a; margin-top:8px; line-height:1.4;"></div>
-    </div>
-
-    <div class="control-group">
-      <h3 class="section-title">Head Type</h3>
-      <label class="field">Head / Character Type
-        <select id="head-type">
-          <option value="human">Human</option>
-          <option value="animal">Animal</option>
-          <option value="divine">Divine / Symbolic</option>
-        </select>
-      </label>
-      <label class="field" id="animal-type-row">Animal
-        <select id="animal-type">
-          <option value="sheep">Sheep</option>
-          <option value="goat">Goat</option>
-          <option value="ox">Ox / Bull</option>
-          <option value="donkey">Donkey</option>
-          <option value="lion">Lion</option>
-          <option value="dog">Dog</option>
-          <option value="raven">Raven</option>
-          <option value="dove">Dove</option>
-          <option value="serpent">Serpent</option>
-        </select>
-      </label>
     </div>
 
     <div class="control-group">
@@ -845,134 +821,7 @@ function hatMarkup(style, cInner, cOuter, headSize, hatSize) {
     return scaleWithHead(hatScaled, headSize);
 }
 
-/* ---------- ANIMAL / DIVINE HEADS ---------- */
-function animalMarkup(type, skin, hair, eye) {
-    const dark = shadeColor(skin, -38);
-    const light = shadeColor(skin, 24);
-    const eyeDot = `<circle cx="82" cy="96" r="3" fill="${eye}"/><circle cx="118" cy="96" r="3" fill="${eye}"/>`;
-    let head = "";
-    switch(type) {
-        case "sheep":
-            head = `
-              <path d="M62,78 C50,66 54,48 68,44 C64,28 82,18 94,28 C104,18 124,26 122,42 C140,42 148,60 138,74 L132,128 C124,150 76,150 68,128 Z" fill="${light}"/>
-              <path d="M68,72 C55,62 58,48 70,46 C70,32 84,26 96,34 C105,25 120,31 120,44 C134,44 140,57 132,68 C126,74 120,78 100,80 C82,78 76,76 68,72 Z" fill="${hair}"/>
-              <path d="M76,78 C70,92 72,120 84,132 C92,140 108,140 116,132 C128,120 130,92 124,78 C116,86 108,90 100,90 C92,90 84,86 76,78 Z" fill="${skin}"/>
-              ${eyeDot}
-              <path d="M91,112 C95,116 105,116 109,112 L106,124 C102,130 98,130 94,124 Z" fill="${dark}"/>
-              <ellipse cx="100" cy="121" rx="7" ry="5" fill="${dark}"/>
-              <path d="M62,82 L48,68 L54,62 L72,78 Z" fill="${skin}"/>
-              <path d="M138,82 L152,68 L146,62 L128,78 Z" fill="${skin}"/>`;
-            break;
-        case "goat":
-            head = `
-              <path d="M67,68 C58,48 68,26 86,24 C94,18 106,18 114,24 C132,26 142,48 133,68 L126,132 C116,148 84,148 74,132 Z" fill="${skin}"/>
-              <path d="M72,54 C76,30 88,22 100,28 C112,22 124,30 128,54 C120,46 112,42 100,42 C88,42 80,46 72,54 Z" fill="${hair}"/>
-              <path d="M67,46 L48,28 L54,58 Z" fill="${dark}"/>
-              <path d="M133,46 L152,28 L146,58 Z" fill="${dark}"/>
-              <path d="M82,76 C78,98 82,124 92,134 C98,140 102,140 108,134 C118,124 122,98 118,76 C108,84 92,84 82,76 Z" fill="${light}"/>
-              ${eyeDot}
-              <path d="M96,105 L104,105 L106,126 L94,126 Z" fill="${dark}"/>
-              <ellipse cx="94" cy="126" rx="3" ry="2" fill="${dark}"/><ellipse cx="106" cy="126" rx="3" ry="2" fill="${dark}"/>`;
-            break;
-        case "ox":
-            head = `
-              <path d="M60,64 C58,40 76,24 100,24 C124,24 142,40 140,64 L132,136 C120,154 80,154 68,136 Z" fill="${skin}"/>
-              <path d="M70,52 C72,30 88,20 100,30 C112,20 128,30 130,52 C120,44 112,40 100,40 C88,40 80,44 70,52 Z" fill="${hair}"/>
-              <path d="M65,56 C48,46 34,34 30,20 C48,22 64,30 76,46 Z" fill="${light}"/>
-              <path d="M135,56 C152,46 166,34 170,20 C152,22 136,30 124,46 Z" fill="${light}"/>
-              ${eyeDot}
-              <path d="M82,78 C78,106 82,132 100,142 C118,132 122,106 118,78 C108,86 92,86 82,78 Z" fill="${light}"/>
-              <ellipse cx="100" cy="116" rx="17" ry="13" fill="${dark}"/>
-              <ellipse cx="93" cy="116" rx="3" ry="2" fill="${skin}"/><ellipse cx="107" cy="116" rx="3" ry="2" fill="${skin}"/>`;
-            break;
-        case "donkey":
-            head = `
-              <path d="M70,66 C68,44 80,28 100,28 C120,28 132,44 130,66 L124,136 C116,150 84,150 76,136 Z" fill="${skin}"/>
-              <path d="M72,62 L58,10 L82,38 L100,30 L118,38 L142,10 L128,62 Z" fill="${dark}"/>
-              <path d="M76,60 C80,36 90,28 100,34 C110,28 120,36 124,60 C116,52 108,48 100,48 C92,48 84,52 76,60 Z" fill="${hair}"/>
-              ${eyeDot}
-              <path d="M84,82 C80,108 84,130 100,142 C116,130 120,108 116,82 C108,88 92,88 84,82 Z" fill="${light}"/>
-              <ellipse cx="100" cy="119" rx="13" ry="10" fill="${dark}"/>`;
-            break;
-        case "lion":
-            head = `
-              <circle cx="100" cy="88" r="67" fill="${hair}"/>
-              <path d="M60,72 C60,46 76,30 100,30 C124,30 140,46 140,72 L132,132 C122,150 78,150 68,132 Z" fill="${skin}"/>
-              <path d="M74,70 C80,54 90,48 100,48 C110,48 120,54 126,70 C116,64 108,62 100,62 C92,62 84,64 74,70 Z" fill="${light}"/>
-              ${eyeDot}
-              <path d="M84,82 C82,108 88,126 100,136 C112,126 118,108 116,82 C108,88 92,88 84,82 Z" fill="${light}"/>
-              <path d="M93,112 L107,112 L100,121 Z" fill="${dark}"/>
-              <path d="M84,126 C90,132 94,134 100,134 C106,134 110,132 116,126" fill="none" stroke="${dark}"/>`;
-            break;
-        case "dog":
-            head = `
-              <path d="M64,68 C64,42 80,26 100,26 C120,26 136,42 136,68 L128,136 C116,150 84,150 72,136 Z" fill="${skin}"/>
-              <path d="M72,60 C62,46 52,38 42,34 L50,78 L68,88 Z" fill="${dark}"/>
-              <path d="M128,60 C138,46 148,38 158,34 L150,78 L132,88 Z" fill="${dark}"/>
-              ${eyeDot}
-              <path d="M82,82 C78,104 84,128 100,140 C116,128 122,104 118,82 C108,88 92,88 82,82 Z" fill="${light}"/>
-              <ellipse cx="100" cy="116" rx="12" ry="9" fill="${dark}"/>
-              <path d="M94,128 C98,132 102,132 106,128" fill="none" stroke="${dark}"/>`;
-            break;
-        case "raven":
-            head = `
-              <path d="M62,78 C58,48 76,22 100,22 C124,22 142,48 138,78 L126,136 C116,148 84,148 74,136 Z" fill="${hair}"/>
-              <path d="M124,70 L174,82 L126,92 Z" fill="${dark}"/>
-              <path d="M72,58 C76,38 88,28 100,30 C112,28 124,38 128,58 C118,50 108,46 100,46 C92,46 82,50 72,58 Z" fill="${light}"/>
-              <circle cx="82" cy="82" r="4" fill="${eye}"/><circle cx="118" cy="82" r="4" fill="${eye}"/>`;
-            break;
-        case "dove":
-            head = `
-              <path d="M62,80 C58,50 76,26 100,26 C124,26 142,50 138,80 L128,136 C116,150 84,150 72,136 Z" fill="${light}"/>
-              <path d="M68,68 C70,42 84,24 100,28 C116,24 130,42 132,68 C122,58 112,52 100,52 C88,52 78,58 68,68 Z" fill="${hair}"/>
-              <path d="M128,70 L168,84 L128,94 Z" fill="${light}"/>
-              <circle cx="82" cy="84" r="4" fill="${eye}"/><circle cx="118" cy="84" r="4" fill="${eye}"/>
-              <path d="M84,110 C92,104 108,104 116,110 C110,122 90,122 84,110 Z" fill="${dark}"/>`;
-            break;
-        case "serpent":
-            head = `
-              <path d="M54,104 C58,56 76,26 100,26 C124,26 142,56 146,104 C140,140 122,154 100,154 C78,154 60,140 54,104 Z" fill="${skin}"/>
-              <path d="M60,88 C70,52 84,36 100,36 C116,36 130,52 140,88 C126,78 114,74 100,74 C86,74 74,78 60,88 Z" fill="${hair}"/>
-              <ellipse cx="82" cy="92" rx="6" ry="8" fill="${eye}"/><ellipse cx="118" cy="92" rx="6" ry="8" fill="${eye}"/>
-              <path d="M76,116 C88,124 112,124 124,116 C116,136 84,136 76,116 Z" fill="${dark}"/>
-              <path d="M100,132 L100,172" stroke="${dark}" stroke-width="3"/>`;
-            break;
-        default:
-            return animalMarkup("sheep", skin, hair, eye);
-    }
-    return `<g>${head}</g>`;
-}
-
-function divineMarkup(s) {
-    const glow = s.colorAccent || "#d4af37";
-    const light = s.colorSkin || "#f4e8c1";
-    return `
-      <g>
-        <circle cx="100" cy="105" r="72" fill="${glow}" opacity="0.18"/>
-        <circle cx="100" cy="105" r="58" fill="${glow}" opacity="0.16"/>
-        <path d="M100,30 C128,30 148,58 144,96 C141,132 122,154 100,166 C78,154 59,132 56,96 C52,58 72,30 100,30 Z" fill="${light}"/>
-        <path d="M100,8 L110,30 L132,14 L130,40 L154,30 L140,56 C124,46 114,42 100,42 C86,42 76,46 60,56 L46,30 L70,40 L68,14 L90,30 Z" fill="${glow}"/>
-        <path d="M72,84 C80,76 90,72 100,72 C110,72 120,76 128,84 C118,80 108,78 100,78 C92,78 82,80 72,84 Z" fill="${glow}" opacity="0.5"/>
-        <circle cx="82" cy="98" r="3" fill="${glow}"/><circle cx="118" cy="98" r="3" fill="${glow}"/>
-        <path d="M88,126 C94,130 106,130 112,126 C108,136 92,136 88,126 Z" fill="${glow}" opacity="0.65"/>
-      </g>`;
-}
-
 function buildSVG(s) {
-    if (s.headType === "animal") {
-        return [
-            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">`,
-            animalMarkup(s.animalType || "sheep", s.colorSkin, s.colorHair, s.colorEye),
-            `</svg>`
-        ].join("");
-    }
-    if (s.headType === "divine") {
-        return [
-            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">`,
-            divineMarkup(s),
-            `</svg>`
-        ].join("");
-    }
     const hatInner = s.hatMatchHair ? s.colorHair : s.colorInner;
     const hatOuter = s.hatMatchHair ? s.colorHair : s.colorOuter;
     const materialDefs = `
@@ -1038,7 +887,6 @@ let presets = {};
 // than failing silently.
 const FALLBACK_PRESET = {
     name: "Custom Character",
-    headType: "human", animalType: "sheep",
     noseScale: 1.0, noseShape: "straight",
     eyeShape: "almond", eyeSpacing: 1.0,
     eyebrowStyle: "arched", mouthStyle: "neutral",
@@ -1059,8 +907,8 @@ function loadPresets() {
     if (typeof CHARACTER_PRESETS_DATA !== "undefined" && CHARACTER_PRESETS_DATA && Object.keys(CHARACTER_PRESETS_DATA).length) {
         presets = CHARACTER_PRESETS_DATA;
         populatePresetSelect();
-        const startKey = presets["noah"] ? "noah" : Object.keys(presets)[0];
-        state = { headType: "human", animalType: "sheep", hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[startKey] };
+        const firstKey = (typeof CHARACTER_PRESETS_META !== "undefined" && CHARACTER_PRESETS_META.defaultPreset) || Object.keys(presets)[0];
+        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[firstKey] };
         hidePresetError();
     } else {
         console.error("CHARACTER_PRESETS_DATA not found — character_presets.js did not load.");
@@ -1075,22 +923,7 @@ function populatePresetSelect() {
     select.innerHTML = '<option value="">-- Select --</option>';
 
     const groups = {
-      "Creation / Genesis 6": {
-        label: "Creation / Genesis 6",
-        characters: [
-          "god", "noah", "naamah", "lamech",
-          "shem", "ham", "japheth",
-          "shem_wife", "ham_wife", "japheth_wife",
-          "nephilim", "wicked_people"
-        ]
-      },
-      "Animals": {
-        label: "Animals",
-        characters: [
-          "sheep", "goat", "ox", "donkey", "lion", "dog",
-          "raven", "dove", "serpent"
-        ]
-      }
+      "story": { label: (typeof CHARACTER_PRESETS_META !== "undefined" ? CHARACTER_PRESETS_META.groupLabel : "Story characters"), characters: Object.keys(presets) }
     };
 
     Object.values(groups).forEach(group => {
@@ -1123,7 +956,7 @@ function hidePresetError() {
 /* ==========================================================
    UI CONTROLLER
    ========================================================== */
-const ids = ["head-type:headType","animal-type:animalType","face-shape:faceShape","forehead-height:foreheadHeight","eye-spacing:eyeSpacing","ear-size:earSize","head-size:headSize","hair-size:hairSize","hat-size:hatSize","chin-shape:chinShape","eye-shape:eyeShape","eyebrow-style:eyebrowStyle","nose-shape:noseShape","mouth-style:mouthStyle","hair-style:hairStyle","beard-style:beardStyle","hat-style:hatStyle","clothing-type:clothingType","ear-shape:earShape"];
+const ids = ["face-shape:faceShape","forehead-height:foreheadHeight","eye-spacing:eyeSpacing","ear-size:earSize","head-size:headSize","hair-size:hairSize","hat-size:hatSize","chin-shape:chinShape","eye-shape:eyeShape","eyebrow-style:eyebrowStyle","nose-shape:noseShape","mouth-style:mouthStyle","hair-style:hairStyle","beard-style:beardStyle","hat-style:hatStyle","clothing-type:clothingType","ear-shape:earShape"];
 const colorIds = ["color-inner:colorInner","color-outer:colorOuter","color-cloak:colorCloak","color-accent:colorAccent","color-skin:colorSkin","color-hair:colorHair","color-eye:colorEye","color-lip:colorLip","color-garment2:colorGarment2"];
 
 function formatName(str) { return str.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase()); }
@@ -1154,7 +987,6 @@ function readUIIntoState() {
     document.getElementById("hat-size-val").textContent = state.hatSize.toFixed(1) + "×";
     document.getElementById("stripe-row").style.display = state.dualStripe ? "flex" : "none";
     state.name = "Custom Character";
-    updateHeadTypeUI();
     render();
 }
 
@@ -1176,34 +1008,18 @@ function writeStateIntoUI() {
     document.getElementById("hat-match-hair").checked = !!state.hatMatchHair;
     document.getElementById("dual-stripe").checked = !!state.dualStripe;
     document.getElementById("stripe-row").style.display = state.dualStripe ? "flex" : "none";
-    updateHeadTypeUI();
-}
-
-function updateHeadTypeUI() {
-    const animalRow = document.getElementById("animal-type-row");
-    const humanControls = document.querySelectorAll(".sidebar .control-group");
-    if (animalRow) animalRow.style.display = state.headType === "animal" ? "flex" : "none";
-    humanControls.forEach(group => {
-        const title = group.querySelector(".section-title");
-        if (!title) return;
-        const t = title.textContent.trim().toLowerCase();
-        const isHeadType = t === "head type";
-        const isHumanOnly = ["facial structure","facial features","hair & assets","wardrobe setup","wardrobe colors (4-tier)","physique colors"].includes(t);
-        if (!isHeadType) group.style.display = (state.headType === "human" && isHumanOnly) ? "" : (isHumanOnly ? "none" : group.style.display);
-    });
 }
 
 const presetSelect = document.getElementById("characterPresetSelect");
 
 document.getElementById("load-preset").addEventListener("click", () => {
     const key = presetSelect.value;
-    if (presets[key]) { state = { headType: "human", animalType: "sheep", hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[key] }; writeStateIntoUI(); render(); }
+    if (presets[key]) { state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[key] }; writeStateIntoUI(); render(); }
 });
 
 document.querySelectorAll(".sidebar input, .sidebar select").forEach(el => {
     if(el.id !== "characterPresetSelect") el.addEventListener("input", readUIIntoState);
 });
-updateHeadTypeUI();
 
 /* ==========================================================
    EXPORTS

@@ -1,0 +1,28 @@
+{
+  "id": "decision",
+  "name": "Ch.2 · Decision",
+  "bg": "radial-gradient(circle at 50% 25%, #633f2a, #17100d 70%)",
+  "particle": "dusk",
+  "lines": [
+    {
+      "speaker": "traveller",
+      "fx": "fade",
+      "align": "left",
+      "text": "Use choices for participation and reflection, not a false alternate scripture outcome.",
+      "choices": [
+        {
+          "label": "Act with courage",
+          "note": "The canonical event continues with the player actively involved."
+        },
+        {
+          "label": "Pause and listen",
+          "note": "The canonical event continues after a reflective beat."
+        }
+      ]
+    }
+  ],
+  "svg": "decision",
+  "scene": "decision",
+  "foreground": "fg_decision",
+  "index": 1
+}

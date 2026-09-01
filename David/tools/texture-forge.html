@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Texture Forge — SVG Material Generator</title>
+<title>Texture Forge — David</title>
 <style>
   :root{
     --bg: #14110f;
@@ -142,7 +142,7 @@
 <div id="app">
   <header>
     <h1>Texture Forge</h1>
-    <div class="sub">Seamless SVG materials for David, the wilderness and Jerusalem.</div>
+    <div class="sub">Seamless SVG materials used in the story of David.</div>
   </header>
 
   <div id="groupRow"></div>
@@ -291,7 +291,8 @@ function diamondPath(r){
 /* ============================================================
    Texture Library
 ============================================================ */
-const LIB = {
+const STORY_TEXTURE_CONFIG = {"story":"David","keys":["stone","grass","fabric_weave","wood_oak","wood_dark","wall_brick","water_fast"]};
+const FULL_LIB = {
 
   water_still: {
     label:'Still Water', group:'Water',
@@ -858,50 +859,49 @@ const LIB = {
     ]
   },
 
-  sheep_wool: {
-    label:'Sheep Wool', group:'David', colors:['#ddd5c2','#a89f8e','#f5f0e4'], colorNames:['wool','shadow','light'],
-    params:{ curls:{label:'Wool curls',min:8,max:70,step:1,def:34}, size:{label:'Curl size',min:2,max:10,step:.5,def:5} },
-    shapes:[{key:'fleece',label:'Fleece',build(rng,p,c){const w=100,h=100;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.curls;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h),r=rnd(rng,p.size*.55,p.size);body+=wrapGroup(x,y,w,h,r,`<path d="M${fmt(-r)} 0a${fmt(r)} ${fmt(r)} 0 1 1 ${fmt(r*2)} 0" fill="none" stroke="${rng()>.3?c[1]:c[2]}" stroke-width="${fmt(rnd(rng,.7,1.8))}" opacity=".65"/>`);}return{w,h,body};}}]
+  egypt_mud_brick: {
+    label:'Egyptian Mud Brick', group:'Moses', colors:['#a9683f','#70442d','#d29a68'], colorNames:['brick','mortar','sun'],
+    params:{ courses:{label:'Brick courses',min:2,max:8,step:1,def:4}, roughness:{label:'Surface roughness',min:4,max:50,step:1,def:22} },
+    shapes:[{key:'stretcher',label:'Stretcher bond',build(rng,p,c){const w=120,h=80,row=h/p.courses;let body=`<rect width="${w}" height="${h}" fill="${c[1]}"/>`;for(let y=0;y<p.courses;y++){const off=y%2?15:0;for(let x=-30;x<w+30;x+=30){const bx=x+off;body+=`<rect x="${bx+1}" y="${y*row+1}" width="28" height="${row-2}" rx="1.5" fill="${mix(c[0],c[2],rnd(rng,0,.22))}"/>`;}}for(let i=0;i<p.roughness;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.4,1.5))}" fill="${c[1]}" opacity=".45"/>`;return{w,h,body};}}]
   },
-  sling_leather: {
-    label:'Sling Leather', group:'David', colors:['#8a5733','#4e3020','#bd8552'], colorNames:['hide','crease','wear'],
-    params:{ creases:{label:'Leather creases',min:3,max:35,step:1,def:14}, pores:{label:'Hide pores',min:5,max:70,step:1,def:28} },
-    shapes:[{key:'worn',label:'Worn hide',build(rng,p,c){const w=110,h=90;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.creases;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h);body+=`<path d="M${fmt(x-12)} ${fmt(y)} Q${fmt(x)} ${fmt(y+rnd(rng,-7,7))} ${fmt(x+12)} ${fmt(y)}" stroke="${c[1]}" opacity=".45" fill="none"/>`;}for(let i=0;i<p.pores;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.3,1.1))}" fill="${c[2]}" opacity=".4"/>`;return{w,h,body};}}]
+  nile_reeds: {
+    label:'Nile Reeds', group:'Moses', colors:['#1d6573','#80a45a','#c6ad58'], colorNames:['water','reed','highlight'],
+    params:{ reeds:{label:'Reed count',min:5,max:30,step:1,def:16}, sway:{label:'Reed sway',min:1,max:12,step:1,def:5} },
+    shapes:[{key:'riverbank',label:'Riverbank',build(rng,p,c){const w=120,h=100;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.reeds;i++){const x=rnd(rng,0,w),top=rnd(rng,12,58),bend=rnd(rng,-p.sway,p.sway),col=rng()>.7?c[2]:c[1];body+=`<path d="M${fmt(x)} 105 Q${fmt(x+bend)} ${fmt((top+100)/2)} ${fmt(x+bend)} ${fmt(top)}" stroke="${col}" stroke-width="${fmt(rnd(rng,1,2.5))}" fill="none"/><ellipse cx="${fmt(x+bend)}" cy="${fmt(top-3)}" rx="2" ry="7" fill="${col}"/>`; }return{w,h,body};}}]
   },
-  valley_stones: {
-    label:'Valley Sling Stones', group:'David', colors:['#81786b','#49443d','#b9aa92'], colorNames:['stone','shadow','sun'],
-    params:{ stones:{label:'Stone count',min:5,max:28,step:1,def:14}, roundness:{label:'Roundness',min:2,max:12,step:1,def:7} },
-    shapes:[{key:'brook',label:'Brook stones',build(rng,p,c){const w=120,h=90;let body=`<rect width="${w}" height="${h}" fill="${c[1]}"/>`;for(let i=0;i<p.stones;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h),rx=rnd(rng,5,12+p.roundness),ry=rnd(rng,4,9);body+=wrapGroup(x,y,w,h,rx,`<ellipse rx="${fmt(rx)}" ry="${fmt(ry)}" fill="${mix(c[0],c[2],rnd(rng,0,.35))}" stroke="${c[1]}" stroke-width="1.4"/>`);}return{w,h,body};}}]
+  desert_sand: {
+    label:'Wilderness Sand', group:'Moses', colors:['#c8914e','#9b6738','#edc77e'], colorNames:['sand','shadow','sun'],
+    params:{ ridges:{label:'Wind ridges',min:3,max:18,step:1,def:8}, grit:{label:'Stone grit',min:0,max:60,step:2,def:20} },
+    shapes:[{key:'dunes',label:'Wind dunes',build(rng,p,c){const w=140,h=90;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.ridges;i++){const y=rnd(rng,0,h);body+=`<path d="M-10 ${fmt(y)} Q35 ${fmt(y-rnd(rng,3,12))} 75 ${fmt(y)} T150 ${fmt(y)}" stroke="${rng()>.25?c[2]:c[1]}" opacity=".45" fill="none"/>`;}for(let i=0;i<p.grit;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.35,1.2))}" fill="${c[1]}" opacity=".55"/>`;return{w,h,body};}}]
   },
-  en_gedi_cave: {
-    label:'En Gedi Cave', group:'David', colors:['#74634e','#342e28','#a38d6c'], colorNames:['limestone','depth','edge'],
-    params:{ fractures:{label:'Rock fractures',min:3,max:30,step:1,def:13}, pits:{label:'Surface pits',min:3,max:50,step:1,def:20} },
-    shapes:[{key:'limestone',label:'Cave limestone',build(rng,p,c){const w=120,h=100;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.fractures;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h);body+=`<path d="M${fmt(x)} ${fmt(y)} l${fmt(rnd(rng,-12,12))} ${fmt(rnd(rng,5,18))} l${fmt(rnd(rng,-8,8))} ${fmt(rnd(rng,4,12))}" stroke="${c[1]}" opacity=".65" fill="none"/>`;}for(let i=0;i<p.pits;i++)body+=`<ellipse cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" rx="${fmt(rnd(rng,.5,3))}" ry="${fmt(rnd(rng,.4,2))}" fill="${c[1]}" opacity=".3"/>`;return{w,h,body};}}]
+  bulrush_basket: {
+    label:'Bulrush Basket', group:'Moses', colors:['#bd8b45','#795329','#d7b66e'], colorNames:['reed','shadow','light'],
+    params:{ strand:{label:'Strand width',min:3,max:12,step:1,def:7}, gap:{label:'Weave gap',min:0,max:4,step:.5,def:1} },
+    shapes:[{key:'woven',label:'Woven reeds',build(rng,p,c){const u=p.strand+p.gap,w=u*4,h=u*4;let body=`<rect width="${w}" height="${h}" fill="${c[1]}"/>`;for(let y=0;y<4;y++)for(let x=0;x<4;x++){const col=(x+y)%2?c[0]:c[2];body+=`<rect x="${x*u}" y="${y*u}" width="${p.strand}" height="${p.strand}" rx="1" fill="${col}"/>`;body+=`<rect x="${x*u+p.strand}" y="${y*u}" width="${p.gap}" height="${u}" fill="${c[1]}"/>`;}return{w,h,body};}}]
   },
-  cedar_palace: {
-    label:'Cedar Palace', group:'David', colors:['#9b5730','#5d301d','#c7834c'], colorNames:['cedar','grain','warmth'],
-    params:{ grain:{label:'Cedar grain',min:5,max:35,step:1,def:17}, knots:{label:'Knots',min:0,max:12,step:1,def:4} },
-    shapes:[{key:'panel',label:'Cedar panel',build(rng,p,c){const w=110,h=130;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.grain;i++){const x=rnd(rng,0,w),bow=rnd(rng,2,10);body+=`<path d="M${fmt(x)} -5 C${fmt(x+bow)} 40 ${fmt(x-bow)} 90 ${fmt(x+rnd(rng,-4,4))} 135" stroke="${rng()>.25?c[1]:c[2]}" opacity=".5" fill="none"/>`;}for(let i=0;i<p.knots;i++){const x=rnd(rng,10,w-10),y=rnd(rng,10,h-10);body+=`<ellipse cx="${fmt(x)}" cy="${fmt(y)}" rx="4" ry="8" fill="none" stroke="${c[1]}" opacity=".7"/>`;}return{w,h,body};}}]
+  hammered_gold: {
+    label:'Tabernacle Gold', group:'Moses', colors:['#c9952f','#805821','#f2cf67'], colorNames:['gold','shadow','glint'],
+    params:{ dents:{label:'Hammer marks',min:5,max:70,step:1,def:32}, glints:{label:'Bright glints',min:1,max:20,step:1,def:7} },
+    shapes:[{key:'hammered',label:'Hammered sheet',build(rng,p,c){const w=100,h=100;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.dents;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h),r=rnd(rng,2,7);body+=`<circle cx="${fmt(x)}" cy="${fmt(y)}" r="${fmt(r)}" fill="none" stroke="${c[1]}" opacity=".25"/>`;}for(let i=0;i<p.glints;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.5,2))}" fill="${c[2]}"/>`;return{w,h,body};}}]
   },
-  royal_cloth: {
-    label:'Royal Purple Cloth', group:'David', colors:['#6d284f','#35172f','#d0a247'], colorNames:['purple','shadow','gold'],
-    params:{ folds:{label:'Cloth folds',min:3,max:18,step:1,def:8}, embroidery:{label:'Gold motifs',min:0,max:16,step:1,def:6} },
-    shapes:[{key:'robe',label:'Royal robe',build(rng,p,c){const w=100,h=120;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.folds;i++){const x=(i+.5)*w/p.folds;body+=`<path d="M${fmt(x)} 0 Q${fmt(x+rnd(rng,-5,5))} 60 ${fmt(x)} 120" stroke="${c[1]}" stroke-width="${fmt(rnd(rng,1,4))}" opacity=".5" fill="none"/>`;}for(let i=0;i<p.embroidery;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h);body+=`<path d="M${fmt(x-3)} ${fmt(y)} l3 -3 3 3 -3 3Z" fill="${c[2]}" opacity=".75"/>`;}return{w,h,body};}}]
-  },
-  bronze_armor: {
-    label:'Bronze Scale Armor', group:'David', colors:['#8f6638','#4d3725','#d19a4d'], colorNames:['bronze','shadow','edge'],
-    params:{ scale:{label:'Scale size',min:7,max:20,step:1,def:12}, patina:{label:'Patina marks',min:0,max:40,step:1,def:12} },
-    shapes:[{key:'scales',label:'Overlapping scales',build(rng,p,c){const s=p.scale,w=s*6,h=s*6;let body=`<rect width="${w}" height="${h}" fill="${c[1]}"/>`;for(let row=-1;row<7;row++)for(let col=-1;col<7;col++){const x=col*s+(row%2?s/2:0),y=row*s;body+=`<path d="M${fmt(x)} ${fmt(y)} h${fmt(s)} v${fmt(s*.35)} q${fmt(-s/2)} ${fmt(s*.65)} ${fmt(-s)} 0Z" fill="${mix(c[0],c[2],rnd(rng,0,.25))}" stroke="${c[1]}" stroke-width="1"/>`;}for(let i=0;i<p.patina;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.4,1.5))}" fill="#426c58" opacity=".35"/>`;return{w,h,body};}}]
+  stone_tablets: {
+    label:'Stone Tablets', group:'Moses', colors:['#77746b','#44443f','#b8b2a5'], colorNames:['stone','cut','edge'],
+    params:{ cracks:{label:'Fine cracks',min:1,max:20,step:1,def:7}, grain:{label:'Stone grain',min:3,max:45,step:1,def:18} },
+    shapes:[{key:'hewn',label:'Hewn stone',build(rng,p,c){const w=120,h=90;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.grain;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.5,2.2))}" fill="${rng()>.5?c[1]:c[2]}" opacity=".3"/>`;for(let i=0;i<p.cracks;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h);body+=`<path d="M${fmt(x)} ${fmt(y)} l${fmt(rnd(rng,-8,8))} ${fmt(rnd(rng,3,12))} l${fmt(rnd(rng,-5,5))} ${fmt(rnd(rng,2,8))}" stroke="${c[1]}" opacity=".55" fill="none"/>`;}return{w,h,body};}}]
   }
 
 };
+const LIB = Object.fromEntries(STORY_TEXTURE_CONFIG.keys.filter(key => FULL_LIB[key]).map(key => {
+  const item = FULL_LIB[key];
+  return [key, {...item, group: STORY_TEXTURE_CONFIG.story}];
+}));
 
 /* ============================================================
    State
 ============================================================ */
 let state = {
-  texKey: 'sheep_wool',
-  shapeKey: 'fleece',
+  texKey: 'stone',
+  shapeKey: FULL_LIB['stone'].shapes[0].key,
   seed: 1,
   colors: [],
   params: {},

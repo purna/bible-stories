@@ -1,32 +1,52 @@
 {
-  "story": "Moses",
-  "defaultPreset": "moses",
+  "story": "Template",
+  "defaultPreset": "guide",
   "schema": "base-plus-overrides-v1",
   "base": {
-    "noseScale": 1, "noseShape": "straight", "eyeShape": "almond", "eyeSpacing": 1,
-    "eyebrowStyle": "arched", "mouthStyle": "neutral", "hairStyle": "wavy", "beardStyle": "short",
-    "hatStyle": "none", "clothingType": "tunic", "faceShape": "oval", "foreheadHeight": "medium",
-    "chinShape": "rounded", "earSize": 1, "earShape": "round", "headSize": 1, "hairSize": 1,
-    "hatSize": 1, "hatMatchHair": false, "dualStripe": false,
-    "colorInner": "#c7a56a", "colorOuter": "#6f4c2d", "colorCloak": "#493321",
-    "colorAccent": "#b78a3d", "colorGarment2": "#ddd0ad", "colorSkin": "#b9825d",
-    "colorHair": "#2a1d16", "colorEye": "#3d2d24", "colorLip": "#985e50"
+    "noseScale": 1,
+    "noseShape": "straight",
+    "eyeShape": "almond",
+    "eyeSpacing": 1,
+    "eyebrowStyle": "arched",
+    "mouthStyle": "neutral",
+    "hairStyle": "wavy",
+    "beardStyle": "short",
+    "hatStyle": "none",
+    "clothingType": "tunic",
+    "faceShape": "oval",
+    "foreheadHeight": "medium",
+    "chinShape": "rounded",
+    "earSize": 1,
+    "earShape": "round",
+    "headSize": 1,
+    "hairSize": 1,
+    "hatSize": 1,
+    "hatMatchHair": false,
+    "dualStripe": false,
+    "colorInner": "#c7a56a",
+    "colorOuter": "#6f4c2d",
+    "colorCloak": "#493321",
+    "colorAccent": "#b78a3d",
+    "colorGarment2": "#ddd0ad",
+    "colorSkin": "#b9825d",
+    "colorHair": "#2a1d16",
+    "colorEye": "#3d2d24",
+    "colorLip": "#985e50"
   },
   "presets": {
-    "moses_young": { "name": "Moses — Prince of Egypt", "hairStyle": "curly", "beardStyle": "none", "clothingType": "layered_robe", "colorInner": "#f0d7a0", "colorOuter": "#f5f1df", "colorCloak": "#1d6573", "colorAccent": "#d4aa45", "dualStripe": true },
-    "moses": { "name": "Moses — Shepherd and Prophet", "noseShape": "aquiline", "eyebrowStyle": "thick", "hairStyle": "flowing", "beardStyle": "long", "foreheadHeight": "high", "clothingType": "layered_robe", "colorHair": "#d8d1c4", "colorOuter": "#76583b" },
-    "aaron": { "name": "Aaron — High Priest", "eyebrowStyle": "thick", "beardStyle": "long", "hatStyle": "turban", "clothingType": "priestly_ephod", "colorInner": "#f2eee3", "colorOuter": "#295b83", "colorCloak": "#702d42", "colorAccent": "#d6ad42", "dualStripe": true },
-    "miriam": { "name": "Miriam — Prophetess", "eyeShape": "upturned", "hairStyle": "flowing", "beardStyle": "none", "hatStyle": "headscarf", "clothingType": "layered_robe", "colorSkin": "#a96f4d", "colorOuter": "#7e3f47" },
-    "pharaoh": { "name": "Pharaoh", "noseShape": "aquiline", "eyeShape": "narrow", "eyebrowStyle": "straight", "hairStyle": "buzz", "beardStyle": "pointed", "hatStyle": "headscarf", "clothingType": "layered_robe", "faceShape": "square", "chinShape": "square", "colorOuter": "#164e72", "colorAccent": "#d8b446", "dualStripe": true },
-    "pharaohs_daughter": { "name": "Pharaoh's Daughter", "hairStyle": "braids", "beardStyle": "none", "hatStyle": "headscarf", "clothingType": "layered_robe", "faceShape": "heart", "colorOuter": "#2f7b86" },
-    "zipporah": { "name": "Zipporah", "eyebrowStyle": "straight", "hairStyle": "braids", "beardStyle": "none", "hatStyle": "headscarf", "colorSkin": "#8f593d", "colorOuter": "#643e2c" },
-    "jethro": { "name": "Jethro — Priest of Midian", "noseShape": "aquiline", "eyebrowStyle": "thick", "hairStyle": "receding", "beardStyle": "long", "hatStyle": "turban", "clothingType": "layered_robe", "colorHair": "#c8c0b4" },
-    "joshua": { "name": "Joshua", "faceShape": "square", "chinShape": "square", "eyebrowStyle": "thick", "hairStyle": "short", "clothingType": "military_lorica", "colorOuter": "#4f4937" },
-    "caleb": { "name": "Caleb", "faceShape": "square", "chinShape": "cleft", "noseShape": "wide", "eyebrowStyle": "thick", "hairStyle": "curly", "beardStyle": "full_round", "colorSkin": "#9d6748" },
-    "israelite_elder": { "name": "Israelite Elder", "hairStyle": "receding", "beardStyle": "long", "hatStyle": "skullcap", "foreheadHeight": "high", "colorHair": "#bdb5aa" },
-    "israelite_woman": { "name": "Israelite Woman", "hairStyle": "tied_back", "beardStyle": "none", "hatStyle": "headscarf", "clothingType": "peasant_rags", "colorSkin": "#ad7654" },
-    "egyptian_overseer": { "name": "Egyptian Overseer", "eyeShape": "narrow", "eyebrowStyle": "straight", "hairStyle": "buzz", "beardStyle": "none", "hatStyle": "headscarf", "clothingType": "military_lorica", "faceShape": "square" },
-    "korah": { "name": "Korah", "eyebrowStyle": "furrowed", "mouthStyle": "frown", "hairStyle": "curly", "beardStyle": "full_round", "clothingType": "layered_robe", "colorOuter": "#59382d" },
-    "balaam": { "name": "Balaam", "noseShape": "aquiline", "eyeShape": "hooded", "hairStyle": "flowing", "beardStyle": "pointed", "hatStyle": "hood", "clothingType": "layered_robe", "colorOuter": "#473b35" }
+    "guide": {
+      "name": "Guide"
+    },
+    "traveller": {
+      "name": "Traveller",
+      "noseShape": "aquiline",
+      "eyebrowStyle": "thick"
+    },
+    "witness": {
+      "name": "Witness",
+      "faceShape": "square",
+      "chinShape": "square",
+      "colorSkin": "#9d6748"
+    }
   }
 }

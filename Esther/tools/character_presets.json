@@ -1,0 +1,88 @@
+{
+  "story": "Esther",
+  "defaultPreset": "esther",
+  "schema": "base-plus-overrides-v1",
+  "base": {
+    "noseScale": 1,
+    "noseShape": "straight",
+    "eyeShape": "almond",
+    "eyeSpacing": 1,
+    "eyebrowStyle": "arched",
+    "mouthStyle": "neutral",
+    "hairStyle": "wavy",
+    "beardStyle": "short",
+    "hatStyle": "none",
+    "clothingType": "tunic",
+    "faceShape": "oval",
+    "foreheadHeight": "medium",
+    "chinShape": "rounded",
+    "earSize": 1,
+    "earShape": "round",
+    "headSize": 1,
+    "hairSize": 1,
+    "hatSize": 1,
+    "hatMatchHair": false,
+    "dualStripe": false,
+    "colorInner": "#c7a56a",
+    "colorOuter": "#6f4c2d",
+    "colorCloak": "#493321",
+    "colorAccent": "#b78a3d",
+    "colorGarment2": "#ddd0ad",
+    "colorSkin": "#b9825d",
+    "colorHair": "#2a1d16",
+    "colorEye": "#3d2d24",
+    "colorLip": "#985e50"
+  },
+  "presets": {
+    "esther": {
+      "name": "Esther",
+      "beardStyle": "none",
+      "hairStyle": "tied_back",
+      "hatStyle": "headscarf"
+    },
+    "mordecai": {
+      "name": "Mordecai",
+      "noseShape": "aquiline",
+      "eyebrowStyle": "thick"
+    },
+    "ahasuerus": {
+      "name": "Ahasuerus",
+      "clothingType": "layered_robe",
+      "colorOuter": "#395b7a",
+      "colorAccent": "#d4aa45",
+      "dualStripe": true,
+      "faceShape": "square",
+      "chinShape": "square",
+      "colorSkin": "#9d6748"
+    },
+    "vashti": {
+      "name": "Vashti",
+      "beardStyle": "none",
+      "hairStyle": "flowing",
+      "hatStyle": "headscarf",
+      "colorOuter": "#6d3f48"
+    },
+    "haman": {
+      "name": "Haman"
+    },
+    "zeresh": {
+      "name": "Zeresh",
+      "beardStyle": "none",
+      "hairStyle": "braids",
+      "hatStyle": "headscarf",
+      "noseShape": "aquiline",
+      "eyebrowStyle": "thick"
+    },
+    "hathach": {
+      "name": "Hathach",
+      "faceShape": "square",
+      "chinShape": "square",
+      "colorSkin": "#9d6748"
+    },
+    "palace_guard": {
+      "name": "Palace Guard",
+      "hairStyle": "curly",
+      "colorOuter": "#6d3f48"
+    }
+  }
+}

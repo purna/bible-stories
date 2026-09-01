@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Character Profile SVG Generator — Front View</title>
+<title>Character Head Generator — Daniel</title>
 <link href="../fonts.css" rel="stylesheet">
 <!-- JSZip for bulk exporting -->
 <script src="../vendor/jszip.3.10.1.min.js"></script>
@@ -154,7 +154,7 @@
 <div class="workspace">
   <!-- ============ SIDEBAR ============ -->
   <div class="sidebar">
-    <div class="brand">Head Forge <small>Front View</small></div>
+    <div class="brand">Daniel Head Forge <small>Front View</small></div>
 
     <div class="control-group">
       <h3 class="section-title">Character Presets</h3>
@@ -907,7 +907,8 @@ function loadPresets() {
     if (typeof CHARACTER_PRESETS_DATA !== "undefined" && CHARACTER_PRESETS_DATA && Object.keys(CHARACTER_PRESETS_DATA).length) {
         presets = CHARACTER_PRESETS_DATA;
         populatePresetSelect();
-        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets["daniel"] };
+        const firstKey = (typeof CHARACTER_PRESETS_META !== "undefined" && CHARACTER_PRESETS_META.defaultPreset) || Object.keys(presets)[0];
+        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[firstKey] };
         hidePresetError();
     } else {
         console.error("CHARACTER_PRESETS_DATA not found — character_presets.js did not load.");
@@ -922,11 +923,7 @@ function populatePresetSelect() {
     select.innerHTML = '<option value="">-- Select --</option>';
 
     const groups = {
-      "protagonists": { label: "Protagonists", characters: ["daniel", "hananiah", "mishael", "azariah"] },
-      "kings_and_authorities": { label: "Kings & Authorities", characters: ["nebuchadnezzar", "belshazzar", "darius", "cyrus", "ashpenaz"] },
-      "court_figures": { label: "Court Figures", characters: ["wise_men", "chaldeans", "satraps", "false_accusers"] },
-      "angelic_and_supernatural": { label: "Angelic & Supernatural", characters: ["son_of_god", "gabriel", "heavenly_messenger", "michael"] },
-      "symbolic_visions": { label: "Symbolic Visions", characters: ["four_beasts", "ancient_of_days", "son_of_man", "little_horn", "ram", "goat", "king_of_north", "king_of_south"] }
+      "story": { label: (typeof CHARACTER_PRESETS_META !== "undefined" ? CHARACTER_PRESETS_META.groupLabel : "Story characters"), characters: Object.keys(presets) }
     };
 
     Object.values(groups).forEach(group => {

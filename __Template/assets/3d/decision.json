@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "name": "decision",
+  "note": "Optional middle-ground authoring source. Keep objects few and silhouettes clear.",
+  "camera": {
+    "distance": 60,
+    "height": 18
+  },
+  "objects": [
+    {
+      "type": "shape",
+      "shapeType": "box",
+      "position": {
+        "x": 0,
+        "y": -8,
+        "z": 5
+      },
+      "scale": {
+        "x": 18,
+        "y": 8,
+        "z": 10
+      },
+      "color": "#845338"
+    }
+  ]
+}
