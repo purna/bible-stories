@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- bulrushes foreground reeds -->
+  <g stroke="#3a5028" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M40 600 Q45 480 50 360"/>
+    <path d="M70 600 Q73 500 78 380"/>
+    <path d="M100 600 Q105 460 110 320"/>
+    <path d="M730 600 Q735 480 740 360"/>
+    <path d="M760 600 Q765 490 770 380"/>
+    <path d="M790 600 Q792 500 798 400"/>
+  </g>
+  <!-- reed leaves -->
+  <g fill="#4a6840" stroke="#0A0812" stroke-width="1.5">
+    <path d="M50 360 Q60 350 70 360 L60 380 Z"/>
+    <path d="M78 380 Q88 370 98 380 L88 400 Z"/>
+    <path d="M110 320 Q120 310 130 320 L120 340 Z"/>
+    <path d="M740 360 Q750 350 760 360 L750 380 Z"/>
+    <path d="M770 380 Q780 370 790 380 L780 400 Z"/>
+  </g>
+  <!-- basket on water (mid-foreground) -->
+  <g transform="translate(330,400)">
+    <!-- basket shadow -->
+    <ellipse cx="70" cy="98" rx="76" ry="10" fill="#000" opacity=".3"/>
+    <!-- basket body -->
+    <path d="M0 60 L0 88 Q0 100 70 100 Q140 100 140 88 L140 60 Z" fill="#a06a30" stroke="#0A0812" stroke-width="3"/>
+    <!-- weave pattern -->
+    <path d="M10 70 H130 M10 80 H130 M10 90 H130" stroke="#7a4a1a" stroke-width="2"/>
+    <path d="M30 60 V100 M70 60 V100 M110 60 V100" stroke="#7a4a1a" stroke-width="2"/>
+    <!-- pitch seal (darker top) -->
+    <path d="M0 50 L140 50 L140 60 Q70 50 0 60 Z" fill="#5a3818" stroke="#0A0812" stroke-width="3"/>
+    <!-- handle/arch cover -->
+    <path d="M30 50 Q70 30 110 50" stroke="#5a3818" stroke-width="3" fill="none"/>
+  </g>
+  <!-- ripples around basket -->
+  <g stroke="#5a80a8" stroke-width="2" fill="none" opacity=".7">
+    <path d="M220 470 Q400 478 580 470"/>
+    <path d="M250 490 Q400 498 550 490"/>
+  </g>
+  <!-- a baby silhouette peek -->
+  <g transform="translate(380,388)">
+    <circle cx="20" cy="10" r="10" fill="#e0b888" stroke="#0A0812" stroke-width="2"/>
+    <path d="M5 22 Q20 35 35 22 L30 50 L10 50 Z" fill="#c8a888" stroke="#0A0812" stroke-width="2"/>
+  </g>
+</svg>

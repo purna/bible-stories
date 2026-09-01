@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Doorway with blood mark -->
+  <g transform="translate(280,80)">
+    <!-- arch -->
+    <path d="M0 460 L0 200 Q120 60 240 200 L240 460 Z" fill="#2a1808" stroke="#0A0812" stroke-width="4"/>
+    <!-- inner shadow -->
+    <path d="M20 460 L20 220 Q120 90 220 220 L220 460 Z" fill="#0a0404"/>
+    <!-- posts -->
+    <rect x="0"  y="200" width="22" height="260" fill="#3a1808" stroke="#0A0812" stroke-width="3"/>
+    <rect x="218" y="200" width="22" height="260" fill="#3a1808" stroke="#0A0812" stroke-width="3"/>
+    <!-- top lintel -->
+    <rect x="0" y="180" width="240" height="24" fill="#3a1808" stroke="#0A0812" stroke-width="3"/>
+    <!-- blood marks -->
+    <rect x="6"   y="220" width="10" height="36" fill="#c84b4b"/>
+    <rect x="222" y="220" width="10" height="36" fill="#c84b4b"/>
+    <rect x="115" y="184" width="14" height="14" fill="#c84b4b"/>
+    <!-- a bowl of blood on the lintel -->
+    <ellipse cx="120" cy="184" rx="14" ry="4" fill="#a04030"/>
+  </g>
+  <!-- a roasted lamb on a plate at bottom -->
+  <g transform="translate(330,540)">
+    <ellipse cx="70" cy="20" rx="80" ry="14" fill="#5a3818" stroke="#0A0812" stroke-width="2"/>
+    <path d="M30 14 Q70 -8 110 14" fill="#c88a48" stroke="#0A0812" stroke-width="2"/>
+  </g>
+</svg>

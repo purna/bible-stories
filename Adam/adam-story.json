@@ -11,9 +11,10 @@
     ],
     "lines": [
       { "speaker": "narrator", "fx": "fade", "text": "In the beginning, God created the heavens and the earth. The earth was formless and empty — and darkness was over the surface of the deep.", "align": "left", "svg": "creation_cosmos" },
-      { "sfx": "LET THERE BE LIGHT!", "speaker": "god", "fx": "bounce", "text": "Let there be light.", "align": "center", "svg": "creation_light" },
+      { "sfx": "LET THERE BE LIGHT!", "audioSfx": "assets/audio/sfx/creation_light.mp3", "speaker": "god", "fx": "bounce", "text": "Let there be light.", "align": "center", "svg": "creation_light" },
       { "speaker": "narrator", "fx": "fade", "text": "And God saw that the light was good. He separated the light from the darkness — calling the light 'Day' and the darkness 'Night.'", "align": "center", "svg": "creation_separation" },
-      { "speaker": "narrator", "fx": "type", "text": "On the second day, God formed the sky — a vault between the waters above and the waters below. And it was so.", "align": "right" },
+      { "speaker": "narrator", "fx": "type", "interaction": "ordering", "text": "Now watch the days unfold. Place each part of the world in the order God spoke it.", "align": "center" },
+      { "speaker": "narrator", "fx": "fade", "text": "On the second day, God formed the sky — a vault between the waters above and the waters below. And it was so.", "align": "right" },
       { "speaker": "narrator", "fx": "fade", "text": "On the third day, the waters gathered. Dry ground appeared. And every seed-bearing plant and tree with fruit burst forth across the earth.", "align": "left" },
       {
         "speaker": "narrator",
@@ -44,7 +45,7 @@
     "lines": [
       { "speaker": "narrator", "fx": "fade", "text": "The Lord God formed a man from the dust of the ground, and breathed into his nostrils the breath of life. And the man became a living being.", "align": "left", "svg": "garden_eden" },
       { "speaker": "god", "fx": "fade", "text": "I have placed him in the garden to work it and keep it.", "align": "center", "svg": "garden_placed" },
-      { "speaker": "narrator", "fx": "type", "text": "The garden was a paradise — every tree was pleasing to the eye, and every fruit was good for food. The tree of life and the tree of the knowledge of good and evil stood in its midst.", "align": "right", "svg": "garden_trees" },
+      { "speaker": "narrator", "audioSfx": "assets/audio/sfx/garden_water.mp3", "fx": "type", "text": "The garden was a paradise — every tree was pleasing to the eye, and every fruit was good for food. The tree of life and the tree of the knowledge of good and evil stood in its midst.", "align": "right", "svg": "garden_trees" },
       { "speaker": "god", "fx": "shake", "text": "You may eat from any tree. But from the tree of the knowledge of good and evil — you must not eat.", "align": "center", "svg": "garden_command" },
       {
         "speaker": "narrator",
@@ -109,7 +110,7 @@
         ]
       },
       { "speaker": "narrator", "fx": "fade", "text": "She gave some to her husband, who was with her. And he ate it.", "align": "left", "svg": "serpent_taken" },
-      { "sfx": "CRACK!", "speaker": "narrator", "fx": "shake", "text": "The moment the fruit touched their lips, something tore. Shame flooded in. Their eyes were opened.", "align": "center", "svg": "the_fall" },
+      { "sfx": "CRACK!", "audioSfx": "assets/audio/sfx/fall_crack.mp3", "speaker": "narrator", "fx": "shake", "text": "The moment the fruit touched their lips, something tore. Shame flooded in. Their eyes were opened.", "align": "center", "svg": "the_fall" },
       { "speaker": "narrator", "fx": "fade", "text": "They heard God approaching. And they hid — from each other, and from Him.", "align": "center", "svg": "the_hiding" }
     ]
   },
@@ -131,7 +132,7 @@
       { "speaker": "narrator", "fx": "type", "text": "He made garments of skin for them — covering their nakedness with His own hands.", "align": "center", "svg": "exile_garments" },
       { "speaker": "narrator", "fx": "fade", "text": "Then the Lord God said, 'Now the man has become like one of us, knowing good and evil.'", "align": "center", "svg": "exile_dawn" },
       { "speaker": "god", "fx": "bounce", "text": "Behold — he has become like one of us. Now he might reach out and take also from the tree of life, and live forever.", "align": "center" },
-      { "speaker": "narrator", "fx": "shake", "text": "So the Lord drove out the man — to bar the way to the tree of life that he might not eat and live forever.", "align": "center", "svg": "exile_driven" },
+      { "speaker": "narrator", "audioSfx": "assets/audio/sfx/exile_footsteps.mp3", "fx": "shake", "text": "So the Lord drove out the man — to bar the way to the tree of life that he might not eat and live forever.", "align": "center", "svg": "exile_driven" },
       { "speaker": "narrator", "fx": "fade", "text": "And Eden faded behind them. The gates were closed. The way was barred by flaming sword.", "align": "left" },
       {
         "speaker": "narrator",

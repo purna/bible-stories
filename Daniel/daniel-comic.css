@@ -290,6 +290,8 @@ body {
   pointer-events: none;
 }
 .fragment-hotspot {
+  appearance: none;
+  padding: 0;
   position: absolute;
   width: 44px;
   height: 44px;
@@ -304,6 +306,8 @@ body {
   background: rgba(255, 255, 255, 0.1);
   transform: translate(-50%, -50%);
 }
+.fragment-hotspot:focus-visible { outline: 4px solid #fff; outline-offset: 4px; }
+.fragment-hotspot:disabled { cursor: default; }
 .fragment-hotspot:hover {
   border-color: var(--cream);
   background: rgba(255, 255, 255, 0.3);
@@ -348,6 +352,7 @@ body {
 .vision-urgent {
   animation: visionPulse 0.5s ease-in-out infinite alternate;
 }
+.vision-assembly{position:absolute;left:50%;top:50%;z-index:9;translate:-50% -50%;width:min(720px,88%);box-sizing:border-box;padding:20px;color:var(--ink);background:var(--cream);border:5px solid var(--ink);box-shadow:10px 10px 0 var(--ink);text-align:center}.vision-assembly-kicker{font:10px "Press Start 2P",monospace;color:var(--accent-color)}.vision-assembly h3{margin:7px 0;font:clamp(28px,5vw,44px)/1 "Bangers",sans-serif}.vision-assembly-options{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:15px}.vision-assembly-options button{min-height:44px;padding:9px 12px;border:3px solid var(--ink);background:#fff;color:#0a0812!important;-webkit-text-fill-color:#0a0812;opacity:1!important;text-shadow:none;box-shadow:3px 3px 0 var(--ink);font:800 13px "Nunito",sans-serif;cursor:pointer}.vision-assembly-options button:focus-visible{outline:4px solid var(--set-apart);outline-offset:3px}.vision-assembly-result{display:grid;gap:5px;margin:12px 0}.vision-assembly-result span{padding:5px 9px;background:#f3d16b;border:2px solid var(--ink);font-weight:900}.assembly-mistake{animation:visionShake .25s linear}@keyframes visionShake{25%{translate:-5px 0}75%{translate:5px 0}}
 @keyframes visionPulse {
   0% { box-shadow: 0 0 0 0px rgba(255, 107, 91, 0.3); }
   100% { box-shadow: 0 0 0 8px rgba(255, 107, 91, 0); }

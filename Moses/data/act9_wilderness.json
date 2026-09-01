@@ -1,0 +1,92 @@
+{
+  "id": "wilderness",
+  "name": "Ch.9 \u00b7 The Long Wilderness",
+  "bg": "radial-gradient(circle at 50% 40%, #141008, #241c12 65%, #080604)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Spies went up into Canaan \u2014 twelve of them, one from each tribe. After forty days they came back."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "shake",
+      "align": "right",
+      "svg": "placeholder",
+      "sfx": "FEAR!",
+      "text": "The land flows with milk and honey \u2014 but the people who live there are powerful, and the cities are fortified and very large!"
+    },
+    {
+      "speaker": "caleb",
+      "fx": "bounce",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "We should go up and take possession of the land, for we can certainly do it."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "But the other spies spoke against Caleb. The whole assembly talked about stoning them."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "shake",
+      "align": "center",
+      "svg": "placeholder",
+      "sfx": "WEEP!",
+      "text": "That night all the people of the community raised their voices and wept aloud."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Not one of you will enter the land I swore with uplifted hand to make your home. Your children will be wanderers in the wilderness for forty years.",
+      "cite": "Numbers 14:30, 33"
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Years passed. Provision kept coming. Manna every morning. Quail some evenings. Water from the rock. Their clothes did not wear out. Their feet did not swell."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "But one day, at Meribah, there was no water again. The people quarrelled with Moses. Moses struck the rock instead of speaking to it."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Because you did not trust in me enough to honour me as holy in the sight of the Israelites, you will not bring this community into the land I give them."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Moses \u2014 who had brought them out of Egypt \u2014 would not bring them in. Joshua would."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Forty years after the basket on the Nile, the people stood at the edge of the Jordan \u2014 and one man would not cross with them."
+    }
+  ],
+  "scene": "wilderness",
+  "foreground": "fg_wilderness",
+  "index": 8
+}

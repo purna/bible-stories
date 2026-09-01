@@ -12,6 +12,7 @@ class AudioManager {
         this.bgm.volume = this.musicVolume;
         this.toggleBtn = document.querySelector('#audioToggle');
         this.fadeTimer = null;
+        this.activeSfx = new Set();
 
         this.updateToggle();
         if (this.toggleBtn) {
@@ -84,6 +85,7 @@ class AudioManager {
 
     playAct(act) {
         const sources = Array.isArray(act && act.audio) ? act.audio : (act && act.audio ? [act.audio] : []);
+        this.preloadAct(act);
         if (!sources.length) {
             this.fadeOut(true);
             return;
@@ -117,11 +119,69 @@ class AudioManager {
         else startTrack();
     }
 
+    preloadAct(act) {
+        const sources = Array.isArray(act && act.audio) ? act.audio : (act && act.audio ? [act.audio] : []);
+        const effects = Array.isArray(act && act.sfx) ? act.sfx : [];
+        return this.preloadFiles([...sources, ...effects]);
+    }
+
+    preloadStory(story, extraEffects = []) {
+        const acts = Array.isArray(story) ? story : (Array.isArray(story && story.acts) ? story.acts : []);
+        const files = [this.sfxPath, ...extraEffects];
+        acts.forEach(act => {
+            const music = Array.isArray(act.audio) ? act.audio : (act.audio ? [act.audio] : []);
+            const effects = Array.isArray(act.sfx) ? act.sfx : [];
+            files.push(...music, ...effects);
+            (act.lines || []).forEach(line => {
+                const lineEffects = Array.isArray(line.audioSfx) ? line.audioSfx : (line.audioSfx ? [line.audioSfx] : []);
+                files.push(...lineEffects);
+            });
+        });
+        return this.preloadFiles(files);
+    }
+
+    preloadFiles(files) {
+        const unique = [...new Set(files.filter(Boolean))];
+        if (window.AssetDownloadManager) return window.AssetDownloadManager.downloadAudio(unique);
+        unique.forEach(path => {
+            const media = new Audio();
+            media.preload = 'auto';
+            media.src = path;
+            media.load();
+        });
+        return Promise.resolve({ completed: unique.length, total: unique.length, failures: [] });
+    }
+
     playSfx(path = this.sfxPath) {
         if (!this.enabled) return;
         const sfx = new Audio(path);
         sfx.volume = this.sfxVolume;
-        sfx.play().catch(() => {});
+        this.activeSfx.add(sfx);
+        const release = () => this.activeSfx.delete(sfx);
+        sfx.addEventListener('ended', release, { once: true });
+        sfx.addEventListener('error', release, { once: true });
+        sfx.play().catch(release);
+    }
+
+    playLineSfx(line) {
+        const effects = Array.isArray(line && line.audioSfx) ? line.audioSfx : (line && line.audioSfx ? [line.audioSfx] : []);
+        this.stopSfx();
+        effects.forEach(path => this.playSfx(path));
+    }
+
+    startSfxLoop(path, volume = 0.08) {
+        if (!this.enabled) return null;
+        const sfx = new Audio(path);
+        sfx.loop = true;
+        sfx.volume = Math.min(this.sfxVolume, volume);
+        this.activeSfx.add(sfx);
+        sfx.play().catch(() => this.activeSfx.delete(sfx));
+        return sfx;
+    }
+
+    stopSfx() {
+        this.activeSfx.forEach(sfx => { sfx.pause(); sfx.currentTime = 0; });
+        this.activeSfx.clear();
     }
 
     toggle() {
@@ -129,6 +189,7 @@ class AudioManager {
         AudioManager.savePreference(this.enabled);
         this.updateToggle();
         if (!this.enabled) {
+            this.stopSfx();
             this.fadeOut(false);
         } else {
             const act = window.__comic && window.__comic.currentAct ? window.__comic.currentAct() : null;

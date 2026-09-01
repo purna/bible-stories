@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" data-parallax="true">
+  <defs>
+    <linearGradient id="breadSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5a3818"/>
+      <stop offset="100%" stop-color="#2a1808"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#breadSky)" data-depth="0"/>
+  <!-- sun -->
+  <circle cx="640" cy="120" r="40" fill="#FFD84D" opacity=".5" data-depth="0.2"/>
+  <circle cx="640" cy="120" r="24" fill="#FFD84D" opacity=".9" data-depth="0.2"/>
+  <!-- distant dunes -->
+  <path d="M0 350 Q200 280 400 320 T800 300 L800 600 L0 600 Z" fill="#7a5028" stroke="#0A0812" stroke-width="2" data-depth="0.3"/>
+  <!-- midground dunes -->
+  <path d="M0 420 Q150 360 350 400 T800 380 L800 600 L0 600 Z" fill="#a06838" stroke="#0A0812" stroke-width="2" data-depth="0.5"/>
+  <!-- foreground sand -->
+  <path d="M0 480 Q200 460 400 470 T800 470 L800 600 L0 600 Z" fill="#c88a48" data-depth="0.7"/>
+  <!-- scattered rocks -->
+  <g fill="#5a3818" stroke="#0A0812" stroke-width="2" data-depth="0.8">
+    <ellipse cx="180" cy="510" rx="18" ry="8"/>
+    <ellipse cx="500" cy="540" rx="22" ry="10"/>
+    <ellipse cx="660" cy="500" rx="14" ry="7"/>
+  </g>
+  <!-- sparse tufts -->
+  <g stroke="#3a4818" stroke-width="2" fill="none" data-depth="0.8">
+    <path d="M120 520 L120 500 M115 510 L125 510"/>
+    <path d="M420 540 L420 520 M415 530 L425 530"/>
+    <path d="M580 530 L580 510 M575 520 L585 520"/>
+  </g>
+</svg>

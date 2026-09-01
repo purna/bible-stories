@@ -1,0 +1,116 @@
+{
+  "id": "calf",
+  "name": "Ch.8 \u00b7 The Broken Tablets",
+  "bg": "radial-gradient(circle at 50% 50%, #1a1008, #2e1a10 65%, #0a0604)",
+  "particle": "ember",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Moses was on the mountain forty days and forty nights. Down below, the people grew restless."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "They went to Aaron. \"Make us gods who will go before us. As for this fellow Moses \u2014 we don't know what has happened to him.\""
+    },
+    {
+      "speaker": "aaron",
+      "fx": "fade",
+      "align": "right",
+      "svg": "placeholder",
+      "text": "Give me your gold \u2014 your earrings, your rings, your chains.\" He collected it. He shaped it with a tool. He made a golden calf."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "sfx": "PARTY!",
+      "text": "Tomorrow we will feast to the LORD! They offered sacrifices and sat down to eat and drink. Then they got up to indulge in revelry."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Go down, because your people, whom you brought up out of Egypt, have become corrupt. They have been quick to turn away from what I commanded them.",
+      "cite": "Exodus 32:7\u20138"
+    },
+    {
+      "speaker": "moses",
+      "fx": "shake",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "O LORD, why have you brought trouble on this people? Turn from your fierce anger. Remember Abraham, Isaac and Israel, your servants.",
+      "choices": [
+        {
+          "label": "Plead for the people \u2014 every one of them \ud83d\ude4f",
+          "note": "Moses offers himself to be blotted out instead. God does not take the offer \u2014 but He relents the destruction."
+        },
+        {
+          "label": "Speak for yourself \u2014 walk away from this \ud83d\udeb6",
+          "note": "Moses has reached the end of what he can carry alone. He turns back to the camp anyway."
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "shake",
+      "align": "center",
+      "svg": "placeholder",
+      "sfx": "CRASH!",
+      "text": "Moses came down from the mountain. In his hands were the two tablets of the covenant, inscribed on both sides."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "When he approached the camp and saw the calf and the dancing, his anger burned. He threw the tablets out of his hands, breaking them at the foot of the mountain."
+    },
+    {
+      "speaker": "moses",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Who is on the LORD's side? Come to me."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "The sons of Levi gathered to him. He said: \"Each man strap a sword to his side. Go back and forth through the camp from one end to the other. Each man kill his brother and friend and neighbour.\""
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "About three thousand people died that day. Then Moses returned to the LORD. \"Please forgive your people. Blot me out of the book you have written if you will not.\""
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Whoever has sinned against me I will blot out of my book. Now go, lead the people to the place I spoke of. My angel will go before you."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Then the LORD said to Moses: \"Chisel out two stone tablets like the first ones. I will write on them the words that were on the first tablets, which you broke.\""
+    }
+  ],
+  "scene": "calf",
+  "foreground": "fg_calf",
+  "index": 7
+}

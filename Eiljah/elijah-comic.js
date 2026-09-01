@@ -30,7 +30,7 @@ const CHARACTERS = {
     prophets_baal: 'assets/characters/prophet_of_baal.svg',
     angel: 'assets/characters/angel_of_the_lord.svg',
     elisha: 'assets/characters/elisha.svg',
-    god: 'assets/characters/god.svg',
+    god: null,
     narrator: null
 };
 
@@ -106,6 +106,242 @@ function buildLineHTML(text, fx) {
 }
 function escapeHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 
+/* =========================================================================
+   HEARING VERTICAL SLICE — Faith / Despair state + noise tuning engine
+   Chapter 5 only. Reduces chaotic events so the still small voice clears.
+   ========================================================================= */
+const STATE_KEY = 'elijah_hearing_state_v1';
+const defaultHearingState = () => ({ faith: 50, despair: 35, runs: 0, lastOutcome: null });
+let hearingState = defaultHearingState();
+try {
+    const saved = JSON.parse(localStorage.getItem(STATE_KEY) || 'null');
+    if (saved && typeof saved === 'object') hearingState = { ...defaultHearingState(), ...saved };
+} catch (error) { /* localStorage unavailable — keep defaults */ }
+
+function persistHearingState() {
+    try { localStorage.setItem(STATE_KEY, JSON.stringify(hearingState)); } catch (error) { /* ignore */ }
+}
+
+function adjustHearingState(patch) {
+    hearingState = { ...hearingState, ...patch };
+    hearingState.faith = Math.max(0, Math.min(100, hearingState.faith));
+    hearingState.despair = Math.max(0, Math.min(100, hearingState.despair));
+    persistHearingState();
+}
+
+function hearingStartNoise() {
+    const base = 65;
+    const faithRelief = Math.round((hearingState.faith - 50) * 0.35);
+    const despairBoost = Math.round((hearingState.despair - 35) * 0.45);
+    return Math.max(25, Math.min(95, base - faithRelief + despairBoost));
+}
+
+let hearingSession = null;
+
+function buildHearingOverlay() {
+    const overlay = document.createElement('section');
+    overlay.className = 'hearing-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-labelledby', 'hearingTitle');
+    overlay.innerHTML = `
+      <div class="hearing-panel">
+        <span class="hearing-kicker">HEARING · TUNE OUT THE NOISE</span>
+        <h3 id="hearingTitle" class="hearing-title">Find the Still, Small Voice</h3>
+        <p class="hearing-prompt">Move away from fear and spectacle. Find the quiet centre, then hold your attention there.</p>
+        <div class="hearing-meters" aria-hidden="true">
+          <div class="hearing-meter">
+            <span class="hearing-meter-label">Noise</span>
+            <div class="hearing-meter-track"><div class="hearing-meter-fill" data-noise-fill></div></div>
+          </div>
+          <div class="hearing-meter">
+            <span class="hearing-meter-label">Faith</span>
+            <div class="hearing-meter-track"><div class="hearing-meter-fill faith" data-faith-fill></div></div>
+          </div>
+          <div class="hearing-meter">
+            <span class="hearing-meter-label">Despair</span>
+            <div class="hearing-meter-track"><div class="hearing-meter-fill despair" data-despair-fill></div></div>
+          </div>
+        </div>
+        <div class="hearing-stage" aria-hidden="true">
+          <div class="hearing-layer wind" data-layer="wind"><b>WIND</b><i></i><i></i><i></i></div>
+          <div class="hearing-layer quake" data-layer="quake"><b>EARTHQUAKE</b></div>
+          <div class="hearing-layer fire" data-layer="fire"><b>FIRE</b><i></i><i></i><i></i></div>
+          <div class="hearing-layer threat" data-layer="threat"><b>JEZEBEL'S THREAT!</b></div>
+          <div class="hearing-layer despair" data-layer="despair"><b>I AM ALONE</b></div>
+          <div class="hearing-whisper" data-whisper><span>Be still.</span></div>
+        </div>
+        <div class="hearing-controls">
+          <div class="hearing-tuner" data-hearing-tuner tabindex="0" role="application" aria-label="Two-axis listening tuner. Use arrow keys or drag. Move toward the quiet centre.">
+            <span class="hearing-axis spectacle">SPECTACLE</span><span class="hearing-axis stillness">STILLNESS</span>
+            <span class="hearing-axis fear">FEAR</span><span class="hearing-axis faith">FAITH</span>
+            <span class="hearing-target" aria-hidden="true"></span>
+            <span class="hearing-cursor" data-hearing-cursor aria-hidden="true"></span>
+          </div>
+          <div class="hearing-axis-inputs">
+            <label>Spectacle to stillness <input type="range" min="0" max="100" data-hearing-x></label>
+            <label>Fear to faith <input type="range" min="0" max="100" data-hearing-y></label>
+          </div>
+        </div>
+        <p class="hearing-status" data-hearing-status role="status" aria-live="polite">Listen…</p>
+        <div class="hearing-actions">
+          <button type="button" class="hearing-btn" data-hearing-finish hidden>Continue the story</button>
+          <button type="button" class="hearing-btn ghost" data-hearing-skip>Skip the stillness</button>
+        </div>
+        <p class="hearing-help">Use arrow keys, drag the gold marker, or use the two sliders. Hold near the centre until the noise falls away.</p>
+      </div>
+    `;
+    return overlay;
+}
+
+function startHearingInteraction(container) {
+    const noiseFill = container.querySelector('[data-noise-fill]');
+    const faithFill = container.querySelector('[data-faith-fill]');
+    const despairFill = container.querySelector('[data-despair-fill]');
+    const layers = [...container.querySelectorAll('[data-layer]')];
+    const whisper = container.querySelector('[data-whisper]');
+    const tuner = container.querySelector('[data-hearing-tuner]');
+    const cursor = container.querySelector('[data-hearing-cursor]');
+    const xInput = container.querySelector('[data-hearing-x]');
+    const yInput = container.querySelector('[data-hearing-y]');
+    const status = container.querySelector('[data-hearing-status]');
+    const finishBtn = container.querySelector('[data-hearing-finish]');
+    const skipBtn = container.querySelector('[data-hearing-skip]');
+
+    adjustHearingState({ runs: (hearingState.runs || 0) + 1 });
+
+    const startNoise = hearingStartNoise();
+    let x = Math.max(5, Math.min(95, 20 + hearingState.faith * 0.12 - hearingState.despair * 0.18));
+    let y = Math.max(5, Math.min(95, 22 + hearingState.faith * 0.14 - hearingState.despair * 0.2));
+    let noise = startNoise;
+    let clearTime = 0;
+    let lastTick = performance.now();
+    let settled = false;
+    let frameId = 0;
+    let dragging = false;
+    const layerWeights = [1, 0.88, 0.78, 0.68, 0.58];
+
+    function renderMeters() {
+        noiseFill.style.width = noise + '%';
+        faithFill.style.width = hearingState.faith + '%';
+        despairFill.style.width = hearingState.despair + '%';
+        cursor.style.left = `${x}%`;
+        cursor.style.top = `${100 - y}%`;
+        xInput.value = Math.round(x);
+        yInput.value = Math.round(y);
+        layers.forEach((layer, index) => {
+            const strength = Math.min(1, (noise / 100) * layerWeights[index] * 1.35);
+            layer.style.setProperty('--noise', strength.toFixed(3));
+        });
+    }
+
+    function setStatus(text, clear = false) {
+        status.textContent = text;
+        status.classList.toggle('clear', clear);
+    }
+
+    function markCleared() {
+        if (settled) return;
+        settled = true;
+        layers.forEach(layer => layer.style.setProperty('--noise', '0'));
+        whisper.style.opacity = '1';
+        whisper.style.transform = 'translate(-50%, -50%) scale(1)';
+        const bonus = 10;
+        const despairDrain = 6;
+        adjustHearingState({ faith: hearingState.faith + bonus, despair: Math.max(0, hearingState.despair - despairDrain) });
+        hearingState.lastOutcome = 'listened';
+        persistHearingState();
+        renderMeters();
+        setStatus('After the fire… a still, small voice.', true);
+        finishBtn.hidden = false;
+        audio.stopSfx();
+        finishBtn.focus({ preventScroll: true });
+    }
+
+    function tick() {
+        const now = performance.now();
+        const dt = Math.min(0.2, (now - lastTick) / 1000);
+        lastTick = now;
+        if (!settled) {
+            const distance = Math.hypot(x - 50, y - 50) / 70.72;
+            const targetNoise = Math.min(100, startNoise * distance * 1.75);
+            noise += (targetNoise - noise) * Math.min(1, dt * 3.5);
+            if (noise < 25) {
+                if (!clearTime) clearTime = now;
+                if (now - clearTime > 1400) markCleared();
+                else setStatus('Quieter… keep listening.');
+            } else {
+                clearTime = 0;
+                setStatus(noise < 50 ? 'The noise fades…' : 'Loud. Hold to listen.');
+            }
+            renderMeters();
+        }
+        frameId = requestAnimationFrame(tick);
+    }
+
+    function setPosition(nextX, nextY) {
+        x = Math.max(0, Math.min(100, nextX));
+        y = Math.max(0, Math.min(100, nextY));
+        renderMeters();
+    }
+
+    function positionFromPointer(event) {
+        const rect = tuner.getBoundingClientRect();
+        setPosition(((event.clientX - rect.left) / rect.width) * 100, 100 - ((event.clientY - rect.top) / rect.height) * 100);
+    }
+    tuner.addEventListener('pointerdown', event => { dragging = true; tuner.setPointerCapture(event.pointerId); positionFromPointer(event); });
+    tuner.addEventListener('pointermove', event => { if (dragging) positionFromPointer(event); });
+    tuner.addEventListener('pointerup', () => { dragging = false; });
+    tuner.addEventListener('pointercancel', () => { dragging = false; });
+    xInput.addEventListener('input', () => setPosition(Number(xInput.value), y));
+    yInput.addEventListener('input', () => setPosition(x, Number(yInput.value)));
+
+    function keyHandler(event) {
+        if (event.key === 'ArrowUp' || event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+            event.preventDefault();
+            const step = event.shiftKey ? 10 : 4;
+            setPosition(x + (event.key === 'ArrowRight' ? step : event.key === 'ArrowLeft' ? -step : 0), y + (event.key === 'ArrowUp' ? step : event.key === 'ArrowDown' ? -step : 0));
+        }
+    }
+    tuner.addEventListener('keydown', keyHandler);
+
+    function cleanup() {
+        cancelAnimationFrame(frameId);
+        audio.stopSfx();
+        if (window.StoryRuntime) StoryRuntime.unlock('hearing');
+        updateNextBtn();
+    }
+
+    finishBtn.addEventListener('click', () => { container.remove(); cleanup(); });
+    skipBtn.addEventListener('click', () => {
+        adjustHearingState({ despair: Math.min(100, hearingState.despair + 4) });
+        hearingState.lastOutcome = 'skipped';
+        persistHearingState();
+        settled = true;
+        container.remove();
+        cleanup();
+    });
+
+    if (window.StoryRuntime) StoryRuntime.setMode('game', { lock: 'hearing' });
+    renderMeters();
+    setStatus('Listen…');
+    audio.stopSfx();
+    const listeningLoops = [
+        audio.startSfxLoop('assets/audio/sfx/desert_wind.mp3', 0.08),
+        audio.startSfxLoop('assets/audio/sfx/rain_thunder.mp3', 0.045),
+        audio.startSfxLoop('assets/audio/sfx/altar_fire.mp3', 0.035)
+    ].filter(Boolean);
+    const baseLoopVolumes = [0.08, 0.045, 0.035];
+    const meterRenderer = renderMeters;
+    renderMeters = function renderMetersWithAudio() {
+        meterRenderer();
+        listeningLoops.forEach((loop, index) => { loop.volume = baseLoopVolumes[index] * Math.max(0, noise / 100); });
+    };
+    tuner.focus({ preventScroll: true });
+    lastTick = performance.now();
+    requestAnimationFrame(tick);
+}
+
 async function createFrame(actIndex) {
     const frame = document.createElement('div');
     frame.className = `comic-frame popIn palette-act-${actIndex + 1}`;
@@ -166,6 +402,7 @@ async function renderLine() {
 
     const act = currentAct();
     const line = act.lines[lineIdx];
+    audio.playLineSfx(line);
 
     const frame = await createFrame(actIdx);
     const graphicContainer = await createGraphicContainer(line, act);
@@ -195,6 +432,15 @@ async function renderLine() {
 
         if (line.fx === 'zoom') {
             revealZoomText(overlay);
+        }
+
+        if (line.interaction === 'hearing') {
+            const hearingOverlay = buildHearingOverlay();
+            overlay.appendChild(hearingOverlay);
+            nextBtn.classList.remove('show');
+            nextLineBtn.classList.remove('show');
+            startHearingInteraction(hearingOverlay);
+            return;
         }
 
         startNextLineTimer(line, overlay);
@@ -251,6 +497,7 @@ function renderChoices(data) {
 }
 
 function updateNextBtn() {
+    if (window.StoryRuntime) StoryRuntime.setMode(choicePending ? 'choice' : 'reading');
     const atEnd = lineIdx === currentAct().lines.length - 1 && !choicePending;
     nextBtn.className = `palette-act-${actIdx + 1}`;
     nextBtn.classList.toggle('show', atEnd);
@@ -350,7 +597,7 @@ function revealZoomText(overlay) {
 
 async function goLine(delta) {
     if (transitioning) return;
-    if (choicePending) { choicePending = false; choicesBox.classList.remove('show'); }
+    if (choicePending) return;
     delayNote.className = '';
     nextBtn.classList.remove('show');
     nextLineBtn.classList.remove('show');
@@ -635,6 +882,7 @@ animFrame = requestAnimationFrame(tickParticles);
    KEYBOARD NAVIGATION
    ========================================================================= */
 document.addEventListener('keydown', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goLine(1);
     if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') goLine(-1);
 });
@@ -644,10 +892,12 @@ document.addEventListener('keydown', e => {
    ========================================================================= */
 let touchStartX = 0, touchStartY = 0;
 document.addEventListener('touchstart', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
 }, { passive: true });
 document.addEventListener('touchend', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     const dx = e.changedTouches[0].clientX - touchStartX;
     const dy = e.changedTouches[0].clientY - touchStartY;
     if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
@@ -660,6 +910,7 @@ document.addEventListener('touchend', e => {
    ========================================================================= */
 let wheelCooldown = false;
 document.addEventListener('wheel', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     if (wheelCooldown) return;
     wheelCooldown = true;
     setTimeout(() => { wheelCooldown = false; }, 600);
@@ -695,6 +946,7 @@ async function main() {
     try {
         const response = await fetch('elijah-story.json');
         STORY = await response.json();
+        audio.preloadStory(STORY);
         populateChapterSelect();
         loadAct();
     } catch (error) {

@@ -67,11 +67,35 @@
             "triggerOnce": true
         },
         {
+            "id": "market_row",
+            "position": { "x": 4, "y": 0.2, "z": 2 },
+            "label": "Market Row",
+            "beatModule": "Act3Beats",
+            "beatFunction": "visitMarket",
+            "triggerOnce": true
+        },
+        {
+            "id": "noble_house",
+            "position": { "x": -4, "y": 0.2, "z": 2 },
+            "label": "The Noble House",
+            "beatModule": "Act3Beats",
+            "beatFunction": "visitNobleHouse",
+            "triggerOnce": true
+        },
+        {
             "id": "sermon_square",
             "position": { "x": 0, "y": 0.2, "z": 0 },
             "label": "Cry Out",
             "beatModule": "Act3Beats",
             "beatFunction": "preachSermon",
+            "triggerOnce": true
+        },
+        {
+            "id": "kings_palace",
+            "position": { "x": 0, "y": 0.2, "z": -4 },
+            "label": "The King's Decree",
+            "beatModule": "Act3Beats",
+            "beatFunction": "kingDecrees",
             "triggerOnce": true
         }
     ]

@@ -11,12 +11,13 @@ function localPath(entry) {
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
     const cache = await caches.open(STORY_CACHE);
+    const downloads = await caches.open('story-downloads-v1');
     const response = await fetch('precache-manifest.json');
     const manifest = await response.json();
     for (const entry of manifest.urls || []) {
       const request = new URL(localPath(entry), STORY_SCOPE);
       try {
-        const asset = await fetch(request);
+        const asset = (await downloads.match(request, { ignoreSearch: true })) || await fetch(request);
         if (asset.ok) await cache.put(request, asset.clone());
       } catch (error) {
         console.warn('Story asset was not cached:', request.pathname, error);

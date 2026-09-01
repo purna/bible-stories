@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" data-parallax="true">
+  <defs>
+    <radialGradient id="calfBg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#3a2010"/>
+      <stop offset="100%" stop-color="#0a0404"/>
+    </radialGradient>
+    <radialGradient id="calfFire" cx="50%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#FFB04A" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#FF6020" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#calfBg)" data-depth="0"/>
+  <!-- distant crowd -->
+  <g fill="#3a2010" stroke="#0A0812" stroke-width="2" data-depth="0.3" opacity=".6">
+    <circle cx="80"  cy="380" r="14"/>
+    <rect   x="68"  y="395" width="24" height="40"/>
+    <circle cx="140" cy="385" r="13"/>
+    <rect   x="129" y="399" width="22" height="40"/>
+    <circle cx="200" cy="390" r="14"/>
+    <rect   x="188" y="405" width="24" height="40"/>
+    <circle cx="600" cy="385" r="14"/>
+    <rect   x="588" y="400" width="24" height="40"/>
+    <circle cx="660" cy="390" r="13"/>
+    <rect   x="649" y="404" width="22" height="40"/>
+    <circle cx="720" cy="385" r="14"/>
+    <rect   x="708" y="400" width="24" height="40"/>
+  </g>
+  <!-- fire glow behind idol -->
+  <circle cx="400" cy="400" r="160" fill="url(#calfFire)" data-depth="0.4"/>
+  <!-- ground -->
+  <rect x="0" y="450" width="800" height="150" fill="#1a0e06" data-depth="0.6"/>
+  <!-- ground markings -->
+  <g stroke="#3a2010" stroke-width="1" opacity=".5" data-depth="0.7">
+    <line x1="0" y1="490" x2="800" y2="490"/>
+    <line x1="0" y1="540" x2="800" y2="540"/>
+  </g>
+</svg>

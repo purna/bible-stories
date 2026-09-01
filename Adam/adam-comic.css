@@ -796,3 +796,206 @@ body {
   box-shadow: 4px 4px 0 var(--ink);
   transform: translateY(2px);
 }
+/* =========================================================================
+   CREATION VERTICAL SLICE — Order the Days of Creation
+   Player taps each piece in the correct Genesis sequence; wrong picks
+   receive a gentle visual clue; no failure state.
+   ========================================================================= */
+.creation-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: radial-gradient(circle at 50% 30%, rgba(8, 14, 38, 0.55), rgba(2, 6, 18, 0.92));
+  color: #fefae0;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+}
+.creation-panel {
+  width: min(620px, 98%);
+  max-height: 96%;
+  overflow-y: auto;
+  background: linear-gradient(180deg, rgba(14, 22, 50, 0.94), rgba(6, 12, 30, 0.98));
+  border: 3px solid #ffd84d;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55), inset 0 0 24px rgba(255, 217, 130, 0.05);
+  padding: 18px 18px 14px;
+  border-radius: 6px;
+  text-align: center;
+}
+.creation-kicker {
+  font-family: "Bangers", cursive;
+  letter-spacing: 0.18em;
+  font-size: 16px;
+  color: #ffd84d;
+  text-shadow: 2px 2px 0 var(--ink);
+}
+.creation-title {
+  font-family: "Bangers", cursive;
+  font-size: clamp(22px, 4vw, 30px);
+  margin: 4px 0 6px;
+  color: #fff7e8;
+  letter-spacing: 0.04em;
+}
+.creation-prompt {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d6c8d8;
+  margin: 0 0 12px;
+}
+.creation-status {
+  font-family: "Bangers", cursive;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  margin: 0 0 10px;
+  color: #ffd84d;
+  min-height: 18px;
+}
+.creation-status.done { color: #b9f2d8; }
+.creation-status.hint { color: #ff9eb1; }
+.creation-board {
+  display: grid;
+  grid-template-columns: 1fr 110px 1fr;
+  gap: 12px;
+  align-items: stretch;
+  margin: 4px auto 12px;
+}
+.creation-pool,
+.creation-slots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  align-content: start;
+}
+.creation-slots { grid-template-columns: 1fr; }
+.creation-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  aspect-ratio: 1.4 / 1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 3px solid #4a4e69;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0 #0A0812;
+  font-family: "Bangers", cursive;
+  font-size: 14px;
+  color: #fefae0;
+  cursor: pointer;
+  transition: transform 80ms ease-out, box-shadow 80ms ease-out, border-color 100ms ease-out;
+  padding: 8px 6px;
+  -webkit-tap-highlight-color: transparent;
+}
+.creation-tile svg { width: 38px; height: 38px; }
+.creation-tile:hover,
+.creation-tile:focus { outline: none; border-color: #ffd84d; }
+.creation-tile:focus { box-shadow: 3px 3px 0 #0A0812, inset 0 0 0 2px #ffd84d; }
+.creation-tile.placed {
+  opacity: 0.35;
+  pointer-events: none;
+  border-style: dashed;
+  cursor: default;
+}
+.creation-tile.wrong {
+  animation: creationWrong 360ms ease-out;
+  border-color: #ff6b5b;
+}
+@keyframes creationWrong {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-4px, 0); }
+  40% { transform: translate(4px, 0); }
+  60% { transform: translate(-2px, 0); }
+  80% { transform: translate(2px, 0); }
+}
+.creation-slot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  min-height: 52px;
+  border: 3px dashed #4a4e69;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: left;
+  font-family: "Bangers", cursive;
+  font-size: 13px;
+  color: #b3a1c7;
+  letter-spacing: 0.06em;
+  transition: border-color 120ms ease-out, background 120ms ease-out;
+}
+.creation-slot.active { border-color: #ffd84d; background: rgba(255, 217, 130, 0.08); }
+.creation-slot.filled { border-style: solid; border-color: #4ECDC4; background: linear-gradient(180deg, rgba(78, 205, 196, 0.18), rgba(0, 50, 60, 0.4)); color: #fefae0; }
+.creation-slot-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0A0812;
+  color: #ffd84d;
+  font-size: 14px;
+}
+.creation-slot.filled .creation-slot-index { background: #ffd84d; color: #0A0812; }
+.creation-slot svg { width: 28px; height: 28px; }
+.creation-axis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #ffd84d;
+  font-family: "Bangers", cursive;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  border-left: 2px solid rgba(255, 217, 130, 0.4);
+  border-right: 2px solid rgba(255, 217, 130, 0.4);
+  padding: 4px 2px;
+}
+.creation-arrow {
+  font-size: 20px;
+  color: #ffd84d;
+  animation: creationArrow 1.4s ease-in-out infinite;
+}
+@keyframes creationArrow {
+  0%, 100% { transform: translateX(-2px); opacity: 0.6; }
+  50% { transform: translateX(4px); opacity: 1; }
+}
+.creation-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.creation-btn {
+  font-family: "Bangers", cursive;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  background: #4ECDC4;
+  color: #0A0812;
+  border: 3px solid #0A0812;
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #0A0812;
+  transition: transform 80ms ease-out, box-shadow 80ms ease-out;
+}
+.creation-btn:hover { box-shadow: 2px 2px 0 #0A0812; transform: translate(2px, 2px); }
+.creation-btn.ghost {
+  background: transparent;
+  color: #d6c8d8;
+  box-shadow: 4px 4px 0 #4a4e69;
+}
+.creation-help {
+  font-size: 12px;
+  color: #b3a1c7;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+@media (max-width: 560px) {
+  .creation-board { grid-template-columns: 1fr; }
+  .creation-axis { border: none; flex-direction: row; padding: 4px 0; }
+}

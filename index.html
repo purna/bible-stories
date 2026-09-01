@@ -204,6 +204,7 @@
             <li><a href="./Daniel/">The Story of Daniel</a></li>
             <li><a href="./Eiljah/">The Story of Elijah</a></li>
             <li><a href="./Jonah/">The Story of Jonah</a></li>
+            <li><a href="./Moses/">The Story of Moses</a></li>
             <li><a href="./Noah/">The Story of Noah</a></li>
         </ul>
     </div>
@@ -212,6 +213,14 @@
             rel="noopener noreferrer">Pixelagent.co.uk</a></div>
 
     <script>
+        window.addEventListener('load', async () => {
+            try {
+                await screen.orientation?.lock?.('landscape');
+            } catch {
+                // Orientation locking may be unavailable outside an installed PWA or fullscreen mode.
+            }
+        });
+
         addEventListener('mousemove', e => {
             document.documentElement.style.setProperty('--x', `${e.clientX}px`);
             document.documentElement.style.setProperty('--y', `${e.clientY}px`);

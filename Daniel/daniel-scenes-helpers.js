@@ -127,6 +127,7 @@
         var geo = global.g('sphere_' + radius + '_' + (segs || 16),
             function () { return new THREE.SphereGeometry(radius, segs || 16, segs || 16); });
         addToonPart(grp, geo, color);
+        grp.group = grp;
         return grp;
     };
 
@@ -136,6 +137,7 @@
         var geo = global.g('box_' + w + '_' + h + '_' + d,
             function () { return new THREE.BoxGeometry(w, h, d); });
         addToonPart(grp, geo, color);
+        grp.group = grp;
         return grp;
     };
 
@@ -145,6 +147,7 @@
         var geo = global.g('cyl_' + r1 + '_' + r2 + '_' + h + '_' + (segs || 12),
             function () { return new THREE.CylinderGeometry(r1, r2, h, segs || 12); });
         addToonPart(grp, geo, color);
+        grp.group = grp;
         return grp;
     };
 

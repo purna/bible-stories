@@ -66,22 +66,14 @@ const VisionEngine = (function () {
 
     /* ── Discernment phase (symbol gathering) ─────────────────── */
 
-    /** Call when the player collects a fragment.
-     *  Passing too quickly after the previous collection risks Distortion.
-     *  Decoy fragments always add Distortion. */
+    /** Call when the player collects a fragment. Decoys add Distortion. */
     function collect(fragmentId) {
         if (!active || !scene) return;
 
         const fragment = scene.fragments.find(f => f.id === fragmentId);
         if (!fragment || gathered.includes(fragment)) return;
 
-        const elapsed = (performance.now() - startedAt) / 1000;
-        const avgTimePerFrag = elapsed / (gathered.length + 1);
-        const rushPenalty = avgTimePerFrag < 1.5;
-
-        const discernmentFactor = Math.max(0, 1 - StateManager.getMeters().discernment / 100);
-
-        if (fragment.isDecoy || (rushPenalty && Math.random() < discernmentFactor)) {
+        if (fragment.isDecoy) {
             distortion = Math.min(1, distortion + 0.2);
         }
         gathered.push(fragment);
@@ -93,6 +85,11 @@ const VisionEngine = (function () {
 
     function getDistortion() {
         return distortion;
+    }
+
+    function recordAssemblyMistake() {
+        if (!active) return;
+        distortion = Math.min(1, distortion + 0.1);
     }
 
     function timeRemaining() {
@@ -188,7 +185,7 @@ const VisionEngine = (function () {
         DELIVERY,
         loadScene, loadSceneFromFile,
         start, isRunning, getScene,
-        collect, getGathered, getDistortion,
+        collect, getGathered, getDistortion, recordAssemblyMistake,
         timeRemaining, canDeliver, gatherCount, totalCount,
         deliver, reset,
     };

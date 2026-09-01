@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#1a0e08"/>
+  <line x1="0" y1="0" x2="400" y2="300" stroke="#c87a30" stroke-width="2"/>
+  <line x1="400" y1="0" x2="0" y2="300" stroke="#c87a30" stroke-width="2"/>
+  <text x="200" y="160" text-anchor="middle" font-family="Press Start 2P, monospace" font-size="14" fill="#fff3cf">SCENE</text>
+</svg>

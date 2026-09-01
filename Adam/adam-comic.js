@@ -88,6 +88,187 @@ function buildLineHTML(text, fx) {
 function escapeHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 
 /* =========================================================================
+   CREATION VERTICAL SLICE — Order the Days
+   Player taps tiles into the correct Genesis sequence:
+   Light → Sky → Land & Plants → Sun/Moon/Stars → Creatures → Humanity.
+   Wrong picks shake and reset; no failure state.
+   ========================================================================= */
+const CREATION_DAYS = [
+  { id: 'light',    label: 'Light',            svg: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="14" fill="#FFD84D" stroke="#0A0812" stroke-width="3"/><g stroke="#FFD84D" stroke-width="3" stroke-linecap="round"><line x1="32" y1="6" x2="32" y2="14"/><line x1="32" y1="50" x2="32" y2="58"/><line x1="6" y1="32" x2="14" y2="32"/><line x1="50" y1="32" x2="58" y2="32"/><line x1="14" y1="14" x2="20" y2="20"/><line x1="44" y1="44" x2="50" y2="50"/><line x1="50" y1="14" x2="44" y2="20"/><line x1="14" y1="50" x2="20" y2="44"/></g></svg>' },
+  { id: 'sky',      label: 'Sky & Waters',     svg: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="52" height="22" fill="#7CC4FF" stroke="#0A0812" stroke-width="3"/><rect x="6" y="36" width="52" height="22" fill="#3A8AC8" stroke="#0A0812" stroke-width="3"/><path d="M14 22 Q22 26 32 22 Q42 18 50 22" fill="none" stroke="#fff" stroke-width="2" opacity="0.6"/></svg>' },
+  { id: 'land',     label: 'Land & Plants',    svg: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="34" width="52" height="24" fill="#a07040" stroke="#0A0812" stroke-width="3"/><path d="M14 34 Q14 22 22 22 Q22 32 28 32 Q28 18 36 18 Q36 30 44 30 Q44 22 52 22 Q52 34 52 34" fill="#5A8E2A" stroke="#0A0812" stroke-width="3" stroke-linejoin="round"/></svg>' },
+  { id: 'lights',   label: 'Sun, Moon, Stars', svg: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="52" height="52" fill="#0c0e2e" stroke="#0A0812" stroke-width="3"/><circle cx="20" cy="22" r="8" fill="#FFD84D" stroke="#0A0812" stroke-width="3"/><circle cx="46" cy="38" r="5" fill="#e0e0e0" stroke="#0A0812" stroke-width="2"/><circle cx="44" cy="18" r="1.5" fill="#fff"/><circle cx="14" cy="46" r="1.5" fill="#fff"/><circle cx="54" cy="14" r="1.5" fill="#fff"/><circle cx="32" cy="48" r="1" fill="#fff"/></svg>' },
+  { id: 'creatures',label: 'Birds & Animals',  svg: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M10 36 Q22 22 34 34 Q44 24 56 32" fill="none" stroke="#0A0812" stroke-width="3" stroke-linecap="round"/><path d="M30 34 Q26 28 28 24" fill="#fefae0" stroke="#0A0812" stroke-width="2"/><ellipse cx="40" cy="46" rx="9" ry="6" fill="#C8855A" stroke="#0A0812" stroke-width="3"/><circle cx="46" cy="44" r="3" fill="#C8855A" stroke="#0A0812" stroke-width="2"/></svg>' },
+  { id: 'humanity', label: 'Humanity',         svg: '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="20" r="9" fill="#D4956A" stroke="#0A0812" stroke-width="3"/><path d="M20 30 Q32 28 44 30 L48 56 L16 56 Z" fill="#5C8E2A" stroke="#0A0812" stroke-width="3"/><circle cx="28" cy="20" r="1.6" fill="#0A0812"/><circle cx="36" cy="20" r="1.6" fill="#0A0812"/><path d="M28 26 Q32 28 36 26" fill="none" stroke="#0A0812" stroke-width="2" stroke-linecap="round"/></svg>' }
+];
+
+function shuffle(array) {
+  const copy = array.slice();
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function buildCreationOverlay() {
+  const overlay = document.createElement('section');
+  overlay.className = 'creation-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-labelledby', 'creationTitle');
+  overlay.innerHTML = `
+    <div class="creation-panel">
+      <span class="creation-kicker">CREATION · SIX DAYS</span>
+      <h3 id="creationTitle" class="creation-title">Order the world God made</h3>
+      <p class="creation-prompt">Tap a tile to place it in the next open day. Wrong order is a kind nudge, not a fail.</p>
+      <p class="creation-status" data-creation-status role="status" aria-live="polite">Day 1 of 6 — pick the first thing God spoke.</p>
+      <div class="creation-board">
+        <div class="creation-pool" data-creation-pool role="group" aria-label="Available creation tiles"></div>
+        <div class="creation-axis" aria-hidden="true">
+          <span>DAYS</span>
+          <span class="creation-arrow">→</span>
+        </div>
+        <div class="creation-slots" data-creation-slots role="group" aria-label="Creation day slots"></div>
+      </div>
+      <div class="creation-actions">
+        <button type="button" class="creation-btn" data-creation-finish hidden>Continue the story</button>
+        <button type="button" class="creation-btn ghost" data-creation-skip>Skip the ordering</button>
+      </div>
+      <p class="creation-help">Tip: arrow keys move focus between tiles and slots; Enter or Space places a tile.</p>
+    </div>
+  `;
+  return overlay;
+}
+
+function startCreationInteraction(container) {
+  const pool = container.querySelector('[data-creation-pool]');
+  const slotsEl = container.querySelector('[data-creation-slots]');
+  const status = container.querySelector('[data-creation-status]');
+  const finishBtn = container.querySelector('[data-creation-finish]');
+  const skipBtn = container.querySelector('[data-creation-skip]');
+
+  const tiles = shuffle(CREATION_DAYS).map((day, idx) => ({ ...day, tileId: idx, placed: false }));
+  const slots = CREATION_DAYS.map(day => ({ id: day.id, label: day.label, svg: day.svg, filled: false }));
+  let focusTileIdx = 0;
+  let pointerSelection = false;
+
+  function setStatus(text, kind = '') {
+    status.textContent = text;
+    status.classList.remove('done', 'hint');
+    if (kind === 'done') status.classList.add('done');
+    if (kind === 'hint') status.classList.add('hint');
+  }
+
+  function updateFocus(delta) {
+    focusTileIdx = Math.max(0, Math.min(tiles.length - 1, focusTileIdx + delta));
+    pool.querySelectorAll('.creation-tile').forEach((el, i) => {
+      el.tabIndex = i === focusTileIdx ? 0 : -1;
+    });
+    const next = pool.querySelector(`.creation-tile[data-tile-id="${focusTileIdx}"]`);
+    if (next) next.focus();
+  }
+
+  function placeNextTile(tileIdx) {
+    const tile = tiles[tileIdx];
+    if (!tile || tile.placed) return;
+    const nextSlotIdx = slots.findIndex(s => !s.filled);
+    if (nextSlotIdx === -1) return;
+    const expected = CREATION_DAYS[nextSlotIdx].id;
+    const tileBtn = pool.querySelector(`.creation-tile[data-tile-id="${tileIdx}"]`);
+    if (tile.id === expected) {
+      tile.placed = true;
+      slots[nextSlotIdx].filled = true;
+      tileBtn.classList.add('placed');
+      const slotEl = slotsEl.querySelector(`.creation-slot[data-slot-idx="${nextSlotIdx}"]`);
+      slotEl.classList.add('filled');
+      slotEl.innerHTML = '';
+      const idx = document.createElement('span');
+      idx.className = 'creation-slot-index';
+      idx.textContent = String(nextSlotIdx + 1);
+      const label = document.createElement('span');
+      label.textContent = slots[nextSlotIdx].label;
+      const icon = makeSlotIcon(slots[nextSlotIdx].svg);
+      slotEl.appendChild(idx);
+      slotEl.appendChild(label);
+      slotEl.appendChild(icon);
+      focusTileIdx = Math.min(focusTileIdx, tiles.length - 1);
+      const filled = slots.filter(s => s.filled).length;
+      if (filled === CREATION_DAYS.length) {
+        setStatus('The world is filled with wonder.', 'done');
+        finishBtn.hidden = false;
+        finishBtn.focus();
+        return;
+      }
+      const nextExpected = CREATION_DAYS[slots.findIndex(s => !s.filled)].label;
+      setStatus(`Day ${filled + 1} of 6 — ${nextExpected} next.`);
+    } else {
+      tileBtn.classList.add('wrong');
+      setStatus(`Not yet. The world needed ${CREATION_DAYS[nextSlotIdx].label.toLowerCase()} first.`, 'hint');
+      setTimeout(() => tileBtn.classList.remove('wrong'), 380);
+    }
+  }
+
+  function makeSlotIcon(svg) {
+    const span = document.createElement('span');
+    span.innerHTML = svg;
+    return span.firstElementChild || span;
+  }
+
+  tiles.forEach((tile, idx) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'creation-tile';
+    btn.dataset.tileId = String(idx);
+    btn.dataset.kind = tile.id;
+    btn.setAttribute('role', 'gridcell');
+    btn.setAttribute('aria-label', tile.label);
+    btn.tabIndex = idx === 0 ? 0 : -1;
+    btn.innerHTML = `${tile.svg}<span>${tile.label}</span>`;
+    btn.addEventListener('click', () => { pointerSelection = true; placeNextTile(idx); });
+    btn.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); placeNextTile(idx); }
+    });
+    pool.appendChild(btn);
+  });
+
+  slots.forEach((slot, idx) => {
+    const slotEl = document.createElement('div');
+    slotEl.className = 'creation-slot';
+    slotEl.dataset.slotIdx = String(idx);
+    slotEl.dataset.label = slot.label;
+    slotEl.setAttribute('role', 'group');
+    slotEl.setAttribute('aria-label', `Day ${idx + 1}: ${slot.label}`);
+    const idxEl = document.createElement('span');
+    idxEl.className = 'creation-slot-index';
+    idxEl.textContent = String(idx + 1);
+    const labelEl = document.createElement('span');
+    labelEl.textContent = slot.label;
+    slotEl.appendChild(idxEl);
+    slotEl.appendChild(labelEl);
+    slotsEl.appendChild(slotEl);
+  });
+
+  function keyHandler(event) {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') { event.preventDefault(); updateFocus(1); }
+    else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') { event.preventDefault(); updateFocus(-1); }
+    else if (event.key === 'Home') { event.preventDefault(); focusTileIdx = 0; updateFocus(0); }
+    else if (event.key === 'End') { event.preventDefault(); focusTileIdx = tiles.length - 1; updateFocus(0); }
+  }
+
+  function cleanup() {
+    document.removeEventListener('keydown', keyHandler);
+    if (window.StoryRuntime) StoryRuntime.unlock('creation-ordering');
+  }
+
+  finishBtn.addEventListener('click', () => { cleanup(); container.remove(); });
+  skipBtn.addEventListener('click', () => { cleanup(); container.remove(); });
+
+  document.addEventListener('keydown', keyHandler);
+  if (window.StoryRuntime) StoryRuntime.setMode('game', { lock: 'creation-ordering' });
+}
+
+/* =========================================================================
    SVG PARALLAX — mouse-driven depth layers on SVG backgrounds
    ========================================================================= */
 let parallaxRaf = null;
@@ -148,6 +329,7 @@ async function renderLine() {
     if (nextLineTimeout) { clearTimeout(nextLineTimeout); nextLineTimeout = null; }
 
     const data = currentAct().lines[lineIdx];
+    audio.playLineSfx(data);
 
     const frame = document.createElement('div');
     frame.className = `comic-frame popIn palette-act-${actIdx + 1}`;
@@ -223,6 +405,15 @@ async function renderLine() {
             }
         }
 
+        if (data.interaction === 'ordering') {
+            const creationOverlay = buildCreationOverlay();
+            frame.appendChild(creationOverlay);
+            nextBtn.classList.remove('show');
+            nextLineBtn.classList.remove('show');
+            startCreationInteraction(creationOverlay);
+            return;
+        }
+
         const wordEls = overlay.querySelectorAll('.word');
         if (wordEls.length > 0) {
             let delayStep = 10, duration = 400;
@@ -269,6 +460,7 @@ function renderChoices(data) {
 }
 
 function updateNextBtn() {
+    if (window.StoryRuntime) StoryRuntime.setMode(choicePending ? 'choice' : 'reading');
     const atEnd = lineIdx === currentAct().lines.length - 1 && !choicePending;
     nextBtn.className = `palette-act-${actIdx + 1}`;
     nextBtn.classList.toggle('show', atEnd);
@@ -282,7 +474,7 @@ function updateNextBtn() {
 
 async function goLine(delta) {
     if (transitioning) return;
-    if (choicePending) { choicePending = false; choicesBox.classList.remove('show'); }
+    if (choicePending) return;
     delayNote.className = '';
     nextBtn.classList.remove('show');
     nextLineBtn.classList.remove('show');
@@ -542,8 +734,8 @@ function loadScene3D(key) {
             if (child.geometry) child.geometry.dispose();
             if (child.material) {
                 if (Array.isArray(child.material)) {
-                    child.material.forEach(m => m.dispose());
-                } else { child.material.dispose(); }
+                    child.material.forEach(m => { if (m && typeof m.dispose === 'function') m.dispose(); });
+                } else if (typeof child.material.dispose === 'function') { child.material.dispose(); }
             }
         });
     }
@@ -645,6 +837,7 @@ function onTouchDragMove(e) {
    KEYBOARD NAVIGATION
    ========================================================================= */
 document.addEventListener('keydown', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goLine(1);
     if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') goLine(-1);
 });
@@ -654,10 +847,12 @@ document.addEventListener('keydown', e => {
    ========================================================================= */
 let touchStartX = 0, touchStartY = 0;
 document.addEventListener('touchstart', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
 }, { passive: true });
 document.addEventListener('touchend', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     const dx = e.changedTouches[0].clientX - touchStartX;
     const dy = e.changedTouches[0].clientY - touchStartY;
     if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
@@ -670,6 +865,7 @@ document.addEventListener('touchend', e => {
    ========================================================================= */
 let wheelCooldown = false;
 document.addEventListener('wheel', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     if (wheelCooldown) return;
 
     // When 3D is active, scroll orbits the camera horizontally
@@ -721,6 +917,7 @@ async function main() {
     try {
         const response = await fetch('adam-story.json');
         STORY = await response.json();
+        audio.preloadStory(STORY);
         populateChapterSelect();
         init3D();
         await loadAct();

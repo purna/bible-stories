@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" data-parallax="true">
+  <defs>
+    <linearGradient id="neboSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFD84D"/>
+      <stop offset="40%" stop-color="#c88a48"/>
+      <stop offset="100%" stop-color="#1a0e08"/>
+    </linearGradient>
+    <linearGradient id="jordan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5a80a8"/>
+      <stop offset="100%" stop-color="#173f70"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#neboSky)" data-depth="0"/>
+  <!-- distant sun -->
+  <circle cx="600" cy="160" r="50" fill="#FFD84D" opacity=".6" data-depth="0.1"/>
+  <circle cx="600" cy="160" r="32" fill="#FFD84D" opacity="1" data-depth="0.1"/>
+  <!-- far mountains -->
+  <path d="M0 380 L100 320 L200 360 L320 280 L460 340 L580 290 L700 350 L800 310 L800 600 L0 600 Z" fill="#3a3018" stroke="#0A0812" stroke-width="3" data-depth="0.3"/>
+  <!-- mid hills (green) -->
+  <path d="M0 430 L120 380 L260 410 L400 360 L540 400 L680 370 L800 410 L800 600 L0 600 Z" fill="#4a5a28" stroke="#0A0812" stroke-width="3" data-depth="0.5"/>
+  <!-- Jordan river winding -->
+  <path d="M0 470 Q200 460 400 480 Q600 500 800 470 L800 510 Q600 530 400 510 Q200 500 0 510 Z" fill="url(#jordan)" data-depth="0.6"/>
+  <!-- foreground hill -->
+  <path d="M0 500 Q400 480 800 500 L800 600 L0 600 Z" fill="#2a1808" data-depth="0.7"/>
+  <!-- foreground peak (Moses' viewpoint) -->
+  <path d="M340 600 L380 520 L420 600 Z" fill="#5a3818" stroke="#0A0812" stroke-width="2" data-depth="0.8"/>
+</svg>

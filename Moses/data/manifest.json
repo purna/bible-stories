@@ -1,0 +1,75 @@
+{
+  "version": "1.0.0",
+  "acts": [
+    {
+      "id": "basket",
+      "name": "Ch.1 \u00b7 The Child in the River",
+      "file": "act1_basket.json",
+      "scene": "basket",
+      "foreground": "fg_basket"
+    },
+    {
+      "id": "exile",
+      "name": "Ch.2 \u00b7 Exile and the Burning Bush",
+      "file": "act2_exile.json",
+      "scene": "exile",
+      "foreground": "fg_exile"
+    },
+    {
+      "id": "throne",
+      "name": "Ch.3 \u00b7 Let My People Go",
+      "file": "act3_throne.json",
+      "scene": "throne",
+      "foreground": "fg_throne"
+    },
+    {
+      "id": "passover",
+      "name": "Ch.4 \u00b7 Passover Night",
+      "file": "act4_passover.json",
+      "scene": "passover",
+      "foreground": "fg_passover"
+    },
+    {
+      "id": "sea",
+      "name": "Ch.5 \u00b7 A Path Through the Water",
+      "file": "act5_sea.json",
+      "scene": "sea",
+      "foreground": "fg_sea"
+    },
+    {
+      "id": "bread",
+      "name": "Ch.6 \u00b7 Enough for Today",
+      "file": "act6_bread.json",
+      "scene": "bread",
+      "foreground": "fg_bread"
+    },
+    {
+      "id": "mountain",
+      "name": "Ch.7 \u00b7 Thunder on Sinai",
+      "file": "act7_mountain.json",
+      "scene": "mountain",
+      "foreground": "fg_mountain"
+    },
+    {
+      "id": "calf",
+      "name": "Ch.8 \u00b7 The Broken Tablets",
+      "file": "act8_calf.json",
+      "scene": "calf",
+      "foreground": "fg_calf"
+    },
+    {
+      "id": "wilderness",
+      "name": "Ch.9 \u00b7 The Long Wilderness",
+      "file": "act9_wilderness.json",
+      "scene": "wilderness",
+      "foreground": "fg_wilderness"
+    },
+    {
+      "id": "nebo",
+      "name": "Ch.10 \u00b7 The Land from Afar",
+      "file": "act10_nebo.json",
+      "scene": "nebo",
+      "foreground": "fg_nebo"
+    }
+  ]
+}

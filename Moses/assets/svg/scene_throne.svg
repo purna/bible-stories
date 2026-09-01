@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" data-parallax="true">
+  <defs>
+    <radialGradient id="throneBg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#4a2a40"/>
+      <stop offset="60%" stop-color="#1a0e18"/>
+      <stop offset="100%" stop-color="#0a0408"/>
+    </radialGradient>
+    <linearGradient id="pillarsG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c8a84b"/>
+      <stop offset="100%" stop-color="#7a6420"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#throneBg)" data-depth="0"/>
+  <!-- back wall tile pattern -->
+  <g stroke="#3a1830" stroke-width="1" opacity=".4" data-depth="0.2">
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="280" x2="800" y2="280"/>
+    <line x1="100" y1="0" x2="100" y2="380"/>
+    <line x1="300" y1="0" x2="300" y2="380"/>
+    <line x1="500" y1="0" x2="500" y2="380"/>
+    <line x1="700" y1="0" x2="700" y2="380"/>
+  </g>
+  <!-- columns -->
+  <rect x="60"  y="120" width="50" height="340" fill="url(#pillarsG)" stroke="#0A0812" stroke-width="3" data-depth="0.4"/>
+  <rect x="690" y="120" width="50" height="340" fill="url(#pillarsG)" stroke="#0A0812" stroke-width="3" data-depth="0.4"/>
+  <!-- throne -->
+  <path d="M280 380 L520 380 L540 220 L260 220 Z" fill="#5a3818" stroke="#0A0812" stroke-width="3" data-depth="0.5"/>
+  <path d="M260 220 L540 220 L530 180 L270 180 Z" fill="#c8a84b" stroke="#0A0812" stroke-width="3" data-depth="0.5"/>
+  <path d="M380 180 L420 180 L420 150 L380 150 Z" fill="#FFD84D" stroke="#0A0812" stroke-width="2" data-depth="0.5"/>
+  <!-- throne steps -->
+  <rect x="240" y="450" width="320" height="40" fill="#3a2818" stroke="#0A0812" stroke-width="3" data-depth="0.6"/>
+  <rect x="220" y="490" width="360" height="40" fill="#5a3818" stroke="#0A0812" stroke-width="3" data-depth="0.6"/>
+  <!-- floor tiles -->
+  <g stroke="#0A0812" stroke-width="1" opacity=".5" data-depth="0.7">
+    <line x1="0" y1="540" x2="800" y2="540"/>
+    <line x1="0" y1="570" x2="800" y2="570"/>
+    <line x1="80" y1="530" x2="80" y2="600"/>
+    <line x1="240" y1="530" x2="240" y2="600"/>
+    <line x1="400" y1="530" x2="400" y2="600"/>
+    <line x1="560" y1="530" x2="560" y2="600"/>
+    <line x1="720" y1="530" x2="720" y2="600"/>
+  </g>
+</svg>

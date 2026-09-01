@@ -12,7 +12,7 @@
     ],
     "lines": [
       { "speaker": "narrator", "fx": "fade", "text": "Babylon, 605 BCE. The young men of Judah had been taken far from home.", "align": "left", "svg": "babylon_city" },
-      { "speaker": "narrator", "fx": "type", "text": "King Nebuchadnezzar ordered his best captives trained for royal service. Among them: Daniel, Hananiah, Mishael, and Azariah.", "align": "center", "svg": "training_house" },
+      { "speaker": "narrator", "audioSfx": "assets/audio/sfx/babylon_crowd.mp3", "fx": "type", "text": "King Nebuchadnezzar ordered his best captives trained for royal service. Among them: Daniel, Hananiah, Mishael, and Azariah.", "align": "center", "svg": "training_house" },
       { "speaker": "nebuchadnezzar", "fx": "bounce", "text": "You will eat from MY royal table — the finest food and wine in all Babylon!", "align": "right", "svg": "royal_table" },
       { "speaker": "narrator", "fx": "fade", "text": "The food was rich. The wine was powerful. And accepting it would have been the easy thing to do.", "align": "left", "svg": "royal_table" },
       {
@@ -48,7 +48,7 @@
       { "speaker": "narrator", "fx": "shake", "text": "The king had a dream that terrified him. He demanded his wise men tell him not just what it meant — but what it was.", "align": "left", "svg": "throne_room" },
       { "sfx": "TELL ME!", "speaker": "nebuchadnezzar", "fx": "shake", "text": "Interpret my dream — or ALL the wise men of Babylon die. Including you, Daniel.", "align": "center", "svg": "throne_room" },
       { "speaker": "narrator", "fx": "fade", "text": "No human could answer. But Daniel didn't guess. He prayed first.", "align": "right", "svg": "daniel_prays" },
-      { "speaker": "daniel", "fx": "fade", "text": "There is a God in heaven who reveals mysteries.", "svg": "daniel_prays" },
+      { "speaker": "daniel", "audioSfx": "assets/audio/sfx/vision_reveal.mp3", "fx": "fade", "text": "There is a God in heaven who reveals mysteries.", "svg": "daniel_prays" },
       { "speaker": "daniel", "fx": "type", "text": "Your dream: a statue of terrifying brightness. Gold head. Silver chest. Bronze belly. Iron legs. Feet of clay.", "svg": "statue_dream" },
       { "speaker": "daniel", "fx": "bounce", "text": "You are the gold head, O King. But after you will come other kingdoms — and in the end, God's kingdom will crush them all and stand forever.", "svg": "statue_dream" },
       {
@@ -84,7 +84,7 @@
       { "speaker": "narrator", "fx": "fade", "text": "This test was not designed for Daniel. It was designed for his friends: Shadrach, Meshach, and Abednego.", "align": "right", "svg": "plain_of_dura" },
       { "speaker": "narrator", "fx": "type", "text": "Daniel is nowhere in this chapter. Sometimes faithfulness means watching people you love take the risk you didn't have to take.", "align": "center", "svg": "friends_standing" },
       { "speaker": "friends", "fx": "bounce", "text": "O king — our God is able to save us. But even if he doesn't — we will not bow.", "svg": "friends_standing" },
-      { "sfx": "THROW THEM IN!", "speaker": "nebuchadnezzar", "fx": "shake", "text": "Heat the furnace SEVEN TIMES HOTTER! Bind them! THROW THEM IN!", "svg": "furnace_lit" },
+      { "sfx": "THROW THEM IN!", "audioSfx": "assets/audio/sfx/furnace_roar.mp3", "speaker": "nebuchadnezzar", "fx": "shake", "text": "Heat the furnace SEVEN TIMES HOTTER! Bind them! THROW THEM IN!", "svg": "furnace_lit" },
       { "speaker": "narrator", "fx": "shake", "text": "The furnace was so hot it killed the soldiers who threw them in. But the three men walked in it — and a fourth figure walked with them.", "svg": "furnace_lit" },
       {
         "speaker": "nebuchadnezzar",
@@ -171,7 +171,7 @@
       { "speaker": "narrator", "fx": "fade", "text": "Daniel went home. He opened the window facing Jerusalem. He got down on his knees. And he prayed.", "svg": "daniel_praying_window" },
       { "speaker": "narrator", "fx": "type", "text": "Three times a day. Just like always. Not as a protest. Not to make a point. Simply because it was time to pray.", "svg": "daniel_praying_window" },
       { "speaker": "darius", "fx": "shake", "text": "I cannot reverse my own law. I'm so sorry, Daniel.", "svg": "darius_distressed" },
-      { "sfx": "ROAR!", "speaker": "narrator", "fx": "shake", "text": "Daniel was thrown in. The stone was sealed. And Darius paced his palace all through the long night.", "svg": "lions_den_sealed" },
+      { "sfx": "ROAR!", "audioSfx": "assets/audio/sfx/stone_footsteps.mp3", "speaker": "narrator", "fx": "shake", "text": "Daniel was thrown in. The stone was sealed. And Darius paced his palace all through the long night.", "svg": "lions_den_sealed" },
       { "speaker": "narrator", "fx": "fade", "text": "At dawn, the king ran.", "svg": "darius_running" },
       { "speaker": "darius", "fx": "bounce", "text": "DANIEL! Servant of the living God — has your God been able to save you?!", "svg": "darius_running" },
       { "speaker": "daniel", "fx": "bounce", "text": "O king, live forever. My God sent his angel, and the lions' mouths were shut. Because I was found innocent before him.", "svg": "lions_den_open" },

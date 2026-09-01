@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" data-parallax="true">
+  <defs>
+    <linearGradient id="basketSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e1a22"/>
+      <stop offset="60%" stop-color="#1a2838"/>
+      <stop offset="100%" stop-color="#0a1018"/>
+    </linearGradient>
+    <radialGradient id="basketSun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD84D" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#FFD84D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#basketSky)" data-depth="0"/>
+  <circle cx="640" cy="120" r="60" fill="url(#basketSun)" data-depth="0.2"/>
+  <ellipse cx="640" cy="120" rx="22" ry="22" fill="#FFD84D" opacity=".7" data-depth="0.2"/>
+  <!-- distant palace silhouette -->
+  <g data-depth="0.3" opacity=".6">
+    <path d="M40 380 L80 380 L80 340 L120 340 L120 380 L160 380 L160 320 L100 290 L40 320 Z" fill="#3a2818" stroke="#0A0812" stroke-width="3"/>
+    <path d="M600 390 L640 390 L640 360 L680 360 L680 390 L720 390 L720 330 L660 300 L600 330 Z" fill="#3a2818" stroke="#0A0812" stroke-width="3"/>
+  </g>
+  <!-- Nile water -->
+  <rect x="0" y="420" width="800" height="180" fill="#1a3850" data-depth="0.4"/>
+  <path d="M0 440 Q200 430 400 445 T800 440 L800 460 L0 460 Z" fill="#2a4868" opacity=".6" data-depth="0.4"/>
+  <path d="M0 470 Q200 460 400 475 T800 470 L800 490 L0 490 Z" fill="#3a5878" opacity=".5" data-depth="0.4"/>
+  <!-- distant reeds -->
+  <g stroke="#3a5028" stroke-width="2" data-depth="0.5">
+    <line x1="120" y1="430" x2="120" y2="380"/>
+    <line x1="135" y1="430" x2="135" y2="370"/>
+    <line x1="150" y1="430" x2="150" y2="385"/>
+    <line x1="660" y1="430" x2="660" y2="375"/>
+    <line x1="675" y1="430" x2="675" y2="385"/>
+    <line x1="690" y1="430" x2="690" y2="370"/>
+  </g>
+  <!-- riverbank -->
+  <path d="M0 420 Q400 400 800 420 L800 460 L0 460 Z" fill="#5a4028" opacity=".7" data-depth="0.6"/>
+</svg>

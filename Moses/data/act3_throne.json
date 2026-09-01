@@ -1,0 +1,112 @@
+{
+  "id": "throne",
+  "name": "Ch.3 \u00b7 Let My People Go",
+  "bg": "radial-gradient(circle at 50% 40%, #180c14, #2e1830 65%, #0a0408)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Moses. Moses.",
+      "cite": "Exodus 3:4"
+    },
+    {
+      "speaker": "moses",
+      "fx": "type",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Here I am."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Do not come any closer. Take off your sandals, for the place where you are standing is holy ground."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "I have heard the cry of my people in Egypt. I have seen their suffering. I am come down to deliver them."
+    },
+    {
+      "speaker": "moses",
+      "fx": "type",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Who am I, that I should go to Pharaoh and bring the Israelites out of Egypt?"
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "I will be with you. And this will be the sign to you that it is I who sent you: when you have brought the people out, you will worship God on this mountain."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Say to Pharaoh: \"Thus says the LORD: Let my people go, so that they may worship me.\""
+    },
+    {
+      "speaker": "moses",
+      "fx": "type",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "What if they do not believe me? What if they say the LORD has not appeared to you?"
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "God gave Moses three signs. A staff that became a serpent. A hand turned leprous and whole again. Water from the Nile turned to blood."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Aaron your brother will speak for you. You will be as God to him; he will be your prophet."
+    },
+    {
+      "speaker": "moses",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "O Lord, please send someone else."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "What is that in your hand?",
+      "cite": "Exodus 4:2"
+    },
+    {
+      "speaker": "moses",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "A staff."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Throw it on the ground."
+    }
+  ],
+  "scene": "throne",
+  "foreground": "fg_throne",
+  "index": 2
+}

@@ -1,0 +1,47 @@
+{
+  "license": { "name": "Mixkit Free License", "url": "https://mixkit.co/license/", "source": "Mixkit" },
+  "stories": [
+    { "folder": "Adam", "slug": "adam", "title": "Adam & Eve", "effects": [
+      { "file": "creation_light.mp3", "scene": "Creation", "trigger": "Light breaks into darkness", "type": "one-shot", "sourcePage": "https://mixkit.co/free-sound-effects/magic/", "url": "https://assets.mixkit.co/active_storage/sfx/2350/2350-preview.mp3" },
+      { "file": "garden_water.mp3", "scene": "Eden", "trigger": "Living water and garden calm", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/water/", "url": "https://assets.mixkit.co/active_storage/sfx/3126/3126-preview.mp3" },
+      { "file": "exile_footsteps.mp3", "scene": "Exile", "trigger": "Adam and Eve leave the garden", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/footsteps/", "url": "https://assets.mixkit.co/active_storage/sfx/532/532-preview.mp3" },
+      { "file": "fall_crack.mp3", "scene": "The Fall", "trigger": "The choice fractures the peace", "type": "one-shot", "sourcePage": "https://mixkit.co/free-sound-effects/wood/", "url": "https://assets.mixkit.co/active_storage/sfx/2182/2182-preview.mp3" }
+    ]},
+    { "folder": "Daniel", "slug": "daniel", "title": "Daniel", "effects": [
+      { "file": "babylon_crowd.mp3", "scene": "Royal courts", "trigger": "Court and feast atmosphere", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/crowd/", "url": "https://assets.mixkit.co/active_storage/sfx/424/424-preview.mp3" },
+      { "file": "vision_reveal.mp3", "scene": "Visions", "trigger": "A vision opens", "type": "one-shot", "sourcePage": "https://mixkit.co/free-sound-effects/magic/", "url": "https://assets.mixkit.co/active_storage/sfx/2589/2589-preview.mp3" },
+      { "file": "furnace_roar.mp3", "scene": "The furnace", "trigger": "Furnace doors open", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/fire/", "url": "https://assets.mixkit.co/active_storage/sfx/1345/1345-preview.mp3" },
+      { "file": "stone_footsteps.mp3", "scene": "The lions' den", "trigger": "Daniel enters the den", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/footsteps/", "url": "https://assets.mixkit.co/active_storage/sfx/1230/1230-preview.mp3" }
+    ]},
+    { "folder": "David", "slug": "david", "title": "David", "effects": [
+      { "file": "army_crowd.mp3", "scene": "Battlefield", "trigger": "Armies gather", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/crowd/", "url": "https://assets.mixkit.co/active_storage/sfx/478/478-preview.mp3" },
+      { "file": "shepherd_footsteps.mp3", "scene": "Pasture", "trigger": "David crosses the field", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/footsteps/", "url": "https://assets.mixkit.co/active_storage/sfx/542/542-preview.mp3" },
+      { "file": "sling_impact.mp3", "scene": "Goliath", "trigger": "The stone strikes", "type": "one-shot", "sourcePage": "https://mixkit.co/free-sound-effects/wood/", "url": "https://assets.mixkit.co/active_storage/sfx/2182/2182-preview.mp3" },
+      { "file": "camp_fire.mp3", "scene": "Wilderness", "trigger": "Night camp and pursuit", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/fire/", "url": "https://assets.mixkit.co/active_storage/sfx/2653/2653-preview.mp3" }
+    ]},
+    { "folder": "Eiljah", "slug": "elijah", "title": "Elijah", "effects": [
+      { "file": "desert_wind.mp3", "scene": "The drought", "trigger": "Dry wilderness atmosphere", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/wind/", "url": "https://assets.mixkit.co/active_storage/sfx/788/788-preview.mp3" },
+      { "file": "altar_fire.mp3", "scene": "Mount Carmel", "trigger": "Fire falls on the altar", "type": "one-shot", "sourcePage": "https://mixkit.co/free-sound-effects/fire/", "url": "https://assets.mixkit.co/active_storage/sfx/1328/1328-preview.mp3" },
+      { "file": "rain_thunder.mp3", "scene": "Rain returns", "trigger": "The storm breaks", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/thunder/", "url": "https://assets.mixkit.co/active_storage/sfx/2390/2390-preview.mp3" },
+      { "file": "heavenly_transition.mp3", "scene": "The final crossing", "trigger": "Heavenly departure", "type": "one-shot", "sourcePage": "https://mixkit.co/free-sound-effects/magic/", "url": "https://assets.mixkit.co/active_storage/sfx/2344/2344-preview.mp3" }
+    ]},
+    { "folder": "Jonah", "slug": "jonah", "title": "Jonah", "effects": [
+      { "file": "sea_waves.mp3", "scene": "The voyage", "trigger": "Ship at sea", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/water/", "url": "https://assets.mixkit.co/active_storage/sfx/1185/1185-preview.mp3" },
+      { "file": "storm_wind.mp3", "scene": "The storm", "trigger": "Wind tears across the ship", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/wind/", "url": "https://assets.mixkit.co/active_storage/sfx/2658/2658-preview.mp3" },
+      { "file": "ocean_splash.mp3", "scene": "Overboard", "trigger": "Jonah hits the water", "type": "one-shot", "sourcePage": "https://mixkit.co/free-sound-effects/water/", "url": "https://assets.mixkit.co/active_storage/sfx/2364/2364-preview.mp3" },
+      { "file": "deep_bubbles.mp3", "scene": "Inside the fish", "trigger": "Underwater and great-fish movement", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/water/", "url": "https://assets.mixkit.co/active_storage/sfx/2473/2473-preview.mp3" }
+    ]},
+    { "folder": "Moses", "slug": "moses", "title": "Moses", "effects": [
+      { "file": "wilderness_wind.mp3", "scene": "The wilderness", "trigger": "Desert journey", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/wind/", "url": "https://assets.mixkit.co/active_storage/sfx/788/788-preview.mp3" },
+      { "file": "red_sea_water.mp3", "scene": "The Red Sea", "trigger": "The waters divide", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/water/", "url": "https://assets.mixkit.co/active_storage/sfx/3126/3126-preview.mp3" },
+      { "file": "sinai_thunder.mp3", "scene": "Mount Sinai", "trigger": "Thunder over the mountain", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/thunder/", "url": "https://assets.mixkit.co/active_storage/sfx/1287/1287-preview.mp3" },
+      { "file": "burning_bush_reveal.mp3", "scene": "The burning bush", "trigger": "God calls Moses", "type": "one-shot", "sourcePage": "https://mixkit.co/free-sound-effects/magic/", "url": "https://assets.mixkit.co/active_storage/sfx/869/869-preview.mp3" }
+    ]},
+    { "folder": "Noah", "slug": "noah", "title": "Noah", "effects": [
+      { "file": "ark_wood_creak.mp3", "scene": "Building and voyage", "trigger": "Ark timber shifts", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/wood/", "url": "https://assets.mixkit.co/active_storage/sfx/195/195-preview.mp3" },
+      { "file": "flood_thunder.mp3", "scene": "The flood", "trigger": "Storm reaches its peak", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/thunder/", "url": "https://assets.mixkit.co/active_storage/sfx/2390/2390-preview.mp3" },
+      { "file": "flood_water.mp3", "scene": "The flood", "trigger": "Water surrounds the ark", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/water/", "url": "https://assets.mixkit.co/active_storage/sfx/1185/1185-preview.mp3" },
+      { "file": "animal_march.mp3", "scene": "Two by two", "trigger": "Animals approach the ark", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/footsteps/", "url": "https://assets.mixkit.co/active_storage/sfx/1232/1232-preview.mp3" }
+    ]}
+  ]
+}

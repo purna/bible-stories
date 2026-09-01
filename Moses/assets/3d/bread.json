@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "name": "bread",
+  "settings": { "background": "#2a1808", "fog": { "color": "#2a1808", "density": 0.003 } },
+  "camera": { "distance": 100, "height": 20 },
+  "objects": [
+    { "type": "light", "lightType": "ambient", "color": "#FFD84D", "intensity": 0.45 },
+    { "type": "light", "lightType": "directional", "color": "#d4a050", "intensity": 0.8, "position": { "x": 30, "y": 30, "z": 20 } },
+    { "type": "shape", "shapeType": "box", "scale": { "x": 200, "y": 1, "z": 100 }, "color": "#c88a48", "material": { "type": "toon", "outline": 0.02 }, "position": { "x": 0, "y": -16, "z": 0 } },
+    { "type": "shape", "shapeType": "cone", "scale": { "x": 30, "y": 8, "z": 20 }, "color": "#a06838", "material": { "type": "toon", "outline": 0.03 }, "position": { "x": -30, "y": -10, "z": -10 } },
+    { "type": "shape", "shapeType": "cone", "scale": { "x": 30, "y": 8, "z": 20 }, "color": "#a06838", "material": { "type": "toon", "outline": 0.03 }, "position": { "x": 40, "y": -10, "z": -8 } },
+    { "type": "shape", "shapeType": "cylinder", "scale": { "x": 4, "y": 5, "z": 4 }, "color": "#a06a30", "material": { "type": "toon", "outline": 0.04 }, "position": { "x": 0, "y": -10, "z": 8 } },
+    { "type": "shape", "shapeType": "sphere", "scale": { "x": 3, "y": 3, "z": 3 }, "color": "#fff3cf", "material": { "type": "emissive", "opacity": 0.5, "outline": 0.03 }, "position": { "x": 0, "y": -4, "z": 8 } },
+    { "type": "decoration", "decorationType": "stars", "count": 30, "spread": 80, "color": "#fff3cf", "size": 0.6 }
+  ]
+}

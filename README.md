@@ -48,6 +48,22 @@ This series tells the story of the reluctant prophet Jonah and his mission to th
 
 ---
 
+### [The Book of Moses](./Moses/)
+
+This series follows the rescue of Israel out of Egypt, the journey through the wilderness, and Moses' view of the promised land from Mount Nebo.
+*   **The Child in the River (Chapter 1)**: Hebrew slaves fill Egypt. A mother hides her son in a basket among the Nile reeds. Pharaoh's daughter finds him and adopts him into the palace that ordered his death.
+*   **Exile and the Burning Bush (Chapter 2)**: Moses flees to Midian. After forty years of shepherding, a bush blazes with fire but does not burn — and the God of Abraham calls him by name.
+*   **Let My People Go (Chapter 3)**: Moses and Aaron confront Pharaoh with three signs: a serpent-staff, leprous-and-healed hand, and water turned to blood. Pharaoh's heart hardens; each refusal adds another plague.
+*   **Passover Night (Chapter 4)**: Marked doors, a hurried meal, and the death of every Egyptian firstborn. Pharaoh finally drives the people out — the night becomes the LORD's Passover.
+*   **A Path Through the Water (Chapter 5)**: Trapped between Pharaoh's army and the Red Sea, Moses stretches out his staff. The waters stand as walls. Israel walks through on dry ground.
+*   **Enough for Today (Chapter 6)**: Bitter water at Marah, quail in the evening, manna every morning. Some gathered much. Some gathered little. None had any shortage.
+*   **Thunder on Sinai (Chapter 7)**: At Mount Sinai, the LORD descends in fire, smoke, and the sound of a trumpet. He gives the Ten Commandments.
+*   **The Broken Tablets (Chapter 8)**: While Moses is on the mountain, the people make a golden calf. He throws the tablets down. He pleads with God. He returns to receive them again.
+*   **The Long Wilderness (Chapter 9)**: Spies, fear at the border, and forty years of wandering. At Meribah, Moses strikes the rock and is told he will not enter the land.
+*   **The Land from Afar (Chapter 10)**: On Mount Nebo, the LORD shows Moses the whole promised land. He appoints Joshua, blesses the people, and dies — a hundred and twenty years old, his eyes not weak, his legs not feeble.
+
+---
+
 ### [The Book of Noah](./Noah/)
 
 This series covers the epic story of Noah, the ark, and the great flood that covered the Earth.

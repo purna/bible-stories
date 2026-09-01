@@ -1,0 +1,109 @@
+{
+  "id": "bread",
+  "name": "Ch.6 \u00b7 Enough for Today",
+  "bg": "radial-gradient(circle at 50% 50%, #1c1408, #2e2010 65%, #0c0804)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Three days into the wilderness \u2014 no water. The people came to a place called Marah. The water there was bitter."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "They grumbled against Moses. \"What are we to drink?\""
+    },
+    {
+      "speaker": "moses",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Lord, what shall I do with this people? They are almost ready to stone me."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "The LORD showed Moses a piece of wood. He threw it into the water, and the water became sweet.",
+      "cite": "Exodus 15:25"
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "A month later \u2014 the whole company had run out of food. Again the grumbling began."
+    },
+    {
+      "speaker": "israelite_elder",
+      "fx": "shake",
+      "align": "right",
+      "svg": "placeholder",
+      "text": "If only we had died by the LORD's hand in Egypt, where we sat around pots of meat and ate all the food we wanted!"
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "I will rain down bread from heaven for you. The people are to go out each day and gather enough for that day.",
+      "cite": "Exodus 16:4"
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "On the sixth day they are to prepare what they bring in, and it is to be twice as much as they gather on the other days."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "That evening quail came and covered the camp. In the morning there was thin flakes like frost on the ground.",
+      "cite": "Exodus 16:13\u201314"
+    },
+    {
+      "speaker": "moses",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "This is the bread the Lord has given you to eat. Gather an omer from each person."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Some gathered much. Some gathered little. Each measured exactly an omer \u2014 no more, no less."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Those who gathered much had nothing left over. Those who gathered little had no shortage. Each had gathered just as much as they needed.",
+      "choices": [
+        {
+          "label": "Trust that tomorrow's bread will come \ud83c\udf05",
+          "note": "No one hoards. No one goes hungry. A new kind of daily dependence."
+        },
+        {
+          "label": "Keep a little extra \u2014 just in case \ud83d\udce6",
+          "note": "Moses warned them. By morning the extra was wormy and rotten."
+        }
+      ]
+    }
+  ],
+  "scene": "bread",
+  "foreground": "fg_bread",
+  "index": 5
+}

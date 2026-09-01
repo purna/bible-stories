@@ -40,7 +40,7 @@
           { "label": "Estimate a few measurements 🤷", "note": "It'll look about right... but a joint or two will be weaker for it." }
         ]
       },
-      { "speaker": "narrator", "fx": "fade", "align": "center", "svg": "ch2_keel_laid", "text": "Noah marked out the keel on the ground. The first timber went down.", "cite": "Genesis 6:22" }
+      { "speaker": "narrator", "audioSfx": "assets/audio/sfx/ark_wood_creak.mp3", "fx": "fade", "align": "center", "svg": "ch2_keel_laid", "text": "Noah marked out the keel on the ground. The first timber went down.", "cite": "Genesis 6:22" }
     ]
   },
   {
@@ -72,7 +72,7 @@
     "svg": "ch4_animals_arrive",
     "lines": [
       { "speaker": "god",      "fx": "bounce","align": "center","svg": "ch4_animals_arrive","text": "Seven pairs of every clean animal. One pair of every unclean. Two of every bird.", "cite": "Genesis 7:2–3" },
-      { "speaker": "narrator", "fx": "fade",  "align": "left", "svg": "ch4_animals_arrive","text": "And then something impossible happened. The animals came to Noah." },
+      { "speaker": "narrator", "audioSfx": "assets/audio/sfx/animal_march.mp3", "fx": "fade",  "align": "left", "svg": "ch4_animals_arrive","text": "And then something impossible happened. The animals came to Noah.", "interaction": "gathering" },
       { "speaker": "narrator", "fx": "bounce","align": "center","svg": "ch4_parade",        "sfx": "TWO BY TWO!", "text": "Lions and lambs. Elephants and doves. Bears and deer. Marching, pair by pair." },
       { "speaker": "wife",     "fx": "fade",  "align": "right","svg": "ch4_parade",         "text": "Are those... elephants? Walking TOWARD us?!" },
       { "speaker": "narrator", "fx": "fade",  "align": "center","svg": "ch4_loading",       "text": "Noah provisioned the ark with food for every creature. It took days.",
@@ -92,7 +92,7 @@
     "svg": "ch5_dark_clouds",
     "lines": [
       { "speaker": "narrator", "fx": "fade",  "align": "left",  "svg": "ch5_dark_clouds",  "text": "On the seventh day, the sky changed. The horizon turned the colour of a bruise." },
-      { "speaker": "narrator", "fx": "shake", "align": "center","svg": "ch5_first_rain",   "sfx": "RUMBLE...", "text": "The first drops fell. Then more. Then the sky opened." },
+      { "speaker": "narrator", "audioSfx": "assets/audio/sfx/flood_thunder.mp3", "fx": "shake", "align": "center","svg": "ch5_first_rain",   "sfx": "RUMBLE...", "text": "The first drops fell. Then more. Then the sky opened." },
       { "speaker": "narrator", "fx": "fade",  "align": "center","svg": "ch5_first_rain",   "text": "Great springs burst from the deep. Floodgates of heaven broke open.", "cite": "Genesis 7:11" },
       { "speaker": "narrator", "fx": "fade",  "align": "right", "svg": "ch5_door_closes",  "text": "And then — from the outside — the LORD shut the door.", "cite": "Genesis 7:16" },
       { "speaker": "noah",     "fx": "type",  "align": "left",  "svg": "ch5_door_closes",  "text": "That sound. The latch. From the outside." },
@@ -106,7 +106,7 @@
     "particle": "flood",
     "svg": "ch6_water_rising",
     "lines": [
-      { "speaker": "narrator", "fx": "shake", "align": "left",  "svg": "ch6_water_rising",  "text": "For forty days, the rain hammered the hull without stopping.", "cite": "Genesis 7:17" },
+      { "speaker": "narrator", "audioSfx": "assets/audio/sfx/flood_water.mp3", "fx": "shake", "align": "left",  "svg": "ch6_water_rising",  "text": "For forty days, the rain hammered the hull without stopping.", "cite": "Genesis 7:17" },
       { "speaker": "narrator", "fx": "shake", "align": "center","svg": "ch6_storm_peak",    "sfx": "CRACK!", "text": "The water rose until the highest mountains vanished beneath it.", "cite": "Genesis 7:19" },
       { "speaker": "narrator", "fx": "fade",  "align": "center","svg": "ch6_ark_floating",  "text": "Every living thing outside was gone. Only the ark floated on the face of the waters." },
       { "speaker": "wife",     "fx": "fade",  "align": "right", "svg": "ch6_inside_ark",    "text": "Is it ever going to stop? The animals are restless. The children are frightened." },

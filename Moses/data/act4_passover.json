@@ -1,0 +1,78 @@
+{
+  "id": "passover",
+  "name": "Ch.4 \u00b7 Passover Night",
+  "bg": "radial-gradient(circle at 50% 30%, #100808, #1f1010 65%, #080404)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Plague after plague had fallen. Water to blood. Frogs. Gnats. Flies. Death of livestock. Boils. Hail. Locusts. Darkness."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Still Pharaoh refused. So one more plague was coming \u2014 and there would be no warning."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "On the tenth day of this month, each man is to take a lamb for his family, one lamb per house.",
+      "cite": "Exodus 12:3"
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Take some of the blood and put it on the sides and tops of the doorframes of the houses where you eat the lamb."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "When I see the blood, I will pass over you. No destructive plague will touch you when I strike the land of Egypt."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Eat it in haste. Sandals on. Staff in hand. This is the LORD's Passover."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "shake",
+      "align": "center",
+      "svg": "placeholder",
+      "sfx": "WAILING...",
+      "text": "At midnight in Egypt \u2014 wailing everywhere. Every firstborn son had died, from the prisoner in the dungeon to the firstborn of Pharaoh."
+    },
+    {
+      "speaker": "pharaoh",
+      "fx": "shake",
+      "align": "right",
+      "svg": "placeholder",
+      "text": "Get up! Get out from among my people, both you and the Israelites! Go, worship the LORD as you have asked. Take your flocks too. Go!",
+      "cite": "Exodus 12:31\u201332"
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "That night \u2014 the Israelites had been slaves in Egypt for four hundred and thirty years \u2014 they finally left."
+    }
+  ],
+  "scene": "passover",
+  "foreground": "fg_passover",
+  "index": 3
+}

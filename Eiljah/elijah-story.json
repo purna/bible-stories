@@ -22,6 +22,7 @@
       },
       {
         "speaker": "elijah",
+        "audioSfx": "assets/audio/sfx/desert_wind.mp3",
         "fx": "bounce",
         "text": "As surely as the LORD, the God of Israel, lives—the God I serve—there will be no dew or rain unless the LORD gives the word.",
         "align": "center",
@@ -224,6 +225,7 @@
       },
       {
         "speaker": "narrator",
+        "audioSfx": "assets/audio/sfx/altar_fire.mp3",
         "fx": "shake",
         "sfx": "WHOOSH!",
         "text": "Then the fire of the LORD fell. It consumed the sacrifice, the wood, the stones, the soil, and even the water in the trench.",
@@ -246,6 +248,7 @@
       },
       {
         "speaker": "narrator",
+        "audioSfx": "assets/audio/sfx/rain_thunder.mp3",
         "fx": "fade",
         "text": "A small cloud appeared. The sky grew dark, the wind rose, and soon the land was filled with rain.",
         "align": "center",
@@ -358,7 +361,8 @@
         "fx": "shake",
         "text": "Then came fire. But the LORD was not in the fire. After the fire came a gentle whisper.",
         "align": "center",
-        "svg": "horeb_cave"
+        "svg": "horeb_cave",
+        "interaction": "hearing"
       },
       {
         "speaker": "narrator",
@@ -474,6 +478,7 @@
       },
       {
         "speaker": "narrator",
+        "audioSfx": "assets/audio/sfx/heavenly_transition.mp3",
         "fx": "shake",
         "text": "Suddenly a chariot of fire and horses of fire appeared. They separated Elijah and Elisha, and Elijah was carried up into heaven in a whirlwind.",
         "align": "center",

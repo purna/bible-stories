@@ -35,7 +35,7 @@
               { label: "Hide behind a crate first 📦", note: "Jonah peeks around a crate... then buys a ticket anyway. Tarshish it is." }
             ]
           },
-          { speaker: "narrator", fx: "type", text: "He found a ship sailing to Tarshish — which was in the exact opposite direction of Nineveh.", svg: "Act1_05_Found_a_ship_to_Tarshish" },
+          { speaker: "narrator", audioSfx: "assets/audio/sfx/sea_waves.mp3", fx: "type", text: "He found a ship sailing to Tarshish — which was in the exact opposite direction of Nineveh.", svg: "Act1_05_Found_a_ship_to_Tarshish" },
           { speaker: "jonah", fx: "fade", text: "Perfect. If I just sail away fast enough, maybe I can outrun a job I don't want to do.", svg: "Act1_07_Sail_away_fast_enough" },
           { speaker: "narrator", fx: "fade", text: "Jonah climbed aboard, went below deck, curled up... and fell fast asleep.", svg: "Act1_08_Fast_asleep_below_deck" }
         ]
@@ -45,7 +45,7 @@
         bg: "radial-gradient(circle at 50% 30%, #14335a, #0A1930 60%, #050b18)",
         particle: "storm", svg: "Act2_01_Sky_turned_the_color_of_a_bruise",
         lines: [
-          { speaker: "narrator", fx: "shake", text: "Out on the water, the sky turned the color of a bruise. The wind began to howl.", align: "left", svg: "Act2_01_Sky_turned_the_color_of_a_bruise" },
+          { speaker: "narrator", audioSfx: "assets/audio/sfx/storm_wind.mp3", fx: "shake", text: "Out on the water, the sky turned the color of a bruise. The wind began to howl.", align: "left", svg: "Act2_01_Sky_turned_the_color_of_a_bruise" },
           { sfx: "CRASH!", speaker: "sailors", fx: "shake", text: "ALL HANDS! THE SEA IS EATING THE SHIP!", align: "center", svg: "Act2_02_The_sea_is_eating_the_ship" },
           {
             speaker: "narrator", fx: "shake", text: "Waves the size of houses slammed the deck. The sailors threw cargo overboard, praying to anyone who'd listen.",
@@ -59,10 +59,10 @@
           { speaker: "jonah", fx: "fade", text: "...It's me. I ran from something I was supposed to do.", svg: "Act2_05_Its_me_I_ran" },
           { speaker: "jonah", fx: "fade", text: "Throw me in — maybe the sea will calm down.", svg: "Act2_06_Throw_me_in" },
           { speaker: "narrator", fx: "fade", text: "The sailors didn't want to. But the storm gave them no choice.", svg: "Act2_07_The_storm_gave_them_no_choice" },
-          { speaker: "narrator", fx: "fade", text: "Jonah hit the cold, dark water — and the moment he did, the storm went silent.", svg: "Act2_08_Jonah_hit_the_water_the_storm_went_silent" },
+          { speaker: "narrator", audioSfx: "assets/audio/sfx/ocean_splash.mp3", fx: "fade", text: "Jonah hit the cold, dark water — and the moment he did, the storm went silent.", svg: "Act2_08_Jonah_hit_the_water_the_storm_went_silent" },
           { sfx: "GULP!", speaker: "narrator", fx: "fade", text: "Down, down, down he sank... until something HUGE rose up beneath him.", svg: "Act2_09_Down_down_something_HUGE_rose_up" },
           { speaker: "narrator", fx: "bounce", text: "A colossal whale opened its enormous jaws and swallowed Jonah whole.", svg: "Act2_10_A_colossal_whale_opened_its_enormous_jaws" },
-          { speaker: "jonah", fx: "fade", text: "It's... dark in here. And warm. And it smells like the bottom of the sea.", svg: "Act2_11_Dark_warm_smells_like_the_sea" },
+          { speaker: "jonah", audioSfx: "assets/audio/sfx/deep_bubbles.mp3", fx: "fade", text: "It's... dark in here. And warm. And it smells like the bottom of the sea.", svg: "Act2_11_Dark_warm_smells_like_the_sea" },
           { speaker: "narrator", fx: "fade", text: "For three days, Jonah sat inside the belly of the whale, wrapped in ribs like a cave, with nothing to do but think.", svg: "Act2_12_Three_days_wrapped_in_ribs_like_a_cave" },
           { speaker: "jonah", fx: "type", text: "I ran because I was scared. Not of Nineveh — of what it would mean to actually go there.", svg: "Act2_13_I_ran_because_I_was_scared" },
           { speaker: "jonah", fx: "fade", text: "Okay. I hear you. I'll go. Just... please, get me out of this fish.", svg: "Act2_14_Okay_I_hear_you_Ill_go" }
@@ -130,9 +130,10 @@
     const bgGradient = el('#bgGradient');
     const dotsBox = el('#dots');
     const audio = new AudioManager();
+    audio.preloadStory({ acts: STORY });
 
     function currentAct() { return STORY[actIdx]; }
-    window.__comic = { currentAct };
+    window.__comic = { currentAct, audio };
 
     function buildDots() {
       dotsBox.innerHTML = '';
@@ -180,6 +181,7 @@
         nextLineTimeout = null;
       }
       const data = currentAct().lines[lineIdx];
+      audio.playLineSfx(data);
 
       // Dynamic Framework Component Assembly
       const frame = document.createElement('div');
@@ -351,6 +353,7 @@
     }
 
     function updateNextBtn() {
+      if (window.StoryRuntime) StoryRuntime.setMode(choicePending ? 'choice' : 'reading');
       const atEnd = lineIdx === currentAct().lines.length - 1 && !choicePending;
       nextBtn.className = `palette-act-${actIdx + 1}`;
       nextBtn.classList.toggle('show', atEnd);
@@ -365,10 +368,7 @@
 
     async function goLine(delta) {
       if (transitioning) return;
-      if (choicePending) {
-        choicePending = false;
-        choicesBox.classList.remove('show');
-      }
+      if (choicePending) return;
       delayNote.className = '';
       nextBtn.classList.remove('show');
       nextLineBtn.classList.remove('show');
@@ -971,6 +971,7 @@
     }
 
     window.addEventListener('wheel', e => {
+      if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
       if (window.JonahGame && JonahGame.isActive()) return;
       if (transitioning) return;
       const atEnd = lineIdx === currentAct().lines.length - 1 && !choicePending;
@@ -995,6 +996,7 @@
     }, { passive: true });
 
     window.addEventListener('keydown', e => {
+      if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
       if (window.JonahGame && JonahGame.isActive()) return;
       const atEnd = lineIdx === currentAct().lines.length - 1 && !choicePending;
       if (e.key === 'ArrowRight') goLine(1);
@@ -1005,10 +1007,12 @@
 
     let touchStartX = 0;
     window.addEventListener('touchstart', e => {
+      if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
       if (window.JonahGame && JonahGame.isActive()) return;
       touchStartX = e.touches[0].clientX;
     });
     window.addEventListener('touchend', e => {
+      if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
       if (window.JonahGame && JonahGame.isActive()) return;
       const dx = e.changedTouches[0].clientX - touchStartX;
       if (Math.abs(dx) > 50) goLine(dx < 0 ? 1 : -1);

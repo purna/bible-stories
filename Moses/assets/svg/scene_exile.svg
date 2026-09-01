@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" data-parallax="true">
+  <defs>
+    <radialGradient id="exileSky" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#3a2010"/>
+      <stop offset="60%" stop-color="#1a0e06"/>
+      <stop offset="100%" stop-color="#0a0604"/>
+    </radialGradient>
+    <radialGradient id="fireGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB04A" stop-opacity=".9"/>
+      <stop offset="50%" stop-color="#FF6020" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#FF6020" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#exileSky)" data-depth="0"/>
+  <!-- stars -->
+  <g fill="#ffffff" data-depth="0.1">
+    <circle cx="80" cy="60" r="1.5" opacity=".7"/>
+    <circle cx="180" cy="40" r="1.2" opacity=".5"/>
+    <circle cx="280" cy="80" r="1.8" opacity=".8"/>
+    <circle cx="540" cy="50" r="1.4" opacity=".6"/>
+    <circle cx="700" cy="90" r="1.6" opacity=".7"/>
+    <circle cx="120" cy="160" r="1" opacity=".5"/>
+  </g>
+  <!-- distant mountain -->
+  <path d="M0 380 L150 240 L300 320 L500 200 L700 300 L800 260 L800 600 L0 600 Z" fill="#1a1208" stroke="#0A0812" stroke-width="3" data-depth="0.3"/>
+  <!-- midground rocks -->
+  <path d="M0 460 L120 420 L240 470 L360 430 L500 480 L640 440 L800 470 L800 600 L0 600 Z" fill="#2a1d10" stroke="#0A0812" stroke-width="3" data-depth="0.5"/>
+  <!-- bush base shadow -->
+  <ellipse cx="400" cy="440" rx="80" ry="14" fill="#000" opacity=".5" data-depth="0.7"/>
+</svg>

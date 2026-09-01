@@ -54,6 +54,8 @@ const dotsBox = el('#dots');
 const visionOverlay = el('#visionOverlay');
 const fragmentCounter = el('#fragmentCounter');
 const fragCountSpan = el('#fragCount');
+const visionTimer = el('#visionTimer');
+const visionClarity = el('#visionClarity');
 const meterBar = el('#meterBar');
 const meterFill = el('#meterFill');
 const meterLabel = el('#meterLabel');
@@ -118,6 +120,7 @@ async function renderLine() {
     if (nextLineTimeout) { clearTimeout(nextLineTimeout); nextLineTimeout = null; }
 
     const data = resolveLine(currentAct().lines[lineIdx]);
+    audio.playLineSfx(data);
     const actAudio = currentAct().audioShift && lineIdx >= currentAct().audioShift.line
         ? currentAct().audioShift
         : currentAct();
@@ -291,6 +294,7 @@ function startVisionMinigame(data, visionScene) {
 
     VisionEngine.loadScene(visionScene);
     VisionEngine.start();
+    if (window.StoryRuntime) StoryRuntime.setMode('game');
     if (typeof Parallax !== 'undefined') Parallax.detach();
     if (typeof VFX !== 'undefined') VFX.enterVision();
 
@@ -314,11 +318,13 @@ function startVisionMinigame(data, visionScene) {
         }
     }
     visionScene.fragments.forEach(f => {
-        const hotspot = document.createElement('div');
-        hotspot.className = 'fragment-hotspot' + (f.isDecoy ? ' decoy' : '');
+        const hotspot = document.createElement('button');
+        hotspot.type = 'button';
+        hotspot.className = 'fragment-hotspot';
+        hotspot.setAttribute('aria-label', `Examine vision fragment ${f.id}`);
         const icon = document.createElement('span');
         icon.className = 'frag-icon';
-        icon.textContent = f.isDecoy ? '?' : '✦';
+        icon.textContent = '✦';
         hotspot.appendChild(icon);
         hotspot.dataset.fragmentId = f.id;
         if (f.position) {
@@ -341,10 +347,50 @@ function collectFragment(fragmentId) {
     if (typeof VFX !== 'undefined') VFX.updateVisionVFX();
 
     if (VisionEngine.canDeliver()) {
-        showDeliveryChoices();
+        startVisionAssembly();
     } else {
         tickVisionTimer();
     }
+}
+
+function startVisionAssembly() {
+    const meaningful = VisionEngine.getGathered().filter(fragment => !fragment.isDecoy);
+    visionOverlay.innerHTML = '';
+    visionOverlay.classList.add('show');
+    const assembly = document.createElement('section');
+    assembly.className = 'vision-assembly';
+    assembly.setAttribute('aria-labelledby', 'visionAssemblyTitle');
+    assembly.innerHTML = '<span class="vision-assembly-kicker">INTERPRET THE SIGNS</span><h3 id="visionAssemblyTitle">Build the reading in order</h3><p id="visionAssemblyStatus" role="status" aria-live="polite">Choose the first part of the interpretation.</p><div class="vision-assembly-result" aria-label="Assembled interpretation"></div><div class="vision-assembly-options"></div>';
+    visionOverlay.appendChild(assembly);
+    const result = assembly.querySelector('.vision-assembly-result');
+    const options = assembly.querySelector('.vision-assembly-options');
+    const status = assembly.querySelector('#visionAssemblyStatus');
+    let expected = 0;
+    [...meaningful].reverse().forEach(fragment => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = fragment.meaning;
+        button.addEventListener('click', () => {
+            if (fragment.id !== meaningful[expected].id) {
+                VisionEngine.recordAssemblyMistake();
+                updateFragmentCounter();
+                status.textContent = 'That sign belongs later. Look for the sequence in the vision.';
+                button.classList.remove('assembly-mistake');
+                void button.offsetWidth;
+                button.classList.add('assembly-mistake');
+                return;
+            }
+            button.remove();
+            const step = document.createElement('span');
+            step.textContent = fragment.meaning;
+            result.appendChild(step);
+            expected += 1;
+            status.textContent = expected === meaningful.length ? 'The interpretation is assembled.' : `Good. Choose part ${expected + 1}.`;
+            if (expected === meaningful.length) setTimeout(showDeliveryChoices, 500);
+        });
+        options.appendChild(button);
+    });
+    options.querySelector('button')?.focus();
 }
 
 function renderVisionHotspotState() {
@@ -354,14 +400,16 @@ function renderVisionHotspotState() {
         const fragId = hotspot.dataset.fragmentId;
         if (gathered.some(f => f.id === fragId)) {
             hotspot.classList.add('collected');
+            hotspot.disabled = true;
         }
     });
 }
 
 function updateFragmentCounter() {
-    const gathered = VisionEngine.getGathered();
     const total = VisionEngine.totalCount();
-    fragCountSpan.textContent = gathered.length + ' / ' + total;
+    fragCountSpan.textContent = VisionEngine.gatherCount() + ' / ' + total;
+    const distortion = VisionEngine.getDistortion();
+    visionClarity.textContent = distortion >= 0.4 ? 'Distorted' : distortion > 0 ? 'Clouded' : 'Clear';
 }
 
 let visionTimerTick = null;
@@ -369,6 +417,8 @@ let visionTimerTick = null;
 function tickVisionTimer() {
     if (visionTimerTick) clearTimeout(visionTimerTick);
     const remaining = VisionEngine.timeRemaining();
+    visionTimer.textContent = Math.ceil(remaining) + 's';
+    if (remaining <= 10 && remaining > 0) visionClarity.setAttribute('aria-label', `${Math.ceil(remaining)} seconds remaining`);
     if (remaining <= 0) {
         forceDelivery();
         return;
@@ -437,6 +487,7 @@ function onDeliverySelected(c) {
     delayNote.classList.add('show');
     choicePending = false;
     visionMode = false;
+    if (window.StoryRuntime) StoryRuntime.setMode('reading');
     fragmentCounter.classList.add('hidden');
     if (typeof Parallax !== 'undefined') Parallax.attach(el('#svgLayer'));
     if (typeof VFX !== 'undefined') VFX.exitVision();
@@ -465,6 +516,7 @@ function updateMeter() {
 }
 
 function updateNextBtn() {
+    if (window.StoryRuntime) StoryRuntime.setMode(choicePending ? 'choice' : (visionMode ? 'game' : 'reading'));
     const atEnd = lineIdx === currentAct().lines.length - 1 && !choicePending;
     nextBtn.className = `palette-act-${actIdx + 1}`;
     nextBtn.classList.toggle('show', atEnd);
@@ -478,7 +530,7 @@ function updateNextBtn() {
 
 async function goLine(delta) {
     if (transitioning || visionMode) return;
-    if (choicePending) { choicePending = false; choicesBox.classList.remove('show'); }
+    if (choicePending) return;
     delayNote.className = '';
     nextBtn.classList.remove('show');
     nextLineBtn.classList.remove('show');
@@ -734,8 +786,8 @@ function loadScene3D(key) {
             if (child.geometry) child.geometry.dispose();
             if (child.material) {
                 if (Array.isArray(child.material)) {
-                    child.material.forEach(m => m.dispose());
-                } else { child.material.dispose(); }
+                    child.material.forEach(m => { if (m && typeof m.dispose === 'function') m.dispose(); });
+                } else if (typeof child.material.dispose === 'function') { child.material.dispose(); }
             }
         });
     }
@@ -838,6 +890,7 @@ window.addEventListener('resize', () => {
    KEYBOARD NAVIGATION
    ========================================================================= */
 document.addEventListener('keydown', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goLine(1);
     if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') goLine(-1);
 });
@@ -847,10 +900,12 @@ document.addEventListener('keydown', e => {
    ========================================================================= */
 let touchStartX = 0, touchStartY = 0;
 document.addEventListener('touchstart', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
 }, { passive: true });
 document.addEventListener('touchend', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     const dx = e.changedTouches[0].clientX - touchStartX;
     const dy = e.changedTouches[0].clientY - touchStartY;
     if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
@@ -863,6 +918,7 @@ document.addEventListener('touchend', e => {
     ========================================================================= */
 let wheelCooldown = false;
 document.addEventListener('wheel', e => {
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     if (wheelCooldown) return;
 
     if (use3D && currentSceneKey) {
@@ -969,6 +1025,7 @@ async function main() {
     try {
         const response = await fetch('daniel-story.json');
         STORY = await response.json();
+        audio.preloadStory(STORY);
         VISION_SCENES = await loadVisionScenes();
         populateChapterSelect();
         init3D();

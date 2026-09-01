@@ -1,0 +1,91 @@
+{
+  "id": "exile",
+  "name": "Ch.2 \u00b7 Exile and the Burning Bush",
+  "bg": "radial-gradient(circle at 50% 35%, #180c04, #2a1608 65%, #0c0604)",
+  "particle": "ember",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Years passed. Moses saw an Egyptian striking a Hebrew. He looked around \u2014 no one watching."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "shake",
+      "align": "center",
+      "svg": "placeholder",
+      "sfx": "STRIKE!",
+      "text": "He struck the Egyptian and hid him in the sand."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "The next day he tried to break up a fight between two Hebrews. One of them turned on him."
+    },
+    {
+      "speaker": "israelite_elder",
+      "fx": "fade",
+      "align": "right",
+      "svg": "placeholder",
+      "text": "Who made you ruler and judge over us? Are you going to kill me like you killed the Egyptian?"
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Pharaoh heard of it. He tried to kill Moses. So Moses ran \u2014 into the desert, toward Midian."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "He sat by a well. Seven daughters of the priest of Midian came to draw water for their father's flock."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Some shepherds drove them away. Moses stood up and helped them. Water for the flock. Shade for the girls."
+    },
+    {
+      "speaker": "zipporah",
+      "fx": "fade",
+      "align": "right",
+      "svg": "placeholder",
+      "text": "Why have you come? You are an Egyptian."
+    },
+    {
+      "speaker": "moses",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "I was. I am not now. I am a stranger in a strange land \u2014 like you."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Moses settled with Jethro. He married Zipporah. He kept sheep in the wilderness for forty years."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "sfx": "FIRE!",
+      "text": "One day, near Horeb \u2014 the mountain of God \u2014 a bush was on fire. And it did not burn up."
+    }
+  ],
+  "scene": "exile",
+  "foreground": "fg_exile",
+  "index": 1
+}

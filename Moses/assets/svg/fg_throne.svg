@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Pharaoh's throne foreground -->
+  <g transform="translate(280,180)">
+    <!-- throne base steps -->
+    <rect x="0"   y="320" width="240" height="30" fill="#3a2818" stroke="#0A0812" stroke-width="3"/>
+    <rect x="-20" y="350" width="280" height="30" fill="#5a3818" stroke="#0A0812" stroke-width="3"/>
+    <!-- throne body -->
+    <path d="M30 320 L30 100 L210 80 L210 320 Z" fill="#5a3818" stroke="#0A0812" stroke-width="3"/>
+    <!-- throne back -->
+    <path d="M30 100 L210 80 L210 30 L60 30 Z" fill="#c8a84b" stroke="#0A0812" stroke-width="3"/>
+    <!-- carved wings -->
+    <path d="M30 100 L60 30 L60 100 Z" fill="#FFD84D" stroke="#0A0812" stroke-width="2"/>
+    <path d="M210 80 L210 30 L160 30 L160 80 Z" fill="#FFD84D" stroke="#0A0812" stroke-width="2"/>
+    <!-- cobra on top -->
+    <g transform="translate(110,0)">
+      <ellipse cx="10" cy="20" rx="8" ry="14" fill="#FFD84D" stroke="#0A0812" stroke-width="2"/>
+      <circle cx="10" cy="8" r="6" fill="#FFD84D" stroke="#0A0812" stroke-width="2"/>
+      <circle cx="10" cy="8" r="2" fill="#0A0812"/>
+    </g>
+  </g>
+  <!-- staff-to-snake motif on left -->
+  <g transform="translate(120,420)">
+    <rect x="0" y="0" width="14" height="180" fill="#5a3818" stroke="#0A0812" stroke-width="2"/>
+    <circle cx="7" cy="0" r="10" fill="#7a4a1a" stroke="#0A0812" stroke-width="2"/>
+  </g>
+  <!-- blood-water bowl on right -->
+  <g transform="translate(620,440)">
+    <ellipse cx="40" cy="80" rx="50" ry="14" fill="#0A0812"/>
+    <path d="M0 80 L20 40 L60 40 L80 80 Z" fill="#a04030" stroke="#0A0812" stroke-width="3"/>
+    <path d="M10 50 L70 50" stroke="#c84b4b" stroke-width="3"/>
+  </g>
+</svg>

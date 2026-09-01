@@ -1,0 +1,88 @@
+{
+  "id": "mountain",
+  "name": "Ch.7 \u00b7 Thunder on Sinai",
+  "bg": "radial-gradient(circle at 50% 0%, #1a1440, #0a0818 65%, #020208)",
+  "particle": "storm",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "In the third month after the Israelites left Egypt, they came to the desert of Sinai. They camped at the foot of the mountain."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "If you will obey me fully and keep my covenant, then out of all nations you will be my treasured possession.",
+      "cite": "Exodus 19:5"
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "All the people answered together: \"We will do everything the LORD has said.\""
+    },
+    {
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/sinai_thunder.mp3",
+      "fx": "shake",
+      "align": "center",
+      "svg": "placeholder",
+      "sfx": "BOOM!",
+      "text": "On the morning of the third day there was thunder and lightning, with a thick cloud over the mountain, and a very loud trumpet blast."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "The whole mountain trembled violently. Smoke went up like a furnace. The LORD descended on it in fire.",
+      "cite": "Exodus 19:18"
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "I am the LORD your God, who brought you out of Egypt, out of the land of slavery. You shall have no other gods before me."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Do not misuse the name of the LORD your God. Remember the Sabbath day by keeping it holy. Honour your father and your mother."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Do not murder. Do not commit adultery. Do not steal. Do not give false testimony. Do not covet."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "All that the LORD says, we will do. All that the LORD says, we will obey."
+    },
+    {
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/sinai_thunder.mp3",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "sfx": "TRUMPET!",
+      "text": "The sound of the trumpet grew louder and louder. Then Moses spoke and the voice of God answered him."
+    }
+  ],
+  "scene": "mountain",
+  "foreground": "fg_mountain",
+  "index": 6
+}

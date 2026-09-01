@@ -11,6 +11,8 @@
     <meta name="mobile-web-app-capable" content="yes">
     <title>The Adventures of Jonah — Enhanced Single Panel Comic</title>
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="story-runtime.css">
+    <link rel="stylesheet" href="loading-screen.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="styles/jonah-story_10.css">
@@ -123,6 +125,9 @@
     <a href="tools/character_head_generator.html">Character Generator</a>
   </footer>
 
+  <script src="asset-download-manager.js"></script>
+  <script src="story-runtime.js"></script>
+  <script src="loading-screen.js"></script>
   <script src="audio-manager.js"></script>
   <script src="info-modal.js"></script>
   <script src="config.js"></script>
@@ -135,9 +140,19 @@
   <script src="jonah-game-integration.js"></script>
   <script src="jonah-story.js"></script>
   <script>
+    window.addEventListener('load', async () => {
+      try {
+        await screen.orientation?.lock?.('landscape');
+      } catch {
+        // Orientation locking may be unavailable outside an installed PWA or fullscreen mode.
+      }
+    });
+
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js');
+        const registerStoryWorker = () => navigator.serviceWorker.register('sw.js');
+        if (window.__storyAssetsReady) registerStoryWorker();
+        else window.addEventListener('story:assetsready', registerStoryWorker, { once: true });
       });
     }
   </script>

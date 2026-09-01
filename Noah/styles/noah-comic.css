@@ -375,3 +375,166 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   .air, #rainStripes, .dove-fly { animation: none !important; }
 }
+
+/* =========================================================================
+   GATHERING VERTICAL SLICE — Chapter 4: Two by Two
+   Pair incoming animal cards into stalls. Keyboard + pointer + touch.
+   ========================================================================= */
+.gathering-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(26, 46, 16, 0.5), rgba(6, 10, 4, 0.88));
+  color: #f2e8cf;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+}
+.gathering-panel {
+  width: min(640px, 98%);
+  max-height: 96%;
+  overflow-y: auto;
+  background: linear-gradient(180deg, rgba(28, 38, 18, 0.96), rgba(12, 22, 8, 0.98));
+  border: 3px solid #6a8a3a;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55), inset 0 0 24px rgba(255, 217, 130, 0.04);
+  padding: 18px 18px 14px;
+  border-radius: 6px;
+  text-align: center;
+}
+.gathering-kicker {
+  font-family: "Bangers", cursive;
+  letter-spacing: 0.18em;
+  font-size: 16px;
+  color: #ffd84d;
+  text-shadow: 2px 2px 0 #0A0812;
+}
+.gathering-title {
+  font-family: "Bangers", cursive;
+  font-size: clamp(22px, 4vw, 30px);
+  margin: 4px 0 6px;
+  color: #fff9e5;
+  letter-spacing: 0.04em;
+}
+.gathering-prompt {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d8e3b8;
+  margin: 0 0 12px;
+}
+.gathering-status {
+  font-family: "Bangers", cursive;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  margin: 0 0 10px;
+  color: #ffd84d;
+  min-height: 18px;
+}
+.gathering-status.done { color: #b9f2d8; }
+.gathering-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 4px auto 12px;
+}
+.gathering-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(180deg, #fefae0, #d8c898);
+  border: 3px solid #0A0812;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0 #0A0812;
+  cursor: pointer;
+  font: 0/0 a;
+  color: transparent;
+  transition: transform 80ms ease-out, box-shadow 80ms ease-out, opacity 200ms ease-out;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+.gathering-card svg { width: 70%; height: 70%; }
+.gathering-card:hover,
+.gathering-card:focus { outline: none; box-shadow: 3px 3px 0 #0A0812, inset 0 0 0 2px #ffd84d; }
+.gathering-card.selected {
+  box-shadow: 3px 3px 0 #0A0812, inset 0 0 0 4px #ff6b5b;
+  transform: translate(-2px, -2px);
+}
+.gathering-card.matched {
+  opacity: 0.18;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 4px #4a8a2a;
+}
+.gathering-card.miss { animation: gatherMiss 320ms ease-out; }
+@keyframes gatherMiss {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-4px, 0); }
+  40% { transform: translate(4px, 0); }
+  60% { transform: translate(-2px, 0); }
+  80% { transform: translate(2px, 0); }
+}
+.gathering-stalls {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin: 4px auto 10px;
+}
+.gathering-stall {
+  height: 56px;
+  border: 3px dashed #8a6a3a;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  position: relative;
+  font-family: "Bangers", cursive;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #a3b18a;
+}
+.gathering-stall.filled {
+  border-style: solid;
+  border-color: #4a8a2a;
+  background: linear-gradient(180deg, rgba(74, 138, 42, 0.3), rgba(20, 50, 12, 0.5));
+  color: #ffd84d;
+}
+.gathering-stall.filled svg { width: 36px; height: 36px; }
+.gathering-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.gathering-btn {
+  font-family: "Bangers", cursive;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  background: #4ECDC4;
+  color: #0A0812;
+  border: 3px solid #0A0812;
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #0A0812;
+  transition: transform 80ms ease-out, box-shadow 80ms ease-out;
+}
+.gathering-btn:hover { box-shadow: 2px 2px 0 #0A0812; transform: translate(2px, 2px); }
+.gathering-btn.ghost {
+  background: transparent;
+  color: #d8e3b8;
+  box-shadow: 4px 4px 0 #8a6a3a;
+}
+.gathering-help {
+  font-size: 12px;
+  color: #b3c197;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+@media (max-width: 480px) {
+  .gathering-panel { padding: 14px 12px 12px; }
+  .gathering-stall { height: 44px; font-size: 10px; }
+}

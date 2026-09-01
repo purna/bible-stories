@@ -55,6 +55,7 @@
     let previousOverflow = '';
 
     function openModal() {
+      if (window.StoryRuntime) window.StoryRuntime.lock('info-modal');
       previousOverflow = document.body.style.overflow;
       modal.hidden = false;
       document.body.style.overflow = 'hidden';
@@ -62,6 +63,7 @@
       closeButton.focus();
     }
     function closeModal() {
+      if (window.StoryRuntime) window.StoryRuntime.unlock('info-modal');
       modal.hidden = true;
       document.body.style.overflow = previousOverflow;
       infoButton.setAttribute('aria-expanded', 'false');

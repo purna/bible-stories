@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" data-parallax="true">
+  <defs>
+    <linearGradient id="sinaiSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a1440"/>
+      <stop offset="50%" stop-color="#1a0e30"/>
+      <stop offset="100%" stop-color="#0a0418"/>
+    </linearGradient>
+    <radialGradient id="sinaiLight" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FFD84D" stop-opacity=".5"/>
+      <stop offset="50%" stop-color="#FFB04A" stop-opacity=".25"/>
+      <stop offset="100%" stop-color="#FF6020" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sinaiSky)" data-depth="0"/>
+  <!-- top light burst (cloud of glory) -->
+  <ellipse cx="400" cy="100" rx="300" ry="80" fill="url(#sinaiLight)" data-depth="0.1"/>
+  <!-- lightning bolts -->
+  <g stroke="#FFD84D" stroke-width="4" fill="none" data-depth="0.2">
+    <path d="M380 140 L370 200 L390 220 L380 280 L400 300"/>
+    <path d="M440 130 L450 180 L430 200 L450 250 L430 290"/>
+    <path d="M300 150 L290 200 L310 220 L300 270"/>
+    <path d="M520 160 L510 210 L530 230 L520 280"/>
+  </g>
+  <!-- mountain -->
+  <path d="M0 480 L160 280 L300 380 L400 220 L500 380 L640 280 L800 480 L800 600 L0 600 Z" fill="#1a0e1a" stroke="#0A0812" stroke-width="3" data-depth="0.5"/>
+  <!-- peak highlight -->
+  <path d="M380 240 L400 220 L420 240 L410 280 L390 280 Z" fill="#FFD84D" opacity=".4" data-depth="0.55"/>
+  <!-- smoke at base -->
+  <g fill="#3a1838" opacity=".6" data-depth="0.6">
+    <ellipse cx="200" cy="500" rx="120" ry="40"/>
+    <ellipse cx="600" cy="510" rx="140" ry="50"/>
+    <ellipse cx="400" cy="540" rx="200" ry="50"/>
+  </g>
+  <!-- ground -->
+  <rect x="0" y="520" width="800" height="80" fill="#0a0410" data-depth="0.7"/>
+</svg>

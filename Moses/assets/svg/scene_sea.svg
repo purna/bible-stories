@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" data-parallax="true">
+  <defs>
+    <linearGradient id="seaSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1430"/>
+      <stop offset="50%" stop-color="#152850"/>
+      <stop offset="100%" stop-color="#0a0c20"/>
+    </linearGradient>
+    <linearGradient id="seaWater" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#173f70"/>
+      <stop offset="100%" stop-color="#0a1430"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#seaSky)" data-depth="0"/>
+  <!-- distant dawn -->
+  <ellipse cx="400" cy="180" rx="240" ry="40" fill="#FFD84D" opacity=".25" data-depth="0.2"/>
+  <ellipse cx="400" cy="180" rx="160" ry="22" fill="#FFD84D" opacity=".45" data-depth="0.2"/>
+  <!-- sea horizon -->
+  <rect x="0" y="200" width="800" height="200" fill="url(#seaWater)" data-depth="0.4"/>
+  <path d="M0 220 Q200 210 400 225 T800 220 L800 240 L0 240 Z" fill="#3a6088" opacity=".5" data-depth="0.4"/>
+  <path d="M0 260 Q200 250 400 265 T800 260 L800 280 L0 280 Z" fill="#5a80a8" opacity=".4" data-depth="0.4"/>
+  <!-- seabed -->
+  <path d="M0 400 L800 400 L800 600 L0 600 Z" fill="#3a2818" data-depth="0.5"/>
+  <path d="M0 420 Q200 410 400 425 T800 420 L800 600 L0 600 Z" fill="#5a4028" data-depth="0.6"/>
+  <!-- seabed path lines -->
+  <g stroke="#2a1808" stroke-width="2" opacity=".5" data-depth="0.7">
+    <path d="M150 470 Q400 450 650 470" fill="none"/>
+    <path d="M100 510 Q400 490 700 510" fill="none"/>
+    <path d="M150 560 Q400 540 650 560" fill="none"/>
+  </g>
+</svg>

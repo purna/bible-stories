@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "name": "mountain",
+  "settings": { "background": "#1a0e30", "fog": { "color": "#1a0e30", "density": 0.003 } },
+  "camera": { "distance": 120, "height": 30 },
+  "objects": [
+    { "type": "light", "lightType": "ambient", "color": "#FFFFFF", "intensity": 0.3 },
+    { "type": "light", "lightType": "point", "color": "#FFD84D", "intensity": 5, "position": { "x": 0, "y": 40, "z": 10 } },
+    { "type": "light", "lightType": "point", "color": "#B078D0", "intensity": 2, "position": { "x": -30, "y": 20, "z": 5 } },
+    { "type": "shape", "shapeType": "cone", "scale": { "x": 50, "y": 30, "z": 50 }, "color": "#1a0e1a", "material": { "type": "toon", "outline": 0.05 }, "position": { "x": 0, "y": -10, "z": -20 } },
+    { "type": "shape", "shapeType": "cone", "scale": { "x": 12, "y": 6, "z": 12 }, "color": "#FFD84D", "material": { "type": "emissive", "opacity": 0.6, "outline": 0.04 }, "position": { "x": 0, "y": 12, "z": -18 } },
+    { "type": "shape", "shapeType": "box", "scale": { "x": 12, "y": 18, "z": 2 }, "color": "#d4c098", "material": { "type": "toon", "outline": 0.04 }, "position": { "x": -16, "y": -2, "z": 6 } },
+    { "type": "shape", "shapeType": "box", "scale": { "x": 12, "y": 18, "z": 2 }, "color": "#d4c098", "material": { "type": "toon", "outline": 0.04 }, "position": { "x": 16, "y": -2, "z": 6 } },
+    { "type": "shape", "shapeType": "box", "scale": { "x": 200, "y": 1, "z": 100 }, "color": "#0a0410", "material": { "type": "toon", "outline": 0.02 }, "position": { "x": 0, "y": -22, "z": 0 } }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "basket",
+  "name": "Ch.1 \u00b7 The Child in the River",
+  "bg": "radial-gradient(circle at 50% 30%, #0e1a22, #061018 65%, #020408)",
+  "particle": "dawn",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Hebrew slaves filled Egypt. Pharaoh ordered every newborn boy thrown into the Nile."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "One woman hid her son for three months. Then she could hide him no longer.",
+      "cite": "Exodus 2:2"
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "She made a basket of bulrushes, sealed it with pitch, and laid him among the reeds by the riverbank."
+    },
+    {
+      "speaker": "miriam",
+      "fx": "type",
+      "align": "right",
+      "svg": "placeholder",
+      "text": "Stay here, little brother. I'll watch from where they cannot see me."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Pharaoh's daughter came down to bathe in the Nile. Her maids walked along the bank."
+    },
+    {
+      "speaker": "pharaohs_daughter",
+      "fx": "fade",
+      "align": "right",
+      "svg": "placeholder",
+      "text": "One of the maids spotted the basket among the flags. She sent her slave to fetch it."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "She opened it. A child was crying. She felt sorry for him \u2014 though she knew what he was.",
+      "choices": [
+        {
+          "label": "Hide him in the palace \ud83c\udfdb\ufe0f",
+          "note": "She keeps the child close. The risk is shared now."
+        },
+        {
+          "label": "Send him back to the river \ud83c\udf3e",
+          "note": "The Hebrew sister \u2014 already watching \u2014 steps forward."
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "type",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "His sister asked: \"Shall I go and find one of the Hebrew women to nurse the child for you?\"",
+      "cite": "Exodus 2:7"
+    },
+    {
+      "speaker": "pharaohs_daughter",
+      "fx": "fade",
+      "align": "right",
+      "svg": "placeholder",
+      "text": "Yes. Go."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "So his own mother took him back, nursed him, and when he was older, returned him to Pharaoh's daughter."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "She named him Moses \u2014 \"drawn from water\" \u2014 and he grew up in the house of the man who ordered Hebrew babies killed."
+    }
+  ],
+  "scene": "basket",
+  "foreground": "fg_basket",
+  "index": 0
+}

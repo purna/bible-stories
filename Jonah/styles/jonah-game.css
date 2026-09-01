@@ -15,6 +15,9 @@
 .jonah-game[hidden] { display: none; }
 .game-world, .game-world canvas { width: 100%; height: 100%; display: block; }
 .game-world canvas { filter: saturate(1.14) contrast(1.08); }
+.jonah-game .game-world { filter: brightness(calc(.78 + var(--prayer-progress, 0) * .3)) saturate(calc(.85 + var(--prayer-progress, 0) * .35)); transition: filter .15s linear; }
+.game-fallback { position:absolute; inset:12% 8%; display:grid; place-items:center; align-content:center; gap:10px; padding:30px; text-align:center; color:#17131f; background:linear-gradient(145deg,#fff3cf,#ffd66a); border:7px solid #17131f; box-shadow:12px 12px 0 #17131f; transform:rotate(-1deg); }
+.game-fallback span{font-size:70px}.game-fallback strong{font:clamp(36px,8vw,72px)/1 "Bangers",sans-serif}.game-fallback p{max-width:520px;font-weight:900}.game-fallback small{max-width:520px}
 .game-ink { position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 7px var(--game-ink), inset 0 0 80px #0009; }
 .game-ink::after { content: ""; position: absolute; inset: 0; opacity: .14; background-image: radial-gradient(#10101a 1px, transparent 1px); background-size: 6px 6px; mix-blend-mode: multiply; }
 
@@ -66,3 +69,40 @@
   .game-complete { right: 15px; bottom: 22px; font-size: 20px; }
 }
 @media (prefers-reduced-motion: reduce) { .game-complete { animation: none; } }
+
+/* =========================================================================
+   NINEVEH POLISH — repentance wave feedback
+   ========================================================================= */
+.repentance-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  padding: 14px 22px;
+  background: #2c2218;
+  color: #fff3cf;
+  border: 4px solid #17131f;
+  border-radius: 8px;
+  box-shadow: 8px 8px 0 #17131f;
+  font: 22px "Bangers", sans-serif;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 4;
+  animation: repentanceFlash 1600ms ease-out forwards;
+}
+@keyframes repentanceFlash {
+  0%   { opacity: 0; transform: scale(0.9); }
+  15%  { opacity: 1; transform: scale(1); }
+  85%  { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.05); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .repentance-banner { animation: repentanceFlashReduced 1600ms ease-out forwards; }
+}
+@keyframes repentanceFlashReduced {
+  0%   { opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { opacity: 0; }
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" data-parallax="true">
+  <defs>
+    <radialGradient id="lamp" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD84D" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#FF6020" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="#100808" data-depth="0"/>
+  <rect x="0" y="0" width="800" height="600" fill="#3a0808" opacity=".3" data-depth="0"/>
+  <!-- doorframe glow center -->
+  <circle cx="400" cy="300" r="200" fill="url(#lamp)" data-depth="0.2"/>
+  <!-- doorway arch -->
+  <path d="M260 480 L260 280 Q400 180 540 280 L540 480 Z" fill="#1f1010" stroke="#0A0812" stroke-width="5" data-depth="0.5"/>
+  <path d="M280 480 L280 290 Q400 200 520 290 L520 480 Z" fill="#0A0404" stroke="#5a1808" stroke-width="2" data-depth="0.6"/>
+  <!-- doorposts -->
+  <rect x="260" y="280" width="22" height="200" fill="#3a1808" stroke="#0A0812" stroke-width="3" data-depth="0.7"/>
+  <rect x="518" y="280" width="22" height="200" fill="#3a1808" stroke="#0A0812" stroke-width="3" data-depth="0.7"/>
+  <!-- top lintel -->
+  <rect x="260" y="270" width="280" height="22" fill="#3a1808" stroke="#0A0812" stroke-width="3" data-depth="0.7"/>
+  <!-- blood mark -->
+  <rect x="278" y="298" width="6" height="20" fill="#c84b4b" data-depth="0.8"/>
+  <rect x="516" y="298" width="6" height="20" fill="#c84b4b" data-depth="0.8"/>
+  <rect x="395" y="270" width="10" height="10" fill="#c84b4b" data-depth="0.8"/>
+  <!-- floor tiles -->
+  <rect x="0" y="480" width="800" height="120" fill="#0a0404" data-depth="0.6"/>
+  <g stroke="#5a1818" stroke-width="1" opacity=".4" data-depth="0.7">
+    <line x1="0" y1="510" x2="800" y2="510"/>
+    <line x1="0" y1="550" x2="800" y2="550"/>
+  </g>
+</svg>

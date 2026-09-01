@@ -167,6 +167,7 @@ function renderChoices(data) {
 
 /* ── Next / NextLine button state ─────────────── */
 function updateNextBtn() {
+  if (window.StoryRuntime) StoryRuntime.setMode(choicePending ? 'choice' : 'reading');
   const atEnd    = lineIdx === currentAct().lines.length - 1 && !choicePending;
   const notAtEnd = lineIdx <  currentAct().lines.length - 1 && !choicePending;
   const pal = `palette-act-${actIdx + 1}`;
@@ -189,6 +190,7 @@ async function renderLine() {
 
   const act  = currentAct();
   const data = act.lines[lineIdx];
+  audio.playLineSfx(data);
   audio.playAct(act);
 
   bgGradient.style.background = act.bg;
@@ -260,6 +262,15 @@ async function renderLine() {
       frame.appendChild(cite);
     }
 
+    if (data.interaction === 'gathering') {
+      const { overlay, deck } = buildGatheringOverlay();
+      nextBtn.classList.remove('show');
+      nextLineBtn.classList.remove('show');
+      frame.appendChild(overlay);
+      startGatheringInteraction(overlay, deck);
+      return;
+    }
+
     const wordEls = overlay.querySelectorAll('.word');
     const delays = { bounce: 60, sfx: 60, type: 120, wave: 10, fade: 18 };
     const step = delays[data.fx] || 18;
@@ -273,11 +284,205 @@ async function renderLine() {
 }
 
 /* =========================================================================
+   GATHERING VERTICAL SLICE — Chapter 4: Two by Two
+   Pair incoming animal cards. Each match fills an ark stall.
+   Keyboard (arrows + Enter), pointer click, and touch are all supported.
+   ========================================================================= */
+const ANIMAL_KINDS = [
+  { kind: 'lion',      label: 'Lion',      svg: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="58" r="22" fill="#c87a30" stroke="#0A0812" stroke-width="3"/><circle cx="32" cy="38" r="14" fill="#c87a30" stroke="#0A0812" stroke-width="3"/><circle cx="68" cy="38" r="14" fill="#c87a30" stroke="#0A0812" stroke-width="3"/><circle cx="32" cy="38" r="7" fill="#a05a18"/><circle cx="68" cy="38" r="7" fill="#a05a18"/><circle cx="42" cy="58" r="3" fill="#0A0812"/><circle cx="58" cy="58" r="3" fill="#0A0812"/><path d="M44 70 Q50 74 56 70" fill="none" stroke="#0A0812" stroke-width="2.5" stroke-linecap="round"/></svg>' },
+  { kind: 'lamb',      label: 'Lamb',      svg: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="62" rx="24" ry="18" fill="#fefae0" stroke="#0A0812" stroke-width="3"/><circle cx="50" cy="48" r="14" fill="#fefae0" stroke="#0A0812" stroke-width="3"/><circle cx="36" cy="42" r="6" fill="#fefae0" stroke="#0A0812" stroke-width="2"/><circle cx="64" cy="42" r="6" fill="#fefae0" stroke="#0A0812" stroke-width="2"/><circle cx="46" cy="50" r="2" fill="#0A0812"/><circle cx="54" cy="50" r="2" fill="#0A0812"/><path d="M44 56 Q50 60 56 56" fill="none" stroke="#0A0812" stroke-width="2.5" stroke-linecap="round"/></svg>' },
+  { kind: 'elephant',  label: 'Elephant',  svg: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="54" cy="56" rx="26" ry="20" fill="#9090a0" stroke="#0A0812" stroke-width="3"/><path d="M30 56 Q26 76 38 80 Q44 82 48 76" fill="#9090a0" stroke="#0A0812" stroke-width="3"/><circle cx="36" cy="44" r="12" fill="#9090a0" stroke="#0A0812" stroke-width="3"/><circle cx="33" cy="42" r="2" fill="#0A0812"/><path d="M22 50 Q14 52 14 60" fill="none" stroke="#9090a0" stroke-width="6" stroke-linecap="round"/><path d="M28 70 L26 82 M52 70 L50 84 M76 70 L74 84" stroke="#0A0812" stroke-width="3" stroke-linecap="round"/></svg>' },
+  { kind: 'dove',      label: 'Dove',      svg: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="48" cy="52" rx="22" ry="14" fill="#e0fbfc" stroke="#0A0812" stroke-width="3"/><circle cx="68" cy="46" r="10" fill="#e0fbfc" stroke="#0A0812" stroke-width="3"/><path d="M28 50 Q14 36 6 44 Q20 52 30 54" fill="#e0fbfc" stroke="#0A0812" stroke-width="2.5"/><circle cx="70" cy="46" r="2" fill="#0A0812"/><path d="M76 48 L82 50 L76 52" fill="#ffd84d" stroke="#0A0812" stroke-width="2"/></svg>' },
+  { kind: 'bear',      label: 'Bear',      svg: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="62" r="22" fill="#5c3a1a" stroke="#0A0812" stroke-width="3"/><circle cx="34" cy="38" r="8" fill="#5c3a1a" stroke="#0A0812" stroke-width="2.5"/><circle cx="66" cy="38" r="8" fill="#5c3a1a" stroke="#0A0812" stroke-width="2.5"/><circle cx="30" cy="38" r="4" fill="#a07040"/><circle cx="70" cy="38" r="4" fill="#a07040"/><circle cx="42" cy="58" r="3" fill="#0A0812"/><circle cx="58" cy="58" r="3" fill="#0A0812"/><ellipse cx="50" cy="70" rx="6" ry="3" fill="#0A0812"/></svg>' },
+  { kind: 'deer',      label: 'Deer',      svg: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="60" rx="22" ry="16" fill="#a07040" stroke="#0A0812" stroke-width="3"/><circle cx="34" cy="44" r="10" fill="#a07040" stroke="#0A0812" stroke-width="3"/><line x1="30" y1="34" x2="24" y2="20" stroke="#0A0812" stroke-width="3" stroke-linecap="round"/><line x1="24" y1="20" x2="18" y2="22" stroke="#0A0812" stroke-width="3" stroke-linecap="round"/><line x1="38" y1="34" x2="34" y2="22" stroke="#0A0812" stroke-width="3" stroke-linecap="round"/><line x1="34" y1="22" x2="40" y2="20" stroke="#0A0812" stroke-width="3" stroke-linecap="round"/><circle cx="31" cy="44" r="2" fill="#0A0812"/></svg>' },
+  { kind: 'rabbit',    label: 'Rabbit',    svg: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="62" rx="22" ry="18" fill="#e8e0d0" stroke="#0A0812" stroke-width="3"/><circle cx="50" cy="48" r="14" fill="#e8e0d0" stroke="#0A0812" stroke-width="3"/><ellipse cx="42" cy="28" rx="4" ry="12" fill="#e8e0d0" stroke="#0A0812" stroke-width="2.5"/><ellipse cx="58" cy="28" rx="4" ry="12" fill="#e8e0d0" stroke="#0A0812" stroke-width="2.5"/><circle cx="44" cy="50" r="2.5" fill="#0A0812"/><circle cx="56" cy="50" r="2.5" fill="#0A0812"/><circle cx="50" cy="56" r="2.5" fill="#ff9eb1" stroke="#0A0812" stroke-width="1.5"/></svg>' },
+  { kind: 'fox',       label: 'Fox',       svg: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="60" rx="22" ry="16" fill="#d4602a" stroke="#0A0812" stroke-width="3"/><path d="M30 50 L24 30 L40 44 Z" fill="#d4602a" stroke="#0A0812" stroke-width="3"/><path d="M70 50 L76 30 L60 44 Z" fill="#d4602a" stroke="#0A0812" stroke-width="3"/><circle cx="42" cy="58" r="3" fill="#0A0812"/><circle cx="58" cy="58" r="3" fill="#0A0812"/><ellipse cx="50" cy="70" rx="4" ry="3" fill="#0A0812"/></svg>' }
+];
+
+function shuffle(array) {
+  const copy = array.slice();
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function buildGatheringDeck() {
+  const kinds = shuffle(ANIMAL_KINDS).slice(0, 4);
+  const pairs = [];
+  kinds.forEach(kind => { pairs.push(kind); pairs.push({ ...kind }); });
+  return shuffle(pairs);
+}
+
+function buildGatheringOverlay() {
+  const deck = buildGatheringDeck();
+  const overlay = document.createElement('section');
+  overlay.className = 'gathering-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-labelledby', 'gatheringTitle');
+  overlay.innerHTML = `
+    <div class="gathering-panel">
+      <span class="gathering-kicker">GATHERING · TWO BY TWO</span>
+      <h3 id="gatheringTitle" class="gathering-title">Pair every animal</h3>
+      <p class="gathering-prompt">Tap two of a kind to guide them to a stall. Match all four pairs to fill the ark.</p>
+      <p class="gathering-status" data-gathering-status role="status" aria-live="polite">Pairs found: 0 / 4</p>
+      <div class="gathering-grid" data-gathering-grid role="grid" aria-label="Animal cards"></div>
+      <div class="gathering-stalls" data-gathering-stalls aria-label="Ark stalls"></div>
+      <div class="gathering-actions">
+        <button type="button" class="gathering-btn" data-gathering-finish hidden>Continue the story</button>
+        <button type="button" class="gathering-btn ghost" data-gathering-skip>Skip the gathering</button>
+      </div>
+      <p class="gathering-help">Tip: arrow keys move the focus ring, Enter / Space confirms a card. Pair any two of the same animal.</p>
+    </div>
+  `;
+  return { overlay, deck };
+}
+
+function startGatheringInteraction(container, deck) {
+  const grid = container.querySelector('[data-gathering-grid]');
+  const stallsEl = container.querySelector('[data-gathering-stalls]');
+  const status = container.querySelector('[data-gathering-status]');
+  const finishBtn = container.querySelector('[data-gathering-finish]');
+  const skipBtn = container.querySelector('[data-gathering-skip]');
+
+  const cards = deck.map((animal, idx) => ({ ...animal, idx, matched: false }));
+  const stalls = Array.from({ length: 4 }, () => ({ filled: false, kind: null, label: null }));
+  let firstPick = null;
+  let secondPick = null;
+  let focusIdx = 0;
+
+  cards.forEach((animal, idx) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'gathering-card';
+    btn.dataset.idx = String(idx);
+    btn.dataset.kind = animal.kind;
+    btn.setAttribute('role', 'gridcell');
+    btn.setAttribute('aria-label', `${animal.label} card ${idx + 1}`);
+    btn.tabIndex = idx === 0 ? 0 : -1;
+    btn.innerHTML = animal.svg;
+    btn.addEventListener('click', () => selectCard(idx));
+    btn.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectCard(idx); }
+    });
+    grid.appendChild(btn);
+  });
+
+  stalls.forEach((_, idx) => {
+    const stall = document.createElement('div');
+    stall.className = 'gathering-stall';
+    stall.dataset.stall = String(idx);
+    stall.textContent = `Stall ${idx + 1}`;
+    stallsEl.appendChild(stall);
+  });
+
+  function setStatus(text, done = false) {
+    status.textContent = text;
+    status.classList.toggle('done', done);
+  }
+
+  function updateFocus(newIdx) {
+    focusIdx = newIdx;
+    grid.querySelectorAll('.gathering-card').forEach((btn, i) => {
+      btn.tabIndex = i === newIdx ? 0 : -1;
+    });
+    const next = grid.querySelector(`.gathering-card[data-idx="${newIdx}"]`);
+    if (next) next.focus();
+  }
+
+  function moveFocus(delta) {
+    const cols = 4;
+    const next = Math.max(0, Math.min(cards.length - 1, focusIdx + delta));
+    if (focusIdx + delta === focusIdx) return;
+    updateFocus(next);
+  }
+
+  function moveRow(delta) {
+    moveFocus(delta * cols);
+  }
+
+  function selectCard(idx) {
+    const card = cards[idx];
+    if (!card || card.matched) return;
+    if (firstPick === idx || secondPick === idx) return;
+    const btn = grid.querySelector(`.gathering-card[data-idx="${idx}"]`);
+    btn.classList.add('selected');
+    if (firstPick === null) {
+      firstPick = idx;
+      return;
+    }
+    secondPick = idx;
+    const a = cards[firstPick];
+    const b = cards[secondPick];
+    if (a.kind === b.kind) {
+      a.matched = b.matched = true;
+      setTimeout(() => {
+        btn.classList.remove('selected');
+        grid.querySelector(`.gathering-card[data-idx="${firstPick}"]`).classList.remove('selected');
+        grid.querySelector(`.gathering-card[data-idx="${firstPick}"]`).classList.add('matched');
+        grid.querySelector(`.gathering-card[data-idx="${secondPick}"]`).classList.add('matched');
+        const freeStall = stalls.find(s => !s.filled);
+        if (freeStall) {
+          freeStall.filled = true;
+          freeStall.kind = a.kind;
+          freeStall.label = a.label;
+          const el2 = stallsEl.querySelector(`[data-stall="${stalls.indexOf(freeStall)}"]`);
+          el2.classList.add('filled');
+          el2.innerHTML = a.svg;
+        }
+        firstPick = secondPick = null;
+        const filled = stalls.filter(s => s.filled).length;
+        setStatus(`Pairs found: ${filled} / 4`);
+        if (filled === 4) completeGathering();
+      }, 240);
+    } else {
+      btn.classList.add('miss');
+      const firstBtn = grid.querySelector(`.gathering-card[data-idx="${firstPick}"]`);
+      firstBtn.classList.add('miss');
+      setTimeout(() => {
+        btn.classList.remove('selected', 'miss');
+        firstBtn.classList.remove('selected', 'miss');
+        firstPick = secondPick = null;
+      }, 360);
+    }
+  }
+
+  function completeGathering() {
+    setStatus('The ark is full of life. 🕊️', true);
+    finishBtn.hidden = false;
+    finishBtn.focus();
+  }
+
+  function cleanup() {
+    document.removeEventListener('keydown', keyHandler);
+    if (window.StoryRuntime) StoryRuntime.unlock('gathering');
+  }
+
+  function keyHandler(event) {
+    if (event.key === 'ArrowRight') { event.preventDefault(); moveFocus(1); }
+    else if (event.key === 'ArrowLeft') { event.preventDefault(); moveFocus(-1); }
+    else if (event.key === 'ArrowDown') { event.preventDefault(); moveRow(1); }
+    else if (event.key === 'ArrowUp') { event.preventDefault(); moveRow(-1); }
+    else if (event.key === 'Home') { event.preventDefault(); updateFocus(0); }
+    else if (event.key === 'End') { event.preventDefault(); updateFocus(cards.length - 1); }
+  }
+
+  finishBtn.addEventListener('click', () => { cleanup(); container.remove(); });
+  skipBtn.addEventListener('click', () => { cleanup(); container.remove(); });
+
+  document.addEventListener('keydown', keyHandler);
+  if (window.StoryRuntime) StoryRuntime.setMode('game', { lock: 'gathering' });
+  setStatus('Pairs found: 0 / 4');
+}
+
+/* =========================================================================
    NAVIGATION
    ========================================================================= */
 async function goLine(delta) {
   if (transitioning) return;
-  if (choicePending) { choicePending = false; choicesBox.classList.remove('show'); }
+  if (choicePending) return;
   delayNote.className = '';
   nextBtn.classList.remove('show');
   nextLineBtn.classList.remove('show');
@@ -393,13 +598,15 @@ nextBtn.addEventListener('click', () => {
 el('#chapterSelect').addEventListener('change', e => jumpToChapter(parseInt(e.target.value)));
 
 let touchStartX = 0;
-window.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+window.addEventListener('touchstart', e => { if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return; touchStartX = e.touches[0].clientX; }, { passive: true });
 window.addEventListener('touchend', e => {
+  if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
   const dx = e.changedTouches[0].clientX - touchStartX;
   if (Math.abs(dx) > 60) { if (dx < 0) goLine(1); else goLine(-1); }
 }, { passive: true });
 
 window.addEventListener('keydown', e => {
+  if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
   if (e.code === 'ArrowRight' || e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); goLine(1); }
   if (e.code === 'ArrowLeft') goLine(-1);
   if (e.code === 'ArrowDown') goNextChapter();
@@ -416,6 +623,7 @@ el('#startBtn').addEventListener('click', async () => {
 async function boot() {
   const res = await fetch('data/story.json');
   STORY = await res.json();
+  audio.preloadStory(STORY);
   // preload placeholder SVG
   await loadSvg('placeholder');
   populateChapterSelect();

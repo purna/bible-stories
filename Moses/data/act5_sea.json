@@ -1,0 +1,95 @@
+{
+  "id": "sea",
+  "name": "Ch.5 \u00b7 A Path Through the Water",
+  "bg": "radial-gradient(circle at 50% 60%, #061430, #020810 65%, #010306)",
+  "particle": "flood",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Pharaoh changed his mind. Six hundred of his best chariots pursued the Israelites to the edge of the sea."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "shake",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Trapped. Water before them. Army behind them. No way forward."
+    },
+    {
+      "speaker": "israelite_elder",
+      "fx": "shake",
+      "align": "right",
+      "svg": "placeholder",
+      "text": "Was it because there were no graves in Egypt that you brought us out here to die?!"
+    },
+    {
+      "speaker": "moses",
+      "fx": "fade",
+      "align": "left",
+      "svg": "placeholder",
+      "text": "Do not be afraid. Stand firm and you will see the deliverance the LORD will bring you today."
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Lift up your staff and stretch out your hand over the sea to divide it.",
+      "cite": "Exodus 14:16"
+    },
+    {
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/red_sea_water.mp3",
+      "fx": "shake",
+      "align": "center",
+      "svg": "placeholder",
+      "sfx": "ROARRR...",
+      "text": "All that night a strong east wind drove the sea back. The water divided. The seabed was dry ground."
+    },
+    {
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/red_sea_water.mp3",
+      "fx": "wave",
+      "align": "center",
+      "svg": "placeholder",
+      "interaction": "sea-walk",
+      "text": "Moses stretched out his hand. The people walked through on dry ground, with walls of water on their right and on their left."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "The Egyptians followed \u2014 every horse and chariot, every driver \u2014 into the middle of the sea."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "bounce",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "At daybreak, the LORD looked down from the pillar of fire and cloud and threw the Egyptian army into confusion."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "shake",
+      "align": "center",
+      "svg": "placeholder",
+      "sfx": "CRASH!",
+      "text": "Moses stretched out his hand over the sea. The waters rushed back and covered the chariots and horsemen."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "placeholder",
+      "text": "Not one of them survived. Israel saw the great power the LORD displayed against the Egyptians, and the people feared the LORD."
+    }
+  ],
+  "scene": "sea",
+  "foreground": "fg_sea",
+  "index": 4
+}

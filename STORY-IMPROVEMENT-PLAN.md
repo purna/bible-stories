@@ -259,6 +259,12 @@ No story is release-ready until it completes without console errors and has an a
 
 ## Recommended Delivery Order
 
+### Completion status — 1 September 2026
+
+- **1. Shared blockers and test harness — complete.** Six explicit runtime modes, modal/choice/game input isolation, friendly loading recovery, local/offline asset verification, desktop/mobile smoke checks, per-chapter screenshots, console checks, and WebGL/fallback boot coverage are in place.
+- **2. Jonah completion fix and Daniel vision repair — complete.** Jonah counts required moments only, suspends hidden rendering, uses distinct inked story props, reports narrative feedback, progressively changes the prayer panel, offers an illustrated failure fallback, and boots/returns from all four panels. Daniel provides accessible fragments, meaningful progress, timer/clarity announcements, plausible decoys, deterministic distortion, an ordered interpretation assembly step, and delivery consequences.
+- **3. Elijah Hearing vertical slice — complete.** The Horeb chapter now separates wind, earthquake, fire, threat, and despair into responsive comic layers; provides a pointer, keyboard, and slider-accessible two-axis tuner; carries faith/despair into starting difficulty without blocking completion; fades the layered SFX into near-silence; and restores story navigation after completion or skip.
+
 1. **Shared blockers and test harness.**
 2. **Jonah completion fix and Daniel vision repair.**
 3. **Elijah Hearing vertical slice.**

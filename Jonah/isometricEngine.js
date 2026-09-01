@@ -75,8 +75,8 @@ const IsometricEngine = (function () {
     }
 
     function setupInput() {
-        window.addEventListener('keydown', (e) => { keysDown[e.key.toLowerCase()] = true; });
-        window.addEventListener('keyup', (e) => { keysDown[e.key.toLowerCase()] = false; });
+        window.addEventListener('keydown', (e) => { if (!inputEnabled || (window.StoryRuntime && StoryRuntime.isInteractiveTarget(e.target))) return; keysDown[e.key.toLowerCase()] = true; });
+        window.addEventListener('keyup', (e) => { if (!inputEnabled) return; keysDown[e.key.toLowerCase()] = false; });
     }
 
     async function loadScene(sceneId) {
@@ -128,9 +128,13 @@ const IsometricEngine = (function () {
             while (occlusionContainer.children.length) {
                 occlusionContainer.remove(occlusionContainer.children[0]);
             }
+            currentScene = null;
+            window.dispatchEvent(new CustomEvent('isometric:error', { detail: { sceneId, message: err.message } }));
+            return false;
         } finally {
             if (loaderEl && !loaderEl.innerText.includes('Error')) loaderEl.classList.add('hidden');
         }
+        return true;
     }
 
     function buildWorldFromMap(mapData) {
@@ -192,6 +196,14 @@ const IsometricEngine = (function () {
             }
             groundContainer.add(mesh);
         }
+
+        // Register the city tile meshes with the Act3 repentance wave so the
+        // visible sermon-square region can shift toward sackcloth-grey when
+        // each beat resolves.
+        if (typeof window.Act3Beats !== 'undefined' && currentActId === 'act3') {
+            const blocks = Array.from(groundContainer.children).filter(child => child.isMesh);
+            window.Act3Beats.setCityBlocks(blocks);
+        }
     }
 
     function spawnPlayer() {
@@ -233,9 +245,13 @@ const IsometricEngine = (function () {
 
     function spawnHotspots() {
         (currentScene.hotspots || []).forEach(h => {
-            const geo = new THREE.SphereGeometry(0.25, 12, 12);
-            const mat = new THREE.MeshBasicMaterial({ color: 0x5dade2, transparent: true, opacity: 0.8 });
+            const prop = hotspotAppearance(h.id);
+            const geo = prop.geometry;
+            const mat = new THREE.MeshToonMaterial({ color: prop.color, emissive: prop.color, emissiveIntensity: 0.16 });
             const mesh = new THREE.Mesh(geo, mat);
+            const outline = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: 0x17131f, side: THREE.BackSide }));
+            outline.scale.multiplyScalar(1.14);
+            mesh.add(outline);
             mesh.position.set(h.position.x, h.position.y + 0.5, h.position.z);
             mesh.userData.hotspot = h;
             mesh.userData.triggered = false;
@@ -244,6 +260,22 @@ const IsometricEngine = (function () {
             sceneObj.add(mesh);
             hotspotMeshes.push(mesh);
         });
+    }
+
+    function hotspotAppearance(id) {
+        const appearances = {
+            cargo_pile: { geometry: new THREE.BoxGeometry(.65, .55, .65), color: 0x9a6337 },
+            lots_barrel: { geometry: new THREE.CylinderGeometry(.32, .38, .65, 10), color: 0xd99a42 },
+            prayer_alcove: { geometry: new THREE.OctahedronGeometry(.38), color: 0x7be0d2 },
+            city_gates: { geometry: new THREE.BoxGeometry(.75, .9, .28), color: 0xd48842 },
+            market_row: { geometry: new THREE.CylinderGeometry(.4, .42, .55, 12), color: 0xc66a2a },
+            noble_house: { geometry: new THREE.ConeGeometry(.45, .95, 4), color: 0xa95626 },
+            sermon_square: { geometry: new THREE.ConeGeometry(.42, .85, 8), color: 0xf1c44e },
+            kings_palace: { geometry: new THREE.BoxGeometry(.85, 1.05, .85), color: 0x8e4d18 },
+            the_plant: { geometry: new THREE.SphereGeometry(.42, 10, 8), color: 0x63b45d },
+            gods_question: { geometry: new THREE.TorusGeometry(.32, .11, 8, 16), color: 0xffd34e }
+        };
+        return appearances[id] || { geometry: new THREE.OctahedronGeometry(.32), color: 0x5dade2 };
     }
 
     function createMaterialFromDefinition(matDef) {
@@ -343,7 +375,7 @@ const IsometricEngine = (function () {
     }
 
     function updateRenderOrder() {
-        if (!playerMesh) return;
+        if (!playerMesh || !inputEnabled) return;
 
         // The player's "depth" is determined by its grid row.
         // Higher row number means closer to the camera.
@@ -411,6 +443,7 @@ const IsometricEngine = (function () {
         mesh.visible = false;
         triggeredHotspots.add(hotspot.id);
         invokeBeat(hotspot, args);
+        window.dispatchEvent(new CustomEvent('isometric:moment', { detail: { id: hotspot.id, label: hotspot.label || 'Story moment' } }));
         emitProgress();
         checkActCompletion();
     }
@@ -426,7 +459,7 @@ const IsometricEngine = (function () {
         if (!currentScene || !currentScene.hotspots) return;
 
         const totalRequired = currentScene.hotspots.filter(h => h.triggerOnce).length;
-        const triggeredCount = currentScene.hotspots.filter(h => triggeredHotspots.has(h.id)).length;
+        const triggeredCount = currentScene.hotspots.filter(h => h.triggerOnce && triggeredHotspots.has(h.id)).length;
 
         if (triggeredCount >= totalRequired && totalRequired > 0) {
             window.dispatchEvent(new CustomEvent('isometric:actComplete', {
@@ -466,6 +499,8 @@ const IsometricEngine = (function () {
         const now = performance.now();
         const delta = (now - lastTime) / 1000;
         lastTime = now;
+
+        if (!inputEnabled) return;
 
         updateMovement(delta);
         hotspotMeshes.forEach((mesh, index) => {

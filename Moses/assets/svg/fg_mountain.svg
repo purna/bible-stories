@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Stone tablets front and centre -->
+  <g transform="translate(260,160)">
+    <!-- tablet 1 -->
+    <g>
+      <rect x="0" y="0" width="120" height="180" rx="8" fill="#d4c098" stroke="#0A0812" stroke-width="4"/>
+      <!-- inscription lines -->
+      <g stroke="#5a3818" stroke-width="2">
+        <line x1="20" y1="30"  x2="100" y2="30"/>
+        <line x1="20" y1="50"  x2="100" y2="50"/>
+        <line x1="20" y1="70"  x2="100" y2="70"/>
+        <line x1="20" y1="90"  x2="90"  y2="90"/>
+        <line x1="20" y1="110" x2="100" y2="110"/>
+        <line x1="20" y1="130" x2="80"  y2="130"/>
+      </g>
+      <!-- crack at bottom -->
+      <path d="M40 150 L45 165 L42 175" stroke="#0A0812" stroke-width="2" fill="none"/>
+    </g>
+    <!-- tablet 2 -->
+    <g transform="translate(160,0)">
+      <rect x="0" y="0" width="120" height="180" rx="8" fill="#d4c098" stroke="#0A0812" stroke-width="4"/>
+      <g stroke="#5a3818" stroke-width="2">
+        <line x1="20" y1="30"  x2="100" y2="30"/>
+        <line x1="20" y1="50"  x2="100" y2="50"/>
+        <line x1="20" y1="70"  x2="100" y2="70"/>
+        <line x1="20" y1="90"  x2="90"  y2="90"/>
+        <line x1="20" y1="110" x2="100" y2="110"/>
+      </g>
+    </g>
+    <!-- glow -->
+    <ellipse cx="140" cy="100" rx="180" ry="100" fill="#FFD84D" opacity=".15"/>
+  </g>
+  <!-- lightning bolts around -->
+  <g stroke="#FFD84D" stroke-width="3" fill="none">
+    <path d="M120 80 L130 130 L115 140 L130 180"/>
+    <path d="M680 100 L670 150 L685 160 L670 200"/>
+  </g>
+</svg>
