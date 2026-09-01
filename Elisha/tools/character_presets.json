@@ -84,14 +84,14 @@
       "name": "Shunammite Woman",
       "beardStyle": "none",
       "hairStyle": "braids",
-      "hatStyle": "skullcap",
+      "hatStyle": "none",
       "colorOuter": "#53613a",
       "clothingType": "work_tunic",
       "materialStyle": "basket_weave",
       "colorInner": "#c2a36b",
       "colorCloak": "#354229",
       "colorAccent": "#b99045",
-      "hatSize": 0.9,
+      "hatSize": 1,
       "hairSize": 1.2
     },
     "gehazi": {

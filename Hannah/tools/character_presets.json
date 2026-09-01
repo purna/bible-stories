@@ -111,7 +111,7 @@
       "name": "Temple Woman",
       "beardStyle": "none",
       "hairStyle": "flowing",
-      "hatStyle": "none",
+      "hatStyle": "headscarf",
       "noseShape": "aquiline",
       "eyebrowStyle": "thick",
       "clothingType": "traveller_cloak",
@@ -120,7 +120,7 @@
       "colorOuter": "#875b34",
       "colorCloak": "#533920",
       "colorAccent": "#d0a34c",
-      "hatSize": 1,
+      "hatSize": 1.1,
       "hairSize": 1
     }
   }

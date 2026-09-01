@@ -81,3 +81,7 @@ write(path.join(template,'__docs/template-rollout-guide.md'),`# Layered Comic Te
 const templateSpec=S('Template','Replace with the story’s primary scripture','What question will this story invite the player to live through?',['guide','traveller','witness'],['stone','wood_oak','fabric_weave','water_still','grass'],['Opening|Introduce one clear objective.','Decision|Use one simple interaction.','Resolution|Resolve the canonical beat and reflect.']);
 makePresetFiles('__Template',templateSpec);write(path.join(template,'tools/character_head_generator.html'),charHtml(templateSpec));write(path.join(template,'tools/texture-forge.html'),textureHtml(templateSpec));
 const obsoleteTemplateDoc=path.join(template,'__docs/moses-design-source-of-truth.md');if(fs.existsSync(obsoleteTemplateDoc))fs.rmSync(obsoleteTemplateDoc);
+
+// Story catalog regeneration is followed by the richer visual preset pass so
+// it cannot silently collapse character hair, headwear, wardrobe, or texture variation.
+await import('./update-character-variation.mjs');

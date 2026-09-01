@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">
+      <defs>
+        <pattern id="tex-plain" patternUnits="userSpaceOnUse" width="8" height="8"><rect width="8" height="8" fill="transparent"/></pattern>
+        <pattern id="tex-woven_linen" patternUnits="userSpaceOnUse" width="8" height="8"><path d="M0 0H8M0 2H8M0 4H8M0 6H8M0 0V8M2 0V8M4 0V8M6 0V8" stroke="#000" stroke-width=".45" opacity=".13"/></pattern>
+        <pattern id="tex-fine_linen" patternUnits="userSpaceOnUse" width="5" height="5"><path d="M0 1H5M1 0V5" stroke="#fff" stroke-width=".35" opacity=".14"/><path d="M0 4H5M4 0V5" stroke="#000" stroke-width=".3" opacity=".08"/></pattern>
+        <pattern id="tex-herringbone" patternUnits="userSpaceOnUse" width="12" height="8"><path d="M0 0L6 4L12 0M0 8L6 4L12 8" fill="none" stroke="#000" stroke-width="1" opacity=".16"/></pattern>
+        <pattern id="tex-basket_weave" patternUnits="userSpaceOnUse" width="12" height="12"><path d="M0 2H12M0 8H12M2 0V12M8 0V12" stroke="#000" stroke-width="2" opacity=".13"/></pattern>
+        <pattern id="tex-dotted" patternUnits="userSpaceOnUse" width="10" height="10"><circle cx="2.5" cy="2.5" r="1.2" fill="#fff" opacity=".2"/><circle cx="7.5" cy="7.5" r="1.2" fill="#000" opacity=".12"/></pattern>
+        <pattern id="tex-tartan" patternUnits="userSpaceOnUse" width="14" height="14"><path d="M0 3H14M0 10H14M3 0V14M10 0V14" stroke="#000" stroke-width="2" opacity=".14"/><path d="M0 6H14M6 0V14" stroke="#fff" stroke-width="1" opacity=".12"/></pattern>
+        <pattern id="tex-scales" patternUnits="userSpaceOnUse" width="12" height="8"><path d="M0 0Q3 6 6 0Q9 6 12 0M-6 8Q-3 2 0 8Q3 2 6 8Q9 2 12 8" fill="none" stroke="#000" stroke-width="1" opacity=".2"/></pattern>
+        <!-- Selected material is embedded directly for reliable browser/export rendering. -->
+        <pattern id="cloth-texture" patternUnits="userSpaceOnUse" width="12" height="8">
+          <path d="M0 0L6 4L12 0M0 8L6 4L12 8" fill="none" stroke="#fff" stroke-width="1.8" opacity=".38"/><path d="M0 1L6 5L12 1M0 7L6 3L12 7" fill="none" stroke="#1a100a" stroke-width=".8" opacity=".38"/>
+        </pattern>
+        <!-- A hammered or burnished metal texture. -->
+        <pattern id="metal-texture" patternUnits="userSpaceOnUse" width="20" height="20">
+           <rect width="20" height="20" fill="transparent" />
+           <circle cx="5" cy="5" r="1.5" fill="#fff" opacity="0.08" />
+           <circle cx="15" cy="15" r="2" fill="#fff" opacity="0.05" />
+           <circle cx="10" cy="8" r="1" fill="#000" opacity="0.05" />
+           <circle cx="3" cy="18" r="1.2" fill="#000" opacity="0.06" />
+        </pattern>
+      </defs>
+    
+        <!-- Neck -->
+        <path d="M82,145 L82,185 C90,195 110,195 118,185 L118,145 Z" fill="#9d6748"/>
+        <path d="M82,145 L82,165 C90,175 110,175 118,165 L118,145 Z" fill="#7f492a" opacity="0.5"/>
+        <!-- Shoulders / Base Torso -->
+        <path d="M30,240 C35,190 60,170 82,170 L118,170 C140,170 165,190 170,240 Z" fill="#9d6748"/>
+    <path d="M18,240Q26,180 57,164L100,187L143,164Q174,180 182,240Z" fill="#4c2d36"/><path d="M48,240L57,166L100,190L143,166L152,240Z" fill="#77414b"/><path d="M77,171L100,198L123,171L116,240H84Z" fill="#d0aa78"/><path d="M25,208Q100,188 175,208" fill="none" stroke="#c89749" stroke-width="8"/><path d="M18,240Q26,180 57,164L100,187L143,164Q174,180 182,240Z" fill="url(#cloth-texture)"/><g transform="translate(48,95) scale(1) translate(-48,-95)"><path d="M48,95 C42,95 34,95 34,105 C34,115 42,122 48,118 C54,122 62,115 62,105 C62,95 54,95 48,95 Z" fill="#9d6748"/></g><g transform="translate(152,95) scale(1) translate(-152,-95)"><path d="M152,95 C158,95 166,95 166,105 C166,115 158,122 152,118 C146,122 138,115 138,105 C138,95 146,95 152,95 Z" fill="#9d6748"/></g><g transform="translate(100,30) scale(1.1) translate(-100,-30)"><path d="M100,22C61,20 39,49 42,91L35,181Q34,207 57,215L72,211Q63,166 65,112Q66,65 100,48Q134,65 135,112Q137,166 128,211L143,215Q166,207 165,181L158,91Q161,20 100,22Z" fill="#2a1d16"/></g><path d="M100,25 C138,25 156,50 156,90 C156,120 154,148 146,166 C140,178 122,182 100,182 C78,182 60,178 54,166 C46,148 44,120 44,90 C44,50 62,25 100,25 Z" fill="#9d6748"/>
+                <path d="M76,162 L124,162 C124,172 122,180 116,184 L84,184 C78,180 76,172 76,162 Z" fill="#9d6748"/>
+                <path d="M80,178 L120,178 L120,184 L80,184 Z" fill="#814b2c" opacity="0.3"/>
+            <path d="M82,142 C90,146 110,146 118,142 C110,150 90,150 82,142 Z" fill="#985e50"/><g transform="translate(100,110) scale(1) translate(-100,-110)"><path d="M97,94 C95,104 91,114 89,119 C88,123 91,126 96,127 L104,127 C109,126 112,123 111,119 C109,114 105,104 103,94 Z" fill="#814b2c" opacity="0.32"/>
+        <ellipse cx="94.5" cy="122" rx="2" ry="1.4" fill="#814b2c" opacity="0.85"/>
+        <ellipse cx="105.5" cy="122" rx="2" ry="1.4" fill="#814b2c" opacity="0.85"/>
+    </g><path d="M64,78 C70,68 84,67 90,76 C84,71 70,72 64,78 Z" fill="#2a1d16"/><g transform="translate(200,0) scale(-1,1)"><path d="M64,78 C70,68 84,67 90,76 C84,71 70,72 64,78 Z" fill="#2a1d16"/></g><path d="M64,92 C69,85 85,85 90,92 C85,99 69,99 64,92 Z" fill="#fdfaf1"/><circle cx="77" cy="93" r="5" fill="#3d2d24"/><circle cx="77" cy="93" r="2" fill="#1a1410"/><circle cx="78.4" cy="91.6" r="1.1" fill="#ffffff"/><g transform="translate(200,0) scale(-1,1)"><path d="M64,92 C69,85 85,85 90,92 C85,99 69,99 64,92 Z" fill="#fdfaf1"/><circle cx="77" cy="93" r="5" fill="#3d2d24"/><circle cx="77" cy="93" r="2" fill="#1a1410"/><circle cx="78.4" cy="91.6" r="1.1" fill="#ffffff"/></g><g transform="translate(100,30) scale(1.1) translate(-100,-30)"><path d="M100,21Q139,21 155,60Q145,51 137,54Q139,61 134,67Q127,44 102,39Q82,45 68,66Q62,62 64,53Q54,58 47,75Q46,40 71,27Q84,20 100,21Z" fill="#2a1d16"/><path d="M54,70q10 10 19 0M127,70q10 10 19 0" fill="none" stroke="#3c2f28" stroke-width="4"/></g><g transform="translate(100,30) scale(1.1) translate(-100,-30)"><path d="M52,61Q52,18 100,12Q148,18 148,61Q134,44 100,39Q66,44 52,61Z" fill="#77414b"/><path d="M55,39Q100,20 145,39M58,52Q100,34 142,52" fill="none" stroke="#d0aa78" stroke-width="7"/><path d="M135,47Q155,91 146,145L129,139Q139,88 125,55Z" fill="#77414b"/><rect x="50" y="10" width="106" height="138" fill="url(#cloth-texture)" opacity=".5"/></g></svg>

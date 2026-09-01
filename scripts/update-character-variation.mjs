@@ -24,7 +24,7 @@ const textures=['woven_linen','fine_linen','herringbone','basket_weave','dotted'
 function roleVariation(key,index){
  const isWoman=women.test(key),isRoyal=royal.test(key),isProphet=prophet.test(key),isPriest=priest.test(key),isSoldier=soldier.test(key),isLabour=labour.test(key),isYoung=young.test(key);
  let hairStyle=(isWoman?femaleHair:maleHair)[index%(isWoman?femaleHair.length:maleHair.length)];
- let hatStyle=commonHats[index%commonHats.length];
+ let hatStyle=isWoman?['veil','headscarf','wrapped_scarf','none'][index%4]:commonHats[index%commonHats.length];
  let clothingType=['tunic','traveller_cloak','desert_mantle','work_tunic'][index%4];
  let materialStyle=textures[index%textures.length];
  if(isYoung){hairStyle=isWoman?'side_braid':'curly';hatStyle='none';clothingType='tunic';materialStyle='fine_linen'}
@@ -40,7 +40,7 @@ function roleVariation(key,index){
 }
 function writeJs(dir,data){const baseName=data.story.toUpperCase().replace(/[^A-Z0-9]+/g,'_')+'_BASE';const fn=data.story.toLowerCase().replace(/[^a-z0-9]+/g,'')+'Preset';const entries=Object.entries(data.presets).map(([key,p])=>`  ${JSON.stringify(key)}: ${fn}(${JSON.stringify(p.name)}, ${JSON.stringify(Object.fromEntries(Object.entries(p).filter(([k])=>k!=='name')))}),`).join('\n');const js=`// Canonical character inventory for ${data.story}. Loaded directly by the browser generator.\nconst CHARACTER_PRESETS_META = ${JSON.stringify({story:data.story,defaultPreset:data.defaultPreset,groupLabel:`${data.story} characters`},null,2)};\nconst ${baseName} = ${JSON.stringify(data.base,null,2)};\nconst ${fn} = (name, overrides = {}) => ({ ...${baseName}, name, ...overrides });\nconst CHARACTER_PRESETS_DATA = {\n${entries}\n};\n`;fs.writeFileSync(path.join(dir,'character_presets.js'),js)}
 
-for(const folder of stories){
+for(const folder of [...stories,'__Template']){
  const dir=path.join(root,folder,'tools'),jsonPath=path.join(dir,'character_presets.json');
  const data=JSON.parse(fs.readFileSync(jsonPath,'utf8'));data.base.materialStyle=data.base.materialStyle||'woven_linen';
  Object.entries(data.presets).forEach(([key,preset],index)=>Object.assign(preset,roleVariation(key,index)));
@@ -48,4 +48,4 @@ for(const folder of stories){
  const html=canonicalHtml.replace(/<title>[^<]*<\/title>/,`<title>Character Head Generator — ${data.story}</title>`).replace(/<div class="brand">[^<]* Head Forge/,`<div class="brand">${data.story} Head Forge`);
  fs.writeFileSync(path.join(dir,'character_head_generator.html'),html);
 }
-console.log(`Updated ${stories.length} character generators and their JS/JSON presets with expanded visual variation.`);
+console.log(`Updated ${stories.length} story character generators plus __Template, including their JS/JSON presets.`);

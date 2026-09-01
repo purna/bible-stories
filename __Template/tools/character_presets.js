@@ -1,10 +1,10 @@
-// Canonical character inventory for Template. Generated from __docs/__template-design-source-of-truth.md.
+// Canonical character inventory for Template. Loaded directly by the browser generator.
 const CHARACTER_PRESETS_META = {
   "story": "Template",
   "defaultPreset": "guide",
   "groupLabel": "Template characters"
 };
-const STORY_CHARACTER_BASE = {
+const TEMPLATE_BASE = {
   "noseScale": 1,
   "noseShape": "straight",
   "eyeShape": "almond",
@@ -33,11 +33,12 @@ const STORY_CHARACTER_BASE = {
   "colorSkin": "#b9825d",
   "colorHair": "#2a1d16",
   "colorEye": "#3d2d24",
-  "colorLip": "#985e50"
+  "colorLip": "#985e50",
+  "materialStyle": "woven_linen"
 };
-const storyPreset=(name,overrides={})=>({...STORY_CHARACTER_BASE,name,...overrides});
+const templatePreset = (name, overrides = {}) => ({ ...TEMPLATE_BASE, name, ...overrides });
 const CHARACTER_PRESETS_DATA = {
-  "guide": storyPreset("Guide", {}),
-  "traveller": storyPreset("Traveller", {"noseShape":"aquiline","eyebrowStyle":"thick"}),
-  "witness": storyPreset("Witness", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748"}),
+  "guide": templatePreset("Guide", {"hairStyle":"short","hatStyle":"none","clothingType":"tunic","materialStyle":"woven_linen","colorInner":"#d6b477","colorOuter":"#6f4b32","colorCloak":"#3f3027","colorAccent":"#c99b46","hatSize":1,"hairSize":0.9}),
+  "traveller": templatePreset("Traveller", {"noseShape":"aquiline","eyebrowStyle":"thick","hairStyle":"wavy","hatStyle":"none","clothingType":"work_tunic","materialStyle":"basket_weave","colorInner":"#b78d58","colorOuter":"#365f67","colorCloak":"#263f47","colorAccent":"#d3ad53","hatSize":1,"hairSize":1}),
+  "witness": templatePreset("Witness", {"faceShape":"square","chinShape":"square","colorSkin":"#9d6748","hairStyle":"curly","hatStyle":"wrapped_scarf","clothingType":"desert_mantle","materialStyle":"herringbone","colorInner":"#d0aa78","colorOuter":"#77414b","colorCloak":"#4c2d36","colorAccent":"#c89749","hatSize":1.1,"hairSize":1.1}),
 };
