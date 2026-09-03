@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Tower of Babel — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:14px;flex:none;display:flex;flex-direction:column;align-items:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.5rem;margin:0 0 4px}
+    .sub{text-align:center;font-size:.85rem;opacity:.8;margin-bottom:6px}
+    .hud{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:6px;font-size:.9rem;font-weight:800}
+    .chip{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:4px 10px}
+    .chip.warn{background:#ffe5b4;border-color:#a85b00}
+    .chip.bad{background:#ffd0d0;border-color:var(--bad)}
+    .scene{flex:1;display:grid;grid-template-columns:170px 1fr;gap:14px;width:100%;max-width:920px;align-items:stretch}
+    .tray{background:#fff;border:3px solid #c9c3b7;border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:10px;align-items:center}
+    .tray .label{font-size:.85rem;font-weight:800}
+    .brick{width:120px;height:60px;border-radius:10px;background:var(--accent);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:grab;box-shadow:0 3px 0 #9d7613;transition:transform .14s,filter .14s,opacity .14s}
+    .brick .icon{width:104px;height:50px;display:block}
+    .brick.claimed,.brick.sortable-chosen{opacity:.85;transform:scale(1.04);filter:brightness(1.08);cursor:grabbing}
+    .brick.gone{opacity:.22;pointer-events:none;box-shadow:none}
+    .brick::after{content:attr(data-name);position:absolute;bottom:-18px;left:0;right:0;text-align:center;font-size:.7rem;font-weight:800;color:var(--ink);opacity:.7}
+    .field{position:relative;border:3px dashed rgba(58,36,16,.5);border-radius:14px;background:linear-gradient(180deg,#cfe7ff 0%,#f4d391 100%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:14px;overflow:hidden}
+    .field .ground{position:absolute;left:0;right:0;bottom:0;height:50px;background:#5a8c2f;border-top:3px solid var(--ink);z-index:0}
+    .field .cloud{position:absolute;top:8px;width:60px;height:24px;background:#fff;border:2px solid var(--ink);border-radius:20px;opacity:.85}
+    .field .cloud::after{content:"";position:absolute;left:12px;top:-10px;width:24px;height:24px;background:#fff;border:2px solid var(--ink);border-radius:50%}
+    .tower{position:relative;display:flex;flex-direction:column-reverse;align-items:center;z-index:2}
+    .tier{display:flex;flex-direction:row;box-shadow:0 3px 0 rgba(58,36,16,.22)}
+    .slot{height:50px;box-sizing:border-box;border:2px solid rgba(58,36,16,.55);border-right-width:1px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.2);transition:background .15s,border-color .15s;position:relative}
+    .slot:first-child{border-left-width:2px}
+    .slot:last-child{border-right-width:2px}
+    .tier:first-child .slot{border-bottom-width:3px}
+    .tier:last-child .slot{border-top-width:3px}
+    .slot.target{background:rgba(255,216,77,.35);border-color:#9d7613}
+    .slot.filled{background:transparent;border-color:var(--ink)}
+    .slot.filled .label{display:none}
+    .slot.wrong{outline:4px solid var(--bad);outline-offset:-4px;animation:shake .35s}
+    @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+    .slot .label{font-size:.65rem;font-weight:800;color:var(--ink);opacity:.5;padding:0 2px;text-align:center}
+    .placed-block{position:absolute;inset:2px;display:flex;align-items:center;justify-content:center;animation:dropIn .35s ease-out}
+    .placed-block svg{width:96%;height:90%;display:block}
+    @keyframes dropIn{0%{transform:translateY(-30px) scale(.9);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+    .tower::after{content:"";position:absolute;left:50%;top:-12px;width:40px;height:24px;background:#a85b00;border:2px solid var(--ink);transform:translateX(-50%) rotate(0);clip-path:polygon(0 100%,100% 100%,50% 0);z-index:0}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Tower of Babel</h1>
+    <div class="sub">Drag the bricks onto the right slot. Build the tower before time runs out.</div>
+    <div class="hud">
+      <div class="chip" id="levelChip">Level 1 / 5</div>
+      <div class="chip" id="placedChip">Placed: 0 / 4</div>
+      <div class="chip warn" id="errChip">Falls: 0 / 3</div>
+    </div>
+    <div class="scene">
+      <div class="tray">
+        <div class="label">BRICKS</div>
+        <div id="tray"></div>
+      </div>
+      <div class="field" id="field">
+        <div class="cloud" style="left:8%"></div>
+        <div class="cloud" style="left:38%"></div>
+        <div class="cloud" style="left:70%"></div>
+        <div class="tower" id="tower"></div>
+        <div class="ground"></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 75, timer: true };
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+
+    // 5 levels, 4 bricks per level. Each brick is shape-only; all bricks fit in any slot, but only one shape is the "right" one for the indicated slot.
+    // Use distinct shapes so the player must learn each one per level.
+    const LEVELS = [
+      {
+        name:'Square bricks',
+        bricks:[
+          { id:'sq1', name:'Square', shape:'sq' },
+          { id:'sq2', name:'Long', shape:'long' },
+          { id:'sq3', name:'Tall', shape:'tall' },
+          { id:'sq4', name:'Cobble', shape:'cobble' },
+        ],
+        order:['sq1','sq3','sq2','sq4'],
+      },
+      {
+        name:'Stones',
+        bricks:[
+          { id:'st1', name:'Flat stone', shape:'flat' },
+          { id:'st2', name:'Tall stone', shape:'tallstone' },
+          { id:'st3', name:'Round stone', shape:'round' },
+          { id:'st4', name:'Step stone', shape:'step' },
+        ],
+        order:['st2','st1','st4','st3'],
+      },
+      {
+        name:'Arches',
+        bricks:[
+          { id:'ar1', name:'Arch', shape:'arch' },
+          { id:'ar2', name:'Beam', shape:'beam' },
+          { id:'ar3', name:'Column', shape:'column' },
+          { id:'ar4', name:'Cap', shape:'cap' },
+        ],
+        order:['ar3','ar2','ar1','ar4'],
+      },
+      {
+        name:'Crown tower',
+        bricks:[
+          { id:'ct1', name:'Plinth', shape:'plinth' },
+          { id:'ct2', name:'Spire', shape:'spire' },
+          { id:'ct3', name:'Ring', shape:'ring' },
+          { id:'ct4', name:'Wedge', shape:'wedge' },
+        ],
+        order:['ct1','ct3','ct4','ct2'],
+      },
+      {
+        name:'Sky reach',
+        bricks:[
+          { id:'sk1', name:'Cylinder', shape:'cyl' },
+          { id:'sk2', name:'Pyramid', shape:'pyr' },
+          { id:'sk3', name:'Cube', shape:'cube' },
+          { id:'sk4', name:'Slab', shape:'slab' },
+        ],
+        order:['sk3','sk1','sk2','sk4'],
+      },
+    ];
+
+    const SHAPE_SVG = {
+      sq:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="108" height="48" rx="6" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><path d="M14 18h92M14 30h92M14 42h92" stroke="#3a2410" stroke-width="1.2" opacity=".5"/></svg>',
+      long:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="14" width="116" height="32" rx="6" fill="#caa674" stroke="#3a2410" stroke-width="3"/><path d="M10 26h100M10 38h100" stroke="#3a2410" stroke-width="1.2" opacity=".5"/></svg>',
+      tall:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><rect x="38" y="4" width="44" height="52" rx="4" fill="#bca98a" stroke="#3a2410" stroke-width="3"/><path d="M46 14h28M46 26h28M46 38h28M46 50h28" stroke="#3a2410" stroke-width="1.2" opacity=".5"/></svg>',
+      cobble:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><path d="M6 30 q 6 -16 24 -16 q 10 0 16 8 q 8 -4 18 -2 q 18 2 22 14 q 6 8 4 18 q -10 8 -28 6 q -10 4 -22 0 q -12 4 -22 -2 q -16 -4 -12 -26 z" fill="#a88762" stroke="#3a2410" stroke-width="3"/></svg>',
+      flat:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="20" width="100" height="22" rx="6" fill="#8a7d6a" stroke="#3a2410" stroke-width="3"/><path d="M20 26h80M20 36h80" stroke="#3a2410" stroke-width="1.2" opacity=".5"/></svg>',
+      tallstone:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="4" width="40" height="52" rx="6" fill="#9b8b6e" stroke="#3a2410" stroke-width="3"/><path d="M48 12h24M48 22h24M48 32h24M48 42h24" stroke="#3a2410" stroke-width="1.2" opacity=".5"/></svg>',
+      round:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="30" rx="48" ry="22" fill="#bca98a" stroke="#3a2410" stroke-width="3"/><path d="M22 30 q 38 -14 76 0" stroke="#3a2410" stroke-width="1.2" fill="none" opacity=".5"/></svg>',
+      step:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><path d="M6 48 h 28 v -10 h 24 v -10 h 24 v -10 h 32 v 30 z" fill="#caa674" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/></svg>',
+      arch:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><path d="M10 50 V 28 a 26 26 0 0 1 50 0 V 50 Z" fill="#e3d4b4" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><rect x="6" y="46" width="60" height="8" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><rect x="68" y="20" width="46" height="32" rx="4" fill="#bca98a" stroke="#3a2410" stroke-width="3"/></svg>',
+      beam:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="14" width="108" height="32" rx="4" fill="#a8861d" stroke="#3a2410" stroke-width="3"/><path d="M14 22h92M14 30h92M14 38h92" stroke="#3a2410" stroke-width="1.2" opacity=".5"/></svg>',
+      column:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="6" width="20" height="6" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><rect x="48" y="12" width="24" height="40" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><rect x="50" y="52" width="20" height="6" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><path d="M54 16v32M60 16v32M66 16v32" stroke="#3a2410" stroke-width="1.2" opacity=".5"/></svg>',
+      cap:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><polygon points="60,4 116,56 4,56" fill="#d4b86a" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><path d="M40 40h40M30 50h60" stroke="#3a2410" stroke-width="1.2" opacity=".5"/></svg>',
+      plinth:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="10" width="92" height="40" rx="3" fill="#bca98a" stroke="#3a2410" stroke-width="3"/><path d="M22 18h76M22 30h76M22 42h76" stroke="#3a2410" stroke-width="1.2" opacity=".5"/></svg>',
+      spire:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><polygon points="60,2 110,56 10,56" fill="#d4b86a" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><circle cx="60" cy="40" r="6" fill="#fff" stroke="#3a2410" stroke-width="2"/></svg>',
+      ring:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="30" rx="46" ry="20" fill="none" stroke="#3a2410" stroke-width="6"/></svg>',
+      wedge:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><polygon points="6,56 114,56 80,8" fill="#caa674" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/></svg>',
+      cyl:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><rect x="36" y="6" width="48" height="48" fill="#a88762" stroke="#3a2410" stroke-width="3"/><ellipse cx="60" cy="6" rx="24" ry="6" fill="#caa674" stroke="#3a2410" stroke-width="3"/><ellipse cx="60" cy="54" rx="24" ry="6" fill="#7a5d2a" stroke="#3a2410" stroke-width="3"/></svg>',
+      pyr:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><polygon points="60,4 116,56 4,56" fill="#e3d4b4" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><path d="M40 40h40" stroke="#3a2410" stroke-width="1.2" opacity=".5"/></svg>',
+      cube:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="108" height="48" rx="4" fill="#d4b86a" stroke="#3a2410" stroke-width="3"/><path d="M6 6 L 60 24 L 114 6 M60 24 V 54" stroke="#3a2410" stroke-width="1.5" fill="none"/></svg>',
+      slab:'<svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="22" width="100" height="20" rx="3" fill="#bca98a" stroke="#3a2410" stroke-width="3"/><path d="M16 28h88M16 36h88" stroke="#3a2410" stroke-width="1.2" opacity=".5"/></svg>',
+    };
+
+    const SUN_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+    const HOURGLASS_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+
+    const trayEl=document.getElementById('tray'),towerEl=document.getElementById('tower'),field=document.getElementById('field');
+    const levelChip=document.getElementById('levelChip'),placedChip=document.getElementById('placedChip'),errChip=document.getElementById('errChip');
+    const modal=document.getElementById('modal'),modalCard=document.getElementById('modalCard'),modalIcon=document.getElementById('modalIcon'),modalTitle=document.getElementById('modalTitle'),modalText=document.getElementById('modalText'),modalBtn=document.getElementById('modalBtn');
+
+    function showModal(kind, title, lines, btnLabel){
+      modalCard.classList.remove('success','timeout');
+      if(kind==='success') modalCard.classList.add('success');
+      if(kind==='timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind==='success' ? SUN_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    let level=0, placed=0, errors=0, over=false, slotIndex=0;
+    const MAX_ERR = 3;
+    const slotSortables = [];
+    let traySort = null;
+    let currentTierEl = null;
+    // Widest at the base, narrowest at the peak — the finished tower reads as one trapezium.
+    const TIER_WIDTHS = [460, 400, 340, 280, 220];
+
+    function updateHud(){
+      levelChip.textContent = `Level ${level+1} / ${LEVELS.length}`;
+      placedChip.textContent = `Placed: ${placed} / ${LEVELS.length * LEVELS[0].bricks.length}`;
+    }
+
+    function buildLevel(){
+      trayEl.innerHTML = '';
+      // Previous tiers stay put — each level adds a new, narrower row on top of them.
+      slotSortables.forEach(s=>{ try{s.destroy();}catch(e){} });
+      slotSortables.length = 0;
+      if (traySort){ try{traySort.destroy();}catch(e){} traySort = null; }
+
+      const lv = LEVELS[level];
+      const tierWidth = TIER_WIDTHS[level] || TIER_WIDTHS[TIER_WIDTHS.length-1];
+      const slotWidth = tierWidth / lv.bricks.length;
+      const tier = document.createElement('div');
+      tier.className = 'tier';
+      tier.style.width = tierWidth + 'px';
+      towerEl.appendChild(tier);
+      currentTierEl = tier;
+
+      lv.order.forEach((id, i) => {
+        const slot = document.createElement('div');
+        slot.className = 'slot';
+        slot.style.width = slotWidth + 'px';
+        slot.dataset.idx = i;
+        slot.dataset.expected = id;
+        slot.innerHTML = '<span class="label">Lvl ' + (level+1) + ' · ' + (i+1) + '</span>';
+        tier.appendChild(slot);
+        const s = new Sortable(slot, {
+          group: 'babel',
+          draggable: '.tray .brick',
+          sort: false,
+          animation: 150,
+          ghostClass: 'sortable-ghost',
+          chosenClass: 'sortable-chosen',
+          forceFallback: true,
+          fallbackOnBody: true,
+          fallbackTolerance: 3,
+          onAdd: function(evt){
+            if (over){ evt.item.remove(); return; }
+            const clone = evt.item;
+            const brickId = clone.dataset.id;
+            const expected = slot.dataset.expected;
+            if (brickId === expected){
+              clone.remove();
+              slot.classList.add('filled');
+              slot.classList.remove('target');
+              const brick = lv.bricks.find(b => b.id === brickId);
+              const placed = document.createElement('div');
+              placed.className = 'placed-block';
+              placed.innerHTML = SHAPE_SVG[brick.shape];
+              slot.appendChild(placed);
+              placedCount();
+            } else {
+              slot.classList.add('wrong');
+              setTimeout(()=> slot.classList.remove('wrong'), 500);
+              clone.remove();
+              registerError();
+            }
+          }
+        });
+        slotSortables.push(s);
+      });
+      // Highlight first slot of this tier
+      const first = tier.querySelector('.slot');
+      if (first) first.classList.add('target');
+
+      const shuffled = [...lv.bricks].sort(()=>Math.random()-.5);
+      shuffled.forEach(b => {
+        const d = document.createElement('div');
+        d.className = 'brick';
+        d.dataset.id = b.id;
+        d.setAttribute('data-name', b.name);
+        d.innerHTML = '<div class="icon">'+SHAPE_SVG[b.shape]+'</div>';
+        trayEl.appendChild(d);
+      });
+      traySort = new Sortable(trayEl, {
+        group:{ name:'babel', pull:'clone', put:false },
+        draggable:'.brick',
+        sort:false,
+        animation:150,
+        ghostClass:'sortable-ghost',
+        chosenClass:'sortable-chosen',
+        forceFallback:true,
+        fallbackOnBody:true,
+        fallbackTolerance:3
+      });
+    }
+
+    function registerError(){
+      errors++;
+      errChip.textContent = `Falls: ${errors} / ${MAX_ERR}`;
+      // Wiggle the tower
+      towerEl.style.transition = 'transform .2s';
+      towerEl.style.transform = 'rotate(-3deg)';
+      setTimeout(()=> towerEl.style.transform = 'rotate(3deg)', 200);
+      setTimeout(()=> towerEl.style.transform = 'rotate(0)', 400);
+      if (errors >= MAX_ERR) finish(false, 'the tower fell down');
+    }
+
+    function placedCount(){
+      placed++;
+      updateHud();
+      // Highlight next slot within the current tier only
+      const slots = currentTierEl.querySelectorAll('.slot');
+      slots.forEach(s => s.classList.remove('target'));
+      if (placed < LEVELS.length * LEVELS[0].bricks.length){
+        const next = slots[placed % LEVELS[0].bricks.length];
+        if (next && !next.classList.contains('filled')) next.classList.add('target');
+      }
+      if (placed >= LEVELS.length * LEVELS[0].bricks.length){
+        finish(true);
+      } else if (placed % LEVELS[0].bricks.length === 0){
+        // advance level
+        level++;
+        setTimeout(()=> buildLevel(), 700);
+      }
+    }
+
+    function finish(success, reason){
+      if (over) return;
+      over = true;
+      if (traySort) try{ traySort.option('disabled', true);}catch(e){}
+      slotSortables.forEach(s=>{ try{ s.option('disabled', true);}catch(e){} });
+      if (success){
+        showModal('success','A great tower!',['But God scattered the people from there.', '"Come, let us go down and confuse their language." — Genesis 11:7'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'tower_babel'}, '*');
+      } else {
+        showModal('timeout', reason==='the tower fell down' ? 'The tower fell!' : 'Build stopped!',[reason || 'Too many mistakes.', '"If as one people speaking the same language they have begun to do this, then nothing they plan will be beyond them." — Genesis 11:6'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    buildLevel();
+    updateHud();
+    addEventListener('game-timeout', () => { if (!over) finish(false, 'time up'); });
+  </script>
+</body>
+</html>

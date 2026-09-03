@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Garden Game — Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; user-select: none; }
+        :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+        html, body { width: 100%; height: 100%; overflow: hidden; }
+        body { display: flex; align-items: center; justify-content: center; background: var(--bg); }
+        .core {
+            background: var(--bg);
+            color: var(--ink);
+            padding: 1rem;
+            margin: 0;
+            width: 960px;
+            height: 540px;
+            flex: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-family: 'Comic Neue', Arial, Helvetica, sans-serif;
+            border: 3px solid var(--ink);
+            border-radius: 10px;
+            overflow: hidden;
+            transform: scale(var(--game-scale, 1));
+            transform-origin: center;
+        }
+
+        .title {
+            font-size: 1.6rem;
+            flex: 1 100%;
+            max-width: 100%;
+            margin-top: 4px;
+            margin-bottom: 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .title-icon {
+            display: inline-block;
+            width: 1.6rem;
+            height: 1.6rem;
+            vertical-align: -0.3rem;
+        }
+
+        .title-icon svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .alert .icon {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            vertical-align: middle;
+            margin-bottom: 0.5rem;
+        }
+
+        .alert .icon svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .sub {
+            flex: 1 100%;
+            text-align: center;
+            font-size: .9rem;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            opacity: 0.8;
+        }
+
+        .content {
+            flex: 1 100%;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hud{display:flex;gap:8px;justify-content:center;flex:1 100%;font-size:.9rem;font-weight:800;margin-top:4px}
+        .hud-chip{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:3px 12px}
+        .hud-chip.warn{background:#ffe5b4;border-color:#a85b00}
+        .hud-chip.bad{background:#ffd0d0;border-color:var(--bad)}
+        .dragarea__outer {
+            position: relative;
+        }
+        .dragarea {
+            margin: 0;
+            padding: 10px;
+            display: grid;
+            gap: 8px;
+            background: #c9a37a;
+            border: 4px solid var(--ink);
+            border-radius: 16px;
+            box-shadow: 0 5px 0 #8a6644;
+            position: relative;
+        }
+        .dragarea.size-5x3 { width: 420px; height: 270px; grid-template-columns: repeat(5,1fr); grid-template-rows: repeat(3,1fr); }
+
+        .slot {
+            position: relative;
+            border: 3px dashed rgba(58,36,16,.45);
+            border-radius: 11px;
+            background: rgba(255,255,255,.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: background .2s, border-color .2s;
+        }
+        .slot.filled { border-style: solid; border-color: var(--good); background: #e8f5e9; }
+        .slot.drop-pop { animation: releasePop .28s ease-out; }
+        .slot > .sortable-ghost { opacity: 0 !important; }
+
+        .plant {
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 2rem;
+            border-radius: 100%;
+            user-select: none;
+            transition: all linear 0.25s;
+            cursor: default;
+            z-index: 5;
+        }
+
+        .slot .plant {
+            width: 75%;
+            height: 75%;
+            max-width: 3.4rem;
+            max-height: 3.4rem;
+        }
+
+        .plant svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .plant.big {
+            position: relative;
+        }
+
+        .plant.big:after {
+            content: "";
+        }
+
+        .plant.pulled {
+            transition: all ease-in-out 0.5s;
+            animation: none;
+            transform: scale(1.5);
+            opacity: 0;
+            cursor: default;
+        }
+
+        .plant.pulled:after {
+            display: none;
+        }
+
+        .plant.weed {
+            filter: drop-shadow(0 0 4px rgba(58, 36, 16, 0.55));
+            cursor: pointer;
+            touch-action: manipulation;
+            position: relative;
+        }
+        .plant.weed .timer {
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .plant.weed .timer svg { width: 100%; height: 100%; display: block; transform: rotate(-90deg); }
+        .plant.weed .timer .bg { fill: none; stroke: rgba(58,36,16,.25); stroke-width: 3; }
+        .plant.weed .timer .fg { fill: none; stroke: var(--good); stroke-width: 3; stroke-linecap: round; transition: stroke .2s; }
+        .plant.weed .timer.warn .fg { stroke: #e8a200; }
+        .plant.weed .timer.bad .fg { stroke: var(--bad); }
+        .plant.weed.flashing { animation: weedFlash .55s ease-in-out infinite; }
+        .plant.weed.dying { animation: weedDie .55s ease-in forwards; pointer-events: none; }
+        @keyframes weedFlash {
+            0%, 100% { filter: drop-shadow(0 0 4px rgba(58, 36, 16, 0.55)) brightness(1); }
+            50% { filter: drop-shadow(0 0 10px rgba(198, 40, 40, 0.9)) brightness(1.25); }
+        }
+        @keyframes weedDie {
+            0% { transform: scale(1); opacity: 1; filter: grayscale(0); }
+            50% { transform: scale(1.1) rotate(-8deg); opacity: .8; filter: grayscale(.5) brightness(.9); }
+            100% { transform: scale(.4) rotate(20deg); opacity: 0; filter: grayscale(1) brightness(.7); }
+        }
+
+        .seed {
+            background-color: transparent;
+            animation: ease-in-out 3s infinite reverse both running seed;
+            transition: transform .14s, filter .14s;
+        }
+        .seed.picked,.seed.sortable-chosen { transform: scale(1.12); filter: brightness(1.18); }
+        .seed.released,.plant.drop-pop { animation: releasePop .28s ease-out; }
+
+        .tray {
+            align-self: center;
+            background: #fff;
+            border: 3px solid #c9c3b7;
+            border-radius: 14px;
+            padding: 12px;
+            box-shadow: 0 3px 0 rgba(58,36,16,.12);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin: 0 1rem;
+        }
+
+        .tray-label {
+            font-size: .85rem;
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: .03em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tray-label svg { width: 18px; height: 18px; }
+
+        .dragboard {
+            display: grid;
+            grid-template-columns: 72px;
+            grid-auto-rows: 72px;
+            gap: 10px;
+            justify-content: center;
+            background: #fff;
+            border: 2px dashed #c9c3b7;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .dragboard .seed {
+            background-color: var(--accent);
+            border: 2px solid var(--ink);
+            border-radius: 12px;
+            box-shadow: 0 3px 0 #9d7613;
+            cursor: grab;
+            touch-action: none;
+            transition: transform .14s, filter .14s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+        }
+
+        .dragboard .seed svg {
+            width: 46px;
+            height: 46px;
+        }
+
+        .dragboard .seed.claimed,
+        .dragboard .seed.picked,
+        .dragboard .seed.sortable-chosen {
+            transform: scale(1.08);
+            filter: brightness(1.08);
+        }
+
+        @keyframes stamp { 0% { transform: scale(2); opacity: 0; } 60% { transform: scale(.95); opacity: 1; } 100% { transform: scale(1); } }
+        @keyframes releasePop { 50% { transform: scale(1.12); } }
+
+        @keyframes seed {
+            0% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.1) rotate(10deg); }
+            50% { transform: scale(1.05) rotate(-5deg); }
+            75% { transform: scale(1.1) rotate(5deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+
+        @keyframes pull {
+            0% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.25) rotate(-15deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+    </style>
+  <link rel="stylesheet" href="_shared/modal.css">
+</head>
+
+<body>
+    <div class="core">
+        <h1 class="title">Tend the Garden <span class="title-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 6C11 12 8 17 8 21a8 8 0 0 0 16 0c0-4-3-9-8-15Z" fill="#7CC36B" stroke="#1f3a2b" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 6c-1 5-3 8-3 12" stroke="#1f3a2b" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="16" cy="27" rx="3.5" ry="2" fill="#8B4513" stroke="#1f3a2b" stroke-width="1.8"/></svg></span>
+    </h1>
+        <div class="sub">Drag seeds onto the soil, then tap any weeds that sprout.</div>
+
+        <div class="hud" id="hud">
+          <div class="hud-chip" id="missChip">Misses: 0 / 3</div>
+        </div>
+        <div class="dragarea__outer">
+            <div class="dragarea size-5x3" id="dragarea"></div>
+        </div>
+
+        <div class="tray">
+            <div class="tray-label">
+                <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                    <path d="M16 4c-2 4-6 6-6 11a6 6 0 0 0 12 0c0-5-4-7-6-11Z" fill="#7CC36B" stroke="#1f3a2b" stroke-width="1.6" stroke-linejoin="round"/>
+                    <path d="M16 4c-1 4-3 6-3 9" fill="none" stroke="#1f3a2b" stroke-width="1.4" stroke-linecap="round"/>
+                    <ellipse cx="16" cy="27" rx="3" ry="1.6" fill="#4a2f1d" stroke="#1f3a2b" stroke-width="1.2"/>
+                </svg>
+                Seeds
+            </div>
+            <div class="dragboard">
+                <div id="seed-1" class="plant seed" data-flower-svg="default"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 6C11 12 8 17 8 21a8 8 0 0 0 16 0c0-4-3-9-8-15Z" fill="#7CC36B" stroke="#1f3a2b" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 6c-1 5-3 8-3 12" stroke="#1f3a2b" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="16" cy="27" rx="3.5" ry="2" fill="#8B4513" stroke="#1f3a2b" stroke-width="1.8"/></svg></div>
+                <div id="seed-2" class="plant seed" data-flower-svg="pink"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 6C11 12 8 17 8 21a8 8 0 0 0 16 0c0-4-3-9-8-15Z" fill="#FF8FB1" stroke="#1f3a2b" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 6c-1 5-3 8-3 12" stroke="#1f3a2b" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="16" cy="27" rx="3.5" ry="2" fill="#8B4513" stroke="#1f3a2b" stroke-width="1.8"/></svg></div>
+                <div id="seed-3" class="plant seed" data-flower-svg="blue"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 6C11 12 8 17 8 21a8 8 0 0 0 16 0c0-4-3-9-8-15Z" fill="#7CC6FF" stroke="#1f3a2b" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 6c-1 5-3 8-3 12" stroke="#1f3a2b" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="16" cy="27" rx="3.5" ry="2" fill="#8B4513" stroke="#1f3a2b" stroke-width="1.8"/></svg></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+
+  <script src="_shared/timer.js"></script>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 90, timer: true };
+    function fitGameToViewport() {
+            document.documentElement.style.setProperty('--game-scale', Math.min(innerWidth / 960, innerHeight / 540));
+        }
+        addEventListener('resize', fitGameToViewport);
+        fitGameToViewport();
+        document.addEventListener('pointerdown',e=>{const el=e.target.closest('.seed,.btn');if(el)el.classList.add('picked')});
+        document.addEventListener('pointerup',e=>{const el=e.target.closest('.seed,.btn');if(!el)return;el.classList.remove('picked');el.classList.remove('released');void el.offsetWidth;el.classList.add('released')});
+        const SEED_SVG = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M16 6C11 12 8 17 8 21a8 8 0 0 0 16 0c0-4-3-9-8-15Z" fill="#7CC36B" stroke="#1f3a2b" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 6c-1 5-3 8-3 12" stroke="#1f3a2b" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="16" cy="27" rx="3.5" ry="2" fill="#8B4513" stroke="#1f3a2b" stroke-width="1.8"/></svg>`;
+        const FLOWER_SVG = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g stroke="#1f3a2b" stroke-width="2" stroke-linejoin="round"><ellipse cx="16" cy="7" rx="4" ry="5" fill="#FFC93C"/><ellipse cx="25" cy="16" rx="5" ry="4" fill="#FFC93C"/><ellipse cx="16" cy="25" rx="4" ry="5" fill="#FFC93C"/><ellipse cx="7" cy="16" rx="5" ry="4" fill="#FFC93C"/></g><circle cx="16" cy="16" r="4.5" fill="#E07A1F" stroke="#1f3a2b" stroke-width="2"/></svg>`;
+        const FLOWER_PINK_SVG = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g stroke="#1f3a2b" stroke-width="2" stroke-linejoin="round"><ellipse cx="16" cy="7" rx="4" ry="5" fill="#FF8FB1"/><ellipse cx="25" cy="16" rx="5" ry="4" fill="#FF8FB1"/><ellipse cx="16" cy="25" rx="4" ry="5" fill="#FF8FB1"/><ellipse cx="7" cy="16" rx="5" ry="4" fill="#FF8FB1"/></g><circle cx="16" cy="16" r="4.5" fill="#C94B7A" stroke="#1f3a2b" stroke-width="2"/></svg>`;
+        const FLOWER_BLUE_SVG = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g stroke="#1f3a2b" stroke-width="2" stroke-linejoin="round"><ellipse cx="16" cy="7" rx="4" ry="5" fill="#7CC6FF"/><ellipse cx="25" cy="16" rx="5" ry="4" fill="#7CC6FF"/><ellipse cx="16" cy="25" rx="4" ry="5" fill="#7CC6FF"/><ellipse cx="7" cy="16" rx="5" ry="4" fill="#7CC6FF"/></g><circle cx="16" cy="16" r="4.5" fill="#2E6FB8" stroke="#1f3a2b" stroke-width="2"/></svg>`;
+        const WEED_SVG = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g stroke="#3a2410" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28V14" fill="none"/><path d="M16 16c-2-2-2-5 0-7 1 2 3 3 5 3-1 2-3 4-5 4Z" fill="#5b3a1d"/><path d="M16 20c2-2 2-5 0-7-1 2-3 3-5 3 1 2 3 4 5 4Z" fill="#5b3a1d"/></g><ellipse cx="16" cy="28" rx="6" ry="1.6" fill="#3a2410"/></svg>`;
+        const CHECK_SVG = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 16.5l5.5 5.5L24 11" fill="none" stroke="#1f3a2b" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const MAX_MISSES = 3;
+            let msgShown = false;
+            const HOURGLASS_SVG = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>`;
+            const SUN_SVG = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>`;
+            let victory = false, misses = 0;
+            const dragArea = document.getElementById("dragarea");
+            const dragBoard = document.querySelector(".dragboard");
+            const missChip = document.getElementById("missChip");
+            let placed = 0, cols = 5, rows = 3, totalSlots = cols * rows, slotSortables = [], seedTray = null;
+
+            function updateHud(){
+                missChip.textContent = `Misses: ${misses} / ${MAX_MISSES}`;
+                missChip.classList.toggle('warn', misses >= MAX_MISSES-1 && misses < MAX_MISSES);
+                missChip.classList.toggle('bad', misses >= MAX_MISSES);
+            }
+            updateHud();
+
+            function rebuildGrid(c, r){
+                if (slotSortables.length) slotSortables.forEach(s=>{ try{s.destroy();}catch(e){} });
+                if (seedTray) { try{seedTray.destroy();}catch(e){} }
+                dragArea.innerHTML = '';
+                cols = c;
+                rows = r;
+                totalSlots = c * r;
+                dragArea.className = 'dragarea size-5x3';
+                victory = false; misses = 0; placed = 0; updateHud();
+                for (let i = 0; i < totalSlots; i++) {
+                    const slot = document.createElement("div");
+                    slot.className = "slot";
+                    slot.dataset.idx = i;
+                    dragArea.appendChild(slot);
+                }
+                document.querySelectorAll(".slot").forEach(slot => {
+                    slotSortables.push(new Sortable(slot, {
+                        group: "seeds",
+                        draggable: ".dragboard .seed",
+                        sort: false,
+                        animation: 150,
+                        ghostClass: "sortable-ghost",
+                        chosenClass: "sortable-chosen",
+                        fallbackTolerance: 3,
+                        onAdd: function (evt) {
+                            if (msgShown || victory) { evt.item.remove(); return; }
+                            const clone = evt.item;
+                            const source = dragBoard.querySelector(`.seed[data-id="${clone.dataset.id}"]`);
+                            if (slot.classList.contains("filled")) {
+                                slot.style.outline = "3px solid var(--bad)";
+                                setTimeout(() => slot.style.outline = "", 500);
+                                clone.remove();
+                                return;
+                            }
+                            placePlant(clone, slot);
+                            if (source) source.classList.add("placed");
+                        }
+                    }));
+                });
+                seedTray = new Sortable(dragBoard, {
+                    group: { name: "seeds", pull: "clone", put: false },
+                    draggable: ".seed",
+                    sort: false,
+                    animation: 150,
+                    ghostClass: "sortable-ghost",
+                    chosenClass: "sortable-chosen",
+                    dataIdAttr: "id",
+                    fallbackTolerance: 3
+                });
+            }
+            rebuildGrid(5, 3);
+
+            const WEED_LIFETIME = 5000;
+            const WEED_R = 26;
+            const WEED_C = 2 * Math.PI * WEED_R;
+
+            function attachTimer(plant, lifetimeMs){
+                const timer = document.createElement('div');
+                timer.className = 'timer';
+                timer.innerHTML = `<svg viewBox="0 0 60 60"><circle class="bg" cx="30" cy="30" r="${WEED_R}"/><circle class="fg" cx="30" cy="30" r="${WEED_R}" stroke-dasharray="${WEED_C}" stroke-dashoffset="0"/></svg>`;
+                plant.appendChild(timer);
+                const fg = timer.querySelector('.fg');
+                const start = performance.now();
+                let warnAt = lifetimeMs * 0.4;
+                let badAt = lifetimeMs * 0.2;
+                function tick(now){
+                    if (plant._weedPulled || plant.classList.contains('dying')) return;
+                    const elapsed = now - start;
+                    const remaining = Math.max(0, lifetimeMs - elapsed);
+                    const pct = remaining / lifetimeMs;
+                    fg.setAttribute('stroke-dashoffset', String(WEED_C * (1 - pct)));
+                    timer.classList.toggle('warn', pct <= 0.4 && pct > 0.2);
+                    timer.classList.toggle('bad', pct <= 0.2);
+                    if (remaining <= 0) { weedMiss(plant); return; }
+                    requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            }
+
+            function weedMiss(plant){
+                if (plant._weedPulled || plant.classList.contains('dying')) return;
+                plant._weedPulled = true;
+                plant.classList.remove('flashing');
+                plant.classList.add('dying');
+                const slot = plant.parentElement;
+                setTimeout(() => {
+                    plant.remove();
+                    if (slot) slot.classList.remove('filled');
+                }, 600);
+                misses++;
+                updateHud();
+                if (misses >= MAX_MISSES) {
+                    finish(false, `Weeds overran the garden! (${misses} missed)`);
+                }
+            }
+
+            function placePlant(plant, slot) {
+                const flowerChoice = plant.dataset.flowerSvg || "default";
+                const flowerSvg =
+                    flowerChoice === "pink" ? FLOWER_PINK_SVG :
+                    flowerChoice === "blue" ? FLOWER_BLUE_SVG :
+                    FLOWER_SVG;
+
+                plant.classList.remove("seed", "sortable-ghost", "sortable-chosen");
+                plant.classList.add("planted-seed");
+                plant.classList.remove("released"); void plant.offsetWidth; plant.classList.add("drop-pop");
+                plant.setAttribute("aria-label", "seed planted");
+                slot.classList.add("filled");
+                slot.classList.remove("drop-pop"); void slot.offsetWidth; slot.classList.add("drop-pop");
+
+                const delay = Math.floor(Math.random() * 3 + 2);
+                const flashStart = Math.max(0, (delay - 1.5) * 1000);
+                setTimeout(() => plant.classList.add('flashing'), flashStart);
+                setTimeout(() => {
+                    if (Math.random() >= 0.5) {
+                        plant.innerHTML = WEED_SVG;
+                        plant.classList.remove("flashing");
+                        plant.classList.add("big", "weed");
+                        plant._weedPulled = false;
+                        attachTimer(plant, WEED_LIFETIME);
+                    } else {
+                        plant.innerHTML = flowerSvg;
+                        plant.classList.add("flower");
+                        checkWin();
+                    }
+                }, delay * 1000);
+
+                placed++;
+            }
+
+            dragArea.addEventListener("click", event => {
+                const plant = event.target.closest(".plant.weed");
+                if (!plant || plant._weedPulled || plant.classList.contains('dying') || victory) return;
+                plant._weedPulled = true;
+                plant.innerHTML = CHECK_SVG;
+                plant.classList.remove("weed", "big", "flashing");
+                plant.classList.add("pulled");
+                const slot = plant.parentElement;
+                setTimeout(() => { plant.remove(); if (slot) slot.classList.remove("filled"); }, 600);
+            });
+
+            function checkWin() {
+                const total = dragArea.querySelectorAll(".planted-seed").length;
+                const flowers = dragArea.querySelectorAll(".flower").length;
+                if (total >= totalSlots && flowers >= totalSlots && !victory) {
+                    victory = true;
+                    finish();
+                }
+            }
+
+            
+    const modal = document.getElementById('modal');
+    const modalCard = document.getElementById('modalCard');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
+    const modalBtn = document.getElementById('modalBtn');
+    function showModal(kind, title, lines, btnLabel) {
+      modalCard.classList.remove('success', 'timeout');
+      if (kind === 'success') modalCard.classList.add('success');
+      if (kind === 'timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind === 'success'
+        ? "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><path d=\"M8 16.5l5.5 5.5L24 11\" fill=\"none\" stroke=\"#1b5e20\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+        : "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><path d=\"M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z\" fill=\"#fff\" stroke=\"#1b5e20\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><path d=\"M16 4v24\" stroke=\"#1b5e20\" stroke-width=\"2\" stroke-dasharray=\"2 2\"/></svg>";
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l =>
+        /[“”"]/.test(l)
+          ? '<div class="modal-verse">' + l + '</div>'
+          : '<div>' + l + '</div>'
+      ).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+    function finish(success, reason) {
+      if (modal.classList.contains('active')) return;
+      if (success === true) {
+        showModal('success', "The Garden is in bloom!", ["The Garden is in bloom!","\"The Lord God took the man and put him in the Garden of Eden to work it and take care of it.\" — Genesis 2:15"], "Tend again");
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({ type: 'game-complete', game: 'garde_game' }, '*');
+      } else {
+        showModal('timeout', "Game over", ["Time’s up!"], "Try again");
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+            addEventListener('game-timeout', () => finish(false, 'Time’s up! The clock ran out.'));
+        });
+    </script>
+</body>
+
+</html>

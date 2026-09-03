@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Find the Path — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--path:#fffaf0;--goal:#ffd84d;--wall:#5b3624;--trail:#2e7d32}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,Helvetica,sans-serif;background:var(--path);color:var(--ink);display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:16px;display:flex;flex:none;flex-direction:column;align-items:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.6rem;text-align:center;margin:4px 0;color:var(--ink)}
+    .sub{text-align:center;font-size:.9rem;opacity:.8;margin-bottom:16px}
+    .board{display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(5,1fr);gap:4px;width:90vmin;max-width:320px;background:#e9dcc0;padding:4px;border:3px solid var(--ink);border-radius:10px}
+    .cell{width:100%;height:0;padding-bottom:100%;font-size:2rem;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:6px;background:#f1e6c0;touch-action:manipulation;transition:transform .14s,filter .14s}
+    .cell:active,.cell.picked{transform:scale(.92);filter:brightness(1.08)}
+    .cell.released{animation:releasePop .24s ease-out}
+    .cell.start{background:var(--goal);box-shadow:0 0 6px #0002}
+    .cell.goal{background:#a8e6a3}
+    .cell.wall{background:var(--wall)}
+    .cell.path{background:var(--trail)}
+    #msg{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45);color:#fff;font-size:1.3rem;font-weight:700;text-align:center;padding:24px}
+    .btn{display:block;width:max-content;background:var(--goal);color:var(--ink);border:3px solid var(--ink);border-radius:10px;padding:12px 20px;font-size:1.1rem;cursor:pointer;margin:14px auto 0;transition:transform .12s,filter .12s}
+    .btn:active{transform:scale(.92);filter:brightness(.9)}
+    @keyframes releasePop{50%{transform:scale(1.08)}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Find the Path
+      <svg viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="M4 28l12-12 12 12" stroke="#3a2410" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="16" cy="14" r="5" fill="#ffd84d"/>
+      </svg>
+    </h1>
+    <div class="sub">Tap neighbouring squares to walk the path. Stay on the path and reach the goal!</div>
+    <div class="board" id="board"></div>
+    <div id="msg" style="display:none"></div>
+  </div>
+  <script>
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+    const ROWS=5, COLS=5;
+    const layouts = [
+      ['s.##.','..#..','.##.#','.....','#.##g'],
+      ['s#...','.#.#.','...#.','##.#.','....g'],
+      ['s..#.','##.#.','.....','.###.','....g'],
+      ['s.#..','#.#.#','.....','.###.','....g'],
+      ['s...#','###.#','.....','.####','....g'],
+      ['s#...','.#.#.','...#.','.#...','.##.g']
+    ];
+    const previous=Number(localStorage.getItem('find-path-layout'));
+    const choices=layouts.map((_,i)=>i).filter(i=>i!==previous);
+    const layoutIndex=choices[Math.floor(Math.random()*choices.length)];
+    localStorage.setItem('find-path-layout',layoutIndex);
+    const grid=layouts[layoutIndex].map(row=>row.split(''));
+    let r=0,c=0,steps=0;
+    const board = document.getElementById('board');
+    const msg = document.getElementById('msg');
+    const cells=[];
+    board.dataset.layout=layoutIndex;
+    addPressEffects('.cell,.btn');
+    function addPressEffects(selector){document.addEventListener('pointerdown',e=>{const el=e.target.closest(selector);if(el)el.classList.add('picked')});document.addEventListener('pointerup',e=>{const el=e.target.closest(selector);if(!el)return;el.classList.remove('picked');el.classList.remove('released');void el.offsetWidth;el.classList.add('released')});}
+
+    function cellChar(row,col){return grid[row][col];}
+
+    for (let i=0;i<ROWS;i++){
+      const row=[];
+      for(let j=0;j<COLS;j++){
+        const ch=grid[i][j];
+        const el=document.createElement('div');
+        el.className='cell';
+        if(ch==='s') el.classList.add('start');
+        if(ch==='g') el.classList.add('goal');
+        if(ch==='#') el.classList.add('wall');
+        el.dataset.row=i; el.dataset.col=j;
+        row.push(el);
+        board.appendChild(el);
+      }
+      cells.push(row);
+    }
+
+    function isAdjacent(r1,c1,r2,c2){return(Math.abs(r1-r2)+Math.abs(c1-c2))===1;}
+
+    board.addEventListener('click', e=>{
+      const cell = e.target.closest('.cell');
+      if(!cell||cell.dataset.row===undefined) return;
+      const nr=+cell.dataset.row, nc=+cell.dataset.col;
+      if(!isAdjacent(r,c,nr,nc)) return;
+      if(cellChar(nr,nc)==='#'||cell.classList.contains('path')||cell.classList.contains('start')) return;
+      cells[r][c].classList.add('path');
+      r=nr; c=nc;
+      steps++;
+      if(cellChar(r,c)==='g') finish();
+    });
+
+    function finish(){
+      msg.innerHTML=`You reached the goal! <br>"Your word is a lamp for my feet, a light on my path." — Psalm 119:105 <div class="btn" id="restart">Walk again</div>`;
+      msg.style.display='flex';
+      document.getElementById('restart').addEventListener('click',()=>location.reload());
+      if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'find_path'}, '*');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Temple Builder — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:16px;flex:none;display:flex;flex-direction:column;align-items:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.6rem;margin:2px 0}
+    .sub{text-align:center;font-size:.9rem;opacity:.8;margin-bottom:6px}
+    .hud{display:flex;gap:10px;justify-content:center;margin-bottom:8px;font-size:.95rem;font-weight:800}
+    .hud .chip{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:4px 12px}
+    .hud .chip.warn{background:#ffe5b4;border-color:#a85b00}
+    .hud .chip.bad{background:#ffd0d0;border-color:var(--bad)}
+    .scene{flex:1;display:flex;gap:18px;justify-content:center;align-items:center;width:100%}
+    .tray-wrap{text-align:center}
+    .tray-wrap .label{font-size:.85rem;font-weight:800;margin-bottom:6px}
+    .tray{width:200px;background:#fff;border:3px solid #c9c3b7;border-radius:14px;padding:14px;display:grid;grid-template-columns:repeat(2,80px);gap:10px;justify-content:center;min-height:300px}
+    .block{width:80px;height:80px;border-radius:12px;background:var(--accent);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:none;transition:transform .14s,filter .14s,opacity .14s;box-shadow:0 3px 0 #9d7613;position:relative}
+    .block .shape{width:60px;height:60px;display:block}
+    .block.claimed,.block.picked,.block.sortable-chosen{opacity:.78;transform:scale(1.05);filter:brightness(1.08);cursor:grabbing}
+    .block.placed{opacity:.22;pointer-events:none;box-shadow:none}
+    .block.released{animation:releasePop .28s ease-out}
+    .site-wrap{text-align:center;flex:1;max-width:440px}
+    .site-wrap .label{font-size:.85rem;font-weight:800;margin-bottom:6px}
+    .site{position:relative;width:380px;height:300px;margin:0 auto;background:#c9a37a;border:4px solid var(--ink);border-radius:14px;box-shadow:0 5px 0 #8a6644;overflow:hidden}
+    .site .ground{position:absolute;left:0;right:0;bottom:0;height:48px;background:#5a8c2f;border-top:3px solid var(--ink)}
+    .site .temple-outline{position:absolute;left:50%;top:24px;transform:translateX(-50%);width:240px;height:220px;border:3px dashed rgba(58,36,16,.55);border-radius:6px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:4px;padding:6px;background:rgba(255,255,255,.18)}
+    .site .temple-outline .cell{background:rgba(255,255,255,.35);border:2px dashed rgba(58,36,16,.35);border-radius:4px;display:flex;align-items:center;justify-content:center;min-height:0;min-width:0}
+    .site .temple-outline .cell.correct{background:rgba(46,125,50,.25);border-style:solid;border-color:var(--good)}
+    .site .temple-outline .cell.wrong{outline:3px solid var(--bad)}
+    .site .temple-outline .cell .label{font-size:.7rem;font-weight:800;color:var(--ink);opacity:.5}
+    .site .temple-outline .cell.correct .label{opacity:0}
+    .site .temple-outline .cell.correct svg{width:60%;height:60%;display:block}
+    .site .temple-roof{position:absolute;left:50%;top:0;transform:translateX(-50%);width:260px;height:24px;background:#a8861d;border:3px solid var(--ink);border-radius:4px 4px 0 0}
+    .site .temple-pillar{position:absolute;left:50%;top:24px;transform:translateX(-50%);width:8px;height:200px;background:#ccae81;border:2px solid var(--ink);z-index:1;pointer-events:none;border-radius:4px;opacity:.85}
+    @keyframes releasePop{50%{transform:scale(1.1)}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Temple Builder</h1>
+    <div class="sub">Drag the stone pieces to the right shape on the temple.</div>
+    <div class="hud">
+      <div class="chip" id="placedChip">Placed: 0 / 4</div>
+      <div class="chip" id="triesChip">Tries: 0</div>
+    </div>
+    <div class="scene">
+      <div class="tray-wrap">
+        <div class="label">STONE PIECES</div>
+        <div class="tray" id="tray"></div>
+      </div>
+      <div class="site-wrap">
+        <div class="label">THE TEMPLE</div>
+        <div class="site" id="site">
+          <div class="temple-roof"></div>
+          <div class="temple-outline" id="outline"></div>
+          <div class="temple-pillar"></div>
+          <div class="ground"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Build again</button>
+    </div>
+  </div>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 90, timer: true };
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+    const CHECK_SVG='<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16.5l5.5 5.5L24 11" stroke="#1b5e20" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    const HOURGLASS_SVG='<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+    const SUN_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+
+    // Shapes: each has an id and the matching target cell index in the 3x3 grid
+    const SHAPES = [
+      { id:'square',  name:'Stone block', cell:0, svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="48" height="48" rx="4" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><path d="M14 18h32M14 30h32M14 42h32M22 10v40M38 10v40" stroke="#3a2410" stroke-width="1.5" opacity=".5"/></svg>' },
+      { id:'arch',    name:'Arch stone',  cell:4, svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M10 50V30a20 20 0 0 1 40 0v20" fill="#e3d4b4" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><rect x="6" y="46" width="48" height="8" fill="#a8861d" stroke="#3a2410" stroke-width="3"/></svg>' },
+      { id:'pillar',  name:'Pillar',      cell:2, svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="22" y="6" width="16" height="6" rx="1" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><rect x="20" y="12" width="20" height="38" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><rect x="22" y="50" width="16" height="6" rx="1" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><path d="M26 18v26M30 18v26M34 18v26" stroke="#3a2410" stroke-width="1.5" opacity=".4"/></svg>' },
+      { id:'window',  name:'Window',      cell:6, svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="6" width="40" height="48" rx="6" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><path d="M30 6v48M10 30h40" stroke="#3a2410" stroke-width="2.5"/><path d="M30 30m-6 0a6 6 0 1 0 12 0a6 6 0 1 0-12 0" fill="#7CC6FF" stroke="#173b59" stroke-width="2"/></svg>' },
+    ];
+    const trayEl=document.getElementById('tray');
+    const outlineEl=document.getElementById('outline');
+    const placedChip=document.getElementById('placedChip');
+    const triesChip=document.getElementById('triesChip');
+    const modal=document.getElementById('modal'),modalCard=document.getElementById('modalCard'),modalIcon=document.getElementById('modalIcon'),modalTitle=document.getElementById('modalTitle'),modalText=document.getElementById('modalText'),modalBtn=document.getElementById('modalBtn');
+
+    function showModal(kind, title, lines, btnLabel){
+      modalCard.classList.remove('success','timeout');
+      if(kind==='success') modalCard.classList.add('success');
+      if(kind==='timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind==='success' ? SUN_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Build again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    let placed = 0, tries = 0, over = false, tray = null;
+    const cellSortables = [];
+
+    function updateHud(){
+      placedChip.textContent = `Placed: ${placed} / ${SHAPES.length}`;
+      triesChip.textContent = `Tries: ${tries}`;
+    }
+
+    function build(){
+      // Shuffle the 9 grid cells but keep the 4 SHAPES at their target cells
+      const cellOrder = SHAPES.map(s => s.cell);
+      // Fill 3x3 with placeholder labels + 4 shape slots
+      const positions = [0,1,2,3,4,5,6,7,8];
+      positions.forEach(idx => {
+        const c = document.createElement('div');
+        c.className = 'cell';
+        c.dataset.idx = idx;
+        const shape = SHAPES.find(s => s.cell === idx);
+        if (shape){
+          c.dataset.shape = shape.id;
+          c.dataset.target = '1';
+          c.innerHTML = '<span class="label">'+shape.name+'</span>';
+        } else {
+          c.dataset.target = '0';
+          c.innerHTML = '<span class="label">decorative</span>';
+        }
+        outlineEl.appendChild(c);
+        const s = new Sortable(c, {
+          group: 'temple',
+          draggable: '.tray .block',
+          sort: false,
+          animation: 150,
+          ghostClass: 'sortable-ghost',
+          chosenClass: 'sortable-chosen',
+          forceFallback: true,
+          fallbackOnBody: true,
+          fallbackTolerance: 3,
+          onAdd: function(evt){
+            if (over) { evt.item.remove(); return; }
+            const clone = evt.item;
+            const shapeId = clone.dataset.shape;
+            tries++;
+            // Remove any existing in this cell
+            const existing = c.querySelector('.block');
+            if (existing) existing.remove();
+            if (shapeId === c.dataset.shape && c.dataset.target === '1'){
+              c.classList.add('correct');
+              c.classList.remove('wrong');
+              clone.classList.add('placed');
+              // Replace block content with the actual svg centered
+              const shape = SHAPES.find(s => s.id === shapeId);
+              c.innerHTML = shape.svg;
+              placed++;
+              updateHud();
+              if (placed >= SHAPES.length){
+                setTimeout(()=> finish(true), 500);
+              }
+            } else {
+              c.classList.add('wrong');
+              setTimeout(()=> c.classList.remove('wrong'), 600);
+              clone.remove();
+              updateHud();
+            }
+          }
+        });
+        cellSortables.push(s);
+      });
+      // Tray with the shapes (in a random order)
+      const shuffled = [...SHAPES].sort(()=>Math.random()-.5);
+      shuffled.forEach(shape => {
+        const b = document.createElement('div');
+        b.className = 'block';
+        b.dataset.shape = shape.id;
+        b.setAttribute('aria-label', shape.name);
+        b.innerHTML = '<div class="shape">'+shape.svg+'</div>';
+        trayEl.appendChild(b);
+      });
+      tray = new Sortable(trayEl, {
+        group: { name: 'temple', pull: 'clone', put: false },
+        draggable: '.block',
+        sort: false,
+        animation: 150,
+        ghostClass: 'sortable-ghost',
+        chosenClass: 'sortable-chosen',
+        forceFallback: true,
+        fallbackOnBody: true,
+        fallbackTolerance: 3
+      });
+    }
+    build();
+    updateHud();
+
+    function finish(success, reason){
+      if (over) return;
+      over = true;
+      if (tray) { try{tray.option('disabled', true);}catch(e){} }
+      cellSortables.forEach(s=>{ try{s.option('disabled', true);}catch(e){} });
+      if (success){
+        showModal('success','The temple is built!',['Every stone placed with care.', '"The temple of the Lord was finished." — 1 Kings 6:14'],'Build again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'temple_builder'}, '*');
+      } else {
+        showModal('timeout','Work stopped!',[reason || 'Time’s up.', '"Be still before the Lord and wait patiently." — Psalm 37:7'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+    addEventListener('game-timeout', () => finish(false, 'Time’s up! The builders had to rest.'));
+  </script>
+</body>
+</html>

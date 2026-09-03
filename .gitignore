@@ -1,5 +1,3 @@
-*/__docs/*
-!*/__docs/*-design-source-of-truth.md
 .kilocode*
 */.kilocode*
 */.DS_Store

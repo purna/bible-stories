@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Match It Up — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--card:#fffaf0;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    .wrap{width:960px;max-width:94vw;height:540px;margin:0 auto;padding:16px;display:flex;flex-direction:column;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.6rem;text-align:center;margin:4px 0}
+    h1 svg{display:inline-block;width:32px;height:32px;vertical-align:-0.3rem}
+    .sub{text-align:center;font-size:.9rem;opacity:.8;margin-bottom:12px}
+    .layout{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:14px;min-height:0}
+    .panel{background:#fff;border:3px solid var(--ink);border-radius:12px;padding:12px;min-height:0;overflow:auto}
+    .panel .heading{font-size:.85rem;font-weight:700;margin-bottom:8px;text-align:center;opacity:.75;text-transform:uppercase;letter-spacing:.04em}
+    .slots{display:grid;gap:8px;grid-template-columns:repeat(3,1fr);justify-items:center}
+    .slots.cols4{grid-template-columns:repeat(4,1fr)}
+    .slot{width:100%;max-width:76px;padding-bottom:100%;border:2px dashed #bbb;border-radius:10px;background:var(--card);display:flex;align-items:center;justify-content:center;font-size:1.3rem;position:relative}
+    .slot svg{width:44px;height:44px}
+    .slot.correct{border-style:solid;border-color:var(--good);background:#e8f5e9}
+    .count{position:absolute;top:4px;right:4px;min-width:26px;padding:2px 6px;border-radius:12px;background:#eadfca;border:2px solid var(--ink);font-size:.8rem;font-weight:800}
+    .tray-items{display:grid;gap:8px;grid-template-columns:repeat(3,1fr);justify-items:center}
+    .tray-items.cols4{grid-template-columns:repeat(4,1fr)}
+    .item{width:74px;height:74px;border-radius:12px;background:var(--accent);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:2.2rem;cursor:pointer;touch-action:none;transition:transform .14s,filter .14s}
+    .item svg{width:40px;height:40px}
+    .item.picked,.item.claimed{opacity:.7;transform:scale(1.08);filter:brightness(1.08)}
+    .item.placed{opacity:.22;pointer-events:none;filter:grayscale(.5)}
+    .item.released,.slot.drop-pop{animation:releasePop .28s ease-out}
+    #msg{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.45);color:#fff;font-size:1.2rem;font-weight:700;text-align:center;padding:24px}
+    .btn{display:block;width:max-content;background:var(--good);color:#fff;border:3px solid var(--ink);border-radius:10px;padding:12px 20px;font-size:1.1rem;cursor:pointer;margin:14px auto 0}
+    @keyframes releasePop{50%{transform:scale(1.1)}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Match It Up
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="14" r="5" fill="#ccae81"/>
+        <circle cx="12" cy="16" r="1.5" fill="#3a2410"/>
+        <circle cx="12" cy="22" r="3" fill="#ccae81"/>
+        <path d="M12 12c2-1 4-1 6 0" stroke="#3a2410" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </h1>
+    <div class="sub" id="sub">Drag each animal to the place where it lives.</div>
+    <div class="layout">
+      <div class="panel">
+        <div class="heading">Habitats</div>
+        <div class="slots" id="slots"></div>
+      </div>
+      <div class="panel">
+        <div class="heading">Drag here</div>
+        <div class="tray-items" id="trayItems"></div>
+      </div>
+    </div>
+    <div id="msg"></div>
+  </div>
+  <script>
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+
+    const items = [
+      {kind:'sea',name:'fish',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 16c0-5 4-9 9-9 3 0 6 2 7 5-3 1-5 3-6 6 4-1 8 2 9 6-2 1-4 2-7 2-5 0-9-4-9-9z" fill="#1a73e8"/></svg>'},
+      {kind:'sea',name:'turtle',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="16" cy="18" rx="9" ry="6" fill="#4caf50"/><circle cx="16" cy="16" r="6" fill="#4caf50" stroke="#1b5e20" stroke-width="1"/></svg>'},
+      {kind:'sea',name:'dolphin',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 18c0-4 3-7 7-7 2 0 4 1 5 2 1-5 5-8 10-8s9 4 9 9v6a7 7 0 0 1-7 7H15a7 7 0 0 1-7-7v-5z" fill="#1a73e8"/></svg>'},
+      {kind:'sea',name:'whale',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20c2-2 5-3 8-3 2 0 4 1 6 2 2-4 6-6 10-6 5 0 9 3 10 8v5a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6v-5z" fill="#1a73e8"/><circle cx="16" cy="15" r="3" fill="#fff"/></svg>'},
+      {kind:'field',name:'ox',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="12" width="18" height="12" rx="6" fill="#ccae81"/><circle cx="16" cy="16" r="5" fill="#ccae81"/><path d="M6 16h3M23 16h3" stroke="#5b3624" stroke-width="2" stroke-linecap="round"/></svg>'},
+      {kind:'field',name:'goat',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 14c0-2-1-4-3-5-1 1-2 2-2 4 0 2 1 4 3 5-1 .3-2 .5-3 .5-1 0-2-.2-2-.5 0-2-1-3-2-4s0-4 2-5-2-4-2-6 3-4 6-4 4 4 3 8z" fill="#ccae81"/><ellipse cx="16" cy="24" rx="8" ry="4" fill="#ccae81"/></svg>'},
+      {kind:'field',name:'rabbit',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="16" cy="20" rx="7" ry="4" fill="#a67c52"/><circle cx="13" cy="17" r="3" fill="#fff"/><circle cx="19" cy="17" r="3" fill="#fff"/><path d="M10 22c0 2 2 4 6 4s6-2 6-4" stroke="#8b5a2b" stroke-width="1.5"/><path d="M9 14c1-3 4-5 7-5s6 2 7 5" stroke="#8b5a2b" stroke-width="1.5"/></svg>'},
+      {kind:'field',name:'sheep',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="16" cy="20" rx="8" ry="5" fill="#fff"/><circle cx="13" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M8 22c1 2 4 4 8 4s7-2 8-4" stroke="#3a2410" stroke-width="1.5"/></svg>'},
+      {kind:'sky',name:'bird',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 14c2-3 5-4 8-4s6 2 8 5" stroke="#6b4226" stroke-width="2" fill="none"/><circle cx="13" cy="14" r="2" fill="#6b4226"/><circle cx="21" cy="14" r="2" fill="#6b4226"/><path d="M11 17c2-1 4-1 6-1s4 0 6 1" stroke="#6b4226" stroke-width="1.5" fill="none"/></svg>'},
+      {kind:'sky',name:'dove',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 18a6 6 0 0 1 11-4 5 5 0 0 1 6 5 5 5 0 0 1-3 5 4 4 0 0 1-4-3 3 3 0 0 0-6 0 4 4 0 0 1-4 3z" fill="#6b4226"/><circle cx="9" cy="14" r="2" fill="#fff"/><circle cx="23" cy="15" r="2" fill="#fff"/></svg>'},
+      {kind:'sky',name:'eagle',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8c2-1 4-1 6 0l3-4a8 8 0 0 1 6 4l-2 3c-2-1-4-1-6-1s-4 0-6 1z" fill="#6b4226"/><path d="M10 14c3-2 6-2 9-1l2-3a7 7 0 0 0-7-4 7 7 0 0 0-7 7v5z" fill="#6b4226"/><circle cx="16" cy="16" r="2.5" fill="#fff"/></svg>'},
+      {kind:'sky',name:'bat',svg:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 14c2-4 6-6 10-6s8 2 10 6l-2 4c-2-3-5-5-9-5s-7 2-9 5z" fill="#3a2410"/><circle cx="16" cy="13" r="2.5" fill="#fff"/><path d="M13 16l-3 5h8l-3-5z" fill="#3a2410"/></svg>'},
+    ];
+
+    const habitats = [
+      {zone:'sea',label:'Water',icon:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 22c4-3 8-4 12-4s8 1 12 4v4a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4z" fill="#1a73e8"/></svg>'},
+      {zone:'field',label:'Field',icon:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 26c3-7 8-10 12-10s9 3 12 10" fill="#ccae81"/><path d="M6 22c2-5 6-8 10-8s8 3 10 8" fill="#5b8c2f"/></svg>'},
+      {zone:'sky',label:'Sky',icon:'<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="12" r="4" fill="#7b8fcb"/><path d="M6 24c3-4 8-6 12-6s9 2 12 6" fill="#7b8fcb"/></svg>'},
+    ];
+
+    let counts = {};
+    let placedNames = new Set();
+    let matched = 0;
+    let sortables = [];
+
+    const slotsEl = document.getElementById('slots');
+    const trayEl = document.getElementById('trayItems');
+    const msg = document.getElementById('msg');
+
+    function shuffle(a){ return a.sort(() => Math.random()-.5); }
+
+    function build(){
+      const useHabitats = shuffle([].concat(habitats));
+      const gridCols = useHabitats.length === 4 ? 'cols4' : '';
+
+      // build slots
+      slotsEl.innerHTML='';
+      slotsEl.className='slots '+(gridCols);
+      useHabitats.forEach(h=>{
+        counts[h.zone]=0;
+        const need = items.filter(i=>i.kind===h.zone).length;
+        const s=document.createElement('div');
+        s.className='slot';
+        s.dataset.zone=h.zone;
+        s.innerHTML=`<div class="count">0/${need}</div>${h.icon}`;
+        slotsEl.appendChild(s);
+      });
+
+      // build tray
+      const trayItems = shuffle([].concat(items));
+      trayEl.innerHTML='';
+      trayEl.className='tray-items '+(items.length===16?'cols4':'');
+      trayItems.forEach((it,i)=>{
+        const el=document.createElement('div');
+        el.className='item';
+        el.dataset.kind=it.kind;
+        el.dataset.name=it.name;
+        el.setAttribute('aria-label', it.name);
+        el.innerHTML=it.svg;
+        el.style.opacity='0';
+        setTimeout(()=>{ el.style.opacity='1'; }, i*40);
+        trayEl.appendChild(el);
+      });
+
+      // destroy existing sortables
+      sortables.forEach(s=>s.destroy && s.destroy());
+      sortables=[];
+
+      // Sortable for tray (clone)
+      const traySort = new Sortable(trayEl, {
+        group:{ name:'match', pull:'clone', put:false },
+        draggable:'.item',
+        sort:false,
+        animation:150,
+        ghostClass:'sortable-ghost',
+        chosenClass:'sortable-chosen',
+        forceFallback:true,
+        fallbackOnBody:true,
+        fallbackTolerance:3
+      });
+      sortables.push(traySort);
+
+      // Sortable for each slot
+      document.querySelectorAll('.slot').forEach(slot=>{
+        const zoneSort = new Sortable(slot, {
+          group:'match',
+          draggable:'.tray-items .item',
+          sort:false,
+          animation:150,
+          ghostClass:'sortable-ghost',
+          forceFallback:true,
+          fallbackOnBody:true,
+          fallbackTolerance:3,
+          onAdd: function(evt){
+            const clone=evt.item;
+            handleDrop(clone, slot);
+          },
+          onChoose: function(evt){ evt.item.classList.add('claimed'); },
+          onUnchoose: function(evt){ evt.item.classList.remove('claimed'); }
+        });
+        sortables.push(zoneSort);
+      });
+    }
+
+    function handleDrop(clone, slot){
+      const kind=clone.dataset.kind;
+      const name=clone.dataset.name;
+      const max = items.filter(i=>i.kind===slot.dataset.zone).length;
+      if(placedNames.has(name)||counts[slot.dataset.zone]>=max){
+        clone.remove();
+        return;
+      }
+      if(kind !== slot.dataset.zone){
+        slot.style.outline='3px solid var(--bad)';
+        setTimeout(()=>slot.style.outline='',600);
+        clone.remove();
+        return;
+      }
+      placedNames.add(name);
+      counts[slot.dataset.zone]++;
+      slot.querySelector('.count').textContent=`${counts[slot.dataset.zone]}/${max}`;
+      if(counts[slot.dataset.zone]===max) slot.classList.add('correct');
+      const source=trayEl.querySelector(`.item[data-name="${name}"]`);
+      if(source) source.classList.add('placed');
+      slot.classList.remove('drop-pop'); void slot.offsetWidth; slot.classList.add('drop-pop');
+      matched++;
+      if(matched>=items.length){
+        setTimeout(finish,200);
+      }
+      clone.remove();
+    }
+
+    function addPressEffects(){
+      document.addEventListener('pointerdown',e=>{
+        const el=e.target.closest('.item,.btn');
+        if(el){ if(el.classList.contains('item')) el.classList.add('picked'); }
+      });
+      document.addEventListener('pointerup',e=>{
+        const el=e.target.closest('.item,.btn');
+        if(el){
+          el.classList.remove('picked');
+          el.classList.remove('released');
+          void el.offsetWidth;
+          el.classList.add('released');
+        }
+      });
+    }
+
+    function finish(){
+      sortables.forEach(s=>s.destroy && s.destroy());
+      msg.style.display='flex';
+      msg.innerHTML=`All matched!<br><span style="font-size:1.1rem">"I praise you, for I am fearfully and wonderfully made." — Psalm 139:14</span> <div class="btn" id="restart">Match again</div>`;
+      document.getElementById('restart').addEventListener('click',()=>location.reload());
+      if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'match_it_up'}, '*');
+    }
+
+    addPressEffects();
+    build();
+  </script>
+</body>
+</html>

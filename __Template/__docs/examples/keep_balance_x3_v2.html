@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Keep the Balance — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:92vw;height:540px;margin:0;padding:16px;text-align:center;flex:none;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.6rem;margin:4px 0}
+    .howto{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;font-size:.85rem;margin:2px 0 8px;opacity:.9}
+    .howto-step{background:#fff;border:2px solid var(--ink);border-radius:999px;padding:4px 10px 4px 4px;display:inline-flex;align-items:center;gap:6px;font-weight:700}
+    .howto-num{background:var(--accent);color:var(--ink);border:2px solid var(--ink);border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:800}
+    .howto-arrow{font-size:1rem;opacity:.6;font-weight:800}
+    .header{font-size:1.15rem;font-weight:700;margin-top:14px;margin-bottom:12px;min-height:2.4em;background:#fff;border:3px solid var(--ink);border-radius:12px;padding:8px 14px;display:flex;align-items:center;justify-content:center;text-align:center;flex-wrap:wrap;gap:6px;transition:background .35s,transform .35s,border-color .35s,box-shadow .35s}
+    .header .round{font-size:1rem;opacity:.75;margin-right:4px}
+    .header .target-num{font-size:1.6rem;color:var(--bad);background:var(--accent);border:2px solid var(--ink);border-radius:10px;padding:0 10px;margin:0 4px;display:inline-block}
+    .header .target-item{font-size:1.05rem;opacity:.95;margin:0 4px}
+    .header .plus{font-size:1.2rem;font-weight:800;opacity:.6;margin:0 4px}
+    .header.changed{animation:headerPop .5s ease-out}
+    @keyframes headerPop{0%{transform:scale(1)}40%{transform:scale(1.05);box-shadow:0 0 0 6px rgba(255,216,77,.5)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,216,77,0)}}
+    .welldone{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(58,36,16,.45);z-index:1200;flex-direction:column;gap:14px;padding:24px}
+    .welldone.active{display:flex}
+    .welldone .stamp{font-size:3.4rem;font-weight:800;color:var(--good);background:#fff;border:4px solid var(--good);border-radius:18px;padding:14px 32px;transform:rotate(-6deg);box-shadow:0 6px 0 #b9cbb4;letter-spacing:.02em;animation:stamp .55s cubic-bezier(.2,1.4,.4,1) both}
+    .welldone .sub{font-size:1.1rem;font-weight:700;background:var(--accent);color:var(--ink);border:2px solid var(--ink);border-radius:10px;padding:4px 14px;transform:rotate(-6deg)}
+    .nextbtn{font-family:inherit;font-size:1.1rem;font-weight:800;background:var(--good);color:#fff;border:3px solid var(--ink);border-radius:12px;padding:10px 22px;cursor:pointer;box-shadow:0 3px 0 #1b5e20;transition:transform .12s,filter .12s}
+    .nextbtn:active{transform:translateY(2px);box-shadow:0 1px 0 #1b5e20}
+    @keyframes stamp{0%{transform:rotate(-6deg) scale(2);opacity:0}60%{transform:rotate(-6deg) scale(.95);opacity:1}100%{transform:rotate(-6deg) scale(1)}}
+    .machines{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-bottom:18px;height:240px}
+    .meter{width:240px;height:240px;background:#fff;border:3px solid var(--ink);border-radius:14px;padding:10px 12px 12px;position:relative;box-shadow:0 2px 6px #0001;display:flex;flex-direction:column;gap:6px}
+    .meter .name{font-size:1.05rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:6px}
+    .meter .name svg{width:22px;height:22px}
+    .pips{display:flex;flex-wrap:wrap;gap:3px;justify-content:center;align-content:flex-start;min-height:30px;padding:2px}
+    .pip{width:10px;height:10px;border-radius:50%;background:#f1e6c0;border:2px solid var(--ink)}
+    .pip.on{background:var(--accent)}
+    .bar{height:18px;border:2px solid var(--ink);border-radius:8px;background:linear-gradient(90deg,#a8e6a3 0%,#a8e6a3 var(--pct,0%),#ffcdd2 var(--pct,0%),#ffcdd2 100%)}
+    .meter.empty .bar{background:#ffcdd2}
+    .count{font-size:.95rem;font-weight:800;text-align:center;background:#fff7d4;border:2px solid var(--ink);border-radius:10px;padding:2px 0}
+    .count .now{color:var(--bad);font-size:1.05rem}
+    .count .need{color:var(--good)}
+    .counter-controls{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:auto}
+    .ctrl-btn{font-family:inherit;font-size:1.4rem;font-weight:800;width:44px;height:40px;background:var(--accent);color:var(--ink);border:2px solid var(--ink);border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 0 var(--ink);transition:transform .1s,box-shadow .1s}
+    .ctrl-btn:active{transform:translateY(2px);box-shadow:0 0 0 var(--ink)}
+    .meter.drop-pop{animation:dropPop .32s ease-out}
+    @keyframes dropPop{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
+  </style>
+  <link rel="stylesheet" href="_shared/modal.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Keep the Balance</h1>
+    <div class="howto">
+      <span class="howto-step"><span class="howto-num">1</span> Look at the target amounts</span>
+      <span class="howto-arrow" aria-hidden="true">→</span>
+      <span class="howto-step"><span class="howto-num">2</span> Use plus (+) and minus (-) buttons</span>
+      <span class="howto-arrow" aria-hidden="true">→</span>
+      <span class="howto-step"><span class="howto-num">3</span> Match every meter to win</span>
+    </div>
+    
+    <div class="machines" id="machines">
+      <div class="meter" data-for="water">
+        <div class="name"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 4C10 12 6 18 6 22a10 10 0 0 0 20 0c0-4-4-10-10-18Z" fill="#45a5df" stroke="#173b59" stroke-width="2.5" stroke-linejoin="round"/></svg> Water</div>
+        <div class="pips" data-pips=""></div>
+        <div class="bar" style="--pct:0%"></div>
+        <div class="count">0 / ?</div>
+        <div class="counter-controls">
+          <button type="button" class="ctrl-btn" data-action="dec" data-for="water">−</button>
+          <button type="button" class="ctrl-btn" data-action="inc" data-for="water">+</button>
+        </div>
+      </div>
+      <div class="meter" data-for="fire">
+        <div class="name"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 4c-4 5-7 9-7 13a7 7 0 0 0 14 0c0-4-3-8-7-13Z" fill="#e65100" stroke="#5b1d00" stroke-width="2.5" stroke-linejoin="round"/><circle cx="16" cy="20" r="3" fill="#ffd84d" stroke="#5b1d00" stroke-width="2"/></svg> Fire</div>
+        <div class="pips" data-pips=""></div>
+        <div class="bar" style="--pct:0%"></div>
+        <div class="count">0 / ?</div>
+        <div class="counter-controls">
+          <button type="button" class="ctrl-btn" data-action="dec" data-for="fire">−</button>
+          <button type="button" class="ctrl-btn" data-action="inc" data-for="fire">+</button>
+        </div>
+      </div>
+      <div class="meter" data-for="food">
+        <div class="name"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><ellipse cx="16" cy="18" rx="10" ry="6" fill="#e3af32" stroke="#76521e" stroke-width="2.5"/><path d="M6 14c3-4 7-5 10-5s7 1 10 5" stroke="#76521e" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg> Food</div>
+        <div class="pips" data-pips=""></div>
+        <div class="bar" style="--pct:0%"></div>
+        <div class="count">0 / ?</div>
+        <div class="counter-controls">
+          <button type="button" class="ctrl-btn" data-action="dec" data-for="food">−</button>
+          <button type="button" class="ctrl-btn" data-action="inc" data-for="food">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+
+    <div class="header footer" id="header"></div>
+  </div>
+  <div class="welldone" id="welldone" role="dialog" aria-live="assertive">
+    <div class="stamp">Well done!</div>
+    <div class="sub" id="welldoneSub">Great counting</div>
+    <button type="button" class="nextbtn" id="welldoneNext">Next round →</button>
+  </div>
+
+  <script src="_shared/timer.js"></script>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 75, timer: true };
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+
+    let roundTimer = null;
+    function resetRoundTimer(){
+      if (roundTimer) { clearTimeout(roundTimer); roundTimer = null; }
+      if (!window.GAME_TIMER || window.GAME_TIMER.disabled) return;
+      const sec = window.GAME_TIMER.seconds || 30;
+      roundTimer = setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('game-timeout'));
+      }, sec * 1000);
+    }
+    window.addEventListener('game-timeout', () => {
+      if (done >= total) return;
+      finish(false, 'Time’s up! Try to count faster.');
+    });
+    const CHECK_SVG='<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="15" fill="#e8f5e9" stroke="var(--good)" stroke-width="2"/><path d="M8 16.5l5.5 5.5L24 11" stroke="var(--good)" stroke-width="3.4" stroke-linecap="round"/></svg>';
+
+    const TOKEN_LABEL = { water:'bucket', fire:'log', food:'bundle' };
+    const METER_LABEL = { water:'Water', fire:'Fire', food:'Food' };
+    const METER_VERB = { water:'pour', fire:'add', food:'share' };
+
+    const ROUNDS = 5;
+    const zones = ['water','fire','food'];
+    const levels = [];
+    for (let i = 0; i < ROUNDS; i++) {
+      const count = 2 + Math.floor(Math.random() * 2);
+      const shuffled = [...zones].sort(() => Math.random() - .5);
+      const targets = {};
+      for (let j = 0; j < count; j++) {
+        targets[shuffled[j]] = Math.floor(Math.random() * 9) + 1;
+      }
+      levels.push({ targets });
+    }
+    let step = 0, done = 0, total = levels.length;
+    let drops = { water:0, fire:0, food:0 };
+    const header = document.getElementById('header');
+    const welldone = document.getElementById('welldone');
+    const welldoneSub = document.getElementById('welldoneSub');
+    const welldoneNext = document.getElementById('welldoneNext');
+
+    function showWellDone(){
+      welldoneSub.textContent = `Round ${step+1} of ${total} complete!`;
+      welldone.classList.add('active');
+    }
+    welldoneNext.addEventListener('click', () => {
+      welldone.classList.remove('active');
+      setLevel(step + 1);
+    });
+
+    function describeTarget(zone, n){
+      const token = TOKEN_LABEL[zone];
+      const meter = METER_LABEL[zone];
+      const verb = METER_VERB[zone];
+      return `${verb} <span class="target-num">${n}</span> <span class="target-item">${token}${n===1?'':'s'}</span> to <b>${meter}</b>`;
+    }
+
+    function updateHeader(){
+      if (done >= total) return;
+      const cur = levels[step].targets;
+      const parts = Object.keys(cur).map(z => describeTarget(z, cur[z]));
+      const joined = parts.length === 1
+        ? parts[0]
+        : parts.slice(0, -1).map(p => p + ' <span class="plus">+</span> ').join('') + parts[parts.length - 1];
+      header.innerHTML = `<span class="round">Round <b>${step+1}</b> of ${total}</span> ${joined}`;
+    }
+
+    function pulseHeader(){
+      header.classList.remove('changed');
+      void header.offsetWidth;
+      header.classList.add('changed');
+    }
+
+    function isRoundComplete(){
+      const cur = levels[step].targets;
+      return zones.every(z => (drops[z] || 0) === (cur[z] || 0));
+    }
+
+    function renderPips(key, have, need){
+      const meter = document.querySelector(`.meter[data-for="${key}"]`);
+      if (!meter) return;
+      const pipsEl = meter.querySelector('.pips');
+      pipsEl.dataset.pips = String(need);
+      const on = Math.min(have, need);
+      pipsEl.innerHTML = '';
+      for (let i = 0; i < Math.max(need, have, 1); i++) {
+        const p = document.createElement('span');
+        p.className = 'pip' + (i < on ? ' on' : '');
+        pipsEl.appendChild(p);
+      }
+    }
+
+    function updateBars(){
+      const cur = levels[step].targets;
+      document.querySelectorAll('.meter').forEach(m=>{
+        const key = m.dataset.for;
+        const need = cur[key] || 0;
+        const have = drops[key];
+        const maxVal = Math.max(need, have, 1);
+        const pct = Math.max(0, Math.min(100, (have/maxVal)*100));
+        m.querySelector('.count').innerHTML = `<span class="now">${have}</span> / <span class="need">${need}</span>`;
+        m.querySelector('.bar').style.setProperty('--pct', pct+'%');
+        if (have === need && need > 0) m.classList.remove('empty'); else m.classList.add('empty');
+        renderPips(key, have, need);
+      });
+    }
+
+    document.querySelectorAll('.ctrl-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const action = btn.dataset.action;
+        const key = btn.dataset.for;
+        if (action === 'inc') {
+          drops[key]++;
+        } else if (action === 'dec') {
+          if (drops[key] > 0) drops[key]--;
+        }
+        const meter = document.querySelector(`.meter[data-for="${key}"]`);
+        meter.classList.remove('drop-pop'); void meter.offsetWidth; meter.classList.add('drop-pop');
+        updateBars();
+
+        if (isRoundComplete()) {
+          done++;
+          setTimeout(() => {
+            if (done >= total) { finish(true); }
+            else { showWellDone(); }
+          }, 400);
+        }
+      });
+    });
+
+    function setLevel(i){
+      step = i;
+      drops = { water:0, fire:0, food:0 };
+      updateBars();
+      updateHeader();
+      pulseHeader();
+      header.style.color = 'var(--ink)';
+    }
+
+    
+    const modal = document.getElementById('modal');
+    const modalCard = document.getElementById('modalCard');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
+    const modalBtn = document.getElementById('modalBtn');
+    function showModal(kind, title, lines, btnLabel) {
+      modalCard.classList.remove('success', 'timeout');
+      if (kind === 'success') modalCard.classList.add('success');
+      if (kind === 'timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind === 'success'
+        ? "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><path d=\"M8 16.5l5.5 5.5L24 11\" fill=\"none\" stroke=\"#1b5e20\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+        : "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><path d=\"M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z\" fill=\"#fff\" stroke=\"#1b5e20\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><path d=\"M16 4v24\" stroke=\"#1b5e20\" stroke-width=\"2\" stroke-dasharray=\"2 2\"/></svg>";
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l =>
+        /[“”"]/.test(l)
+          ? '<div class="modal-verse">' + l + '</div>'
+          : '<div>' + l + '</div>'
+      ).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+    function finish(success, reason) {
+      if (modal.classList.contains('active')) return;
+      if (success === true) {
+        showModal('success', "All cared for!", ["All cared for!","\"The Lord bless you and keep you.\" — Numbers 6:24"], "Care again");
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({ type: 'game-complete', game: 'keep_balance' }, '*');
+      } else {
+        showModal('timeout', "Time’s up! Try to count faster.", ["Time’s up!"], "Try again");
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    setLevel(0);
+  </script>
+</body>
+</html>

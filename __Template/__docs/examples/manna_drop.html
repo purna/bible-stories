@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Manna Drop — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:16px;flex:none;display:flex;flex-direction:column;align-items:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.6rem;margin:4px 0}
+    .sub{text-align:center;font-size:.9rem;opacity:.8;margin-bottom:8px}
+    .hud{display:flex;gap:10px;justify-content:center;margin-bottom:6px;font-size:.95rem;font-weight:800}
+    .hud .chip{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:4px 12px}
+    .hud .chip.warn{background:#ffe5b4;border-color:#a85b00}
+    .hud .chip.bad{background:#ffd0d0;border-color:var(--bad)}
+    .field{position:relative;flex:1;width:100%;max-width:520px;background:linear-gradient(to bottom,#bde0fe 0%,#bde0fe 82%,#c9a37a 82%,#c9a37a 100%);border:4px solid var(--ink);border-radius:14px;box-shadow:0 5px 0 #5b3624;overflow:hidden;touch-action:manipulation}
+    .basket{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:88px;height:60px;display:flex;align-items:center;justify-content:center}
+    .basket svg{width:100%;height:100%;display:block}
+    .item{position:absolute;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;touch-action:manipulation}
+    .item svg{width:100%;height:100%;display:block;filter:drop-shadow(0 2px 0 rgba(0,0,0,.2))}
+    .item.caught{animation:pop .4s ease-out forwards}
+    @keyframes pop{0%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:1}100%{transform:scale(0);opacity:0}}
+    .ground-line{position:absolute;left:0;right:0;bottom:25px;height:2px;background:rgba(58,36,16,.25);pointer-events:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Manna Drop</h1>
+    <div class="sub">Use Left & Right Arrow keys (or mouse/touch) to catch the manna!</div>
+    <div class="hud">
+      <div class="chip" id="levelChip">Level: 1 / 5</div>
+      <div class="chip" id="caughtChip">Caught: 0 / 10</div>
+      <div class="chip" id="missedChip">Missed: 0 / 5</div>
+    </div>
+    <div class="field" id="field">
+      <div class="ground-line"></div>
+      <div class="basket" id="basket">
+        <svg viewBox="0 0 64 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 8h56l-6 28a8 8 0 0 1-8 6H18a8 8 0 0 1-8-6Z" fill="#a67c52" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M2 6c2 2 5 3 8 3h44c3 0 6-1 8-3" fill="none" stroke="#3a2410" stroke-width="3" stroke-linecap="round"/>
+          <path d="M12 14h40M14 20h36M16 26h32" stroke="#3a2410" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Next Level</button>
+    </div>
+  </div>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 120, timer: true };
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+
+    const MAX_MISS = 5;
+    const LEVELS = [
+      { target: 10, speed: 1.2, spawnRate: [800, 1100] },
+      { target: 12, speed: 1.8, spawnRate: [700, 950] },
+      { target: 15, speed: 2.5, spawnRate: [550, 800] },
+      { target: 18, speed: 3.3, spawnRate: [450, 650] },
+      { target: 20, speed: 4.2, spawnRate: [350, 500] }
+    ];
+
+    const field = document.getElementById('field');
+    const basket = document.getElementById('basket');
+    const levelChip = document.getElementById('levelChip');
+    const caughtChip = document.getElementById('caughtChip');
+    const missedChip = document.getElementById('missedChip');
+    const modal = document.getElementById('modal'), modalCard = document.getElementById('modalCard'), modalIcon = document.getElementById('modalIcon'), modalTitle = document.getElementById('modalTitle'), modalText = document.getElementById('modalText'), modalBtn = document.getElementById('modalBtn');
+    
+    const HOURGLASS_SVG = '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+    const SUN_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+    const MANNA_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><ellipse cx="16" cy="20" rx="9" ry="5" fill="#fffaf0" stroke="#8a6a3b" stroke-width="2.5"/><path d="M9 18c2-2 5-3 7-3s5 1 7 3" stroke="#8a6a3b" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="13" cy="20" r="1" fill="#8a6a3b"/><circle cx="19" cy="20" r="1" fill="#8a6a3b"/></svg>';
+
+    let currentLevel = 0;
+    let caught = 0, missed = 0, over = false, basketX = 50, fallers = [], rafId = null, spawnTimer = null;
+    let keysPressed = {};
+
+    function showModal(kind, title, lines, btnLabel, onBtnClick){
+      modalCard.classList.remove('success','timeout');
+      if(kind==='success') modalCard.classList.add('success');
+      if(kind==='timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind==='success' ? SUN_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Continue';
+      modal.classList.add('active');
+      modalBtn.onclick = () => {
+        modal.classList.remove('active');
+        if (onBtnClick) onBtnClick();
+      };
+    }
+
+    function updateHud(){
+      levelChip.textContent = `Level: ${currentLevel + 1} / ${LEVELS.length}`;
+      caughtChip.textContent = `Caught: ${caught} / ${LEVELS[currentLevel].target}`;
+      missedChip.textContent = `Missed: ${missed} / ${MAX_MISS}`;
+      missedChip.classList.toggle('warn', missed >= MAX_MISS - 2 && missed < MAX_MISS);
+      missedChip.classList.toggle('bad', missed >= MAX_MISS);
+    }
+
+    function setBasketPosition(xPct){
+      basketX = Math.max(8, Math.min(92, xPct));
+      basket.style.left = basketX + '%';
+    }
+
+    function setBasketFromPointer(clientX){
+      const r = field.getBoundingClientRect();
+      const x = ((clientX - r.left) / r.width) * 100;
+      setBasketPosition(x);
+    }
+
+    field.addEventListener('pointermove', e => { if (!over) setBasketFromPointer(e.clientX); });
+    field.addEventListener('pointerdown', e => {
+      if (over) return;
+      setBasketFromPointer(e.clientX);
+      const tgt = e.target.closest('.item');
+      if (tgt && !tgt.classList.contains('caught')) catchItem(tgt);
+    });
+
+    window.addEventListener('keydown', e => {
+      if (['ArrowLeft', 'ArrowRight'].includes(e.key)) {
+        keysPressed[e.key] = true;
+      }
+    });
+
+    window.addEventListener('keyup', e => {
+      if (['ArrowLeft', 'ArrowRight'].includes(e.key)) {
+        keysPressed[e.key] = false;
+      }
+    });
+
+    function spawnItem(){
+      const el = document.createElement('div');
+      el.className = 'item';
+      el.innerHTML = MANNA_SVG;
+      const x = 5 + Math.random() * 90;
+      el.style.left = x + '%';
+      el.style.top = '-40px';
+      el.dataset.x = x;
+      el.dataset.y = -40;
+      el.dataset.dx = (50 - x) * 0.001;
+      field.appendChild(el);
+      fallers.push(el);
+    }
+
+    function catchItem(el){
+      el.classList.add('caught');
+      caught++;
+      updateHud();
+      setTimeout(() => el.remove(), 350);
+      const idx = fallers.indexOf(el);
+      if (idx >= 0) fallers.splice(idx, 1);
+      if (caught >= LEVELS[currentLevel].target) {
+        if (currentLevel < LEVELS.length - 1) {
+          levelComplete();
+        } else {
+          finish(true);
+        }
+      }
+    }
+
+    function tick(){
+      if (over) return;
+
+      // Handle keyboard movement
+      if (keysPressed['ArrowLeft']) {
+        setBasketPosition(basketX - 1.2);
+      }
+      if (keysPressed['ArrowRight']) {
+        setBasketPosition(basketX + 1.2);
+      }
+
+      const r = field.getBoundingClientRect();
+      const h = r.height;
+      const levelCfg = LEVELS[currentLevel];
+      const disappearY = h - 25; // ground line height
+
+      for (let i = fallers.length - 1; i >= 0; i--){
+        const el = fallers[i];
+        let y = parseFloat(el.dataset.y) + levelCfg.speed;
+        let x = parseFloat(el.dataset.x) + parseFloat(el.dataset.dx);
+        
+        el.dataset.y = y;
+        el.dataset.x = x;
+        el.style.top = y + 'px';
+        el.style.left = x + '%';
+
+        // Catch logic (near bottom/basket area)
+        if (y > disappearY - 45 && y < disappearY && Math.abs(x - basketX) < 10){
+          catchItem(el);
+        } else if (y >= disappearY){
+          missed++;
+          updateHud();
+          el.remove();
+          fallers.splice(i, 1);
+          if (missed >= MAX_MISS) finish(false, `${missed} pieces of manna fell to the ground.`);
+        }
+      }
+      rafId = requestAnimationFrame(tick);
+    }
+
+    function scheduleSpawn(){
+      const [minMs, maxMs] = LEVELS[currentLevel].spawnRate;
+      const next = minMs + Math.random() * (maxMs - minMs);
+      spawnTimer = setTimeout(() => {
+        if (over) return;
+        spawnItem();
+        scheduleSpawn();
+      }, next);
+    }
+
+    function startLevel(lvlIndex){
+      currentLevel = lvlIndex;
+      caught = 0;
+      missed = 0;
+      over = false;
+      fallers.forEach(f => f.remove());
+      fallers = [];
+      updateHud();
+      if (rafId) cancelAnimationFrame(rafId);
+      if (spawnTimer) clearTimeout(spawnTimer);
+      rafId = requestAnimationFrame(tick);
+      scheduleSpawn();
+    }
+
+    function levelComplete(){
+      over = true;
+      if (rafId) cancelAnimationFrame(rafId);
+      if (spawnTimer) clearTimeout(spawnTimer);
+      showModal('success', `Level ${currentLevel + 1} Cleared!`, [`You gathered ${caught} manna pieces.`, 'Get ready for faster dropping manna!'], `Start Level ${currentLevel + 2}`, () => {
+        startLevel(currentLevel + 1);
+      });
+    }
+
+    function finish(success, reason){
+      if (over) return;
+      over = true;
+      if (rafId) cancelAnimationFrame(rafId);
+      if (spawnTimer) clearTimeout(spawnTimer);
+      if (success){
+        showModal('success','All 5 Levels Completed!',[`You gathered all the required manna!`, '"Then the Lord said to Moses, "I will rain down bread from heaven for you." — Exodus 16:4'],'Play Again', () => location.reload());
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'manna_drop'}, '*');
+      } else {
+        showModal('timeout','Manna spoiled!',[reason || 'Time’s up.', '"Be still before the Lord and wait patiently." — Psalm 37:7'],'Try Again', () => location.reload());
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    startLevel(0);
+    addEventListener('game-timeout', () => finish(false, 'Time’s up! The day ended.'));
+  </script>
+</body>
+</html>

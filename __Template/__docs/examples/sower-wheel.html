@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>The Parable of the Sower — Memory Wheel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; user-select:none; }
+  :root { --ink:#3a2410; --accent:#ffd84d; --bg:#fbf6ed; --good:#2e7d32; --field:#e8dfd1; }
+  html, body { width:100%; height:100%; overflow:hidden; background:var(--bg); font-family:'Comic Neue', Arial, sans-serif; color:var(--ink); }
+  body { display:flex; align-items:center; justify-content:center; }
+  .wrap { width:1020px; padding:14px; display:flex; flex-direction:column; align-items:center; transform:scale(var(--game-scale, 1)); transform-origin:center; }
+
+  header { text-align:center; margin-bottom:6px; }
+  h1 { font-size:1.5rem; }
+  .sub { font-size:.85rem; opacity:.8; margin-top:2px; }
+
+  .hud { display:flex; gap:14px; align-items:center; margin:8px 0; flex-wrap:wrap; justify-content:center; }
+  .chip { background:#fff; border:2px solid var(--ink); border-radius:10px; padding:5px 14px; font-weight:800; font-size:.88rem; }
+  .chip.phase { background:var(--accent); }
+  .btn-action { background:var(--accent); border:2px solid var(--ink); padding:7px 18px; border-radius:10px; font-family:inherit; font-weight:800; cursor:pointer; box-shadow:0 3px 0 #9d7613; transition:transform .1s; }
+  .btn-action:active { transform:translateY(2px); box-shadow:none; }
+  .btn-action:disabled { opacity:.45; cursor:not-allowed; box-shadow:none; }
+
+  .scene { display:flex; gap:16px; align-items:flex-start; }
+
+  .legend { width:200px; background:#fff; border:3px solid #c9c3b7; border-radius:14px; padding:12px; display:flex; flex-direction:column; gap:9px; }
+  .legend h3 { font-size:.9rem; margin-bottom:2px; }
+  .legend-item { display:flex; align-items:center; gap:8px; }
+  .swatch { width:22px; height:22px; border-radius:6px; border:2px solid var(--ink); flex-shrink:0; }
+  .legend-item div.txt { font-size:.74rem; line-height:1.15; }
+  .legend-item div.txt b { display:block; font-size:.8rem; }
+  .hint { font-size:.72rem; opacity:.8; line-height:1.35; margin-top:4px; border-top:2px dashed #c9c3b7; padding-top:8px; }
+
+  .field-wrap { position:relative; }
+  .canvas-container { width:760px; height:460px; border:4px solid var(--ink); border-radius:16px; overflow:hidden; background:var(--field); position:relative; }
+  canvas { display:block; width:100%; height:100%; cursor:default; }
+  canvas.plantable { cursor:crosshair; }
+
+  .pointer { position:absolute; top:-4px; left:50%; transform:translateX(-50%); width:0; height:0;
+    border-left:14px solid transparent; border-right:14px solid transparent; border-top:20px solid var(--accent);
+    filter:drop-shadow(0 2px 0 var(--ink)); z-index:3; }
+  .pointer::after { content:''; position:absolute; top:-22px; left:-16px; width:32px; height:16px; }
+
+  .start-overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    background:rgba(58,36,16,0.35); z-index:4; border-radius:12px; transition:opacity .3s; }
+  .start-overlay.hidden { display:none; }
+  .btn-start-big { font-size:1.15rem; padding:16px 34px; border-radius:14px; animation:pulse 1.4s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { transform:scale(1); } 50% { transform:scale(1.06); } }
+
+  /* Modal Overlay */
+  .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.6); display:none; align-items:center; justify-content:center; z-index:10; }
+  .modal-overlay.active { display:flex; }
+  .modal-card { background:#fff; border:4px solid var(--ink); border-radius:16px; padding:24px; width:400px; text-align:center; box-shadow:0 8px 0 rgba(0,0,0,.2); }
+  .modal-title { font-size:1.5rem; margin-bottom:8px; }
+  .modal-stats { font-size:.85rem; text-align:left; margin:12px 0; background:#f5f0e6; padding:10px 14px; border-radius:8px; line-height:1.5; }
+  .modal-verse { font-style:italic; font-size:.82rem; margin-top:10px; color:#555; }
+  .modal-btn { background:var(--accent); border:2px solid var(--ink); padding:8px 20px; border-radius:8px; font-family:inherit; font-weight:800; cursor:pointer; margin-top:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>The Parable of the Sower</h1>
+    <div class="sub">Memorize the soil, then sow by memory alone.</div>
+  </header>
+
+  <div class="hud">
+    <div class="chip phase" id="phaseChip">Ready</div>
+    <div class="chip" id="seedChip">Seeds Sown: 0 / 10</div>
+    <div class="chip" id="harvestChip">Yield: 0</div>
+  </div>
+
+  <div class="scene">
+    <div class="legend">
+      <h3>Know Your Soil</h3>
+      <div class="legend-item"><div class="swatch" style="background:#b7a99b"></div><div class="txt"><b>The Path</b>Birds snatch the seed.</div></div>
+      <div class="legend-item"><div class="swatch" style="background:#8a8078"></div><div class="txt"><b>Rocky Ground</b>Sprouts fast, withers fast.</div></div>
+      <div class="legend-item"><div class="swatch" style="background:#4f7942"></div><div class="txt"><b>Among Thorns</b>Choked before it fruits.</div></div>
+      <div class="legend-item"><div class="swatch" style="background:#caa23a"></div><div class="txt"><b>Good Soil</b>A rich, true harvest.</div></div>
+      <div class="hint">The wheel will show you all 8 patches of ground, then spin while the colour fades to plain brown — and it keeps turning a little longer even once it's gone all brown. Track the pointer at the top and remember where each soil ended up, then sow your 10 seeds by memory (max 5 per patch).</div>
+    </div>
+
+    <div class="field-wrap">
+      <div class="pointer"></div>
+      <div class="canvas-container">
+        <canvas id="wheel" width="760" height="460"></canvas>
+        <div class="start-overlay" id="startOverlay">
+          <button class="btn-action btn-start-big" id="startBtn">▶ Start Round</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal">
+  <div class="modal-card">
+    <h2 class="modal-title" id="modalTitle">Harvest Complete</h2>
+    <div class="modal-stats" id="modalStats"></div>
+    <div class="modal-verse">"Other seed fell on good ground, and yielded fruit — some thirtyfold, some sixty, some a hundred." — Mark 4:8 (paraphrased)</div>
+    <button class="modal-btn" id="againBtn">Sow Again</button>
+  </div>
+</div>
+
+<script>
+function fitGameToViewport() {
+  document.documentElement.style.setProperty('--game-scale', Math.min((innerWidth - 20) / 1020, (innerHeight - 20) / 640));
+}
+addEventListener('resize', fitGameToViewport);
+fitGameToViewport();
+
+const SOIL = {
+  PATH:   { name:'The Path',      color:'#b7a99b' },
+  ROCKY:  { name:'Rocky Ground',  color:'#8a8078' },
+  THORNY: { name:'Among Thorns',  color:'#4f7942' },
+  GOOD:   { name:'Good Soil',     color:'#caa23a' }
+};
+const BROWN = '#8d6e63';
+const SLICES = 8;
+const SLICE_ANGLE = (Math.PI * 2) / SLICES;
+const TOTAL_SEEDS = 10;
+
+const canvas = document.getElementById('wheel');
+const ctx = canvas.getContext('2d');
+const CX = canvas.width / 2, CY = canvas.height / 2, RADIUS = 300;
+
+const phaseChip = document.getElementById('phaseChip');
+const seedChip = document.getElementById('seedChip');
+const harvestChip = document.getElementById('harvestChip');
+const startBtn = document.getElementById('startBtn');
+const startOverlay = document.getElementById('startOverlay');
+const modal = document.getElementById('modal');
+
+let sectionTypes = [];
+let rotation = 0;
+let fadeT = 0;      // 0 = true colours, 1 = all brown
+let phase = 'IDLE';  // IDLE, REVEAL, SPIN, PLANT, HARVEST, RESULT
+let seeds = [];
+let sliceCounts = new Array(SLICES).fill(0);
+let finalRotation = 0;
+const MAX_PER_SLICE = 5;
+
+function hexToRgb(h) {
+  const n = parseInt(h.slice(1), 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+}
+function lerpColor(a, b, t) {
+  const [r1,g1,b1] = hexToRgb(a), [r2,g2,b2] = hexToRgb(b);
+  const r = Math.round(r1 + (r2-r1)*t), g = Math.round(g1 + (g2-g1)*t), bl = Math.round(b1 + (b2-b1)*t);
+  return `rgb(${r},${g},${bl})`;
+}
+function normalize(a) { return ((a % (Math.PI*2)) + Math.PI*2) % (Math.PI*2); }
+function easeOutCubic(t) { return 1 - Math.pow(1-t, 3); }
+
+function shuffle(arr) {
+  for (let i = arr.length-1; i > 0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+function goodSlicesAdjacent(arr) {
+  const goodIdx = [];
+  arr.forEach((t, i) => { if (t === 'GOOD') goodIdx.push(i); });
+  const [a, b] = goodIdx;
+  const diff = Math.abs(a - b);
+  return diff === 1 || diff === SLICES - 1; // adjacent, including wrap-around
+}
+
+function shuffleSections() {
+  let arr;
+  do {
+    arr = shuffle(['PATH','PATH','ROCKY','ROCKY','THORNY','THORNY','GOOD','GOOD']);
+  } while (goodSlicesAdjacent(arr));
+  return arr;
+}
+
+function newRound() {
+  sectionTypes = shuffleSections();
+  rotation = 0;
+  fadeT = 0;
+  seeds = [];
+  sliceCounts = new Array(SLICES).fill(0);
+  phase = 'IDLE';
+  finalRotation = 0;
+  canvas.classList.remove('plantable');
+  phaseChip.textContent = 'Ready';
+  seedChip.textContent = `Seeds Sown: 0 / ${TOTAL_SEEDS}`;
+  harvestChip.textContent = 'Yield: 0';
+  startOverlay.classList.remove('hidden');
+  modal.classList.remove('active');
+  draw();
+}
+
+function drawWheel() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.save();
+  ctx.translate(CX, CY);
+
+  for (let i = 0; i < SLICES; i++) {
+    const type = sectionTypes[i];
+    const trueColor = SOIL[type].color;
+    const fillColor = lerpColor(trueColor, BROWN, fadeT);
+    const start = -Math.PI/2 + i*SLICE_ANGLE + rotation;
+    const end = start + SLICE_ANGLE;
+
+    ctx.beginPath();
+    ctx.moveTo(0,0);
+    ctx.arc(0,0,RADIUS,start,end);
+    ctx.closePath();
+    ctx.fillStyle = fillColor;
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(58,36,16,0.55)';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Label fades out with the colour
+    const labelAlpha = phase === 'RESULT' ? 1 : Math.max(0, 1 - fadeT*1.6);
+    if (labelAlpha > 0.02) {
+      const mid = start + SLICE_ANGLE/2;
+      ctx.save();
+      ctx.rotate(mid + Math.PI/2);
+      ctx.translate(0, -(RADIUS - 34));
+      ctx.fillStyle = `rgba(58,36,16,${labelAlpha})`;
+      ctx.font = 'bold 13px "Comic Neue", Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText(SOIL[type].name, 0, 0);
+      ctx.restore();
+    }
+  }
+
+  // hub
+  ctx.beginPath();
+  ctx.arc(0,0,26,0,Math.PI*2);
+  ctx.fillStyle = '#fff';
+  ctx.strokeStyle = 'var(--ink)';
+  ctx.lineStyle = 3;
+  ctx.fillStyle = '#fbf6ed';
+  ctx.strokeStyle = '#3a2410';
+  ctx.lineWidth = 3;
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.restore();
+
+  // seed markers (drawn in canvas space, not rotated)
+  seeds.forEach((s, idx) => {
+    ctx.save();
+    ctx.translate(s.x, s.y);
+    if (phase === 'RESULT') {
+      drawResult(s.resultType);
+    } else {
+      ctx.beginPath();
+      ctx.ellipse(0,0,6,5,0,0,Math.PI*2);
+      ctx.fillStyle = '#f4e3b2';
+      ctx.strokeStyle = '#3a2410';
+      ctx.lineWidth = 1.5;
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#3a2410';
+      ctx.font = 'bold 10px "Comic Neue", Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText(idx+1, 0, -11);
+    }
+    ctx.restore();
+  });
+}
+
+function drawResult(type) {
+  if (type === 'GOOD') {
+    ctx.strokeStyle = '#caa23a';
+    ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(0,-30); ctx.stroke();
+    ctx.fillStyle = '#f4d36b';
+    ctx.strokeStyle = '#3a2410';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.ellipse(0,-34,6,11,0,0,Math.PI*2); ctx.fill(); ctx.stroke();
+  } else if (type === 'ROCKY') {
+    ctx.strokeStyle = '#8d6e63';
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(4,-14); ctx.stroke();
+    ctx.fillStyle = '#c9b79a';
+    ctx.strokeStyle = '#3a2410';
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.ellipse(4,-17,4,7,0.4,0,Math.PI*2); ctx.fill(); ctx.stroke();
+  } else if (type === 'THORNY') {
+    ctx.strokeStyle = '#4f7942';
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(-3,-18); ctx.stroke();
+    ctx.strokeStyle = '#2e5024';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(-10,-10); ctx.lineTo(4,-16); ctx.moveTo(-8,-18); ctx.lineTo(2,-8); ctx.stroke();
+  } else {
+    // PATH — eaten, show a little bird
+    ctx.fillStyle = '#3a2410';
+    ctx.beginPath(); ctx.arc(0,-8,4,0,Math.PI*2); ctx.fill();
+    ctx.strokeStyle = '#3a2410';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(-7,-9); ctx.lineTo(0,-6); ctx.lineTo(7,-9); ctx.stroke();
+  }
+}
+
+function draw() { drawWheel(); }
+
+startBtn.addEventListener('click', () => {
+  if (phase !== 'IDLE') return;
+  startOverlay.classList.add('hidden');
+  runReveal();
+});
+
+function runReveal() {
+  phase = 'REVEAL';
+  phaseChip.textContent = 'Memorize the soil!';
+  rotation = 0; fadeT = 0;
+  draw();
+  setTimeout(runSpin, 2000);
+}
+
+function runSpin() {
+  phase = 'SPIN';
+  phaseChip.textContent = 'Spinning... keep tracking it!';
+
+  const duration = 9000;
+  const fadeFraction = 0.32;                       // colour is fully gone well before it stops
+  const turnsBeforeFade = 2.5 + Math.random();      // already 2.5-3.5 turns in by the time it's brown
+  const rotationAtFade = turnsBeforeFade * Math.PI*2;
+  const totalRotation = rotationAtFade / easeOutCubic(fadeFraction);
+
+  const t0 = performance.now();
+  let announcedBrown = false;
+
+  function step(now) {
+    const p = Math.min(1, (now - t0) / duration);
+    rotation = easeOutCubic(p) * totalRotation;
+    fadeT = Math.min(1, p / fadeFraction);
+    if (fadeT >= 1 && !announcedBrown) {
+      announcedBrown = true;
+      phaseChip.textContent = 'All brown now — still spinning!';
+    }
+    draw();
+    if (p < 1) {
+      requestAnimationFrame(step);
+    } else {
+      finalRotation = normalize(rotation);
+      rotation = finalRotation;
+      fadeT = 1;
+      draw();
+      startPlanting();
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+function startPlanting() {
+  phase = 'PLANT';
+  phaseChip.textContent = `Sow by memory! (0/${TOTAL_SEEDS})`;
+  canvas.classList.add('plantable');
+}
+
+canvas.addEventListener('click', (e) => {
+  if (phase !== 'PLANT' || seeds.length >= TOTAL_SEEDS) return;
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const x = (e.clientX - rect.left) * scaleX;
+  const y = (e.clientY - rect.top) * scaleY;
+
+  const dx = x - CX, dy = y - CY;
+  const dist = Math.hypot(dx, dy);
+  if (dist > RADIUS || dist < 26) return; // outside the field or on the hub
+
+  const angle = Math.atan2(dy, dx);
+  const rel = normalize(angle - finalRotation + Math.PI/2);
+  const sliceIndex = Math.floor(rel / SLICE_ANGLE) % SLICES;
+
+  if (sliceCounts[sliceIndex] >= MAX_PER_SLICE) {
+    const prevText = phaseChip.textContent;
+    phaseChip.textContent = 'That patch is full — max 5 seeds!';
+    setTimeout(() => {
+      if (phase === 'PLANT') phaseChip.textContent = prevText;
+    }, 900);
+    return;
+  }
+
+  sliceCounts[sliceIndex]++;
+  seeds.push({ x, y, sliceIndex });
+  seedChip.textContent = `Seeds Sown: ${seeds.length} / ${TOTAL_SEEDS}`;
+  phaseChip.textContent = `Sow by memory! (${seeds.length}/${TOTAL_SEEDS})`;
+  draw();
+
+  if (seeds.length >= TOTAL_SEEDS) {
+    canvas.classList.remove('plantable');
+    phase = 'HARVEST';
+    phaseChip.textContent = 'Revealing the ground...';
+    setTimeout(runHarvestReveal, 500);
+  }
+});
+
+function runHarvestReveal() {
+  const duration = 1400;
+  const t0 = performance.now();
+  function step(now) {
+    const p = Math.min(1, (now - t0) / duration);
+    fadeT = 1 - p;
+    draw();
+    if (p < 1) requestAnimationFrame(step);
+    else finishHarvest();
+  }
+  requestAnimationFrame(step);
+}
+
+function finishHarvest() {
+  phase = 'RESULT';
+  fadeT = 0;
+
+  let eaten = 0, withered = 0, choked = 0, harvested = 0, yieldTotal = 0;
+  seeds.forEach(s => {
+    const type = sectionTypes[s.sliceIndex];
+    s.resultType = type;
+    if (type === 'PATH') eaten++;
+    else if (type === 'ROCKY') withered++;
+    else if (type === 'THORNY') choked++;
+    else if (type === 'GOOD') {
+      harvested++;
+      const fold = [30,60,100][Math.floor(Math.random()*3)];
+      s.fold = fold;
+      yieldTotal += fold;
+    }
+  });
+
+  draw();
+  harvestChip.textContent = `Yield: ${yieldTotal}`;
+  phaseChip.textContent = 'Harvest complete';
+
+  const title = document.getElementById('modalTitle');
+  const stats = document.getElementById('modalStats');
+  title.textContent = harvested > 0 ? 'A Harvest, By Memory!' : 'No Harvest This Time';
+  stats.innerHTML = `
+    • <b>Seeds Sown:</b> ${seeds.length}<br>
+    • <b>Snatched by Birds (Path):</b> ${eaten}<br>
+    • <b>Withered (Rocky Ground):</b> ${withered}<br>
+    • <b>Choked (Among Thorns):</b> ${choked}<br>
+    • <b>Good Soil Hits:</b> ${harvested} / ${TOTAL_SEEDS}<br>
+    • <b>Total Yield:</b> ${yieldTotal}
+  `;
+  setTimeout(() => modal.classList.add('active'), 700);
+}
+
+document.getElementById('againBtn').addEventListener('click', newRound);
+
+newRound();
+</script>
+</body>
+</html>

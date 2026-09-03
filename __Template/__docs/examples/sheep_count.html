@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Sheep Counting — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:14px;flex:none;display:flex;flex-direction:column;align-items:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.5rem;margin:0 0 4px}
+    .sub{text-align:center;font-size:.85rem;opacity:.8;margin-bottom:6px}
+    .hud{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:6px;font-size:.9rem;font-weight:800}
+    .chip{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:4px 10px}
+    .chip.warn{background:#ffe5b4;border-color:#a85b00}
+    .stage{flex:1;position:relative;border:4px solid var(--ink);border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#a4d2ff 0%,#d9ecff 60%,#7aae5d 60%,#5a8c2f 100%);box-shadow:0 6px 0 #b88f5b}
+    .hills{position:absolute;left:0;right:0;top:50%;height:30%;background:radial-gradient(ellipse at 50% 100%,#7aae5d 0 60%,transparent 60%)}
+    .hill{position:absolute;border-radius:50%;height:120px;background:radial-gradient(ellipse at 50% 100%,#5a8c2f 0 70%,transparent 70%)}
+    .pen{position:absolute;left:30px;bottom:30px;width:170px;height:130px;background:rgba(255,255,255,.4);border:4px solid #7a5d2a;border-radius:8px;z-index:1}
+    .pen::before{content:"PEN";position:absolute;left:6px;top:6px;background:#fff;border:2px solid var(--ink);border-radius:6px;padding:0 6px;font-size:.7rem;font-weight:800}
+    .pen .gate{position:absolute;left:50%;top:-12px;width:60px;height:18px;background:#a8861d;border:3px solid var(--ink);border-radius:6px 6px 0 0;transform:translateX(-50%)}
+    .barn{position:absolute;right:24px;bottom:30px;width:130px;height:90px;background:#c62828;border:4px solid var(--ink);border-radius:6px;z-index:1}
+    .barn::before{content:"";position:absolute;left:14px;top:-30px;width:100px;height:30px;background:#c62828;border:4px solid var(--ink);clip-path:polygon(0 100%,50% 0,100% 100%)}
+    .barn::after{content:"";position:absolute;left:48px;bottom:6px;width:34px;height:46px;background:#7a3a18;border:3px solid var(--ink);border-radius:14px 14px 0 0}
+    .meadow{position:absolute;left:0;right:0;top:60%;bottom:0;background:linear-gradient(180deg,#7aae5d 0%,#5a8c2f 100%);z-index:0}
+    .sheep{position:absolute;width:60px;height:50px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3;transition:left .6s ease, top .6s ease, transform .25s}
+    .sheep svg{width:100%;height:100%}
+    .sheep.lost svg{filter:drop-shadow(0 0 8px rgba(255,216,77,.9)) brightness(1.05);animation:bobble 1.5s ease-in-out infinite}
+    @keyframes bobble{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    .sheep.walking{animation:walkWiggle .5s ease-in-out infinite}
+    @keyframes walkWiggle{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-2px) rotate(-3deg)}}
+    .sheep .ring{position:absolute;inset:-6px;border:3px dashed rgba(255,216,77,.8);border-radius:50%;animation:spin 2.5s linear infinite}
+    .count-panel{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:#fff;border:3px solid var(--ink);border-radius:12px;padding:6px 14px;display:flex;gap:10px;align-items:center;z-index:5;box-shadow:0 3px 0 #b88f5b}
+    .count-panel .label{font-size:.85rem;font-weight:800}
+    .count-panel input{width:80px;height:32px;font-size:1.2rem;text-align:center;border:2px solid var(--ink);border-radius:8px;font-family:inherit;font-weight:800;color:var(--ink);background:#fffbe6;outline:none}
+    .count-panel button{padding:6px 12px;border:2px solid var(--ink);border-radius:8px;background:var(--accent);font-family:inherit;font-weight:800;cursor:pointer;box-shadow:0 2px 0 #9d7613}
+    .count-panel button:active{transform:translateY(1px);box-shadow:0 1px 0 #9d7613}
+    .count-panel .feedback{font-size:.8rem;font-weight:800;color:var(--good);min-width:90px}
+    .count-panel .feedback.bad{color:var(--bad)}
+    .banner{position:absolute;right:24px;top:14px;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:3px 8px;font-size:.78rem;font-weight:800;z-index:5}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Sheep Counting</h1>
+    <div class="sub">Count the sheep. Then tap the lost one to bring it home.</div>
+    <div class="hud">
+      <div class="chip" id="roundChip">Round 1 / 5</div>
+      <div class="chip" id="homeChip">Home: 0 / 5</div>
+      <div class="chip warn" id="errChip">Wanders: 0 / 3</div>
+    </div>
+    <div class="stage" id="stage">
+      <div class="meadow"></div>
+      <div class="pen"><div class="gate"></div></div>
+      <div class="barn"></div>
+      <div class="hills"></div>
+      <div class="banner" id="banner">Look at the flock…</div>
+      <div class="count-panel">
+        <div class="label">How many in the flock?</div>
+        <input type="number" id="countInput" min="1" max="20">
+        <button id="countBtn" type="button">Check</button>
+        <div class="feedback" id="feedback">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 90, timer: true };
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+
+    const SHEEP_SVG='<svg viewBox="0 0 60 50" xmlns="http://www.w3.org/2000/svg"><ellipse cx="30" cy="32" rx="20" ry="14" fill="#f5f0e6" stroke="#3a2410" stroke-width="2.5"/><circle cx="18" cy="22" r="5" fill="#fff" stroke="#3a2410" stroke-width="2"/><circle cx="22" cy="18" r="5" fill="#fff" stroke="#3a2410" stroke-width="2"/><circle cx="28" cy="16" r="5" fill="#fff" stroke="#3a2410" stroke-width="2"/><circle cx="36" cy="18" r="5" fill="#fff" stroke="#3a2410" stroke-width="2"/><circle cx="40" cy="22" r="5" fill="#fff" stroke="#3a2410" stroke-width="2"/><ellipse cx="42" cy="32" rx="10" ry="9" fill="#5e3e0a" stroke="#3a2410" stroke-width="2.5"/><circle cx="46" cy="30" r="1.2" fill="#fff"/><path d="M14 44 l 0 4 M22 44 l 0 4 M30 44 l 0 4 M38 44 l 0 4 M46 44 l 0 4" stroke="#3a2410" stroke-width="2" stroke-linecap="round"/></svg>';
+    const LOST_SVG='<svg viewBox="0 0 60 50" xmlns="http://www.w3.org/2000/svg"><ellipse cx="30" cy="32" rx="20" ry="14" fill="#fff7c2" stroke="#3a2410" stroke-width="2.5"/><circle cx="18" cy="22" r="5" fill="#fff" stroke="#3a2410" stroke-width="2"/><circle cx="22" cy="18" r="5" fill="#fff" stroke="#3a2410" stroke-width="2"/><circle cx="28" cy="16" r="5" fill="#fff" stroke="#3a2410" stroke-width="2"/><circle cx="36" cy="18" r="5" fill="#fff" stroke="#3a2410" stroke-width="2"/><circle cx="40" cy="22" r="5" fill="#fff" stroke="#3a2410" stroke-width="2"/><ellipse cx="42" cy="32" rx="10" ry="9" fill="#5e3e0a" stroke="#3a2410" stroke-width="2.5"/><circle cx="46" cy="30" r="1.2" fill="#fff"/><path d="M14 44 l 0 4 M22 44 l 0 4 M30 44 l 0 4 M38 44 l 0 4 M46 44 l 0 4" stroke="#3a2410" stroke-width="2" stroke-linecap="round"/></svg>';
+    const SUN_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+    const HOURGLASS_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+
+    const stage=document.getElementById('stage'),banner=document.getElementById('banner');
+    const roundChip=document.getElementById('roundChip'),homeChip=document.getElementById('homeChip'),errChip=document.getElementById('errChip');
+    const countInput=document.getElementById('countInput'),countBtn=document.getElementById('countBtn'),feedback=document.getElementById('feedback');
+    const modal=document.getElementById('modal'),modalCard=document.getElementById('modalCard'),modalIcon=document.getElementById('modalIcon'),modalTitle=document.getElementById('modalTitle'),modalText=document.getElementById('modalText'),modalBtn=document.getElementById('modalBtn');
+
+    function showModal(kind, title, lines, btnLabel){
+      modalCard.classList.remove('success','timeout');
+      if(kind==='success') modalCard.classList.add('success');
+      if(kind==='timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind==='success' ? SUN_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    const ROUNDS = [3, 5, 6, 7, 9];
+    let round = 0, home = 0, errors = 0, over = false;
+    const MAX_ERR = 3;
+    let flock = [], lost = null, lostIndex = -1, total = 0;
+    let phase = 'count'; // 'count' or 'find'
+    const stageRect = () => stage.getBoundingClientRect();
+
+    function placeRandomSpot(elem, avoidIndex){
+      const r = stageRect();
+      const x = 20 + Math.random() * (r.width - 100);
+      const y = 200 + Math.random() * (r.height - 250);
+      elem.style.left = x + 'px';
+      elem.style.top  = y + 'px';
+      elem.dataset.x = x;
+      elem.dataset.y = y;
+    }
+
+    function buildRound(){
+      // Clear sheep (and their old click handlers are GC'd with the elements)
+      [...stage.querySelectorAll('.sheep')].forEach(s => s.remove());
+      const n = ROUNDS[round];
+      total = n;
+      flock = [];
+      for (let i=0;i<n;i++){
+        const s = document.createElement('div');
+        s.className = 'sheep walking';
+        s.innerHTML = SHEEP_SVG;
+        s.style.left = '';
+        s.style.top = '';
+        s.style.transition = '';
+        stage.appendChild(s);
+        placeRandomSpot(s, i);
+        flock.push(s);
+      }
+      // Pick a "lost" sheep (visually highlighted)
+      lostIndex = Math.floor(Math.random()*n);
+      lost = flock[lostIndex];
+      lost.classList.add('lost');
+      // Remove any prior ring
+      const oldRing = lost.querySelector('.ring'); if (oldRing) oldRing.remove();
+      const ring = document.createElement('div');
+      ring.className = 'ring';
+      lost.appendChild(ring);
+      // Count input fresh
+      countInput.value = '';
+      countInput.focus();
+      feedback.textContent = '\u00a0';
+      feedback.classList.remove('bad');
+      phase = 'count';
+      banner.textContent = 'Count the sheep in the flock';
+      roundChip.textContent = `Round ${round+1} / ${ROUNDS.length}`;
+      attachHandlers();
+    }
+
+    function checkCount(){
+      if (over || phase !== 'count') return;
+      const v = parseInt(countInput.value, 10);
+      if (isNaN(v)){
+        feedback.textContent = 'Type a number';
+        feedback.classList.add('bad');
+        return;
+      }
+      if (v === total){
+        feedback.textContent = 'Correct!';
+        feedback.classList.remove('bad');
+        // Make lost sheep run off and hide it
+        const r = stageRect();
+        lost.style.transition = 'left 1.2s ease, top 1.2s ease, transform 1.2s';
+        lost.style.left = (r.width - 40) + 'px';
+        lost.style.top  = '40px';
+        lost.classList.remove('walking');
+        // Remove the ring
+        const ring = lost.querySelector('.ring');
+        if (ring) ring.remove();
+        // Make other sheep walk to the pen
+        flock.forEach((s, i) => {
+          if (i === lostIndex) return;
+          s.classList.remove('walking');
+          s.style.transition = 'left .8s ease, top .8s ease';
+          s.style.left = (50 + (i%5)*12) + 'px';
+          s.style.top  = (stageRect().height - 110 + Math.floor(i/5)*30) + 'px';
+        });
+        setTimeout(()=>{
+          // Move lost off to the top right
+          lost.style.left = (r.width - 30) + 'px';
+          lost.style.top  = '20px';
+          // Re-show "Find the lost sheep"
+          banner.textContent = 'Find the lost sheep!';
+          feedback.textContent = 'Tap the lone one';
+          phase = 'find';
+        }, 1300);
+      } else {
+        feedback.textContent = (v < total ? 'Too few' : 'Too many');
+        feedback.classList.add('bad');
+        errors++;
+        errChip.textContent = `Wanders: ${errors} / ${MAX_ERR}`;
+        if (errors >= MAX_ERR) finish(false, 'too many wrong counts');
+      }
+    }
+
+    countBtn.addEventListener('click', checkCount);
+    countInput.addEventListener('keydown', e => { if (e.key === 'Enter') checkCount(); });
+
+    function onSheepTap(s, idx){
+      if (over || phase !== 'find') return;
+      if (idx === lostIndex){
+        s.classList.add('walking');
+        // Walk back to the pen
+        const r = stageRect();
+        s.style.transition = 'left 1.2s ease, top 1.2s ease';
+        s.style.left = (60 + (idx%5)*12) + 'px';
+        s.style.top  = (r.height - 110 + Math.floor(idx/5)*30) + 'px';
+        s.classList.remove('lost');
+        home++;
+        homeChip.textContent = `Home: ${home} / ${ROUNDS.length}`;
+        setTimeout(()=>{
+          round++;
+          if (round >= ROUNDS.length){
+            finish(true);
+          } else {
+            buildRound();
+          }
+        }, 1400);
+      } else {
+        s.style.outline = '3px solid #c62828';
+        s.style.outlineOffset = '-3px';
+        setTimeout(()=> s.style.outline = '', 400);
+        errors++;
+        errChip.textContent = `Wanders: ${errors} / ${MAX_ERR}`;
+        if (errors >= MAX_ERR) finish(false, 'too many mistakes');
+      }
+    }
+
+    function attachHandlers(){
+      flock.forEach((s, idx) => {
+        s.addEventListener('click', e => { e.stopPropagation(); onSheepTap(s, idx); });
+      });
+    }
+
+    function finish(success, reason){
+      if (over) return;
+      over = true;
+      if (success){
+        showModal('success','All sheep are home!',['The shepherd found every lost sheep.', '"Rejoice with me; I have found my lost sheep." — Luke 15:6'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'sheep_count'}, '*');
+      } else {
+        showModal('timeout','Some sheep are still out.',[reason || 'Too many wrong answers.', '"Does he not leave the ninety-nine in the open country and go after the lost sheep?" — Luke 15:4'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    buildRound();
+    addEventListener('game-timeout', () => { if (!over) finish(false, 'time up'); });
+  </script>
+</body>
+</html>
