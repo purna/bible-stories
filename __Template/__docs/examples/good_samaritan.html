@@ -12,7 +12,7 @@
   <script src="_shared/timer.js"></script>
   <style>
     *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
-    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0;--game-scale:1}
     html,body{width:100%;height:100%;overflow:hidden}
     body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center}
     .wrap{width:960px;max-width:none;height:540px;margin:0;padding:14px;flex:none;display:flex;flex-direction:column;align-items:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
@@ -23,15 +23,18 @@
     .chip.warn{background:#ffe5b4;border-color:#a85b00}
     .chip.bad{background:#ffd0d0;border-color:var(--bad)}
     .chip.good{background:#d6f5d6;border-color:var(--good)}
-    .scene{flex:1;display:grid;grid-template-columns:170px 1fr 170px;gap:14px;width:100%;max-width:920px;align-items:stretch}
+    .scene{flex:1;display:grid;grid-template-columns:220px 1fr 180px;gap:14px;width:100%;max-width:920px;align-items:stretch}
     .panel{background:#fff;border:3px solid #c9c3b7;border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:8px;align-items:center;overflow:hidden}
     .panel .label{font-size:.85rem;font-weight:800;text-align:center}
-    .tray{background:#fff;border:3px dashed #c9c3b7;border-radius:12px;padding:8px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;width:100%;min-height:0}
-    .item{width:60px;height:60px;border-radius:10px;background:var(--accent);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:grab;box-shadow:0 3px 0 #9d7613;transition:transform .14s,filter .14s,opacity .14s}
-    .item .icon{width:46px;height:46px;display:block}
+    .tray{background:#fff;border:3px dashed #c9c3b7;border-radius:12px;padding:8px;display:grid;grid-template-columns:repeat(2, 1fr);gap:8px;width:100%;min-height:0;overflow-y:auto}
+    
+    /* Uniform item card styling */
+    .item{width:100%;height:68px;border-radius:10px;background:var(--accent);border:2px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:grab;box-shadow:0 3px 0 #9d7613;transition:transform .14s,filter .14s,opacity .14s;padding:4px}
+    .item .icon{width:34px;height:34px;display:block}
+    .item .title{font-size:.68rem;font-weight:800;text-align:center;line-height:1.1;margin-top:2px;color:var(--ink)}
     .item.claimed,.item.sortable-chosen{opacity:.85;transform:scale(1.05);filter:brightness(1.08);cursor:grabbing}
     .item.gone{opacity:.22;pointer-events:none;box-shadow:none}
-    .item.bad{background:#ffb8b8}
+
     .field{position:relative;border:3px solid var(--ink);border-radius:14px;background:linear-gradient(180deg,#a4d2ff 0%,#cfe6f6 50%,#7aae5d 50%,#5a8c2f 100%);overflow:hidden;display:flex;align-items:center;justify-content:center}
     .road{position:absolute;left:0;right:0;top:62%;height:80px;background:#7a5d2a;border-top:3px dashed #fff;border-bottom:3px dashed #fff}
     .field .cloud{position:absolute;top:8px;width:50px;height:20px;background:#fff;border:2px solid var(--ink);border-radius:20px;opacity:.85}
@@ -39,7 +42,7 @@
     .man{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);width:80px;height:120px;display:flex;align-items:center;justify-content:center;z-index:2}
     .man svg{width:100%;height:100%}
     .drop{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;align-items:center;justify-content:center;z-index:1}
-    .drop .halo{position:absolute;left:50%;top:54%;width:120px;height:160px;transform:translate(-50%,-50%);border:4px dashed rgba(255,216,77,.8);border-radius:14px;transition:transform .2s,opacity .2s;opacity:.4}
+    .drop .halo{position:absolute;left:50%;top:54%;width:130px;height:160px;transform:translate(-50%,-50%);border:4px dashed rgba(255,216,77,.9);border-radius:14px;transition:transform .2s,opacity .2s;opacity:.5}
     .drop.target .halo{opacity:1;transform:translate(-50%,-50%) scale(1.05);animation:pulse 1.2s infinite}
     .drop.wrong .halo{border-color:var(--bad);animation:shake .35s}
     @keyframes pulse{0%,100%{opacity:.8;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.04)}}
@@ -47,21 +50,30 @@
     .heal{position:absolute;left:50%;top:54%;width:80px;height:120px;display:flex;align-items:center;justify-content:center;z-index:3;pointer-events:none}
     .heal svg{width:100%;height:100%}
     .items-applied{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);display:flex;gap:6px;z-index:4}
-    .items-applied .chip-mini{width:30px;height:30px;background:#fff;border:2px solid var(--ink);border-radius:6px;display:flex;align-items:center;justify-content:center}
-    .items-applied .chip-mini svg{width:24px;height:24px}
+    .items-applied .chip-mini{width:32px;height:32px;background:#fff;border:2px solid var(--ink);border-radius:6px;display:flex;align-items:center;justify-content:center}
+    .items-applied .chip-mini svg{width:22px;height:22px}
     .samaritan{position:absolute;right:14px;top:8px;width:48px;height:60px;display:flex;align-items:center;justify-content:center;z-index:4}
     .samaritan svg{width:100%;height:100%}
     .priest{position:absolute;left:14px;top:8px;width:48px;height:60px;display:flex;align-items:center;justify-content:center;z-index:4;opacity:.7}
     .priest svg{width:100%;height:100%}
     .priest.walking{animation:walkAway 2s ease-in forwards}
     @keyframes walkAway{0%{left:14px;opacity:.7}100%{left:-80px;opacity:0}}
-    .banner{position:absolute;right:14px;bottom:14px;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:3px 8px;font-size:.78rem;font-weight:800;z-index:5}
+    .banner{position:absolute;right:14px;bottom:14px;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 10px;font-size:.78rem;font-weight:800;z-index:5}
+
+    /* Fallback Modal Styles */
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;z-index:100}
+    .modal-overlay.active{display:flex}
+    .modal-card{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:20px;text-align:center;max-width:320px;box-shadow:0 6px 0 var(--ink)}
+    .modal-icon svg{width:48px;height:48px}
+    .modal-title{font-size:1.3rem;margin:10px 0}
+    .modal-text{font-size:.9rem;margin-bottom:15px}
+    .modal-btn{padding:8px 16px;background:var(--accent);border:2px solid var(--ink);border-radius:8px;font-weight:800;cursor:pointer}
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1>The Good Samaritan</h1>
-    <div class="sub">Drag the right supplies onto the hurt man. Avoid the rocks and snakes!</div>
+    <div class="sub">Choose helpful care items for the injured traveler. Avoid supplies that cause harm or danger!</div>
     <div class="hud">
       <div class="chip" id="roundChip">Round 1 / 3</div>
       <div class="chip good" id="goodChip">Helped: 0</div>
@@ -83,12 +95,12 @@
         <div class="man" id="man"></div>
         <div class="heal" id="heal"></div>
         <div class="items-applied" id="applied"></div>
-        <div class="banner" id="banner">Drag supplies to the hurt man</div>
+        <div class="banner" id="banner">Drag beneficial supplies to the traveler</div>
       </div>
       <div class="panel">
         <div class="label">TRAVELERS</div>
-        <div style="font-size:.75rem;line-height:1.2;text-align:center;opacity:.85">A priest and a Levite walked by. Then a Samaritan stopped to help.</div>
-        <div style="font-size:.7rem;text-align:center;margin-top:auto;opacity:.6">"Go and do likewise."</div>
+        <div style="font-size:.78rem;line-height:1.25;text-align:center;opacity:.85;margin-top:6px">A priest and a Levite passed by on the other side. But a Samaritan stopped with compassion.</div>
+        <div style="font-size:.72rem;text-align:center;margin-top:auto;opacity:.7;font-weight:800">"Go and do likewise." — Luke 10:37</div>
       </div>
     </div>
   </div>
@@ -102,18 +114,28 @@
   </div>
   <script>
     window.GAME_CONFIG = { timerSeconds: 60, timer: true };
-    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
-    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+    function fitGameToViewport(){
+      const scale = Math.max(0.2, Math.min(innerWidth / 960, innerHeight / 540));
+      document.documentElement.style.setProperty('--game-scale', scale);
+    }
+    addEventListener('resize', fitGameToViewport); 
+    fitGameToViewport();
 
+    // Replaced cartoon items with plausible ancient supplies (good vs harmful/impractical)
     const ITEMS = {
-      water:   { name:'Water',  good:true,  svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><path d="M23 4 C 14 16 10 22 10 30 a 13 13 0 0 0 26 0 c 0 -8 -4 -14 -13 -26 z" fill="#7ec3f0" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><path d="M16 24 q 4 6 14 0" stroke="#fff" stroke-width="2" fill="none" opacity=".7"/></svg>' },
-      bandage: { name:'Bandage',good:true,  svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="18" width="34" height="10" fill="#f5e9d6" stroke="#3a2410" stroke-width="2.5"/><circle cx="14" cy="23" r="1.5" fill="#3a2410"/><circle cx="20" cy="23" r="1.5" fill="#3a2410"/><circle cx="26" cy="23" r="1.5" fill="#3a2410"/><circle cx="32" cy="23" r="1.5" fill="#3a2410"/></svg>' },
-      bread:   { name:'Bread',  good:true,  svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23" cy="26" rx="16" ry="10" fill="#d4a86a" stroke="#3a2410" stroke-width="3"/><path d="M11 26 q 4 -4 8 0 M19 24 q 4 -2 6 0 M27 24 q 4 -2 7 0" stroke="#3a2410" stroke-width="1.5" fill="none"/></svg>' },
-      oil:     { name:'Oil',    good:true,  svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><path d="M18 8 v 8 l -4 6 v 18 a 4 4 0 0 0 4 4 h 10 a 4 4 0 0 0 4 -4 v -18 l -4 -6 v -8 z" fill="#a3b56a" stroke="#3a2410" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 26 h 14" stroke="#3a2410" stroke-width="1.5"/></svg>' },
-      cloak:   { name:'Cloak',  good:true,  svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><path d="M10 10 q 13 4 26 0 l 4 26 q -17 4 -34 0 z" fill="#7e57c2" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><path d="M23 10 v 30" stroke="#3a2410" stroke-width="1.5" opacity=".5"/></svg>' },
-      rock:    { name:'Rock',   good:false, svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><path d="M8 30 q 0 -14 12 -16 q 4 -6 12 -2 q 6 0 6 10 q 0 10 -10 12 q -14 2 -20 -4 z" fill="#8a8a8a" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><path d="M14 26 q 4 -6 10 -6" stroke="#3a2410" stroke-width="1.5" fill="none" opacity=".5"/></svg>' },
-      snake:   { name:'Snake',  good:false, svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><path d="M6 30 q 6 -10 12 0 q 6 10 12 0 q 6 -10 12 0" fill="none" stroke="#3a8c4a" stroke-width="4" stroke-linecap="round"/><circle cx="6" cy="30" r="2" fill="#3a8c4a" stroke="#3a2410" stroke-width="1.5"/><path d="M4 28 l -2 2 M4 32 l -2 -2" stroke="#3a2410" stroke-width="1.5" stroke-linecap="round"/></svg>' },
+      water:    { name:'Fresh Water',  good:true,  svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><path d="M23 4 C 14 16 10 22 10 30 a 13 13 0 0 0 26 0 c 0 -8 -4 -14 -13 -26 z" fill="#7ec3f0" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><path d="M16 24 q 4 6 14 0" stroke="#fff" stroke-width="2" fill="none" opacity=".7"/></svg>' },
+      bandage:  { name:'Clean Linen',  good:true,  svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="18" width="34" height="10" fill="#f5e9d6" stroke="#3a2410" stroke-width="2.5"/><circle cx="14" cy="23" r="1.5" fill="#3a2410"/><circle cx="20" cy="23" r="1.5" fill="#3a2410"/><circle cx="26" cy="23" r="1.5" fill="#3a2410"/><circle cx="32" cy="23" r="1.5" fill="#3a2410"/></svg>' },
+      oil:      { name:'Olive Oil',    good:true,  svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><path d="M18 8 v 8 l -4 6 v 18 a 4 4 0 0 0 4 4 h 10 a 4 4 0 0 0 4 -4 v -18 l -4 -6 v -8 z" fill="#a3b56a" stroke="#3a2410" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 26 h 14" stroke="#3a2410" stroke-width="1.5"/></svg>' },
+      wine:     { name:'Healing Wine', good:true,  svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><path d="M14 10 h 18 v 12 a 9 9 0 0 1 -18 0 z" fill="#c62828" stroke="#3a2410" stroke-width="2.5"/><path d="M23 22 v 14 M16 36 h 14" stroke="#3a2410" stroke-width="2.5"/></svg>' },
+      cloak:    { name:'Warm Cloak',   good:true,  svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><path d="M10 10 q 13 4 26 0 l 4 26 q -17 4 -34 0 z" fill="#7e57c2" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><path d="M23 10 v 30" stroke="#3a2410" stroke-width="1.5" opacity=".5"/></svg>' },
+      
+      // Plausible bad/harmful items
+      vinegar:  { name:'Sour Vinegar', good:false, svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><path d="M16 10 h 14 v 6 l 3 4 v 16 h -20 v -16 l 3 -4 z" fill="#d4a86a" stroke="#3a2410" stroke-width="2.5"/><path d="M16 24 l 14 0 M20 20 l 6 10" stroke="#c62828" stroke-width="2"/></svg>' },
+      salt:     { name:'Coarse Salt',  good:false, svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><path d="M12 16 h 22 l -3 20 h -16 z" fill="#fff" stroke="#3a2410" stroke-width="2.5"/><circle cx="18" cy="24" r="1.5" fill="#3a2410"/><circle cx="28" cy="26" r="1.5" fill="#3a2410"/><circle cx="23" cy="30" r="1.5" fill="#3a2410"/></svg>' },
+      gold:     { name:'Gold Coins',   good:false, svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="24" r="9" fill="#ffd84d" stroke="#3a2410" stroke-width="2"/><circle cx="26" cy="20" r="9" fill="#ffd84d" stroke="#3a2410" stroke-width="2"/></svg>' },
+      dirtyrag: { name:'Dirty Rags',   good:false, svg:'<svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="16" width="30" height="14" fill="#8d6e63" stroke="#3a2410" stroke-width="2.5" rx="4"/><path d="M12 20 l 8 6 M24 18 l 8 8" stroke="#3a2410" stroke-width="1.5"/></svg>' }
     };
+
     const HURT_SVG='<svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="18" r="10" fill="#f8d8b0" stroke="#3a2410" stroke-width="2.5"/><path d="M34 16 q 6 -3 12 0" stroke="#3a2410" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M37 18 l 1 4 l -3 0 z" fill="#3a2410"/><path d="M43 18 l 1 4 l -3 0 z" fill="#3a2410"/><path d="M30 28 q 10 -3 20 0 v 60 h -20 z" fill="#a05a2a" stroke="#3a2410" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 60 l -8 4 M58 60 l 8 4" stroke="#f8d8b0" stroke-width="2.5" stroke-linecap="round"/><path d="M30 88 l 0 16 M40 88 l 0 20 M50 88 l 0 16" stroke="#3a2410" stroke-width="2.5" stroke-linecap="round"/><path d="M18 50 q 8 0 8 6" stroke="#3a2410" stroke-width="2" fill="none" stroke-dasharray="2 2"/></svg>';
     const PRIEST_SVG='<svg viewBox="0 0 48 60" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="14" r="7" fill="#f8d8b0" stroke="#3a2410" stroke-width="2"/><rect x="20" y="6" width="8" height="4" fill="#3a2410"/><path d="M14 22 q 10 -3 20 0 v 26 h -20 z" fill="#3a78c2" stroke="#3a2410" stroke-width="2"/><path d="M22 12 v 0 M26 12 v 0" stroke="#3a2410" stroke-width="1.5"/></svg>';
     const SAMARITAN_SVG='<svg viewBox="0 0 48 60" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="14" r="7" fill="#f8d8b0" stroke="#3a2410" stroke-width="2"/><path d="M18 11 q 6 -4 12 0" stroke="#3a2410" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M14 22 q 10 -3 20 0 v 26 h -20 z" fill="#7e57c2" stroke="#3a2410" stroke-width="2"/><path d="M22 12 l 2 2 l 2 -2" stroke="#3a2410" stroke-width="1.5" fill="none"/></svg>';
@@ -138,15 +160,13 @@
       modalBtn.onclick = () => location.reload();
     }
 
-    // Round configs
     const ROUNDS = [
-      { goods:['water','bandage'], bads:['rock'], needGood:2, label:'A man hurt on the road' },
-      { goods:['water','bandage','bread'], bads:['rock','snake'], needGood:3, label:'A traveler beaten by robbers' },
-      { goods:['water','bandage','bread','oil','cloak'], bads:['rock','snake'], needGood:5, label:'Help the wounded stranger' },
+      { goods:['water','bandage'], bads:['vinegar','salt'], needGood:2, label:'Treat the traveler\'s initial wounds' },
+      { goods:['water','bandage','oil'], bads:['vinegar','dirtyrag'], needGood:3, label:'Pour on oil and soothe his pain' },
+      { goods:['water','bandage','oil','wine','cloak'], bads:['vinegar','salt','gold'], needGood:4, label:'Provide comfort and shelter' },
     ];
     let round=0, helped=0, errors=0, over=false;
     const MAX_ERR=3;
-    const dropSort = null; // re-created each round
     let traySort = null;
     let appliedGood = 0;
 
@@ -160,10 +180,16 @@
       errChip.textContent = `Mistakes: ${errors} / ${MAX_ERR}`;
     }
 
-    function shuffle(arr){ const a=[...arr]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+    function shuffle(arr){
+      const a=[...arr];
+      for(let i=a.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1));
+        [a[i],a[j]]=[a[j],a[i]];
+      }
+      return a;
+    }
 
     function buildRound(){
-      // Clear tray
       trayEl.innerHTML = '';
       appliedEl.innerHTML = '';
       appliedGood = 0;
@@ -171,19 +197,24 @@
       healEl.style.display = 'none';
       manEl.style.display = 'block';
       manEl.style.filter = 'grayscale(.4)';
-      // Destroy previous sortables
-      if (traySort) try{ traySort.destroy(); }catch(e){}
+
+      if (traySort) try { traySort.destroy(); } catch(e){}
+
       const r = ROUNDS[round];
       const items = shuffle([...r.goods, ...r.bads]);
+      
       items.forEach(id => {
+        const itemObj = ITEMS[id];
         const d = document.createElement('div');
-        d.className = 'item';
-        if (!ITEMS[id].good) d.classList.add('bad');
+        d.className = 'item'; // No extra class that gives away good/bad
         d.dataset.id = id;
-        d.setAttribute('data-name', ITEMS[id].name);
-        d.innerHTML = '<div class="icon">'+ITEMS[id].svg+'</div>';
+        d.innerHTML = `
+          <div class="icon">${itemObj.svg}</div>
+          <div class="title">${itemObj.name}</div>
+        `;
         trayEl.appendChild(d);
       });
+
       traySort = new Sortable(trayEl, {
         group:{ name:'samaritan', pull:'clone', put:false },
         draggable:'.item',
@@ -195,6 +226,7 @@
         fallbackOnBody:true,
         fallbackTolerance:3
       });
+
       const s = new Sortable(dropEl, {
         group:'samaritan',
         draggable:'.item',
@@ -210,17 +242,16 @@
           const clone = evt.item;
           const id = clone.dataset.id;
           const item = ITEMS[id];
+
           if (item.good){
             appliedGood++;
-            // Add a mini chip
             const chip = document.createElement('div');
             chip.className = 'chip-mini';
             chip.innerHTML = item.svg;
             appliedEl.appendChild(chip);
             clone.remove();
-            // Heal gradually
+
             if (appliedGood >= r.needGood){
-              // Healed
               manEl.style.filter = 'none';
               manEl.style.display = 'none';
               healEl.style.display = 'block';
@@ -228,12 +259,12 @@
               healEl.firstElementChild.style.filter = 'none';
               helped++;
               updateHud();
-              if (helped >= 3){
+
+              if (helped >= ROUNDS.length){
                 setTimeout(()=> finish(true), 600);
               } else {
                 round++;
                 setTimeout(()=> {
-                  // Animate priest walking away
                   priestEl.classList.add('walking');
                   setTimeout(()=> buildRound(), 800);
                 }, 700);
@@ -245,10 +276,11 @@
             clone.remove();
             errors++;
             errChip.textContent = `Mistakes: ${errors} / ${MAX_ERR}`;
-            if (errors >= MAX_ERR) finish(false, 'too many mistakes');
+            if (errors >= MAX_ERR) finish(false, 'sour supplies or harsh items hurt the traveler');
           }
         }
       });
+
       dropEl._sort = s;
       dropEl.classList.add('target');
       banner.textContent = r.label;
@@ -258,16 +290,16 @@
       if (over) return;
       over = true;
       if (success){
-        showModal('success','Compassion wins!',['You helped the wounded man.', '"Go and do likewise." — Luke 10:37'],'Try again');
+        showModal('success','Compassion Wins!',['You tended the wounded man with care and wisdom.', '"Go and do likewise." — Luke 10:37'],'Try again');
         window.dispatchEvent(new CustomEvent('game-complete'));
         if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'good_samaritan'}, '*');
       } else {
-        showModal('timeout','The man was left to suffer.',[reason || 'Too many mistakes.', '"Love your neighbor as yourself." — Luke 10:27'],'Try again');
+        showModal('timeout','The traveler suffered.',[reason || 'Incorrect supplies were used.', '"Love your neighbor as yourself." — Luke 10:27'],'Try again');
         window.dispatchEvent(new CustomEvent('game-over'));
       }
     }
 
-    buildRound();
+    window.addEventListener('DOMContentLoaded', buildRound);
     updateHud();
     addEventListener('game-timeout', () => { if (!over) finish(false, 'time up'); });
   </script>
