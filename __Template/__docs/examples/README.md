@@ -33,6 +33,7 @@ Sizes shown are the prototypes available in this folder. Pick the closest fit to
 | Listen and Respond | [listen_respond_3x2.html](./listen_respond_3x2.html), [listen_respond_4x2.html](./listen_respond_4x2.html) | 3×2, 4×2 | Jeremiah, Deborah, Nehemiah, Noah |
 | Gather with Care | [garde_game_3x3.html](./garde_game_3x3.html), [garde_game_4x3.html](./garde_game_4x3.html), [garde_game_4x4.html](./garde_game_4x4.html), [garde_game_5x3.html](./garde_game_5x3.html), [garde_game_5x4.html](./garde_game_5x4.html), [garde_game_5x5.html](./garde_game_5x5.html) | 3×3 → 5×5 | Adam, Ruth |
 | Fit the Pieces | [fit_pieces_3x3.html](./fit_pieces_3x3.html), [fit_pieces_4x3.html](./fit_pieces_4x3.html), [fit_pieces_4x4.html](./fit_pieces_4x4.html) | 3×3, 4×3, 4×4 | Joseph, Daniel, Enoch |
+| Fit the Pieces *(themed)* | [temple_builder.html](./temple_builder.html) | 4 stones into a 3×3 grid | Solomon / Temple |
 | Look Closely | [look_closely_3x3.html](./look_closely_3x3.html), [look_closely_4x3.html](./look_closely_4x3.html) | 3×3, 4×3 | Jonah, Jacob |
 | Complete the Story Beat | [tap_sequence_3x2.html](./tap_sequence_3x2.html), [tap_sequence_4x1.html](./tap_sequence_4x1.html) | 3×2, 4×1 | Samuel, Babel |
 | See the Pattern | [match_it_up_3x4.html](./match_it_up_3x4.html), [match_it_up_4x4.html](./match_it_up_4x4.html) | 3×4, 4×4 | David, Isaiah |
@@ -57,6 +58,15 @@ All prototypes that share `_shared/modal.css` use one consistent two-state modal
 - **Timeout / fail (`.timeout`)** — red hourglass icon, red button, the same `.modal-verse` styling on the consolation scripture.
 
 The button text adapts to the mechanic (`Walk again` for find_path, `Try again` elsewhere) and reloads the page.
+
+## Story-themed prototypes (visual variants)
+
+A few prototypes were painted deliberately differently to match their story's atmosphere. They still share `_shared/timer.js` and `_shared/modal.css` for game-end behaviour, but their in-game palette and effects are bespoke:
+
+- **temple_builder.html** — *Fit the Pieces* painted as the Temple of Solomon. Warm sunset sky with drifting clouds, custom `temple-roof` and `temple-pillar` art, golden stone blocks, dust-burst particles on a correct placement, and a small WebAudio chime engine. Dark `--bg` palette (`#1a1008`) instead of the standard cream — keep this when reusing for temple / sanctuary chapters; swap to the cream palette if reusing for a non-sacred context.
+- **david_goliath.html** — *Time the sling* mechanic. Distinct visual style; still uses shared timer + modal.
+
+These files load `_shared/modal.css` and `_shared/timer.js` like the others, so the timer chip and the win/lose modal look identical. Only the play surface and effects are themed.
 
 ## Theming a copy for a new story
 
