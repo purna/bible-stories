@@ -329,8 +329,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Ancient, overwhelming, foreign
 - **Animation**: Subtle emissive pulse on wall materials (`setHSL` with sine)
 - **Camera**: Slow orbit at fixed low phi, target at `(-30, -3, -30)`
-- **3D**: `scenes/babylon_city.js`
-- **SVG**: `assets/svg/scene_babylon_city.svg`
+- **3D**: `assets/scenes/act1_babylon_city.js`
+- **SVG**: `assets/svg/act1_scene_babylon_city.svg`
 
 #### 1-2: Training House Interior (svg: `training_house`)
 - **Line**: "King Nebuchadnezzar ordered his best captives trained for royal service."
@@ -350,7 +350,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Cramped, institutional, between two worlds
 - **Animation**: Parallax on shelves (depth 0.4) vs. figures (depth 0.8)
 - **Camera**: Static. Slight Dutch tilt (2-3 degrees) to convey unease.
-- **SVG**: `assets/svg/scene_training_house.svg`
+- **SVG**: `assets/svg/act1_scene_training_house.svg`
 
 #### 1-3: Royal Table (svg: `royal_table`)
 - **Line**: "You will eat from MY royal table — the finest food and wine in all Babylon!"
@@ -370,11 +370,11 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Excess, temptation, abundance
 - **Animation**: Parallax on hanging lamps (depth 0.9), table (depth 0.5), floor (depth 0.1)
 - **Camera**: Static overhead.
-- **SVG**: `assets/svg/scene_royal_table.svg`
+- **SVG**: `assets/svg/act1_scene_royal_table.svg`
 
 #### 1-4: Royal Table (repeat)
 - Same scene, speaker shift from Nebuchadnezzar → Narrator. No new design needed.
-- **SVG**: `assets/svg/scene_royal_table.svg`
+- **SVG**: `assets/svg/act1_scene_royal_table.svg`
 
 #### 1-5: Daniel Decides (svg: `daniel_decides`)
 - **Line**: "I cannot eat the king's food. Not because I'm ungrateful. But because there's one thing I won't give up."
@@ -394,7 +394,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Moral weight, quiet resolve
 - **Animation**: Subtle glow pulse on the window light. Parallax on background elements.
 - **Camera**: Static. Slight push-in on the choice moment.
-- **SVG**: `assets/svg/scene_daniel_decides.svg`
+- **SVG**: `assets/svg/act1_scene_daniel_decides.svg`
 
 #### 1-6: Vegetable Test (svg: `daniel_vegetable_test`)
 - **Line**: "Give us vegetables and water for ten days."
@@ -414,7 +414,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Humble but dignified, simplicity as strength
 - **Animation**: Gentle morning light glow. Subtle sway of plant leaves. Parallax on window (depth 0.9), table (depth 0.5).
 - **Camera**: Static.
-- **SVG**: `assets/svg/scene_daniel_vegetable_test.svg`
+- **SVG**: `assets/svg/act1_scene_daniel_vegetable_test.svg`
 
 #### 1-7: Daniel Healthier (svg: `daniel_healthier`)
 - **Line**: "At the end of ten days, Daniel and his friends looked healthier..."
@@ -434,7 +434,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: God's provision, quiet vindication
 - **Animation**: Subtle glow on Daniel's group. No movement otherwise.
 - **Camera**: Static. Split-screen composition. Center divider is a shadow/gap.
-- **SVG**: `assets/svg/scene_daniel_healthier.svg`
+- **SVG**: `assets/svg/act1_scene_daniel_healthier.svg`
 
 #### 1-8: Daniel Serving (svg: `daniel_serve`)
 - **Line**: "They didn't make a speech about it. They didn't demand to be noticed."
@@ -454,7 +454,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Faithful service, quiet diligence
 - **Animation**: Torch flicker (opacity pulse). Subtle writing animation on the scroll. Parallax on torch flames (depth 0.9), desk (depth 0.5), background figures (depth 0.2).
 - **Camera**: Medium shot, desk in foreground.
-- **SVG**: `assets/svg/scene_daniel_serve.svg`
+- **SVG**: `assets/svg/act1_scene_daniel_serve.svg`
 
 #### 1-9: Babylon City (repeat) — epilogue of chapter 1
 - **Sketch**:
@@ -464,8 +464,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: ziggurat, city walls
   F: river
   ```
-- **3D**: `scenes/babylon_city.js`
-- **SVG**: `assets/svg/scene_babylon_city.svg`
+- **3D**: `assets/scenes/act1_babylon_city.js`
+- **SVG**: `assets/svg/act1_scene_babylon_city.svg`
 
 ---
 
@@ -489,8 +489,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Imposing, ancient, powerful
 - **Animation**: Torch flicker (`intensity = 1.5 + sin(t*5)*0.3`)
 - **Camera**: Orbit around throne dais, phi oscillation
-- **3D**: `scenes/throne_room.js`
-- **SVG**: `assets/svg/scene_throne_room.svg`
+- **3D**: `assets/scenes/act2_throne_room.js`
+- **SVG**: `assets/svg/act2_scene_throne_room.svg`
 
 #### 2-2: Royal Court (3D: `babylon_court`)
 - **Line**: "Interpret my dream — or ALL the wise men of Babylon die."
@@ -510,8 +510,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Terror, impossible demand
 - **Animation**: Torch flicker. Subtle crowd shiver animation. Parallax on torch sconces (depth 0.9), crowd (depth 0.5), walls (depth 0.2).
 - **Camera**: Static. Tight crowd composition. The king is slightly elevated.
-- **3D**: `scenes/babylon_court.js`
-- **SVG**: `assets/svg/scene_babylon_court.svg`
+- **3D**: `assets/scenes/act1_babylon_court.js`
+- **SVG**: `assets/svg/act1_scene_babylon_court.svg`
 
 #### 2-3: Daniel Prays (3D: `daniel_prays`)
 - **Line**: "No human could answer. But Daniel didn't guess. He prayed first."
@@ -531,11 +531,11 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Intimacy, turning to God
 - **Animation**: Gentle prayer glow. Subtle star twinkle. Parallax on window stars (depth 0.95), Daniel (depth 0.7), city (depth 0.3).
 - **Camera**: Static. Through the window frame.
-- **SVG**: `assets/svg/scene_daniel_prays.svg`
+- **SVG**: `assets/svg/act2_scene_daniel_prays.svg`
 
 #### 2-4: Daniel Prays (repeat with dialogue)
 - Same scene, different line text.
-- **SVG**: `assets/svg/scene_daniel_prays.svg`
+- **SVG**: `assets/svg/act2_scene_daniel_prays.svg`
 
 #### 2-5: Statue Dream Vision (3D: `statue_dream`)
 - **Line**: "Your dream: a statue of terrifying brightness. Gold head. Silver chest. Bronze belly. Iron legs. Feet of clay."
@@ -556,13 +556,13 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Animation**: Statue slow rotation (`rotation.y = t * 0.1`), light burst pulse, ray opacity pulse, breathing zoom
 - **Camera**: Orbit + breathing zoom (`distance = base + sin(t*0.3)*5`), gentle phi oscillation
 - **Vision Minigame**: 5 real fragments (statue sections) + 1 decoy (shining bronze), 60-second risk timer
-- **3D**: `scenes/statue_dream.js`
-- **SVG**: `assets/svg/scene_statue_dream.svg`
+- **3D**: `assets/scenes/act2_statue_dream.js`
+- **SVG**: `assets/svg/act2_scene_statue_dream.svg`
 
 #### 2-6: Statue Dream Vision (repeat with dialogue)
 - Same scene, different line text.
-- **3D**: `scenes/statue_dream.js`
-- **SVG**: `assets/svg/scene_statue_dream.svg`
+- **3D**: `assets/scenes/act2_statue_dream.js`
+- **SVG**: `assets/svg/act2_scene_statue_dream.svg`
 
 #### 2-7: Vision Minigame (vision: `statue_dream`)
 - **Line**: "Name the dream correctly — or every wise man in Babylon dies."
@@ -582,9 +582,9 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Divine revelation, urgency
 - **Animation**: Light burst pulse, ray opacity pulse
 - **Camera**: Orbit + breathing zoom
-- **3D**: `scenes/statue_dream.js`
-- **JSON**: `data/scenes/statue_dream.json`
-- **SVG**: `assets/svg/scene_statue_dream.svg`
+- **3D**: `assets/scenes/act2_statue_dream.js`
+- **JSON**: `data/assets/scenes/act2_statue_dream.json`
+- **SVG**: `assets/svg/act2_scene_statue_dream.svg`
 
 #### 2-8: Nebuchadnezzar Bows (3D: `nebuchadnezzar_bows`)
 - **Line**: "Your God is the God of gods and Lord of kings!"
@@ -604,7 +604,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Humility, vindication
 - **Animation**: Subtle crown glow. Gentle dawn light. Parallax on background courtiers (depth 0.3), king (depth 0.6), crown (depth 1.0).
 - **Camera**: Static. Low angle on the king kneeling, Daniel standing.
-- **SVG**: `assets/svg/scene_nebuchadnezzar_bows.svg`
+- **SVG**: `assets/svg/act2_scene_nebuchadnezzar_bows.svg`
 
 #### 2-9: Daniel Serves (repeat from 1-8) — epilogue
 - **Sketch**:
@@ -614,7 +614,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: desk, scrolls
   F: D writing
   ```
-- **SVG**: `assets/svg/scene_daniel_serve.svg`
+- **SVG**: `assets/svg/act1_scene_daniel_serve.svg`
 
 ---
 
@@ -638,8 +638,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Absurd scale of the king's pride, imposing but false
 - **Animation**: Slow camera orbit. Flags flutter in the wind.
 - **Camera**: Slow orbit, distance 35 units, height 12 units.
-- **3D**: `scenes/golden_statue.js`
-- **SVG**: `assets/svg/scene_golden_statue.svg`
+- **3D**: `assets/scenes/act3_golden_statue.js`
+- **SVG**: `assets/svg/act3_scene_golden_statue.svg`
 
 #### 3-2: Royal Command (repeat scene, speaker shift)
 - **Line**: "BOW DOWN! When the music plays — EVERYONE bows to my image!"
@@ -650,8 +650,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: golden statue, crowd below
   F: desert ground
   ```
-- **3D**: `scenes/golden_statue.js`
-- **SVG**: `assets/svg/scene_golden_statue.svg`
+- **3D**: `assets/scenes/act3_golden_statue.js`
+- **SVG**: `assets/svg/act3_scene_golden_statue.svg`
 
 #### 3-3: Plain of Dura (svg: `plain_of_dura`)
 - **Line**: "This test was not designed for Daniel. It was designed for his friends."
@@ -671,7 +671,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Isolation, choice between conforming and standing alone
 - **Animation**: Subtle wind on robes. Crowd rustle animation. Parallax on crowd (depth 0.3), statue (depth 0.5), three friends (depth 0.9).
 - **Camera**: Static wide.
-- **SVG**: `assets/svg/scene_plain_of_dura.svg`
+- **SVG**: `assets/svg/act3_scene_plain_of_dura.svg`
 
 #### 3-4: Friends Standing (svg: `friends_standing`)
 - **Line**: "O king — our God is able to save us. But even if he doesn't — we will not bow."
@@ -691,7 +691,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Heroic defiance regardless of outcome
 - **Animation**: Subtle glow on their silhouette. Shadow stretch animation. Parallax on background (depth 0.2), friends (depth 0.7).
 - **Camera**: Static. Three-quarter view.
-- **SVG**: `assets/svg/scene_friends_standing.svg`
+- **SVG**: `assets/svg/act3_scene_friends_standing.svg`
 
 #### 3-5: Friends Standing (repeat with full dialogue)
 - Same scene, full declaration.
@@ -702,7 +702,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: F, M, A (close group)
   F: long shadows stretching
   ```
-- **SVG**: `assets/svg/scene_friends_standing.svg`
+- **SVG**: `assets/svg/act3_scene_friends_standing.svg`
 
 #### 3-6: Furnace Lit (3D: `furnace_lit`)
 - **Line**: "Heat the furnace SEVEN TIMES HOTTER! Bind them! THROW THEM IN!"
@@ -722,8 +722,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Terror, heat, divine presence in the fire
 - **Animation**: Flame opacity/scale pulse (per-flame speed/offset), heat shimmer rise, divine light pulse
 - **Camera**: Low-angle rise toward ceiling opening, phi = 1.2 (shallow angle)
-- **3D**: `scenes/furnace_lit.js`
-- **SVG**: `assets/svg/scene_furnace_lit.svg`
+- **3D**: `assets/scenes/act3_furnace_lit.js`
+- **SVG**: `assets/svg/act3_scene_furnace_lit.svg`
 
 #### 3-7: Furnace Lit (repeat)
 - Same scene, different line text.
@@ -734,8 +734,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: furnace walls, figures
   F: flames, heat shimmer
   ```
-- **3D**: `scenes/furnace_lit.js`
-- **SVG**: `assets/svg/scene_furnace_lit.svg`
+- **3D**: `assets/scenes/act3_furnace_lit.js`
+- **SVG**: `assets/svg/act3_scene_furnace_lit.svg`
 
 #### 3-8: Four in Furnace (svg: `four_in_furnace`)
 - **Line**: "But I see FOUR walking in the fire. And the fourth looks like a son of the gods."
@@ -755,7 +755,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Divine presence, protective not threatening
 - **Animation**: Fire pulse animation. Subtle glow around the fourth figure. Parallax on flames (depth 0.9), figures (depth 0.5).
 - **Camera**: Static. Tight on the four figures.
-- **SVG**: `assets/svg/scene_four_in_furnace.svg`
+- **SVG**: `assets/svg/act3_scene_four_in_furnace.svg`
 
 #### 3-9: Friends Standing (repeat)
 - **Sketch**:
@@ -765,7 +765,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: F, M, A
   F: shadows
   ```
-- **SVG**: `assets/svg/scene_friends_standing.svg`
+- **SVG**: `assets/svg/act3_scene_friends_standing.svg`
 
 #### 3-10: Four in Furnace (repeat) — closing
 - **Sketch**:
@@ -775,7 +775,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: F, M, A + 4th figure
   F: flames
   ```
-- **SVG**: `assets/svg/scene_four_in_furnace.svg`
+- **SVG**: `assets/svg/act3_scene_four_in_furnace.svg`
 
 ---
 
@@ -799,7 +799,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Decadence, pride, desecration
 - **Animation**: Wine pour animation. Torch flicker. Gentle cup clink. Parallax on hanging torches (depth 0.9), table (depth 0.5), background figures (depth 0.2).
 - **Camera**: Static. Over-the-table perspective.
-- **SVG**: `assets/svg/scene_belshazzar_feast.svg`
+- **SVG**: `assets/svg/act4_scene_belshazzar_feast.svg`
 
 #### 4-2: Belshazzar's Feast (repeat)
 - Same scene, different line text.
@@ -810,7 +810,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: table, B, servants
   F: sacred cups
   ```
-- **SVG**: `assets/svg/scene_belshazzar_feast.svg`
+- **SVG**: `assets/svg/act4_scene_belshazzar_feast.svg`
 
 #### 4-3: Hand Writing — Vision Revealed (3D: `hand_writing`)
 - **Line**: "Suddenly, a human hand appeared and wrote on the wall."
@@ -831,8 +831,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Animation**: Word glow pulse, hand subtle sway, candle flicker, divine light pulse
 - **Camera**: Slow orbit around chamber, target at `(0, -2, -5)`
 - **Vision Minigame**: 3 real fragments (MENE, TEKEL, PERES) + 1 decoy (blood wine), 45-second risk timer
-- **3D**: `scenes/hand_writing.js`
-- **SVG**: `assets/svg/scene_hand_writing.svg`
+- **3D**: `assets/scenes/act4_hand_writing.js`
+- **SVG**: `assets/svg/act4_scene_hand_writing.svg`
 
 #### 4-4: Hand Writing (repeat) — king's panic
 - Same scene, different line text.
@@ -843,8 +843,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: glowing words
   F: hand, fleeing courtiers
   ```
-- **3D**: `scenes/hand_writing.js`
-- **SVG**: `assets/svg/scene_hand_writing.svg`
+- **3D**: `assets/scenes/act4_hand_writing.js`
+- **SVG**: `assets/svg/act4_scene_hand_writing.svg`
 
 #### 4-5: Daniel Reads (svg: `daniel_reads`)
 - **Line**: "No one could read it. The queen remembered Daniel."
@@ -864,7 +864,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Wisdom, calm authority
 - **Animation**: Subtle lamp glow. Gentle parchment rustle. Parallax on lamp (depth 0.9), Daniel (depth 0.7), wall writing (depth 0.3).
 - **Camera**: Static. Daniel at left, archway to wall at right.
-- **SVG**: `assets/svg/scene_daniel_reads.svg`
+- **SVG**: `assets/svg/act4_scene_daniel_reads.svg`
 
 #### 4-6: Daniel Reads — Vision Choice (vision: `writing_wall`)
 - **Line**: "The writing says: MENE — God has numbered your kingdom. TEKEL — you have been weighed. PERES — your kingdom is divided."
@@ -884,9 +884,9 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Divine judgment in written form
 - **Animation**: Word glow pulse
 - **Camera**: Slow orbit around chamber
-- **3D**: `scenes/hand_writing.js`
+- **3D**: `assets/scenes/act4_hand_writing.js`
 - **JSON**: `data/scenes/writing_wall.json`
-- **SVG**: `assets/svg/scene_hand_writing.svg`
+- **SVG**: `assets/svg/act4_scene_hand_writing.svg`
 
 #### 4-7: Daniel Reads (repeat with full interpretation)
 - **Sketch**:
@@ -896,7 +896,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: D, scrolls
   F: documents
   ```
-- **SVG**: `assets/svg/scene_daniel_reads.svg`
+- **SVG**: `assets/svg/act4_scene_daniel_reads.svg`
 
 #### 4-9: Babylon Falls (3D: `babylon_falls`)
 - **Line**: "That very night, Belshazzar was killed. Babylon fell."
@@ -916,8 +916,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Destruction, tragedy, prophecy fulfilled
 - **Animation**: Smoke rise/scale, fire pulse/scale, ember float, sky light pulse
 - **Camera**: Orbit with descent, phi oscillation, breathing distance
-- **3D**: `scenes/babylon_falls.js`
-- **SVG**: `assets/svg/scene_babylon_falls.svg`
+- **3D**: `assets/scenes/act4_babylon_falls.js`
+- **SVG**: `assets/svg/act4_scene_babylon_falls.svg`
 
 ---
 
@@ -941,8 +941,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: New power structure, systematic, less ornate than Babylon
 - **Animation**: Subtle flag ripple. Gentle movement of courtiers. Parallax on hanging tapestries (depth 0.8), courtiers (depth 0.5), floor pattern (depth 0.2).
 - **Camera**: Static. Darius at center dais.
-- **3D**: `scenes/persian_court.js`
-- **SVG**: `assets/svg/scene_persian_court.svg`
+- **3D**: `assets/scenes/act5_persian_court.js`
+- **SVG**: `assets/svg/act5_scene_persian_court.svg`
 
 #### 5-2: Satraps Plotting (svg: `satraps_plotting`)
 - **Line**: "They searched for something — anything — to accuse him of."
@@ -962,7 +962,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Secretive, forming opposition
 - **Animation**: Torch flicker. Subtle hand gestures on the map. Parallax on map (depth 0.6), satraps (depth 0.9), wall torches (depth 0.8).
 - **Camera**: Static. Over-the-table view.
-- **SVG**: `assets/svg/scene_satraps_plotting.svg`
+- **SVG**: `assets/svg/act5_scene_satraps_plotting.svg`
 
 #### 5-3: Satraps Plotting (repeat)
 - Same scene, different line text.
@@ -973,7 +973,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: table, maps
   F: satraps
   ```
-- **SVG**: `assets/svg/scene_satraps_plotting.svg`
+- **SVG**: `assets/svg/act5_scene_satraps_plotting.svg`
 
 #### 5-4: The Trap Law (svg: `satraps_plotting`)
 - **Line**: "A new law: for thirty days, anyone who prays... is thrown to the lions."
@@ -993,7 +993,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Sinister, official, targeted
 - **Animation**: Subtle scroll unroll. Writing glow. Parallax on scroll (depth 0.7), hands (depth 0.9), background (depth 0.2).
 - **Camera**: Static. Close-up on the scroll.
-- **SVG**: `assets/svg/scene_satraps_plotting.svg`
+- **SVG**: `assets/svg/act5_scene_satraps_plotting.svg`
 
 #### 5-5: Daniel Praying Window (3D: `daniel_praying_window`)
 - **Line**: "He opened the window facing Jerusalem. He got down on his knees. And he prayed."
@@ -1013,7 +1013,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Devotion, quiet consistency
 - **Animation**: Subtle light beam through window. Gentle prayer hand movement. Parallax on window light (depth 0.9), Daniel (depth 0.5), city below (depth 0.1).
 - **Camera**: Static. Through the window.
-- **SVG**: `assets/svg/scene_daniel_praying_window.svg`
+- **SVG**: `assets/svg/act5_scene_daniel_praying_window.svg`
 
 #### 5-6: Daniel Praying Window (repeat)
 - Same scene, different line text.
@@ -1024,7 +1024,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: city below
   F: D kneeling
   ```
-- **SVG**: `assets/svg/scene_daniel_praying_window.svg`
+- **SVG**: `assets/svg/act5_scene_daniel_praying_window.svg`
 
 #### 5-7: Darius Distressed (svg: `darius_distressed`)
 - **Line**: "I cannot reverse my own law. I'm so sorry, Daniel."
@@ -1044,7 +1044,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Inner turmoil, tragedy
 - **Animation**: Pacing animation. Lamp flicker. Subtle crown shadow on the wall. Parallax on wall map (depth 0.3), Darius (depth 0.7), lamp (depth 0.9).
 - **Camera**: Static. Darius in the foreground, pacing.
-- **SVG**: `assets/svg/scene_darius_distressed.svg`
+- **SVG**: `assets/svg/act5_scene_darius_distressed.svg`
 
 #### 5-8: Lions Den Sealed (svg: `lions_den_sealed`)
 - **Line**: "Daniel was thrown in. The stone was sealed."
@@ -1064,7 +1064,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Entrapment, finality
 - **Animation**: Stone rolling animation. Subtle lion growls (sound + visual rumble). Parallax on torch (depth 0.9), stone (depth 0.6), den mouth (depth 0.3).
 - **Camera**: Static. Looking down into the den from above.
-- **SVG**: `assets/svg/scene_lions_den_sealed.svg`
+- **SVG**: `assets/svg/act5_scene_lions_den_sealed.svg`
 
 #### 5-9: Darius Running (svg: `darius_running`)
 - **Line**: "At dawn, the king ran."
@@ -1084,7 +1084,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Urgency and hope simultaneously
 - **Animation**: Running animation. Dust particles. Sunrise glow intensifying. Parallax on background courtiers (depth 0.2), Darius (depth 0.8), dust cloud (depth 0.6).
 - **Camera**: Static. Low angle on Darius running toward the den.
-- **SVG**: `assets/svg/scene_darius_running.svg`
+- **SVG**: `assets/svg/act5_scene_darius_running.svg`
 
 #### 5-10: Darius Running (repeat)
 - Same scene, different line text.
@@ -1095,7 +1095,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: DA running
   F: courtiers, dust
   ```
-- **SVG**: `assets/svg/scene_darius_running.svg`
+- **SVG**: `assets/svg/act5_scene_darius_running.svg`
 
 #### 5-11: Lions Den Open (3D: `lions_den_open`)
 - **Line**: "My God sent his angel, and the lions' mouths were shut."
@@ -1115,8 +1115,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Peaceful, divine presence, vindication
 - **Animation**: Lion cower (body scale.y oscillation), angel light pulse, beam opacity pulse, Daniel gentle sway
 - **Camera**: Slow rise from pit floor toward opening, orbit
-- **3D**: `scenes/lions_den_open.js`
-- **SVG**: `assets/svg/scene_lions_den_open.svg`
+- **3D**: `assets/scenes/act5_lions_den_open.js`
+- **SVG**: `assets/svg/act5_scene_lions_den_open.svg`
 
 #### 5-12: Lions Den Open (repeat)
 - Same scene, closing dialogue.
@@ -1127,8 +1127,8 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: stone pit, lions, D
   F: angel light, dawn beam
   ```
-- **3D**: `scenes/lions_den_open.js`
-- **SVG**: `assets/svg/scene_lions_den_open.svg`
+- **3D**: `assets/scenes/act5_lions_den_open.js`
+- **SVG**: `assets/svg/act5_scene_lions_den_open.svg`
 
 #### 5-13: Daniel Old Man (svg: `daniel_old_man`)
 - **Line**: "And Daniel prospered. Through four kings and two empires — he held the line."
@@ -1148,7 +1148,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Peace, rest, faithful end
 - **Animation**: Gentle page turn. Subtle light through the window. Parallax on window light (depth 0.9), documents (depth 0.5), Daniel (depth 0.7).
 - **Camera**: Static. Comfortable medium shot.
-- **SVG**: `assets/svg/scene_daniel_old_man.svg`
+- **SVG**: `assets/svg/act5_scene_daniel_old_man.svg`
 
 #### 5-14: Daniel Old Man (repeat)
 - Same scene, different line text.
@@ -1159,7 +1159,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
   M: D at desk
   F: scrolls
   ```
-- **SVG**: `assets/svg/scene_daniel_old_man.svg`
+- **SVG**: `assets/svg/act5_scene_daniel_old_man.svg`
 
 #### 5-15: Epilogue — The End (svg: `daniel_epilogue`)
 - **Line**: "THE END — Conviction sustained across seven decades, unbroken."
@@ -1183,7 +1183,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Sinister, official, targeted
 - **Animation**: Subtle scroll unroll. Writing glow. Parallax on scroll (depth 0.7), hands (depth 0.9), background (depth 0.2).
 - **Camera**: Static. Close-up on the scroll.
-- **SVG**: `assets/svg/scene_satraps_plotting.svg`
+- **SVG**: `assets/svg/act5_scene_satraps_plotting.svg`
 
 #### 5-5: Daniel Praying Window (svg: `daniel_praying_window`)
 - **Line**: "He opened the window facing Jerusalem. He got down on his knees. And he prayed."
@@ -1196,11 +1196,11 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Devotion, quiet consistency
 - **Animation**: Subtle light beam through window. Gentle prayer hand movement. Parallax on window light (depth 0.9), Daniel (depth 0.5), city below (depth 0.1).
 - **Camera**: Static. Through the window.
-- **SVG**: `assets/svg/scene_daniel_praying_window.svg`
+- **SVG**: `assets/svg/act5_scene_daniel_praying_window.svg`
 
 #### 5-6: Daniel Praying Window (repeat)
 - Same scene, different line text.
-- **SVG**: `assets/svg/scene_daniel_praying_window.svg`
+- **SVG**: `assets/svg/act5_scene_daniel_praying_window.svg`
 
 #### 5-7: Darius Distressed (svg: `darius_distressed`)
 - **Line**: "I cannot reverse my own law. I'm so sorry, Daniel."
@@ -1213,7 +1213,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Inner turmoil, tragedy
 - **Animation**: Pacing animation. Lamp flicker. Subtle crown shadow on the wall. Parallax on wall map (depth 0.3), Darius (depth 0.7), lamp (depth 0.9).
 - **Camera**: Static. Darius in the foreground, pacing.
-- **SVG**: `assets/svg/scene_darius_distressed.svg`
+- **SVG**: `assets/svg/act5_scene_darius_distressed.svg`
 
 #### 5-8: Lions Den Sealed (svg: `lions_den_sealed`)
 - **Line**: "Daniel was thrown in. The stone was sealed."
@@ -1226,7 +1226,7 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Entrapment, finality
 - **Animation**: Stone rolling animation. Subtle lion growls (sound + visual rumble). Parallax on torch (depth 0.9), stone (depth 0.6), den mouth (depth 0.3).
 - **Camera**: Static. Looking down into the den from above.
-- **SVG**: `assets/svg/scene_lions_den_sealed.svg`
+- **SVG**: `assets/svg/act5_scene_lions_den_sealed.svg`
 
 #### 5-9: Darius Running (svg: `darius_running`)
 - **Line**: "At dawn, the king ran."
@@ -1239,11 +1239,11 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Urgency and hope simultaneously
 - **Animation**: Running animation. Dust particles. Sunrise glow intensifying. Parallax on background courtiers (depth 0.2), Darius (depth 0.8), dust cloud (depth 0.6).
 - **Camera**: Static. Low angle on Darius running toward the den.
-- **SVG**: `assets/svg/scene_darius_running.svg`
+- **SVG**: `assets/svg/act5_scene_darius_running.svg`
 
 #### 5-10: Darius Running (repeat)
 - Same scene, different line text.
-- **SVG**: `assets/svg/scene_darius_running.svg`
+- **SVG**: `assets/svg/act5_scene_darius_running.svg`
 
 #### 5-11: Lions Den Open (3D: `lions_den_open`)
 - **Line**: "My God sent his angel, and the lions' mouths were shut."
@@ -1256,13 +1256,13 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Peaceful, divine presence, vindication
 - **Animation**: Lion cower (body scale.y oscillation), angel light pulse, beam opacity pulse, Daniel gentle sway
 - **Camera**: Slow rise from pit floor toward opening, orbit
-- **3D**: `scenes/lions_den_open.js`
-- **SVG**: `assets/svg/scene_lions_den_open.svg`
+- **3D**: `assets/scenes/act5_lions_den_open.js`
+- **SVG**: `assets/svg/act5_scene_lions_den_open.svg`
 
 #### 5-12: Lions Den Open (repeat)
 - Same scene, closing dialogue.
-- **3D**: `scenes/lions_den_open.js`
-- **SVG**: `assets/svg/scene_lions_den_open.svg`
+- **3D**: `assets/scenes/act5_lions_den_open.js`
+- **SVG**: `assets/svg/act5_scene_lions_den_open.svg`
 
 #### 5-13: Daniel Old Man (svg: `daniel_old_man`)
 - **Line**: "And Daniel prospered. Through four kings and two empires — he held the line."
@@ -1275,11 +1275,11 @@ Interactive vision minigame definitions with fragment positions, decoy flags, ti
 - **Mood**: Peace, rest, faithful end
 - **Animation**: Gentle page turn. Subtle light through the window. Parallax on window light (depth 0.9), documents (depth 0.5), Daniel (depth 0.7).
 - **Camera**: Static. Comfortable medium shot.
-- **SVG**: `assets/svg/scene_daniel_old_man.svg`
+- **SVG**: `assets/svg/act5_scene_daniel_old_man.svg`
 
 #### 5-14: Daniel Old Man (repeat)
 - Same scene, different line text.
-- **SVG**: `assets/svg/scene_daniel_old_man.svg`
+- **SVG**: `assets/svg/act5_scene_daniel_old_man.svg`
 
 #### 5-15: Epilogue — The End (svg: `daniel_epilogue`)
 - **Line**: "THE END — Conviction sustained across seven decades, unbroken."

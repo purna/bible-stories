@@ -15,7 +15,7 @@
   <line x1="225" y1="156" x2="225" y2="200" stroke="#0A0812" stroke-width="1" opacity=".3"/>
   <!-- Column half-visible — hierarchy: places scene in palace -->
   <rect x="268" y="30" width="32" height="128" fill="#1b4965" stroke="#0A0812" stroke-width="2" opacity=".7"/>
-  <rect x="266" y="26" width="34" height="10"  fill="#4ECDC4" opacity=".3" stroke="#0A0812" stroke-width="1" opacity=".5"/>
+  <rect x="266" y="26" width="34" height="10" fill="#4ECDC4" stroke="#0A0812" stroke-width="1" opacity=".5"/>
   <!-- Conspiracy glow — atmosphere, emphasis -->
   <ellipse cx="150" cy="108" rx="100" ry="70" fill="url(#conspGlow)"/>
   <!-- Figure L: satrap 1 — balance -->

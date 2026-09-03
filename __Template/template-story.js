@@ -1,8 +1,8 @@
 /* =========================================================================
    STORY TEMPLATE — Interactive Comic Book (Adam-pattern layered renderer)
    Stack per frame:
-     1. SVG background  (assets/svg/scene_<id>.svg) — parallax via mouse
-     2. Three.js midground (assets/3d/<id>.json + scenes/<id>.js factory)
+     1. SVG background  (assets/svg/actN_scene_<id>.svg) — parallax via mouse
+     2. Three.js midground (assets/3d/actN_<id>.json + assets/scenes/actN_<id>.js factory)
      3. SVG foreground  (assets/svg/fg_<id>.svg) — pops in front of midground
      4. Character SVG + speech/caption overlay (from content-overlay)
    Story data: loaded from data/manifest.json → data/actN_<id>.json (one per act)
@@ -255,7 +255,7 @@ async function renderLine() {
   const svgLayer = document.createElement('div');
   svgLayer.id = 'svgLayer';
   svgLayer.classList.add('svg-behind');
-  svgLayer.innerHTML = await loadSvg(`assets/svg/scene_${sceneKey}.svg`);
+  svgLayer.innerHTML = await loadSvg(`assets/svg/act${actIdx + 1}_scene_${sceneKey}.svg`);
   graphicContainer.appendChild(svgLayer);
   const svgEl = svgLayer.querySelector('svg[data-parallax]');
   if (svgEl) {

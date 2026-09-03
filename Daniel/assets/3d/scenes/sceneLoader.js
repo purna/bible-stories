@@ -1,6 +1,6 @@
 /* =========================================================================
    DANIEL — 3D Scene JSON Loader
-   Reads scene definitions from /assets/3d/scenes/*.json and builds
+   Reads act-prefixed scene definitions from /assets/3d/scenes/*.json and builds
    Three.js toon-shaded scenes at runtime. Falls back to SCENE_FACTORIES
    if JSON is unavailable or fails to load.
 
@@ -360,7 +360,18 @@
         if (sceneCache[id]) return sceneCache[id];
 
         try {
-            var res = await fetch('assets/3d/scenes/' + id + '.json');
+            var sceneActs = {
+                babylon_city: 1,
+                throne_room: 2,
+                statue_dream: 2,
+                furnace_lit: 3,
+                golden_statue: 3,
+                hand_writing: 4,
+                babylon_falls: 4,
+                lions_den_open: 5
+            };
+            var assetId = sceneActs[id] ? 'act' + sceneActs[id] + '_' + id : id;
+            var res = await fetch('assets/3d/scenes/' + assetId + '.json');
             if (!res.ok) throw new Error('Scene JSON not found: ' + id);
             var data = await res.json();
             var result = loadSceneFromJSON(data);

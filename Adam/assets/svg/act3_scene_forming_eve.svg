@@ -19,7 +19,7 @@
   <!-- Adam figure — sleeping on ground --><!-- emphasis: central, horizontal -->
   <rect x="100" y="95" width="42" height="65" fill="#5c4033" stroke="#0A0812" stroke-width="2.5" rx="4"/>
   <circle cx="121" cy="82" r="14" fill="#C8956C" stroke="#0A0812" stroke-width="2"/>
-  <!-- Adam hair/beard */
+  <!-- Adam hair/beard -->
   <path d="M108 80 Q121 70 134 80" fill="none" stroke="#2a1e15" stroke-width="3"/>
   <!-- Adam arm outstretched — variety, gesture -->
   <path d="M100 105 Q70 95 60 110" fill="none" stroke="#5c4033" stroke-width="10" stroke-linecap="round"/>

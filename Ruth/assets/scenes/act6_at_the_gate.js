@@ -1,0 +1,35 @@
+(function (global) {
+  "use strict";
+  var THREE = global.THREE;
+  if (!THREE) return;
+  global.SCENE_FACTORIES = global.SCENE_FACTORIES || {};
+  global.SCENE_FACTORIES.at_the_gate = function () {
+    var scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x4a3820);
+    if (global.makeFog) global.makeFog(scene, 0x4a3820, 0.002);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+    var sun = new THREE.DirectionalLight(0xFFD080, 0.7);
+    sun.position.set(10, 25, 15);
+    scene.add(sun);
+    var ground = new THREE.Mesh(new THREE.PlaneGeometry(80, 60), global.toonMat({ color: 0x6a5840 }));
+    ground.rotation.x = -Math.PI / 2;
+    ground.position.y = -10;
+    scene.add(ground);
+    var gate = new THREE.Mesh(new THREE.BoxGeometry(12, 14, 3), global.toonMat({ color: 0x5a4830 }));
+    gate.position.set(0, -3, -15);
+    scene.add(gate);
+    var archLeft = new THREE.Mesh(new THREE.CylinderGeometry(1, 1, 14, 8), global.toonMat({ color: 0x4a3820 }));
+    archLeft.position.set(-6, -3, -15);
+    scene.add(archLeft);
+    var archRight = new THREE.Mesh(new THREE.CylinderGeometry(1, 1, 14, 8), global.toonMat({ color: 0x4a3820 }));
+    archRight.position.set(6, -3, -15);
+    scene.add(archRight);
+    var bench = new THREE.Mesh(new THREE.BoxGeometry(8, 2, 3), global.toonMat({ color: 0x4a3018 }));
+    bench.position.set(-10, -8, 5);
+    scene.add(bench);
+    var pillar = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 0.8, 10, 8), global.toonMat({ color: 0x7a6850 }));
+    pillar.position.set(15, -5, -10);
+    scene.add(pillar);
+    return { scene: scene, cameraConfig: { distance: 50, height: 14 } };
+  };
+})(window);

@@ -140,7 +140,7 @@ async function renderLine() {
     const svgLayer = document.createElement('div');
     svgLayer.id = 'svgLayer';
     svgLayer.classList.add('svg-behind');
-    svgLayer.innerHTML = await getAsset(`assets/svg/scene_${targetSvgKey}.svg`);
+    svgLayer.innerHTML = await getAsset(`assets/svg/act${actIdx + 1}_scene_${targetSvgKey}.svg`);
     graphicContainer.appendChild(svgLayer);
 
     // 3D scene path (toon shader) on top of SVG with transparent background

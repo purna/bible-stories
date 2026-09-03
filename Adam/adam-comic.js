@@ -343,7 +343,7 @@ async function renderLine() {
     const svgLayer = document.createElement('div');
     svgLayer.id = 'svgLayer';
     svgLayer.classList.add('svg-behind');
-    svgLayer.innerHTML = await getAsset(`assets/svg/scene_${targetSvgKey}.svg`);
+    svgLayer.innerHTML = await getAsset(`assets/svg/act${actIdx + 1}_scene_${targetSvgKey}.svg`);
     graphicContainer.appendChild(svgLayer);
     const svgEl = svgLayer.querySelector('svg[data-parallax]');
     if (svgEl) {

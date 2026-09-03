@@ -1,0 +1,61 @@
+{
+  "id": "at_the_gate",
+  "name": "Ch.6 · At the Gate",
+  "bg": "radial-gradient(circle at 50% 25%, #b89870, #4a3820 70%)",
+  "particle": "dawn",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Boaz went up to the town gate and sat down there. The guardian-redeemer whom Boaz had mentioned came along. Boaz called him to sit.",
+      "cite": "Ruth 4:1"
+    },
+    {
+      "speaker": "boaz",
+      "fx": "type",
+      "align": "left",
+      "text": "Naomi, who has come back from Moab, is selling the piece of land that belonged to our relative Elimelek. I thought I should speak to you about it in the presence of the elders of my people."
+    },
+    {
+      "speaker": "kinsman_redeemer",
+      "fx": "fade",
+      "align": "right",
+      "text": "I will redeem it."
+    },
+    {
+      "speaker": "boaz",
+      "fx": "type",
+      "align": "left",
+      "text": "On the day you buy the land from Naomi, you also acquire Ruth the Moabite, the dead man's widow, in order to maintain the name of the dead with his property.",
+      "cite": "Ruth 4:5"
+    },
+    {
+      "speaker": "kinsman_redeemer",
+      "fx": "fade",
+      "align": "right",
+      "text": "I cannot redeem it because I might endanger my own estate. You redeem it yourself. I cannot do it."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "The witnesses were assembled. The transaction was made before the town elders. Boaz presented the redemption choice clearly and without pressure.",
+      "cite": "Ruth 4:9-10",
+      "choices": [
+        {
+          "label": "Present the witnesses",
+          "note": "The elders confirm the matter before the community."
+        },
+        {
+          "label": "Accept the redemption",
+          "note": "Boaz takes responsibility for Ruth and Naomi's inheritance."
+        }
+      ]
+    }
+  ],
+  "svg": "at_the_gate",
+  "scene": "at_the_gate",
+  "foreground": "fg_at_the_gate",
+  "index": 5
+}

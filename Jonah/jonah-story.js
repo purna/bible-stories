@@ -22,6 +22,7 @@
         id: "escaping", name: "Dialogue: Escaping",
         bg: "radial-gradient(circle at 30% 20%, #1c3a63, #0d2238 65%, #071220)",
         particle: "dusk", svg: "Act1_01_A_small_town_by_the_sea",
+        audio: "assets/audio/music/Act1_Salt_on_the_Tracks.mp3",
         lines: [
           { speaker: "narrator", fx: "fade", text: "Long ago, in a small town by the sea, there lived a man named Jonah.", align: "left", svg: "Act1_01_A_small_town_by_the_sea" },
           { speaker: "god", fx: "bounce", text: "Jonah! Go to the great city of Nineveh. Tell them I see how they treat each other, and it must change.", align: "right", svg: "Act1_02_The_Call_to_Nineveh" },
@@ -44,6 +45,7 @@
         id: "trapped", name: "Feeling Trapped",
         bg: "radial-gradient(circle at 50% 30%, #14335a, #0A1930 60%, #050b18)",
         particle: "storm", svg: "Act2_01_Sky_turned_the_color_of_a_bruise",
+        audio: "assets/audio/music/Act2_Beneath_the_Heavy_Current.mp3",
         lines: [
           { speaker: "narrator", audioSfx: "assets/audio/sfx/storm_wind.mp3", fx: "shake", text: "Out on the water, the sky turned the color of a bruise. The wind began to howl.", align: "left", svg: "Act2_01_Sky_turned_the_color_of_a_bruise" },
           { sfx: "CRASH!", speaker: "sailors", fx: "shake", text: "ALL HANDS! THE SEA IS EATING THE SHIP!", align: "center", svg: "Act2_02_The_sea_is_eating_the_ship" },
@@ -72,6 +74,7 @@
         id: "mission", name: "The Mission",
         bg: "radial-gradient(circle at 60% 20%, #4a3a1a, #5c4033 65%, #23160a)",
         particle: "desert", svg: "Act3_01_Sucked_from_the_deep_spat_onto_the_sand",
+        audio: "assets/audio/music/Act3_Beyond_the_Western_Gate.mp3",
         lines: [
           { sfx: "PTOOEY!", speaker: "narrator", fx: "bounce", text: "The whale swam to shore and spat Jonah out onto the sand.", svg: "Act3_01_Sucked_from_the_deep_spat_onto_the_sand" },
           { speaker: "god", fx: "bounce", text: "Jonah. Go to Nineveh. I'm still asking.", align: "center", svg: "Act3_02_The_second_call" },
@@ -94,6 +97,7 @@
         id: "reflection", name: "Reflection",
         bg: "radial-gradient(circle at 40% 70%, #1e4d6b, #102a43 65%, #071220)",
         particle: "constellation", svg: "Act4_01_They_were_SPARED",
+        audio: "assets/audio/music/Act4_Running_from_Nineveh.mp3",
         lines: [
           { speaker: "jonah", fx: "shake", text: "They were SPARED?! I walked all that way and now everyone just... gets to be fine?!", align: "left", svg: "Act4_01_They_were_SPARED" },
           {

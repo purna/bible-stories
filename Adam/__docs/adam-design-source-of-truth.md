@@ -268,9 +268,9 @@ Camera: [HIGH ORBIT] looking down at center
 - **Mood**: Vast, mysterious, pre-creation emptiness
 - **Animation**: Light pulse (`Math.sin(time*0.5)*0.5`), rays pulsing radially
 - **Camera**: Slow 360° orbit with breathing zoom, gentle roll oscillation
-- **3D**: `scenes/creation_cosmos.js`
-- **JSON**: `assets/3d/creation_cosmos.json`
-- **SVG**: `assets/svg/scene_creation_cosmos.svg`
+- **3D**: `assets/scenes/act1_creation_cosmos.js`
+- **JSON**: `assets/3d/act1_creation_cosmos.json`
+- **SVG**: `assets/svg/act1_scene_creation_cosmos.svg`
 
 #### creation_light
 - **Line**: "LET THERE BE LIGHT! Let there be light."
@@ -298,9 +298,9 @@ Camera: [PUSH-IN] toward center light
 - **Mood**: Divine, explosive, transformative
 - **Animation**: Light scale pulsing, wave rings expanding outward, lightning flickering
 - **Camera**: Push-in on light burst with roll oscillation
-- **3D**: `scenes/creation_light.js`
-- **JSON**: `assets/3d/creation_light.json`
-- **SVG**: `assets/svg/scene_creation_light.svg`
+- **3D**: `assets/scenes/act1_creation_light.js`
+- **JSON**: `assets/3d/act1_creation_light.json`
+- **SVG**: `assets/svg/act1_scene_creation_light.svg`
 
 #### creation_separation
 - **Line**: "And God saw that the light was good. He separated the light from the darkness."
@@ -329,9 +329,9 @@ Camera: [ORBIT] around center divide
 - **Mood**: Divine separation, order from chaos, clarity
 - **Animation**: Light pulses, dark sphere opacity oscillation
 - **Camera**: Slow orbit with breathing zoom
-- **JSON**: `assets/3d/creation_separation.json`
-- **3D**: `scenes/creation_separation.js`
-- **SVG**: `assets/svg/scene_creation_separation.svg`
+- **JSON**: `assets/3d/act1_creation_separation.json`
+- **3D**: `assets/scenes/act1_creation_separation.js`
+- **SVG**: `assets/svg/act1_scene_creation_separation.svg`
 
 #### creation_days
 - **Line**: "Then God said, 'Let us make mankind in our image.'"
@@ -358,8 +358,8 @@ Camera: [PAN] between Adam and Eve
 - **Mood**: Peaceful, abundant, life-filled
 - **Animation**: Divine light pulsing overhead, animals breathing gently
 - **Camera**: Pan between Adam and Eve, gentle orbit
-- **3D**: `scenes/creation_days.js`
-- **SVG**: `assets/svg/scene_creation_days.svg`
+- **3D**: `assets/scenes/act1_creation_days.js`
+- **SVG**: `assets/svg/act1_scene_creation_days.svg`
 ### Chapter 1: The Garden
 
 #### garden_eden
@@ -389,8 +389,8 @@ Camera: [ORBIT] around Tree of Life
 - **Mood**: Sacred, tender, life-giving
 - **Animation**: Tree of Life glow pulsing, dust particles floating
 - **Camera**: Orbit around the Tree of Life
-- **3D**: `scenes/garden_eden.js`
-- **SVG**: `assets/svg/scene_garden_eden.svg`
+- **3D**: `assets/scenes/act2_garden_eden.js`
+- **SVG**: `assets/svg/act2_scene_garden_eden.svg`
 
 #### garden_placed
 - **Line**: "I have placed him in the garden to work it and keep it."
@@ -422,8 +422,8 @@ Camera: [ORBIT] around Adam, light tracking
 - **Mood**: Reverent, warm, purposeful
 - **Animation**: Light scale pulsing, particles floating upward from light
 - **Camera**: Slow orbit around Adam, light tracking
-- **3D**: `scenes/garden_placed.js`
-- **SVG**: `assets/svg/scene_garden_placed.svg`
+- **3D**: `assets/scenes/act2_garden_placed.js`
+- **SVG**: `assets/svg/act2_scene_garden_placed.svg`
 
 #### garden_tended
 - **Line**: "So the man tended the garden. He named every creature."
@@ -450,8 +450,8 @@ Camera: [WIDE PAN] showing Adam with all creatures
 - **Mood**: Peaceful, companionship, harmony
 - **Animation**: Adam's arms gesturing, sheep breathing, birds fluttering wings
 - **Camera**: Wide pan showing Adam with all creatures
-- **3D**: `scenes/garden_tended.js`
-- **SVG**: `assets/svg/scene_garden_tended.svg`
+- **3D**: `assets/scenes/act2_garden_tended.js`
+- **SVG**: `assets/svg/act2_scene_garden_tended.svg`
 
 #### garden_trees
 - **Line**: "The garden was a paradise — every tree was pleasing..."
@@ -484,9 +484,9 @@ Camera: [PUSH-PULL] between two trees
 - **Mood**: Temptation tension, beauty, choice
 - **Animation**: Divine light scale pulsing between the two trees
 - **Camera**: Push-pull between the two trees
-- **3D**: `scenes/garden_trees.js`
-- **JSON**: `assets/3d/garden_trees.json`
-- **SVG**: `assets/svg/scene_garden_trees.svg`
+- **3D**: `assets/scenes/act2_garden_trees.js`
+- **JSON**: `assets/3d/act2_garden_trees.json`
+- **SVG**: `assets/svg/act2_scene_garden_trees.svg`
 
 #### garden_command
 - **Line**: "You may eat from any tree. But from the tree of knowledge..."
@@ -519,8 +519,8 @@ Camera: [ORBIT] around divine light above
 - **Mood**: Awe-filled, commanding, serious
 - **Animation**: Light rays pulsing, divine light descending
 - **Camera**: Orbit around the divine light source
-- **3D**: `scenes/garden_command.js`
-- **SVG**: `assets/svg/scene_garden_command.svg`
+- **3D**: `assets/scenes/act2_garden_command.js`
+- **SVG**: `assets/svg/act2_scene_garden_command.svg`
 
 #### garden_warning
 - **Line**: "For on the day that you eat from it, you will surely die."
@@ -551,8 +551,8 @@ Camera: [ZOOM] between the two trees
 - **Mood**: Foreboding, serious, prophetic
 - **Animation**: Light pillars pulsing intensely, warning flashes
 - **Camera**: Zoom between the two trees
-- **3D**: `scenes/garden_warning.js`
-- **SVG**: `assets/svg/scene_garden_warning.svg`
+- **3D**: `assets/scenes/act2_garden_warning.js`
+- **SVG**: `assets/svg/act2_scene_garden_warning.svg`
 
 #### garden_paradise (Spline Scene)
 - **Line**: "Thus the garden held its first couple — naked in innocence, walking in peace."
@@ -581,9 +581,9 @@ Camera: [SPLINE ORBIT] along river curve
 - **Mood**: Peaceful, idyllic, paradisal
 - **Animation**: Divine light orbs floating along river spline, Tree of Life glow pulsing, particles flowing on curve
 - **Camera**: Spline-guided orbit following the river's natural curve
-- **3D**: `scenes/garden_paradise.js`
-- **JSON**: `assets/3d/garden_paradise.json`
-- **SVG**: `assets/svg/scene_garden_paradise.svg`
+- **3D**: `assets/scenes/act3_garden_paradise.js`
+- **JSON**: `assets/3d/act3_garden_paradise.json`
+- **SVG**: `assets/svg/act3_scene_garden_paradise.svg`
 ### Chapter 2: Forming Eve
 
 #### forming_eve
@@ -614,8 +614,8 @@ Camera: [ORBIT] around forming Eve
 - **Mood**: Mystical, tender, miraculous
 - **Animation**: Light pulse forming Eve, particles swirling upward
 - **Camera**: Orbit around the forming Eve
-- **3D**: `scenes/forming_eve.js`
-- **SVG**: `assets/svg/scene_forming_eve.svg`
+- **3D**: `assets/scenes/act3_forming_eve.js`
+- **SVG**: `assets/svg/act3_scene_forming_eve.svg`
 
 #### forming_names
 - **Line**: "God brought every creature to Adam to see what he would name them."
@@ -642,8 +642,8 @@ Camera: [PAN] across all creatures
 - **Mood**: Curious, orderly, purposeful
 - **Animation**: Lion breathing cycle, Adam's arm gestures
 - **Camera**: Pan across all creatures being named
-- **3D**: `scenes/forming_names.js`
-- **SVG**: `assets/svg/scene_forming_names.svg`
+- **3D**: `assets/scenes/act3_forming_names.js`
+- **SVG**: `assets/svg/act3_scene_forming_names.svg`
 
 #### forming_sleep
 - **Line**: "WHIRR... So the Lord God caused a deep sleep to fall on the man."
@@ -672,8 +672,8 @@ Camera: [LOW ORBIT] around wound/light stream
 - **Mood**: Sacred, mysterious, intimate
 - **Animation**: Light forming Eve's shape, particles swirling
 - **Camera**: Close tracking on the light formation
-- **3D**: `scenes/forming_sleep.js`
-- **SVG**: `assets/svg/scene_forming_sleep.svg`
+- **3D**: `assets/scenes/act3_forming_sleep.js`
+- **SVG**: `assets/svg/act3_scene_forming_sleep.svg`
 
 #### forming_united
 - **Line**: "This is now bone of my bones, and flesh of my flesh!"
@@ -705,8 +705,8 @@ Camera: [ORBIT] between Adam and Eve
 - **Mood**: Joyful, united, blessed
 - **Animation**: Gentle breathing motion for both figures, Tree of Life glow
 - **Camera**: Orbit between the couple with gentle roll
-- **3D**: `scenes/forming_united.js`
-- **SVG**: `assets/svg/scene_forming_united.svg`
+- **3D**: `assets/scenes/act3_forming_united.js`
+- **SVG**: `assets/svg/act3_scene_forming_united.svg`
 ### Chapter 3: The Temptation
 
 #### serpent_tree
@@ -738,9 +738,9 @@ Camera: [TIGHT CIRCLE] + Dutch angle
 - **Mood**: Suspicious, tense, lurking danger
 - **Animation**: Serpent swaying (oscillation), red light pulsing
 - **Camera**: Tight circling with strong Dutch angle (roll oscillation)
-- **3D**: `scenes/serpent_tree.js`
-- **JSON**: `assets/3d/serpent_tree.json`
-- **SVG**: `assets/svg/scene_serpent_tree.svg`
+- **3D**: `assets/scenes/act4_serpent_tree.js`
+- **JSON**: `assets/3d/act4_serpent_tree.json`
+- **SVG**: `assets/svg/act4_scene_serpent_tree.svg`
 
 #### serpent_deceive
 - **Line**: "You will not certainly die... you will be like God."
@@ -771,8 +771,8 @@ Camera: [TIGHT TRACK] serpent head, Dutch
 - **Mood**: Deceptive, persuasive, dangerous
 - **Animation**: Fruit pulsing, serpent swaying, Eve's hand twitching
 - **Camera**: Very tight circling tracking the serpent, Dutch angle intensifying
-- **3D**: `scenes/serpent_deceive.js`
-- **SVG**: `assets/svg/scene_serpent_deceive.svg`
+- **3D**: `assets/scenes/act4_serpent_deceive.js`
+- **SVG**: `assets/svg/act4_scene_serpent_deceive.svg`
 
 #### serpent_taken
 - **Line**: "She gave some to her husband, who was with her. And he ate it."
@@ -802,9 +802,9 @@ Camera: [PUSH-IN] on handoff
 - **Mood**: Irreversible, complicit, moment of no return
 - **Animation**: Fruit glow intensifying, serpent swaying
 - **Camera**: Slight Dutch angle, push-in on the handoff
-- **JSON**: `assets/3d/serpent_taken.json`
-- **3D**: `scenes/serpent_taken.js`
-- **SVG**: `assets/svg/scene_serpent_taken.svg`
+- **JSON**: `assets/3d/act4_serpent_taken.json`
+- **3D**: `assets/scenes/act4_serpent_taken.js`
+- **SVG**: `assets/svg/act4_scene_serpent_taken.svg`
 
 #### forbidden_fruit
 - **Line**: "The fruit was good for food and pleasing to the eye."
@@ -836,8 +836,8 @@ Camera: [PUSH-IN] on fruit, slight Dutch
 - **Mood**: Tempting, lustrous, dangerous allure
 - **Animation**: Fruit rotating slowly, glow pulsing rhythmically
 - **Camera**: Slow push-in on the fruit, slight Dutch
-- **3D**: `scenes/forbidden_fruit.js`
-- **SVG**: `assets/svg/scene_forbidden_fruit.svg`
+- **3D**: `assets/scenes/act4_forbidden_fruit.js`
+- **SVG**: `assets/svg/act4_scene_forbidden_fruit.svg`
 
 #### forbidden_taken
 - **Line**: "She looked at the fruit, longing... Then she took some and ate it."
@@ -867,8 +867,8 @@ Camera: [EXTREME CLOSE-UP] push-in
 - **Mood**: Irreversible, dramatic, consequential
 - **Animation**: Fruit glow intensifying, shadow deepening
 - **Camera**: Push-in on hand and fruit with tension Dutch
-- **3D**: `scenes/forbidden_taken.js`
-- **SVG**: `assets/svg/scene_forbidden_taken.svg`
+- **3D**: `assets/scenes/act4_forbidden_taken.js`
+- **SVG**: `assets/svg/act4_scene_forbidden_taken.svg`
 
 #### the_fall
 - **Line**: "CRACK! The moment the fruit touched their lips, something tore."
@@ -897,9 +897,9 @@ Camera: [SHAKE] then pull-back
 - **Mood**: Shock, shame, rupture
 - **Animation**: Camera shake (roll oscillation), light dimming
 - **Camera**: Simulated camera shake then slow pull-back
-- **3D**: `scenes/the_fall.js`
-- **JSON**: `assets/3d/the_fall.json`
-- **SVG**: `assets/svg/scene_the_fall.svg`
+- **3D**: `assets/scenes/act4_the_fall.js`
+- **JSON**: `assets/3d/act4_the_fall.json`
+- **SVG**: `assets/svg/act4_scene_the_fall.svg`
 
 #### the_hiding
 - **Line**: "They heard God approaching. And they hid."
@@ -928,8 +928,8 @@ Camera: [PULL-BACK] revealing hiding
 - **Mood**: Ashamed, fearful, regretful
 - **Animation**: Subtle breathing of figures (anxiety)
 - **Camera**: Slow pull-back revealing the hiding
-- **3D**: `scenes/the_hiding.js`
-- **SVG**: `assets/svg/scene_the_hiding.svg`
+- **3D**: `assets/scenes/act4_the_hiding.js`
+- **SVG**: `assets/svg/act4_scene_the_hiding.svg`
 ### Chapter 4: Exile
 
 #### exile_eden
@@ -963,9 +963,9 @@ Camera: [PULL-BACK] around flaming sword
 - **Mood**: Lost, searching, dramatic
 - **Animation**: Sword rotating slowly, flames flickering
 - **Camera**: Pull-back orbit around the flaming sword
-- **3D**: `scenes/exile_eden.js`
-- **JSON**: `assets/3d/exile_eden.json`
-- **SVG**: `assets/svg/scene_exile_eden.svg`
+- **3D**: `assets/scenes/act5_exile_eden.js`
+- **JSON**: `assets/3d/act5_exile_eden.json`
+- **SVG**: `assets/svg/act5_scene_exile_eden.svg`
 
 #### exile_judged
 - **Line**: "Because you have listened to your wife and eaten..."
@@ -997,8 +997,8 @@ Camera: [HIGH ANGLE] dramatic orbit
 - **Mood**: Judgment, consequence, finality
 - **Animation**: Sword rotating, lightning flickering erratically
 - **Camera**: High-angle dramatic orbit, lightning-triggered camera shake
-- **3D**: `scenes/exile_judged.js`
-- **SVG**: `assets/svg/scene_exile_judged.svg`
+- **3D**: `assets/scenes/act5_exile_judged.js`
+- **SVG**: `assets/svg/act5_scene_exile_judged.svg`
 
 #### exile_dawn
 - **Line**: "Now the man has become like one of us..."
@@ -1032,8 +1032,8 @@ Camera: [WIDE MELANCHOLY] orbit
 - **Mood**: Melancholy, reflective, transitional
 - **Animation**: Flames flickering, dawn star pulsing
 - **Camera**: Wide melancholy orbit, gentle roll
-- **3D**: `scenes/exile_dawn.js`
-- **SVG**: `assets/svg/scene_exile_dawn.svg`
+- **3D**: `assets/scenes/act5_exile_dawn.js`
+- **SVG**: `assets/svg/act5_scene_exile_dawn.svg`
 
 #### exile_garments
 - **Line**: "He made garments of skin for them — covering their nakedness with His own hands."
@@ -1064,9 +1064,9 @@ Camera: [GENTLE ORBIT] focus on garments
 - **Mood**: Tender, forgiving, covered in grace
 - **Animation**: Divine light orbs pulsing, cloth gently moving
 - **Camera**: Gentle orbit, focus on the covering garments
-- **JSON**: `assets/3d/exile_garments.json`
-- **3D**: `scenes/exile_garments.js`
-- **SVG**: `assets/svg/scene_exile_garments.svg`
+- **JSON**: `assets/3d/act5_exile_garments.json`
+- **3D**: `assets/scenes/act5_exile_garments.js`
+- **SVG**: `assets/svg/act5_scene_exile_garments.svg`
 
 #### exile_driven
 - **Line**: "So the Lord drove out the man — to bar the way."
@@ -1098,8 +1098,8 @@ Camera: [WIDE ORBIT] showing barrier
 - **Mood**: Final, driven out, hopeless yet promised
 - **Animation**: Flames flickering intensely, sword ember particles
 - **Camera**: Wide orbit showing the full barrier and departure
-- **3D**: `scenes/exile_driven.js`
-- **SVG**: `assets/svg/scene_exile_driven.svg`
+- **3D**: `assets/scenes/act5_exile_driven.js`
+- **SVG**: `assets/svg/act5_scene_exile_driven.svg`
 
 #### cain_abel
 - **Line**: "Years passed. Cain and Abel brought offerings."
@@ -1130,9 +1130,9 @@ Camera: [PAN] between brothers
 - **Mood**: Tense, divergent, foreboding
 - **Animation**: Red tension line pulsing, NoGlow emissive material pulsing
 - **Camera**: Pan between brothers, Dutch angle shifting toward Cain
-- **3D**: `scenes/cain_abel.js`
-- **JSON**: `assets/3d/cain_abel.json`
-- **SVG**: `assets/svg/scene_cain_abel.svg`
+- **3D**: `assets/scenes/act5_cain_abel.js`
+- **JSON**: `assets/3d/act5_cain_abel.json`
+- **SVG**: `assets/svg/act5_scene_cain_abel.svg`
 ---
 
 ## Design Principles

@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" data-parallax="true">
+  <defs>
+    <linearGradient id="sky7" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8a7850"/>
+      <stop offset="50%" stop-color="#c8a870"/>
+      <stop offset="100%" stop-color="#e8d8a8"/>
+    </linearGradient>
+    <filter id="sceneGrain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="17" result="mottle"/><feColorMatrix in="mottle" type="saturate" values="0" result="mottleMono"/><feComponentTransfer in="mottleMono" result="softMottle"><feFuncA type="table" tableValues="0 0.32"/></feComponentTransfer><feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="3" seed="41" result="fineNoise"/><feColorMatrix in="fineNoise" type="saturate" values="0" result="fineMono"/><feComponentTransfer in="fineMono" result="softGrain"><feFuncA type="table" tableValues="0 0.20"/></feComponentTransfer><feBlend in="softMottle" in2="softGrain" mode="multiply"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky7)"/>
+  <g data-depth="0.05">
+    <ellipse cx="400" cy="80" rx="80" ry="50" fill="#FFF0C0" opacity="0.85"/>
+  </g>
+  <g data-depth="0.2">
+    <rect x="250" y="200" width="300" height="250" fill="#c8a878"/>
+    <rect x="260" y="210" width="280" height="230" fill="#b89868"/>
+  </g>
+  <g data-depth="0.3">
+    <polygon points="230,200 400,140 570,200" fill="#7a5838"/>
+  </g>
+  <g data-depth="0.25">
+    <rect x="370" y="340" width="60" height="110" fill="#4a3018"/>
+    <circle cx="420" cy="400" r="5" fill="#c8a848"/>
+  </g>
+  <g data-depth="0.15">
+    <rect x="0" y="450" width="800" height="150" fill="#8a7050"/>
+    <path d="M0 470 Q200 460 400 465 T800 460" stroke="#7a6040" stroke-width="3" fill="none"/>
+  </g>
+  <g data-depth="0.35">
+    <rect x="600" y="350" width="50" height="120" fill="#6a5838"/>
+    <ellipse cx="625" cy="340" rx="40" ry="30" fill="#4a6830"/>
+  </g>
+  <rect width="800" height="600" fill="#808080" filter="url(#sceneGrain)" opacity="0.24" style="mix-blend-mode:soft-light" pointer-events="none"/>
+</svg>

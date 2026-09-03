@@ -10,7 +10,7 @@
 //   window.initScene1(group);       // add scene geometry
 //   window.initSceneLights(group);  // add lights
 //
-// Load via loadJSScene('assets/3d/garden_paradise.js', group, callback)
+// Load via loadJSScene('assets/3d/act3_garden_paradise.js', group, callback)
 // ------------------------------------------------------------
 
 window.initScene1 = function(group) {

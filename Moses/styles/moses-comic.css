@@ -30,6 +30,17 @@
 /* Ch 10 Mount Nebo — distant green-gold horizon */
 .palette-act-10{ --panel-bg:#10140a; --panel-dots:#1c2014; --accent-color:#c8c060; --bubble-bg:#fff8d8; --text-color:#0A0812; }
 
+/* Contextual lower surface: Nile water, desert sand, or green land. */
+.palette-act-1 { --surface-1:#23658a; --surface-2:#438eb0; --surface-3:#78bad0; --surface-4:#174c70; }
+.palette-act-2,
+.palette-act-3,
+.palette-act-4,
+.palette-act-6,
+.palette-act-7,
+.palette-act-8,
+.palette-act-9 { --surface-1:#9a6d38; --surface-2:#bd8c4c; --surface-3:#d7b06a; --surface-4:#76502b; }
+.palette-act-10 { --surface-1:#42652f; --surface-2:#62813c; --surface-3:#88a951; --surface-4:#304d28; }
+
 * { box-sizing: border-box; }
 
 html, body {
@@ -100,6 +111,112 @@ html, body {
 }
 #bgGradient { position: absolute; inset: 0; transition: background 1.1s ease; z-index: 0; }
 #particles   { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+
+/* This lower silhouette becomes terrain outside the dedicated Red Sea scene. */
+#rainLayer {
+  position: absolute; inset: 0; z-index: 2;
+  pointer-events: none; opacity: 0; transition: opacity 1.2s ease;
+}
+#rainLayer.active { opacity: .78; }
+#rainLayer #rainStripes { display: none; }
+#rainLayer .wave-container { height: 112px; }
+#rainLayer .air {
+  background-image: none;
+  background-color: var(--surface-1, #9a6d38);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath d='M0 60C150 100 350 20 500 60s350-40 500 0v40H0z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath d='M0 60C150 100 350 20 500 60s350-40 500 0v40H0z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-x; mask-repeat: repeat-x;
+  -webkit-mask-size: 1000px 100px; mask-size: 1000px 100px;
+}
+#rainLayer .air1 { background-color: var(--surface-1); }
+#rainLayer .air2 { background-color: var(--surface-2); }
+#rainLayer .air3 { background-color: var(--surface-3); }
+#rainLayer .air4 { background-color: var(--surface-4); }
+
+/* ── Gentle wind-swept field — chapters 1–3, 9 and 10 ──── */
+#mosesFieldBackdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  background: linear-gradient(180deg, #527b9d 0%, #91a67f 58%, #77602e 100%);
+  transition: opacity 1.2s ease, visibility 0s linear 1.2s;
+}
+
+body.palette-act-1 #mosesFieldBackdrop,
+body.palette-act-2 #mosesFieldBackdrop,
+body.palette-act-3 #mosesFieldBackdrop,
+body.palette-act-9 #mosesFieldBackdrop,
+body.palette-act-10 #mosesFieldBackdrop {
+  opacity: .48;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.moses-field-sun {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 220%;
+  transform: translateY(-42%);
+  background: radial-gradient(circle at 52% 47%, rgba(255, 220, 105, .95) 0 4%, rgba(229, 166, 58, .48) 8%, rgba(82, 123, 157, .08) 27%, transparent 48%);
+}
+
+.moses-grass-field { position: absolute; inset: 0; }
+
+.moses-grass-clump {
+  position: absolute;
+  bottom: -1px;
+  width: var(--clump-size);
+  height: var(--clump-size);
+  overflow: hidden;
+  transform: translateX(-50%);
+  transform-origin: 50% 100%;
+  opacity: var(--clump-opacity);
+  animation: mosesGentleBreeze var(--sway-time) ease-in-out var(--sway-delay) infinite;
+  will-change: transform;
+}
+
+.moses-grass-blade {
+  position: absolute;
+  bottom: -100%;
+  left: -50%;
+  width: 100%;
+  height: 160%;
+  border-right: max(2px, 1.8vmin) solid var(--blade-color);
+  border-top-right-radius: 50%;
+}
+
+.moses-grass-blade:nth-child(2) {
+  bottom: -230%;
+  left: -150%;
+  width: 200%;
+  height: 300%;
+  border-top-right-radius: 20%;
+}
+
+.moses-grass-blade:nth-child(3) {
+  bottom: -300%;
+  left: 50%;
+  width: 200%;
+  height: 360%;
+  border-right: 0;
+  border-left: max(2px, 1.8vmin) solid var(--blade-color);
+  border-top-left-radius: 15%;
+}
+
+@keyframes mosesGentleBreeze {
+  0%, 100% { transform: translateX(-50%) rotate(-.35deg); }
+  50% { transform: translateX(-50%) rotate(.35deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moses-grass-clump { animation: none; }
+}
 
 /* ── Sea Layer (Ch 5) ────────────────────────── */
 #seaLayer {

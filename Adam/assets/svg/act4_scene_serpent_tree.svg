@@ -11,7 +11,7 @@
     <linearGradient id="treeGreen3" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#5a7a3a"/>
       <stop offset="100%" stop-color="#3a5a3a"/>
-    </radialGradient>
+    </linearGradient>
   </defs>
   <!-- Dark, tense bg --><!-- emphasis: ominous atmosphere -->
   <rect width="300" height="200" fill="#1a0700"/>

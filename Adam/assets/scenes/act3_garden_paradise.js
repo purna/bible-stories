@@ -37,8 +37,8 @@
         var riverCurve = null;
         var particles = [];
 
-        // --- Load from pixel3d JS export (assets/3d/garden_paradise.js) ---
-        loadJSScene('assets/3d/garden_paradise.js', sceneGroup, function (group) {
+        // --- Load from pixel3d JS export (assets/3d/act3_garden_paradise.js) ---
+        loadJSScene('assets/3d/act3_garden_paradise.js', sceneGroup, function (group) {
             loaded = true;
 
             // Build a sine-wave spline through the garden for particle flow
@@ -67,7 +67,7 @@
         scene.add(jsonGroup);
 
         if (typeof fetch !== 'undefined') {
-            fetch('assets/3d/garden_paradise.json')
+            fetch('assets/3d/act3_garden_paradise.json')
                 .then(function(r) { return r.json(); })
                 .then(function(data) {
                     if (data && data.objects) {

@@ -1,0 +1,56 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Dramatic Horeb wilderness twilight / quiet whisper atmosphere gradient -->
+        <linearGradient id="skyHoreb" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" stop-color="#12151c"/>
+            <stop offset="40%" stop-color="#262b38"/>
+            <stop offset="80%" stop-color="#41394a"/>
+            <stop offset="100%" stop-color="#694f5d"/>
+        </linearGradient>
+
+        <!-- Mount Horeb dark rock cave gradient -->
+        <linearGradient id="caveRock" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#292126"/>
+            <stop offset="50%" stop-color="#191317"/>
+            <stop offset="100%" stop-color="#0a0709"/>
+        </linearGradient>
+
+        <!-- Subtle divine gentle whisper / small still voice glow -->
+        <filter id="horebGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Mount Horeb Twilight Sky -->
+    <rect width="200" height="100" fill="url(#skyHoreb)"/>
+
+    <!-- Subtle gentle divine light streaming into the cave opening -->
+    <polygon points="110,40 180,0 200,0 200,100 80,100" fill="#ffecb3" opacity="0.06"/>
+
+    <!-- Massive Mount Horeb Mountain Cliff Structure -->
+    <path d="M 0 0 L 130 0 L 115 35 L 125 70 L 90 100 L 0 100 Z" fill="url(#caveRock)"/>
+
+    <!-- The Cave Entrance (Dark recess in the mountain - 1 Kings 19:9) -->
+    <path d="M 75 42 Q 85 35 105 40 Q 118 48 112 75 Q 105 95 85 92 Q 70 88 72 65 Z" fill="#050304"/>
+    <path d="M 78 45 Q 86 38 102 43 Q 112 50 108 72 Q 102 90 85 88 Q 74 85 75 65 Z" fill="#140f12"/>
+
+    <!-- Rocky Cave Interior Shadow Floor -->
+    <path d="M 75 80 L 125 80 L 135 100 L 70 100 Z" fill="#0d090b"/>
+
+    <!-- Elijah Standing at the Mouth of the Cave (Covering his face with his mantle - 1 Kings 19:13) -->
+    <g transform="translate(82, 54)">
+        <!-- Prophetic Robe / Garment -->
+        <path d="M 10 18 Q 4 13 0 18 L 4 27 L 14 27 Z" fill="#291a14"/>
+        <path d="M 5 6 Q 9 1 13 6 Q 17 14 13 27 L 3 27 Q 0 14 5 6 Z" fill="#5c3a21"/>
+        <!-- Head and Mantle covering face in reverence of the "gentle blowing / still small voice" -->
+        <circle cx="8" cy="3" r="2.2" fill="#d1b399"/>
+        <path d="M 5 1 Q 9 -3 12 1 Q 14 5 11 7 Z" fill="#4a2e18" filter="url(#horebGlow)"/>
+    </g>
+
+    <!-- Gentle divine light aura near the cave opening representing the quiet whisper -->
+    <circle cx="95" cy="55" r="16" fill="#ffe082" opacity="0.12" filter="url(#horebGlow)"/>
+</svg>

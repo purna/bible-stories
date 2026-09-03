@@ -7,8 +7,15 @@
     "template-story.js",
     "template-scenes-helpers.js",
     "data/manifest.json",
-    "assets/svg/scene_opening.svg",
+    "assets/svg/act1_scene_opening.svg",
     "assets/svg/fg_opening.svg",
-    "assets/3d/opening.json"
+    "assets/3d/act1_opening.json",
+    "assets/svg/act2_scene_decision.svg",
+    "assets/svg/act3_scene_horizon.svg",
+    "assets/scenes/act1_opening.js",
+    "assets/scenes/act2_decision.js",
+    "assets/scenes/act3_horizon.js",
+    "assets/3d/act2_decision.json",
+    "assets/3d/act3_horizon.json"
   ]
 }

@@ -1,0 +1,62 @@
+{
+  "id": "threshing_floor",
+  "name": "Ch.5 · Threshing Floor",
+  "bg": "radial-gradient(circle at 50% 25%, #6a5840, #2a2018 70%)",
+  "particle": "dusk",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "When Ruth returned home, Naomi had a plan. Boaz was winnowing barley at the threshing floor that night.",
+      "cite": "Ruth 3:2-3"
+    },
+    {
+      "speaker": "naomi",
+      "fx": "type",
+      "align": "left",
+      "text": "My daughter, I must seek security for you, so that it may go well. Wash and perfume yourself and go down to the threshing floor. Don't let him know you are there until he has finished eating and drinking."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Ruth did everything Naomi instructed. When Boaz had eaten and drunk and was in good spirits, he went to lie down at the far end of the grain heap."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Ruth approached quietly, uncovered his feet, and lay down. In the middle of the night, something startled the man, and he turned over and discovered a woman lying at his feet.",
+      "cite": "Ruth 3:7-8",
+      "choices": [
+        {
+          "label": "Wait with restraint",
+          "note": "Ruth follows Naomi's plan with quiet dignity."
+        },
+        {
+          "label": "Speak clearly when asked",
+          "note": "Ruth answers Boaz with honesty and directness."
+        }
+      ]
+    },
+    {
+      "speaker": "ruth",
+      "fx": "type",
+      "align": "right",
+      "text": "I am your servant Ruth. Spread the corner of your garment over your servant, for you are a guardian-redeemer of our family.",
+      "cite": "Ruth 3:9"
+    },
+    {
+      "speaker": "boaz",
+      "fx": "fade",
+      "align": "left",
+      "text": "The LORD bless you, my daughter. This kindness is greater than that which you showed earlier. Come morning, I will do whatever you ask. All the people of my town know that you are a woman of noble character.",
+      "cite": "Ruth 3:10-11"
+    }
+  ],
+  "svg": "threshing_floor",
+  "scene": "threshing_floor",
+  "foreground": "fg_threshing_floor",
+  "index": 4
+}

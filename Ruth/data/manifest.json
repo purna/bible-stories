@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "acts": [
+    {
+      "id": "leaving_moab",
+      "name": "Ch.1 · Leaving Moab",
+      "file": "act1_leaving_moab.json",
+      "scene": "leaving_moab",
+      "foreground": "fg_leaving_moab"
+    },
+    {
+      "id": "your_people",
+      "name": "Ch.2 · Your People",
+      "file": "act2_your_people.json",
+      "scene": "your_people",
+      "foreground": "fg_your_people"
+    },
+    {
+      "id": "gleaning",
+      "name": "Ch.3 · Gleaning",
+      "file": "act3_gleaning.json",
+      "scene": "gleaning",
+      "foreground": "fg_gleaning"
+    },
+    {
+      "id": "boaz_notices",
+      "name": "Ch.4 · Boaz Notices",
+      "file": "act4_boaz_notices.json",
+      "scene": "boaz_notices",
+      "foreground": "fg_boaz_notices"
+    },
+    {
+      "id": "threshing_floor",
+      "name": "Ch.5 · Threshing Floor",
+      "file": "act5_threshing_floor.json",
+      "scene": "threshing_floor",
+      "foreground": "fg_threshing_floor"
+    },
+    {
+      "id": "at_the_gate",
+      "name": "Ch.6 · At the Gate",
+      "file": "act6_at_the_gate.json",
+      "scene": "at_the_gate",
+      "foreground": "fg_at_the_gate"
+    },
+    {
+      "id": "redeemed",
+      "name": "Ch.7 · Redeemed",
+      "file": "act7_redeemed.json",
+      "scene": "redeemed",
+      "foreground": "fg_redeemed"
+    },
+    {
+      "id": "obed",
+      "name": "Ch.8 · Obed",
+      "file": "act8_obed.json",
+      "scene": "obed",
+      "foreground": "fg_obed"
+    }
+  ]
+}

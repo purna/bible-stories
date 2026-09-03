@@ -1,0 +1,33 @@
+(function (global) {
+  "use strict";
+  var THREE = global.THREE;
+  if (!THREE) return;
+  global.SCENE_FACTORIES = global.SCENE_FACTORIES || {};
+  global.SCENE_FACTORIES.leaving_moab = function () {
+    var scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x2a1e10);
+    if (global.makeFog) global.makeFog(scene, 0x2a1e10, 0.003);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+    var sun = new THREE.DirectionalLight(0xFFD84D, 0.7);
+    sun.position.set(-20, 30, 10);
+    scene.add(sun);
+    var ground = new THREE.Mesh(new THREE.PlaneGeometry(200, 100), global.toonMat({ color: 0x6a5030 }));
+    ground.rotation.x = -Math.PI / 2;
+    ground.position.y = -10;
+    scene.add(ground);
+    var tent = new THREE.Mesh(new THREE.ConeGeometry(8, 12, 8), global.toonMat({ color: 0xc8a878 }));
+    tent.position.set(15, -4, -20);
+    scene.add(tent);
+    var doorway = new THREE.Mesh(new THREE.PlaneGeometry(3, 5), new THREE.MeshBasicMaterial({ color: 0x1a1008 }));
+    doorway.position.set(15, -5.5, -12);
+    scene.add(doorway);
+    var staff = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 12, 8), global.toonMat({ color: 0x5a3818 }));
+    staff.position.set(-5, -4, 5);
+    scene.add(staff);
+    var path = new THREE.Mesh(new THREE.PlaneGeometry(6, 60), global.toonMat({ color: 0x8a7050 }));
+    path.rotation.x = -Math.PI / 2;
+    path.position.set(0, -9.9, 10);
+    scene.add(path);
+    return { scene: scene, cameraConfig: { distance: 55, height: 18 } };
+  };
+})(window);

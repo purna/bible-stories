@@ -1,0 +1,61 @@
+{
+  "id": "gleaning",
+  "name": "Ch.3 · Gleaning",
+  "bg": "radial-gradient(circle at 50% 25%, #8a9a48, #2a3818 70%)",
+  "particle": "dawn",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "When they arrived in Bethlehem, the barley harvest had just begun. Ruth spoke to Naomi with a plan.",
+      "cite": "Ruth 2:2"
+    },
+    {
+      "speaker": "ruth",
+      "fx": "type",
+      "align": "right",
+      "text": "Let me go to the fields and pick up the grain left behind by anyone in whose eyes I find favor."
+    },
+    {
+      "speaker": "naomi",
+      "fx": "fade",
+      "align": "left",
+      "text": "Go ahead, my daughter."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Ruth went out and gleaned in the field behind the harvesters. She happened to be working in a field belonging to Boaz, from the clan of Elimelek.",
+      "cite": "Ruth 2:3"
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "She gathered only what the law allowed—the grain left for the poor and the foreigner. Patiently, stalk by stalk, she filled her apron.",
+      "cite": "Leviticus 19:9-10",
+      "choices": [
+        {
+          "label": "Gather the fallen grain",
+          "note": "Ruth works with care, taking only what is left for gleaners."
+        },
+        {
+          "label": "Rest briefly in the shade",
+          "note": "Even gleaners need a moment's rest under the harvest sun."
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "The sun rose higher. Ruth kept her head down and her hands steady. The field was generous to those who came last."
+    }
+  ],
+  "svg": "gleaning",
+  "scene": "gleaning",
+  "foreground": "fg_gleaning",
+  "index": 2
+}

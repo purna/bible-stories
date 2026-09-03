@@ -1,4 +1,4 @@
-const STORY_CACHE_VERSION = 'v1';
+const STORY_CACHE_VERSION = 'v2';
 const STORY_SCOPE = new URL('./', self.location.href);
 const STORY_FOLDER = STORY_SCOPE.pathname.split('/').filter(Boolean).pop() || 'story';
 const STORY_CACHE = `${STORY_FOLDER}-comic-${STORY_CACHE_VERSION}`;

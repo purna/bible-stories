@@ -1,0 +1,53 @@
+{
+  "id": "your_people",
+  "name": "Ch.2 · Your People",
+  "bg": "radial-gradient(circle at 50% 25%, #c89860, #5a4028 70%)",
+  "particle": "dawn",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Naomi and Ruth walked the long road from Moab toward Bethlehem—dusty, weary, but together. The hills rose and fell like waves of stone and dry grass.",
+      "cite": "Ruth 1:19"
+    },
+    {
+      "speaker": "ruth",
+      "fx": "type",
+      "align": "right",
+      "text": "We will follow the road. Step by step. I am with you, Naomi."
+    },
+    {
+      "speaker": "naomi",
+      "fx": "fade",
+      "align": "left",
+      "text": "You should not have come. There is nothing for you here. The Almighty has made my life very bitter."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "They passed through the rocky valleys, keeping to the paths that travelers knew—avoiding the dangerous shortcuts.",
+      "choices": [
+        {
+          "label": "Stay on the safe path",
+          "note": "The faithful path is patient and steady."
+        },
+        {
+          "label": "Offer Naomi your arm",
+          "note": "Ruth supports her mother-in-law as the road steepens."
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "At last, the walls of Bethlehem appeared on the horizon. The whole town was stirred by their arrival."
+    }
+  ],
+  "svg": "your_people",
+  "scene": "your_people",
+  "foreground": "fg_your_people",
+  "index": 1
+}

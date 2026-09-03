@@ -1,0 +1,61 @@
+{
+  "id": "leaving_moab",
+  "name": "Ch.1 · Leaving Moab",
+  "bg": "radial-gradient(circle at 50% 25%, #d4a86a, #4a3520 70%)",
+  "particle": "dusk",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "In the days when the judges ruled, there was a famine in the land. A man from Bethlehem left his home to live in the country of Moab—his wife and two sons with him.",
+      "cite": "Ruth 1:1"
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "The man died, and later both sons too. Naomi was left alone with her two daughters-in-law, Orpah and Ruth."
+    },
+    {
+      "speaker": "naomi",
+      "fx": "type",
+      "align": "left",
+      "text": "Go back, each of you, to your mother's home. May the LORD show you kindness, as you have shown kindness to me and to the dead."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Orpah kissed her mother-in-law goodbye. But Ruth clung to her."
+    },
+    {
+      "speaker": "ruth",
+      "fx": "bounce",
+      "align": "right",
+      "text": "Don't urge me to leave you or to turn back from you. Where you go I will go, and where you stay I will stay. Your people will be my people and your God my God.",
+      "cite": "Ruth 1:16",
+      "choices": [
+        {
+          "label": "Pack lightly for the journey",
+          "note": "Ruth gathers only what she needs for the road ahead."
+        },
+        {
+          "label": "Stay close to Naomi",
+          "note": "Ruth walks beside her mother-in-law, steadfast in loyalty."
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Naomi saw that Ruth was determined to go with her, so she no longer tried to persuade her. Together they set out from Moab toward Bethlehem.",
+      "cite": "Ruth 1:18-19"
+    }
+  ],
+  "svg": "leaving_moab",
+  "scene": "leaving_moab",
+  "foreground": "fg_leaving_moab",
+  "index": 0
+}

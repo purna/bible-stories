@@ -1,0 +1,62 @@
+{
+  "id": "boaz_notices",
+  "name": "Ch.4 · Boaz Notices",
+  "bg": "radial-gradient(circle at 50% 25%, #4a6888, #1a2838 70%)",
+  "particle": "dawn",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Boaz arrived from Bethlehem and greeted the harvesters. His eyes fell upon the woman gleaning among the sheaves.",
+      "cite": "Ruth 2:4-5"
+    },
+    {
+      "speaker": "boaz",
+      "fx": "type",
+      "align": "left",
+      "text": "Whose young woman is that?"
+    },
+    {
+      "speaker": "field_overseer",
+      "fx": "fade",
+      "align": "right",
+      "text": "She is the Moabite who came back with Naomi. She asked to glean and has been working steadily since morning."
+    },
+    {
+      "speaker": "boaz",
+      "fx": "type",
+      "align": "left",
+      "text": "Listen, my daughter. Don't go glean in another field. Stay here with my servant girls. Watch the field where the men are harvesting, and follow along after the girls. I have told the men not to touch you. And whenever you are thirsty, go and drink from the water jars.",
+      "cite": "Ruth 2:8-9",
+      "choices": [
+        {
+          "label": "Receive water for the workers",
+          "note": "Ruth helps provide refreshment to those in the field."
+        },
+        {
+          "label": "Listen to Boaz's protection",
+          "note": "Boaz ensures Ruth's safety among the harvesters."
+        }
+      ]
+    },
+    {
+      "speaker": "ruth",
+      "fx": "bounce",
+      "align": "right",
+      "text": "Why have I found favor in your eyes that you notice me—a foreigner?",
+      "cite": "Ruth 2:10"
+    },
+    {
+      "speaker": "boaz",
+      "fx": "fade",
+      "align": "left",
+      "text": "I have been told all about what you have done for your mother-in-law since the death of your husband. May the LORD repay you for what you have done.",
+      "cite": "Ruth 2:11-12"
+    }
+  ],
+  "svg": "boaz_notices",
+  "scene": "boaz_notices",
+  "foreground": "fg_boaz_notices",
+  "index": 3
+}

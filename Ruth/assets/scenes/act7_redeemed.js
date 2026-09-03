@@ -1,0 +1,33 @@
+(function (global) {
+  "use strict";
+  var THREE = global.THREE;
+  if (!THREE) return;
+  global.SCENE_FACTORIES = global.SCENE_FACTORIES || {};
+  global.SCENE_FACTORIES.redeemed = function () {
+    var scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x3a2818);
+    if (global.makeFog) global.makeFog(scene, 0x3a2818, 0.002);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+    var sun = new THREE.DirectionalLight(0xFFD890, 0.8);
+    sun.position.set(0, 30, 20);
+    scene.add(sun);
+    var ground = new THREE.Mesh(new THREE.PlaneGeometry(80, 60), global.toonMat({ color: 0x7a6040 }));
+    ground.rotation.x = -Math.PI / 2;
+    ground.position.y = -10;
+    scene.add(ground);
+    var house = new THREE.Mesh(new THREE.BoxGeometry(16, 10, 12), global.toonMat({ color: 0xC8a878 }));
+    house.position.set(0, -5, -10);
+    scene.add(house);
+    var roof = new THREE.Mesh(new THREE.ConeGeometry(12, 5, 4), global.toonMat({ color: 0x5a3818 }));
+    roof.position.set(0, 2, -10);
+    roof.rotation.y = Math.PI / 4;
+    scene.add(roof);
+    var door = new THREE.Mesh(new THREE.PlaneGeometry(3, 6), new THREE.MeshBasicMaterial({ color: 0x2a1808 }));
+    door.position.set(0, -7, -4);
+    scene.add(door);
+    var sandal = new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.4, 3), global.toonMat({ color: 0x6a4828 }));
+    sandal.position.set(5, -9.5, 8);
+    scene.add(sandle);
+    return { scene: scene, cameraConfig: { distance: 48, height: 14 } };
+  };
+})(window);

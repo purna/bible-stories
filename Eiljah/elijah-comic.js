@@ -355,7 +355,7 @@ async function createGraphicContainer(lineData, actData) {
     const svgLayer = document.createElement('div');
     svgLayer.id = 'svgLayer';
     const targetSvgKey = lineData.svg || actData.svg;
-    svgLayer.innerHTML = await getAsset(`assets/svg/scene_${targetSvgKey}.svg`);
+    svgLayer.innerHTML = await getAsset(`assets/svg/act${actIdx + 1}_scene_${targetSvgKey}.svg`);
     graphicContainer.appendChild(svgLayer);
 
     return graphicContainer;

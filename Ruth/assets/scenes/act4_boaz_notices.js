@@ -1,0 +1,33 @@
+(function (global) {
+  "use strict";
+  var THREE = global.THREE;
+  if (!THREE) return;
+  global.SCENE_FACTORIES = global.SCENE_FACTORIES || {};
+  global.SCENE_FACTORIES.boaz_notices = function () {
+    var scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x1a2838);
+    if (global.makeFog) global.makeFog(scene, 0x1a2838, 0.002);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+    var sun = new THREE.DirectionalLight(0xFFD890, 0.8);
+    sun.position.set(15, 30, 20);
+    scene.add(sun);
+    var field = new THREE.Mesh(new THREE.PlaneGeometry(100, 70), global.toonMat({ color: 0x5a6830 }));
+    field.rotation.x = -Math.PI / 2;
+    field.position.y = -10;
+    scene.add(field);
+    var well = new THREE.Mesh(new THREE.CylinderGeometry(2, 2, 1, 12), global.toonMat({ color: 0x5a5040 }));
+    well.position.set(10, -9, 0);
+    scene.add(well);
+    var wellPost = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 6, 8), global.toonMat({ color: 0x4a3018 }));
+    wellPost.position.set(12, -6, 0);
+    scene.add(wellPost);
+    var jar = new THREE.Mesh(new THREE.SphereGeometry(0.8, 10, 8), global.toonMat({ color: 0xC8A878 }));
+    jar.position.set(8, -8.5, 2);
+    jar.scale.y = 1.2;
+    scene.add(jar);
+    var sheaf = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 1, 4, 8), global.toonMat({ color: 0xD8B848 }));
+    sheaf.position.set(-10, -7, 5);
+    scene.add(sheaf);
+    return { scene: scene, cameraConfig: { distance: 50, height: 15 } };
+  };
+})(window);
