@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Generator — Noah (3D)</title>
+<link href="../fonts.css" rel="stylesheet">
+<!-- JSZip for bulk exporting -->
+<script src="../vendor/jszip.3.10.1.min.js"></script>
+<!-- Three.js (classic UMD build, works when this file is opened directly via file://) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style>
+  :root {
+    --bg-color: #0d0d12;
+    --panel-bg: #16161c;
+    --panel-2: #1e1e26;
+    --text-color: #d1d1d6;
+    --text-dim: #9aa0a6;
+    --accent: #4a5c78;
+    --accent-alt: #3d8f5c;
+    --border: #2a2a35;
+    --iron: #333340;
+    --font-display: "Bangers", serif;
+    --font-body: "Nunito", system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0; height: 100vh; overflow: hidden;
+    font-family: var(--font-body);
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+  }
+
+  .workspace { display: flex; flex-direction: row; width: 100%; height: 100%; }
+
+  .sidebar {
+    width: 400px; min-width: 400px;
+    background: var(--panel-bg);
+    border-right: 1px solid var(--border);
+    padding: 22px 20px 18px;
+    overflow-y: auto;
+    display: flex; flex-direction: column; gap: 18px;
+  }
+  .sidebar::-webkit-scrollbar { width: 8px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+  .brand {
+    font-family: var(--font-display);
+    font-size: 1.55rem; font-weight: 600; letter-spacing: .02em;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+    display: flex; align-items: baseline; justify-content: space-between;
+  }
+  .brand small { font-family: var(--font-body); font-size: .62rem; text-transform: uppercase; letter-spacing: .14em; color: var(--accent); font-weight: 600; }
+
+  h3.section-title {
+    font-family: var(--font-display);
+    font-size: 1.05rem; font-weight: 600; color: var(--accent);
+    margin: 0 0 10px; letter-spacing: .05em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 8px;
+  }
+  h3.section-title::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--border), transparent); }
+
+  .control-group { display: flex; flex-direction: column; gap: 12px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+  .control-group:last-of-type { border-bottom: none; }
+
+  label.field { font-size: .78rem; color: var(--text-dim); display: flex; flex-direction: column; gap: 5px; }
+  label.field span.val { color: var(--accent); font-weight: 600; }
+  label.row { flex-direction: row; align-items: center; justify-content: space-between; }
+
+  select, input[type="range"] {
+    width: 100%; padding: 7px 8px;
+    background: var(--panel-2); color: var(--text-color);
+    border: 1px solid var(--border); border-radius: 4px;
+    font-family: var(--font-body); font-size: .82rem;
+  }
+  select:focus, input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  .color-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; }
+  .color-field { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: .76rem; color: var(--text-dim); min-height: 28px; }
+  input[type="color"] {
+    width: 40px; height: 28px; padding: 0; border: 1px solid var(--border); border-radius: 4px;
+    background: none; cursor: pointer; flex-shrink: 0;
+  }
+  .checkbox-row { display: flex; align-items: center; gap: 8px; font-size: .78rem; color: var(--text-dim); margin-top: 2px; }
+  input[type="checkbox"] { accent-color: var(--accent); width: 15px; height: 15px; }
+
+  button {
+    font-family: var(--font-body); font-weight: 600; font-size: .8rem;
+    background: var(--accent); color: #fff;
+    border: 1px solid var(--accent); padding: 10px 12px; border-radius: 4px;
+    cursor: pointer; letter-spacing: .02em;
+    transition: background .15s ease, transform .1s ease;
+  }
+  button:hover { opacity: 0.9; }
+  button:active { transform: translateY(1px); }
+  button.secondary { background: var(--panel-2); border-color: var(--border); color: var(--text-color); }
+  button.secondary:hover { background: var(--border); }
+  button.success { background: var(--accent-alt); border-color: var(--accent-alt); }
+  button.wide { width: 100%; }
+
+  .preset-row { display: flex; gap: 8px; }
+  .preset-row select { flex: 1; }
+  .preset-row button { flex: 0 0 auto; }
+
+  .action-buttons { display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding-top: 14px; }
+  .row-buttons { display: flex; gap: 8px; }
+
+  .canvas-area {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: radial-gradient(circle at 50% 50%, #1e1e26 0%, var(--bg-color) 80%);
+    background-image: radial-gradient(var(--border) 1px, transparent 1px);
+    background-size: 24px 24px;
+    position: relative;
+    gap: 18px;
+  }
+
+  .medallion {
+    width: min(620px, 62vw); height: min(720px, 76vh);
+    border-radius: 28px;
+    background: radial-gradient(circle at 40% 30%, #b3b3b3 0%, #666666 50%, #333333 100%);
+    border: 4px solid #111;
+    box-shadow:
+      0 0 0 6px var(--bg-color),
+      0 0 0 10px var(--iron),
+      0 25px 50px rgba(0,0,0,0.8);
+    position: relative;
+    overflow: hidden;
+    cursor: grab;
+  }
+  .medallion.dragging { cursor: grabbing; }
+  #three-container { width: 100%; height: 100%; }
+  #three-container canvas { display: block; width: 100%; height: 100%; }
+
+  .drag-hint {
+    font-size: .68rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--text-dim); text-align: center; opacity: .75;
+  }
+
+  .caption { text-align: center; font-family: var(--font-display); color: var(--text-color); }
+  .caption .name { font-size: 1.8rem; font-weight: 600; letter-spacing: .03em; }
+  .caption .name::before, .caption .name::after { content: "✦"; color: var(--iron); font-size: 1rem; margin: 0 14px; vertical-align: middle; }
+  .caption .sub { font-family: var(--font-body); font-size: .75rem; text-transform: uppercase; letter-spacing: .2em; color: var(--accent); margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div class="workspace">
+  <div class="sidebar">
+    <div class="brand">Noah Character Forge <small>3D Figure</small></div>
+
+    <div class="control-group">
+      <h3 class="section-title">Character Presets</h3>
+      <label class="field" for="characterPresetSelect"><strong>Select Character</strong></label>
+      <div class="preset-row">
+        <select id="characterPresetSelect">
+          <!-- populated dynamically -->
+        </select>
+        <button id="load-preset">Load</button>
+      </div>
+      <div id="preset-status" style="display:none; font-size:.72rem; color:#c98a5a; margin-top:8px; line-height:1.4;"></div>
+    </div>
+
+    <div class="control-group">
+      <h3 class="section-title">Facial Structure</h3>
+      <label class="field">Face Shape
+        <select id="face-shape">
+          <option value="oval">Oval</option>
+          <option value="square">Square</option>
+          <option value="round">Round</option>
+          <option value="heart">Heart</option>
+        </select>
+      </label>
+      <label class="field">
+        <span class="row">Face Size <span class="val" id="head-size-val">1.0×</span></span>
+        <input type="range" id="head-size" min="0.5" max="1.5" step="0.1" value="1">
+      </label>
+      <label class="field">Forehead Height
+        <select id="forehead-height">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+      </label>
+      <label class="field">
+        <span class="row">Eye Spacing <span class="val" id="eye-spacing-val">1.0×</span></span>
+        <input type="range" id="eye-spacing" min="0.5" max="1.5" step="0.1" value="1">
+      </label>
+      <label class="field">
+        <span class="row">Ear Size <span class="val" id="ear-size-val">1.0×</span></span>
+        <input type="range" id="ear-size" min="0.5" max="1.5" step="0.1" value="1">
+      </label>
+      <label class="field">Ear Shape
+        <select id="ear-shape">
+          <option value="pointed">Pointed</option>
+          <option value="round">Round</option>
+          <option value="broad">Broad</option>
+          <option value="elfin">Elfin</option>
+        </select>
+      </label>
+      <label class="field">Chin Shape
+        <select id="chin-shape">
+          <option value="rounded">Rounded</option>
+          <option value="square">Square</option>
+          <option value="pointed">Pointed</option>
+          <option value="cleft">Cleft</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="control-group">
+      <h3 class="section-title">Facial Features</h3>
+      <label class="field">Eye Shape
+        <select id="eye-shape">
+          <option value="almond">Almond</option>
+          <option value="round">Round</option>
+          <option value="narrow">Narrow</option>
+          <option value="downturned">Downturned</option>
+          <option value="upturned">Upturned</option>
+          <option value="hooded">Hooded</option>
+        </select>
+      </label>
+      <label class="field">Eyebrows
+        <select id="eyebrow-style">
+          <option value="arched">Arched</option>
+          <option value="straight">Straight</option>
+          <option value="thick">Thick</option>
+          <option value="thin">Thin</option>
+          <option value="furrowed">Furrowed</option>
+        </select>
+      </label>
+      <label class="field">Nose Shape
+        <select id="nose-shape">
+          <option value="straight">Straight</option>
+          <option value="aquiline">Aquiline / Hooked</option>
+          <option value="wide">Wide</option>
+          <option value="button">Button</option>
+        </select>
+      </label>
+      <label class="field">
+        <span class="row">Nose Scale <span class="val" id="nose-scale-val">1.0×</span></span>
+        <input type="range" id="nose-scale" min="0.75" max="1.4" step="0.05" value="1">
+      </label>
+      <label class="field">Mouth
+        <select id="mouth-style">
+          <option value="neutral">Neutral</option>
+          <option value="smile">Smile</option>
+          <option value="frown">Frown</option>
+          <option value="small">Small</option>
+          <option value="open">Open / Speaking</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="control-group">
+      <h3 class="section-title">Hair &amp; Assets</h3>
+      <label class="field">Hair Style
+        <select id="hair-style">
+          <option value="bald">Bald</option>
+          <option value="buzz">Buzz Cut</option>
+          <option value="short">Short</option>
+          <option value="wavy">Wavy</option>
+          <option value="curly">Curly</option>
+          <option value="afro">Afro</option>
+          <option value="receding">Receding</option>
+          <option value="flowing">Flowing</option>
+          <option value="braids">Braids</option>
+          <option value="tied_back">Tied Back</option>
+          <option value="shoulder_waves">Shoulder-Length Waves</option>
+          <option value="side_braid">Side Braid</option>
+          <option value="crown_braids">Crown Braids</option>
+          <option value="locs">Locs</option>
+          <option value="shaved_sides">Shaved Sides</option>
+        </select>
+      </label>
+      <label class="field">
+        <span class="row">Hair Size <span class="val" id="hair-size-val">1.0×</span></span>
+        <input type="range" id="hair-size" min="0.5" max="2.0" step="0.1" value="1">
+      </label>
+      <label class="field">Beard
+        <select id="beard-style">
+          <option value="none">Clean Shaven</option>
+          <option value="stubble">Stubble</option>
+          <option value="short">Short</option>
+          <option value="medium">Medium</option>
+          <option value="full_round">Full &amp; Rounded</option>
+          <option value="pointed">Pointed</option>
+          <option value="long">Long / Patriarch</option>
+        </select>
+      </label>
+      <label class="field">Head Covering
+        <select id="hat-style">
+          <option value="none">None</option>
+          <option value="hood">Hood / Mantle</option>
+          <option value="turban">Turban</option>
+          <option value="skullcap">Skullcap</option>
+          <option value="headscarf">Headscarf</option>
+          <option value="helmet">Roman Helmet</option>
+          <option value="veil">Light Veil</option>
+          <option value="wrapped_scarf">Wrapped Scarf</option>
+          <option value="shepherd_wrap">Shepherd Wrap</option>
+          <option value="royal_diadem">Royal Diadem</option>
+          <option value="pharaoh_crown">Egyptian Crown</option>
+          <option value="battle_helmet">Bronze Battle Helmet</option>
+        </select>
+      </label>
+      <label class="field">
+        <span class="row">Head Covering Size <span class="val" id="hat-size-val">1.0×</span></span>
+        <input type="range" id="hat-size" min="0.5" max="2.0" step="0.1" value="1">
+      </label>
+      <div class="checkbox-row">
+        <input type="checkbox" id="hat-match-hair">
+        <label for="hat-match-hair">Match head covering to hair color</label>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <h3 class="section-title">Wardrobe Setup</h3>
+      <label class="field">Clothing Layering
+        <select id="clothing-type">
+          <option value="tunic">Basic Tunic</option>
+          <option value="layered_robe">Layered Robe</option>
+          <option value="priestly_ephod">Priestly Ephod</option>
+          <option value="military_lorica">Military Lorica</option>
+          <option value="merchant_sash">Merchant Sash</option>
+          <option value="peasant_rags">Peasant Rags</option>
+          <option value="work_tunic">Work Tunic</option>
+          <option value="traveller_cloak">Traveller Cloak</option>
+          <option value="desert_mantle">Desert Mantle</option>
+          <option value="prophet_mantle">Prophet Mantle</option>
+          <option value="court_dress">Court Dress</option>
+          <option value="royal_robes">Royal Robes</option>
+        </select>
+      </label>
+      <label class="field">Garment Texture
+        <select id="material-style">
+          <option value="woven_linen">Woven Linen</option>
+          <option value="fine_linen">Fine Linen</option>
+          <option value="herringbone">Herringbone</option>
+          <option value="basket_weave">Basket Weave</option>
+          <option value="dotted">Dotted Textile</option>
+          <option value="tartan">Tartan / Checked</option>
+          <option value="scales">Armour Scales</option>
+          <option value="plain">Plain Cloth</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="control-group">
+      <h3 class="section-title">Wardrobe Colors (4-Tier)</h3>
+      <div class="color-grid">
+        <div class="color-field">Inner Dress <input type="color" id="color-inner" value="#2a2a2a"></div>
+        <div class="color-field">Outer Dress <input type="color" id="color-outer" value="#1a1a1a"></div>
+        <div class="color-field">Heavy Cloak <input type="color" id="color-cloak" value="#0d0d0d"></div>
+        <div class="color-field">Decorations <input type="color" id="color-accent" value="#8b0000"></div>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="dual-stripe">
+        <label for="dual-stripe">Dual-color stripe (sash / trim)</label>
+      </div>
+      <div class="color-field" id="stripe-row" style="display:none;">Stripe Color <input type="color" id="color-garment2" value="#d4af37"></div>
+    </div>
+
+    <div class="control-group">
+      <h3 class="section-title">Physique Colors</h3>
+      <div class="color-grid">
+        <div class="color-field">Face / Body <input type="color" id="color-skin" value="#d2a679"></div>
+        <div class="color-field">Eyes <input type="color" id="color-eye" value="#4a3b32"></div>
+        <div class="color-field">Lips <input type="color" id="color-lip" value="#a85d5d"></div>
+        <div class="color-field">Hair / Beard <input type="color" id="color-hair" value="#2a2a2a"></div>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <div class="row-buttons">
+        <button class="wide" id="export-png">Download .PNG</button>
+        <button class="wide secondary" id="export-json">Save .JSON</button>
+      </div>
+      <button class="wide success" id="export-batch">Batch Download All Presets (ZIP)</button>
+    </div>
+  </div>
+
+  <div class="canvas-area">
+    <div class="medallion" id="medallion">
+      <div id="three-container"></div>
+    </div>
+    <div class="caption">
+      <div class="name" id="caption-name">Custom Character</div>
+      <div class="sub" id="caption-sub">unsaved configuration</div>
+    </div>
+    <div class="drag-hint">Drag to rotate &middot; scroll to zoom</div>
+  </div>
+</div>
+
+<script src="character_presets.js"></script>
+<script>
+/* ==========================================================
+   3D CHARACTER RENDER LOGIC (Three.js)
+   Mirrors the 2D SVG generator's state schema field-for-field so
+   presets/JSON saves are interchangeable between the two tools.
+   ========================================================== */
+
+/* ---------- shared helpers ---------- */
+function shadeColor(hex, amt) {
+    let c = hex.replace('#','');
+    if (c.length === 3) c = c.split('').map(x => x+x).join('');
+    const num = parseInt(c, 16);
+    let r = (num>>16)+amt, g = ((num>>8)&0xff)+amt, b = (num&0xff)+amt;
+    r = Math.max(Math.min(255,r),0); g = Math.max(Math.min(255,g),0); b = Math.max(Math.min(255,b),0);
+    return "#" + r.toString(16).padStart(2,'0') + g.toString(16).padStart(2,'0') + b.toString(16).padStart(2,'0');
+}
+function col(hex) { return new THREE.Color(hex); }
+
+function disposeObject3D(obj) {
+    obj.traverse(node => {
+        if (node.geometry) node.geometry.dispose();
+        // Shared materials/textures are cached for the lifetime of the tool.
+        // Only dispose one-off materials created for a single mesh.
+        if (node.material) {
+            const mats = Array.isArray(node.material) ? node.material : [node.material];
+            mats.forEach(m => {
+                if (!m || (m.userData && m.userData.sharedMaterial)) return;
+                if (m.map && !(m.map.userData && m.map.userData.sharedTexture)) m.map.dispose();
+                if (m.bumpMap && !(m.bumpMap.userData && m.bumpMap.userData.sharedTexture)) m.bumpMap.dispose();
+                if (m.roughnessMap && !(m.roughnessMap.userData && m.roughnessMap.userData.sharedTexture)) m.roughnessMap.dispose();
+                m.dispose();
+            });
+        }
+    });
+}
+
+/* ==========================================================
+   SHARED PROCEDURAL MATERIAL LIBRARY
+   ----------------------------------------------------------
+   Character parts deliberately reuse material instances. This gives the
+   generator a consistent toy/figurine look and avoids producing dozens of
+   almost-identical WebGL materials every time the character is rebuilt.
+
+   Each material combines:
+     - a vertical colour gradient
+     - low-amplitude procedural noise
+     - a surface-specific pattern (cloth / skin / hair / brushed metal)
+     - a bump/roughness map where useful
+   ========================================================== */
+const sharedMaterialCache = new Map();
+const sharedTextureCache = new Map();
+
+function hexToRgb(hex) {
+    let h = hex.replace('#','');
+    if (h.length === 3) h = h.split('').map(x => x+x).join('');
+    const n = parseInt(h,16);
+    return { r:(n>>16)&255, g:(n>>8)&255, b:n&255 };
+}
+function mixHex(hexA, hexB, t) {
+    const a = hexToRgb(hexA), b = hexToRgb(hexB);
+    const m = k => Math.round(a[k] + (b[k]-a[k])*t);
+    return `rgb(${m('r')},${m('g')},${m('b')})`;
+}
+function seededNoise(x, y, seed=1) {
+    const v = Math.sin(x*12.9898 + y*78.233 + seed*37.719) * 43758.5453;
+    return v - Math.floor(v);
+}
+function markSharedTexture(tex) {
+    tex.userData = tex.userData || {};
+    tex.userData.sharedTexture = true;
+    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+    tex.encoding = THREE.sRGBEncoding;
+    return tex;
+}
+
+function getSurfaceTexture(kind, hex, style='plain') {
+    const key = `${kind}|${hex}|${style}`;
+    if (sharedTextureCache.has(key)) return sharedTextureCache.get(key);
+
+    const size = 128;
+    const c = document.createElement('canvas');
+    c.width = c.height = size;
+    const ctx = c.getContext('2d');
+
+    const light = shadeColor(hex, kind === 'metal' ? 42 : 26);
+    const dark  = shadeColor(hex, kind === 'skin' ? -18 : -34);
+    const g = ctx.createLinearGradient(0,0,0,size);
+    g.addColorStop(0, light);
+    g.addColorStop(0.42, hex);
+    g.addColorStop(1, dark);
+    ctx.fillStyle = g;
+    ctx.fillRect(0,0,size,size);
+
+    // Fine grain makes simple primitives feel less computer-flat.
+    const img = ctx.getImageData(0,0,size,size);
+    const data = img.data;
+    const amp = kind === 'skin' ? 4 : kind === 'metal' ? 7 : kind === 'hair' ? 8 : 6;
+    for (let y=0;y<size;y++) for (let x=0;x<size;x++) {
+        const i=(y*size+x)*4;
+        const n=(seededNoise(x,y,kind.length)-0.5)*amp;
+        data[i]=Math.max(0,Math.min(255,data[i]+n));
+        data[i+1]=Math.max(0,Math.min(255,data[i+1]+n));
+        data[i+2]=Math.max(0,Math.min(255,data[i+2]+n));
+    }
+    ctx.putImageData(img,0,0);
+
+    ctx.save();
+    if (kind === 'cloth') {
+        ctx.globalAlpha = 0.20;
+        ctx.strokeStyle = shadeColor(hex,-48);
+        ctx.lineWidth = 1;
+        if (style === 'herringbone') {
+            for (let y=0;y<size;y+=12) for (let x=-12;x<size+12;x+=12) {
+                ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x+6,y+6); ctx.lineTo(x+12,y); ctx.stroke();
+            }
+        } else if (style === 'basket_weave') {
+            ctx.lineWidth = 3;
+            for (let i=0;i<size;i+=12) {
+                ctx.beginPath(); ctx.moveTo(0,i); ctx.lineTo(size,i); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(i,0); ctx.lineTo(i,size); ctx.stroke();
+            }
+        } else if (style === 'dotted') {
+            ctx.fillStyle = shadeColor(hex,-55);
+            for (let y=6;y<size;y+=12) for (let x=6;x<size;x+=12) { ctx.beginPath(); ctx.arc(x,y,1.6,0,Math.PI*2); ctx.fill(); }
+        } else if (style === 'tartan') {
+            ctx.lineWidth = 5;
+            for (let i=0;i<size;i+=20) {
+                ctx.beginPath(); ctx.moveTo(0,i); ctx.lineTo(size,i); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(i,0); ctx.lineTo(i,size); ctx.stroke();
+            }
+            ctx.globalAlpha = .14; ctx.strokeStyle = shadeColor(hex,55); ctx.lineWidth = 2;
+            for (let i=10;i<size;i+=20) { ctx.beginPath(); ctx.moveTo(0,i); ctx.lineTo(size,i); ctx.stroke(); }
+        } else if (style === 'scales') {
+            for (let y=0;y<size+10;y+=10) for (let x=-10;x<size+10;x+=20) {
+                ctx.beginPath(); ctx.arc(x,y,10,0,Math.PI); ctx.stroke();
+            }
+        } else if (style !== 'plain') {
+            const step = style === 'fine_linen' ? 5 : 8;
+            for (let i=0;i<size;i+=step) {
+                ctx.beginPath(); ctx.moveTo(0,i); ctx.lineTo(size,i); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(i,0); ctx.lineTo(i,size); ctx.stroke();
+            }
+        }
+    } else if (kind === 'hair') {
+        ctx.globalAlpha = 0.20;
+        ctx.strokeStyle = shadeColor(hex,55);
+        for (let x=3;x<size;x+=7) {
+            ctx.beginPath();
+            ctx.moveTo(x,0);
+            ctx.bezierCurveTo(x+4,size*.3,x-3,size*.65,x+2,size);
+            ctx.stroke();
+        }
+    } else if (kind === 'metal') {
+        ctx.globalAlpha = 0.22;
+        for (let y=2;y<size;y+=4) {
+            ctx.strokeStyle = y%8 ? shadeColor(hex,55) : shadeColor(hex,-35);
+            ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(size,y); ctx.stroke();
+        }
+    } else if (kind === 'skin') {
+        ctx.globalAlpha = 0.12;
+        ctx.fillStyle = shadeColor(hex,-36);
+        for (let i=0;i<60;i++) {
+            const x=seededNoise(i,4,7)*size, y=seededNoise(i,9,13)*size;
+            ctx.beginPath(); ctx.arc(x,y,.5+seededNoise(i,2,5),0,Math.PI*2); ctx.fill();
+        }
+    }
+    ctx.restore();
+
+    const tex = markSharedTexture(new THREE.CanvasTexture(c));
+    tex.repeat.set(kind === 'cloth' ? 3 : 2, kind === 'cloth' ? 3 : 2);
+    sharedTextureCache.set(key, tex);
+    return tex;
+}
+
+function getBumpTexture(kind, style='plain') {
+    const key=`bump|${kind}|${style}`;
+    if (sharedTextureCache.has(key)) return sharedTextureCache.get(key);
+    const size=96, c=document.createElement('canvas'); c.width=c.height=size;
+    const ctx=c.getContext('2d');
+    ctx.fillStyle='#808080'; ctx.fillRect(0,0,size,size);
+    ctx.strokeStyle='#a8a8a8'; ctx.fillStyle='#9a9a9a'; ctx.lineWidth=1.5;
+    if (kind==='cloth' && style!=='plain') {
+        const step=style==='fine_linen'?5:8;
+        for(let i=0;i<size;i+=step){ctx.beginPath();ctx.moveTo(0,i);ctx.lineTo(size,i);ctx.stroke();ctx.beginPath();ctx.moveTo(i,0);ctx.lineTo(i,size);ctx.stroke();}
+    } else if (kind==='hair') {
+        for(let x=2;x<size;x+=6){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x+3,size);ctx.stroke();}
+    } else if (kind==='metal') {
+        for(let y=1;y<size;y+=3){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(size,y);ctx.stroke();}
+    } else if (kind==='skin') {
+        for(let i=0;i<160;i++){const x=seededNoise(i,2,3)*size,y=seededNoise(i,5,9)*size;ctx.fillRect(x,y,1,1);}
+    }
+    const tex=markSharedTexture(new THREE.CanvasTexture(c));
+    tex.encoding = THREE.LinearEncoding;
+    tex.repeat.set(3,3);
+    sharedTextureCache.set(key,tex);
+    return tex;
+}
+
+function sharedStandardMaterial(kind, hex, style='plain') {
+    const key = `${kind}|${hex}|${style}`;
+    if (sharedMaterialCache.has(key)) return sharedMaterialCache.get(key);
+
+    const settings = {
+        color: 0xffffff,
+        map: getSurfaceTexture(kind, hex, style),
+        roughness: 0.72,
+        metalness: 0.0
+    };
+    if (kind === 'cloth') {
+        settings.roughness = 0.88; settings.metalness = 0.01;
+        settings.bumpMap = getBumpTexture('cloth',style);
+        settings.bumpScale = style === 'plain' ? 0.003 : 0.016;
+    } else if (kind === 'skin') {
+        settings.roughness = 0.67;
+        settings.bumpMap = getBumpTexture('skin'); settings.bumpScale = 0.006;
+    } else if (kind === 'hair') {
+        settings.roughness = 0.60;
+        settings.bumpMap = getBumpTexture('hair'); settings.bumpScale = 0.015;
+    } else if (kind === 'metal') {
+        settings.roughness = 0.30; settings.metalness = 0.78;
+        settings.bumpMap = getBumpTexture('metal'); settings.bumpScale = 0.008;
+    }
+
+    const mat = new THREE.MeshStandardMaterial(settings);
+    mat.userData.sharedMaterial = true;
+    mat.userData.materialKind = kind;
+    mat.userData.materialKey = key;
+    sharedMaterialCache.set(key, mat);
+    return mat;
+}
+
+function clothMaterial(hex, materialStyle) { return sharedStandardMaterial('cloth', hex, materialStyle || 'plain'); }
+function metalMaterial(hex) { return sharedStandardMaterial('metal', hex, 'brushed'); }
+function skinMaterial(hex) { return sharedStandardMaterial('skin', hex, 'soft'); }
+function hairMaterial(hex) { return sharedStandardMaterial('hair', hex, 'strand'); }
+
+/* ---------- HEAD (lathe-revolved profile, silhouette varies per faceShape/chinShape/foreheadHeight) ---------- */
+function foreheadTopY(foreheadHeight) {
+    return foreheadHeight === 'high' ? 2.08 : (foreheadHeight === 'low' ? 1.92 : 2.00);
+}
+function faceWidths(shape) {
+    // [jawWidth, cheekWidth, templeWidth]
+    switch(shape) {
+        case 'square': return [0.50, 0.53, 0.48];
+        case 'round':  return [0.46, 0.56, 0.40];
+        case 'heart':  return [0.30, 0.50, 0.56];
+        case 'oval':
+        default:       return [0.40, 0.50, 0.38];
+    }
+}
+function chinWidths(shape) {
+    // [tipX (0=pointed), jawX]
+    switch(shape) {
+        case 'square': return [0.20, 0.30];
+        case 'pointed': return [0.0, 0.15];
+        case 'cleft': return [0.02, 0.24];
+        case 'rounded':
+        default: return [0.04, 0.24];
+    }
+}
+function buildHead(state) {
+    const [tipX, jawX] = chinWidths(state.chinShape);
+    const [jawWidth, cheekWidth, templeWidth] = faceWidths(state.faceShape);
+    const topY = foreheadTopY(state.foreheadHeight);
+    const pts = [
+        new THREE.Vector2(tipX, 1.15),
+        new THREE.Vector2(jawX, 1.24),
+        new THREE.Vector2(jawWidth, 1.38),
+        new THREE.Vector2(cheekWidth, 1.58),
+        new THREE.Vector2(templeWidth, 1.80),
+        new THREE.Vector2(templeWidth*0.78, topY - 0.06),
+        new THREE.Vector2(templeWidth*0.42, topY + 0.06),
+        new THREE.Vector2(0, topY + 0.13)
+    ];
+    const geo = new THREE.LatheGeometry(pts, 28);
+    geo.computeVertexNormals();
+    const mesh = new THREE.Mesh(geo, skinMaterial(state.colorSkin));
+    mesh.name = 'head';
+    const group = new THREE.Group();
+    group.add(mesh);
+
+    if (state.chinShape === 'cleft') {
+        const grooveGeo = new THREE.BoxGeometry(0.02, 0.10, 0.06);
+        const groove = new THREE.Mesh(grooveGeo, skinMaterial(shadeColor(state.colorSkin, -35)));
+        groove.position.set(0, 1.185, 0.42);
+        group.add(groove);
+    }
+    // whole-head scale (Face Size)
+    group.scale.setScalar(state.headSize);
+    group.position.y = 1.6 * (1 - state.headSize); // keep chin roughly anchored to neck
+    return group;
+}
+
+/* ---------- EARS ---------- */
+function buildEars(state) {
+    const group = new THREE.Group();
+    const mat = skinMaterial(state.colorSkin);
+    const mk = (shape) => {
+        let geo;
+        switch(shape) {
+            case 'round': geo = new THREE.SphereGeometry(0.11, 12, 10); break;
+            case 'broad': geo = new THREE.SphereGeometry(0.13, 12, 10); geo.scale(1.3, 1, 0.7); break;
+            case 'elfin': geo = new THREE.ConeGeometry(0.09, 0.22, 10); break;
+            case 'pointed':
+            default: geo = new THREE.ConeGeometry(0.10, 0.17, 10); geo.rotateX(Math.PI * 0.15);
+        }
+        return geo;
+    };
+    const template = mk(state.earShape);
+    const left = new THREE.Mesh(template, mat);
+    const right = new THREE.Mesh(template.clone(), mat);
+    left.position.set(-0.5, 1.5, 0.02);
+    right.position.set(0.5, 1.5, 0.02);
+    left.rotation.z = Math.PI/2 * 0.3;
+    right.rotation.z = -Math.PI/2 * 0.3;
+    [left, right].forEach(e => e.scale.setScalar(state.earSize));
+    group.add(left, right);
+    group.scale.setScalar(state.headSize);
+    group.position.y = 1.6 * (1 - state.headSize);
+    return group;
+}
+
+/* ---------- EYES ---------- */
+function buildEyes(state) {
+    const group = new THREE.Group();
+    const spacing = 0.20 * state.eyeSpacing;
+    const whiteMat = new THREE.MeshStandardMaterial({ color: 0xfdfaf1, roughness: 0.3 });
+    const irisMat = new THREE.MeshStandardMaterial({ color: col(state.colorEye), roughness: 0.25 });
+    const pupilMat = new THREE.MeshStandardMaterial({ color: 0x1a1410, roughness: 0.2 });
+
+    const mkEye = (sign) => {
+        const eyeGroup = new THREE.Group();
+        const white = new THREE.Mesh(new THREE.SphereGeometry(0.075, 14, 12), whiteMat);
+        const iris = new THREE.Mesh(new THREE.SphereGeometry(0.038, 12, 10), irisMat);
+        const pupil = new THREE.Mesh(new THREE.SphereGeometry(0.016, 8, 8), pupilMat);
+        iris.position.z = 0.06; pupil.position.z = 0.09;
+        eyeGroup.add(white, iris, pupil);
+
+        switch(state.eyeShape) {
+            case 'round': eyeGroup.scale.set(1.15, 1.15, 1); break;
+            case 'narrow': eyeGroup.scale.set(1.25, 0.55, 1); break;
+            case 'downturned': eyeGroup.scale.set(1.05, 0.85, 1); eyeGroup.rotation.z = sign * -0.15; break;
+            case 'upturned': eyeGroup.scale.set(1.05, 0.85, 1); eyeGroup.rotation.z = sign * 0.15; break;
+            case 'hooded': {
+                eyeGroup.scale.set(1, 0.8, 1);
+                const lid = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.03, 0.05), skinMaterial(shadeColor(state.colorSkin, -10)));
+                lid.position.set(0, 0.05, 0.03);
+                eyeGroup.add(lid);
+                break;
+            }
+            case 'almond':
+            default: eyeGroup.scale.set(1, 0.85, 1);
+        }
+        return eyeGroup;
+    };
+    const left = mkEye(-1); left.position.set(-spacing, 1.68, 0.46);
+    const right = mkEye(1); right.position.set(spacing, 1.68, 0.46);
+    group.add(left, right);
+    group.scale.setScalar(state.headSize);
+    group.position.y = 1.6 * (1 - state.headSize);
+    return group;
+}
+
+/* ---------- EYEBROWS ---------- */
+function buildEyebrows(state) {
+    const group = new THREE.Group();
+    const mat = hairMaterial(state.colorHair);
+    const spacing = 0.20 * state.eyeSpacing;
+    const mk = (sign) => {
+        let geo, rotZ = 0, posY = 1.80;
+        switch(state.eyebrowStyle) {
+            case 'straight': geo = new THREE.BoxGeometry(0.16, 0.018, 0.03); break;
+            case 'thick': geo = new THREE.BoxGeometry(0.17, 0.035, 0.035); break;
+            case 'thin': geo = new THREE.BoxGeometry(0.15, 0.012, 0.025); break;
+            case 'furrowed': geo = new THREE.BoxGeometry(0.16, 0.02, 0.03); rotZ = sign * 0.35; posY = 1.77; break;
+            case 'arched':
+            default: geo = new THREE.TorusGeometry(0.09, 0.014, 6, 10, Math.PI*0.6);
+        }
+        const mesh = new THREE.Mesh(geo, mat);
+        if (state.eyebrowStyle === 'arched') { mesh.rotation.z = Math.PI*0.7*sign*-1 + Math.PI; mesh.rotation.x = Math.PI/2; }
+        mesh.position.set(sign*spacing, posY, 0.47);
+        mesh.rotation.z += rotZ;
+        return mesh;
+    };
+    group.add(mk(-1), mk(1));
+    group.scale.setScalar(state.headSize);
+    group.position.y = 1.6 * (1 - state.headSize);
+    return group;
+}
+
+/* ---------- NOSE ---------- */
+function buildNose(state) {
+    const group = new THREE.Group();
+    const mat = skinMaterial(state.colorSkin);
+    switch(state.noseShape) {
+        case 'aquiline': {
+            const bridge = new THREE.Mesh(new THREE.CylinderGeometry(0.028, 0.045, 0.22, 10), mat);
+            bridge.rotation.x = Math.PI/2 * 0.92; bridge.position.set(0, 1.62, 0.55);
+            const bump = new THREE.Mesh(new THREE.SphereGeometry(0.035, 10, 8), mat);
+            bump.position.set(0, 1.66, 0.60);
+            group.add(bridge, bump);
+            break;
+        }
+        case 'wide': {
+            const cone = new THREE.Mesh(new THREE.ConeGeometry(0.075, 0.20, 12), mat);
+            cone.rotation.x = Math.PI; cone.position.set(0, 1.58, 0.56);
+            group.add(cone);
+            break;
+        }
+        case 'button': {
+            const ball = new THREE.Mesh(new THREE.SphereGeometry(0.05, 12, 10), mat);
+            ball.position.set(0, 1.58, 0.54);
+            group.add(ball);
+            break;
+        }
+        case 'straight':
+        default: {
+            const cone = new THREE.Mesh(new THREE.ConeGeometry(0.05, 0.22, 12), mat);
+            cone.rotation.x = Math.PI; cone.position.set(0, 1.58, 0.55);
+            group.add(cone);
+        }
+    }
+    group.scale.multiplyScalar(state.noseScale);
+    // re-apply head scale AFTER nose scale by wrapping
+    const wrap = new THREE.Group();
+    wrap.add(group);
+    wrap.scale.setScalar(state.headSize);
+    wrap.position.y = 1.6 * (1 - state.headSize);
+    return wrap;
+}
+
+/* ---------- MOUTH ---------- */
+function buildMouth(state) {
+    const group = new THREE.Group();
+    const mat = new THREE.MeshStandardMaterial({ color: col(state.colorLip), roughness: 0.5 });
+    let mesh;
+    switch(state.mouthStyle) {
+        case 'smile': {
+            const geo = new THREE.TorusGeometry(0.13, 0.018, 8, 16, Math.PI*0.7);
+            mesh = new THREE.Mesh(geo, mat);
+            mesh.rotation.z = Math.PI + (Math.PI - Math.PI*0.7)/2;
+            mesh.position.set(0, 1.36, 0.52);
+            break;
+        }
+        case 'frown': {
+            const geo = new THREE.TorusGeometry(0.13, 0.018, 8, 16, Math.PI*0.7);
+            mesh = new THREE.Mesh(geo, mat);
+            mesh.rotation.z = (Math.PI - Math.PI*0.7)/2;
+            mesh.position.set(0, 1.30, 0.52);
+            break;
+        }
+        case 'small': {
+            mesh = new THREE.Mesh(new THREE.BoxGeometry(0.09, 0.018, 0.02), mat);
+            mesh.position.set(0, 1.34, 0.53);
+            break;
+        }
+        case 'open': {
+            mesh = new THREE.Group();
+            const lipTop = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.02, 0.03), mat);
+            lipTop.position.set(0, 1.365, 0.53);
+            const inner = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.05, 0.02), new THREE.MeshStandardMaterial({ color: 0x3a1f1f }));
+            inner.position.set(0, 1.335, 0.535);
+            const lipBottom = new THREE.Mesh(new THREE.BoxGeometry(0.14, 0.02, 0.03), mat);
+            lipBottom.position.set(0, 1.305, 0.53);
+            mesh.add(lipTop, inner, lipBottom);
+            break;
+        }
+        case 'neutral':
+        default: {
+            mesh = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.02, 0.025), mat);
+            mesh.position.set(0, 1.34, 0.53);
+        }
+    }
+    group.add(mesh);
+    group.scale.setScalar(state.headSize);
+    group.position.y = 1.6 * (1 - state.headSize);
+    return group;
+}
+
+/* ---------- HAIR ---------- */
+function buildHair(state) {
+    const group = new THREE.Group();
+    if (state.hairStyle === 'bald') return group;
+    const mat = hairMaterial(state.colorHair);
+    const scalpTop = new THREE.Vector3(0, 1.72, 0);
+
+    const cap = (thetaLength, phiStart=0, phiLength=Math.PI*2, radius=0.62, heightScale=1.05) => {
+        const g = new THREE.SphereGeometry(radius, 20, 14, phiStart, phiLength, 0, thetaLength);
+        g.scale(1, heightScale, 1);
+        const m = new THREE.Mesh(g, mat);
+        m.position.copy(scalpTop);
+        return m;
+    };
+    const braid = (x, z, len, r=0.045, topY=1.55) => {
+        const g = new THREE.CylinderGeometry(r, r*0.6, len, 8);
+        const m = new THREE.Mesh(g, mat);
+        m.position.set(x, topY - len/2, z);
+        m.rotation.z = x * 0.25;
+        return m;
+    };
+
+    switch(state.hairStyle) {
+        case 'buzz':
+            group.add(cap(Math.PI*0.52, 0, Math.PI*2, 0.63, 1.02));
+            break;
+        case 'short':
+            group.add(cap(Math.PI*0.58, 0, Math.PI*2, 0.65, 1.05));
+            break;
+        case 'wavy': {
+            group.add(cap(Math.PI*0.58, 0, Math.PI*2, 0.65, 1.05));
+            for (let i=0;i<6;i++) {
+                const a = (i/6) * Math.PI*2;
+                const bump = new THREE.Mesh(new THREE.SphereGeometry(0.09, 8, 8), mat);
+                bump.position.set(Math.sin(a)*0.6, 1.65 + Math.cos(a*2)*0.06, Math.cos(a)*0.6*0.5 + 0.15);
+                group.add(bump);
+            }
+            break;
+        }
+        case 'curly': {
+            group.add(cap(Math.PI*0.55, 0, Math.PI*2, 0.62, 1.0));
+            for (let i=0;i<10;i++) {
+                const a = (i/10) * Math.PI*2;
+                const bump = new THREE.Mesh(new THREE.SphereGeometry(0.08, 8, 8), mat);
+                bump.position.set(Math.sin(a)*0.55, 1.95 + Math.sin(i)*0.05, Math.cos(a)*0.4);
+                group.add(bump);
+            }
+            break;
+        }
+        case 'afro':
+            group.add(cap(Math.PI*0.7, 0, Math.PI*2, 0.85, 1.0));
+            break;
+        case 'receding':
+            group.add(cap(Math.PI*0.42, 0, Math.PI*2, 0.63, 1.0));
+            break;
+        case 'flowing': {
+            group.add(cap(Math.PI*0.58, 0, Math.PI*2, 0.65, 1.05));
+            [-1,1].forEach(s => group.add(braid(s*0.55, -0.1, 0.9, 0.09, 1.7)));
+            group.add(braid(0, -0.5, 0.7, 0.11, 1.65));
+            break;
+        }
+        case 'braids': {
+            group.add(cap(Math.PI*0.55, 0, Math.PI*2, 0.62, 1.0));
+            for (let i=-2;i<=2;i++) group.add(braid(i*0.18, -0.55, 0.75 - Math.abs(i)*0.08, 0.045, 1.55));
+            break;
+        }
+        case 'tied_back': {
+            group.add(cap(Math.PI*0.55, 0, Math.PI*2, 0.62, 1.0));
+            const bun = new THREE.Mesh(new THREE.SphereGeometry(0.14, 12, 10), mat);
+            bun.position.set(0, 1.72, -0.55);
+            group.add(bun);
+            break;
+        }
+        case 'shoulder_waves': {
+            group.add(cap(Math.PI*0.58, 0, Math.PI*2, 0.65, 1.05));
+            [-1,1].forEach(s => {
+                const g = new THREE.CylinderGeometry(0.16, 0.1, 0.85, 10, 1, true);
+                const m = new THREE.Mesh(g, mat);
+                m.position.set(s*0.62, 1.25, -0.05);
+                group.add(m);
+            });
+            break;
+        }
+        case 'side_braid': {
+            group.add(cap(Math.PI*0.55, 0, Math.PI*2, 0.62, 1.0));
+            group.add(braid(0.5, -0.3, 1.0, 0.075, 1.55));
+            break;
+        }
+        case 'crown_braids': {
+            group.add(cap(Math.PI*0.4, 0, Math.PI*2, 0.6, 0.9));
+            const ring = new THREE.Mesh(new THREE.TorusGeometry(0.62, 0.05, 8, 20), mat);
+            ring.rotation.x = Math.PI/2;
+            ring.position.set(0, 1.90, 0);
+            group.add(ring);
+            break;
+        }
+        case 'locs': {
+            group.add(cap(Math.PI*0.55, 0, Math.PI*2, 0.62, 1.0));
+            for (let i=0;i<9;i++) {
+                const a = -Math.PI*0.4 + (i/8)*Math.PI*0.8;
+                const x = Math.sin(a)*0.55, z = Math.cos(a)*0.4 - 0.1;
+                group.add(braid(x, z, 0.9, 0.03, 1.6));
+            }
+            break;
+        }
+        case 'shaved_sides':
+            group.add(cap(Math.PI*0.35, 0, Math.PI*2, 0.60, 0.85));
+            break;
+    }
+    group.scale.multiplyScalar(state.hairSize);
+    const wrap = new THREE.Group();
+    wrap.add(group);
+    wrap.scale.setScalar(state.headSize);
+    wrap.position.y = 1.6 * (1 - state.headSize);
+    return wrap;
+}
+
+/* ---------- BEARD ---------- */
+function buildBeard(state) {
+    const group = new THREE.Group();
+    if (state.beardStyle === 'none') return group;
+    const mat = hairMaterial(state.colorHair);
+    switch(state.beardStyle) {
+        case 'stubble': {
+            const dotGeo = new THREE.SphereGeometry(0.012, 4, 4);
+            for (let i=0;i<40;i++) {
+                const dot = new THREE.Mesh(dotGeo, mat);
+                const a = (Math.random()-0.5) * 1.4;
+                dot.position.set(Math.sin(a)*0.35*Math.random(), 1.20 + Math.random()*0.18, 0.40 + Math.random()*0.08);
+                dot.material.opacity = 0.6; dot.material.transparent = true;
+                group.add(dot);
+            }
+            break;
+        }
+        case 'short': {
+            const g = new THREE.SphereGeometry(0.34, 16, 12, 0, Math.PI*2, Math.PI*0.45, Math.PI*0.35);
+            const m = new THREE.Mesh(g, mat);
+            m.position.set(0, 1.28, 0.04); m.rotation.x = Math.PI;
+            group.add(m);
+            break;
+        }
+        case 'medium': {
+            const g = new THREE.SphereGeometry(0.40, 16, 12, 0, Math.PI*2, Math.PI*0.42, Math.PI*0.44);
+            const m = new THREE.Mesh(g, mat);
+            m.position.set(0, 1.24, 0.02); m.rotation.x = Math.PI;
+            group.add(m);
+            break;
+        }
+        case 'full_round': {
+            const g = new THREE.SphereGeometry(0.52, 18, 14, 0, Math.PI*2, Math.PI*0.36, Math.PI*0.5);
+            const m = new THREE.Mesh(g, mat);
+            m.position.set(0, 1.20, 0); m.rotation.x = Math.PI;
+            group.add(m);
+            break;
+        }
+        case 'pointed': {
+            const g = new THREE.ConeGeometry(0.30, 0.55, 16);
+            const m = new THREE.Mesh(g, mat);
+            m.position.set(0, 1.0, 0.10); m.rotation.x = Math.PI;
+            group.add(m);
+            break;
+        }
+        case 'long':
+        default: {
+            const g = new THREE.ConeGeometry(0.34, 0.85, 16);
+            const m = new THREE.Mesh(g, mat);
+            m.position.set(0, 0.85, 0.08); m.rotation.x = Math.PI;
+            group.add(m);
+        }
+    }
+    const wrap = new THREE.Group();
+    wrap.add(group);
+    wrap.scale.setScalar(state.headSize);
+    wrap.position.y = 1.6 * (1 - state.headSize);
+    return wrap;
+}
+
+/* ---------- HEAD COVERING ---------- */
+function buildHat(state) {
+    const group = new THREE.Group();
+    if (state.hatStyle === 'none') return group;
+    const inner = state.hatMatchHair ? state.colorHair : state.colorInner;
+    const outer = state.hatMatchHair ? state.colorHair : state.colorOuter;
+    const cMat = clothMaterial(outer, 'plain');
+    const cMatInner = clothMaterial(inner, 'plain');
+    const mMat = metalMaterial(state.colorAccent);
+
+    switch(state.hatStyle) {
+        case 'hood': {
+            const g = new THREE.CylinderGeometry(0.72, 0.30, 1.9, 20, 1, true);
+            const m = new THREE.Mesh(g, cMat);
+            m.position.set(0, 0.95, -0.05);
+            group.add(m);
+            break;
+        }
+        case 'turban': {
+            for (let i=0;i<3;i++) {
+                const t = new THREE.Mesh(new THREE.TorusGeometry(0.60 - i*0.05, 0.10, 10, 20), cMat);
+                t.rotation.x = Math.PI/2;
+                t.position.set(0, 1.95 + i*0.14, 0);
+                group.add(t);
+            }
+            break;
+        }
+        case 'skullcap': {
+            const g = new THREE.SphereGeometry(0.62, 16, 12, 0, Math.PI*2, 0, Math.PI*0.3);
+            const m = new THREE.Mesh(g, cMat);
+            m.position.set(0, 1.72, 0);
+            group.add(m);
+            break;
+        }
+        case 'headscarf': {
+            const g = new THREE.CylinderGeometry(0.68, 0.32, 1.7, 20, 1, true);
+            const m = new THREE.Mesh(g, cMat);
+            m.position.set(0, 1.05, -0.05);
+            group.add(m);
+            const band = new THREE.Mesh(new THREE.TorusGeometry(0.66, 0.05, 8, 20), cMatInner);
+            band.rotation.x = Math.PI/2; band.position.set(0, 1.98, 0);
+            group.add(band);
+            break;
+        }
+        case 'helmet': {
+            const dome = new THREE.Mesh(new THREE.SphereGeometry(0.66, 18, 12, 0, Math.PI*2, 0, Math.PI*0.5), metalMaterial('#888888'));
+            dome.position.set(0, 1.72, 0);
+            const brim = new THREE.Mesh(new THREE.TorusGeometry(0.66, 0.04, 8, 20), metalMaterial('#666666'));
+            brim.rotation.x = Math.PI/2; brim.position.set(0, 1.72, 0);
+            const crest = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.3, 0.6), cMat);
+            crest.position.set(0, 2.28, 0);
+            group.add(dome, brim, crest);
+            [-1,1].forEach(s => {
+                const cheek = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.5, 0.35), metalMaterial('#777777'));
+                cheek.position.set(s*0.62, 1.42, 0.15);
+                group.add(cheek);
+            });
+            break;
+        }
+        case 'veil': {
+            const g = new THREE.CylinderGeometry(0.70, 0.34, 2.1, 20, 1, true);
+            const m = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ color: col(outer), transparent: true, opacity: 0.55, roughness: 0.7 }));
+            m.position.set(0, 0.9, -0.05);
+            group.add(m);
+            break;
+        }
+        case 'wrapped_scarf': {
+            for (let i=0;i<3;i++) {
+                const t = new THREE.Mesh(new THREE.TorusGeometry(0.60 - i*0.04, 0.09, 10, 20), cMat);
+                t.rotation.x = Math.PI/2; t.rotation.y = i*0.2;
+                t.position.set(0, 1.95 + i*0.13, 0);
+                group.add(t);
+            }
+            const tail = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.05, 0.7, 8), cMat);
+            tail.position.set(0.55, 1.4, -0.2); tail.rotation.z = 0.3;
+            group.add(tail);
+            break;
+        }
+        case 'shepherd_wrap': {
+            const band = new THREE.Mesh(new THREE.TorusGeometry(0.62, 0.09, 10, 20), cMat);
+            band.rotation.x = Math.PI/2; band.position.set(0, 1.98, 0);
+            const flap = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.28, 0.9, 12, 1, true), cMat);
+            flap.position.set(0.5, 1.5, -0.1); flap.rotation.z = 0.15;
+            group.add(band, flap);
+            break;
+        }
+        case 'royal_diadem': {
+            const band = new THREE.Mesh(new THREE.TorusGeometry(0.63, 0.035, 8, 24), mMat);
+            band.rotation.x = Math.PI/2; band.position.set(0, 1.98, 0);
+            group.add(band);
+            for (let i=0;i<7;i++) {
+                const a = -Math.PI*0.4 + (i/6)*Math.PI*0.8;
+                const spike = new THREE.Mesh(new THREE.ConeGeometry(0.03, 0.12, 6), mMat);
+                spike.position.set(Math.sin(a)*0.63, 2.04, Math.cos(a)*0.63);
+                spike.rotation.x = Math.PI;
+                group.add(spike);
+            }
+            break;
+        }
+        case 'pharaoh_crown': {
+            const flare = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.68, 1.0, 16, 1, true), cMat);
+            flare.position.set(0, 2.1, 0);
+            [-1,1].forEach(s => {
+                const lappet = new THREE.Mesh(new THREE.BoxGeometry(0.22, 0.7, 0.03), cMat);
+                lappet.position.set(s*0.5, 1.55, 0.2);
+                group.add(lappet);
+            });
+            group.add(flare);
+            break;
+        }
+        case 'battle_helmet': {
+            const dome = new THREE.Mesh(new THREE.SphereGeometry(0.65, 16, 12, 0, Math.PI*2, 0, Math.PI*0.5), metalMaterial('#8b6330'));
+            dome.position.set(0, 1.72, 0);
+            const brim = new THREE.Mesh(new THREE.CylinderGeometry(0.68, 0.68, 0.12, 20), metalMaterial(outer));
+            brim.position.set(0, 1.40, 0);
+            const crest = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.15, 0.9), cMat);
+            crest.position.set(0, 2.32, 0);
+            group.add(dome, brim, crest);
+            break;
+        }
+    }
+    group.scale.multiplyScalar(state.hatSize);
+    const wrap = new THREE.Group();
+    wrap.add(group);
+    wrap.scale.setScalar(state.headSize);
+    wrap.position.y = 1.6 * (1 - state.headSize);
+    return wrap;
+}
+
+/* ---------- SNOWMAN BODY / WARDROBE ----------
+   The figure is deliberately built from simple rounded primitives.  This
+   keeps every character readable from 360 degrees and gives all stories a
+   consistent toy-like visual language.  Clothing is layered over the same
+   core body rather than replacing it with a flat front-facing bust. */
+function buildTorso(state) {
+    const group = new THREE.Group();
+    const skin = skinMaterial(state.colorSkin);
+    const inner = clothMaterial(state.colorInner, state.materialStyle);
+    const outer = clothMaterial(state.colorOuter, state.materialStyle);
+    const cloak = clothMaterial(state.colorCloak, state.materialStyle);
+    const accentMat = metalMaterial(state.colorAccent);
+    const accentCloth = clothMaterial(state.colorAccent, state.materialStyle);
+
+    // Snowman core: lower body + chest + neck.  Low-poly spheres keep the
+    // generator lightweight while still looking good from every angle.
+    const lower = new THREE.Mesh(new THREE.SphereGeometry(0.92, 24, 18), outer);
+    lower.scale.set(1.0, 1.08, 0.86);
+    lower.position.set(0, -0.35, 0);
+    group.add(lower);
+
+    const chest = new THREE.Mesh(new THREE.SphereGeometry(0.72, 24, 18), inner);
+    chest.scale.set(1.03, 1.0, 0.88);
+    chest.position.set(0, 0.62, 0);
+    group.add(chest);
+
+    const neck = new THREE.Mesh(new THREE.CylinderGeometry(0.21, 0.25, 0.30, 16), skin);
+    neck.position.set(0, 1.12, 0);
+    group.add(neck);
+
+    // Rounded arms and hands are true 3D objects, not front decorations.
+    [-1, 1].forEach(sign => {
+        const arm = new THREE.Mesh(new THREE.SphereGeometry(0.30, 16, 12), outer);
+        arm.scale.set(0.68, 1.55, 0.68);
+        arm.position.set(sign * 0.78, 0.28, 0);
+        arm.rotation.z = sign * -0.18;
+        group.add(arm);
+
+        const hand = new THREE.Mesh(new THREE.SphereGeometry(0.18, 14, 10), skin);
+        hand.position.set(sign * 0.88, -0.18, 0.02);
+        group.add(hand);
+    });
+
+    // Clothing layers follow the rounded body, so the silhouette is useful
+    // from the side and rear as well as from the front.
+    switch(state.clothingType) {
+        case 'layered_robe': {
+            const robe = new THREE.Mesh(new THREE.SphereGeometry(0.98, 24, 18), outer);
+            robe.scale.set(1.02, 1.22, 0.9); robe.position.set(0, -0.30, -0.02);
+            group.add(robe);
+            break;
+        }
+        case 'priestly_ephod': {
+            const ephod = new THREE.Mesh(new THREE.BoxGeometry(0.62, 0.82, 0.10), accentCloth);
+            ephod.position.set(0, 0.46, 0.64); group.add(ephod);
+            const gemGeo = new THREE.SphereGeometry(0.026, 6, 6);
+            for (let r=0;r<3;r++) for (let c=0;c<4;c++) {
+                const gem = new THREE.Mesh(gemGeo, new THREE.MeshStandardMaterial({ color: new THREE.Color().setHSL((r*4+c)/12, .65, .55), roughness:.2 }));
+                gem.position.set(-0.20+c*0.13, 0.22+r*0.18, 0.705); group.add(gem);
+            }
+            break;
+        }
+        case 'military_lorica': {
+            for (let i=0;i<4;i++) {
+                const band = new THREE.Mesh(new THREE.TorusGeometry(0.64-i*0.025, 0.075, 8, 24), metalMaterial(state.colorOuter));
+                band.rotation.x = Math.PI/2; band.position.y = 0.25+i*0.18; group.add(band);
+            }
+            break;
+        }
+        case 'merchant_sash': {
+            const sash = new THREE.Mesh(new THREE.BoxGeometry(0.20, 1.25, 0.07), accentCloth);
+            sash.position.set(0, 0.35, 0.66); sash.rotation.z = 0.52; group.add(sash);
+            break;
+        }
+        case 'peasant_rags': {
+            for (let i=0;i<7;i++) {
+                const a=(i/7)*Math.PI*2;
+                const t = new THREE.Mesh(new THREE.ConeGeometry(0.16,0.38,6), outer);
+                t.position.set(Math.sin(a)*0.65,-1.05,Math.cos(a)*0.55); t.rotation.x=Math.PI; group.add(t);
+            }
+            break;
+        }
+        case 'work_tunic': {
+            const belt = new THREE.Mesh(new THREE.TorusGeometry(0.70,0.055,8,24), accentCloth);
+            belt.rotation.x=Math.PI/2; belt.position.y=0.05; group.add(belt); break;
+        }
+        case 'traveller_cloak':
+        case 'desert_mantle':
+        case 'prophet_mantle':
+        case 'royal_robes': {
+            const royal = state.clothingType === 'royal_robes';
+            const mantle = new THREE.Mesh(new THREE.SphereGeometry(royal?1.04:0.98,24,18,0,Math.PI*2,0.55,Math.PI*0.72), cloak);
+            mantle.scale.set(1.04,1.25,0.94); mantle.position.set(0,-0.18,-0.16); group.add(mantle);
+            const clasp = new THREE.Mesh(new THREE.SphereGeometry(royal?0.085:0.06,10,8), royal?accentMat:accentCloth);
+            clasp.position.set(0,0.88,0.63); group.add(clasp); break;
+        }
+        case 'court_dress': {
+            const collar = new THREE.Mesh(new THREE.TorusGeometry(0.43,0.055,8,24), accentCloth);
+            collar.rotation.x=Math.PI/2; collar.position.set(0,0.95,0); group.add(collar); break;
+        }
+        case 'tunic':
+        default: break;
+    }
+
+    if (state.dualStripe) {
+        const stripe = new THREE.Mesh(new THREE.BoxGeometry(0.15,1.32,0.04), clothMaterial(state.colorGarment2,state.materialStyle));
+        stripe.position.set(-0.26,0.25,0.69); group.add(stripe);
+    }
+
+    // Small feet anchor the figure visually and make rear/side rotation easier
+    // to read without introducing skeletal/rigged complexity.
+    [-1,1].forEach(sign => {
+        const foot = new THREE.Mesh(new THREE.SphereGeometry(0.29,14,10), outer);
+        foot.scale.set(1.25,.65,1.7); foot.position.set(sign*.38,-1.22,0.16); group.add(foot);
+    });
+    return group;
+}
+
+/* ---------- FULL BUILD ---------- */
+function rebuildCharacter(state) {
+    if (characterGroup) { scene.remove(characterGroup); disposeObject3D(characterGroup); }
+    characterGroup = new THREE.Group();
+    characterGroup.add(buildTorso(state));
+    const headAssembly = new THREE.Group();
+    headAssembly.add(buildEars(state));
+    headAssembly.add(buildHead(state));
+    headAssembly.add(buildEyes(state));
+    headAssembly.add(buildEyebrows(state));
+    headAssembly.add(buildNose(state));
+    headAssembly.add(buildMouth(state));
+    headAssembly.add(buildBeard(state));
+    headAssembly.add(buildHair(state));
+    headAssembly.add(buildHat(state));
+    headAssembly.position.y = 0.05;
+    characterGroup.add(headAssembly);
+    characterGroup.rotation.y = cameraYaw;
+    scene.add(characterGroup);
+}
+
+/* ==========================================================
+   THREE.JS SCENE / CAMERA / LIGHTS / SIMPLE ORBIT CONTROLS
+   ========================================================== */
+let renderer, scene, camera, characterGroup;
+let cameraYaw = 0, cameraPitch = 0, cameraDist = 5.8;
+
+function initThree() {
+    const container = document.getElementById('three-container');
+    const w = container.clientWidth, h = container.clientHeight;
+
+    scene = new THREE.Scene();
+    scene.background = null;
+
+    camera = new THREE.PerspectiveCamera(35, w/h, 0.1, 100);
+    updateCameraPosition();
+
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(w, h);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    container.appendChild(renderer.domElement);
+
+    const ambient = new THREE.AmbientLight(0xffffff, 0.55);
+    const key = new THREE.DirectionalLight(0xfff3e0, 1.0);
+    key.position.set(2, 3, 3);
+    const rim = new THREE.DirectionalLight(0x8899ff, 0.4);
+    rim.position.set(-3, 1.5, -2);
+    scene.add(ambient, key, rim);
+
+    setupDragControls(container);
+    window.addEventListener('resize', onResize);
+    animate();
+}
+
+function updateCameraPosition() {
+    const focusY = 1.55;
+    camera.position.set(
+        cameraDist * Math.sin(cameraYaw) * Math.cos(cameraPitch),
+        focusY + cameraDist * Math.sin(cameraPitch),
+        cameraDist * Math.cos(cameraYaw) * Math.cos(cameraPitch)
+    );
+    camera.lookAt(0, focusY, 0);
+}
+
+function setupDragControls(container) {
+    const medallion = document.getElementById('medallion');
+    let dragging = false, lastX = 0, lastY = 0;
+    container.addEventListener('pointerdown', e => {
+        dragging = true; lastX = e.clientX; lastY = e.clientY;
+        medallion.classList.add('dragging');
+    });
+    window.addEventListener('pointerup', () => { dragging = false; medallion.classList.remove('dragging'); });
+    window.addEventListener('pointermove', e => {
+        if (!dragging) return;
+        const dx = e.clientX - lastX, dy = e.clientY - lastY;
+        lastX = e.clientX; lastY = e.clientY;
+        cameraYaw -= dx * 0.008;
+        cameraPitch = Math.max(-0.5, Math.min(0.5, cameraPitch - dy * 0.006));
+        updateCameraPosition();
+    });
+    container.addEventListener('wheel', e => {
+        e.preventDefault();
+        cameraDist = Math.max(3.2, Math.min(9.0, cameraDist + e.deltaY * 0.003));
+        updateCameraPosition();
+    }, { passive: false });
+}
+
+function onResize() {
+    const container = document.getElementById('three-container');
+    const w = container.clientWidth, h = container.clientHeight;
+    camera.aspect = w/h; camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+}
+
+/* ==========================================================
+   APPLICATION STATE & PRESETS
+   Same schema/field-names as the 2D generator's character_presets.js,
+   so presets and JSON saves are shared between both tools.
+   ========================================================== */
+let presets = {};
+
+const FALLBACK_PRESET = {
+    name: "Custom Character",
+    noseScale: 1.0, noseShape: "straight",
+    eyeShape: "almond", eyeSpacing: 1.0,
+    eyebrowStyle: "arched", mouthStyle: "neutral",
+    hairStyle: "short", beardStyle: "none", hatStyle: "none",
+    clothingType: "tunic", materialStyle: "woven_linen",
+    faceShape: "oval", foreheadHeight: "medium", chinShape: "rounded",
+    earSize: 1.0, earShape: "round", headSize: 1.0, hairSize: 1.0, hatSize: 1.0,
+    hatMatchHair: false,
+    dualStripe: false,
+    colorInner: "#4a423a", colorOuter: "#2f2b25", colorCloak: "#1a1815",
+    colorAccent: "#3b3831", colorGarment2: "#8a7a5a",
+    colorSkin: "#c49366", colorHair: "#241c14", colorEye: "#4a3b32", colorLip: "#9a5f52"
+};
+
+let state = { ...FALLBACK_PRESET };
+
+function loadPresets() {
+    if (typeof CHARACTER_PRESETS_DATA !== "undefined" && CHARACTER_PRESETS_DATA && Object.keys(CHARACTER_PRESETS_DATA).length) {
+        presets = CHARACTER_PRESETS_DATA;
+        populatePresetSelect();
+        const firstKey = (typeof CHARACTER_PRESETS_META !== "undefined" && CHARACTER_PRESETS_META.defaultPreset) || Object.keys(presets)[0];
+        state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[firstKey] };
+        hidePresetError();
+    } else {
+        console.error("CHARACTER_PRESETS_DATA not found — character_presets.js did not load.");
+        showPresetError();
+    }
+    writeStateIntoUI();
+    render();
+}
+
+function populatePresetSelect() {
+    const select = document.getElementById("characterPresetSelect");
+    select.innerHTML = '<option value="">-- Select --</option>';
+    const groups = {
+      "story": { label: (typeof CHARACTER_PRESETS_META !== "undefined" ? CHARACTER_PRESETS_META.groupLabel : "Story characters"), characters: Object.keys(presets) }
+    };
+    Object.values(groups).forEach(group => {
+        const optgroup = document.createElement("optgroup");
+        optgroup.label = group.label;
+        group.characters.forEach(key => {
+            if (presets[key]) {
+                const option = document.createElement("option");
+                option.value = key;
+                option.textContent = presets[key].name;
+                optgroup.appendChild(option);
+            }
+        });
+        select.appendChild(optgroup);
+    });
+}
+
+function showPresetError() {
+    const el = document.getElementById("preset-status");
+    if (el) {
+        el.style.display = "block";
+        el.textContent = "Couldn't find character_presets.js — make sure it's saved in the same folder as this HTML file (and hasn't been renamed). Using one default character for now.";
+    }
+}
+function hidePresetError() {
+    const el = document.getElementById("preset-status");
+    if (el) el.style.display = "none";
+}
+
+/* ==========================================================
+   UI CONTROLLER (mirrors the 2D tool's field ids)
+   ========================================================== */
+const ids = ["face-shape:faceShape","forehead-height:foreheadHeight","eye-spacing:eyeSpacing","ear-size:earSize","head-size:headSize","hair-size:hairSize","hat-size:hatSize","chin-shape:chinShape","eye-shape:eyeShape","eyebrow-style:eyebrowStyle","nose-shape:noseShape","mouth-style:mouthStyle","hair-style:hairStyle","beard-style:beardStyle","hat-style:hatStyle","clothing-type:clothingType","material-style:materialStyle","ear-shape:earShape"];
+const colorIds = ["color-inner:colorInner","color-outer:colorOuter","color-cloak:colorCloak","color-accent:colorAccent","color-skin:colorSkin","color-hair:colorHair","color-eye:colorEye","color-lip:colorLip","color-garment2:colorGarment2"];
+
+function formatName(str) { return str.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase()); }
+function slugify(str) { return str.toLowerCase().trim().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "") || "custom_character"; }
+
+function render() {
+    rebuildCharacter(state);
+    document.getElementById("caption-name").textContent = formatName(state.name);
+    document.getElementById("caption-sub").textContent = slugify(state.name) + ".png";
+}
+
+function readUIIntoState() {
+    ids.forEach(p => { const [id, k] = p.split(":"); state[k] = document.getElementById(id).value; });
+    colorIds.forEach(p => { const [id, k] = p.split(":"); state[k] = document.getElementById(id).value; });
+    state.noseScale = parseFloat(document.getElementById("nose-scale").value);
+    state.eyeSpacing = parseFloat(document.getElementById("eye-spacing").value);
+    state.earSize = parseFloat(document.getElementById("ear-size").value);
+    state.headSize = parseFloat(document.getElementById("head-size").value);
+    state.hairSize = parseFloat(document.getElementById("hair-size").value);
+    state.hatSize = parseFloat(document.getElementById("hat-size").value);
+    state.hatMatchHair = document.getElementById("hat-match-hair").checked;
+    state.dualStripe = document.getElementById("dual-stripe").checked;
+    document.getElementById("nose-scale-val").textContent = state.noseScale.toFixed(2) + "×";
+    document.getElementById("eye-spacing-val").textContent = state.eyeSpacing.toFixed(1) + "×";
+    document.getElementById("ear-size-val").textContent = state.earSize.toFixed(1) + "×";
+    document.getElementById("head-size-val").textContent = state.headSize.toFixed(1) + "×";
+    document.getElementById("hair-size-val").textContent = state.hairSize.toFixed(1) + "×";
+    document.getElementById("hat-size-val").textContent = state.hatSize.toFixed(1) + "×";
+    document.getElementById("stripe-row").style.display = state.dualStripe ? "flex" : "none";
+    state.name = "Custom Character";
+    render();
+}
+
+function writeStateIntoUI() {
+    ids.forEach(p => { const [id, k] = p.split(":"); document.getElementById(id).value = state[k]; });
+    colorIds.forEach(p => { const [id, k] = p.split(":"); document.getElementById(id).value = state[k]; });
+    document.getElementById("nose-scale").value = state.noseScale;
+    document.getElementById("nose-scale-val").textContent = state.noseScale.toFixed(2) + "×";
+    document.getElementById("eye-spacing").value = state.eyeSpacing;
+    document.getElementById("eye-spacing-val").textContent = state.eyeSpacing.toFixed(1) + "×";
+    document.getElementById("ear-size").value = state.earSize;
+    document.getElementById("ear-size-val").textContent = state.earSize.toFixed(1) + "×";
+    document.getElementById("head-size").value = state.headSize;
+    document.getElementById("head-size-val").textContent = state.headSize.toFixed(1) + "×";
+    document.getElementById("hair-size").value = state.hairSize;
+    document.getElementById("hair-size-val").textContent = state.hairSize.toFixed(1) + "×";
+    document.getElementById("hat-size").value = state.hatSize;
+    document.getElementById("hat-size-val").textContent = state.hatSize.toFixed(1) + "×";
+    document.getElementById("hat-match-hair").checked = !!state.hatMatchHair;
+    document.getElementById("dual-stripe").checked = !!state.dualStripe;
+    document.getElementById("stripe-row").style.display = state.dualStripe ? "flex" : "none";
+}
+
+const presetSelect = document.getElementById("characterPresetSelect");
+document.getElementById("load-preset").addEventListener("click", () => {
+    const key = presetSelect.value;
+    if (presets[key]) { state = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...presets[key] }; writeStateIntoUI(); render(); }
+});
+document.querySelectorAll(".sidebar input, .sidebar select").forEach(el => {
+    if (el.id !== "characterPresetSelect") el.addEventListener("input", readUIIntoState);
+});
+
+/* ==========================================================
+   EXPORTS
+   ========================================================== */
+function triggerDownload(blob, filename) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function captureFrame() {
+    renderer.render(scene, camera);
+    return new Promise(resolve => renderer.domElement.toBlob(b => resolve(b), "image/png"));
+}
+
+document.getElementById("export-png").addEventListener("click", async () => {
+    const blob = await captureFrame();
+    triggerDownload(blob, slugify(state.name) + ".png");
+});
+
+document.getElementById("export-json").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify(state, null, 2)], { type:"application/json" });
+    triggerDownload(blob, slugify(state.name) + ".json");
+});
+
+document.getElementById("export-batch").addEventListener("click", async () => {
+    const btn = document.getElementById("export-batch");
+    const orig = btn.textContent;
+    btn.textContent = "Rendering…"; btn.disabled = true;
+    const savedState = state, savedYaw = cameraYaw;
+    try {
+        if (typeof JSZip === "undefined") throw new Error("JSZip unavailable");
+        const zip = new JSZip();
+        cameraYaw = 0; updateCameraPosition();
+        for (const [key, preset] of Object.entries(presets)) {
+            const presetState = { hairSize: 1.0, hatSize: 1.0, hatMatchHair: false, ...preset };
+            rebuildCharacter(presetState);
+            const blob = await captureFrame();
+            zip.file(`${key}.png`, blob);
+            zip.file(`${key}.json`, JSON.stringify(presetState, null, 2));
+        }
+        const zipBlob = await zip.generateAsync({ type: "blob" });
+        triggerDownload(zipBlob, "historical_character_profiles_3d.zip");
+    } catch (err) {
+        console.error(err);
+        Object.entries(presets).forEach(([key, preset], i) => {
+            setTimeout(() => {
+                triggerDownload(new Blob([JSON.stringify(preset, null, 2)], { type:"application/json" }), `${key}.json`);
+            }, i * 300);
+        });
+    } finally {
+        cameraYaw = savedYaw; updateCameraPosition();
+        rebuildCharacter(savedState);
+        setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 400);
+    }
+});
+
+/* Initialize */
+initThree();
+loadPresets();
+</script>
+</body>
+</html>
