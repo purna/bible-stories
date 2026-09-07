@@ -1,0 +1,38 @@
+{
+  "id": "voice_beneath_palm",
+  "name": "Ch.1 · A Voice Beneath the Palm",
+  "bg": "radial-gradient(circle at 50% 25%, #6db86a, #2d5f2d 70%)",
+  "particle": "dawn",
+  "scene": "voice_beneath_palm",
+  "foreground": "fg_voice_beneath_palm",
+  "game": "wisdom",
+  "gameTitle": "Choose the wise path",
+  "gameInstructions": "Help Deborah answer with fairness. Choose the response that brings truth and peace.",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Israel had forgotten the ways of peace, and fear lay over the land."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Yet beneath a palm tree in the hills of Ephraim sat Deborah—a prophet, a judge, and a listener."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "People came to her with tangled troubles, and she answered with wisdom and courage."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "The Israelites went up to her to have their disputes decided.",
+      "cite": "Judges 4:5"
+    }
+  ]
+}

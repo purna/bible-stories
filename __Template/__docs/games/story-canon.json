@@ -1,0 +1,1679 @@
+{
+  "Abraham": {
+    "title": "Abraham",
+    "references": "Genesis 11–25",
+    "question": "Will Abraham trust the promise when fulfilment seems impossible?",
+    "characters": [
+      "abraham",
+      "sarah",
+      "lot",
+      "hagar",
+      "ishmael",
+      "isaac",
+      "melchizedek",
+      "abimelech",
+      "eliezer"
+    ],
+    "materials": [
+      "desert_sand",
+      "stone",
+      "fabric_weave",
+      "wood_oak",
+      "water_still",
+      "leaves"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Call",
+        "game": "Follow the road markers out of Haran."
+      },
+      {
+        "number": 2,
+        "title": "Egypt and Return",
+        "game": "Choose honest repairs after a fearful mistake."
+      },
+      {
+        "number": 3,
+        "title": "Lot Chooses",
+        "game": "Survey the land and give Lot first choice."
+      },
+      {
+        "number": 4,
+        "title": "Rescue of Lot",
+        "game": "Plan a fast night rescue without taking spoil."
+      },
+      {
+        "number": 5,
+        "title": "Covenant Stars",
+        "game": "Trace the promised constellation."
+      },
+      {
+        "number": 6,
+        "title": "Hagar in the Wilderness",
+        "game": "Find water and listen before acting."
+      },
+      {
+        "number": 7,
+        "title": "The Visitors",
+        "game": "Prepare hospitality before the guests depart."
+      },
+      {
+        "number": 8,
+        "title": "Sodom and Gomorrah",
+        "game": "Guide Lot’s household away without looking back."
+      },
+      {
+        "number": 9,
+        "title": "Isaac Is Born",
+        "game": "Assemble a celebration tent."
+      },
+      {
+        "number": 10,
+        "title": "Moriah",
+        "game": "Climb, gather wood, and respond to the provided ram."
+      }
+    ]
+  },
+  "Adam": {
+    "title": "Adam",
+    "references": "Genesis 1–5",
+    "question": "Will humanity receive creation as a gift and accept the limits of trust?",
+    "characters": [
+      "adam",
+      "eve",
+      "cain",
+      "abel",
+      "serpent",
+      "seth"
+    ],
+    "materials": [
+      "leaves",
+      "grass",
+      "water_still",
+      "stone",
+      "wood_oak",
+      "fabric_weave"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Formed from Dust",
+        "game": "Gather the garden’s elements in creation order."
+      },
+      {
+        "number": 2,
+        "title": "The Garden",
+        "game": "Name creatures by matching them to habitats."
+      },
+      {
+        "number": 3,
+        "title": "Together",
+        "game": "Build a shared shelter and tend one plot together."
+      },
+      {
+        "number": 4,
+        "title": "The Boundary",
+        "game": "Navigate abundance while leaving one tree untouched."
+      },
+      {
+        "number": 5,
+        "title": "The Choice",
+        "game": "Spot the serpent’s half-truths in a dialogue puzzle."
+      },
+      {
+        "number": 6,
+        "title": "Hiding",
+        "game": "Follow footprints and admit what happened."
+      },
+      {
+        "number": 7,
+        "title": "East of Eden",
+        "game": "Pack seeds and begin cultivation outside the garden."
+      },
+      {
+        "number": 8,
+        "title": "Cain and Abel",
+        "game": "Prepare offerings with care, then cool Cain’s anger."
+      },
+      {
+        "number": 9,
+        "title": "The Field",
+        "game": "Witness consequence and mark a refuge path."
+      },
+      {
+        "number": 10,
+        "title": "A New Line",
+        "game": "Plant a family tree from Seth onward."
+      }
+    ]
+  },
+  "Babel": {
+    "title": "Babel",
+    "references": "Genesis 10–11",
+    "question": "Will people seek shared flourishing or manufacture fame and control?",
+    "characters": [
+      "nimrod",
+      "builder",
+      "brickmaker",
+      "city_elder",
+      "traveller",
+      "mother",
+      "child"
+    ],
+    "materials": [
+      "egypt_mud_brick",
+      "wall_brick",
+      "stone",
+      "wood_dark",
+      "fabric_weave",
+      "desert_sand"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "One Language",
+        "game": "Coordinate a village task with shared symbols."
+      },
+      {
+        "number": 2,
+        "title": "The Plain",
+        "game": "Choose a safe settlement site."
+      },
+      {
+        "number": 3,
+        "title": "Bake the Bricks",
+        "game": "Mix and fire bricks to the right strength."
+      },
+      {
+        "number": 4,
+        "title": "A Name for Ourselves",
+        "game": "Sort motives behind the tower plan."
+      },
+      {
+        "number": 5,
+        "title": "The Tower Rises",
+        "game": "Balance height, safety, and care for workers."
+      },
+      {
+        "number": 6,
+        "title": "Confusion",
+        "game": "Communicate using gesture and visual clues."
+      },
+      {
+        "number": 7,
+        "title": "Scattered",
+        "game": "Guide families toward different horizons."
+      },
+      {
+        "number": 8,
+        "title": "Nations",
+        "game": "Complete a map mosaic celebrating many peoples."
+      }
+    ]
+  },
+  "Daniel": {
+    "title": "Daniel",
+    "references": "Daniel 1–12",
+    "question": "How can faithful courage endure inside an empire built on fear?",
+    "characters": [
+      "daniel_young",
+      "daniel",
+      "hananiah",
+      "mishael",
+      "azariah",
+      "nebuchadnezzar",
+      "belshazzar",
+      "darius",
+      "court_official",
+      "accusers",
+      "angel"
+    ],
+    "materials": [
+      "wall_brick",
+      "mosaic",
+      "hammered_gold",
+      "stone",
+      "fabric_weave",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Exile and the Table",
+        "game": "Build a respectful ten-day food test."
+      },
+      {
+        "number": 2,
+        "title": "The Great Statue",
+        "game": "Reassemble the dream and its meaning."
+      },
+      {
+        "number": 3,
+        "title": "The Furnace",
+        "game": "Keep the three friends together through the fire maze."
+      },
+      {
+        "number": 4,
+        "title": "The Proud King",
+        "game": "Tend the humbled king until his reason returns."
+      },
+      {
+        "number": 5,
+        "title": "Writing on the Wall",
+        "game": "Match the mysterious words to their warning."
+      },
+      {
+        "number": 6,
+        "title": "The Lions’ Den",
+        "game": "Maintain Daniel’s prayer rhythm despite the decree."
+      },
+      {
+        "number": 7,
+        "title": "Four Beasts",
+        "game": "Identify symbols without attacking the vision."
+      },
+      {
+        "number": 8,
+        "title": "The Ram and Goat",
+        "game": "Track the vision’s movements on a map."
+      },
+      {
+        "number": 9,
+        "title": "Seventy Weeks",
+        "game": "Order prayer, confession, and hope."
+      },
+      {
+        "number": 10,
+        "title": "Final Vision",
+        "game": "Carry the sealed message to the riverbank."
+      }
+    ]
+  },
+  "David": {
+    "title": "David",
+    "references": "1 Samuel 16–31; 2 Samuel; 1 Kings 1–2",
+    "question": "What does faithful leadership do with power, failure, and repentance?",
+    "characters": [
+      "david_young",
+      "david",
+      "samuel",
+      "saul",
+      "jonathan",
+      "goliath",
+      "abigail",
+      "michal",
+      "bathsheba",
+      "nathan",
+      "absalom",
+      "solomon"
+    ],
+    "materials": [
+      "stone",
+      "grass",
+      "fabric_weave",
+      "wood_oak",
+      "wood_dark",
+      "wall_brick",
+      "water_fast"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Anointed",
+        "game": "Identify the overlooked shepherd among Jesse’s sons."
+      },
+      {
+        "number": 2,
+        "title": "Goliath",
+        "game": "Time a sling throw after refusing heavy armour."
+      },
+      {
+        "number": 3,
+        "title": "Saul’s Court",
+        "game": "Play a calming melody while watching Saul’s mood."
+      },
+      {
+        "number": 4,
+        "title": "Covenant Friends",
+        "game": "Exchange signals with Jonathan unseen."
+      },
+      {
+        "number": 5,
+        "title": "The Wilderness",
+        "game": "Escape Saul and spare him in the cave."
+      },
+      {
+        "number": 6,
+        "title": "Abigail",
+        "game": "Deliver provisions before anger becomes violence."
+      },
+      {
+        "number": 7,
+        "title": "The Throne",
+        "game": "Resolve petitions without favouritism."
+      },
+      {
+        "number": 8,
+        "title": "Bathsheba and Uriah",
+        "game": "Confront the irreversible harm rather than hiding it."
+      },
+      {
+        "number": 9,
+        "title": "Nathan’s Parable",
+        "game": "Recognise the king inside the story and repent."
+      },
+      {
+        "number": 10,
+        "title": "Absalom",
+        "game": "Navigate divided loyalties without celebrating loss."
+      },
+      {
+        "number": 11,
+        "title": "The Census",
+        "game": "Choose responsibility during the plague."
+      },
+      {
+        "number": 12,
+        "title": "Solomon",
+        "game": "Pass plans and wisdom to the next king."
+      }
+    ]
+  },
+  "Deborah": {
+    "title": "Deborah",
+    "references": "Judges 4–5",
+    "question": "Will courage and shared leadership answer oppression?",
+    "characters": [
+      "deborah",
+      "barak",
+      "jael",
+      "sisera",
+      "jabin",
+      "israelite_scout",
+      "village_woman"
+    ],
+    "materials": [
+      "fabric_weave",
+      "wood_oak",
+      "wall_brick",
+      "stone",
+      "grass",
+      "water_fast"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Under the Palm",
+        "game": "Hear disputes and restore a fair path."
+      },
+      {
+        "number": 2,
+        "title": "The Summons",
+        "game": "Carry Deborah’s message to Barak."
+      },
+      {
+        "number": 3,
+        "title": "Gather at Tabor",
+        "game": "Rally tribes without alerting Sisera."
+      },
+      {
+        "number": 4,
+        "title": "The Storm",
+        "game": "Use the flooded ground to break the chariot advantage."
+      },
+      {
+        "number": 5,
+        "title": "Sisera Flees",
+        "game": "Track the fleeing commander to Jael’s tent."
+      },
+      {
+        "number": 6,
+        "title": "Jael’s Choice",
+        "game": "Prepare hospitality, then protect the camp."
+      },
+      {
+        "number": 7,
+        "title": "The Song",
+        "game": "Rebuild the victory song in call-and-response."
+      }
+    ]
+  },
+  "Eiljah": {
+    "title": "Elijah",
+    "references": "1 Kings 17–19; 21; 2 Kings 1–2",
+    "question": "Can zeal mature into listening, mercy, and faithful succession?",
+    "characters": [
+      "elijah",
+      "ahab",
+      "jezebel",
+      "widow_of_zarephath",
+      "widows_son",
+      "obadiah",
+      "prophet_of_baal",
+      "elisha",
+      "naboth"
+    ],
+    "materials": [
+      "desert_sand",
+      "stone",
+      "wood_oak",
+      "water_fast",
+      "leaves",
+      "fabric_weave"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Drought",
+        "game": "Follow ravens to daily bread by the brook."
+      },
+      {
+        "number": 2,
+        "title": "The Widow’s Jar",
+        "game": "Measure flour and oil without exhausting either."
+      },
+      {
+        "number": 3,
+        "title": "The Child Restored",
+        "game": "Carry the child upstairs and persist in prayer."
+      },
+      {
+        "number": 4,
+        "title": "Mount Carmel",
+        "game": "Repair the altar with twelve stones."
+      },
+      {
+        "number": 5,
+        "title": "The Rain Returns",
+        "game": "Spot the small cloud and race from the storm."
+      },
+      {
+        "number": 6,
+        "title": "Under the Broom Tree",
+        "game": "Rest, eat, and accept care before travelling."
+      },
+      {
+        "number": 7,
+        "title": "The Quiet Voice",
+        "game": "Distinguish wind, quake, fire, and quiet."
+      },
+      {
+        "number": 8,
+        "title": "Naboth’s Vineyard",
+        "game": "Expose the false testimony behind the seizure."
+      },
+      {
+        "number": 9,
+        "title": "Chariots of Fire",
+        "game": "Cross the Jordan and pass the mantle to Elisha."
+      }
+    ]
+  },
+  "Elisha": {
+    "title": "Elisha",
+    "references": "1 Kings 19; 2 Kings 2–13",
+    "question": "How can everyday acts of mercy reveal faithful power?",
+    "characters": [
+      "elisha",
+      "elijah",
+      "widow",
+      "shunammite_woman",
+      "gehazi",
+      "naaman",
+      "servant_girl",
+      "king_of_israel",
+      "syrian_commander"
+    ],
+    "materials": [
+      "water_still",
+      "water_fast",
+      "wood_oak",
+      "stone",
+      "fabric_weave",
+      "leaves"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Mantle",
+        "game": "Leave the plough and follow Elijah."
+      },
+      {
+        "number": 2,
+        "title": "The Jordan",
+        "game": "Strike the water and cross."
+      },
+      {
+        "number": 3,
+        "title": "The Widow’s Oil",
+        "game": "Collect jars and pour without waste."
+      },
+      {
+        "number": 4,
+        "title": "The Shunammite Room",
+        "game": "Arrange a simple guest room."
+      },
+      {
+        "number": 5,
+        "title": "The Child",
+        "game": "Climb to the room and persist in care."
+      },
+      {
+        "number": 6,
+        "title": "Naaman",
+        "game": "Guide the commander through seven Jordan immersions."
+      },
+      {
+        "number": 7,
+        "title": "The Floating Axe",
+        "game": "Mark where the borrowed iron fell."
+      },
+      {
+        "number": 8,
+        "title": "The Unseen Army",
+        "game": "Reveal protection around the frightened servant."
+      },
+      {
+        "number": 9,
+        "title": "A Blind Feast",
+        "game": "Lead enemies safely to a meal instead of an ambush."
+      }
+    ]
+  },
+  "Enoch": {
+    "title": "Enoch",
+    "references": "Genesis 5; Hebrews 11:5; Jude 14–15",
+    "question": "What does it mean to walk faithfully across an ordinary lifetime?",
+    "characters": [
+      "enoch",
+      "jared",
+      "methuselah",
+      "family_member",
+      "neighbour",
+      "traveller"
+    ],
+    "materials": [
+      "grass",
+      "stone",
+      "wood_oak",
+      "fabric_weave",
+      "water_still",
+      "leaves"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "A Family Record",
+        "game": "Place Enoch correctly in the generations."
+      },
+      {
+        "number": 2,
+        "title": "The First Walk",
+        "game": "Choose a daily route that serves neighbours."
+      },
+      {
+        "number": 3,
+        "title": "A Son Named Methuselah",
+        "game": "Prepare the home for a new child."
+      },
+      {
+        "number": 4,
+        "title": "Years of Faithfulness",
+        "game": "Complete repeated small acts without a fame meter."
+      },
+      {
+        "number": 5,
+        "title": "A Warning",
+        "game": "Deliver a hard truth without cruelty."
+      },
+      {
+        "number": 6,
+        "title": "Walking with God",
+        "game": "Follow a quiet path as the landscape changes."
+      },
+      {
+        "number": 7,
+        "title": "Taken",
+        "game": "Let go of the route and enter the final light."
+      }
+    ]
+  },
+  "Esther": {
+    "title": "Esther",
+    "references": "Esther 1–10",
+    "question": "Will hidden identity become courageous advocacy at the right moment?",
+    "characters": [
+      "esther",
+      "mordecai",
+      "ahasuerus",
+      "vashti",
+      "haman",
+      "zeresh",
+      "hathach",
+      "palace_guard"
+    ],
+    "materials": [
+      "mosaic",
+      "hammered_gold",
+      "fabric_weave",
+      "fabric_dots",
+      "stone",
+      "wood_dark"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Banquet",
+        "game": "Navigate the palace feast and hear Vashti’s refusal."
+      },
+      {
+        "number": 2,
+        "title": "A New Queen",
+        "game": "Prepare Esther while protecting her identity."
+      },
+      {
+        "number": 3,
+        "title": "The Gate Plot",
+        "game": "Carry Mordecai’s warning into the royal record."
+      },
+      {
+        "number": 4,
+        "title": "Haman’s Decree",
+        "game": "Trace the decree as it spreads across the empire."
+      },
+      {
+        "number": 5,
+        "title": "For Such a Time",
+        "game": "Fast, gather courage, and approach the throne."
+      },
+      {
+        "number": 6,
+        "title": "The First Banquet",
+        "game": "Invite the king and Haman without revealing too soon."
+      },
+      {
+        "number": 7,
+        "title": "The Sleepless Night",
+        "game": "Find Mordecai’s forgotten service in the chronicles."
+      },
+      {
+        "number": 8,
+        "title": "The Second Banquet",
+        "game": "Name the threat clearly at the decisive moment."
+      },
+      {
+        "number": 9,
+        "title": "A New Decree",
+        "game": "Send defensive orders before the deadline."
+      },
+      {
+        "number": 10,
+        "title": "Purim",
+        "game": "Assemble gifts, food, and remembrance for every district."
+      }
+    ]
+  },
+  "Hannah": {
+    "title": "Hannah",
+    "references": "1 Samuel 1–2",
+    "question": "Can longing be voiced honestly and a cherished gift released faithfully?",
+    "characters": [
+      "hannah",
+      "elkanah",
+      "peninnah",
+      "eli",
+      "samuel_child",
+      "temple_woman"
+    ],
+    "materials": [
+      "fabric_weave",
+      "stone",
+      "wood_oak",
+      "hammered_gold",
+      "grass",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Journey to Shiloh",
+        "game": "Gather the household for the annual worship journey."
+      },
+      {
+        "number": 2,
+        "title": "At the Table",
+        "game": "Navigate hurt without retaliating."
+      },
+      {
+        "number": 3,
+        "title": "Silent Prayer",
+        "game": "Form Hannah’s prayer from honest fragments."
+      },
+      {
+        "number": 4,
+        "title": "Misunderstood",
+        "game": "Explain quiet prayer to Eli."
+      },
+      {
+        "number": 5,
+        "title": "Remembered",
+        "game": "Prepare for Samuel’s birth."
+      },
+      {
+        "number": 6,
+        "title": "The Little Robe",
+        "game": "Weave and size a yearly robe."
+      },
+      {
+        "number": 7,
+        "title": "Given Back",
+        "game": "Bring Samuel to serve at Shiloh."
+      },
+      {
+        "number": 8,
+        "title": "Hannah’s Song",
+        "game": "Arrange lines of reversal and hope."
+      }
+    ]
+  },
+  "Isaiah": {
+    "title": "Isaiah",
+    "references": "Isaiah 1–66",
+    "question": "How can holy vision produce truthful warning and durable hope?",
+    "characters": [
+      "isaiah",
+      "uzziah",
+      "ahaz",
+      "hezekiah",
+      "shear_jashub",
+      "mahershalalhashbaz",
+      "seraph",
+      "royal_envoy",
+      "sennacherib"
+    ],
+    "materials": [
+      "stone",
+      "wall_brick",
+      "hammered_gold",
+      "fabric_weave",
+      "desert_sand",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "A City in Need",
+        "game": "Identify worship separated from justice."
+      },
+      {
+        "number": 2,
+        "title": "The Holy Throne",
+        "game": "Navigate the temple vision and answer the call."
+      },
+      {
+        "number": 3,
+        "title": "The Vineyard Song",
+        "game": "Tend a vineyard that yields injustice."
+      },
+      {
+        "number": 4,
+        "title": "Immanuel Sign",
+        "game": "Carry hope to fearful King Ahaz."
+      },
+      {
+        "number": 5,
+        "title": "The Assyrian Shadow",
+        "game": "Map the advancing empire and the surviving stump."
+      },
+      {
+        "number": 6,
+        "title": "Hezekiah’s Crisis",
+        "game": "Bring the threatening letter into prayer."
+      },
+      {
+        "number": 7,
+        "title": "Comfort My People",
+        "game": "Build a road of return through the wilderness."
+      },
+      {
+        "number": 8,
+        "title": "The Servant",
+        "game": "Match suffering, justice, and healing motifs."
+      },
+      {
+        "number": 9,
+        "title": "New Creation",
+        "game": "Restore a city garden where all can flourish."
+      }
+    ]
+  },
+  "Jacob": {
+    "title": "Jacob",
+    "references": "Genesis 25–50",
+    "question": "Can a grasping deceiver become someone who receives blessing without stealing it?",
+    "characters": [
+      "jacob_young",
+      "jacob",
+      "esau",
+      "isaac",
+      "rebekah",
+      "laban",
+      "leah",
+      "rachel",
+      "joseph_child",
+      "angel"
+    ],
+    "materials": [
+      "stone",
+      "desert_sand",
+      "wood_oak",
+      "fabric_weave",
+      "water_still",
+      "grass"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Birthright",
+        "game": "Weigh hunger against a lasting inheritance."
+      },
+      {
+        "number": 2,
+        "title": "The Stolen Blessing",
+        "game": "Assemble the disguise, then witness its cost."
+      },
+      {
+        "number": 3,
+        "title": "Bethel",
+        "game": "Build the stone pillar after the ladder dream."
+      },
+      {
+        "number": 4,
+        "title": "Rachel at the Well",
+        "game": "Move the stone and water the flock."
+      },
+      {
+        "number": 5,
+        "title": "Laban’s Bargain",
+        "game": "Track changing wages and wedding promises."
+      },
+      {
+        "number": 6,
+        "title": "The Flocks",
+        "game": "Sort speckled and spotted animals fairly."
+      },
+      {
+        "number": 7,
+        "title": "Leaving Haran",
+        "game": "Pack the camp before Laban catches up."
+      },
+      {
+        "number": 8,
+        "title": "The Night Wrestling",
+        "game": "Hold on through the night and receive a new name."
+      },
+      {
+        "number": 9,
+        "title": "Meeting Esau",
+        "game": "Arrange gifts, then step forward unarmed."
+      },
+      {
+        "number": 10,
+        "title": "Joseph’s Coats",
+        "game": "Recognise favouritism forming in the household."
+      }
+    ]
+  },
+  "Jeremiah": {
+    "title": "Jeremiah",
+    "references": "Jeremiah 1–52; Lamentations",
+    "question": "Can truth be spoken and hope planted while a city collapses?",
+    "characters": [
+      "jeremiah",
+      "josiah",
+      "jehoiakim",
+      "zedekiah",
+      "baruch",
+      "ebed_melech",
+      "hananiah",
+      "temple_priest",
+      "babylonian_guard"
+    ],
+    "materials": [
+      "wall_brick",
+      "stone",
+      "wood_dark",
+      "fabric_weave",
+      "desert_sand",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Call",
+        "game": "Touch the right words to the young prophet’s mouth."
+      },
+      {
+        "number": 2,
+        "title": "The Almond Branch",
+        "game": "Spot signs that God is watching over the word."
+      },
+      {
+        "number": 3,
+        "title": "At the Temple Gate",
+        "game": "Separate ritual confidence from justice."
+      },
+      {
+        "number": 4,
+        "title": "The Scroll",
+        "game": "Dictate to Baruch and rebuild the burned scroll."
+      },
+      {
+        "number": 5,
+        "title": "The Potter",
+        "game": "Reshape the clay while it remains workable."
+      },
+      {
+        "number": 6,
+        "title": "The Yoke",
+        "game": "Carry the warning despite Hananiah’s easy promise."
+      },
+      {
+        "number": 7,
+        "title": "The Cistern",
+        "game": "Coordinate Ebed-melech’s rope rescue."
+      },
+      {
+        "number": 8,
+        "title": "Buy the Field",
+        "game": "Complete a land purchase while siege closes in."
+      },
+      {
+        "number": 9,
+        "title": "The Fall of Jerusalem",
+        "game": "Guide survivors through the breached city."
+      },
+      {
+        "number": 10,
+        "title": "Lament and Hope",
+        "game": "Pair grief lines with stubborn hope."
+      }
+    ]
+  },
+  "Job": {
+    "title": "Job",
+    "references": "Job 1–42",
+    "question": "Can faith remain honest when suffering refuses a simple explanation?",
+    "characters": [
+      "job",
+      "jobs_wife",
+      "eliphaz",
+      "bildad",
+      "zophar",
+      "elihu",
+      "messenger",
+      "young_job",
+      "restored_daughter"
+    ],
+    "materials": [
+      "desert_sand",
+      "stone",
+      "fabric_weave",
+      "wood_oak",
+      "grass",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "A Blameless Life",
+        "game": "Tend Job’s household and practice generous justice."
+      },
+      {
+        "number": 2,
+        "title": "The Accuser",
+        "game": "Observe the heavenly challenge without controlling it."
+      },
+      {
+        "number": 3,
+        "title": "Loss upon Loss",
+        "game": "Receive each messenger and sit with the silence."
+      },
+      {
+        "number": 4,
+        "title": "Seven Days",
+        "game": "Keep vigil without offering explanations."
+      },
+      {
+        "number": 5,
+        "title": "Job Speaks",
+        "game": "Build an honest lament from grief and protest."
+      },
+      {
+        "number": 6,
+        "title": "The Friends",
+        "game": "Identify when counsel becomes accusation."
+      },
+      {
+        "number": 7,
+        "title": "Elihu",
+        "game": "Listen, test claims, and resist easy scoring."
+      },
+      {
+        "number": 8,
+        "title": "Out of the Whirlwind",
+        "game": "Explore questions about creation."
+      },
+      {
+        "number": 9,
+        "title": "Job Responds",
+        "game": "Release the demand to master every answer."
+      },
+      {
+        "number": 10,
+        "title": "Restoration",
+        "game": "Rebuild community without treating new gifts as replacements."
+      }
+    ]
+  },
+  "Jonah": {
+    "title": "Jonah",
+    "references": "Jonah 1–4",
+    "question": "Will the prophet accept mercy when it reaches people he resents?",
+    "characters": [
+      "jonah",
+      "ship_captain",
+      "sailor",
+      "king_of_nineveh",
+      "ninevite",
+      "child",
+      "messenger"
+    ],
+    "materials": [
+      "water_fast",
+      "water_still",
+      "wood_dark",
+      "desert_sand",
+      "leaves",
+      "fabric_weave"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Run to the Sea",
+        "game": "Choose cargo and board the ship going the wrong way."
+      },
+      {
+        "number": 2,
+        "title": "The Storm",
+        "game": "Secure the deck and uncover Jonah’s flight."
+      },
+      {
+        "number": 3,
+        "title": "Into the Deep",
+        "game": "Navigate sinking currents toward the great fish."
+      },
+      {
+        "number": 4,
+        "title": "Prayer Below",
+        "game": "Reassemble Jonah’s prayer from psalm fragments."
+      },
+      {
+        "number": 5,
+        "title": "Second Call",
+        "game": "Walk the road to Nineveh."
+      },
+      {
+        "number": 6,
+        "title": "The Warning",
+        "game": "Deliver the short message through the great city."
+      },
+      {
+        "number": 7,
+        "title": "Nineveh Repents",
+        "game": "Coordinate fasting from palace to livestock."
+      },
+      {
+        "number": 8,
+        "title": "The Plant",
+        "game": "Manage shade, worm, and hot wind."
+      },
+      {
+        "number": 9,
+        "title": "The Question",
+        "game": "Compare Jonah’s pity for a plant with God’s pity for a city."
+      }
+    ]
+  },
+  "Joseph": {
+    "title": "Joseph",
+    "references": "Genesis 37–50",
+    "question": "Can betrayal be transformed into wise service and reconciliation?",
+    "characters": [
+      "joseph_young",
+      "joseph",
+      "jacob",
+      "reuben",
+      "judah",
+      "benjamin",
+      "potiphar",
+      "potiphars_wife",
+      "cupbearer",
+      "baker",
+      "pharaoh"
+    ],
+    "materials": [
+      "fabric_dots",
+      "stone",
+      "wall_brick",
+      "mosaic",
+      "hammered_gold",
+      "egypt_mud_brick"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Coloured Robe",
+        "game": "Assemble the robe and notice the family tension."
+      },
+      {
+        "number": 2,
+        "title": "Dreams and the Pit",
+        "game": "Order the dreams, then find a path through betrayal."
+      },
+      {
+        "number": 3,
+        "title": "Potiphar’s House",
+        "game": "Manage the household with integrity."
+      },
+      {
+        "number": 4,
+        "title": "The Prison",
+        "game": "Care for prisoners and interpret two dreams."
+      },
+      {
+        "number": 5,
+        "title": "Pharaoh’s Dreams",
+        "game": "Pair cows and grain with seven-year cycles."
+      },
+      {
+        "number": 6,
+        "title": "Storehouses",
+        "game": "Plan grain reserves across Egypt."
+      },
+      {
+        "number": 7,
+        "title": "The Brothers Arrive",
+        "game": "Test recognition while distributing food."
+      },
+      {
+        "number": 8,
+        "title": "Benjamin’s Cup",
+        "game": "Trace the hidden cup and Judah’s offer."
+      },
+      {
+        "number": 9,
+        "title": "Revealed",
+        "game": "Choose the moment Joseph names himself."
+      },
+      {
+        "number": 10,
+        "title": "Goshen",
+        "game": "Settle the family and preserve the famine record."
+      }
+    ]
+  },
+  "Joshua": {
+    "title": "Joshua",
+    "references": "Joshua 1–24",
+    "question": "Will courage remain rooted in instruction rather than conquest for its own sake?",
+    "characters": [
+      "joshua",
+      "caleb",
+      "rahab",
+      "achan",
+      "eleazar",
+      "israelite_scout",
+      "gibeonite",
+      "tribal_leader"
+    ],
+    "materials": [
+      "stone",
+      "wall_brick",
+      "desert_sand",
+      "water_fast",
+      "fabric_weave",
+      "wood_dark"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Be Strong",
+        "game": "Meditate on the instruction before crossing."
+      },
+      {
+        "number": 2,
+        "title": "Rahab and the Spies",
+        "game": "Hide the scouts and mark the scarlet cord."
+      },
+      {
+        "number": 3,
+        "title": "Crossing Jordan",
+        "game": "Carry twelve memorial stones from the riverbed."
+      },
+      {
+        "number": 4,
+        "title": "Jericho",
+        "game": "March the pattern, sound the trumpets, protect Rahab."
+      },
+      {
+        "number": 5,
+        "title": "Achan’s Hidden Goods",
+        "game": "Trace the community’s loss to the buried objects."
+      },
+      {
+        "number": 6,
+        "title": "Ai",
+        "game": "Set the ambush without repeating earlier presumption."
+      },
+      {
+        "number": 7,
+        "title": "The Gibeonites",
+        "game": "Inspect the worn supplies and face a rushed oath."
+      },
+      {
+        "number": 8,
+        "title": "The Long Campaign",
+        "game": "Resolve territory challenges without spectacle."
+      },
+      {
+        "number": 9,
+        "title": "Allot the Land",
+        "game": "Distribute inheritance among tribes."
+      },
+      {
+        "number": 10,
+        "title": "Choose This Day",
+        "game": "Place household stones beside the covenant witness."
+      }
+    ]
+  },
+  "Moses": {
+    "title": "Moses",
+    "references": "Exodus; Numbers; Deuteronomy 31–34",
+    "question": "Will a rescued people learn to trust the God who leads them through uncertainty?",
+    "characters": [
+      "moses_young",
+      "moses",
+      "aaron",
+      "miriam",
+      "pharaoh",
+      "pharaohs_daughter",
+      "zipporah",
+      "jethro",
+      "joshua",
+      "caleb",
+      "israelite_elder",
+      "israelite_woman",
+      "egyptian_overseer",
+      "korah",
+      "balaam"
+    ],
+    "materials": [
+      "egypt_mud_brick",
+      "nile_reeds",
+      "desert_sand",
+      "bulrush_basket",
+      "hammered_gold",
+      "stone_tablets"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Child in the River",
+        "game": "Guide the basket through reeds while Miriam keeps watch."
+      },
+      {
+        "number": 2,
+        "title": "The Burning Bush",
+        "game": "Herd sheep, approach the fire, and answer the call."
+      },
+      {
+        "number": 3,
+        "title": "Before the Throne",
+        "game": "Match signs and warnings to each audience."
+      },
+      {
+        "number": 4,
+        "title": "Passover Night",
+        "game": "Prepare the meal and mark the doorway before departure."
+      },
+      {
+        "number": 5,
+        "title": "Through the Sea",
+        "game": "Keep the people moving along the opened path."
+      },
+      {
+        "number": 6,
+        "title": "Bread in the Wilderness",
+        "game": "Gather only enough manna for the day."
+      },
+      {
+        "number": 7,
+        "title": "Sinai",
+        "game": "Arrange the camp and carry the covenant words."
+      },
+      {
+        "number": 8,
+        "title": "The Golden Calf",
+        "game": "Confront the idol and intercede for the people."
+      },
+      {
+        "number": 9,
+        "title": "Forty Years",
+        "game": "Navigate a provision-and-trust journey map."
+      },
+      {
+        "number": 10,
+        "title": "Mount Nebo",
+        "game": "Appoint Joshua and identify the land from afar."
+      }
+    ]
+  },
+  "Nehemiah": {
+    "title": "Nehemiah",
+    "references": "Nehemiah 1–13",
+    "question": "Can prayerful planning rebuild both walls and communal justice?",
+    "characters": [
+      "nehemiah",
+      "artaxerxes",
+      "hanani",
+      "sanballat",
+      "tobiah",
+      "geshem",
+      "ezra",
+      "eliashib",
+      "wall_builder"
+    ],
+    "materials": [
+      "wall_brick",
+      "stone",
+      "wood_oak",
+      "fabric_weave",
+      "hammered_gold",
+      "desert_sand"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Bad News",
+        "game": "Map Jerusalem’s broken gates while Nehemiah prays."
+      },
+      {
+        "number": 2,
+        "title": "Before the King",
+        "game": "Choose a clear request and realistic resources."
+      },
+      {
+        "number": 3,
+        "title": "Night Inspection",
+        "game": "Survey ruined walls without alerting opponents."
+      },
+      {
+        "number": 4,
+        "title": "Rise and Build",
+        "game": "Assign families to adjacent wall sections."
+      },
+      {
+        "number": 5,
+        "title": "Sword and Trowel",
+        "game": "Balance guarding with construction."
+      },
+      {
+        "number": 6,
+        "title": "The Outcry",
+        "game": "Cancel exploitative debts and restore fields."
+      },
+      {
+        "number": 7,
+        "title": "Plots and Rumours",
+        "game": "Recognise distractions designed to stop the work."
+      },
+      {
+        "number": 8,
+        "title": "The Wall Completed",
+        "game": "Close the final gap and set gatekeepers."
+      },
+      {
+        "number": 9,
+        "title": "The Book Read",
+        "game": "Rebuild the platform and help the people understand."
+      },
+      {
+        "number": 10,
+        "title": "Reform",
+        "game": "Inspect storerooms and restore shared commitments."
+      }
+    ]
+  },
+  "Noah": {
+    "title": "Noah",
+    "references": "Genesis 6–9",
+    "question": "Will faithful care persist through long preparation, crisis, and waiting?",
+    "characters": [
+      "noah",
+      "noahs_wife",
+      "shem",
+      "ham",
+      "japheth",
+      "shems_wife",
+      "hams_wife",
+      "japheths_wife",
+      "neighbour",
+      "animal_keeper"
+    ],
+    "materials": [
+      "wood_dark",
+      "water_fast",
+      "water_still",
+      "fabric_weave",
+      "stone",
+      "leaves"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Warning",
+        "game": "Accept the Ark blueprint."
+      },
+      {
+        "number": 2,
+        "title": "The Blueprint",
+        "game": "Measure the hull to the given proportions."
+      },
+      {
+        "number": 3,
+        "title": "The Long Build",
+        "game": "Gather timber, fit planks, and seal with pitch."
+      },
+      {
+        "number": 4,
+        "title": "The Gathering",
+        "game": "Pair animals and stock each pen."
+      },
+      {
+        "number": 5,
+        "title": "The Door Shuts",
+        "game": "Finish the final checks and surrender control."
+      },
+      {
+        "number": 6,
+        "title": "Forty Days",
+        "game": "Feed, calm, and clean animal pens during the storm."
+      },
+      {
+        "number": 7,
+        "title": "The Long Wait",
+        "game": "Send raven and doves at the right intervals."
+      },
+      {
+        "number": 8,
+        "title": "Dry Ground",
+        "game": "Release animals habitat by habitat."
+      },
+      {
+        "number": 9,
+        "title": "The Covenant",
+        "game": "Build the altar and reveal the rainbow."
+      },
+      {
+        "number": 10,
+        "title": "The Vineyard",
+        "game": "Witness Noah’s failure and choose how the sons respond."
+      }
+    ]
+  },
+  "Ruth": {
+    "title": "Ruth",
+    "references": "Ruth 1–4",
+    "question": "How can loyal kindness create belonging after loss?",
+    "characters": [
+      "ruth",
+      "naomi",
+      "orpah",
+      "boaz",
+      "kinsman_redeemer",
+      "field_overseer",
+      "bethlehem_woman",
+      "obed"
+    ],
+    "materials": [
+      "grass",
+      "fabric_weave",
+      "wood_oak",
+      "stone",
+      "water_still",
+      "leaves"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Leaving Moab",
+        "game": "Pack lightly and choose whether to accompany Naomi."
+      },
+      {
+        "number": 2,
+        "title": "Your People",
+        "game": "Follow the road to Bethlehem together."
+      },
+      {
+        "number": 3,
+        "title": "Gleaning",
+        "game": "Collect only grain left for gleaners."
+      },
+      {
+        "number": 4,
+        "title": "Boaz Notices",
+        "game": "Deliver water and protection instructions to the workers."
+      },
+      {
+        "number": 5,
+        "title": "At the Threshing Floor",
+        "game": "Follow Naomi’s plan with restraint and clarity."
+      },
+      {
+        "number": 6,
+        "title": "At the Gate",
+        "game": "Arrange witnesses and present the redemption choice."
+      },
+      {
+        "number": 7,
+        "title": "Redeemed",
+        "game": "Transfer the sandal and join the households."
+      },
+      {
+        "number": 8,
+        "title": "Obed",
+        "game": "Build the family line toward David."
+      }
+    ]
+  },
+  "Samuel": {
+    "title": "Samuel",
+    "references": "1 Samuel 1–16; 25",
+    "question": "Will a listener speak truth when people demand the wrong kind of power?",
+    "characters": [
+      "samuel_child",
+      "samuel",
+      "hannah",
+      "eli",
+      "saul",
+      "david_young",
+      "jonathan",
+      "jesse",
+      "agag",
+      "israelite_elder"
+    ],
+    "materials": [
+      "stone",
+      "wood_oak",
+      "fabric_weave",
+      "hammered_gold",
+      "grass",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Boy at Shiloh",
+        "game": "Complete temple tasks beside Eli."
+      },
+      {
+        "number": 2,
+        "title": "The Voice at Night",
+        "game": "Listen three times and answer correctly."
+      },
+      {
+        "number": 3,
+        "title": "A Hard Message",
+        "game": "Tell Eli the whole message without embellishment."
+      },
+      {
+        "number": 4,
+        "title": "The Ark Captured",
+        "game": "Track the cost of treating the Ark like a charm."
+      },
+      {
+        "number": 5,
+        "title": "Ebenezer",
+        "game": "Raise a memorial stone after deliverance."
+      },
+      {
+        "number": 6,
+        "title": "A King Demanded",
+        "game": "Hear the elders and explain the tradeoffs."
+      },
+      {
+        "number": 7,
+        "title": "Saul Chosen",
+        "game": "Find Saul among the baggage."
+      },
+      {
+        "number": 8,
+        "title": "Saul’s First Victory",
+        "game": "Rally the people and refuse revenge."
+      },
+      {
+        "number": 9,
+        "title": "The Rejected King",
+        "game": "Compare obedience with impressive sacrifice."
+      },
+      {
+        "number": 10,
+        "title": "David Anointed",
+        "game": "Look past height and choose the shepherd son."
+      }
+    ]
+  }
+}

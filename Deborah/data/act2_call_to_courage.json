@@ -1,0 +1,38 @@
+{
+  "id": "call_to_courage",
+  "name": "Ch.2 · The Call to Courage",
+  "bg": "radial-gradient(circle at 50% 25%, #d4a76a, #6b4423 70%)",
+  "particle": "dusk",
+  "scene": "call_to_courage",
+  "foreground": "fg_call_to_courage",
+  "game": "sequence",
+  "gameTitle": "Gather the people",
+  "gameInstructions": "Put the preparations in the wisest order. Tap: listen, gather, then go.",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "God gave Deborah a message for Barak: gather the people and lead them to Mount Tabor."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Barak was afraid, but Deborah did not shame him."
+    },
+    {
+      "speaker": "deborah",
+      "fx": "type",
+      "align": "center",
+      "text": "Certainly I will go with you."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Courage began with a promise that no one had to stand alone.",
+      "cite": "Judges 4:9"
+    }
+  ]
+}

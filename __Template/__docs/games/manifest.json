@@ -1,0 +1,24 @@
+{
+  "name": "chapter-end-games",
+  "version": 1,
+  "source_repository": "purna/bible-stories",
+  "source_commit": "510495aff2e4f7737c2f7d43cbb497caa6494df3",
+  "game_count": 216,
+  "story_count": 23,
+  "stories": [
+    {"name":"Abraham","game_count":10},{"name":"Adam","game_count":10},
+    {"name":"Babel","game_count":8},{"name":"Daniel","game_count":10},
+    {"name":"David","game_count":12},{"name":"Deborah","game_count":7},
+    {"name":"Eiljah","game_count":9},{"name":"Elisha","game_count":9},
+    {"name":"Enoch","game_count":7},{"name":"Esther","game_count":10},
+    {"name":"Hannah","game_count":8},{"name":"Isaiah","game_count":9},
+    {"name":"Jacob","game_count":10},{"name":"Jeremiah","game_count":10},
+    {"name":"Job","game_count":10},{"name":"Jonah","game_count":9},
+    {"name":"Joseph","game_count":10},{"name":"Joshua","game_count":10},
+    {"name":"Moses","game_count":10},{"name":"Nehemiah","game_count":10},
+    {"name":"Noah","game_count":10},{"name":"Ruth","game_count":8},
+    {"name":"Samuel","game_count":10}
+  ],
+  "runtime": "__shared/chapter-games/chapter-game.js",
+  "canon": "story-canon.json"
+}

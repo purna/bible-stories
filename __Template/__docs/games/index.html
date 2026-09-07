@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Story Games</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+    h1 { font-size: 28px; margin-bottom: 8px; }
+    .summary { color: #555; margin-bottom: 24px; }
+    .story { margin: 22px 0; }
+    .story h2 { font-size: 20px; margin: 0 0 8px; }
+    .games { display: flex; flex-wrap: wrap; gap: 10px; }
+    .games a { display: inline-block; padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; text-decoration: none; color: #1155cc; background: #f7f9ff; }
+    .games a:hover { background: #eef4ff; }
+  </style>
+</head>
+<body>
+  <h1>Story Games</h1>
+  <p class="summary">Browse example game pages by story.</p>
+  <div id="content">Loading...</div>
+  <script>
+    async function init() {
+      const manifest = await fetch('manifest.json').then(r => r.json());
+      const byStory = {};
+      for (const file of manifest.files) {
+        const parts = file.split('/');
+        const story = parts[0];
+        const act = parts[parts.length - 1].replace('.html', '');
+        byStory[story] = byStory[story] || [];
+        byStory[story].push({ name: act, href: file });
+      }
+      const container = document.getElementById('content');
+      container.innerHTML = '';
+      for (const [story, acts] of Object.entries(byStory)) {
+        const section = document.createElement('div');
+        section.className = 'story';
+        const title = document.createElement('h2');
+        title.textContent = story;
+        section.appendChild(title);
+        const games = document.createElement('div');
+        games.className = 'games';
+        for (const act of acts) {
+          const a = document.createElement('a');
+          a.href = act.href;
+          a.textContent = act.name;
+          games.appendChild(a);
+        }
+        section.appendChild(games);
+        container.appendChild(section);
+      }
+    }
+    init().catch(err => {
+      document.getElementById('content').textContent = 'Failed to load games index.';
+      console.error(err);
+    });
+  </script>
+</body>
+</html>

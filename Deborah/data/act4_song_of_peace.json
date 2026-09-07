@@ -1,0 +1,38 @@
+{
+  "id": "song_of_peace",
+  "name": "Ch.4 · A Song of Peace",
+  "bg": "radial-gradient(circle at 50% 25%, #f6e05e, #b7791f 70%)",
+  "particle": "dawn",
+  "scene": "song_of_peace",
+  "foreground": "fg_song_of_peace",
+  "game": "song",
+  "gameTitle": "Build the victory song",
+  "gameInstructions": "Choose the three words that best tell Deborah's story.",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "When the danger had passed, Deborah and Barak sang."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "They remembered every willing heart, every brave step, and the God who had gone before them."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "The land rested for forty years."
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "text": "Deborah's story reminds us: listen closely, stand together, and use courage to make peace.",
+      "cite": "Judges 5:2"
+    }
+  ]
+}

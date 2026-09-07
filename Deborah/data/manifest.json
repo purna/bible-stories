@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "acts": [
+    {
+      "id": "voice_beneath_palm",
+      "name": "Ch.1 · A Voice Beneath the Palm",
+      "file": "act1_voice_beneath_palm.json",
+      "scene": "voice_beneath_palm",
+      "foreground": "fg_voice_beneath_palm"
+    },
+    {
+      "id": "call_to_courage",
+      "name": "Ch.2 · The Call to Courage",
+      "file": "act2_call_to_courage.json",
+      "scene": "call_to_courage",
+      "foreground": "fg_call_to_courage"
+    },
+    {
+      "id": "river_rose",
+      "name": "Ch.3 · The River Rose",
+      "file": "act3_river_rose.json",
+      "scene": "river_rose",
+      "foreground": "fg_river_rose"
+    },
+    {
+      "id": "song_of_peace",
+      "name": "Ch.4 · A Song of Peace",
+      "file": "act4_song_of_peace.json",
+      "scene": "song_of_peace",
+      "foreground": "fg_song_of_peace"
+    }
+  ]
+}
