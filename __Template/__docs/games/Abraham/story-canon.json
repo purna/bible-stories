@@ -1,0 +1,78 @@
+{
+  "Abraham": {
+    "title": "Abraham",
+    "references": "Genesis 11–25",
+    "question": "Will Abraham trust the promise when fulfilment seems impossible?",
+    "characters": [
+      "abraham",
+      "sarah",
+      "lot",
+      "hagar",
+      "ishmael",
+      "isaac",
+      "melchizedek",
+      "abimelech",
+      "eliezer"
+    ],
+    "materials": [
+      "desert_sand",
+      "stone",
+      "fabric_weave",
+      "wood_oak",
+      "water_still",
+      "leaves"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Call",
+        "game": "Follow the road markers out of Haran."
+      },
+      {
+        "number": 2,
+        "title": "Egypt and Return",
+        "game": "Choose honest repairs after a fearful mistake."
+      },
+      {
+        "number": 3,
+        "title": "Lot Chooses",
+        "game": "Survey the land and give Lot first choice."
+      },
+      {
+        "number": 4,
+        "title": "Rescue of Lot",
+        "game": "Plan a fast night rescue without taking spoil."
+      },
+      {
+        "number": 5,
+        "title": "Covenant Stars",
+        "game": "Trace the promised constellation."
+      },
+      {
+        "number": 6,
+        "title": "Hagar in the Wilderness",
+        "game": "Find water and listen before acting."
+      },
+      {
+        "number": 7,
+        "title": "The Visitors",
+        "game": "Prepare hospitality before the guests depart."
+      },
+      {
+        "number": 8,
+        "title": "Sodom and Gomorrah",
+        "game": "Guide Lot’s household away without looking back."
+      },
+      {
+        "number": 9,
+        "title": "Isaac Is Born",
+        "game": "Assemble a celebration tent."
+      },
+      {
+        "number": 10,
+        "title": "Moriah",
+        "game": "Climb, gather wood, and respond to the provided ram."
+      }
+    ]
+  }
+}

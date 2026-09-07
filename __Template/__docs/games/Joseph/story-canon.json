@@ -1,0 +1,80 @@
+{
+  "Joseph": {
+    "title": "Joseph",
+    "references": "Genesis 37–50",
+    "question": "Can betrayal be transformed into wise service and reconciliation?",
+    "characters": [
+      "joseph_young",
+      "joseph",
+      "jacob",
+      "reuben",
+      "judah",
+      "benjamin",
+      "potiphar",
+      "potiphars_wife",
+      "cupbearer",
+      "baker",
+      "pharaoh"
+    ],
+    "materials": [
+      "fabric_dots",
+      "stone",
+      "wall_brick",
+      "mosaic",
+      "hammered_gold",
+      "egypt_mud_brick"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Coloured Robe",
+        "game": "Assemble the robe and notice the family tension."
+      },
+      {
+        "number": 2,
+        "title": "Dreams and the Pit",
+        "game": "Order the dreams, then find a path through betrayal."
+      },
+      {
+        "number": 3,
+        "title": "Potiphar’s House",
+        "game": "Manage the household with integrity."
+      },
+      {
+        "number": 4,
+        "title": "The Prison",
+        "game": "Care for prisoners and interpret two dreams."
+      },
+      {
+        "number": 5,
+        "title": "Pharaoh’s Dreams",
+        "game": "Pair cows and grain with seven-year cycles."
+      },
+      {
+        "number": 6,
+        "title": "Storehouses",
+        "game": "Plan grain reserves across Egypt."
+      },
+      {
+        "number": 7,
+        "title": "The Brothers Arrive",
+        "game": "Test recognition while distributing food."
+      },
+      {
+        "number": 8,
+        "title": "Benjamin’s Cup",
+        "game": "Trace the hidden cup and Judah’s offer."
+      },
+      {
+        "number": 9,
+        "title": "Revealed",
+        "game": "Choose the moment Joseph names himself."
+      },
+      {
+        "number": 10,
+        "title": "Goshen",
+        "game": "Settle the family and preserve the famine record."
+      }
+    ]
+  }
+}

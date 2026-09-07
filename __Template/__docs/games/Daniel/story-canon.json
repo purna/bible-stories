@@ -1,0 +1,80 @@
+{
+  "Daniel": {
+    "title": "Daniel",
+    "references": "Daniel 1–12",
+    "question": "How can faithful courage endure inside an empire built on fear?",
+    "characters": [
+      "daniel_young",
+      "daniel",
+      "hananiah",
+      "mishael",
+      "azariah",
+      "nebuchadnezzar",
+      "belshazzar",
+      "darius",
+      "court_official",
+      "accusers",
+      "angel"
+    ],
+    "materials": [
+      "wall_brick",
+      "mosaic",
+      "hammered_gold",
+      "stone",
+      "fabric_weave",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Exile and the Table",
+        "game": "Build a respectful ten-day food test."
+      },
+      {
+        "number": 2,
+        "title": "The Great Statue",
+        "game": "Reassemble the dream and its meaning."
+      },
+      {
+        "number": 3,
+        "title": "The Furnace",
+        "game": "Keep the three friends together through the fire maze."
+      },
+      {
+        "number": 4,
+        "title": "The Proud King",
+        "game": "Tend the humbled king until his reason returns."
+      },
+      {
+        "number": 5,
+        "title": "Writing on the Wall",
+        "game": "Match the mysterious words to their warning."
+      },
+      {
+        "number": 6,
+        "title": "The Lions’ Den",
+        "game": "Maintain Daniel’s prayer rhythm despite the decree."
+      },
+      {
+        "number": 7,
+        "title": "Four Beasts",
+        "game": "Identify symbols without attacking the vision."
+      },
+      {
+        "number": 8,
+        "title": "The Ram and Goat",
+        "game": "Track the vision’s movements on a map."
+      },
+      {
+        "number": 9,
+        "title": "Seventy Weeks",
+        "game": "Order prayer, confession, and hope."
+      },
+      {
+        "number": 10,
+        "title": "Final Vision",
+        "game": "Carry the sealed message to the riverbank."
+      }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "Samuel": {
+    "title": "Samuel",
+    "references": "1 Samuel 1–16; 25",
+    "question": "Will a listener speak truth when people demand the wrong kind of power?",
+    "characters": [
+      "samuel_child",
+      "samuel",
+      "hannah",
+      "eli",
+      "saul",
+      "david_young",
+      "jonathan",
+      "jesse",
+      "agag",
+      "israelite_elder"
+    ],
+    "materials": [
+      "stone",
+      "wood_oak",
+      "fabric_weave",
+      "hammered_gold",
+      "grass",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Boy at Shiloh",
+        "game": "Complete temple tasks beside Eli."
+      },
+      {
+        "number": 2,
+        "title": "The Voice at Night",
+        "game": "Listen three times and answer correctly."
+      },
+      {
+        "number": 3,
+        "title": "A Hard Message",
+        "game": "Tell Eli the whole message without embellishment."
+      },
+      {
+        "number": 4,
+        "title": "The Ark Captured",
+        "game": "Track the cost of treating the Ark like a charm."
+      },
+      {
+        "number": 5,
+        "title": "Ebenezer",
+        "game": "Raise a memorial stone after deliverance."
+      },
+      {
+        "number": 6,
+        "title": "A King Demanded",
+        "game": "Hear the elders and explain the tradeoffs."
+      },
+      {
+        "number": 7,
+        "title": "Saul Chosen",
+        "game": "Find Saul among the baggage."
+      },
+      {
+        "number": 8,
+        "title": "Saul’s First Victory",
+        "game": "Rally the people and refuse revenge."
+      },
+      {
+        "number": 9,
+        "title": "The Rejected King",
+        "game": "Compare obedience with impressive sacrifice."
+      },
+      {
+        "number": 10,
+        "title": "David Anointed",
+        "game": "Look past height and choose the shepherd son."
+      }
+    ]
+  }
+}

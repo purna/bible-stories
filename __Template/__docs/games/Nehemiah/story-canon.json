@@ -1,0 +1,78 @@
+{
+  "Nehemiah": {
+    "title": "Nehemiah",
+    "references": "Nehemiah 1–13",
+    "question": "Can prayerful planning rebuild both walls and communal justice?",
+    "characters": [
+      "nehemiah",
+      "artaxerxes",
+      "hanani",
+      "sanballat",
+      "tobiah",
+      "geshem",
+      "ezra",
+      "eliashib",
+      "wall_builder"
+    ],
+    "materials": [
+      "wall_brick",
+      "stone",
+      "wood_oak",
+      "fabric_weave",
+      "hammered_gold",
+      "desert_sand"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Bad News",
+        "game": "Map Jerusalem’s broken gates while Nehemiah prays."
+      },
+      {
+        "number": 2,
+        "title": "Before the King",
+        "game": "Choose a clear request and realistic resources."
+      },
+      {
+        "number": 3,
+        "title": "Night Inspection",
+        "game": "Survey ruined walls without alerting opponents."
+      },
+      {
+        "number": 4,
+        "title": "Rise and Build",
+        "game": "Assign families to adjacent wall sections."
+      },
+      {
+        "number": 5,
+        "title": "Sword and Trowel",
+        "game": "Balance guarding with construction."
+      },
+      {
+        "number": 6,
+        "title": "The Outcry",
+        "game": "Cancel exploitative debts and restore fields."
+      },
+      {
+        "number": 7,
+        "title": "Plots and Rumours",
+        "game": "Recognise distractions designed to stop the work."
+      },
+      {
+        "number": 8,
+        "title": "The Wall Completed",
+        "game": "Close the final gap and set gatekeepers."
+      },
+      {
+        "number": 9,
+        "title": "The Book Read",
+        "game": "Rebuild the platform and help the people understand."
+      },
+      {
+        "number": 10,
+        "title": "Reform",
+        "game": "Inspect storerooms and restore shared commitments."
+      }
+    ]
+  }
+}

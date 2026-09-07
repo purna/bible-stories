@@ -1,0 +1,78 @@
+{
+  "Jeremiah": {
+    "title": "Jeremiah",
+    "references": "Jeremiah 1–52; Lamentations",
+    "question": "Can truth be spoken and hope planted while a city collapses?",
+    "characters": [
+      "jeremiah",
+      "josiah",
+      "jehoiakim",
+      "zedekiah",
+      "baruch",
+      "ebed_melech",
+      "hananiah",
+      "temple_priest",
+      "babylonian_guard"
+    ],
+    "materials": [
+      "wall_brick",
+      "stone",
+      "wood_dark",
+      "fabric_weave",
+      "desert_sand",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Call",
+        "game": "Touch the right words to the young prophet’s mouth."
+      },
+      {
+        "number": 2,
+        "title": "The Almond Branch",
+        "game": "Spot signs that God is watching over the word."
+      },
+      {
+        "number": 3,
+        "title": "At the Temple Gate",
+        "game": "Separate ritual confidence from justice."
+      },
+      {
+        "number": 4,
+        "title": "The Scroll",
+        "game": "Dictate to Baruch and rebuild the burned scroll."
+      },
+      {
+        "number": 5,
+        "title": "The Potter",
+        "game": "Reshape the clay while it remains workable."
+      },
+      {
+        "number": 6,
+        "title": "The Yoke",
+        "game": "Carry the warning despite Hananiah’s easy promise."
+      },
+      {
+        "number": 7,
+        "title": "The Cistern",
+        "game": "Coordinate Ebed-melech’s rope rescue."
+      },
+      {
+        "number": 8,
+        "title": "Buy the Field",
+        "game": "Complete a land purchase while siege closes in."
+      },
+      {
+        "number": 9,
+        "title": "The Fall of Jerusalem",
+        "game": "Guide survivors through the breached city."
+      },
+      {
+        "number": 10,
+        "title": "Lament and Hope",
+        "game": "Pair grief lines with stubborn hope."
+      }
+    ]
+  }
+}

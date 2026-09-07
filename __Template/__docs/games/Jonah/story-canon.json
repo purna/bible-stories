@@ -1,0 +1,71 @@
+{
+  "Jonah": {
+    "title": "Jonah",
+    "references": "Jonah 1–4",
+    "question": "Will the prophet accept mercy when it reaches people he resents?",
+    "characters": [
+      "jonah",
+      "ship_captain",
+      "sailor",
+      "king_of_nineveh",
+      "ninevite",
+      "child",
+      "messenger"
+    ],
+    "materials": [
+      "water_fast",
+      "water_still",
+      "wood_dark",
+      "desert_sand",
+      "leaves",
+      "fabric_weave"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Run to the Sea",
+        "game": "Choose cargo and board the ship going the wrong way."
+      },
+      {
+        "number": 2,
+        "title": "The Storm",
+        "game": "Secure the deck and uncover Jonah’s flight."
+      },
+      {
+        "number": 3,
+        "title": "Into the Deep",
+        "game": "Navigate sinking currents toward the great fish."
+      },
+      {
+        "number": 4,
+        "title": "Prayer Below",
+        "game": "Reassemble Jonah’s prayer from psalm fragments."
+      },
+      {
+        "number": 5,
+        "title": "Second Call",
+        "game": "Walk the road to Nineveh."
+      },
+      {
+        "number": 6,
+        "title": "The Warning",
+        "game": "Deliver the short message through the great city."
+      },
+      {
+        "number": 7,
+        "title": "Nineveh Repents",
+        "game": "Coordinate fasting from palace to livestock."
+      },
+      {
+        "number": 8,
+        "title": "The Plant",
+        "game": "Manage shade, worm, and hot wind."
+      },
+      {
+        "number": 9,
+        "title": "The Question",
+        "game": "Compare Jonah’s pity for a plant with God’s pity for a city."
+      }
+    ]
+  }
+}

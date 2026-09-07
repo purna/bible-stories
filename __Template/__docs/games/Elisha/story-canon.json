@@ -1,0 +1,73 @@
+{
+  "Elisha": {
+    "title": "Elisha",
+    "references": "1 Kings 19; 2 Kings 2–13",
+    "question": "How can everyday acts of mercy reveal faithful power?",
+    "characters": [
+      "elisha",
+      "elijah",
+      "widow",
+      "shunammite_woman",
+      "gehazi",
+      "naaman",
+      "servant_girl",
+      "king_of_israel",
+      "syrian_commander"
+    ],
+    "materials": [
+      "water_still",
+      "water_fast",
+      "wood_oak",
+      "stone",
+      "fabric_weave",
+      "leaves"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Mantle",
+        "game": "Leave the plough and follow Elijah."
+      },
+      {
+        "number": 2,
+        "title": "The Jordan",
+        "game": "Strike the water and cross."
+      },
+      {
+        "number": 3,
+        "title": "The Widow’s Oil",
+        "game": "Collect jars and pour without waste."
+      },
+      {
+        "number": 4,
+        "title": "The Shunammite Room",
+        "game": "Arrange a simple guest room."
+      },
+      {
+        "number": 5,
+        "title": "The Child",
+        "game": "Climb to the room and persist in care."
+      },
+      {
+        "number": 6,
+        "title": "Naaman",
+        "game": "Guide the commander through seven Jordan immersions."
+      },
+      {
+        "number": 7,
+        "title": "The Floating Axe",
+        "game": "Mark where the borrowed iron fell."
+      },
+      {
+        "number": 8,
+        "title": "The Unseen Army",
+        "game": "Reveal protection around the frightened servant."
+      },
+      {
+        "number": 9,
+        "title": "A Blind Feast",
+        "game": "Lead enemies safely to a meal instead of an ambush."
+      }
+    ]
+  }
+}

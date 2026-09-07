@@ -1,0 +1,65 @@
+{
+  "Hannah": {
+    "title": "Hannah",
+    "references": "1 Samuel 1–2",
+    "question": "Can longing be voiced honestly and a cherished gift released faithfully?",
+    "characters": [
+      "hannah",
+      "elkanah",
+      "peninnah",
+      "eli",
+      "samuel_child",
+      "temple_woman"
+    ],
+    "materials": [
+      "fabric_weave",
+      "stone",
+      "wood_oak",
+      "hammered_gold",
+      "grass",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Journey to Shiloh",
+        "game": "Gather the household for the annual worship journey."
+      },
+      {
+        "number": 2,
+        "title": "At the Table",
+        "game": "Navigate hurt without retaliating."
+      },
+      {
+        "number": 3,
+        "title": "Silent Prayer",
+        "game": "Form Hannah’s prayer from honest fragments."
+      },
+      {
+        "number": 4,
+        "title": "Misunderstood",
+        "game": "Explain quiet prayer to Eli."
+      },
+      {
+        "number": 5,
+        "title": "Remembered",
+        "game": "Prepare for Samuel’s birth."
+      },
+      {
+        "number": 6,
+        "title": "The Little Robe",
+        "game": "Weave and size a yearly robe."
+      },
+      {
+        "number": 7,
+        "title": "Given Back",
+        "game": "Bring Samuel to serve at Shiloh."
+      },
+      {
+        "number": 8,
+        "title": "Hannah’s Song",
+        "game": "Arrange lines of reversal and hope."
+      }
+    ]
+  }
+}

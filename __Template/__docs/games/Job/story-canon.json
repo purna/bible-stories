@@ -1,0 +1,78 @@
+{
+  "Job": {
+    "title": "Job",
+    "references": "Job 1–42",
+    "question": "Can faith remain honest when suffering refuses a simple explanation?",
+    "characters": [
+      "job",
+      "jobs_wife",
+      "eliphaz",
+      "bildad",
+      "zophar",
+      "elihu",
+      "messenger",
+      "young_job",
+      "restored_daughter"
+    ],
+    "materials": [
+      "desert_sand",
+      "stone",
+      "fabric_weave",
+      "wood_oak",
+      "grass",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "A Blameless Life",
+        "game": "Tend Job’s household and practice generous justice."
+      },
+      {
+        "number": 2,
+        "title": "The Accuser",
+        "game": "Observe the heavenly challenge without controlling it."
+      },
+      {
+        "number": 3,
+        "title": "Loss upon Loss",
+        "game": "Receive each messenger and sit with the silence."
+      },
+      {
+        "number": 4,
+        "title": "Seven Days",
+        "game": "Keep vigil without offering explanations."
+      },
+      {
+        "number": 5,
+        "title": "Job Speaks",
+        "game": "Build an honest lament from grief and protest."
+      },
+      {
+        "number": 6,
+        "title": "The Friends",
+        "game": "Identify when counsel becomes accusation."
+      },
+      {
+        "number": 7,
+        "title": "Elihu",
+        "game": "Listen, test claims, and resist easy scoring."
+      },
+      {
+        "number": 8,
+        "title": "Out of the Whirlwind",
+        "game": "Explore questions about creation."
+      },
+      {
+        "number": 9,
+        "title": "Job Responds",
+        "game": "Release the demand to master every answer."
+      },
+      {
+        "number": 10,
+        "title": "Restoration",
+        "game": "Rebuild community without treating new gifts as replacements."
+      }
+    ]
+  }
+}

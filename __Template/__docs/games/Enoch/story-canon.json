@@ -1,0 +1,60 @@
+{
+  "Enoch": {
+    "title": "Enoch",
+    "references": "Genesis 5; Hebrews 11:5; Jude 14–15",
+    "question": "What does it mean to walk faithfully across an ordinary lifetime?",
+    "characters": [
+      "enoch",
+      "jared",
+      "methuselah",
+      "family_member",
+      "neighbour",
+      "traveller"
+    ],
+    "materials": [
+      "grass",
+      "stone",
+      "wood_oak",
+      "fabric_weave",
+      "water_still",
+      "leaves"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "A Family Record",
+        "game": "Place Enoch correctly in the generations."
+      },
+      {
+        "number": 2,
+        "title": "The First Walk",
+        "game": "Choose a daily route that serves neighbours."
+      },
+      {
+        "number": 3,
+        "title": "A Son Named Methuselah",
+        "game": "Prepare the home for a new child."
+      },
+      {
+        "number": 4,
+        "title": "Years of Faithfulness",
+        "game": "Complete repeated small acts without a fame meter."
+      },
+      {
+        "number": 5,
+        "title": "A Warning",
+        "game": "Deliver a hard truth without cruelty."
+      },
+      {
+        "number": 6,
+        "title": "Walking with God",
+        "game": "Follow a quiet path as the landscape changes."
+      },
+      {
+        "number": 7,
+        "title": "Taken",
+        "game": "Let go of the route and enter the final light."
+      }
+    ]
+  }
+}

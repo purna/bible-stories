@@ -1,0 +1,67 @@
+{
+  "Ruth": {
+    "title": "Ruth",
+    "references": "Ruth 1–4",
+    "question": "How can loyal kindness create belonging after loss?",
+    "characters": [
+      "ruth",
+      "naomi",
+      "orpah",
+      "boaz",
+      "kinsman_redeemer",
+      "field_overseer",
+      "bethlehem_woman",
+      "obed"
+    ],
+    "materials": [
+      "grass",
+      "fabric_weave",
+      "wood_oak",
+      "stone",
+      "water_still",
+      "leaves"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Leaving Moab",
+        "game": "Pack lightly and choose whether to accompany Naomi."
+      },
+      {
+        "number": 2,
+        "title": "Your People",
+        "game": "Follow the road to Bethlehem together."
+      },
+      {
+        "number": 3,
+        "title": "Gleaning",
+        "game": "Collect only grain left for gleaners."
+      },
+      {
+        "number": 4,
+        "title": "Boaz Notices",
+        "game": "Deliver water and protection instructions to the workers."
+      },
+      {
+        "number": 5,
+        "title": "At the Threshing Floor",
+        "game": "Follow Naomi’s plan with restraint and clarity."
+      },
+      {
+        "number": 6,
+        "title": "At the Gate",
+        "game": "Arrange witnesses and present the redemption choice."
+      },
+      {
+        "number": 7,
+        "title": "Redeemed",
+        "game": "Transfer the sandal and join the households."
+      },
+      {
+        "number": 8,
+        "title": "Obed",
+        "game": "Build the family line toward David."
+      }
+    ]
+  }
+}

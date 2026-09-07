@@ -1,0 +1,73 @@
+{
+  "Eiljah": {
+    "title": "Elijah",
+    "references": "1 Kings 17–19; 21; 2 Kings 1–2",
+    "question": "Can zeal mature into listening, mercy, and faithful succession?",
+    "characters": [
+      "elijah",
+      "ahab",
+      "jezebel",
+      "widow_of_zarephath",
+      "widows_son",
+      "obadiah",
+      "prophet_of_baal",
+      "elisha",
+      "naboth"
+    ],
+    "materials": [
+      "desert_sand",
+      "stone",
+      "wood_oak",
+      "water_fast",
+      "leaves",
+      "fabric_weave"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Drought",
+        "game": "Follow ravens to daily bread by the brook."
+      },
+      {
+        "number": 2,
+        "title": "The Widow’s Jar",
+        "game": "Measure flour and oil without exhausting either."
+      },
+      {
+        "number": 3,
+        "title": "The Child Restored",
+        "game": "Carry the child upstairs and persist in prayer."
+      },
+      {
+        "number": 4,
+        "title": "Mount Carmel",
+        "game": "Repair the altar with twelve stones."
+      },
+      {
+        "number": 5,
+        "title": "The Rain Returns",
+        "game": "Spot the small cloud and race from the storm."
+      },
+      {
+        "number": 6,
+        "title": "Under the Broom Tree",
+        "game": "Rest, eat, and accept care before travelling."
+      },
+      {
+        "number": 7,
+        "title": "The Quiet Voice",
+        "game": "Distinguish wind, quake, fire, and quiet."
+      },
+      {
+        "number": 8,
+        "title": "Naboth’s Vineyard",
+        "game": "Expose the false testimony behind the seizure."
+      },
+      {
+        "number": 9,
+        "title": "Chariots of Fire",
+        "game": "Cross the Jordan and pass the mantle to Elisha."
+      }
+    ]
+  }
+}

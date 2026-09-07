@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Listen and Respond — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none
+    }
+
+    :root {
+      --ink: #3a2410;
+      --good: #2e7d32;
+      --bad: #c62828;
+      --accent: #ffd84d;
+      --bg: #fffaf0
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden
+    }
+
+    body {
+      font-family: 'Comic Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .wrap {
+      width: 960px;
+      max-width: none;
+      height: 540px;
+      margin: 0;
+      padding: 16px;
+      flex: none;
+      overflow: hidden;
+      transform: scale(var(--game-scale, 1));
+      transform-origin: center
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin: 4px 0
+    }
+
+    .sub {
+      font-size: .9rem;
+      opacity: .8;
+      margin-bottom: 16px
+    }
+
+    .field {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin: 24px auto;
+      max-width: 360px
+    }
+
+    .cue {
+      width: 86px;
+      height: 86px;
+      border-radius: 14px;
+      border: 3px solid var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+      cursor: pointer;
+      background: #fff;
+      transition: transform .14s, filter .14s;
+      touch-action: manipulation
+    }
+
+    .cue:active,
+    .cue.picked {
+      transform: scale(.92);
+      filter: brightness(1.08)
+    }
+
+    .cue.released {
+      animation: releasePop .24s ease-out
+    }
+
+    .cue.tap {
+      transform: scale(.88)
+    }
+
+    .cue.noise {
+      animation: blur .9s infinite alternate;
+      cursor: pointer
+    }
+
+    .cue.choice {
+      background: var(--accent)
+    }
+
+    .cue.correct {
+      background: var(--good);
+      color: #fff
+    }
+
+    .cue.wrong {
+      background: var(--bad);
+      color: #fff
+    }
+
+    .cue.previewing {
+      transform: scale(1.1);
+      filter: brightness(1.15) drop-shadow(0 0 6px var(--accent))
+    }
+
+    @keyframes blur {
+      0% {
+        filter: blur(0)
+      }
+
+      100% {
+        filter: blur(0) contrast(.55)
+      }
+    }
+
+    .question {
+      font-size: 1.05rem;
+      margin: 20px 0 8px;
+      font-weight: 600;
+      min-height: 2.4em
+    }
+
+    .listenBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: max-content;
+      background: #fff;
+      color: var(--ink);
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: .9rem;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      margin: 0 auto 8px;
+      transition: transform .12s, filter .12s
+    }
+
+    .listenBtn:active,
+    .listenBtn.picked {
+      transform: scale(.94);
+      filter: brightness(1.08)
+    }
+
+    .listenBtn svg {
+      width: 20px;
+      height: 20px
+    }
+
+    .listenBtn.playing {
+      animation: pulseListen .5s infinite alternate
+    }
+
+    @keyframes pulseListen {
+      0% {
+        filter: brightness(1)
+      }
+
+      100% {
+        filter: brightness(1.25)
+      }
+    }
+
+    .btn {
+      display: block;
+      width: max-content;
+      background: var(--good);
+      color: #fff;
+      border: 3px solid var(--ink);
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 14px auto 0;
+      transition: transform .12s, filter .12s
+    }
+
+    .btn:active {
+      transform: scale(.92);
+      filter: brightness(.9)
+    }
+
+    @keyframes releasePop {
+      50% {
+        transform: scale(1.08)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Listen and Respond
+      <svg viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        focusable="false">
+        <circle cx="16" cy="8" r="4" fill="#ffd84d" />
+        <path d="M6 24c2-4 7-6 10-6s8 2 10 6" stroke="#3a2410" stroke-width="2" />
+      </svg>
+    </h1>
+    <div class="sub">Tap "Hear it again" to listen, then tap the true sign.</div>
+    <div class="question" id="question">Something is calling…</div>
+    <button type="button" class="listenBtn" id="listenBtn" aria-label="Listen again">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="M6 12v8h5l7 6V6l-7 6z" fill="#3a2410" />
+        <path d="M22 11c2 2 2 8 0 10M25 8c4 4 4 12 0 16" stroke="#3a2410" stroke-width="2" stroke-linecap="round"
+          fill="none" />
+      </svg>
+      Hear it again
+    </button>
+    <div class="field" id="field"></div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Listen again</button>
+    </div>
+  </div>
+  <script src="_shared/timer.js"></script>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 90, timer: true };
+    function fitGameToViewport() {
+      document.documentElement.style.setProperty('--game-scale', Math.min(innerWidth / 960, innerHeight / 540));
+    }
+    addEventListener('resize', fitGameToViewport); fitGameToViewport();
+    const field = document.getElementById('field');
+    const q = document.getElementById('question');
+    const modal = document.getElementById('modal'), modalCard = document.getElementById('modalCard'), modalIcon = document.getElementById('modalIcon'), modalTitle = document.getElementById('modalTitle'), modalText = document.getElementById('modalText'), modalBtn = document.getElementById('modalBtn');
+    const CHECK_SVG = '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16.5l5.5 5.5L24 11" stroke="#1b5e20" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    const HOURGLASS_SVG = '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+
+    function showModal(kind, title, lines, btnLabel) {
+      modalCard.classList.remove('success', 'timeout');
+      if (kind === 'success') modalCard.classList.add('success');
+      if (kind === 'timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind === 'success' ? CHECK_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Play again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    addPressEffects('.cue,.btn,.listenBtn');
+    function addPressEffects(selector) { document.addEventListener('pointerdown', e => { const el = e.target.closest(selector); if (el) el.classList.add('picked') }); document.addEventListener('pointerup', e => { const el = e.target.closest(selector); if (!el) return; el.classList.remove('picked'); el.classList.remove('released'); void el.offsetWidth; el.classList.add('released') }); }
+
+    // Audio Engine
+    let audioCtx = null;
+    function getAudioCtx() {
+      if (!audioCtx) { try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return null; } }
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      return audioCtx;
+    }
+
+    let audioUnlocked = false;
+    document.addEventListener('pointerdown', () => {
+      if (audioUnlocked) return;
+      const ctx = getAudioCtx();
+      if (ctx) { audioUnlocked = true; setTimeout(() => playPreview(), 120); }
+    }, { once: true });
+
+    function playTone(freq, dur, type, peak, delay = 0) {
+      const ctx = getAudioCtx(); if (!ctx) return;
+      const t0 = ctx.currentTime + delay;
+      const osc = ctx.createOscillator(), gain = ctx.createGain();
+      osc.type = type || 'sine'; osc.frequency.setValueAtTime(freq, t0);
+      gain.gain.setValueAtTime(0, t0);
+      gain.gain.linearRampToValueAtTime(peak || 0.22, t0 + 0.03);
+      gain.gain.exponentialRampToValueAtTime(0.001, t0 + dur);
+      osc.connect(gain).connect(ctx.destination);
+      osc.start(t0); osc.stop(t0 + dur + 0.02);
+    }
+
+    function playNoiseBurst(dur, delay = 0) {
+      const ctx = getAudioCtx(); if (!ctx) return;
+      const t0 = ctx.currentTime + delay;
+      const bufferSize = Math.floor(ctx.sampleRate * dur);
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) data[i] = (Math.random() * 2 - 1) * 0.6;
+      const src = ctx.createBufferSource(); src.buffer = buffer;
+      const filter = ctx.createBiquadFilter(); filter.type = 'bandpass'; filter.frequency.value = 500; filter.Q.value = 0.6;
+      const gain = ctx.createGain();
+      gain.gain.setValueAtTime(0, t0);
+      gain.gain.linearRampToValueAtTime(0.18, t0 + 0.04);
+      gain.gain.exponentialRampToValueAtTime(0.001, t0 + dur);
+      src.connect(filter).connect(gain).connect(ctx.destination);
+      src.start(t0); src.stop(t0 + dur + 0.02);
+    }
+
+    function playCorrectChime() { playTone(523, 0.18, 'sine', 0.24, 0); playTone(659, 0.24, 'sine', 0.24, 0.12); }
+    function playWrongBuzz() { playTone(180, 0.28, 'sawtooth', 0.14, 0); }
+
+    let previewTimers = [];
+    function playPreview() {
+      if (!audioUnlocked) return;
+      previewTimers.forEach(t => clearTimeout(t));
+      previewTimers = [];
+      const cueEls = [...field.querySelectorAll('.cue')];
+      const listenBtn = document.getElementById('listenBtn');
+      listenBtn.classList.add('playing');
+      const step = 380;
+      cueEls.forEach((el, i) => {
+        const isTarget = !el.classList.contains('noise');
+        previewTimers.push(setTimeout(() => {
+          el.classList.add('previewing');
+          if (isTarget) playTone(880, 0.3, 'sine', 0.22, 0); else playNoiseBurst(0.26, 0);
+          setTimeout(() => el.classList.remove('previewing'), 300);
+        }, i * step));
+      });
+      previewTimers.push(setTimeout(() => listenBtn.classList.remove('playing'), cueEls.length * step + 200));
+    }
+
+    document.getElementById('listenBtn').addEventListener('click', () => {
+      const ctx = getAudioCtx();
+      if (ctx) { audioUnlocked = true; playPreview(); }
+    });
+
+    const cues = [
+      { svg: '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="12" r="5" stroke="#3a2410" stroke-width="2"/><path d="M16 17v9" stroke="#3a2410" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="28" r="3" fill="#3a2410"/></svg>', label: 'bell' },
+      { svg: '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 5h18v22a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3z" stroke="#3a2410" stroke-width="2"/><path d="M12 9h8v12h-8z" fill="#d4af37"/></svg>', label: 'book' },
+      { svg: '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 6c-4 2-6 6-6 11s2 9 6 11 6-4 6-11-2-9-6-11z" fill="#6b4226"/><circle cx="12" cy="14" r="2"/><circle cx="20" cy="14" r="2"/></svg>', label: 'dove' },
+      { svg: '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="6" fill="#ffd84d"/><path d="M16 10v6l3 3" stroke="#3a2410" stroke-width="2" stroke-linecap="round"/></svg>', label: 'star' },
+      { svg: '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 20c3-6 9-9 15-7" stroke="#3a2410" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="12" r="3" fill="#3a2410"/></svg>', label: 'music' },
+      { svg: '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6h12v20H10z" fill="#ccae81"/><path d="M13 8v16M19 8v16" stroke="#3a2410" stroke-width="1.5"/></svg>', label: 'key' }
+    ];
+
+    let round = 0, targets = ['star', 'key'];
+
+    function renderRound() {
+      round++;
+      q.textContent = round <= 2 ? `Round ${round}: Which sign is true?` : `Round ${round}: The true sign is?`;
+      field.innerHTML = '';
+      const currentTarget = targets[Math.min(round - 1, targets.length - 1)];
+      const order = shuffle([].concat(cues));
+
+      order.forEach(c => {
+        const isTarget = (c.label === currentTarget);
+        const el = document.createElement('div');
+        el.className = 'cue' + (isTarget ? ' choice' : ' noise');
+        el.innerHTML = c.svg;
+        el.dataset.label = c.label;
+        field.appendChild(el);
+      });
+      if (audioUnlocked) setTimeout(playPreview, 300);
+    }
+
+    function shuffle(a) { return a.sort(() => Math.random() - .5); }
+
+    field.addEventListener('click', e => {
+      const cue = e.target.closest('.cue');
+      if (!cue) return;
+      const label = cue.dataset.label;
+      const target = targets[Math.min(round - 1, targets.length - 1)];
+      const all = document.querySelectorAll('.cue');
+      all.forEach(c => c.style.pointerEvents = 'none');
+      if (label === target) {
+        playCorrectChime();
+        cue.classList.add('correct');
+        cue.innerHTML = '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16.5l5.5 5.5L24 11" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/></svg>';
+        if (round >= targets.length) finish(); else setTimeout(renderRound, 900);
+      } else {
+        playWrongBuzz();
+        cue.classList.add('wrong');
+        setTimeout(() => { all.forEach(c => c.style.pointerEvents = 'auto'); }, 800);
+      }
+    });
+
+    function finish() {
+      showModal(
+        'success',
+        'Well Done!',
+        ['You listened and responded!', '“The voice of the Lord is a voice of power.” — Psalm 29:4'],
+        'Play again'
+      );
+      if (window.parent !== window) window.parent.postMessage({ type: 'game-complete', game: 'listen_respond' }, '*');
+    }
+    renderRound();
+  </script>
+</body>
+
+</html>

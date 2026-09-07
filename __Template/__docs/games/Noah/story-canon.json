@@ -1,0 +1,79 @@
+{
+  "Noah": {
+    "title": "Noah",
+    "references": "Genesis 6–9",
+    "question": "Will faithful care persist through long preparation, crisis, and waiting?",
+    "characters": [
+      "noah",
+      "noahs_wife",
+      "shem",
+      "ham",
+      "japheth",
+      "shems_wife",
+      "hams_wife",
+      "japheths_wife",
+      "neighbour",
+      "animal_keeper"
+    ],
+    "materials": [
+      "wood_dark",
+      "water_fast",
+      "water_still",
+      "fabric_weave",
+      "stone",
+      "leaves"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Warning",
+        "game": "Accept the Ark blueprint."
+      },
+      {
+        "number": 2,
+        "title": "The Blueprint",
+        "game": "Measure the hull to the given proportions."
+      },
+      {
+        "number": 3,
+        "title": "The Long Build",
+        "game": "Gather timber, fit planks, and seal with pitch."
+      },
+      {
+        "number": 4,
+        "title": "The Gathering",
+        "game": "Pair animals and stock each pen."
+      },
+      {
+        "number": 5,
+        "title": "The Door Shuts",
+        "game": "Finish the final checks and surrender control."
+      },
+      {
+        "number": 6,
+        "title": "Forty Days",
+        "game": "Feed, calm, and clean animal pens during the storm."
+      },
+      {
+        "number": 7,
+        "title": "The Long Wait",
+        "game": "Send raven and doves at the right intervals."
+      },
+      {
+        "number": 8,
+        "title": "Dry Ground",
+        "game": "Release animals habitat by habitat."
+      },
+      {
+        "number": 9,
+        "title": "The Covenant",
+        "game": "Build the altar and reveal the rainbow."
+      },
+      {
+        "number": 10,
+        "title": "The Vineyard",
+        "game": "Witness Noah’s failure and choose how the sons respond."
+      }
+    ]
+  }
+}

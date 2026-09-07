@@ -1,0 +1,92 @@
+{
+  "David": {
+    "title": "David",
+    "references": "1 Samuel 16–31; 2 Samuel; 1 Kings 1–2",
+    "question": "What does faithful leadership do with power, failure, and repentance?",
+    "characters": [
+      "david_young",
+      "david",
+      "samuel",
+      "saul",
+      "jonathan",
+      "goliath",
+      "abigail",
+      "michal",
+      "bathsheba",
+      "nathan",
+      "absalom",
+      "solomon"
+    ],
+    "materials": [
+      "stone",
+      "grass",
+      "fabric_weave",
+      "wood_oak",
+      "wood_dark",
+      "wall_brick",
+      "water_fast"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Anointed",
+        "game": "Identify the overlooked shepherd among Jesse’s sons."
+      },
+      {
+        "number": 2,
+        "title": "Goliath",
+        "game": "Time a sling throw after refusing heavy armour."
+      },
+      {
+        "number": 3,
+        "title": "Saul’s Court",
+        "game": "Play a calming melody while watching Saul’s mood."
+      },
+      {
+        "number": 4,
+        "title": "Covenant Friends",
+        "game": "Exchange signals with Jonathan unseen."
+      },
+      {
+        "number": 5,
+        "title": "The Wilderness",
+        "game": "Escape Saul and spare him in the cave."
+      },
+      {
+        "number": 6,
+        "title": "Abigail",
+        "game": "Deliver provisions before anger becomes violence."
+      },
+      {
+        "number": 7,
+        "title": "The Throne",
+        "game": "Resolve petitions without favouritism."
+      },
+      {
+        "number": 8,
+        "title": "Bathsheba and Uriah",
+        "game": "Confront the irreversible harm rather than hiding it."
+      },
+      {
+        "number": 9,
+        "title": "Nathan’s Parable",
+        "game": "Recognise the king inside the story and repent."
+      },
+      {
+        "number": 10,
+        "title": "Absalom",
+        "game": "Navigate divided loyalties without celebrating loss."
+      },
+      {
+        "number": 11,
+        "title": "The Census",
+        "game": "Choose responsibility during the plague."
+      },
+      {
+        "number": 12,
+        "title": "Solomon",
+        "game": "Pass plans and wisdom to the next king."
+      }
+    ]
+  }
+}

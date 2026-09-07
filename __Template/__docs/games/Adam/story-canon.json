@@ -1,0 +1,75 @@
+{
+  "Adam": {
+    "title": "Adam",
+    "references": "Genesis 1–5",
+    "question": "Will humanity receive creation as a gift and accept the limits of trust?",
+    "characters": [
+      "adam",
+      "eve",
+      "cain",
+      "abel",
+      "serpent",
+      "seth"
+    ],
+    "materials": [
+      "leaves",
+      "grass",
+      "water_still",
+      "stone",
+      "wood_oak",
+      "fabric_weave"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Formed from Dust",
+        "game": "Gather the garden’s elements in creation order."
+      },
+      {
+        "number": 2,
+        "title": "The Garden",
+        "game": "Tend the garden by planting seeds and pulling weeds before they spread."
+      },
+      {
+        "number": 3,
+        "title": "Together",
+        "game": "Build a shared shelter and tend one plot together."
+      },
+      {
+        "number": 4,
+        "title": "The Boundary",
+        "game": "Navigate abundance while leaving one tree untouched."
+      },
+      {
+        "number": 5,
+        "title": "The Choice",
+        "game": "Spot the serpent’s half-truths in a dialogue puzzle."
+      },
+      {
+        "number": 6,
+        "title": "Hiding",
+        "game": "Follow footprints and admit what happened."
+      },
+      {
+        "number": 7,
+        "title": "East of Eden",
+        "game": "Pack seeds and begin cultivation outside the garden."
+      },
+      {
+        "number": 8,
+        "title": "Cain and Abel",
+        "game": "Prepare offerings with care, then cool Cain’s anger."
+      },
+      {
+        "number": 9,
+        "title": "The Field",
+        "game": "Witness consequence and mark a refuge path."
+      },
+      {
+        "number": 10,
+        "title": "A New Line",
+        "game": "Plant a family tree from Seth onward."
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "Deborah": {
+    "title": "Deborah",
+    "references": "Judges 4–5",
+    "question": "Will courage and shared leadership answer oppression?",
+    "characters": [
+      "deborah",
+      "barak",
+      "jael",
+      "sisera",
+      "jabin",
+      "israelite_scout",
+      "village_woman"
+    ],
+    "materials": [
+      "fabric_weave",
+      "wood_oak",
+      "wall_brick",
+      "stone",
+      "grass",
+      "water_fast"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Under the Palm",
+        "game": "Hear disputes and restore a fair path."
+      },
+      {
+        "number": 2,
+        "title": "The Summons",
+        "game": "Carry Deborah’s message to Barak."
+      },
+      {
+        "number": 3,
+        "title": "Gather at Tabor",
+        "game": "Rally tribes without alerting Sisera."
+      },
+      {
+        "number": 4,
+        "title": "The Storm",
+        "game": "Use the flooded ground to break the chariot advantage."
+      },
+      {
+        "number": 5,
+        "title": "Sisera Flees",
+        "game": "Track the fleeing commander to Jael’s tent."
+      },
+      {
+        "number": 6,
+        "title": "Jael’s Choice",
+        "game": "Prepare hospitality, then protect the camp."
+      },
+      {
+        "number": 7,
+        "title": "The Song",
+        "game": "Rebuild the victory song in call-and-response."
+      }
+    ]
+  }
+}

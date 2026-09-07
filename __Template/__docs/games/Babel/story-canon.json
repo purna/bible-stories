@@ -1,0 +1,66 @@
+{
+  "Babel": {
+    "title": "Babel",
+    "references": "Genesis 10–11",
+    "question": "Will people seek shared flourishing or manufacture fame and control?",
+    "characters": [
+      "nimrod",
+      "builder",
+      "brickmaker",
+      "city_elder",
+      "traveller",
+      "mother",
+      "child"
+    ],
+    "materials": [
+      "egypt_mud_brick",
+      "wall_brick",
+      "stone",
+      "wood_dark",
+      "fabric_weave",
+      "desert_sand"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "One Language",
+        "game": "Coordinate a village task with shared symbols."
+      },
+      {
+        "number": 2,
+        "title": "The Plain",
+        "game": "Choose a safe settlement site."
+      },
+      {
+        "number": 3,
+        "title": "Bake the Bricks",
+        "game": "Mix and fire bricks to the right strength."
+      },
+      {
+        "number": 4,
+        "title": "A Name for Ourselves",
+        "game": "Sort motives behind the tower plan."
+      },
+      {
+        "number": 5,
+        "title": "The Tower Rises",
+        "game": "Balance height, safety, and care for workers."
+      },
+      {
+        "number": 6,
+        "title": "Confusion",
+        "game": "Communicate using gesture and visual clues."
+      },
+      {
+        "number": 7,
+        "title": "Scattered",
+        "game": "Guide families toward different horizons."
+      },
+      {
+        "number": 8,
+        "title": "Nations",
+        "game": "Complete a map mosaic celebrating many peoples."
+      }
+    ]
+  }
+}

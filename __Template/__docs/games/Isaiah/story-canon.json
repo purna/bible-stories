@@ -1,0 +1,73 @@
+{
+  "Isaiah": {
+    "title": "Isaiah",
+    "references": "Isaiah 1–66",
+    "question": "How can holy vision produce truthful warning and durable hope?",
+    "characters": [
+      "isaiah",
+      "uzziah",
+      "ahaz",
+      "hezekiah",
+      "shear_jashub",
+      "mahershalalhashbaz",
+      "seraph",
+      "royal_envoy",
+      "sennacherib"
+    ],
+    "materials": [
+      "stone",
+      "wall_brick",
+      "hammered_gold",
+      "fabric_weave",
+      "desert_sand",
+      "water_still"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "A City in Need",
+        "game": "Identify worship separated from justice."
+      },
+      {
+        "number": 2,
+        "title": "The Holy Throne",
+        "game": "Navigate the temple vision and answer the call."
+      },
+      {
+        "number": 3,
+        "title": "The Vineyard Song",
+        "game": "Tend a vineyard that yields injustice."
+      },
+      {
+        "number": 4,
+        "title": "Immanuel Sign",
+        "game": "Carry hope to fearful King Ahaz."
+      },
+      {
+        "number": 5,
+        "title": "The Assyrian Shadow",
+        "game": "Map the advancing empire and the surviving stump."
+      },
+      {
+        "number": 6,
+        "title": "Hezekiah’s Crisis",
+        "game": "Bring the threatening letter into prayer."
+      },
+      {
+        "number": 7,
+        "title": "Comfort My People",
+        "game": "Build a road of return through the wilderness."
+      },
+      {
+        "number": 8,
+        "title": "The Servant",
+        "game": "Match suffering, justice, and healing motifs."
+      },
+      {
+        "number": 9,
+        "title": "New Creation",
+        "game": "Restore a city garden where all can flourish."
+      }
+    ]
+  }
+}

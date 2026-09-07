@@ -11,8 +11,11 @@
     .story { margin: 22px 0; }
     .story h2 { font-size: 20px; margin: 0 0 8px; }
     .games { display: flex; flex-wrap: wrap; gap: 10px; }
-    .games a { display: inline-block; padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; text-decoration: none; color: #1155cc; background: #f7f9ff; }
-    .games a:hover { background: #eef4ff; }
+    .game-item { display: flex; flex-direction: column; gap: 4px; }
+    .game-item a { display: inline-block; padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; text-decoration: none; color: #1155cc; background: #f7f9ff; }
+    .game-item a:hover { background: #eef4ff; }
+    .game-desc { font-size: 12px; color: #555; padding: 0 4px; max-width: 260px; }
+    .error { color: #b00000; }
   </style>
 </head>
 <body>
@@ -20,40 +23,93 @@
   <p class="summary">Browse example game pages by story.</p>
   <div id="content">Loading...</div>
   <script>
+    const GAME_PLAN_DESCRIPTIONS = {"Abraham":[{"chapter":"The Call","objective":"Follow the road markers out of Haran."},{"chapter":"Egypt and Return","objective":"Choose honest repairs after a fearful mistake."},{"chapter":"Lot Chooses","objective":"Survey the land and give Lot first choice."},{"chapter":"Rescue of Lot","objective":"Plan a fast night rescue without taking spoil."},{"chapter":"Covenant Stars","objective":"Trace the promised constellation."},{"chapter":"Hagar in the Wilderness","objective":"Find water and listen before acting."},{"chapter":"The Visitors","objective":"Prepare hospitality before the guests depart."},{"chapter":"Sodom and Gomorrah","objective":"Guide Lot’s household away without looking back."},{"chapter":"Isaac Is Born","objective":"Assemble a celebration tent."},{"chapter":"Moriah","objective":"Climb, gather wood, and respond to the provided ram."}],"Adam":[{"chapter":"Formed from Dust","objective":"Gather the garden’s elements in creation order."},{"chapter":"The Garden","objective":"Tend the garden by planting seeds and pulling weeds before they spread."},{"chapter":"Together","objective":"Build a shared shelter and tend one plot together."},{"chapter":"The Boundary","objective":"Navigate abundance while leaving one tree untouched."},{"chapter":"The Choice","objective":"Spot the serpent’s half-truths in a dialogue puzzle."},{"chapter":"Hiding","objective":"Follow footprints and admit what happened."},{"chapter":"East of Eden","objective":"Pack seeds and begin cultivation outside the garden."},{"chapter":"Cain and Abel","objective":"Prepare offerings with care, then cool Cain’s anger."},{"chapter":"The Field","objective":"Witness consequence and mark a refuge path."},{"chapter":"A New Line","objective":"Plant a family tree from Seth onward."}],"Babel":[{"chapter":"One Language","objective":"Coordinate a village task with shared symbols."},{"chapter":"The Plain","objective":"Choose a safe settlement site."},{"chapter":"Bake the Bricks","objective":"Mix and fire bricks to the right strength."},{"chapter":"A Name for Ourselves","objective":"Sort motives behind the tower plan."},{"chapter":"The Tower Rises","objective":"Balance height, safety, and care for workers."},{"chapter":"Confusion","objective":"Communicate using gesture and visual clues."},{"chapter":"Scattered","objective":"Guide families toward different horizons."},{"chapter":"Nations","objective":"Complete a map mosaic celebrating many peoples."}],"Daniel":[{"chapter":"Exile and the Table","objective":"Build a respectful ten-day food test."},{"chapter":"The Great Statue","objective":"Reassemble the dream and its meaning."},{"chapter":"The Furnace","objective":"Keep the three friends together through the fire maze."},{"chapter":"The Proud King","objective":"Tend the humbled king until his reason returns."},{"chapter":"Writing on the Wall","objective":"Match the mysterious words to their warning."},{"chapter":"The Lions’ Den","objective":"Maintain Daniel’s prayer rhythm despite the decree."},{"chapter":"Four Beasts","objective":"Identify symbols without attacking the vision."},{"chapter":"The Ram and Goat","objective":"Track the vision’s movements on a map."},{"chapter":"Seventy Weeks","objective":"Order prayer, confession, and hope."},{"chapter":"Final Vision","objective":"Carry the sealed message to the riverbank."}],"David":[{"chapter":"Anointed","objective":"Identify the overlooked shepherd among Jesse’s sons."},{"chapter":"Goliath","objective":"Time a sling throw after refusing heavy armour."},{"chapter":"Saul’s Court","objective":"Play a calming melody while watching Saul’s mood."},{"chapter":"Covenant Friends","objective":"Exchange signals with Jonathan unseen."},{"chapter":"The Wilderness","objective":"Escape Saul and spare him in the cave."},{"chapter":"Abigail","objective":"Deliver provisions before anger becomes violence."},{"chapter":"The Throne","objective":"Resolve petitions without favouritism."},{"chapter":"Bathsheba and Uriah","objective":"Confront the irreversible harm rather than hiding it."},{"chapter":"Nathan’s Parable","objective":"Recognise the king inside the story and repent."},{"chapter":"Absalom","objective":"Navigate divided loyalties without celebrating loss."},{"chapter":"The Census","objective":"Choose responsibility during the plague."},{"chapter":"Solomon","objective":"Pass plans and wisdom to the next king."}],"Deborah":[{"chapter":"Under the Palm","objective":"Hear disputes and restore a fair path."},{"chapter":"The Summons","objective":"Carry Deborah’s message to Barak."},{"chapter":"Gather at Tabor","objective":"Rally tribes without alerting Sisera."},{"chapter":"The Storm","objective":"Use the flooded ground to break the chariot advantage."},{"chapter":"Sisera Flees","objective":"Track the fleeing commander to Jael’s tent."},{"chapter":"Jael’s Choice","objective":"Prepare hospitality, then protect the camp."},{"chapter":"The Song","objective":"Rebuild the victory song in call-and-response."}],"Eiljah":[{"chapter":"The Drought","objective":"Follow ravens to daily bread by the brook."},{"chapter":"The Widow’s Jar","objective":"Measure flour and oil without exhausting either."},{"chapter":"The Child Restored","objective":"Carry the child upstairs and persist in prayer."},{"chapter":"Mount Carmel","objective":"Repair the altar with twelve stones."},{"chapter":"The Rain Returns","objective":"Spot the small cloud and race from the storm."},{"chapter":"Under the Broom Tree","objective":"Rest, eat, and accept care before travelling."},{"chapter":"The Quiet Voice","objective":"Distinguish wind, quake, fire, and quiet."},{"chapter":"Naboth’s Vineyard","objective":"Expose the false testimony behind the seizure."},{"chapter":"Chariots of Fire","objective":"Cross the Jordan and pass the mantle to Elisha."}],"Elisha":[{"chapter":"The Mantle","objective":"Leave the plough and follow Elijah."},{"chapter":"The Jordan","objective":"Strike the water and cross."},{"chapter":"The Widow’s Oil","objective":"Collect jars and pour without waste."},{"chapter":"The Shunammite Room","objective":"Arrange a simple guest room."},{"chapter":"The Child","objective":"Climb to the room and persist in care."},{"chapter":"Naaman","objective":"Guide the commander through seven Jordan immersions."},{"chapter":"The Floating Axe","objective":"Mark where the borrowed iron fell."},{"chapter":"The Unseen Army","objective":"Reveal protection around the frightened servant."},{"chapter":"A Blind Feast","objective":"Lead enemies safely to a meal instead of an ambush."}],"Enoch":[{"chapter":"A Family Record","objective":"Place Enoch correctly in the generations."},{"chapter":"The First Walk","objective":"Choose a daily route that serves neighbours."},{"chapter":"A Son Named Methuselah","objective":"Prepare the home for a new child."},{"chapter":"Years of Faithfulness","objective":"Complete repeated small acts without a fame meter."},{"chapter":"A Warning","objective":"Deliver a hard truth without cruelty."},{"chapter":"Walking with God","objective":"Follow a quiet path as the landscape changes."},{"chapter":"Taken","objective":"Let go of the route and enter the final light."}],"Esther":[{"chapter":"The Banquet","objective":"Navigate the palace feast and hear Vashti’s refusal."},{"chapter":"A New Queen","objective":"Prepare Esther while protecting her identity."},{"chapter":"The Gate Plot","objective":"Carry Mordecai’s warning into the royal record."},{"chapter":"Haman’s Decree","objective":"Trace the decree as it spreads across the empire."},{"chapter":"For Such a Time","objective":"Fast, gather courage, and approach the throne."},{"chapter":"The First Banquet","objective":"Invite the king and Haman without revealing too soon."},{"chapter":"The Sleepless Night","objective":"Find Mordecai’s forgotten service in the chronicles."},{"chapter":"The Second Banquet","objective":"Name the threat clearly at the decisive moment."},{"chapter":"A New Decree","objective":"Send defensive orders before the deadline."},{"chapter":"Purim","objective":"Assemble gifts, food, and remembrance for every district."}],"Hannah":[{"chapter":"The Journey to Shiloh","objective":"Gather the household for the annual worship journey."},{"chapter":"At the Table","objective":"Navigate hurt without retaliating."},{"chapter":"Silent Prayer","objective":"Form Hannah’s prayer from honest fragments."},{"chapter":"Misunderstood","objective":"Explain quiet prayer to Eli."},{"chapter":"Remembered","objective":"Prepare for Samuel’s birth."},{"chapter":"The Little Robe","objective":"Weave and size a yearly robe."},{"chapter":"Given Back","objective":"Bring Samuel to serve at Shiloh."},{"chapter":"Hannah’s Song","objective":"Arrange lines of reversal and hope."}],"Isaiah":[{"chapter":"A City in Need","objective":"Identify worship separated from justice."},{"chapter":"The Holy Throne","objective":"Navigate the temple vision and answer the call."},{"chapter":"The Vineyard Song","objective":"Tend a vineyard that yields injustice."},{"chapter":"Immanuel Sign","objective":"Carry hope to fearful King Ahaz."},{"chapter":"The Assyrian Shadow","objective":"Map the advancing empire and the surviving stump."},{"chapter":"Hezekiah’s Crisis","objective":"Bring the threatening letter into prayer."},{"chapter":"Comfort My People","objective":"Build a road of return through the wilderness."},{"chapter":"The Servant","objective":"Match suffering, justice, and healing motifs."},{"chapter":"New Creation","objective":"Restore a city garden where all can flourish."}],"Jacob":[{"chapter":"The Birthright","objective":"Weigh hunger against a lasting inheritance."},{"chapter":"The Stolen Blessing","objective":"Assemble the disguise, then witness its cost."},{"chapter":"Bethel","objective":"Build the stone pillar after the ladder dream."},{"chapter":"Rachel at the Well","objective":"Move the stone and water the flock."},{"chapter":"Laban’s Bargain","objective":"Track changing wages and wedding promises."},{"chapter":"The Flocks","objective":"Sort speckled and spotted animals fairly."},{"chapter":"Leaving Haran","objective":"Pack the camp before Laban catches up."},{"chapter":"The Night Wrestling","objective":"Hold on through the night and receive a new name."},{"chapter":"Meeting Esau","objective":"Arrange gifts, then step forward unarmed."},{"chapter":"Joseph’s Coats","objective":"Recognise favouritism forming in the household."}],"Jeremiah":[{"chapter":"The Call","objective":"Touch the right words to the young prophet’s mouth."},{"chapter":"The Almond Branch","objective":"Spot signs that God is watching over the word."},{"chapter":"At the Temple Gate","objective":"Separate ritual confidence from justice."},{"chapter":"The Scroll","objective":"Dictate to Baruch and rebuild the burned scroll."},{"chapter":"The Potter","objective":"Reshape the clay while it remains workable."},{"chapter":"The Yoke","objective":"Carry the warning despite Hananiah’s easy promise."},{"chapter":"The Cistern","objective":"Coordinate Ebed-melech’s rope rescue."},{"chapter":"Buy the Field","objective":"Complete a land purchase while siege closes in."},{"chapter":"The Fall of Jerusalem","objective":"Guide survivors through the breached city."},{"chapter":"Lament and Hope","objective":"Pair grief lines with stubborn hope."}],"Job":[{"chapter":"A Blameless Life","objective":"Tend Job’s household and practice generous justice."},{"chapter":"The Accuser","objective":"Observe the heavenly challenge without controlling it."},{"chapter":"Loss upon Loss","objective":"Receive each messenger and sit with the silence."},{"chapter":"Seven Days","objective":"Keep vigil without offering explanations."},{"chapter":"Job Speaks","objective":"Build an honest lament from grief and protest."},{"chapter":"The Friends","objective":"Identify when counsel becomes accusation."},{"chapter":"Elihu","objective":"Listen, test claims, and resist easy scoring."},{"chapter":"Out of the Whirlwind","objective":"Explore questions about creation."},{"chapter":"Job Responds","objective":"Release the demand to master every answer."},{"chapter":"Restoration","objective":"Rebuild community without treating new gifts as replacements."}],"Jonah":[{"chapter":"Run to the Sea","objective":"Choose cargo and board the ship going the wrong way."},{"chapter":"The Storm","objective":"Secure the deck and uncover Jonah’s flight."},{"chapter":"Into the Deep","objective":"Navigate sinking currents toward the great fish."},{"chapter":"Prayer Below","objective":"Reassemble Jonah’s prayer from psalm fragments."},{"chapter":"Second Call","objective":"Walk the road to Nineveh."},{"chapter":"The Warning","objective":"Deliver the short message through the great city."},{"chapter":"Nineveh Repents","objective":"Coordinate fasting from palace to livestock."},{"chapter":"The Plant","objective":"Manage shade, worm, and hot wind."},{"chapter":"The Question","objective":"Compare Jonah’s pity for a plant with God’s pity for a city."}],"Joseph":[{"chapter":"The Coloured Robe","objective":"Assemble the robe and notice the family tension."},{"chapter":"Dreams and the Pit","objective":"Order the dreams, then find a path through betrayal."},{"chapter":"Potiphar’s House","objective":"Manage the household with integrity."},{"chapter":"The Prison","objective":"Care for prisoners and interpret two dreams."},{"chapter":"Pharaoh’s Dreams","objective":"Pair cows and grain with seven-year cycles."},{"chapter":"Storehouses","objective":"Plan grain reserves across Egypt."},{"chapter":"The Brothers Arrive","objective":"Test recognition while distributing food."},{"chapter":"Benjamin’s Cup","objective":"Trace the hidden cup and Judah’s offer."},{"chapter":"Revealed","objective":"Choose the moment Joseph names himself."},{"chapter":"Goshen","objective":"Settle the family and preserve the famine record."}],"Joshua":[{"chapter":"Be Strong","objective":"Meditate on the instruction before crossing."},{"chapter":"Rahab and the Spies","objective":"Hide the scouts and mark the scarlet cord."},{"chapter":"Crossing Jordan","objective":"Carry twelve memorial stones from the riverbed."},{"chapter":"Jericho","objective":"March the pattern, sound the trumpets, protect Rahab."},{"chapter":"Achan’s Hidden Goods","objective":"Trace the community’s loss to the buried objects."},{"chapter":"Ai","objective":"Set the ambush without repeating earlier presumption."},{"chapter":"The Gibeonites","objective":"Inspect the worn supplies and face a rushed oath."},{"chapter":"The Long Campaign","objective":"Resolve territory challenges without spectacle."},{"chapter":"Allot the Land","objective":"Distribute inheritance among tribes."},{"chapter":"Choose This Day","objective":"Place household stones beside the covenant witness."}],"Moses":[{"chapter":"The Child in the River","objective":"Guide the basket through reeds while Miriam keeps watch."},{"chapter":"The Burning Bush","objective":"Herd sheep, approach the fire, and answer the call."},{"chapter":"Before the Throne","objective":"Match signs and warnings to each audience."},{"chapter":"Passover Night","objective":"Prepare the meal and mark the doorway before departure."},{"chapter":"Through the Sea","objective":"Keep the people moving along the opened path."},{"chapter":"Bread in the Wilderness","objective":"Gather only enough manna for the day."},{"chapter":"Sinai","objective":"Arrange the camp and carry the covenant words."},{"chapter":"The Golden Calf","objective":"Confront the idol and intercede for the people."},{"chapter":"Forty Years","objective":"Navigate a provision-and-trust journey map."},{"chapter":"Mount Nebo","objective":"Appoint Joshua and identify the land from afar."}],"Nehemiah":[{"chapter":"Bad News","objective":"Map Jerusalem’s broken gates while Nehemiah prays."},{"chapter":"Before the King","objective":"Choose a clear request and realistic resources."},{"chapter":"Night Inspection","objective":"Survey ruined walls without alerting opponents."},{"chapter":"Rise and Build","objective":"Assign families to adjacent wall sections."},{"chapter":"Sword and Trowel","objective":"Balance guarding with construction."},{"chapter":"The Outcry","objective":"Cancel exploitative debts and restore fields."},{"chapter":"Plots and Rumours","objective":"Recognise distractions designed to stop the work."},{"chapter":"The Wall Completed","objective":"Close the final gap and set gatekeepers."},{"chapter":"The Book Read","objective":"Rebuild the platform and help the people understand."},{"chapter":"Reform","objective":"Inspect storerooms and restore shared commitments."}],"Noah":[{"chapter":"The Warning","objective":"Accept the Ark blueprint."},{"chapter":"The Blueprint","objective":"Measure the hull to the given proportions."},{"chapter":"The Long Build","objective":"Gather timber, fit planks, and seal with pitch."},{"chapter":"The Gathering","objective":"Pair animals and stock each pen."},{"chapter":"The Door Shuts","objective":"Finish the final checks and surrender control."},{"chapter":"Forty Days","objective":"Feed, calm, and clean animal pens during the storm."},{"chapter":"The Long Wait","objective":"Send raven and doves at the right intervals."},{"chapter":"Dry Ground","objective":"Release animals habitat by habitat."},{"chapter":"The Covenant","objective":"Build the altar and reveal the rainbow."},{"chapter":"The Vineyard","objective":"Witness Noah’s failure and choose how the sons respond."}],"Ruth":[{"chapter":"Leaving Moab","objective":"Pack lightly and choose whether to accompany Naomi."},{"chapter":"Your People","objective":"Follow the road to Bethlehem together."},{"chapter":"Gleaning","objective":"Collect only grain left for gleaners."},{"chapter":"Boaz Notices","objective":"Deliver water and protection instructions to the workers."},{"chapter":"At the Threshing Floor","objective":"Follow Naomi’s plan with restraint and clarity."},{"chapter":"At the Gate","objective":"Arrange witnesses and present the redemption choice."},{"chapter":"Redeemed","objective":"Transfer the sandal and join the households."},{"chapter":"Obed","objective":"Build the family line toward David."}],"Samuel":[{"chapter":"The Boy at Shiloh","objective":"Complete temple tasks beside Eli."},{"chapter":"The Voice at Night","objective":"Listen three times and answer correctly."},{"chapter":"A Hard Message","objective":"Tell Eli the whole message without embellishment."},{"chapter":"The Ark Captured","objective":"Track the cost of treating the Ark like a charm."},{"chapter":"Ebenezer","objective":"Raise a memorial stone after deliverance."},{"chapter":"A King Demanded","objective":"Hear the elders and explain the tradeoffs."},{"chapter":"Saul Chosen","objective":"Find Saul among the baggage."},{"chapter":"Saul’s First Victory","objective":"Rally the people and refuse revenge."},{"chapter":"The Rejected King","objective":"Compare obedience with impressive sacrifice."},{"chapter":"David Anointed","objective":"Look past height and choose the shepherd son."}]};
+    function esc(str) {
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
     async function init() {
-      const manifest = await fetch('manifest.json').then(r => r.json());
-      const byStory = {};
-      for (const file of manifest.files) {
-        const parts = file.split('/');
-        const story = parts[0];
-        const act = parts[parts.length - 1].replace('.html', '');
-        byStory[story] = byStory[story] || [];
-        byStory[story].push({ name: act, href: file });
-      }
       const container = document.getElementById('content');
-      container.innerHTML = '';
-      for (const [story, acts] of Object.entries(byStory)) {
-        const section = document.createElement('div');
-        section.className = 'story';
-        const title = document.createElement('h2');
-        title.textContent = story;
-        section.appendChild(title);
-        const games = document.createElement('div');
-        games.className = 'games';
-        for (const act of acts) {
-          const a = document.createElement('a');
-          a.href = act.href;
-          a.textContent = act.name;
-          games.appendChild(a);
+      try {
+        const manifest = await fetch('manifest.json').then(r => r.json());
+        const files = Array.isArray(manifest.files) ? manifest.files : [];
+        const byStory = {};
+        for (const file of files) {
+          const parts = file.split('/');
+          const story = parts[0];
+          const actFile = parts[parts.length - 1];
+          const actMatch = actFile.match(/act(\d+)\.html$/);
+          const act = actMatch ? parseInt(actMatch[1], 10) : null;
+          byStory[story] = byStory[story] || [];
+          byStory[story].push({ act, file });
         }
-        section.appendChild(games);
-        container.appendChild(section);
+        const stories = Object.keys(byStory).sort();
+        container.innerHTML = '';
+        for (const story of stories) {
+          const acts = byStory[story].filter(x => x.act !== null).sort((a, b) => a.act - b.act);
+          if (!acts.length) continue;
+          const canonPath = story + '/story-canon.json';
+          let canonChapters = [];
+          try {
+            const canon = await fetch(canonPath).then(r => r.json());
+            const chapters = Array.isArray(canon.chapters) ? canon.chapters : [];
+            canonChapters = chapters.map((ch, idx) => ({
+              act: idx + 1,
+              chapter: ch.chapter || ('Act ' + (idx + 1))
+            }));
+          } catch {
+            canonChapters = acts.map((a, idx) => ({ act: a.act, chapter: 'Act ' + a.act }));
+          }
+          const chapterByAct = Object.fromEntries(canonChapters.map(c => [String(c.act), c.chapter]));
+          const planChapters = (GAME_PLAN_DESCRIPTIONS[story] || []).reduce((acc, ch) => {
+            acc[String(ch.chapter)] = ch.objective;
+            return acc;
+          }, {});
+          const manifestActs = (manifest.games || [])
+            .filter(g => g.story === story)
+            .reduce((acc, g) => {
+              acc[String(g.act)] = g;
+              return acc;
+            }, {});
+          const section = document.createElement('div');
+          section.className = 'story';
+          const title = document.createElement('h2');
+          title.textContent = story;
+          section.appendChild(title);
+          const games = document.createElement('div');
+          games.className = 'games';
+          for (const a of acts) {
+            const item = document.createElement('div');
+            item.className = 'game-item';
+            const link = document.createElement('a');
+            link.href = a.file;
+            const chapterName = chapterByAct[String(a.act)] || ('Act ' + a.act);
+            link.textContent = 'Act ' + a.act + ' — ' + esc(chapterName);
+            item.appendChild(link);
+            const note = planChapters[chapterName];
+            const objective = (manifestActs[String(a.act)] || {}).objective;
+            const parts = [];
+            if (note) parts.push('Note: ' + note);
+            if (objective) parts.push('Objective: ' + objective);
+            if (parts.length) {
+              const descEl = document.createElement('div');
+              descEl.className = 'game-desc';
+              descEl.textContent = parts.join(' | ');
+              item.appendChild(descEl);
+            }
+            games.appendChild(item);
+          }
+          section.appendChild(games);
+          container.appendChild(section);
+        }
+        if (!container.children.length) {
+          container.innerHTML = '<p>No story games found.</p>';
+        }
+      } catch (err) {
+        container.innerHTML = '<p class=\"error\">Failed to load games index.</p>';
+        console.error(err);
       }
     }
-    init().catch(err => {
-      document.getElementById('content').textContent = 'Failed to load games index.';
-      console.error(err);
-    });
+    init();
   </script>
 </body>
 </html>

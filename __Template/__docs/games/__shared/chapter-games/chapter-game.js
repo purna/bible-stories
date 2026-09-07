@@ -1,65 +1,77 @@
-(async () => {
+(() => {
   'use strict';
-
   const script = document.currentScript;
-  const storyName = script.dataset.story;
-  const actNumber = Number(script.dataset.act);
-  const canonUrl = new URL('../../story-canon.json', script.src);
-
-  let canon;
-  try {
-    const response = await fetch(canonUrl);
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    canon = await response.json();
-  } catch (error) {
-    document.body.innerHTML = `<main class="error"><h1>Game data unavailable</h1><p>Serve this folder from a local web server so the game can load <code>story-canon.json</code>.</p></main>`;
-    return;
-  }
-
-  const story = canon[storyName];
-  const chapter = story?.chapters?.find((item) => item.number === actNumber);
-  if (!story || !chapter) {
-    document.body.innerHTML = '<main class="error"><h1>Chapter not found</h1></main>';
-    return;
-  }
-
-  document.title = `${story.title} — ${chapter.title}`;
-  document.head.insertAdjacentHTML('beforeend', `<style>
-    :root{color-scheme:dark;font-family:Inter,ui-rounded,system-ui,sans-serif;background:#101b2b;color:#fff}
-    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at top,#264467,#101b2b 60%);padding:24px}
-    main{width:min(720px,100%);background:#172a42;border:1px solid #ffffff2b;border-radius:24px;padding:clamp(24px,5vw,48px);box-shadow:0 24px 80px #0008}
-    .eyebrow{color:#ffd978;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.question{color:#c9d8ea}.mission{font-size:clamp(1.15rem,3vw,1.5rem);line-height:1.5;background:#0d1a2c;padding:20px;border-radius:16px;border-left:5px solid #ffd978}
-    .steps{display:grid;gap:12px;margin:26px 0}.step{display:flex;gap:12px;align-items:center;width:100%;padding:16px;text-align:left;border:1px solid #ffffff26;border-radius:14px;background:#213b5d;color:#fff;font:inherit;cursor:pointer}.step:hover{background:#294a73}.step.done{background:#244f3b;border-color:#6ee7a8}.step span{display:grid;place-items:center;width:28px;height:28px;border:2px solid currentColor;border-radius:50%;flex:none}
-    .progress{height:10px;background:#0b1727;border-radius:99px;overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,#ffd978,#6ee7a8);transition:width .25s}button.finish{width:100%;margin-top:22px;padding:15px;border:0;border-radius:999px;background:#ffd978;color:#15243a;font-weight:900;font-size:1rem;cursor:pointer}button.finish:disabled{opacity:.4;cursor:not-allowed}.complete{text-align:center}.complete h2{font-size:2rem;color:#ffd978}
-    code{color:#ffd978}.error{max-width:620px}
-  </style>`);
-
-  const actions = ['Observe the scene and identify what matters.', 'Make the faithful choice described by the mission.', 'Complete the challenge and reflect on the outcome.'];
-  document.body.innerHTML = `<main>
-    <div class="eyebrow">${story.title} · Act ${actNumber}</div>
-    <h1>${chapter.title}</h1>
-    <p class="question">${story.question}</p>
-    <p class="mission"><strong>Your mission:</strong> ${chapter.game}</p>
-    <div class="progress" aria-label="Progress"><div class="bar"></div></div>
-    <div class="steps">${actions.map((label, index) => `<button class="step" data-step="${index}"><span>${index + 1}</span>${label}</button>`).join('')}</div>
-    <button class="finish" disabled>Complete chapter</button>
-  </main>`;
-
-  const steps = [...document.querySelectorAll('.step')];
-  const finish = document.querySelector('.finish');
-  const bar = document.querySelector('.bar');
-  const update = () => {
-    const done = steps.filter((step) => step.classList.contains('done')).length;
-    bar.style.width = `${(done / steps.length) * 100}%`;
-    finish.disabled = done !== steps.length;
+  const storyKey = script.dataset.story;
+  const act = Number(script.dataset.act || 1);
+  const engineId = script.dataset.engine;
+  const engines = {
+    'find-path': { name: 'Find the Faithful Path', file: 'find_path_6x6.html' },
+    'listen-respond': { name: 'Listen and Respond', file: 'listen_respond_3x2.html' },
+    'tend-garden': { name: 'Tend the Garden', file: 'garde_game_3x3.html' },
+    'fit-pieces': { name: 'Fit the Pieces', file: 'fit_pieces_3x3.html' },
+    'look-closely': { name: 'Look Closely', file: 'look_closely_3x3.html' },
+    'tap-sequence': { name: 'Complete the Story Beat', file: 'tap_sequence_3x2.html' },
+    'match-it-up': { name: 'Match It Up', file: 'match_it_up_3x4.html' },
+    'keep-balance': { name: 'Keep the Balance', file: 'keep_balance_x3.html' },
+    'ready-then-act': { name: 'Ready, Then Act', file: 'ready_then_act_multibar_balanced.html' },
+    'watch-and-move': { name: 'Watch and Move', file: 'watch_move_river_crossing_easy.html' },
+    'gather-with-care': { name: 'Gather with Care', file: 'manna_drop.html' },
+    'story-builder': { name: 'Build the Scene', file: 'temple_builder_v1.html' }
   };
-  steps.forEach((step) => step.addEventListener('click', () => {
-    step.classList.toggle('done');
-    update();
-  }));
-  finish.addEventListener('click', () => {
-    document.querySelector('main').innerHTML = `<section class="complete"><div class="eyebrow">Chapter complete</div><h2>${chapter.title}</h2><p>${chapter.game}</p></section>`;
-    window.parent.postMessage({ type: 'bible-story-game-complete', story: storyName, act: actNumber }, '*');
-    window.dispatchEvent(new CustomEvent('bible-story-game-complete', { detail: { story: storyName, act: actNumber } }));
+  const engine = engines[engineId] || engines['tap-sequence'];
+  const escapeHtml = value => String(value ?? '').replace(/[&<>"]/g, character => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'
+  })[character]);
+
+  const style = document.createElement('style');
+  style.textContent = `
+    :root{font-family:Inter,ui-rounded,system-ui,-apple-system,sans-serif;color:#30251b;background:#ead9c1}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at top,#fff8ea,#e2ceb1);padding:16px}
+    main{width:min(1000px,100%);margin:auto;background:#fffaf0;border:2px solid #d1b58e;border-radius:24px;overflow:hidden;box-shadow:0 18px 56px #54371729}
+    header{padding:18px 22px 16px}.eyebrow{color:#87512f;font-size:.76rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+    h1{margin:.25rem 0;font-size:clamp(1.55rem,4vw,2.45rem)}.objective{margin:.4rem 0 0;color:#55493e;font-size:1.05rem;line-height:1.4}
+    .engine{display:flex;align-items:center;gap:10px;padding:10px 22px;background:#f1e5d4;color:#66584a;font-weight:850}.engine:before{content:'';width:10px;height:10px;border-radius:50%;background:#3d8159}
+    iframe{display:block;width:100%;height:min(620px,70vh);min-height:460px;border:0;background:#fff}.error{padding:36px;text-align:center}
+    @media(max-width:600px){body{padding:0}main{border:0;border-radius:0}header{padding:14px 16px}.engine{padding:9px 16px}iframe{height:68vh;min-height:430px}}
+  `;
+  document.head.appendChild(style);
+
+  function mount(story, chapter) {
+    document.title = `${story.title} — Act ${act}: ${chapter.title}`;
+    document.body.innerHTML = `<main>
+      <header>
+        <div class="eyebrow">${escapeHtml(story.title)} · Act ${act}</div>
+        <h1>${escapeHtml(chapter.title)}</h1>
+        <p class="objective">${escapeHtml(chapter.game)}</p>
+      </header>
+      <div class="engine">${escapeHtml(engine.name)}</div>
+      <iframe title="${escapeHtml(engine.name)}: ${escapeHtml(chapter.title)}" src="../../../__shared/chapter-games/engines/${engine.file}"></iframe>
+    </main>`;
+  }
+
+  let completed = false;
+  window.addEventListener('message', event => {
+    const frame = document.querySelector('iframe');
+    if (!frame || event.source !== frame.contentWindow || completed) return;
+    if (event.data?.type !== 'game-complete' && event.data?.type !== 'bible-story-game-complete') return;
+    completed = true;
+    const detail = { story: storyKey, act, mechanic: engineId };
+    try { localStorage.setItem(`bible-game:${storyKey}:${act}`, 'complete'); } catch {}
+    window.dispatchEvent(new CustomEvent('game-complete', { detail }));
+    window.dispatchEvent(new CustomEvent('bible-story-game-complete', { detail }));
+    if (window.parent !== window) window.parent.postMessage({ type: 'bible-story-game-complete', ...detail }, '*');
   });
+
+  fetch('../../story-canon.json')
+    .then(response => { if (!response.ok) throw Error(`HTTP ${response.status}`); return response.json(); })
+    .then(canon => {
+      const story = canon[storyKey];
+      if (!story) throw Error('Story not found');
+      const chapter = story.chapters.find(item => Number(item.number) === act);
+      if (!chapter) throw Error('Act not found');
+      mount(story, chapter);
+    })
+    .catch(error => {
+      document.body.innerHTML = `<main class="error"><h1>Game data unavailable</h1><p>Serve this package over HTTP so the story-level <code>story-canon.json</code> can load.</p><p>${escapeHtml(error.message)}</p></main>`;
+    });
 })();

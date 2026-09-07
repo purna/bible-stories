@@ -1,0 +1,77 @@
+{
+  "Esther": {
+    "title": "Esther",
+    "references": "Esther 1–10",
+    "question": "Will hidden identity become courageous advocacy at the right moment?",
+    "characters": [
+      "esther",
+      "mordecai",
+      "ahasuerus",
+      "vashti",
+      "haman",
+      "zeresh",
+      "hathach",
+      "palace_guard"
+    ],
+    "materials": [
+      "mosaic",
+      "hammered_gold",
+      "fabric_weave",
+      "fabric_dots",
+      "stone",
+      "wood_dark"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Banquet",
+        "game": "Navigate the palace feast and hear Vashti’s refusal."
+      },
+      {
+        "number": 2,
+        "title": "A New Queen",
+        "game": "Prepare Esther while protecting her identity."
+      },
+      {
+        "number": 3,
+        "title": "The Gate Plot",
+        "game": "Carry Mordecai’s warning into the royal record."
+      },
+      {
+        "number": 4,
+        "title": "Haman’s Decree",
+        "game": "Trace the decree as it spreads across the empire."
+      },
+      {
+        "number": 5,
+        "title": "For Such a Time",
+        "game": "Fast, gather courage, and approach the throne."
+      },
+      {
+        "number": 6,
+        "title": "The First Banquet",
+        "game": "Invite the king and Haman without revealing too soon."
+      },
+      {
+        "number": 7,
+        "title": "The Sleepless Night",
+        "game": "Find Mordecai’s forgotten service in the chronicles."
+      },
+      {
+        "number": 8,
+        "title": "The Second Banquet",
+        "game": "Name the threat clearly at the decisive moment."
+      },
+      {
+        "number": 9,
+        "title": "A New Decree",
+        "game": "Send defensive orders before the deadline."
+      },
+      {
+        "number": 10,
+        "title": "Purim",
+        "game": "Assemble gifts, food, and remembrance for every district."
+      }
+    ]
+  }
+}

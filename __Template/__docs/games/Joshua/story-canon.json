@@ -1,0 +1,77 @@
+{
+  "Joshua": {
+    "title": "Joshua",
+    "references": "Joshua 1–24",
+    "question": "Will courage remain rooted in instruction rather than conquest for its own sake?",
+    "characters": [
+      "joshua",
+      "caleb",
+      "rahab",
+      "achan",
+      "eleazar",
+      "israelite_scout",
+      "gibeonite",
+      "tribal_leader"
+    ],
+    "materials": [
+      "stone",
+      "wall_brick",
+      "desert_sand",
+      "water_fast",
+      "fabric_weave",
+      "wood_dark"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Be Strong",
+        "game": "Meditate on the instruction before crossing."
+      },
+      {
+        "number": 2,
+        "title": "Rahab and the Spies",
+        "game": "Hide the scouts and mark the scarlet cord."
+      },
+      {
+        "number": 3,
+        "title": "Crossing Jordan",
+        "game": "Carry twelve memorial stones from the riverbed."
+      },
+      {
+        "number": 4,
+        "title": "Jericho",
+        "game": "March the pattern, sound the trumpets, protect Rahab."
+      },
+      {
+        "number": 5,
+        "title": "Achan’s Hidden Goods",
+        "game": "Trace the community’s loss to the buried objects."
+      },
+      {
+        "number": 6,
+        "title": "Ai",
+        "game": "Set the ambush without repeating earlier presumption."
+      },
+      {
+        "number": 7,
+        "title": "The Gibeonites",
+        "game": "Inspect the worn supplies and face a rushed oath."
+      },
+      {
+        "number": 8,
+        "title": "The Long Campaign",
+        "game": "Resolve territory challenges without spectacle."
+      },
+      {
+        "number": 9,
+        "title": "Allot the Land",
+        "game": "Distribute inheritance among tribes."
+      },
+      {
+        "number": 10,
+        "title": "Choose This Day",
+        "game": "Place household stones beside the covenant witness."
+      }
+    ]
+  }
+}

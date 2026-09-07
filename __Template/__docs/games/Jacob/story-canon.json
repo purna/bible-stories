@@ -1,0 +1,79 @@
+{
+  "Jacob": {
+    "title": "Jacob",
+    "references": "Genesis 25–50",
+    "question": "Can a grasping deceiver become someone who receives blessing without stealing it?",
+    "characters": [
+      "jacob_young",
+      "jacob",
+      "esau",
+      "isaac",
+      "rebekah",
+      "laban",
+      "leah",
+      "rachel",
+      "joseph_child",
+      "angel"
+    ],
+    "materials": [
+      "stone",
+      "desert_sand",
+      "wood_oak",
+      "fabric_weave",
+      "water_still",
+      "grass"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Birthright",
+        "game": "Weigh hunger against a lasting inheritance."
+      },
+      {
+        "number": 2,
+        "title": "The Stolen Blessing",
+        "game": "Assemble the disguise, then witness its cost."
+      },
+      {
+        "number": 3,
+        "title": "Bethel",
+        "game": "Build the stone pillar after the ladder dream."
+      },
+      {
+        "number": 4,
+        "title": "Rachel at the Well",
+        "game": "Move the stone and water the flock."
+      },
+      {
+        "number": 5,
+        "title": "Laban’s Bargain",
+        "game": "Track changing wages and wedding promises."
+      },
+      {
+        "number": 6,
+        "title": "The Flocks",
+        "game": "Sort speckled and spotted animals fairly."
+      },
+      {
+        "number": 7,
+        "title": "Leaving Haran",
+        "game": "Pack the camp before Laban catches up."
+      },
+      {
+        "number": 8,
+        "title": "The Night Wrestling",
+        "game": "Hold on through the night and receive a new name."
+      },
+      {
+        "number": 9,
+        "title": "Meeting Esau",
+        "game": "Arrange gifts, then step forward unarmed."
+      },
+      {
+        "number": 10,
+        "title": "Joseph’s Coats",
+        "game": "Recognise favouritism forming in the household."
+      }
+    ]
+  }
+}

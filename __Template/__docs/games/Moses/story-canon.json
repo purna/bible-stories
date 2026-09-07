@@ -1,0 +1,84 @@
+{
+  "Moses": {
+    "title": "Moses",
+    "references": "Exodus; Numbers; Deuteronomy 31–34",
+    "question": "Will a rescued people learn to trust the God who leads them through uncertainty?",
+    "characters": [
+      "moses_young",
+      "moses",
+      "aaron",
+      "miriam",
+      "pharaoh",
+      "pharaohs_daughter",
+      "zipporah",
+      "jethro",
+      "joshua",
+      "caleb",
+      "israelite_elder",
+      "israelite_woman",
+      "egyptian_overseer",
+      "korah",
+      "balaam"
+    ],
+    "materials": [
+      "egypt_mud_brick",
+      "nile_reeds",
+      "desert_sand",
+      "bulrush_basket",
+      "hammered_gold",
+      "stone_tablets"
+    ],
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Child in the River",
+        "game": "Guide the basket through reeds while Miriam keeps watch."
+      },
+      {
+        "number": 2,
+        "title": "The Burning Bush",
+        "game": "Herd sheep, approach the fire, and answer the call."
+      },
+      {
+        "number": 3,
+        "title": "Before the Throne",
+        "game": "Match signs and warnings to each audience."
+      },
+      {
+        "number": 4,
+        "title": "Passover Night",
+        "game": "Prepare the meal and mark the doorway before departure."
+      },
+      {
+        "number": 5,
+        "title": "Through the Sea",
+        "game": "Keep the people moving along the opened path."
+      },
+      {
+        "number": 6,
+        "title": "Bread in the Wilderness",
+        "game": "Gather only enough manna for the day."
+      },
+      {
+        "number": 7,
+        "title": "Sinai",
+        "game": "Arrange the camp and carry the covenant words."
+      },
+      {
+        "number": 8,
+        "title": "The Golden Calf",
+        "game": "Confront the idol and intercede for the people."
+      },
+      {
+        "number": 9,
+        "title": "Forty Years",
+        "game": "Navigate a provision-and-trust journey map."
+      },
+      {
+        "number": 10,
+        "title": "Mount Nebo",
+        "game": "Appoint Joshua and identify the land from afar."
+      }
+    ]
+  }
+}
