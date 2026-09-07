@@ -24,7 +24,7 @@ const css = `
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:var(--font)}
 button,select,input{font:inherit}.app{display:grid;grid-template-columns:390px minmax(0,1fr);height:100vh;overflow:hidden}
 .sidebar{background:var(--panel);border-right:1px solid var(--border);padding:20px;overflow:auto}.brand{font-size:1.35rem;font-weight:800;display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding-bottom:14px;border-bottom:1px solid var(--border)}.brand small{font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:.12em}
-.group{padding:16px 0;border-bottom:1px solid var(--border);display:grid;gap:10px}.group h3{margin:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}label{display:grid;gap:5px;font-size:.78rem;color:var(--dim)}select,input[type="number"],input[type="text"]{width:100%;background:var(--panel2);border:1px solid var(--border);border-radius:6px;padding:8px;color:var(--text)}input[type="range"]{width:100%}.colors{display:grid;grid-template-columns:1fr 1fr;gap:9px}.color{display:flex;align-items:center;justify-content:space-between;background:var(--panel2);padding:7px 8px;border:1px solid var(--border);border-radius:6px}.color input{width:40px;height:28px;border:0;padding:0;background:transparent}.brief{font-size:.8rem;line-height:1.45;color:var(--dim);background:var(--panel2);padding:10px;border-radius:6px;border:1px solid var(--border)}
+.group{padding:16px 0;border-bottom:1px solid var(--border);display:grid;gap:10px}.group h3{margin:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}label{display:grid;gap:5px;font-size:.78rem;color:var(--dim)}select,input[type="number"],input[type="text"]{width:100%;background:var(--panel2);border:1px solid var(--border);border-radius:6px;padding:8px;color:var(--text)}input[type="range"]{width:100%}.checks{display:grid;grid-template-columns:1fr 1fr;gap:7px}.checks label,.export-option{display:flex;align-items:center;gap:7px;background:var(--panel2);padding:8px;border:1px solid var(--border);border-radius:6px}.hint{margin:0;color:var(--dim);font-size:.72rem;line-height:1.4}.colors{display:grid;grid-template-columns:1fr 1fr;gap:9px}.color{display:flex;align-items:center;justify-content:space-between;background:var(--panel2);padding:7px 8px;border:1px solid var(--border);border-radius:6px}.color input{width:40px;height:28px;border:0;padding:0;background:transparent}.brief{font-size:.8rem;line-height:1.45;color:var(--dim);background:var(--panel2);padding:10px;border-radius:6px;border:1px solid var(--border)}
 .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:14px}.actions button:first-child{grid-column:1/-1}.btn{border:1px solid var(--accent);border-radius:6px;padding:10px;background:var(--accent);color:white;font-weight:700;cursor:pointer}.btn.secondary{background:var(--panel2);border-color:var(--border);color:var(--text)}.btn.ok{background:var(--ok);border-color:var(--ok)}
 .stage{min-width:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background-image:radial-gradient(var(--border) 1px,transparent 1px);background-size:24px 24px}.topbar{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 18px;background:rgba(13,13,18,.92);border-bottom:1px solid var(--border)}.scene-name{font-weight:800}.scene-meta{font-size:.75rem;color:var(--dim)}
 .preview-wrap{display:flex;align-items:center;justify-content:center;padding:24px;min-height:0}.preview{position:relative;width:min(100%,1200px);aspect-ratio:16/9;background:#111;border:1px solid var(--border);box-shadow:0 24px 60px rgba(0,0,0,.45);overflow:hidden}.preview svg{position:absolute;inset:0;width:100%;height:100%;display:block}.preview .fg{pointer-events:none}
@@ -52,6 +52,19 @@ root.innerHTML = `
       <label>Horizon <span id="horizonVal">58%</span><input id="horizon" type="range" min="36" max="72" value="58"></label>
       <label>Detail <span id="detailVal">3</span><input id="detail" type="range" min="1" max="5" value="3"></label>
       <label>Seed<input id="seed" type="number" value="1" min="1" max="9999"></label>
+    </section>
+    <section class="group">
+      <h3>Foreground details</h3>
+      <div class="checks">
+        <label><input id="fgPlants" type="checkbox" checked> Plants</label>
+        <label><input id="fgRocks" type="checkbox" checked> Rocks</label>
+        <label><input id="fgStructures" type="checkbox" checked> Structures</label>
+        <label><input id="fgProps" type="checkbox" checked> Story props</label>
+        <label><input id="fgFraming" type="checkbox" checked> Edge framing</label>
+      </div>
+      <p class="hint">Details adapt to the selected chapter: reeds, crops, timber, masonry, tents, vessels, tools and other relevant props.</p>
+      <label class="export-option"><input id="includeBgInFg" type="checkbox"> Include background in foreground export</label>
+      <p class="hint">Leave this off for a transparent foreground SVG.</p>
     </section>
     <section class="group">
       <h3>Palette</h3>
@@ -133,6 +146,7 @@ function settings(){
   const env=$("environment").value==="auto"?detectEnvironment():$("environment").value;
   const tod=$("time").value==="auto"?detectTime(env):$("time").value;
   return {env,tod,horizon:Number($("horizon").value),detail:Number($("detail").value),seed:Number($("seed").value)||1,
+    fgPlants:$("fgPlants").checked,fgRocks:$("fgRocks").checked,fgStructures:$("fgStructures").checked,fgProps:$("fgProps").checked,fgFraming:$("fgFraming").checked,
     skyTop:$("skyTop").value,skyBottom:$("skyBottom").value,far:$("far").value,near:$("near").value,accent:$("accent").value,ink:$("ink").value};
 }
 function render(){
@@ -167,13 +181,23 @@ function buildBackgroundSVG(c,b,s,act){
 }
 function buildForegroundSVG(c,b,s,act){
   const rand=mulberry32(hash(`fg|${storyKey}|${act}|${b.id}|${s.seed}`));
-  const edge=foregroundEdges(s,rand,b.id);
-  const prop=foregroundProp(c,s,rand,b.id);
+  const edge=s.fgFraming?foregroundEdges(s,rand,b.id):"";
+  const details=foregroundDetails(c,s,rand,b.id);
+  const prop=s.fgProps?foregroundProp(c,s,rand,b.id):"";
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="${xml(`${displayStory(storyKey)} act ${act} ${c.title} foreground`)}">
   <metadata>${xml(JSON.stringify({story:displayStory(storyKey),act,chapter:c.title,scene:b.id,layer:"foreground",environment:s.env,seed:s.seed}))}</metadata>
-  ${edge}${prop}
+  ${edge}${details}${prop}
   </svg>`;
 }
+function foregroundExport(){
+  if(!$("includeBgInFg").checked)return last.fg;
+  const bgBody=svgBody(last.bg),fgBody=svgBody(last.fg);
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="${xml(`${displayStory(storyKey)} act ${last.act} combined foreground export`)}">
+  <metadata>${xml(JSON.stringify({story:displayStory(storyKey),act:last.act,chapter:last.chapter.title,scene:last.beat.id,layer:"foreground",backgroundIncluded:true}))}</metadata>
+  <g data-layer="background">${bgBody}</g><g data-layer="foreground">${fgBody}</g>
+  </svg>`;
+}
+function svgBody(svg){return svg.replace(/^.*?<svg[^>]*>/s,"").replace(/<\/svg>\s*$/s,"").replace(/<metadata>[\s\S]*?<\/metadata>/,"")}
 function celestial(s,rand){
   if(s.tod==="night") return `<circle cx="${1450+rand()*180}" cy="${170+rand()*80}" r="56" fill="#efe4bd" opacity=".92"/>${stars(rand,34)}`;
   if(s.tod==="dawn") return `<circle cx="330" cy="360" r="70" fill="${s.accent}" opacity=".72"/>`;
@@ -214,11 +238,44 @@ function backgroundFeature(s,rand,hy){
 }
 function foregroundEdges(s,rand,beat){
   const scale=beat==="B"?1.12:beat==="C"?.92:1;
-  if(s.env==="garden") return plants(rand,s,scale);
+  if(s.env==="garden") return s.fgPlants?plants(rand,s,scale):"";
   if(s.env==="river"||s.env==="sea") return reedsAndRocks(rand,s,scale,s.env==="sea");
-  if(s.env==="city"||s.env==="palace") return pillars(rand,s,scale,s.env==="palace");
+  if(s.env==="city"||s.env==="palace") return s.fgStructures?pillars(rand,s,scale,s.env==="palace"):"";
   if(s.env==="interior") return interiorEdges(s,scale);
-  return rocks(rand,s,scale);
+  return s.fgRocks?rocks(rand,s,scale):"";
+}
+function foregroundDetails(c,s,rand,beat){
+  const t=(c.title+" "+c.brief).toLowerCase(), scale=beat==="B"?1.08:beat==="C"?.88:1;
+  let out="";
+  if(s.detail>=2&&s.fgPlants){
+    if(/river|jordan|brook|reeds|water|sea|flood/.test(t))out+=reeds(rand,s,scale);
+    else if(/grain|glean|harvest|field|flock|shepherd|vineyard|garden|tree|plant|manna/.test(t))out+=cropSprigs(rand,s,scale);
+    else if(s.env==="garden")out+=cropSprigs(rand,s,.8*scale);
+  }
+  if(s.detail>=2&&s.fgRocks&&(/stone|altar|mount|cave|wilderness|desert|river|jordan|well|wall/.test(t)||s.env==="mountain"))out+=rockCluster(rand,s,scale);
+  if(s.detail>=3&&s.fgStructures){
+    if(/ark|timber|plank|build|carpenter|tower|scaffold|trowel/.test(t))out+=timberFrame(s,scale);
+    else if(/wall|gate|city|jericho|temple|palace|throne|altar|furnace|prison|storehouse/.test(t))out+=stoneFrame(s,scale);
+    else if(/tent|camp|journey|wilderness|haran|moab/.test(t))out+=tentEdge(s,scale);
+    else if(/well/.test(t))out+=wellEdge(s,scale);
+  }
+  if(s.detail>=4&&s.fgProps)out+=secondaryProps(t,s,rand,scale);
+  return out;
+}
+function reeds(rand,s,scale){let o='<g opacity=".9">';for(let i=0;i<8;i++){const side=i<4?1:-1,x=i<4?70+i*48:1850-(i-4)*48,h=(110+rand()*170)*scale;o+=`<path d="M${x} 1080q${side*25} -${h*.55} ${side*(8+rand()*24)} -${h}" fill="none" stroke="${mix(s.near,"#657342",.55)}" stroke-width="12" stroke-linecap="round"/>`}return o+"</g>"}
+function cropSprigs(rand,s,scale){let o='<g opacity=".9">';for(const side of [0,1])for(let i=0;i<3;i++){const x=side?1690+i*62:45+i*62,h=(105+rand()*135)*scale;o+=`<path d="M${x} 1080v-${h}" stroke="${mix(s.accent,"#8b6c35",.48)}" stroke-width="9"/><path d="M${x} ${1080-h*.65}l${side?-34:34} -28m-${side?-34:34} 60l${side?-30:30} -24" stroke="${mix(s.accent,"#b5944f",.35)}" stroke-width="13" stroke-linecap="round"/>`}return o+"</g>"}
+function rockCluster(rand,s,scale){let o='<g opacity=".96">';for(let i=0;i<3;i++){const x=1450+i*115,w=(85+rand()*90)*scale,h=(55+rand()*85)*scale;o+=`<path d="M${x} 1045l${w*.18} -${h*.72} ${w*.48} -${h*.28} ${w*.42} ${h}Z" fill="${mix(s.far,"#918579",.42)}" stroke="${s.ink}" stroke-width="9"/>`}return o+"</g>"}
+function timberFrame(s,scale){return `<g fill="none" stroke="${mix(s.near,"#704624",.52)}" stroke-width="${30*scale}" stroke-linecap="round" opacity=".92"><path d="M75 1080V650L350 455"/><path d="M1845 1080V720L1640 565"/><path d="M40 905H310M1650 925H1900"/></g>`}
+function stoneFrame(s,scale){return `<g fill="${mix(s.far,"#a39478",.42)}" stroke="${s.ink}" stroke-width="10" opacity=".9"><path d="M0 1080V760h245v320zM1675 1080V760h245v320z"/><path d="M0 760h310v70H0zM1610 760h310v70h-310z"/></g>`}
+function tentEdge(s,scale){return `<g opacity=".9"><path d="M0 1080V560L315 725 430 1080Z" fill="${mix(s.accent,"#a87a55",.42)}" stroke="${s.ink}" stroke-width="12"/><path d="M0 560L315 725" stroke="${mix(s.near,"#6f4527",.48)}" stroke-width="20"/></g>`}
+function wellEdge(s,scale){return `<g transform="translate(1510 905)" opacity=".94"><ellipse rx="180" ry="62" fill="${mix(s.far,"#9b8b70",.45)}" stroke="${s.ink}" stroke-width="12"/><ellipse cy="-12" rx="130" ry="38" fill="${mix(s.skyTop,"#245f72",.52)}"/><path d="M-145 -30V-245M145 -30V-245M-170 -235H170" stroke="${mix(s.near,"#70492d",.48)}" stroke-width="24" fill="none"/></g>`}
+function secondaryProps(t,s,rand,scale){
+  if(/brick|build|wall|tower|trowel/.test(t))return `<g transform="translate(300 930)" fill="${mix(s.accent,"#9b583d",.45)}" stroke="${s.ink}" stroke-width="7"><rect width="135" height="62"/><rect x="75" y="-70" width="135" height="62"/><rect x="150" width="135" height="62"/></g>`;
+  if(/ship|storm|sea|cargo/.test(t))return `<g transform="translate(300 870)" fill="none" stroke="${mix(s.near,"#684225",.52)}" stroke-width="20"><path d="M0 150h260l65-105M55 150V-30h150M55 -25l180 130"/></g>`;
+  if(/meal|banquet|table|bread|grain|provision|food/.test(t))return `<g transform="translate(260 900)"><path d="M0 0h300v42H0zM35 42v130M265 42v130" fill="${mix(s.near,"#75492b",.5)}"/><ellipse cx="150" cy="-5" rx="72" ry="24" fill="${s.accent}"/></g>`;
+  if(/rope|cord|rescue|cistern/.test(t))return `<path d="M1720 1060q-170-250 20-480q120-130 15-300" fill="none" stroke="${mix(s.accent,"#8b673e",.52)}" stroke-width="18"/>`;
+  if(/lamp|night|prayer|temple|shiloh/.test(t))return `<g transform="translate(1650 870)"><path d="M0 130h160M80 130V-20" stroke="${mix(s.near,"#72502d",.5)}" stroke-width="18"/><path d="M80 -15q-55-75 0-145q55 70 0 145" fill="${s.accent}"/></g>`;
+  return "";
 }
 function foregroundProp(c,s,rand,beat){
   const t=(c.title+" "+c.brief).toLowerCase();
@@ -232,7 +289,7 @@ function foregroundProp(c,s,rand,beat){
   return "";
 }
 function plants(rand,s,scale){let o="";for(const side of [0,1])for(let i=0;i<4;i++){const x=side?(1590+i*95):(40+i*95),h=(150+rand()*260)*scale,y=1080;o+=`<path d="M${x} ${y} Q${x-45} ${y-h*.55} ${x+rand()*35-18} ${y-h}" fill="none" stroke="${mix(s.near,"#203c27",.42)}" stroke-width="${22+rand()*22}" stroke-linecap="round"/><ellipse cx="${x+(side?-30:35)}" cy="${y-h*.55}" rx="58" ry="24" fill="${mix(s.near,"#315b35",.42)}" transform="rotate(${side?-28:28} ${x} ${y-h*.55})"/>`}return o}
-function reedsAndRocks(rand,s,scale,sea){let o="";for(const side of [0,1]){for(let i=0;i<5;i++){const x=side?1650+i*55:40+i*55,h=(120+rand()*230)*scale;o+=`<path d="M${x} 1080 Q${x+rand()*40-20} ${1080-h*.55} ${x+rand()*25-12} ${1080-h}" stroke="${sea?mix(s.near,"#263d36",.5):mix(s.near,"#4f613a",.5)}" stroke-width="16" fill="none" stroke-linecap="round"/>`}}return o+rocks(rand,s,.65*scale)}
+function reedsAndRocks(rand,s,scale,sea){let o="";if(s.fgPlants)for(const side of [0,1]){for(let i=0;i<5;i++){const x=side?1650+i*55:40+i*55,h=(120+rand()*230)*scale;o+=`<path d="M${x} 1080 Q${x+rand()*40-20} ${1080-h*.55} ${x+rand()*25-12} ${1080-h}" stroke="${sea?mix(s.near,"#263d36",.5):mix(s.near,"#4f613a",.5)}" stroke-width="16" fill="none" stroke-linecap="round"/>`}}return o+(s.fgRocks?rocks(rand,s,.65*scale):"")}
 function pillars(rand,s,scale,palace){const w=150*scale, col=palace?mix(s.far,"#b09065",.48):mix(s.near,"#776650",.48);return `<g fill="${col}" stroke="${s.ink}" stroke-width="12" opacity=".93"><rect x="0" y="${620-80*scale}" width="${w}" height="${480+80*scale}"/><rect x="${1920-w}" y="${620-80*scale}" width="${w}" height="${480+80*scale}"/><rect x="0" y="${590-80*scale}" width="${w+55}" height="55"/><rect x="${1920-w-55}" y="${590-80*scale}" width="${w+55}" height="55"/></g>`}
 function interiorEdges(s,scale){return `<path d="M0 1080V430 Q200 520 310 1080Z" fill="${mix(s.near,"#2b201c",.55)}"/><path d="M1920 1080V430 Q1720 520 1610 1080Z" fill="${mix(s.near,"#2b201c",.55)}"/><path d="M0 0H1920L1720 150H200Z" fill="${s.ink}" opacity=".28"/>`}
 function rocks(rand,s,scale){let o="";for(const side of [0,1])for(let i=0;i<4;i++){const x=side?(1570+i*100):(40+i*100),w=(90+rand()*150)*scale,h=(70+rand()*160)*scale;o+=`<path d="M${x} 1080 l${w*.15} -${h*.65} l${w*.42} -${h*.35} l${w*.43} ${h*.45} l${w*.18} ${h*.55}Z" fill="${mix(s.near,"#746b61",.36)}" stroke="${s.ink}" stroke-width="10" opacity=".95"/>`}return o}
@@ -240,7 +297,7 @@ function citySilhouette(rand,y,color,palace){let o=`<g fill="${color}" opacity="
 function treeLine(rand,y,color,n){let o=`<g fill="${color}" opacity=".67">`;for(let i=0;i<n;i++){const x=(i+.25)*1920/n+rand()*80,h=90+rand()*180;o+=`<rect x="${x-9}" y="${y-h*.45}" width="18" height="${h*.75}"/><circle cx="${x}" cy="${y-h*.7}" r="${55+rand()*55}"/></g><g fill="${color}" opacity=".67">`}return o+"</g>"}
 function mountainPath(rand,base,amp,n){let d=`M0 ${base}`;for(let i=0;i<n;i++){const x=(i+1)*1920/n,peak=base-amp*(.6+rand()*1.5);d+=` L${x-1920/n*.48} ${peak} L${x} ${base+rand()*35}`}return d+" V1080 H0Z"}
 function download(text,name,type="image/svg+xml"){const blob=new Blob([text],{type});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
-function manifest(){return JSON.stringify({story:displayStory(storyKey),act:last.act,chapter:last.chapter.title,brief:last.chapter.brief,scene:{id:last.beat.id,name:last.beat.name},canvas:{width:1920,height:1080},environment:last.settings.env,time:last.settings.tod,seed:last.settings.seed,background:`${last.base}_background.svg`,foreground:`${last.base}_foreground.svg`,layering:["background","optional middle-ground/characters","foreground"]},null,2)}
+function manifest(){return JSON.stringify({story:displayStory(storyKey),act:last.act,chapter:last.chapter.title,brief:last.chapter.brief,scene:{id:last.beat.id,name:last.beat.name},canvas:{width:1920,height:1080},environment:last.settings.env,time:last.settings.tod,seed:last.settings.seed,background:`${last.base}_background.svg`,foreground:`${last.base}_foreground.svg`,foregroundBackgroundIncluded:$("includeBgInFg").checked,foregroundDetails:{plants:last.settings.fgPlants,rocks:last.settings.fgRocks,structures:last.settings.fgStructures,props:last.settings.fgProps,framing:last.settings.fgFraming},layering:["background","optional middle-ground/characters","foreground"]},null,2)}
 function colorField(id,label,value){return `<label class="color">${label}<input id="${id}" type="color" value="${value}"></label>`}
 function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,"_").replace(/^_|_$/g,"")}
 function displayStory(s){return s==="Eiljah"?"Elijah":s}
@@ -253,11 +310,12 @@ function mix(a,b,t){const ah=parseInt(a.slice(1),16),bh=parseInt(b.slice(1),16),
 ["chapter","beat","environment","time"].forEach(id=>$(id).addEventListener("change",()=>{if(id==="chapter"||id==="environment"){resetPalette()}render()}));
 ["horizon","detail"].forEach(id=>$(id).addEventListener("input",()=>{$(id+"Val").textContent=id==="horizon"?$(id).value+"%":$(id).value;render()}));
 ["seed","skyTop","skyBottom","far","near","accent","ink"].forEach(id=>$(id).addEventListener("input",render));
+["fgPlants","fgRocks","fgStructures","fgProps","fgFraming"].forEach(id=>$(id).addEventListener("change",render));
 $("generate").onclick=render;
 $("autoPalette").onclick=()=>{resetPalette();render()};
 $("randomise").onclick=()=>{$("seed").value=1+Math.floor(Math.random()*9999);render()};
 $("downloadBg").onclick=()=>download(last.bg,`${last.base}_background.svg`);
-$("downloadFg").onclick=()=>download(last.fg,`${last.base}_foreground.svg`);
+$("downloadFg").onclick=()=>download(foregroundExport(),`${last.base}_foreground.svg`);
 $("downloadManifest").onclick=()=>download(manifest(),`${last.base}_scene.json`,"application/json");
 $("showBg").onchange=()=>$("bgLayer").style.display=$("showBg").checked?"":"none";
 $("showFg").onchange=()=>$("fgLayer").style.display=$("showFg").checked?"":"none";
