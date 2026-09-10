@@ -1,37 +1,55 @@
 {
   "id": "leaving_moab",
-  "name": "Ch.1 · Leaving Moab",
+  "name": "Ch.1 \u00b7 Leaving Moab",
   "bg": "radial-gradient(circle at 50% 25%, #d4a86a, #4a3520 70%)",
   "particle": "dusk",
   "lines": [
     {
+      "id": "leaving_moab_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "In the days when the judges ruled, there was a famine in the land. A man from Bethlehem left his home to live in the country of Moab—his wife and two sons with him.",
-      "cite": "Ruth 1:1"
+      "text": "In the days when the judges ruled, there was a famine in the land. A man from Bethlehem left his home to live in the country of Moab\u2014his wife and two sons with him.",
+      "cite": "Ruth 1:1",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "leaving_moab_1",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "The man died, and later both sons too. Naomi was left alone with her two daughters-in-law, Orpah and Ruth."
+      "text": "The man died, and later both sons too. Naomi was left alone with her two daughters-in-law, Orpah and Ruth.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "leaving_moab_2",
       "speaker": "naomi",
       "fx": "type",
+      "delay": 800,
       "align": "left",
-      "text": "Go back, each of you, to your mother's home. May the LORD show you kindness, as you have shown kindness to me and to the dead."
+      "text": "Go back, each of you, to your mother's home. May the LORD show you kindness, as you have shown kindness to me and to the dead.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "leaving_moab_3",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "Orpah kissed her mother-in-law goodbye. But Ruth clung to her."
+      "text": "Orpah kissed her mother-in-law goodbye. But Ruth clung to her.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "leaving_moab_4",
       "speaker": "ruth",
       "fx": "bounce",
+      "delay": 800,
       "align": "right",
       "text": "Don't urge me to leave you or to turn back from you. Where you go I will go, and where you stay I will stay. Your people will be my people and your God my God.",
       "cite": "Ruth 1:16",
@@ -44,14 +62,20 @@
           "label": "Stay close to Naomi",
           "note": "Ruth walks beside her mother-in-law, steadfast in loyalty."
         }
-      ]
+      ],
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "leaving_moab_5",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "text": "Naomi saw that Ruth was determined to go with her, so she no longer tried to persuade her. Together they set out from Moab toward Bethlehem.",
-      "cite": "Ruth 1:18-19"
+      "cite": "Ruth 1:18-19",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "svg": "leaving_moab",

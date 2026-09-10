@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Fruit of the Spirit — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="_shared/timer.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none
+    }
+
+    :root {
+      --ink: #3a2410;
+      --good: #2e7d32;
+      --bad: #c62828;
+      --accent: #ffd84d;
+      --bg: #fffaf0;
+      --panel: #fff;
+      --shadow: #b88f5b
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden
+    }
+
+    body {
+      font-family: 'Comic Neue', Arial, sans-serif;
+      background: radial-gradient(circle at 50% 0, #fffdf7 0, #fffaf0 55%, #f3e6c9 100%);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .wrap {
+      width: min(1120px, 100vw);
+      height: min(760px, 100vh);
+      padding: clamp(10px, 2vw, 22px);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 10px
+    }
+
+    .title-block {
+      text-align: left;
+      min-width: 0
+    }
+
+    h1 {
+      font-size: clamp(1.45rem, 3vw, 2.25rem);
+      line-height: 1;
+      margin: 0 0 3px
+    }
+
+    .sub {
+      font-size: clamp(.75rem, 1.4vw, .95rem);
+      opacity: .78
+    }
+
+    .hud {
+      display: flex;
+      gap: 7px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      font-size: .88rem;
+      font-weight: 800
+    }
+
+    .chip {
+      background: #fff;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      padding: 6px 11px;
+      white-space: nowrap;
+      box-shadow: 0 2px 0 rgba(58, 36, 16, .15)
+    }
+
+    .chip.warn {
+      background: #ffe5b4;
+      border-color: #a85b00
+    }
+
+    .stage {
+      flex: 1;
+      min-height: 0;
+      position: relative;
+      background: linear-gradient(180deg, #fff8d9 0%, #fde5ad 100%);
+      border: 4px solid var(--ink);
+      border-radius: 22px;
+      box-shadow: 0 7px 0 var(--shadow);
+      overflow: hidden;
+      padding: 16px
+    }
+
+    .stage::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 14px;
+      bottom: 14px;
+      width: 2px;
+      background: rgba(58, 36, 16, .13);
+      transform: translateX(-50%)
+    }
+
+    .board {
+      height: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 74px minmax(0, 1fr);
+      gap: 12px;
+      align-items: center
+    }
+
+    .col {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(7px, 1vw, 12px);
+      align-content: center
+    }
+
+    .col .col-label {
+      grid-column: 1/-1;
+      text-align: center;
+      font-weight: 800;
+      font-size: clamp(.8rem, 1.5vw, 1rem);
+      letter-spacing: .08em;
+      margin-bottom: 1px
+    }
+
+    .connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      position: relative;
+      z-index: 2
+    }
+
+    .connector-badge {
+      width: 54px;
+      height: 54px;
+      border: 3px solid var(--ink);
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 0 rgba(58, 36, 16, .18)
+    }
+
+    .connector-badge svg {
+      width: 30px;
+      height: 30px
+    }
+
+    .card {
+      position: relative;
+      aspect-ratio: 1.05/1;
+      width: 100%;
+      cursor: pointer;
+      perspective: 700px;
+      min-width: 0
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform .45s cubic-bezier(.2, .8, .2, 1);
+      transform-style: preserve-3d
+    }
+
+    .card.flipped .card-inner {
+      transform: rotateY(180deg)
+    }
+
+    .card.matched {
+      pointer-events: none
+    }
+
+    .card.matched .card-inner {
+      filter: drop-shadow(0 0 8px rgba(46, 125, 50, .65));
+      transform: rotateY(180deg) scale(1.02);
+      animation: matchPop .42s cubic-bezier(.2, 1.4, .4, 1) both
+    }
+
+    .card.matched::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #2e7d32;
+      border: 3px solid #1b5e20;
+      box-shadow: 0 2px 0 #1b5e20;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M8 16.5l5.5 5.5L24 11' fill='none' stroke='%23ffffff' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+      background-size: 78% 78%;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 3;
+      pointer-events: none
+    }
+
+    @keyframes matchPop {
+
+      0% {
+        transform: rotateY(180deg) scale(1)
+      }
+
+      55% {
+        transform: rotateY(180deg) scale(1.12)
+      }
+
+      100% {
+        transform: rotateY(180deg) scale(1.02)
+      }
+    }
+
+    .face {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      border: 3px solid var(--ink);
+      border-radius: 14px;
+      backface-visibility: hidden;
+      padding: 7px;
+      text-align: center;
+      overflow: hidden
+    }
+
+    .back {
+      background: linear-gradient(135deg, #ffe56b 0%, #ffb83d 100%);
+      color: #3a2410
+    }
+
+    .back::after {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border: 2px dashed rgba(58, 36, 16, .34);
+      border-radius: 9px;
+      pointer-events: none
+    }
+
+    .back .cross {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      z-index: 2
+    }
+
+    .back .label {
+      position: relative;
+      font-size: .68rem;
+      font-weight: 800;
+      z-index: 2;
+      opacity: .72;
+      text-transform: uppercase
+    }
+
+    .front {
+      transform: rotateY(180deg);
+      background: #fff
+    }
+
+    .front .icon {
+      width: clamp(42px, 5.5vw, 64px);
+      height: clamp(42px, 5.5vw, 64px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: none
+    }
+
+    .front .icon svg {
+      width: 100%;
+      height: 100%
+    }
+
+    .front .name {
+      font-size: clamp(.68rem, 1.35vw, .88rem);
+      font-weight: 800;
+      line-height: 1.08;
+      overflow-wrap: anywhere
+    }
+
+    .card.matched .front {
+      background: #e7f7e7;
+      border-color: #286d31
+    }
+
+    .card.wrong .front {
+      animation: shake .35s
+    }
+
+    .card:hover:not(.matched) {
+      transform: translateY(-2px)
+    }
+
+    @keyframes shake {
+
+      0%,
+      100% {
+        transform: rotateY(180deg) translateX(0)
+      }
+
+      25% {
+        transform: rotateY(180deg) translateX(-5px)
+      }
+
+      75% {
+        transform: rotateY(180deg) translateX(5px)
+      }
+    }
+
+    .card.matched {
+      cursor: default
+    }
+
+    .card:focus-visible {
+      outline: 4px solid #1565c0;
+      outline-offset: 2px;
+      border-radius: 14px
+    }
+
+    .card.wrong {
+      outline: 3px solid var(--bad);
+      outline-offset: -3px
+    }
+
+    .memory {
+      position: absolute;
+      left: 50%;
+      bottom: 6px;
+      transform: translateX(-50%);
+      font-size: .75rem;
+      background: #fff;
+      border: 2px solid var(--ink);
+      border-radius: 6px;
+      padding: 1px 8px;
+      font-weight: 800;
+      opacity: 0;
+      transition: opacity .3s
+    }
+
+    .memory.show {
+      opacity: 1
+    }
+
+    @media (max-width:720px) {
+      .wrap {
+        height: 100vh;
+        padding: 8px
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 7px
+      }
+
+      .hud {
+        justify-content: flex-start
+      }
+
+      .stage {
+        padding: 9px;
+        border-radius: 16px
+      }
+
+      .board {
+        grid-template-columns: minmax(0, 1fr) 38px minmax(0, 1fr);
+        gap: 5px
+      }
+
+      .stage::before {
+        top: 9px;
+        bottom: 9px
+      }
+
+      .connector-badge {
+        width: 34px;
+        height: 34px;
+        border-width: 2px
+      }
+
+      .connector-badge svg {
+        width: 19px;
+        height: 19px
+      }
+
+      .col {
+        gap: 5px
+      }
+
+      .face {
+        border-width: 2px;
+        border-radius: 10px;
+        padding: 4px
+      }
+
+      .back::after {
+        inset: 5px
+      }
+
+      .back .cross {
+        width: 22px;
+        height: 22px
+      }
+
+      .back .label {
+        font-size: .55rem
+      }
+    }
+
+    @media (max-width:430px) {
+      h1 {
+        font-size: 1.35rem
+      }
+
+      .sub {
+        font-size: .7rem
+      }
+
+      .chip {
+        padding: 4px 8px;
+        font-size: .75rem
+      }
+
+      .front .icon {
+        width: 32px;
+        height: 32px
+      }
+
+      .front .name {
+        font-size: .58rem
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Fruit of the Spirit</h1>
+    <div class="sub">Find the matching picture and fruit. Match all nine!</div>
+    <div class="hud">
+      <div class="chip" id="matchChip">Matched: 0 / 9</div>
+      <div class="chip warn" id="tryChip">Tries: 0</div>
+    </div>
+    <div class="stage">
+      <div class="board">
+        <div class="col" id="promptsCol">
+          <div class="col-label">PROMPTS</div>
+        </div>
+        <div class="connector" aria-hidden="true">
+          <div class="connector-badge">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 16h22M18 8l8 8-8 8" fill="none" stroke="#3a2410" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+        <div class="col" id="fruitsCol">
+          <div class="col-label">FRUITS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 90, timer: true };
+    // The game is designed around a compact 3x3 matching board, so scale
+    // naturally rather than forcing a fixed 960x540 canvas.
+    function fitGameToViewport() {
+      document.documentElement.style.setProperty('--game-scale', '1');
+    }
+    addEventListener('resize', fitGameToViewport); fitGameToViewport();
+
+    // 9 fruits of the Spirit (Galatians 5:22-23)
+    const FRUITS = [
+      { id: 'love', name: 'Love', prompt: 'Forgiving someone who hurt you', color: '#e91e63' },
+      { id: 'joy', name: 'Joy', prompt: 'Praising God when sad', color: '#ffb300' },
+      { id: 'peace', name: 'Peace', prompt: 'Calm in a storm', color: '#7e57c2' },
+      { id: 'patience', name: 'Patience', prompt: 'Waiting your turn', color: '#5d8b4e' },
+      { id: 'kindness', name: 'Kindness', prompt: 'Helping a new friend', color: '#f48fb1' },
+      { id: 'goodness', name: 'Goodness', prompt: 'Telling the truth', color: '#3f8c5b' },
+      { id: 'faith', name: 'Faithfulness', prompt: 'Trusting God\'s plan', color: '#3a78c2' },
+      { id: 'gentleness', name: 'Gentleness', prompt: 'Speaking softly to a small pet', color: '#a5d6a7' },
+      { id: 'self', name: 'Self-control', prompt: 'Saying "no" to temptation', color: '#8d6e63' },
+    ];
+    const FRUIT_SVG = {
+      love: '<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 50 C 12 38 4 26 12 16 C 18 8 26 10 30 18 C 34 10 42 8 48 16 C 56 26 48 38 30 50 Z" fill="#e91e63" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><circle cx="20" cy="22" r="3" fill="#fff" opacity=".6"/></svg>',
+      joy: '<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="32" r="18" fill="#ffb300" stroke="#3a2410" stroke-width="3"/><path d="M20 30 q 5 6 10 6 q 5 0 10 -6" stroke="#3a2410" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="24" cy="26" r="2" fill="#3a2410"/><circle cx="36" cy="26" r="2" fill="#3a2410"/><path d="M14 12 l -2 4 l 4 -2 l -2 4 l 4 -2 l -2 4 l 4 -2 l -2 4" fill="none" stroke="#3a2410" stroke-width="2.5" stroke-linejoin="round"/><path d="M46 12 l -2 4 l 4 -2 l -2 4 l 4 -2 l -2 4 l 4 -2 l -2 4" fill="none" stroke="#3a2410" stroke-width="2.5" stroke-linejoin="round"/></svg>',
+      peace: '<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 8 C 14 8 8 24 8 30 c 0 12 10 22 22 22 s 22 -10 22 -22 c 0 -6 -6 -22 -22 -22 z" fill="#7e57c2" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><path d="M30 16 v 22 M22 28 l 8 8 l 8 -8" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      patience: '<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="34" r="16" fill="#5d8b4e" stroke="#3a2410" stroke-width="3"/><path d="M30 22 v 12 l 8 4" stroke="#3a2410" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M14 12 l 2 -6 M30 8 l 0 -6 M46 12 l -2 -6" stroke="#3a2410" stroke-width="3" stroke-linecap="round"/></svg>',
+      kindness: '<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 50 C 12 38 4 26 12 16 C 18 8 26 10 30 18 C 34 10 42 8 48 16 C 56 26 48 38 30 50 Z" fill="#f48fb1" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><circle cx="20" cy="22" r="3" fill="#fff" opacity=".6"/><path d="M22 30 q 8 4 16 0" stroke="#3a2410" stroke-width="2" fill="none" stroke-linecap="round"/></svg>',
+      goodness: '<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M10 30 q 4 -16 20 -16 q 16 0 20 16 q -4 16 -20 16 q -16 0 -20 -16 z" fill="#3f8c5b" stroke="#3a2410" stroke-width="3"/><path d="M30 14 v 32" stroke="#3a2410" stroke-width="2"/><path d="M30 22 q -6 -4 -10 0 M30 30 q 6 -4 10 0 M30 38 q -6 -4 -10 0" stroke="#3a2410" stroke-width="2" fill="none"/></svg>',
+      faith: '<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 8 v 44 M16 24 l 14 -10 l 14 10" fill="none" stroke="#3a78c2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="34" r="6" fill="#fff" stroke="#3a2410" stroke-width="2.5"/></svg>',
+      gentleness: '<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="20" fill="#a5d6a7" stroke="#3a2410" stroke-width="3"/><path d="M16 24 q 14 -10 28 0" stroke="#3a2410" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="24" cy="32" r="2" fill="#3a2410"/><circle cx="36" cy="32" r="2" fill="#3a2410"/><path d="M22 40 q 8 4 16 0" stroke="#3a2410" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>',
+      self: '<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 10 L 44 24 L 38 24 L 38 46 L 22 46 L 22 24 L 16 24 Z" fill="#8d6e63" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><circle cx="30" cy="36" r="3" fill="#fff" stroke="#3a2410" stroke-width="2"/></svg>',
+    };
+    const CROSS_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="cross"><path d="M14 4 v 8 h -6 v 4 h 6 v 12 h 4 v -12 h 6 v -4 h -6 v -8 z" fill="#3a2410" stroke="#3a2410" stroke-width="1"/></svg>';
+    const SUN_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+    const HOURGLASS_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+
+    const promptsCol = document.getElementById('promptsCol'), fruitsCol = document.getElementById('fruitsCol');
+    const matchChip = document.getElementById('matchChip'), tryChip = document.getElementById('tryChip');
+    const modal = document.getElementById('modal'), modalCard = document.getElementById('modalCard'), modalIcon = document.getElementById('modalIcon'), modalTitle = document.getElementById('modalTitle'), modalText = document.getElementById('modalText'), modalBtn = document.getElementById('modalBtn');
+
+    function showModal(kind, title, lines, btnLabel) {
+      modalCard.classList.remove('success', 'timeout');
+      if (kind === 'success') modalCard.classList.add('success');
+      if (kind === 'timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind === 'success' ? SUN_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    let first = null, busy = false, matched = 0, tries = 0, over = false;
+    const cards = new Map(); // id -> {card, type, fruit}
+
+    function shuffle(arr) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a; }
+
+    function buildCard(parent, type, fruit) {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-label', (type === 'prompt' ? 'Prompt: ' : 'Fruit: ') + (type === 'fruit' ? fruit.name : fruit.prompt));
+      card.dataset.type = type;
+      card.dataset.id = fruit.id;
+      const displayText = type === 'fruit' ? fruit.name : fruit.prompt;
+      card.innerHTML = '<div class="card-inner"><div class="face back"><div class="cross">' + CROSS_SVG + '</div><div class="label">' + (type === 'prompt' ? 'Prompt' : 'Fruit') + '</div></div><div class="face front"><div class="icon">' + FRUIT_SVG[fruit.id] + '</div><div class="name"></div></div></div>';
+      card.querySelector('.name').textContent = displayText;
+      parent.appendChild(card);
+      card.addEventListener('click', () => onCardClick(card));
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onCardClick(card); }
+      });
+      cards.set(fruit.id + ':' + type, { card, type, fruit });
+    }
+
+    function onCardClick(card) {
+      if (over || busy) return;
+      if (card.classList.contains('matched')) return;
+      card.classList.add('flipped');
+      if (!first) {
+        first = card;
+      } else {
+        if (first === card) return;
+        const a = { type: first.dataset.type, id: first.dataset.id };
+        const b = { type: card.dataset.type, id: card.dataset.id };
+        busy = true;
+        tries++;
+        tryChip.textContent = `Tries: ${tries}`;
+        if (a.id === b.id && a.type !== b.type) {
+          // Match — add only the .matched class. Do NOT add .face or remove
+          // .flipped: the card stays visible in its original position with
+          // its front shown, and the CSS pop/checkmark fire off .matched.
+          setTimeout(() => {
+            first.classList.add('matched');
+            card.classList.add('matched');
+            // Force the @keyframes matchPop animation to restart on both
+            // cards even if .matched was somehow applied in the same frame.
+            [first, card].forEach(c => {
+              c.classList.remove('match-pop');
+              void c.offsetWidth;
+              c.classList.add('match-pop');
+            });
+            matched++;
+            matchChip.textContent = `Matched: ${matched} / 9`;
+            first = null;
+            busy = false;
+            if (matched >= 9) finish(true);
+          }, 350);
+        } else {
+          setTimeout(() => {
+            card.classList.add('wrong');
+            first.classList.add('wrong');
+            setTimeout(() => {
+              card.classList.remove('flipped', 'wrong');
+              first.classList.remove('flipped', 'wrong');
+              first = null;
+              busy = false;
+            }, 500);
+          }, 700);
+        }
+      }
+    }
+
+    function finish(success) {
+      if (over) return;
+      over = true;
+      if (success) {
+        showModal('success', 'Spirit fruit grows!', ['All nine fruits matched with their moments.', '"But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness and self-control." — Galatians 5:22-23'], 'Try again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({ type: 'game-complete', game: 'fruit_spirit' }, '*');
+      } else {
+        showModal('timeout', 'Time to grow more.', ['Some fruits were not matched in time.', '"The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness and self-control." — Galatians 5:22-23'], 'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    const promptOrder = shuffle(FRUITS);
+    const fruitOrder = shuffle(FRUITS);
+    promptOrder.forEach(f => buildCard(promptsCol, 'prompt', f));
+    fruitOrder.forEach(f => buildCard(fruitsCol, 'fruit', f));
+    matchChip.textContent = `Matched: 0 / 9`;
+    addEventListener('game-timeout', () => { if (!over) finish(false); });
+  </script>
+</body>
+
+</html>

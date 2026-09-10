@@ -1,0 +1,89 @@
+{
+  "id": "flood",
+  "name": "Ch.6 \u00b7 Forty Days",
+  "bg": "radial-gradient(circle at 50% 60%, #061430, #020810 65%, #010306)",
+  "particle": "flood",
+  "svg": "ch6_water_rising",
+  "lines": [
+    {
+      "id": "flood_0",
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/flood_water.mp3",
+      "fx": "shake",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch6_water_rising",
+      "text": "For forty days, the rain hammered the hull without stopping.",
+      "cite": "Genesis 7:17",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "flood_1",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch6_storm_peak",
+      "sfx": "CRACK!",
+      "text": "The water rose until the highest mountains vanished beneath it.",
+      "cite": "Genesis 7:19",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "flood_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch6_ark_floating",
+      "text": "Every living thing outside was gone. Only the ark floated on the face of the waters.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "flood_3",
+      "speaker": "wife",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "svg": "ch6_inside_ark",
+      "text": "Is it ever going to stop? The animals are restless. The children are frightened.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "flood_4",
+      "speaker": "noah",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch6_inside_ark",
+      "text": "Keep feeding them. Keep the pens clean. One day at a time.",
+      "choices": [
+        {
+          "label": "Check on every animal yourself \ud83d\udc18",
+          "note": "Exhausting. But every creature is calm and cared for."
+        },
+        {
+          "label": "Let the family manage on their own \ud83d\ude4f",
+          "note": "They cope. But an unattended pen floods at the worst moment."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "flood_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch6_water_still",
+      "text": "After forty days, the rain stopped. But the water held its height for another hundred and ten days.",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

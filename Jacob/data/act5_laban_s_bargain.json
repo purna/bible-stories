@@ -1,0 +1,64 @@
+{
+  "id": "laban_s_bargain",
+  "name": "Ch.5 · Laban’s Bargain",
+  "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "laban_s_bargain_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Track changing wages and wedding promises.",
+      "cite": "Genesis 25–50",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "laban_s_bargain_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Can a grasping deceiver become someone who receives blessing without stealing it? — Laban’s Bargain is the next step in that question.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "laban_s_bargain_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE WORD STANDS",
+      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "laban_s_bargain_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Walk on with the lesson 📖",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment 🕊️",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "laban_s_bargain",
+  "foreground": "fg_laban_s_bargain",
+  "index": 4
+}

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Deborah act 5 Sisera Flees foreground">
+  <metadata>{&quot;story&quot;:&quot;Deborah&quot;,&quot;act&quot;:5,&quot;chapter&quot;:&quot;Sisera Flees&quot;,&quot;scene&quot;:&quot;B&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;interior&quot;,&quot;seed&quot;:1}</metadata>
+  <path d="M0 1080V430 Q200 520 310 1080Z" fill="#332721"/><path d="M1920 1080V430 Q1720 520 1610 1080Z" fill="#332721"/><path d="M0 0H1920L1720 150H200Z" fill="#151313" opacity=".28"/><g opacity=".9"><path d="M0 1080V560L315 725 430 1080Z" fill="#b78457" stroke="#151313" stroke-width="12"/><path d="M0 560L315 725" stroke="#543a28" stroke-width="20"/></g>
+  </svg>

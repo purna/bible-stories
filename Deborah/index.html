@@ -3,19 +3,19 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Story of Deborah — An interactive four-chapter comic from the palm tree of Ephraim to the song of victory, with layered SVG + 3D scenes and end-of-chapter challenges. Read offline with our PWA service worker!">
+    <meta name="description" content="The Story of Deborah — An interactive seven-chapter comic from the palm tree of Ephraim to the song of victory, with layered SVG + 3D scenes and end-of-chapter challenges. Read offline with our PWA service worker!">
     <meta name="theme-color" content="#2d6f73">
     <meta name="color-scheme" content="dark">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <title>DEBORAH — The Courage to Lead</title>
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="story-runtime.css">
-    <link rel="stylesheet" href="loading-screen.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/story-runtime.css">
+    <link rel="stylesheet" href="css/loading-screen.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles/deborah-comic.css">
-    <link rel="stylesheet" href="info-modal.css">
+    <link rel="stylesheet" href="css/deborah-comic.css">
+    <link rel="stylesheet" href="css/info-modal.css">
     <script src="vendor/three.r128.min.js"></script>
   </head>
   <body>
@@ -27,7 +27,7 @@
        <h1>DEBORAH</h1>
        <div class="subtitle">The Courage to Lead</div>
        <div class="bigtorch">🌴</div>
-       <p>An interactive four-chapter comic. Use arrow keys, swipe, or tap Next to navigate. Drag inside the panel to look around each scene. Complete the end-of-chapter challenges to continue.</p>
+       <p>An interactive seven-chapter comic. Use arrow keys, swipe, or tap Next to navigate. Drag inside the panel to look around each scene. Complete the end-of-chapter challenges to continue.</p>
        <button id="startBtn">BEGIN THE STORY</button>
      </div>
    </div>
@@ -113,13 +113,17 @@
      <div id="delayNote" role="status"></div>
 
      <!-- navigation hints -->
-     <div id="navHints">
-       <span>◀ Arrow keys or swipe to navigate ▶</span>
-       <span>· Drag inside the panel to look around the scene ·</span>
-       <span>· ↓ Arrow Down to next chapter ·</span>
-     </div>
+<div id="navHints">
+        <span>◀ Arrow keys or swipe to navigate ▶</span>
+        <span>· Drag inside the panel to look around the scene ·</span>
+        <span>· ↓ Arrow Down to next chapter ·</span>
+      </div>
 
-     <button id="audioToggle" type="button" title="Turn audio off" aria-label="Turn audio off"></button>
+      <div id="compass-indicator" class="story-compass" aria-label="Story compass">
+        <span>FEAR</span><i></i><span>TRUST</span>
+      </div>
+
+      <button id="audioToggle" type="button" title="Turn audio off" aria-label="Turn audio off"></button>
      <button id="nextBtn" aria-label="Next chapter">Next Chapter ↴</button>
 
      <!-- line-advance button -->
@@ -134,23 +138,34 @@
      <span>Create assets</span>
      <a href="tools/character_head_generator.html">Character Generator</a>
      <a href="tools/texture-forge.html">Texture Forge</a>
+     <a href="tools/scene_designer.html">Scene Designer</a>
    </footer>
 
-   <script src="asset-download-manager.js"></script>
-   <script src="story-runtime.js"></script>
-   <script src="loading-screen.js"></script>
-   <script src="audio-manager.js"></script>
-   <script src="info-modal.js"></script>
-   <script src="deborah-scenes-helpers.js"></script>
-   <script src="assets/scenes/act1_voice_beneath_palm.js"></script>
-   <script src="assets/scenes/act2_call_to_courage.js"></script>
-   <script src="assets/scenes/act3_river_rose.js"></script>
-   <script src="assets/scenes/act4_song_of_peace.js"></script>
-   <script src="deborah-story.js"></script>
+<script src="js/asset-download-manager.js"></script>
+    <script src="js/story-runtime.js"></script>
+    <script src="js/loading-screen.js"></script>
+    <script src="js/audio-manager.js"></script>
+    <script src="js/info-modal.js"></script>
+    <script src="js/deborah-scenes-helpers.js"></script>
+    <script src="js/deborah-middle-ground.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/compass.js"></script>
+    <script src="beats/act1.js"></script>
+    <script src="beats/act2.js"></script>
+    <script src="beats/act3.js"></script>
+    <script src="beats/act4.js"></script>
+    <script src="beats/act5.js"></script>
+    <script src="beats/act6.js"></script>
+    <script src="beats/act7.js"></script>
+    <script src="assets/scenes/act1_voice_beneath_palm.js"></script>
+    <script src="assets/scenes/act2_call_to_courage.js"></script>
+    <script src="assets/scenes/act3_river_rose.js"></script>
+    <script src="assets/scenes/act4_song_of_peace.js"></script>
+    <script src="js/deborah-story.js"></script>
    <script>
      if ('serviceWorker' in navigator) {
        window.addEventListener('load', () => {
-         const registerStoryWorker = () => navigator.serviceWorker.register('sw.js');
+         const registerStoryWorker = () => navigator.serviceWorker.register('js/sw.js');
          if (window.__storyAssetsReady) registerStoryWorker();
          else window.addEventListener('story:assetsready', registerStoryWorker, { once: true });
        });

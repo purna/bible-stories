@@ -1,0 +1,131 @@
+{
+  "id": "table",
+  "name": "The King's Table",
+  "bg": "radial-gradient(circle at 30% 20%, #5c4033, #2b1d0c 65%, #1a0e06)",
+  "particle": "dusk",
+  "svg": "babylon_court",
+  "reign": "nebuchadnezzar",
+  "audio": [
+    "assets/audio/music/Act1_Blue_Shadows_at_Noon.ogg",
+    "assets/audio/music/Act1_Blue_Shadows_at_Noon.mp3"
+  ],
+  "lines": [
+    {
+      "id": "table_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Babylon, 605 BCE. The young men of Judah had been taken far from home.",
+      "align": "left",
+      "svg": "babylon_city",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "table_1",
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/babylon_crowd.mp3",
+      "fx": "type",
+      "delay": 800,
+      "text": "King Nebuchadnezzar ordered his best captives trained for royal service. Among them: Daniel, Hananiah, Mishael, and Azariah.",
+      "align": "center",
+      "svg": "training_house",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "table_2",
+      "speaker": "nebuchadnezzar",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "You will eat from MY royal table \u2014 the finest food and wine in all Babylon!",
+      "align": "right",
+      "svg": "royal_table",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "table_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "The food was rich. The wine was powerful. And accepting it would have been the easy thing to do.",
+      "align": "left",
+      "svg": "royal_table",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "table_4",
+      "speaker": "daniel",
+      "fx": "type",
+      "delay": 800,
+      "text": "I cannot eat the king's food. Not because I'm ungrateful. But because there's one thing I won't give up.",
+      "align": "center",
+      "svg": "daniel_decides",
+      "choices": [
+        {
+          "label": "Tell the guard directly \ud83d\udde3\ufe0f",
+          "note": "Daniel speaks plainly. The guard is surprised but hears him out.",
+          "decisionId": "table_direct",
+          "tags": [
+            "loyalty:god",
+            "cost:public",
+            "risk:immediate"
+          ]
+        },
+        {
+          "label": "Request a test instead \ud83c\udf3f",
+          "note": "Daniel proposes ten days of simple food. The guard nervously agrees.",
+          "decisionId": "table_test",
+          "tags": [
+            "loyalty:diplomatic",
+            "cost:private"
+          ]
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "table_5",
+      "speaker": "daniel",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Give us vegetables and water for ten days. Then judge us against the others.",
+      "svg": "daniel_vegetable_test",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "table_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "At the end of ten days, Daniel and his friends looked healthier than all the young men who ate the king's food.",
+      "svg": "daniel_healthier",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "table_7",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "They didn't make a speech about it. They didn't demand to be noticed. They just held the line.",
+      "svg": "daniel_serve",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "table_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "And God gave them knowledge, wisdom, and understanding \u2014 more than all the wise men of Babylon.",
+      "svg": "babylon_city",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

@@ -1,21 +1,29 @@
 {
   "id": "opening",
-  "name": "Ch.1 · Opening",
+  "name": "Ch.1 \u00b7 Opening",
   "bg": "radial-gradient(circle at 50% 25%, #24445a, #101927 70%)",
   "particle": "dawn",
   "lines": [
     {
+      "id": "opening_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "text": "Introduce the setting, need, and central character here.",
-      "cite": "Book 1:1"
+      "cite": "Book 1:1",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "opening_1",
       "speaker": "guide",
       "fx": "type",
+      "delay": 800,
       "align": "right",
-      "text": "Give the player one clear objective."
+      "text": "Give the player one clear objective.",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "svg": "opening",

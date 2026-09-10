@@ -1,0 +1,129 @@
+{
+  "id": "widow",
+  "name": "The Widow of Zarephath",
+  "bg": "radial-gradient(circle at 50% 20%, #c6a776, #8c6c4f 70%, #594236)",
+  "particle": "dream",
+  "svg": "zarephath_town",
+  "lines": [
+    {
+      "id": "widow_0",
+      "speaker": "god",
+      "fx": "type",
+      "delay": 800,
+      "text": "Go at once to Zarephath in Sidon. I have directed a widow there to provide for you.",
+      "align": "center",
+      "svg": "zarephath_town",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "widow_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "At the town gate Elijah found a widow gathering sticks. She was preparing what she believed would be the last meal for herself and her son.",
+      "align": "right",
+      "svg": "zarephath_town",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "widow_2",
+      "speaker": "elijah",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Please bring me a little water\u2014and while you are going, bring me a small piece of bread.",
+      "align": "center",
+      "svg": "zarephath_town",
+      "choices": [
+        {
+          "label": "Trust God's promise",
+          "note": "The widow is asked to trust before she can see the provision."
+        },
+        {
+          "label": "Hold on to what little remains",
+          "note": "Her fear is understandable. She has almost nothing left, yet God's provision is about to become visible."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "widow_3",
+      "speaker": "widow",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "I have no bread. Only a handful of flour and a little oil. I was gathering sticks to prepare one final meal for my son and me.",
+      "align": "center",
+      "svg": "zarephath_town",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "widow_4",
+      "speaker": "elijah",
+      "fx": "type",
+      "delay": 800,
+      "text": "Do not be afraid. The LORD says the flour will not run out and the oil will not fail until rain returns to the land.",
+      "align": "center",
+      "svg": "zarephath_town",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "widow_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "She trusted the word of the LORD. Day after day there was enough flour and oil for Elijah, the widow, and her household.",
+      "align": "center",
+      "svg": "zarephath_town",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "widow_6",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "text": "Then tragedy struck: the widow's son became ill and died. Elijah carried the boy upstairs, prayed to the LORD, and pleaded for his life.",
+      "align": "left",
+      "svg": "zarephath_town",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "widow_7",
+      "speaker": "elijah",
+      "fx": "fade",
+      "delay": 800,
+      "text": "LORD my God, let this child's life return to him.",
+      "align": "center",
+      "svg": "zarephath_town",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "widow_8",
+      "speaker": "narrator",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "The LORD heard Elijah's prayer. The child's life returned, and Elijah brought him back to his mother.",
+      "align": "center",
+      "svg": "zarephath_town",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "widow_9",
+      "speaker": "widow",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Now I know that you are a man of God and that the word of the LORD from your mouth is true.",
+      "align": "center",
+      "svg": "zarephath_town",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

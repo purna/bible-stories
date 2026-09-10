@@ -6,104 +6,160 @@
   "svg": "placeholder",
   "lines": [
     {
+      "id": "throne_0",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "text": "Moses. Moses.",
-      "cite": "Exodus 3:4"
+      "cite": "Exodus 3:4",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_1",
       "speaker": "moses",
       "fx": "type",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "Here I am."
+      "text": "Here I am.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_2",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Do not come any closer. Take off your sandals, for the place where you are standing is holy ground."
+      "text": "Do not come any closer. Take off your sandals, for the place where you are standing is holy ground.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_3",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "I have heard the cry of my people in Egypt. I have seen their suffering. I am come down to deliver them."
+      "text": "I have heard the cry of my people in Egypt. I have seen their suffering. I am come down to deliver them.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_4",
       "speaker": "moses",
       "fx": "type",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "Who am I, that I should go to Pharaoh and bring the Israelites out of Egypt?"
+      "text": "Who am I, that I should go to Pharaoh and bring the Israelites out of Egypt?",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_5",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "I will be with you. And this will be the sign to you that it is I who sent you: when you have brought the people out, you will worship God on this mountain."
+      "text": "I will be with you. And this will be the sign to you that it is I who sent you: when you have brought the people out, you will worship God on this mountain.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_6",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Say to Pharaoh: \"Thus says the LORD: Let my people go, so that they may worship me.\""
+      "text": "Say to Pharaoh: \"Thus says the LORD: Let my people go, so that they may worship me.\"",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_7",
       "speaker": "moses",
       "fx": "type",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "What if they do not believe me? What if they say the LORD has not appeared to you?"
+      "text": "What if they do not believe me? What if they say the LORD has not appeared to you?",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_8",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "God gave Moses three signs. A staff that became a serpent. A hand turned leprous and whole again. Water from the Nile turned to blood."
+      "text": "God gave Moses three signs. A staff that became a serpent. A hand turned leprous and whole again. Water from the Nile turned to blood.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_9",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Aaron your brother will speak for you. You will be as God to him; he will be your prophet."
+      "text": "Aaron your brother will speak for you. You will be as God to him; he will be your prophet.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_10",
       "speaker": "moses",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "O Lord, please send someone else."
+      "text": "O Lord, please send someone else.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_11",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "text": "What is that in your hand?",
-      "cite": "Exodus 4:2"
+      "cite": "Exodus 4:2",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_12",
       "speaker": "moses",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "A staff."
+      "text": "A staff.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "throne_13",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Throw it on the ground."
+      "text": "Throw it on the ground.",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "scene": "throne",

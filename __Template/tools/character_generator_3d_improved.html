@@ -612,8 +612,8 @@ function sharedStandardMaterial(kind, hex, style='plain') {
         settings.roughness = 0.67;
         settings.bumpMap = getBumpTexture('skin'); settings.bumpScale = 0.006;
     } else if (kind === 'hair') {
-        settings.roughness = 0.60;
-        settings.bumpMap = getBumpTexture('hair'); settings.bumpScale = 0.015;
+        settings.roughness = 0.46;
+        settings.bumpMap = getBumpTexture('hair'); settings.bumpScale = 0.03;
     } else if (kind === 'metal') {
         settings.roughness = 0.30; settings.metalness = 0.78;
         settings.bumpMap = getBumpTexture('metal'); settings.bumpScale = 0.008;
@@ -631,6 +631,15 @@ function clothMaterial(hex, materialStyle) { return sharedStandardMaterial('clot
 function metalMaterial(hex) { return sharedStandardMaterial('metal', hex, 'brushed'); }
 function skinMaterial(hex) { return sharedStandardMaterial('skin', hex, 'soft'); }
 function hairMaterial(hex) { return sharedStandardMaterial('hair', hex, 'strand'); }
+
+/* ---------- CHIBI PROPORTIONS ----------
+   Toy-figure look (big head, small body) like the reference maquettes:
+   the head is scaled up beyond the headSize slider, and CHIBI_HEAD_Y is the
+   pivot the enlarged head is measured from so it settles onto the neck
+   instead of floating or sinking. Tweak these two numbers first if the
+   head/body balance needs adjusting. */
+const CHIBI_HEAD_SCALE = 1.35;
+const CHIBI_HEAD_Y = 1.35;
 
 /* ---------- HEAD (lathe-revolved profile, silhouette varies per faceShape/chinShape/foreheadHeight) ---------- */
 function foreheadTopY(foreheadHeight) {
@@ -684,8 +693,9 @@ function buildHead(state) {
         group.add(groove);
     }
     // whole-head scale (Face Size)
-    group.scale.setScalar(state.headSize);
-    group.position.y = 1.6 * (1 - state.headSize); // keep chin roughly anchored to neck
+    const headScale = state.headSize * CHIBI_HEAD_SCALE;
+    group.scale.setScalar(headScale);
+    group.position.y = CHIBI_HEAD_Y * (1 - headScale); // keep chin roughly anchored to neck
     return group;
 }
 
@@ -713,8 +723,9 @@ function buildEars(state) {
     right.rotation.z = -Math.PI/2 * 0.3;
     [left, right].forEach(e => e.scale.setScalar(state.earSize));
     group.add(left, right);
-    group.scale.setScalar(state.headSize);
-    group.position.y = 1.6 * (1 - state.headSize);
+    const headScale = state.headSize * CHIBI_HEAD_SCALE;
+    group.scale.setScalar(headScale);
+    group.position.y = CHIBI_HEAD_Y * (1 - headScale);
     return group;
 }
 
@@ -726,13 +737,20 @@ function buildEyes(state) {
     const irisMat = new THREE.MeshStandardMaterial({ color: col(state.colorEye), roughness: 0.25 });
     const pupilMat = new THREE.MeshStandardMaterial({ color: 0x1a1410, roughness: 0.2 });
 
+    const shineMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.15, emissive: 0x333333 });
+
     const mkEye = (sign) => {
         const eyeGroup = new THREE.Group();
-        const white = new THREE.Mesh(new THREE.SphereGeometry(0.075, 14, 12), whiteMat);
-        const iris = new THREE.Mesh(new THREE.SphereGeometry(0.038, 12, 10), irisMat);
-        const pupil = new THREE.Mesh(new THREE.SphereGeometry(0.016, 8, 8), pupilMat);
-        iris.position.z = 0.06; pupil.position.z = 0.09;
-        eyeGroup.add(white, iris, pupil);
+        // Oversized, glossy eyes are the single biggest ingredient in the
+        // toy-figure/chibi look — big whites, big iris, small pupil, and a
+        // bright highlight dot for the glassy "figurine" shine.
+        const white = new THREE.Mesh(new THREE.SphereGeometry(0.13, 16, 14), whiteMat);
+        const iris = new THREE.Mesh(new THREE.SphereGeometry(0.072, 14, 12), irisMat);
+        const pupil = new THREE.Mesh(new THREE.SphereGeometry(0.03, 10, 8), pupilMat);
+        const shine = new THREE.Mesh(new THREE.SphereGeometry(0.018, 8, 8), shineMat);
+        iris.position.z = 0.09; pupil.position.z = 0.13;
+        shine.position.set(-0.025, 0.03, 0.145);
+        eyeGroup.add(white, iris, pupil, shine);
 
         switch(state.eyeShape) {
             case 'round': eyeGroup.scale.set(1.15, 1.15, 1); break;
@@ -754,8 +772,9 @@ function buildEyes(state) {
     const left = mkEye(-1); left.position.set(-spacing, 1.68, 0.46);
     const right = mkEye(1); right.position.set(spacing, 1.68, 0.46);
     group.add(left, right);
-    group.scale.setScalar(state.headSize);
-    group.position.y = 1.6 * (1 - state.headSize);
+    const headScale = state.headSize * CHIBI_HEAD_SCALE;
+    group.scale.setScalar(headScale);
+    group.position.y = CHIBI_HEAD_Y * (1 - headScale);
     return group;
 }
 
@@ -781,8 +800,9 @@ function buildEyebrows(state) {
         return mesh;
     };
     group.add(mk(-1), mk(1));
-    group.scale.setScalar(state.headSize);
-    group.position.y = 1.6 * (1 - state.headSize);
+    const headScale = state.headSize * CHIBI_HEAD_SCALE;
+    group.scale.setScalar(headScale);
+    group.position.y = CHIBI_HEAD_Y * (1 - headScale);
     return group;
 }
 
@@ -822,8 +842,9 @@ function buildNose(state) {
     // re-apply head scale AFTER nose scale by wrapping
     const wrap = new THREE.Group();
     wrap.add(group);
-    wrap.scale.setScalar(state.headSize);
-    wrap.position.y = 1.6 * (1 - state.headSize);
+    const headScale = state.headSize * CHIBI_HEAD_SCALE;
+    wrap.scale.setScalar(headScale);
+    wrap.position.y = CHIBI_HEAD_Y * (1 - headScale);
     return wrap;
 }
 
@@ -870,8 +891,9 @@ function buildMouth(state) {
         }
     }
     group.add(mesh);
-    group.scale.setScalar(state.headSize);
-    group.position.y = 1.6 * (1 - state.headSize);
+    const headScale = state.headSize * CHIBI_HEAD_SCALE;
+    group.scale.setScalar(headScale);
+    group.position.y = CHIBI_HEAD_Y * (1 - headScale);
     return group;
 }
 
@@ -882,113 +904,184 @@ function buildHair(state) {
     const mat = hairMaterial(state.colorHair);
     const scalpTop = new THREE.Vector3(0, 1.72, 0);
 
-    const cap = (thetaLength, phiStart=0, phiLength=Math.PI*2, radius=0.62, heightScale=1.05) => {
-        const g = new THREE.SphereGeometry(radius, 20, 14, phiStart, phiLength, 0, thetaLength);
+    // Real hairlines sit above the brow and slope backward — higher at the
+    // forehead, lower at the nape — rather than wrapping the skull at a
+    // single flat height. TILT rotates cap/clump placement to match that:
+    // positive "frontness" (facing the face, +Z) is pushed up and in,
+    // negative frontness (the back of the head) is pushed down and out.
+    const TILT = 0.42;
+    const frontLift = (a) => Math.cos(a) * 0.22; // + at front, − at back
+
+    // Thin, tight under-layer — full scalp coverage sitting close to the
+    // head, mainly so no skin shows through the gaps between the clumps
+    // and locks that sit on top of it and do the actual 3D work. Tilted
+    // backward about its own center so the front edge rises above the
+    // brow instead of drooping down over the face.
+    const base = (thetaLength, radius=0.56, heightScale=1.0) => {
+        const g = new THREE.SphereGeometry(radius, 16, 12, 0, Math.PI*2, 0, thetaLength);
         g.scale(1, heightScale, 1);
         const m = new THREE.Mesh(g, mat);
+        m.rotation.x = -TILT;
         m.position.copy(scalpTop);
         return m;
     };
-    const braid = (x, z, len, r=0.045, topY=1.55) => {
-        const g = new THREE.CylinderGeometry(r, r*0.6, len, 8);
+    // A single puffed clump of hair — a sphere sized and pushed outward
+    // enough that it clearly bulges past the scalp instead of hugging it,
+    // so it reads as a lock of hair rather than a smooth skin-like shell.
+    const puff = (x, y, z, r, sx=1, sy=1, sz=1, rotZ=0) => {
+        const g = new THREE.SphereGeometry(r, 12, 10);
+        g.scale(sx, sy, sz);
         const m = new THREE.Mesh(g, mat);
-        m.position.set(x, topY - len/2, z);
-        m.rotation.z = x * 0.25;
+        m.position.set(x, y, z);
+        m.rotation.z = rotZ;
         return m;
+    };
+    // A rounded strand/lock: a cylinder body with sphere caps at both ends
+    // so it has real depth and soft rounded tips (three r128 has no
+    // CapsuleGeometry, so this fakes one) — used for braids, locs, and
+    // flowing/wave pieces that need to swing away from the skull.
+    const lock = (x, y, z, len, rTop, rBottom, rotX=0, rotZ=0, rotY=0) => {
+        const g = new THREE.Group();
+        const body = new THREE.Mesh(new THREE.CylinderGeometry(rTop, rBottom, len, 8), mat);
+        const capTop = new THREE.Mesh(new THREE.SphereGeometry(rTop, 8, 6), mat);
+        capTop.position.y = len/2;
+        const capBottom = new THREE.Mesh(new THREE.SphereGeometry(rBottom, 8, 6), mat);
+        capBottom.position.y = -len/2;
+        g.add(body, capTop, capBottom);
+        g.position.set(x, y, z);
+        g.rotation.set(rotX, rotY, rotZ);
+        return g;
+    };
+    // A ring of clumps around part of the head — the workhorse for
+    // "voluminous helmet" styles like wavy/curly/afro. Clumps facing the
+    // face are lifted up and pulled in (so they sit above the forehead,
+    // not over it); clumps facing the back are dropped down and pushed
+    // out (so the back/nape gets fuller coverage) — a swept-back part.
+    const clumpRing = (count, arcStart, arcEnd, yBase, yWobble, outR, r, sy=0.85) => {
+        for (let i=0;i<count;i++) {
+            const t = count === 1 ? 0 : i/(count-1);
+            const a = arcStart + t*(arcEnd-arcStart);
+            const front = Math.max(0, Math.cos(a)); // 0..1, 1 = dead center front
+            const effR = outR * (1 - 0.35*front);
+            const x = Math.sin(a)*effR, z = Math.cos(a)*effR*0.72 + 0.05;
+            const y = yBase + frontLift(a) + Math.sin(a*3 + i)*yWobble;
+            group.add(puff(x, y, z, r, 1, sy, 1, Math.sin(a)*0.2));
+        }
     };
 
     switch(state.hairStyle) {
-        case 'buzz':
-            group.add(cap(Math.PI*0.52, 0, Math.PI*2, 0.63, 1.02));
+        case 'buzz': {
+            group.add(base(Math.PI*0.52, 0.60, 1.0));
+            clumpRing(16, 0, Math.PI*2, 1.94, 0.02, 0.44, 0.075, 0.7);
             break;
-        case 'short':
-            group.add(cap(Math.PI*0.58, 0, Math.PI*2, 0.65, 1.05));
+        }
+        case 'short': {
+            group.add(base(Math.PI*0.56, 0.60, 1.0));
+            clumpRing(11, -Math.PI*0.15, Math.PI*1.85, 1.92, 0.05, 0.52, 0.14, 0.85);
             break;
+        }
         case 'wavy': {
-            group.add(cap(Math.PI*0.58, 0, Math.PI*2, 0.65, 1.05));
-            for (let i=0;i<6;i++) {
-                const a = (i/6) * Math.PI*2;
-                const bump = new THREE.Mesh(new THREE.SphereGeometry(0.09, 8, 8), mat);
-                bump.position.set(Math.sin(a)*0.6, 1.65 + Math.cos(a*2)*0.06, Math.cos(a)*0.6*0.5 + 0.15);
-                group.add(bump);
-            }
+            group.add(base(Math.PI*0.55, 0.58, 1.0));
+            clumpRing(11, -Math.PI*0.1, Math.PI*1.9, 1.86, 0.09, 0.60, 0.17, 0.9);
+            [-1,1].forEach(s => group.add(lock(s*0.60, 1.35, -0.08, 0.55, 0.15, 0.10, 0, s*0.35, 0)));
             break;
         }
         case 'curly': {
-            group.add(cap(Math.PI*0.55, 0, Math.PI*2, 0.62, 1.0));
-            for (let i=0;i<10;i++) {
-                const a = (i/10) * Math.PI*2;
-                const bump = new THREE.Mesh(new THREE.SphereGeometry(0.08, 8, 8), mat);
-                bump.position.set(Math.sin(a)*0.55, 1.95 + Math.sin(i)*0.05, Math.cos(a)*0.4);
-                group.add(bump);
-            }
+            group.add(base(Math.PI*0.55, 0.56, 0.95));
+            clumpRing(16, 0, Math.PI*2, 1.88, 0.10, 0.56, 0.135, 0.9);
+            clumpRing(9, Math.PI*0.15, Math.PI*1.85, 2.02, 0.06, 0.34, 0.115, 0.9);
             break;
         }
-        case 'afro':
-            group.add(cap(Math.PI*0.7, 0, Math.PI*2, 0.85, 1.0));
+        case 'afro': {
+            group.add(base(Math.PI*0.65, 0.60, 0.9));
+            clumpRing(18, 0, Math.PI*2, 1.96, 0.08, 0.72, 0.20, 0.95);
+            clumpRing(10, 0, Math.PI*2, 2.20, 0.05, 0.40, 0.17, 0.95);
             break;
-        case 'receding':
-            group.add(cap(Math.PI*0.42, 0, Math.PI*2, 0.63, 1.0));
+        }
+        case 'receding': {
+            group.add(base(Math.PI*0.42, 0.60, 1.0));
+            clumpRing(8, Math.PI*0.55, Math.PI*1.45, 1.78, 0.05, 0.55, 0.13, 0.85);
             break;
+        }
         case 'flowing': {
-            group.add(cap(Math.PI*0.58, 0, Math.PI*2, 0.65, 1.05));
-            [-1,1].forEach(s => group.add(braid(s*0.55, -0.1, 0.9, 0.09, 1.7)));
-            group.add(braid(0, -0.5, 0.7, 0.11, 1.65));
+            group.add(base(Math.PI*0.56, 0.58, 1.0));
+            clumpRing(9, -Math.PI*0.1, Math.PI*1.5, 1.88, 0.07, 0.56, 0.15, 0.85);
+            [-1,1].forEach(s => group.add(lock(s*0.58, 1.30, -0.08, 0.95, 0.16, 0.09, 0, s*0.3, 0)));
+            group.add(lock(0, 1.15, -0.52, 0.75, 0.18, 0.10, -0.15, 0, 0));
             break;
         }
         case 'braids': {
-            group.add(cap(Math.PI*0.55, 0, Math.PI*2, 0.62, 1.0));
-            for (let i=-2;i<=2;i++) group.add(braid(i*0.18, -0.55, 0.75 - Math.abs(i)*0.08, 0.045, 1.55));
+            group.add(base(Math.PI*0.53, 0.56, 0.95));
+            clumpRing(9, -Math.PI*0.1, Math.PI*1.5, 1.88, 0.05, 0.52, 0.13, 0.85);
+            for (let i=-2;i<=2;i++) group.add(lock(i*0.18, 1.30, -0.5, 0.75 - Math.abs(i)*0.08, 0.06, 0.035, 0, 0, 0));
             break;
         }
         case 'tied_back': {
-            group.add(cap(Math.PI*0.55, 0, Math.PI*2, 0.62, 1.0));
-            const bun = new THREE.Mesh(new THREE.SphereGeometry(0.14, 12, 10), mat);
-            bun.position.set(0, 1.72, -0.55);
+            group.add(base(Math.PI*0.53, 0.56, 0.95));
+            clumpRing(9, -Math.PI*0.1, Math.PI*1.5, 1.88, 0.05, 0.52, 0.13, 0.85);
+            const bun = new THREE.Mesh(new THREE.SphereGeometry(0.17, 12, 10), mat);
+            bun.position.set(0, 1.72, -0.56);
             group.add(bun);
+            const wrap = new THREE.Mesh(new THREE.TorusGeometry(0.17, 0.03, 6, 14), mat);
+            wrap.position.copy(bun.position);
+            group.add(wrap);
             break;
         }
         case 'shoulder_waves': {
-            group.add(cap(Math.PI*0.58, 0, Math.PI*2, 0.65, 1.05));
+            group.add(base(Math.PI*0.56, 0.58, 1.0));
+            clumpRing(9, -Math.PI*0.1, Math.PI*1.5, 1.88, 0.07, 0.56, 0.15, 0.85);
             [-1,1].forEach(s => {
-                const g = new THREE.CylinderGeometry(0.16, 0.1, 0.85, 10, 1, true);
-                const m = new THREE.Mesh(g, mat);
-                m.position.set(s*0.62, 1.25, -0.05);
-                group.add(m);
+                group.add(lock(s*0.62, 1.25, -0.05, 0.85, 0.17, 0.10, 0, s*0.12, 0));
+                group.add(lock(s*0.68, 0.72, -0.10, 0.55, 0.13, 0.08, 0, s*0.28, 0));
             });
             break;
         }
         case 'side_braid': {
-            group.add(cap(Math.PI*0.55, 0, Math.PI*2, 0.62, 1.0));
-            group.add(braid(0.5, -0.3, 1.0, 0.075, 1.55));
+            group.add(base(Math.PI*0.53, 0.56, 0.95));
+            clumpRing(9, -Math.PI*0.1, Math.PI*1.5, 1.88, 0.05, 0.52, 0.13, 0.85);
+            group.add(lock(0.52, 1.15, -0.28, 1.05, 0.11, 0.05, 0, 0.35, 0));
             break;
         }
         case 'crown_braids': {
-            group.add(cap(Math.PI*0.4, 0, Math.PI*2, 0.6, 0.9));
-            const ring = new THREE.Mesh(new THREE.TorusGeometry(0.62, 0.05, 8, 20), mat);
+            group.add(base(Math.PI*0.4, 0.56, 0.85));
+            const ring = new THREE.Mesh(new THREE.TorusGeometry(0.60, 0.065, 10, 24), mat);
             ring.rotation.x = Math.PI/2;
             ring.position.set(0, 1.90, 0);
             group.add(ring);
-            break;
-        }
-        case 'locs': {
-            group.add(cap(Math.PI*0.55, 0, Math.PI*2, 0.62, 1.0));
-            for (let i=0;i<9;i++) {
-                const a = -Math.PI*0.4 + (i/8)*Math.PI*0.8;
-                const x = Math.sin(a)*0.55, z = Math.cos(a)*0.4 - 0.1;
-                group.add(braid(x, z, 0.9, 0.03, 1.6));
+            for (let i=0;i<10;i++) {
+                const a = (i/10)*Math.PI*2;
+                group.add(puff(Math.sin(a)*0.60, 1.90, Math.cos(a)*0.43+0.02, 0.09,1,0.85,1));
             }
             break;
         }
-        case 'shaved_sides':
-            group.add(cap(Math.PI*0.35, 0, Math.PI*2, 0.60, 0.85));
+        case 'locs': {
+            group.add(base(Math.PI*0.55, 0.54, 0.9));
+            clumpRing(6, -Math.PI*0.3, Math.PI*0.3, 1.88, 0.03, 0.40, 0.11, 0.85);
+            for (let i=0;i<9;i++) {
+                const a = -Math.PI*0.4 + (i/8)*Math.PI*0.8;
+                const x = Math.sin(a)*0.55, z = Math.cos(a)*0.42 - 0.08;
+                group.add(lock(x, 1.30, z, 0.95, 0.05, 0.035, 0, 0, 0));
+            }
             break;
+        }
+        case 'shaved_sides': {
+            group.add(base(Math.PI*0.35, 0.58, 0.8));
+            clumpRing(7, -Math.PI*0.35, Math.PI*0.35, 2.02, 0.04, 0.30, 0.13, 0.85);
+            break;
+        }
+    }
+    // Guaranteed crown coverage — a tight cluster directly on top of the
+    // head — so no style is left with a bald patch at the very crown
+    // regardless of how its side/back rings happen to fall.
+    if (!['shaved_sides','receding'].includes(state.hairStyle)) {
+        clumpRing(7, -Math.PI*0.55, Math.PI*0.55, 2.10, 0.015, 0.20, 0.15, 0.85);
     }
     group.scale.multiplyScalar(state.hairSize);
     const wrap = new THREE.Group();
     wrap.add(group);
-    wrap.scale.setScalar(state.headSize);
-    wrap.position.y = 1.6 * (1 - state.headSize);
+    const headScale = state.headSize * CHIBI_HEAD_SCALE;
+    wrap.scale.setScalar(headScale);
+    wrap.position.y = CHIBI_HEAD_Y * (1 - headScale);
     return wrap;
 }
 
@@ -1047,8 +1140,9 @@ function buildBeard(state) {
     }
     const wrap = new THREE.Group();
     wrap.add(group);
-    wrap.scale.setScalar(state.headSize);
-    wrap.position.y = 1.6 * (1 - state.headSize);
+    const headScale = state.headSize * CHIBI_HEAD_SCALE;
+    wrap.scale.setScalar(headScale);
+    wrap.position.y = CHIBI_HEAD_Y * (1 - headScale);
     return wrap;
 }
 
@@ -1176,8 +1270,9 @@ function buildHat(state) {
     group.scale.multiplyScalar(state.hatSize);
     const wrap = new THREE.Group();
     wrap.add(group);
-    wrap.scale.setScalar(state.headSize);
-    wrap.position.y = 1.6 * (1 - state.headSize);
+    const headScale = state.headSize * CHIBI_HEAD_SCALE;
+    wrap.scale.setScalar(headScale);
+    wrap.position.y = CHIBI_HEAD_Y * (1 - headScale);
     return wrap;
 }
 
@@ -1198,29 +1293,32 @@ function buildTorso(state) {
     // Snowman core: lower body + chest + neck.  Low-poly spheres keep the
     // generator lightweight while still looking good from every angle.
     const lower = new THREE.Mesh(new THREE.SphereGeometry(0.92, 24, 18), outer);
-    lower.scale.set(1.0, 1.08, 0.86);
-    lower.position.set(0, -0.35, 0);
+    lower.scale.set(1.0, 0.90, 0.86);
+    lower.position.set(0, -0.28, 0);
     group.add(lower);
 
     const chest = new THREE.Mesh(new THREE.SphereGeometry(0.72, 24, 18), inner);
-    chest.scale.set(1.03, 1.0, 0.88);
-    chest.position.set(0, 0.62, 0);
+    chest.scale.set(1.03, 0.85, 0.88);
+    chest.position.set(0, 0.54, 0);
     group.add(chest);
 
-    const neck = new THREE.Mesh(new THREE.CylinderGeometry(0.21, 0.25, 0.30, 16), skin);
-    neck.position.set(0, 1.12, 0);
+    // Short neck (or almost none) — chibi/toy figures sit the head close
+    // to the shoulders rather than on a long realistic neck.
+    const neck = new THREE.Mesh(new THREE.CylinderGeometry(0.21, 0.25, 0.16, 16), skin);
+    neck.position.set(0, 1.00, 0);
     group.add(neck);
 
-    // Rounded arms and hands are true 3D objects, not front decorations.
+    // Short, pudgy arms and oversized rounded hands — true 3D objects, not
+    // front decorations — for the stubby toy-figure silhouette.
     [-1, 1].forEach(sign => {
         const arm = new THREE.Mesh(new THREE.SphereGeometry(0.30, 16, 12), outer);
-        arm.scale.set(0.68, 1.55, 0.68);
-        arm.position.set(sign * 0.78, 0.28, 0);
+        arm.scale.set(0.80, 1.10, 0.80);
+        arm.position.set(sign * 0.70, 0.20, 0);
         arm.rotation.z = sign * -0.18;
         group.add(arm);
 
-        const hand = new THREE.Mesh(new THREE.SphereGeometry(0.18, 14, 10), skin);
-        hand.position.set(sign * 0.88, -0.18, 0.02);
+        const hand = new THREE.Mesh(new THREE.SphereGeometry(0.24, 14, 10), skin);
+        hand.position.set(sign * 0.78, 0.02, 0.02);
         group.add(hand);
     });
 
@@ -1290,11 +1388,11 @@ function buildTorso(state) {
         stripe.position.set(-0.26,0.25,0.69); group.add(stripe);
     }
 
-    // Small feet anchor the figure visually and make rear/side rotation easier
-    // to read without introducing skeletal/rigged complexity.
+    // Short legs, chunky feet — anchors the figure visually and keeps the
+    // whole body squat/stubby underneath the oversized head.
     [-1,1].forEach(sign => {
-        const foot = new THREE.Mesh(new THREE.SphereGeometry(0.29,14,10), outer);
-        foot.scale.set(1.25,.65,1.7); foot.position.set(sign*.38,-1.22,0.16); group.add(foot);
+        const foot = new THREE.Mesh(new THREE.SphereGeometry(0.36,14,10), outer);
+        foot.scale.set(1.4,.75,1.55); foot.position.set(sign*.34,-0.95,0.16); group.add(foot);
     });
     return group;
 }

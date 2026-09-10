@@ -1,31 +1,45 @@
 {
   "id": "boaz_notices",
-  "name": "Ch.4 · Boaz Notices",
+  "name": "Ch.4 \u00b7 Boaz Notices",
   "bg": "radial-gradient(circle at 50% 25%, #4a6888, #1a2838 70%)",
   "particle": "dawn",
   "lines": [
     {
+      "id": "boaz_notices_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "text": "Boaz arrived from Bethlehem and greeted the harvesters. His eyes fell upon the woman gleaning among the sheaves.",
-      "cite": "Ruth 2:4-5"
+      "cite": "Ruth 2:4-5",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "boaz_notices_1",
       "speaker": "boaz",
       "fx": "type",
+      "delay": 800,
       "align": "left",
-      "text": "Whose young woman is that?"
+      "text": "Whose young woman is that?",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "boaz_notices_2",
       "speaker": "field_overseer",
       "fx": "fade",
+      "delay": 800,
       "align": "right",
-      "text": "She is the Moabite who came back with Naomi. She asked to glean and has been working steadily since morning."
+      "text": "She is the Moabite who came back with Naomi. She asked to glean and has been working steadily since morning.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "boaz_notices_3",
       "speaker": "boaz",
       "fx": "type",
+      "delay": 800,
       "align": "left",
       "text": "Listen, my daughter. Don't go glean in another field. Stay here with my servant girls. Watch the field where the men are harvesting, and follow along after the girls. I have told the men not to touch you. And whenever you are thirsty, go and drink from the water jars.",
       "cite": "Ruth 2:8-9",
@@ -38,21 +52,31 @@
           "label": "Listen to Boaz's protection",
           "note": "Boaz ensures Ruth's safety among the harvesters."
         }
-      ]
+      ],
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "boaz_notices_4",
       "speaker": "ruth",
       "fx": "bounce",
+      "delay": 800,
       "align": "right",
-      "text": "Why have I found favor in your eyes that you notice me—a foreigner?",
-      "cite": "Ruth 2:10"
+      "text": "Why have I found favor in your eyes that you notice me\u2014a foreigner?",
+      "cite": "Ruth 2:10",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "boaz_notices_5",
       "speaker": "boaz",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "text": "I have been told all about what you have done for your mother-in-law since the death of your husband. May the LORD repay you for what you have done.",
-      "cite": "Ruth 2:11-12"
+      "cite": "Ruth 2:11-12",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "svg": "boaz_notices",

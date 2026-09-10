@@ -6,95 +6,147 @@
   "svg": "placeholder",
   "lines": [
     {
+      "id": "nebo_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "Moses was now a hundred and twenty years old. His eyes were not weak. His legs were not feeble."
+      "text": "Moses was now a hundred and twenty years old. His eyes were not weak. His legs were not feeble.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_1",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Go up this mountain in the Abarim Range \u2014 Mount Nebo \u2014 and look at the land I am giving the Israelites as their own possession."
+      "text": "Go up this mountain in the Abarim Range \u2014 Mount Nebo \u2014 and look at the land I am giving the Israelites as their own possession.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_2",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Then Moses commissioned Joshua son of Nun. \"Be strong and courageous, for you must go with this people into the land that the LORD swore to their ancestors to give them.\""
+      "text": "Then Moses commissioned Joshua son of Nun. \"Be strong and courageous, for you must go with this people into the land that the LORD swore to their ancestors to give them.\"",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_3",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Moses wrote down the law. He gave it to the priests and to all the elders of Israel. He commanded them: read this law aloud every seven years, at the festival of shelters."
+      "text": "Moses wrote down the law. He gave it to the priests and to all the elders of Israel. He commanded them: read this law aloud every seven years, at the festival of shelters.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_4",
       "speaker": "moses",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "I am now a hundred and twenty years old and I am no longer able to lead you. The LORD has said to me, \"You will not cross the Jordan.\""
+      "text": "I am now a hundred and twenty years old and I am no longer able to lead you. The LORD has said to me, \"You will not cross the Jordan.\"",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_5",
       "speaker": "moses",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "Be strong and courageous. Do not be afraid. The LORD your God goes with you. He will never leave you nor forsake you."
+      "text": "Be strong and courageous. Do not be afraid. The LORD your God goes with you. He will never leave you nor forsake you.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_6",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Moses went up from the plains of Moab to Mount Nebo, to the top of Pisgah, across from Jericho."
+      "text": "Moses went up from the plains of Moab to Mount Nebo, to the top of Pisgah, across from Jericho.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_7",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "There the LORD showed him the whole land \u2014 Gilead as far as Dan, all of Naphtali, the territory of Ephraim and Manasseh, all the land of Judah as far as the Mediterranean Sea."
+      "text": "There the LORD showed him the whole land \u2014 Gilead as far as Dan, all of Naphtali, the territory of Ephraim and Manasseh, all the land of Judah as far as the Mediterranean Sea.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_8",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "The Negev, the whole region of the Jordan \u2014 the land from Jericho, the city of palms, all the way to Zoar."
+      "text": "The Negev, the whole region of the Jordan \u2014 the land from Jericho, the city of palms, all the way to Zoar.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_9",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Then Moses, the servant of the LORD, died there in Moab, as the LORD had said. He buried him in the valley, in Moab \u2014 and no one knows where his grave is to this day."
+      "text": "Then Moses, the servant of the LORD, died there in Moab, as the LORD had said. He buried him in the valley, in Moab \u2014 and no one knows where his grave is to this day.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_10",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Moses was a hundred and twenty years old when he died. Yet his eyes were not weak. His legs were not feeble."
+      "text": "Moses was a hundred and twenty years old when he died. Yet his eyes were not weak. His legs were not feeble.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_11",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "The Israelites grieved for Moses for thirty days. Then Joshua son of Nun was filled with the spirit of wisdom. The people obeyed him \u2014 and the story of Moses was over."
+      "text": "The Israelites grieved for Moses for thirty days. Then Joshua son of Nun was filled with the spirit of wisdom. The people obeyed him \u2014 and the story of Moses was over.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "nebo_12",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "But the story he carried was not over."
+      "text": "But the story he carried was not over.",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "scene": "nebo",

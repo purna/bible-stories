@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Plagues Tap — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:14px;flex:none;display:flex;flex-direction:column;align-items:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.5rem;margin:0 0 4px}
+    .sub{text-align:center;font-size:.85rem;opacity:.8;margin-bottom:6px}
+    .hud{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:6px;font-size:.9rem;font-weight:800}
+    .chip{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:4px 10px}
+    .chip.target{background:#fff3bf;border-color:#9d7613}
+    .chip.warn{background:#ffe5b4;border-color:#a85b00}
+    .stage{flex:1;position:relative;width:880px;max-width:100%;margin:0 auto;background:#f3e2c0;border:4px solid var(--ink);border-radius:18px;box-shadow:0 6px 0 #b88f5b;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .stage .sky{position:absolute;left:0;right:0;top:0;height:60%;background:linear-gradient(180deg,#cfe5ff 0%,#ffe7b3 100%)}
+    .stage .ground{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(180deg,#e3c98a 0%,#b89055 100%)}
+    .stage .pyramid{position:absolute;left:40px;bottom:38%;width:160px;height:130px;background:#cfa463;border:3px solid var(--ink);clip-path:polygon(50% 0,100% 100%,0 100%)}
+    .stage .pyramid::after{content:"";position:absolute;left:18%;top:55%;width:8%;height:30%;background:rgba(255,255,255,.6)}
+    .stage .palace{position:absolute;right:30px;bottom:38%;width:200px;height:90px;background:#e7c98d;border:3px solid var(--ink);border-radius:4px}
+    .stage .palace::before{content:"";position:absolute;left:20px;top:-30px;width:60px;height:30px;background:#cfa463;border:3px solid var(--ink);clip-path:polygon(0 100%,50% 0,100% 100%)}
+    .stage .palace::after{content:"";position:absolute;right:20px;top:-30px;width:60px;height:30px;background:#cfa463;border:3px solid var(--ink);clip-path:polygon(0 100%,50% 0,100% 100%)}
+    .stage .door{position:absolute;left:50%;top:30%;width:30px;height:60px;background:#7a4a18;border:2px solid var(--ink);border-radius:14px 14px 0 0;transform:translateX(-50%)}
+    .grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(3,1fr);gap:14px;width:720px;height:380px;max-width:92%;max-height:88%}
+    .slot{background:rgba(255,255,255,.55);border:3px dashed rgba(58,36,16,.5);border-radius:14px;display:flex;align-items:center;justify-content:center;position:relative;transition:background .15s,border-color .15s;cursor:pointer}
+    .slot.target{background:rgba(255,216,77,.4);border-color:#9d7613;border-style:solid}
+    .slot.hit{background:rgba(46,125,50,.4);border-color:var(--good);border-style:solid}
+    .slot.miss{background:rgba(198,40,40,.4);border-color:var(--bad);border-style:solid;animation:shake .35s}
+    @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+    .slot .plague{width:78%;height:78%;display:flex;align-items:center;justify-content:center;animation:popIn .25s ease-out}
+    @keyframes popIn{0%{transform:scale(.3);opacity:0}100%{transform:scale(1);opacity:1}}
+    .slot .plague svg{width:80%;height:80%;display:block}
+    .slot .num{position:absolute;top:4px;left:6px;font-weight:800;font-size:.85rem;background:#fff;border:2px solid var(--ink);border-radius:6px;padding:0 6px;line-height:1.2}
+    .banner{position:absolute;top:8px;left:50%;transform:translateX(-50%);background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 12px;font-weight:800;z-index:5;font-size:.95rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Plagues Tap</h1>
+    <div class="sub">Moses raises his staff. Tap the right plague when it appears.</div>
+    <div class="hud">
+      <div class="chip target" id="targetChip">Plague: Water → Blood</div>
+      <div class="chip" id="roundChip">Round 1 / 10</div>
+      <div class="chip" id="hitsChip">Hits: 0 / 10</div>
+      <div class="chip warn" id="missChip">Misses: 0 / 5</div>
+    </div>
+    <div class="stage">
+      <div class="sky"></div>
+      <div class="ground"></div>
+      <div class="pyramid"></div>
+      <div class="palace"><div class="door"></div></div>
+      <div class="banner" id="banner">Watch for the next plague…</div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 120, timer: true };
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+
+    // 10 plagues of Egypt (Exodus 7-12)
+    const PLAGUES = [
+      { id:'blood',     name:'Water → Blood', svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M5 20 H 55 V 50 a 6 6 0 0 1 -6 6 H 11 a 6 6 0 0 1 -6 -6 Z" fill="#c62828" stroke="#3a2410" stroke-width="3"/><path d="M22 12 c -3 4 0 8 3 10 c 3 -2 6 -6 3 -10 c -2 -3 -4 -3 -6 0 Z" fill="#ff8a80" stroke="#3a2410" stroke-width="2.5"/><path d="M38 6 c -2 3 0 6 2 8 c 2 -2 4 -5 2 -8 c -1 -2 -3 -2 -4 0 Z" fill="#ff8a80" stroke="#3a2410" stroke-width="2.5"/></svg>' },
+      { id:'frogs',     name:'Frogs',         svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><ellipse cx="30" cy="36" rx="20" ry="14" fill="#7cb342" stroke="#3a2410" stroke-width="3"/><circle cx="22" cy="26" r="6" fill="#fff" stroke="#3a2410" stroke-width="2.5"/><circle cx="38" cy="26" r="6" fill="#fff" stroke="#3a2410" stroke-width="2.5"/><circle cx="22" cy="27" r="2.5" fill="#3a2410"/><circle cx="38" cy="27" r="2.5" fill="#3a2410"/><path d="M30 32 l -3 5 h 6 Z" fill="#3a2410"/><path d="M14 38 q -3 4 0 8 M46 38 q 3 4 0 8" stroke="#3a2410" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M14 50 q -2 4 0 6 M46 50 q 2 4 0 6" stroke="#3a2410" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>' },
+      { id:'lice',      name:'Lice',          svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><ellipse cx="30" cy="30" rx="10" ry="14" fill="#a1887f" stroke="#3a2410" stroke-width="2.5"/><circle cx="26" cy="24" r="1.5" fill="#3a2410"/><circle cx="34" cy="24" r="1.5" fill="#3a2410"/><path d="M28 32 q 2 3 4 0" stroke="#3a2410" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M22 18 l -4 -4 M30 14 l 0 -5 M38 18 l 4 -4 M20 30 l -5 0 M40 30 l 5 0" stroke="#3a2410" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="50" r="3" fill="#a1887f" stroke="#3a2410" stroke-width="1.5"/><circle cx="50" cy="50" r="3" fill="#a1887f" stroke="#3a2410" stroke-width="1.5"/><circle cx="30" cy="55" r="3" fill="#a1887f" stroke="#3a2410" stroke-width="1.5"/></svg>' },
+      { id:'flies',     name:'Flies',         svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><ellipse cx="30" cy="32" rx="8" ry="11" fill="#3a2410"/><path d="M22 28 q -8 -2 -10 6 q 6 0 10 -2 Z" fill="#7e57c2" stroke="#3a2410" stroke-width="2"/><path d="M38 28 q 8 -2 10 6 q -6 0 -10 -2 Z" fill="#7e57c2" stroke="#3a2410" stroke-width="2"/><circle cx="27" cy="28" r="2" fill="#fff"/><circle cx="33" cy="28" r="2" fill="#fff"/><path d="M30 21 v 8" stroke="#fff" stroke-width="1.5"/></svg>' },
+      { id:'pestilence',name:'Pestilence',    svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M10 40 c 5 -10 10 -10 15 0 c 5 -10 10 -10 15 0 c 5 -10 10 -10 15 0" fill="none" stroke="#3a2410" stroke-width="3" stroke-linecap="round"/><circle cx="15" cy="22" r="6" fill="#8d6e63" stroke="#3a2410" stroke-width="2.5"/><path d="M14 20 h 2 M16 20 h 2" stroke="#3a2410" stroke-width="1.5"/><circle cx="45" cy="20" r="5" fill="#8d6e63" stroke="#3a2410" stroke-width="2.5"/></svg>' },
+      { id:'boils',     name:'Boils',         svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="40" height="40" rx="6" fill="#f8c4a8" stroke="#3a2410" stroke-width="3"/><circle cx="20" cy="22" r="4" fill="#c62828" stroke="#3a2410" stroke-width="2"/><circle cx="36" cy="20" r="3" fill="#c62828" stroke="#3a2410" stroke-width="2"/><circle cx="28" cy="34" r="5" fill="#c62828" stroke="#3a2410" stroke-width="2"/><circle cx="42" cy="38" r="3" fill="#c62828" stroke="#3a2410" stroke-width="2"/><circle cx="16" cy="40" r="2.5" fill="#c62828" stroke="#3a2410" stroke-width="2"/></svg>' },
+      { id:'hail',      name:'Hail',          svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M14 24 a 8 8 0 0 1 8 -8 h 16 a 8 8 0 0 1 8 8 v 8 a 8 8 0 0 1 -8 8 h -16 a 8 8 0 0 1 -8 -8 Z" fill="#b0bec5" stroke="#3a2410" stroke-width="3"/><circle cx="22" cy="20" r="3" fill="#fff"/><circle cx="30" cy="16" r="2" fill="#fff"/><circle cx="38" cy="20" r="3" fill="#fff"/><path d="M10 44 l 4 6 l -2 1 l 4 4 l -2 1 l 4 4" stroke="#3a2410" stroke-width="2" fill="none"/><path d="M44 44 l -4 6 l 2 1 l -4 4 l 2 1 l -4 4" stroke="#3a2410" stroke-width="2" fill="none"/></svg>' },
+      { id:'locusts',   name:'Locusts',       svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><ellipse cx="30" cy="34" rx="14" ry="10" fill="#8d6e63" stroke="#3a2410" stroke-width="2.5"/><ellipse cx="30" cy="20" rx="8" ry="6" fill="#a1887f" stroke="#3a2410" stroke-width="2.5"/><circle cx="27" cy="19" r="1.5" fill="#3a2410"/><circle cx="33" cy="19" r="1.5" fill="#3a2410"/><path d="M18 30 q -6 -2 -8 4 M42 30 q 6 -2 8 4" stroke="#3a2410" stroke-width="2.5" fill="none"/><path d="M22 44 l -2 6 l 2 0 l -2 4 M38 44 l 2 6 l -2 0 l 2 4" stroke="#3a2410" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M26 44 l 0 8 M34 44 l 0 8" stroke="#3a2410" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>' },
+      { id:'darkness',  name:'Darkness',      svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="20" fill="#3a2410" stroke="#1d1208" stroke-width="3"/><circle cx="24" cy="26" r="3" fill="#fff"/><circle cx="36" cy="26" r="3" fill="#fff"/><path d="M22 38 q 8 4 16 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M10 12 l -2 4 l 4 -2 Z M50 12 l 2 4 l -4 -2 Z" fill="#ffd84d" stroke="#3a2410" stroke-width="1.5"/></svg>' },
+      { id:'firstborn', name:'Death of Firstborn', svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M14 50 V 30 a 16 16 0 0 1 32 0 V 50" fill="none" stroke="#3a2410" stroke-width="3"/><path d="M30 20 v 6 M30 32 v 6" stroke="#3a2410" stroke-width="3" stroke-linecap="round"/><circle cx="30" cy="14" r="6" fill="#3a2410"/><path d="M10 50 H 50" stroke="#3a2410" stroke-width="3" stroke-linecap="round"/></svg>' },
+    ];
+
+    const SUN_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+    const HOURGLASS_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+
+    const grid=document.getElementById('grid'),banner=document.getElementById('banner');
+    const targetChip=document.getElementById('targetChip'),roundChip=document.getElementById('roundChip'),hitsChip=document.getElementById('hitsChip'),missChip=document.getElementById('missChip');
+    const modal=document.getElementById('modal'),modalCard=document.getElementById('modalCard'),modalIcon=document.getElementById('modalIcon'),modalTitle=document.getElementById('modalTitle'),modalText=document.getElementById('modalText'),modalBtn=document.getElementById('modalBtn');
+
+    function showModal(kind, title, lines, btnLabel){
+      modalCard.classList.remove('success','timeout');
+      if(kind==='success') modalCard.classList.add('success');
+      if(kind==='timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind==='success' ? SUN_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    let round=0, hits=0, misses=0, active=null, activeSlot=null, timeUp=false, missLocked=false;
+    const MAX_MISSES = 5;
+    const SHOWN_MS = 2400;
+    const HIDDEN_MS = 900;
+    const slots = [];
+
+    function buildGrid(){
+      for (let i=0;i<15;i++){
+        const s = document.createElement('div');
+        s.className = 'slot';
+        s.dataset.idx = i;
+        s.innerHTML = '<span class="num">'+i+'</span>';
+        s.addEventListener('click', ()=> onTap(s));
+        grid.appendChild(s);
+        slots.push(s);
+      }
+    }
+
+    function placePlague(){
+      if (timeUp) return;
+      if (round >= PLAGUES.length){
+        finish(true);
+        return;
+      }
+      // Choose a slot that doesn't have the active plague
+      const free = slots.filter(s => s !== activeSlot);
+      const slot = free[Math.floor(Math.random()*free.length)];
+      activeSlot = slot;
+      const plague = PLAGUES[round];
+      slot.classList.add('target');
+      slot.innerHTML = '<span class="num">'+slot.dataset.idx+'</span><div class="plague">'+plague.svg+'</div>';
+      active = plague.id;
+      targetChip.textContent = `Plague: ${plague.name}`;
+      roundChip.textContent = `Round ${round+1} / ${PLAGUES.length}`;
+      // Auto-hide if not tapped
+      slot._hideTimer = setTimeout(()=> {
+        if (slot === activeSlot){
+          hideActive();
+        }
+      }, SHOWN_MS);
+    }
+
+    function hideActive(){
+      if (!activeSlot) return;
+      const s = activeSlot;
+      s.classList.remove('target');
+      s.innerHTML = '<span class="num">'+s.dataset.idx+'</span>';
+      activeSlot = null;
+      active = null;
+      if (round < PLAGUES.length && !timeUp){
+        setTimeout(placePlague, HIDDEN_MS);
+      } else if (round >= PLAGUES.length){
+        finish(true);
+      }
+    }
+
+    function onTap(slot){
+      if (timeUp) return;
+      if (missLocked) return;
+      if (!active) {
+        // Miss: tapped empty slot
+        slot.classList.add('miss');
+        registerMiss();
+        setTimeout(()=> slot.classList.remove('miss'), 400);
+        return;
+      }
+      if (slot !== activeSlot) {
+        slot.classList.add('miss');
+        registerMiss();
+        setTimeout(()=> slot.classList.remove('miss'), 400);
+        return;
+      }
+      // Hit
+      clearTimeout(slot._hideTimer);
+      slot.classList.remove('target');
+      slot.classList.add('hit');
+      const plague = PLAGUES[round];
+      slot.innerHTML = '<span class="num">'+slot.dataset.idx+'</span><div class="plague">'+plague.svg+'</div>';
+      setTimeout(()=>{
+        slot.classList.remove('hit');
+        slot.innerHTML = '<span class="num">'+slot.dataset.idx+'</span>';
+      }, 500);
+      hits++;
+      round++;
+      hitsChip.textContent = `Hits: ${hits} / ${PLAGUES.length}`;
+      activeSlot = null;
+      active = null;
+      if (round >= PLAGUES.length){
+        finish(true);
+      } else {
+        setTimeout(placePlague, HIDDEN_MS);
+      }
+    }
+
+    function registerMiss(){
+      misses++;
+      missChip.textContent = `Misses: ${misses} / ${MAX_MISSES}`;
+      if (misses >= MAX_MISSES){
+        finish(false, 'pharaoh hardened');
+      }
+    }
+
+    function buildBanner(){
+      banner.textContent = 'Moses raises his staff…';
+    }
+
+    function finish(success, reason){
+      if (timeUp) return;
+      timeUp = true;
+      if (success){
+        showModal('success','Let my people go!',['All ten plagues witnessed.', '"The Lord brought us out of Egypt with a mighty hand." — Deuteronomy 6:21'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'plagues_tap'}, '*');
+      } else {
+        showModal('timeout','Pharaoh’s heart hardened.',[reason || 'Too many mistakes.', '"But the Lord hardened Pharaoh’s heart." — Exodus 9:12'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    buildGrid();
+    buildBanner();
+    misses=0; missChip.textContent = `Misses: 0 / ${MAX_MISSES}`;
+    setTimeout(placePlague, 600);
+
+    addEventListener('game-timeout', () => { if (!timeUp) { timeUp = true; finish(false, 'time up'); } });
+  </script>
+</body>
+</html>

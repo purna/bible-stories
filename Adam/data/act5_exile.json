@@ -1,0 +1,165 @@
+{
+  "id": "exile",
+  "name": "Exile",
+  "bg": "radial-gradient(circle at 30% 30%, #0A0812, #061224 65%, #030b18)",
+  "particle": "stars",
+  "svg": "exile_eden",
+  "audio": [
+    "assets/audio/music/Act5_The_Long_Road_to_Yuma.ogg",
+    "assets/audio/music/Act5_The_Long_Road_to_Yuma.mp3"
+  ],
+  "lines": [
+    {
+      "id": "exile_0",
+      "sfx": "WHERE ARE YOU?",
+      "speaker": "god",
+      "fx": "shake",
+      "delay": 800,
+      "text": "Adam, where are you?",
+      "align": "center",
+      "svg": "exile_eden",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_1",
+      "speaker": "adam",
+      "fx": "fade",
+      "delay": 800,
+      "text": "I heard You in the garden, and I was afraid because I was naked. So I hid.",
+      "align": "right",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "God spoke to the serpent, and pronounced judgment on the curse of the earth.",
+      "align": "left",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_3",
+      "speaker": "god",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Because you have listened to your wife and eaten... the ground is cursed.",
+      "align": "center",
+      "svg": "exile_judged",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_4",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "He made garments of skin for them \u2014 covering their nakedness with His own hands.",
+      "align": "center",
+      "svg": "exile_garments",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Then the Lord God said, 'Now the man has become like one of us, knowing good and evil.'",
+      "align": "center",
+      "svg": "exile_dawn",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_6",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "Behold \u2014 he has become like one of us. Now he might reach out and take also from the tree of life, and live forever.",
+      "align": "center",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_7",
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/exile_footsteps.mp3",
+      "fx": "shake",
+      "delay": 800,
+      "text": "So the Lord drove out the man \u2014 to bar the way to the tree of life that he might not eat and live forever.",
+      "align": "center",
+      "svg": "exile_driven",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "And Eden faded behind them. The gates were closed. The way was barred by flaming sword.",
+      "align": "left",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_9",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "Years passed. Cain and Abel brought offerings. God accepted Abel's \u2014 but looked with favor on Cain's sacrifice.",
+      "align": "right",
+      "svg": "cain_abel",
+      "choices": [
+        {
+          "label": "Hold your ground in anger \ud83d\ude20",
+          "note": "Cain's path. The seed of the serpent grows in the heart."
+        },
+        {
+          "label": "Lay down your pride \u271d\ufe0f",
+          "note": "Cain's path not taken. But grace was still offered, if only he would listen."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_10",
+      "sfx": "THWACK!",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "text": "Cain turned on his brother Abel in the field. And the blood of Abel cried out from the ground.",
+      "align": "center",
+      "svg": "cain_abel",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_11",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "The ground was cursed. The serpent was judged. The way to paradise was barred. From dust we came \u2014 and to dust we return.",
+      "align": "center",
+      "svg": "exile_dawn",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "exile_12",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "But even in exile, the promise remained \u2014 the seed of the woman would one day crush the serpent's head.",
+      "align": "center",
+      "svg": "exile_dawn",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

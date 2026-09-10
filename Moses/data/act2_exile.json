@@ -6,83 +6,127 @@
   "svg": "placeholder",
   "lines": [
     {
+      "id": "exile_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "Years passed. Moses saw an Egyptian striking a Hebrew. He looked around \u2014 no one watching."
+      "text": "Years passed. Moses saw an Egyptian striking a Hebrew. He looked around \u2014 no one watching.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "exile_1",
       "speaker": "narrator",
       "fx": "shake",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "sfx": "STRIKE!",
-      "text": "He struck the Egyptian and hid him in the sand."
+      "text": "He struck the Egyptian and hid him in the sand.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "exile_2",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "The next day he tried to break up a fight between two Hebrews. One of them turned on him."
+      "text": "The next day he tried to break up a fight between two Hebrews. One of them turned on him.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "exile_3",
       "speaker": "israelite_elder",
       "fx": "fade",
+      "delay": 800,
       "align": "right",
       "svg": "placeholder",
-      "text": "Who made you ruler and judge over us? Are you going to kill me like you killed the Egyptian?"
+      "text": "Who made you ruler and judge over us? Are you going to kill me like you killed the Egyptian?",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "exile_4",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Pharaoh heard of it. He tried to kill Moses. So Moses ran \u2014 into the desert, toward Midian."
+      "text": "Pharaoh heard of it. He tried to kill Moses. So Moses ran \u2014 into the desert, toward Midian.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "exile_5",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "He sat by a well. Seven daughters of the priest of Midian came to draw water for their father's flock."
+      "text": "He sat by a well. Seven daughters of the priest of Midian came to draw water for their father's flock.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "exile_6",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Some shepherds drove them away. Moses stood up and helped them. Water for the flock. Shade for the girls."
+      "text": "Some shepherds drove them away. Moses stood up and helped them. Water for the flock. Shade for the girls.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "exile_7",
       "speaker": "zipporah",
       "fx": "fade",
+      "delay": 800,
       "align": "right",
       "svg": "placeholder",
-      "text": "Why have you come? You are an Egyptian."
+      "text": "Why have you come? You are an Egyptian.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "exile_8",
       "speaker": "moses",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "I was. I am not now. I am a stranger in a strange land \u2014 like you."
+      "text": "I was. I am not now. I am a stranger in a strange land \u2014 like you.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "exile_9",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Moses settled with Jethro. He married Zipporah. He kept sheep in the wilderness for forty years."
+      "text": "Moses settled with Jethro. He married Zipporah. He kept sheep in the wilderness for forty years.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "exile_10",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "sfx": "FIRE!",
-      "text": "One day, near Horeb \u2014 the mountain of God \u2014 a bush was on fire. And it did not burn up."
+      "text": "One day, near Horeb \u2014 the mountain of God \u2014 a bush was on fire. And it did not burn up.",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "scene": "exile",

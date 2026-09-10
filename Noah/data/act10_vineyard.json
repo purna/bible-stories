@@ -1,0 +1,98 @@
+{
+  "id": "vineyard",
+  "name": "Ch.10 \u00b7 The Vineyard",
+  "bg": "radial-gradient(circle at 30% 70%, #1a0e08, #0c0604 65%, #040202)",
+  "particle": "ember",
+  "svg": "ch10_noah_plants",
+  "lines": [
+    {
+      "id": "vineyard_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch10_noah_plants",
+      "text": "Time passed. Noah planted a vineyard. He worked the soil. He waited for the harvest.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "vineyard_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch10_noah_drinks",
+      "text": "Then he drank the wine. He drank too much. And he lay uncovered in his tent.",
+      "cite": "Genesis 9:21",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "vineyard_2",
+      "speaker": "son",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "svg": "ch10_ham_mocks",
+      "text": "(Ham went out and told his brothers, mocking what he had seen.)",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "vineyard_3",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch10_shem_japheth",
+      "text": "But Shem and Japheth took a garment and walked in backwards, covering their father without looking.",
+      "cite": "Genesis 9:23",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "vineyard_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch10_choice",
+      "text": "The one righteous man, who built the ark and survived the flood, stumbled here.",
+      "choices": [
+        {
+          "label": "You are Shem or Japheth \u2014 cover without looking \ud83d\ude48",
+          "note": "\"Blessed be the LORD, the God of Shem.\" \u2014 Gen 9:26. Dignity over exposure."
+        },
+        {
+          "label": "You are Ham \u2014 go and tell \ud83d\udc41\ufe0f",
+          "note": "\"Cursed be Canaan.\" \u2014 Gen 9:25. The long shadow of a moment's disrespect."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "vineyard_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch10_end",
+      "text": "The story doesn't end with the rainbow. It ends with a man who built everything right \u2014 and then failed in a tent.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "vineyard_6",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch10_end",
+      "text": "And it ends with two sons who chose, quietly, to show him grace anyway.",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

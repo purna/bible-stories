@@ -1,0 +1,118 @@
+{
+  "id": "census",
+  "name": "Ch.11 · The Census",
+  "bg": "radial-gradient(circle at 50% 40%, #1a0e08, #0a0604 65%, #040202)",
+  "particle": "ember",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "census_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Again the anger of the LORD was kindled against Israel, and He stirred up David to say, 'Go, count the people.' Joab the commander went out through all Israel and came back to David.",
+      "cite": "2 Samuel 24:1",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "census_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The number came in: eight hundred thousand men able to draw the sword in Judah alone. David felt the weight of every name on his own shoulders.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "census_2",
+      "speaker": "david",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "I have sinned greatly, for I have walked in folly. Now, I pray Thee, take away the iniquity of Thy servant, for I have done very foolishly.",
+      "cite": "2 Samuel 24:10",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "census_3",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE KING'S HAND BRINGS THE PLAGUE",
+      "text": "The king's own hand had numbered the people. The king's own hand must now choose the punishment, and the king's own hand must build the altar.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "census_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David chose the plague. Seventy days of death fell on the land, and the angel of the LORD reached out his hand to destroy Jerusalem.",
+      "cite": "2 Samuel 24:16",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "census_5",
+      "speaker": "david",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "text": "I am the one who has sinned. These sheep have done nothing. Let Thine hand fall on me and my father's house, not on the people.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "census_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The angel stayed his hand at the threshing floor of Araunah the Jebusite. David bought that ground for sixty shekels of silver and built an altar upon it.",
+      "cite": "2 Samuel 24:25",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "census_7",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "RESPONSIBILITY IS THE ALTAR'S STONE",
+      "text": "The king took the plague on his own name and the land was spared. That hill became the place where the temple would one day rise, on the ground a king bought with his own repentance.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "census_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David lay on the ground before the altar, and the plague ceased. The king had learned that a crown cannot count the people without counting the cost.",
+      "choices": [
+        {
+          "label": "Carry the cost of every name 📜",
+          "note": "A ruler who forgets the people behind the number rules by fear."
+        },
+        {
+          "label": "Let Joab do the counting next time 👔",
+          "note": "Delegation keeps a throne safe. It does not keep it honest."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "census",
+  "foreground": "fg_census",
+  "index": 10
+}

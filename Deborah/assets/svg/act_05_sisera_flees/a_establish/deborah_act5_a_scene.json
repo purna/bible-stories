@@ -1,0 +1,32 @@
+{
+  "story": "Deborah",
+  "act": 5,
+  "chapter": "Sisera Flees",
+  "brief": "Track the fleeing commander to Jael’s tent.",
+  "scene": {
+    "id": "A",
+    "name": "Establish"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "environment": "interior",
+  "time": "day",
+  "seed": 1,
+  "background": "deborah_act5_a_background.svg",
+  "foreground": "deborah_act5_a_foreground.svg",
+  "foregroundBackgroundIncluded": false,
+  "foregroundDetails": {
+    "plants": true,
+    "rocks": true,
+    "structures": true,
+    "props": true,
+    "framing": true
+  },
+  "layering": [
+    "background",
+    "optional middle-ground/characters",
+    "foreground"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "sisera_flees",
+  "particle": "dusk",
+  "bg": "radial-gradient(circle at 48% 24%, #a58d65, #40382f 72%)",
+  "game": "sequence",
+  "gameTitle": "Follow the trail",
+  "gameInstructions": "Track the route in order: riverbank, open ground, then Jael\u2019s tent.",
+  "lines": [
+    {
+      "id": "sisera_flees_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Sisera left his chariot and fled on foot while Barak pursued the scattered army.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "sisera_flees_1",
+      "speaker": "israelite_scout",
+      "fx": "type",
+      "delay": 800,
+      "align": "center",
+      "text": "Footprints leave the riverbank and cross the open ground toward the tents of Heber.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "sisera_flees_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "He came to the tent of Jael, believing there was peace between her household and King Jabin.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "sisera_flees_3",
+      "speaker": "jael",
+      "fx": "type",
+      "delay": 800,
+      "align": "center",
+      "text": "Come, my lord, come right in. Do not be afraid.",
+      "cite": "Judges 4:17\u201318",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "gameSteps": [
+    [
+      "river",
+      "1 \u00b7 Check the riverbank"
+    ],
+    [
+      "trail",
+      "2 \u00b7 Follow the footprints"
+    ],
+    [
+      "tent",
+      "3 \u00b7 Reach Jael\u2019s tent"
+    ]
+  ],
+  "gameSuccess": "The trail leads from the abandoned chariot to Jael\u2019s tent.",
+  "name": "Ch.5 \u00b7 Sisera Flees",
+  "assetFolder": "act_05_sisera_flees",
+  "assetStem": "deborah_act5"
+}

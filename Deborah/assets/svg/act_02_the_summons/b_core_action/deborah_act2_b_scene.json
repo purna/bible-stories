@@ -1,0 +1,32 @@
+{
+  "story": "Deborah",
+  "act": 2,
+  "chapter": "The Summons",
+  "brief": "Carry Deborah’s message to Barak.",
+  "scene": {
+    "id": "B",
+    "name": "Core Action"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "environment": "desert",
+  "time": "day",
+  "seed": 1,
+  "background": "deborah_act2_b_background.svg",
+  "foreground": "deborah_act2_b_foreground.svg",
+  "foregroundBackgroundIncluded": false,
+  "foregroundDetails": {
+    "plants": true,
+    "rocks": true,
+    "structures": true,
+    "props": true,
+    "framing": true
+  },
+  "layering": [
+    "background",
+    "optional middle-ground/characters",
+    "foreground"
+  ]
+}

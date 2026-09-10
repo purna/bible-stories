@@ -1,0 +1,77 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "creation",
+      "name": "Let There Be Light",
+      "file": "act1_creation.json",
+      "svg": "creation_cosmos",
+      "particle": "constellation",
+      "bg": "radial-gradient(circle at 30% 30%, #0a0812, #1a1224 65%, #0d1b2a)",
+      "audio": [
+        "assets/audio/music/Act1_Morning_on_the_Mesa.ogg",
+        "assets/audio/music/Act1_Morning_on_the_Mesa.mp3"
+      ]
+    },
+    {
+      "id": "garden",
+      "name": "The Garden",
+      "file": "act2_garden.json",
+      "svg": "garden_eden",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #2b1d0c, #1a0e06 65%, #0d0705)",
+      "audio": [
+        "assets/audio/music/Act2_After_the_Spring_Rain.ogg",
+        "assets/audio/music/Act2_After_the_Spring_Rain.mp3"
+      ]
+    },
+    {
+      "id": "helper",
+      "name": "Helper Suitable",
+      "file": "act3_helper.json",
+      "svg": "forming_eve",
+      "particle": "dream",
+      "bg": "radial-gradient(circle at 50% 40%, #2b1220, #160a14 65%, #0d0709)",
+      "audio": [
+        "assets/audio/music/Act3_Before_the_Sun_Climbs.ogg",
+        "assets/audio/music/Act3_Before_the_Sun_Climbs.mp3"
+      ]
+    },
+    {
+      "id": "temptation",
+      "name": "The Temptation",
+      "file": "act4_temptation.json",
+      "svg": "serpent_tree",
+      "particle": "fire",
+      "bg": "radial-gradient(circle at 50% 60%, #8b2500, #3d1200 65%, #1a0700)",
+      "audio": [
+        "assets/audio/music/Act4_The_Open_Gate_at_Twilight.ogg",
+        "assets/audio/music/Act4_The_Open_Gate_at_Twilight.mp3"
+      ]
+    },
+    {
+      "id": "exile",
+      "name": "Exile",
+      "file": "act5_exile.json",
+      "svg": "exile_eden",
+      "particle": "stars",
+      "bg": "radial-gradient(circle at 30% 30%, #0A0812, #061224 65%, #030b18)",
+      "audio": [
+        "assets/audio/music/Act5_The_Long_Road_to_Yuma.ogg",
+        "assets/audio/music/Act5_The_Long_Road_to_Yuma.mp3"
+      ]
+    },
+    {
+      "id": "west",
+      "name": "West of the Divide",
+      "file": "act6_west.json",
+      "svg": "exile_dawn",
+      "particle": "stars",
+      "bg": "radial-gradient(circle at 50% 50%, #0d1b2a, #061224 65%, #030b18)",
+      "audio": [
+        "assets/audio/music/Act6_West_of_the_Divide.ogg",
+        "assets/audio/music/Act6_West_of_the_Divide.mp3"
+      ]
+    }
+  ]
+}

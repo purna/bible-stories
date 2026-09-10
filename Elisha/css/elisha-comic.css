@@ -1,0 +1,95 @@
+/* Elisha — Comic CSS. Palettes derived from canon.json. */
+:root { --ink: #0A0812; --cream: #FFF7E8; --panel-bg: #1a0e08; --panel-dots: #-1ee-10a-98; --accent-color: #d4a76a; --bubble-bg: #FFF1D2; --text-color: #0A0812; }
+
+/* ── Act Palettes ─────────────────────────────── */
+.palette-act-1 { --panel-bg:#1a2a1a; --panel-dots:#-1ee-31e-1ee; --accent-color:#d4a76a; --bubble-bg:#fff7e8; --text-color:#0A0812; }
+.palette-act-2 { --panel-bg:#2d1a0e; --panel-dots:#-357-1ee-10a; --accent-color:#d4a76a; --bubble-bg:#fff7e8; --text-color:#0A0812; }
+.palette-act-3 { --panel-bg:#2a1a10; --panel-dots:#-31e-1ee-130; --accent-color:#d4a76a; --bubble-bg:#fff7e8; --text-color:#0A0812; }
+.palette-act-4 { --panel-bg:#1a1024; --panel-dots:#-1ee-130-2ac; --accent-color:#d4a76a; --bubble-bg:#fff7e8; --text-color:#0A0812; }
+.palette-act-5 { --panel-bg:#241810; --panel-dots:#-2ac-1c8-130; --accent-color:#d4a76a; --bubble-bg:#fff7e8; --text-color:#0A0812; }
+.palette-act-6 { --panel-bg:#1a2a14; --panel-dots:#-1ee-31e-17c; --accent-color:#d4a76a; --bubble-bg:#fff7e8; --text-color:#0A0812; }
+.palette-act-7 { --panel-bg:#2a1a10; --panel-dots:#-31e-1ee-130; --accent-color:#d4a76a; --bubble-bg:#fff7e8; --text-color:#0A0812; }
+.palette-act-8 { --panel-bg:#1a0e08; --panel-dots:#-1ee-10a-98; --accent-color:#d4a76a; --bubble-bg:#fff7e8; --text-color:#0A0812; }
+.palette-act-9 { --panel-bg:#241a10; --panel-dots:#-2ac-1ee-130; --accent-color:#d4a76a; --bubble-bg:#fff7e8; --text-color:#0A0812; }
+
+/* ── Wind-swept field backdrop (all chapters) ─── */
+body.palette-act-1 #elishaFieldBackdrop,
+body.palette-act-2 #elishaFieldBackdrop,
+body.palette-act-3 #elishaFieldBackdrop,
+body.palette-act-4 #elishaFieldBackdrop,
+body.palette-act-5 #elishaFieldBackdrop,
+body.palette-act-6 #elishaFieldBackdrop,
+body.palette-act-7 #elishaFieldBackdrop,
+body.palette-act-8 #elishaFieldBackdrop,
+body.palette-act-9 #elishaFieldBackdrop,
+body.palette-act-10 #elishaFieldBackdrop {
+  opacity: .48;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.elisha-field-sun {
+  position: absolute; left: 0; top: 0; width: 100%; height: 220%;
+  transform: translateY(-42%);
+  background: radial-gradient(circle at 52% 47%, rgba(255, 220, 105, .95) 0 4%, rgba(229, 166, 58, .48) 8%, rgba(82, 123, 157, .08) 27%, transparent 48%);
+}
+
+.elisha-grass-field { position: absolute; inset: 0; }
+
+.elisha-grass-clump {
+  position: absolute; bottom: -1px; width: var(--clump-size); height: var(--clump-size);
+  overflow: hidden; transform: translateX(-50%); transform-origin: 50% 100%;
+  opacity: var(--clump-opacity);
+  animation: elishaGentleBreeze var(--sway-time) ease-in-out var(--sway-delay) infinite;
+  will-change: transform;
+}
+
+.elisha-grass-blade {
+  position: absolute; bottom: -100%; left: -50%; width: 100%; height: 160%;
+  border-right: max(2px, 1.8vmin) solid var(--blade-color); border-top-right-radius: 50%;
+}
+
+.elisha-grass-blade:nth-child(2) { bottom: -230%; left: -150%; width: 200%; height: 300%; border-top-right-radius: 20%; }
+.elisha-grass-blade:nth-child(3) { bottom: -300%; left: 50%; width: 200%; height: 360%; border-right: 0; border-left: max(2px, 1.8vmin) solid var(--blade-color); border-top-left-radius: 15%; }
+
+@keyframes elishaGentleBreeze {
+  0%, 100% { transform: translateX(-50%) rotate(-.35deg); }
+  50% { transform: translateX(-50%) rotate(.35deg); }
+}
+
+@media (prefers-reduced-motion: reduce) { .elisha-grass-clump { animation: none; } }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: var(--ink); font-family: 'Nunito', sans-serif; color: var(--cream); }
+
+/* ── Comic-cover pulse + follow.js cursor effect ─── */
+#startScreen .comic-cover {
+  animation: comicCoverPulse 3.2s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform, box-shadow;
+  transition: box-shadow .2s ease;
+}
+#startScreen .comic-cover:hover {
+  animation: comicCoverPulseHover 1.6s ease-in-out infinite;
+  box-shadow: 14px 14px 0px var(--ink), 0 0 0 4px rgba(255,210,80,.5);
+}
+@keyframes comicCoverPulse {
+  0%, 100% { transform: scale(1); box-shadow: 12px 12px 0px var(--ink); }
+  50%      { transform: scale(1.018); box-shadow: 14px 14px 0px var(--ink), 0 0 24px rgba(255,210,80,.35); }
+}
+@keyframes comicCoverPulseHover {
+  0%, 100% { transform: scale(1.03); box-shadow: 16px 16px 0px var(--ink), 0 0 32px rgba(255,210,80,.55); }
+  50%      { transform: scale(1.05); box-shadow: 18px 18px 0px var(--ink), 0 0 44px rgba(255,210,80,.7); }
+}
+/* follow.js target elements — subtle accent dots that drift toward the cursor */
+[data-follow] {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,210,80,.9), rgba(255,210,80,0) 70%);
+  box-shadow: 0 0 12px rgba(255,210,80,.6);
+  transition: transform .08s linear;
+  will-change: transform;
+}

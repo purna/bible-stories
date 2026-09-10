@@ -1,0 +1,99 @@
+{
+  "id": "waiting",
+  "name": "Ch.7 \u00b7 The Long Wait",
+  "bg": "radial-gradient(circle at 50% 40%, #0c1428, #060a18 65%, #020408)",
+  "particle": "flood",
+  "svg": "ch7_ark_on_ararat",
+  "lines": [
+    {
+      "id": "waiting_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch7_ark_on_ararat",
+      "text": "The ark came to rest on the mountains of Ararat. Still no land in sight.",
+      "cite": "Genesis 8:4",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "waiting_1",
+      "speaker": "noah",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch7_raven_sent",
+      "text": "He opened the window and sent out the raven. It flew back and forth, never returning.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "waiting_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch7_raven_sent",
+      "text": "No news. No land. Just the raven, circling.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "waiting_3",
+      "speaker": "noah",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch7_dove_sent",
+      "text": "Seven days later: the dove. Please come back with something.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "waiting_4",
+      "speaker": "narrator",
+      "fx": "wave",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch7_dove_returns",
+      "text": "The dove came back with a fresh olive leaf in its beak.",
+      "cite": "Genesis 8:11",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "waiting_5",
+      "speaker": "narrator",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch7_dove_returns",
+      "sfx": "OLIVE LEAF!",
+      "text": "Somewhere beneath the water \u2014 trees. Living trees. The earth was coming back.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "waiting_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch7_dove_not_return",
+      "text": "Seven more days. The dove went out \u2014 and did not come back. Dry land was waiting.",
+      "choices": [
+        {
+          "label": "Open the hatch and look \ud83d\udc40",
+          "note": "Blue sky. Mud. The outline of mountains. Real."
+        },
+        {
+          "label": "Wait for God's word before moving \ud83d\ude4f",
+          "note": "Noah waits. It's the right call. The word comes."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

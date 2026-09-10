@@ -1,33 +1,54 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "acts": [
     {
-      "id": "voice_beneath_palm",
-      "name": "Ch.1 · A Voice Beneath the Palm",
-      "file": "act1_voice_beneath_palm.json",
-      "scene": "voice_beneath_palm",
-      "foreground": "fg_voice_beneath_palm"
+      "id": "under_the_palm",
+      "name": "Ch.1 · Under the Palm",
+      "file": "act1_under_the_palm.json",
+      "assetFolder": "act_01_under_the_palm",
+      "assetStem": "deborah_act1"
     },
     {
-      "id": "call_to_courage",
-      "name": "Ch.2 · The Call to Courage",
-      "file": "act2_call_to_courage.json",
-      "scene": "call_to_courage",
-      "foreground": "fg_call_to_courage"
+      "id": "the_summons",
+      "name": "Ch.2 · The Summons",
+      "file": "act2_the_summons.json",
+      "assetFolder": "act_02_the_summons",
+      "assetStem": "deborah_act2"
     },
     {
-      "id": "river_rose",
-      "name": "Ch.3 · The River Rose",
-      "file": "act3_river_rose.json",
-      "scene": "river_rose",
-      "foreground": "fg_river_rose"
+      "id": "gather_at_tabor",
+      "name": "Ch.3 · Gather at Tabor",
+      "file": "act3_gather_at_tabor.json",
+      "assetFolder": "act_03_gather_at_tabor",
+      "assetStem": "deborah_act3"
     },
     {
-      "id": "song_of_peace",
-      "name": "Ch.4 · A Song of Peace",
-      "file": "act4_song_of_peace.json",
-      "scene": "song_of_peace",
-      "foreground": "fg_song_of_peace"
+      "id": "the_storm",
+      "name": "Ch.4 · The Storm",
+      "file": "act4_the_storm.json",
+      "assetFolder": "act_04_the_storm",
+      "assetStem": "deborah_act4"
+    },
+    {
+      "id": "sisera_flees",
+      "name": "Ch.5 · Sisera Flees",
+      "file": "act5_sisera_flees.json",
+      "assetFolder": "act_05_sisera_flees",
+      "assetStem": "deborah_act5"
+    },
+    {
+      "id": "jaels_choice",
+      "name": "Ch.6 · Jael’s Choice",
+      "file": "act6_jaels_choice.json",
+      "assetFolder": "act_06_jael_s_choice",
+      "assetStem": "deborah_act6"
+    },
+    {
+      "id": "the_song",
+      "name": "Ch.7 · The Song",
+      "file": "act7_the_song.json",
+      "assetFolder": "act_07_the_song",
+      "assetStem": "deborah_act7"
     }
   ]
 }

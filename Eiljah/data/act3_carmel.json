@@ -1,0 +1,154 @@
+{
+  "id": "carmel",
+  "name": "Mount Carmel",
+  "bg": "radial-gradient(circle at 50% 80%, #8b2500, #3d1200 60%, #1a0700)",
+  "particle": "wind_carmel",
+  "svg": "mount_carmel_altars",
+  "lines": [
+    {
+      "id": "carmel_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "After a long drought, the LORD told Elijah to show himself to Ahab. The time had come to announce that rain would return.",
+      "align": "left",
+      "svg": "samaria_court",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "carmel_1",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "Ahab's official Obadiah had secretly protected a hundred prophets of the LORD from Jezebel. But now Elijah stood openly before the king.",
+      "align": "center",
+      "svg": "samaria_court",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "carmel_2",
+      "speaker": "elijah",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "Gather all Israel on Mount Carmel. Bring the prophets of Baal. Let the people see who truly answers prayer.",
+      "align": "center",
+      "svg": "mount_carmel_altars",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "carmel_3",
+      "speaker": "elijah",
+      "fx": "type",
+      "delay": 800,
+      "text": "How long will you keep wavering? If the LORD is God, follow him. If Baal is God, follow him.",
+      "align": "right",
+      "svg": "mount_carmel_altars",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "carmel_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "The prophets of Baal cried out from morning until noon. They called, shouted, and performed their rituals\u2014but there was no answer.",
+      "align": "center",
+      "svg": "mount_carmel_altars",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "carmel_5",
+      "speaker": "elijah",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "Cry louder! Perhaps your god is busy, travelling, or asleep and needs to be awakened.",
+      "align": "center",
+      "svg": "mount_carmel_altars",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "carmel_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Then Elijah repaired the LORD's broken-down altar. He used twelve stones, one for each tribe of Israel, and had the sacrifice and wood soaked with water.",
+      "align": "center",
+      "svg": "mount_carmel_altars",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "carmel_7",
+      "speaker": "elijah",
+      "fx": "fly",
+      "delay": 800,
+      "text": "LORD, God of Abraham, Isaac and Israel, show today that you are God in Israel and that I am your servant. Answer me, LORD!",
+      "align": "center",
+      "svg": "mount_carmel_altars",
+      "choices": [
+        {
+          "label": "Pray with confidence",
+          "note": "Elijah's prayer is not a performance. He asks God to turn the people's hearts back to him."
+        },
+        {
+          "label": "Remember who must receive the glory",
+          "note": "The sign is meant to reveal the LORD\u2014not to make Elijah famous."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "carmel_8",
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/altar_fire.mp3",
+      "fx": "shake",
+      "delay": 800,
+      "sfx": "WHOOSH!",
+      "text": "Then the fire of the LORD fell. It consumed the sacrifice, the wood, the stones, the soil, and even the water in the trench.",
+      "align": "center",
+      "svg": "mount_carmel_fire",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "carmel_9",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "The people fell facedown and cried out: The LORD\u2014he is God! The LORD\u2014he is God!",
+      "align": "center",
+      "svg": "mount_carmel_fire",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "carmel_10",
+      "speaker": "elijah",
+      "fx": "type",
+      "delay": 800,
+      "text": "Go back and look toward the sea. The drought is ending.",
+      "align": "right",
+      "svg": "mount_carmel_fire",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "carmel_11",
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/rain_thunder.mp3",
+      "fx": "fade",
+      "delay": 800,
+      "text": "A small cloud appeared. The sky grew dark, the wind rose, and soon the land was filled with rain.",
+      "align": "center",
+      "svg": "mount_carmel_fire",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

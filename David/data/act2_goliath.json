@@ -1,0 +1,139 @@
+{
+  "id": "goliath",
+  "name": "Ch.2 · Goliath",
+  "bg": "radial-gradient(circle at 60% 40%, #2d1a0e, #120a04 65%, #060402)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "goliath_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "For forty days the Philistine champion stood in the valley, morning and evening, calling for a champion of Israel. His height was six cubits and his spear was like a weaver's beam.",
+      "cite": "1 Samuel 17:4",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "goliath_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The men of Israel stood in their lines. No one moved. The giant's voice rolled across the valley like thunder.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "goliath_2",
+      "speaker": "goliath",
+      "fx": "shake",
+      "delay": 800,
+      "align": "right",
+      "text": "Send me a man! Let him come down and fight. If he falls, we serve you. If I fall, we serve your God.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "goliath_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David was in the camp, sent by his father to check on his brothers. He heard the giant's taunt and saw the fear on every Israelite face.",
+      "cite": "1 Samuel 17:22",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "goliath_4",
+      "speaker": "david_young",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "text": "Who is this uncircumcised Philistine, that he should defy the armies of the living God?",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "goliath_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Saul wanted to clothe the boy in his own armour. David had not worn it before. He took it off and chose instead the tools of his trade.",
+      "cite": "1 Samuel 17:38",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "goliath_6",
+      "speaker": "david_young",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "left",
+      "text": "I have not tested these. Let me take them off and go to the giant.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "goliath_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "He took his staff, chose five smooth stones from the brook, and held his sling. The valley fell silent.",
+      "cite": "1 Samuel 17:40",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "goliath_8",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "NOT BY SWORD OR SPEAR!",
+      "text": "The battle belongs to the LORD. Deliver him into your hand.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "goliath_9",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "align": "center",
+      "audioSfx": "assets/audio/sfx/sling_impact.mp3",
+      "text": "David ran toward the enemy, reached for the sling, and let the stone fly. It struck the forehead and the giant fell face down.",
+      "cite": "1 Samuel 17:49",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "goliath_10",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David drew the giant's own sword and cut off his head. The valley erupted. The boy had not swung a sword at all.",
+      "choices": [
+        {
+          "label": "Give the credit to the God of Israel ✝️",
+          "note": "He names the LORD before the people cheer."
+        },
+        {
+          "label": "Let the crowd carry the story 🎉",
+          "note": "Fame is sweet, and the moment is his alone."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "goliath",
+  "foreground": "fg_goliath",
+  "index": 1
+}

@@ -1,0 +1,64 @@
+{
+  "id": "comfort_my_people",
+  "name": "Ch.7 · Comfort My People",
+  "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)",
+  "particle": "dawn",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "comfort_my_people_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Build a road of return through the wilderness.",
+      "cite": "Isaiah 1–66",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "comfort_my_people_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "How can holy vision produce truthful warning and durable hope? — Comfort My People is the next step in that question.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "comfort_my_people_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE WORD STANDS",
+      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "comfort_my_people_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Walk on with the lesson 📖",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment 🕊️",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "comfort_my_people",
+  "foreground": "fg_comfort_my_people",
+  "index": 6
+}

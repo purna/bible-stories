@@ -9,13 +9,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <title>STORY TITLE — An Interactive Comic Book</title>
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="story-runtime.css">
-    <link rel="stylesheet" href="loading-screen.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/story-runtime.css">
+    <link rel="stylesheet" href="css/loading-screen.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles/template-comic.css">
-    <link rel="stylesheet" href="info-modal.css">
+    <link rel="stylesheet" href="css/template-comic.css">
+    <link rel="stylesheet" href="css/info-modal.css">
     <script src="vendor/three.r128.min.js"></script>
  </head>
  <body>
@@ -106,6 +106,10 @@
       <span>· ↓ Arrow Down to next chapter ·</span>
     </div>
 
+    <div id="compass-indicator" class="story-compass" aria-label="Story compass">
+      <span>HASTE</span><i></i><span>WISDOM</span>
+    </div>
+
     <button id="audioToggle" type="button" title="Turn audio off" aria-label="Turn audio off"></button>
     <button id="nextBtn" aria-label="Next chapter">Next Chapter ↴</button>
 
@@ -123,20 +127,25 @@
     <a href="tools/texture-forge.html">Texture Forge</a>
   </footer>
 
-  <script src="asset-download-manager.js"></script>
-  <script src="story-runtime.js"></script>
-  <script src="loading-screen.js"></script>
-  <script src="audio-manager.js"></script>
-  <script src="info-modal.js"></script>
-  <script src="template-scenes-helpers.js"></script>
+  <script src="js/asset-download-manager.js"></script>
+  <script src="js/story-runtime.js"></script>
+  <script src="js/loading-screen.js"></script>
+  <script src="js/audio-manager.js"></script>
+  <script src="js/info-modal.js"></script>
+  <script src="js/template-scenes-helpers.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/compass.js"></script>
+  <script src="beats/act1.js"></script>
+  <script src="beats/act2.js"></script>
+  <script src="beats/act3.js"></script>
   <script src="assets/scenes/act1_opening.js"></script>
   <script src="assets/scenes/act2_decision.js"></script>
   <script src="assets/scenes/act3_horizon.js"></script>
-  <script src="template-story.js"></script>
+  <script src="js/template-story.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        const registerStoryWorker = () => navigator.serviceWorker.register('sw.js');
+        const registerStoryWorker = () => navigator.serviceWorker.register('js/sw.js');
         if (window.__storyAssetsReady) registerStoryWorker();
         else window.addEventListener('story:assetsready', registerStoryWorker, { once: true });
       });

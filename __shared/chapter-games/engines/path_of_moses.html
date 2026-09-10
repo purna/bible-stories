@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Path of Moses — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:14px;flex:none;display:flex;flex-direction:column;align-items:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.5rem;margin:0 0 4px}
+    .sub{text-align:center;font-size:.85rem;opacity:.8;margin-bottom:6px}
+    .hud{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:6px;font-size:.9rem;font-weight:800}
+    .chip{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:4px 10px}
+    .chip.warn{background:#ffe5b4;border-color:#a85b00}
+    .chip.bad{background:#ffd0d0;border-color:var(--bad)}
+    .stage{flex:1;position:relative;width:760px;max-width:100%;background:linear-gradient(180deg,#fff6cf 0%,#f4d391 100%);border:4px solid var(--ink);border-radius:18px;box-shadow:0 6px 0 #b88f5b;overflow:hidden;display:flex;align-items:stretch;justify-content:center}
+    .grid{position:relative;display:grid;grid-template-columns:repeat(5,120px);grid-template-rows:repeat(3,120px);gap:8px;padding:10px;z-index:2}
+    .cell{width:120px;height:120px;background:#cfe7ff;border:3px solid var(--ink);border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer;transition:background .2s,transform .15s;overflow:hidden}
+    .cell.path{background:#e8d8a8;cursor:default}
+    .cell.path::after{content:"";position:absolute;inset:8px;background:repeating-linear-gradient(45deg,#d4b97a 0 6px,#c8a35e 6px 12px);border-radius:6px;opacity:.85}
+    .cell.path.walked::after{background:#b39355}
+    .cell.closed{background:#3a6b8a;cursor:default}
+    .cell.closed::after{content:"";position:absolute;inset:6px;background:repeating-linear-gradient(90deg,#5fa3d4 0 8px,#3a6b8a 8px 16px);border-radius:6px;opacity:.9}
+    .cell.closed .glyph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.85}
+    .cell.closed .glyph svg{width:60%;height:60%}
+    .cell.goal{background:#ffd84d;cursor:default}
+    .cell.goal::after{content:"";position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+    .cell.hint{box-shadow:0 0 0 4px #ffd84d inset;animation:pulse 1s infinite}
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(255,216,77,.6) inset}50%{box-shadow:0 0 0 8px rgba(255,216,77,.4) inset}}
+    .cell .step{position:absolute;top:4px;right:6px;background:#fff;border:2px solid var(--ink);border-radius:6px;padding:0 6px;font-weight:800;font-size:.85rem;z-index:3}
+    .people{position:absolute;width:54px;height:64px;display:flex;align-items:center;justify-content:center;transition:left .35s ease, top .35s ease, transform .35s;z-index:4;pointer-events:none}
+    .people svg{width:100%;height:100%}
+    .wave{position:absolute;inset:0;background:rgba(63,150,213,.7);display:flex;align-items:center;justify-content:center;font-size:2.6rem;color:#fff;font-weight:800;opacity:0;pointer-events:none;z-index:5;transition:opacity .2s}
+    .wave.show{opacity:1;animation:waveFlash .8s}
+    @keyframes waveFlash{0%{opacity:0;transform:scale(.6)}30%{opacity:1;transform:scale(1.1)}100%{opacity:0;transform:scale(1)}}
+    .bank{position:absolute;top:0;bottom:0;width:14px;background:linear-gradient(180deg,#a8861d,#5e3e0a);border:2px solid var(--ink);z-index:1}
+    .bank.left{left:0;border-radius:0 8px 8px 0}
+    .bank.right{right:0;border-radius:8px 0 0 8px}
+    .army{position:absolute;left:50%;top:0;width:80px;height:50px;display:flex;align-items:center;justify-content:center;transform:translateX(-50%);transition:transform .35s;z-index:3;pointer-events:none}
+    .army svg{width:100%;height:100%}
+    .banner{position:absolute;left:50%;top:8px;transform:translateX(-50%);background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 10px;font-weight:800;font-size:.9rem;z-index:6}
+    .phase-row{display:flex;gap:6px;margin-bottom:4px}
+    .phase-pill{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:2px 8px;font-size:.78rem;font-weight:800;opacity:.45}
+    .phase-pill.active{background:#ffd84d;opacity:1}
+    .phase-pill.done{background:#d6f5d6;opacity:1}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Path of Moses</h1>
+    <div class="sub">Tap the path across the sea, then close it on the army.</div>
+    <div class="hud">
+      <div class="chip" id="phaseChip">Phase 1: Part the sea</div>
+      <div class="chip" id="stepChip">Step 0 / 7</div>
+      <div class="chip warn" id="errChip">Waves: 0 / 3</div>
+    </div>
+    <div class="phase-row">
+      <div class="phase-pill active" id="p1">1. Part</div>
+      <div class="phase-pill" id="p2">2. Walk</div>
+      <div class="phase-pill" id="p3">3. Close</div>
+    </div>
+    <div class="stage">
+      <div class="banner" id="banner">Tap the highlighted cell to start.</div>
+      <div class="grid" id="grid"></div>
+      <div class="bank left"></div>
+      <div class="bank right"></div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 75, timer: true };
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+
+    const PEOPLE_SVG='<svg viewBox="0 0 54 64" xmlns="http://www.w3.org/2000/svg"><g><circle cx="14" cy="14" r="6" fill="#f8d8b0" stroke="#3a2410" stroke-width="2"/><path d="M8 22 q 6 -3 12 0 v 8 h -12 z" fill="#a0522d" stroke="#3a2410" stroke-width="2"/></g><g><circle cx="27" cy="12" r="6" fill="#f8d8b0" stroke="#3a2410" stroke-width="2"/><path d="M21 20 q 6 -3 12 0 v 9 h -12 z" fill="#8d6e63" stroke="#3a2410" stroke-width="2"/></g><g><circle cx="40" cy="14" r="6" fill="#f8d8b0" stroke="#3a2410" stroke-width="2"/><path d="M34 22 q 6 -3 12 0 v 8 h -12 z" fill="#6d4c41" stroke="#3a2410" stroke-width="2"/></g><rect x="6" y="34" width="42" height="14" rx="2" fill="#3a2410" stroke="#3a2410" stroke-width="2"/><path d="M10 48 v 8 M18 48 v 8 M26 48 v 8 M34 48 v 8 M42 48 v 8" stroke="#3a2410" stroke-width="2.5" stroke-linecap="round"/></svg>';
+    const SOLDIER_SVG='<svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg"><g><rect x="4" y="20" width="10" height="20" fill="#5d4037" stroke="#3a2410" stroke-width="1.5"/><circle cx="9" cy="18" r="5" fill="#a1887f" stroke="#3a2410" stroke-width="1.5"/></g><g><rect x="18" y="20" width="10" height="20" fill="#5d4037" stroke="#3a2410" stroke-width="1.5"/><circle cx="23" cy="18" r="5" fill="#a1887f" stroke="#3a2410" stroke-width="1.5"/></g><g><rect x="32" y="20" width="10" height="20" fill="#5d4037" stroke="#3a2410" stroke-width="1.5"/><circle cx="37" cy="18" r="5" fill="#a1887f" stroke="#3a2410" stroke-width="1.5"/></g><g><rect x="46" y="20" width="10" height="20" fill="#5d4037" stroke="#3a2410" stroke-width="1.5"/><circle cx="51" cy="18" r="5" fill="#a1887f" stroke="#3a2410" stroke-width="1.5"/></g><g><rect x="60" y="20" width="10" height="20" fill="#5d4037" stroke="#3a2410" stroke-width="1.5"/><circle cx="65" cy="18" r="5" fill="#a1887f" stroke="#3a2410" stroke-width="1.5"/></g><path d="M4 14 l 4 -8 l 4 8" fill="#ffd84d" stroke="#3a2410" stroke-width="1.5"/></svg>';
+    const WAVE_SVG='<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M5 30 q 5 -10 10 0 q 5 -10 10 0 q 5 -10 10 0 q 5 -10 10 0 q 5 -10 10 0 v 20 h -60 z" fill="#3a6b8a" stroke="#0d2940" stroke-width="2"/><path d="M5 40 q 5 -10 10 0 q 5 -10 10 0 q 5 -10 10 0 q 5 -10 10 0 q 5 -10 10 0" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/></svg>';
+    const SUN_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+    const HOURGLASS_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+
+    // 5x3 grid (rows 0..2, cols 0..4). Path is a sinuous line from left to right.
+    // Phase 1: tap cells in the order below to "part" the sea (place a path). Each cell must be orthogonally adjacent to the previous.
+    // Path: (2,0) -> (2,1) -> (1,1) -> (1,2) -> (1,3) -> (0,3) -> (0,4)
+    const PATH = [[2,0],[2,1],[1,1],[1,2],[1,3],[0,3],[0,4]];
+    // Closing order: cells get turned back into sea one by one. Closing must follow adjacency too.
+    const CLOSE = [[0,4],[0,3],[1,3],[1,2],[1,1],[2,1],[2,0]];
+
+    const grid=document.getElementById('grid');
+    const phaseChip=document.getElementById('phaseChip'),stepChip=document.getElementById('stepChip'),errChip=document.getElementById('errChip');
+    const banner=document.getElementById('banner');
+    const p1=document.getElementById('p1'),p2=document.getElementById('p2'),p3=document.getElementById('p3');
+    const modal=document.getElementById('modal'),modalCard=document.getElementById('modalCard'),modalIcon=document.getElementById('modalIcon'),modalTitle=document.getElementById('modalTitle'),modalText=document.getElementById('modalText'),modalBtn=document.getElementById('modalBtn');
+
+    function showModal(kind, title, lines, btnLabel){
+      modalCard.classList.remove('success','timeout');
+      if(kind==='success') modalCard.classList.add('success');
+      if(kind==='timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind==='success' ? SUN_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    let phase=1, stepIdx=0, closeIdx=0, errors=0, over=false;
+    const cells = [];
+    const people = document.createElement('div');
+    people.className = 'people';
+    people.innerHTML = PEOPLE_SVG;
+    const army = document.createElement('div');
+    army.className = 'army';
+    army.innerHTML = SOLDIER_SVG;
+    let waveEl = null;
+    const MAX_ERR = 3;
+
+    function build(){
+      for (let r=0;r<3;r++){
+        for (let c=0;c<5;c++){
+          const d = document.createElement('div');
+          d.className = 'cell';
+          d.dataset.r = r; d.dataset.c = c;
+          d.addEventListener('click', ()=> onTap(d));
+          grid.appendChild(d);
+          cells.push(d);
+        }
+      }
+      grid.appendChild(people);
+      grid.appendChild(army);
+      placePeople(2,0);
+      placeArmy(2,2.5);
+    }
+
+    function placePeople(r,c){
+      const cell = cells.find(x => +x.dataset.r === r && +x.dataset.c === c);
+      if (!cell) return;
+      const rect = cell.getBoundingClientRect();
+      const gridRect = grid.getBoundingClientRect();
+      people.style.left = (rect.left - gridRect.left + rect.width/2 - 27) + 'px';
+      people.style.top  = (rect.top  - gridRect.top  + rect.height/2 - 32) + 'px';
+    }
+    function placeArmy(r,c){
+      const cell = cells.find(x => +x.dataset.r === r && +x.dataset.c === c);
+      if (!cell) { army.style.transform = `translateX(-50%) translateY(${(r-0.5)*120}px)`; return; }
+      const rect = cell.getBoundingClientRect();
+      const gridRect = grid.getBoundingClientRect();
+      army.style.left = (rect.left - gridRect.left + rect.width/2 - 40) + 'px';
+      army.style.top  = (rect.top  - gridRect.top  - 60) + 'px';
+    }
+    function placeArmyEdge(){
+      army.style.left = (grid.getBoundingClientRect().left + 8) + 'px';
+      army.style.top  = (grid.getBoundingClientRect().top + 6) + 'px';
+    }
+
+    function getCell(r,c){ return cells.find(x => +x.dataset.r === r && +x.dataset.c === c); }
+    function isAdjacent(a,b){
+      return (Math.abs(a[0]-b[0]) + Math.abs(a[1]-b[1])) === 1;
+    }
+
+    function setPhase(p){
+      phase = p;
+      if (p===1){ phaseChip.textContent='Phase 1: Part the sea'; banner.textContent='Tap the highlighted starting cell.'; }
+      else if (p===2){ phaseChip.textContent='Phase 2: Walk across'; banner.textContent='Tap "Walk forward" to guide the people across.'; }
+      else { phaseChip.textContent='Phase 3: Close the sea'; banner.textContent='Tap the highlighted cell to close the sea.'; }
+      p1.classList.remove('active','done'); p2.classList.remove('active','done'); p3.classList.remove('active','done');
+      if (p===1) p1.classList.add('active');
+      if (p===2){ p1.classList.add('done'); p2.classList.add('active'); }
+      if (p===3){ p1.classList.add('done'); p2.classList.add('done'); p3.classList.add('active'); }
+    }
+
+    function updateStep(){
+      if (phase===1) stepChip.textContent = `Step ${stepIdx} / ${PATH.length}`;
+      else if (phase===2) stepChip.textContent = `Walked ${stepIdx} / ${PATH.length}`;
+      else stepChip.textContent = `Closed ${closeIdx} / ${CLOSE.length}`;
+    }
+
+    function highlight(target){
+      cells.forEach(c => c.classList.remove('hint'));
+      if (!target) return;
+      const cell = getCell(target[0], target[1]);
+      if (cell) cell.classList.add('hint');
+    }
+
+    function showWave(msg){
+      if (waveEl) waveEl.remove();
+      waveEl = document.createElement('div');
+      waveEl.className = 'wave show';
+      waveEl.innerHTML = msg + '<div style="font-size:1rem;margin-top:8px">' + WAVE_SVG + '</div>';
+      grid.appendChild(waveEl);
+      setTimeout(()=>{ if (waveEl){ waveEl.remove(); waveEl = null; } }, 850);
+    }
+
+    function onTap(cell){
+      if (over) return;
+      const r = +cell.dataset.r, c = +cell.dataset.c;
+      if (phase===1){
+        if (stepIdx >= PATH.length) return;
+        const target = PATH[stepIdx];
+        if (r === target[0] && c === target[1]){
+          cell.classList.add('path','walked');
+          const stepLabel = document.createElement('div');
+          stepLabel.className = 'step';
+          stepLabel.textContent = (stepIdx+1);
+          cell.appendChild(stepLabel);
+          stepIdx++;
+          updateStep();
+          if (stepIdx >= PATH.length){
+            // Move people to the end and start walk phase
+            cell.classList.add('goal');
+            setTimeout(()=>{ setPhase(2); startWalk(); }, 700);
+          } else {
+            highlight(PATH[stepIdx]);
+          }
+        } else {
+          flashError(cell);
+        }
+      } else if (phase===3){
+        if (closeIdx >= CLOSE.length) return;
+        const target = CLOSE[closeIdx];
+        if (r === target[0] && c === target[1]){
+          cell.classList.remove('path');
+          cell.classList.add('closed');
+          const glyph = document.createElement('div'); glyph.className='glyph'; glyph.innerHTML = WAVE_SVG;
+          cell.appendChild(glyph);
+          closeIdx++;
+          updateStep();
+          if (closeIdx >= CLOSE.length){
+            setTimeout(()=> finish(true), 500);
+          } else {
+            highlight(CLOSE[closeIdx]);
+          }
+        } else {
+          flashError(cell);
+        }
+      }
+    }
+
+    function flashError(cell){
+      cell.style.outline = '4px solid #c62828';
+      cell.style.outlineOffset = '-4px';
+      setTimeout(()=>{ cell.style.outline=''; cell.style.outlineOffset=''; }, 350);
+      errors++;
+      errChip.textContent = `Waves: ${errors} / ${MAX_ERR}`;
+      showWave('CRASH!');
+      if (errors >= MAX_ERR) finish(false, 'too many crashes');
+    }
+
+    function startWalk(){
+      let i = 0;
+      const stepDelay = 600;
+      const interval = setInterval(()=>{
+        if (over){ clearInterval(interval); return; }
+        i++;
+        if (i >= PATH.length){
+          placePeople(PATH[PATH.length-1][0], PATH[PATH.length-1][1]);
+          stepIdx = PATH.length;
+          updateStep();
+          clearInterval(interval);
+          setTimeout(()=> setPhase(3), 800);
+          return;
+        }
+        placePeople(PATH[i][0], PATH[i][1]);
+        stepIdx = i;
+        updateStep();
+      }, stepDelay);
+    }
+
+    function finish(success, reason){
+      if (over) return;
+      over = true;
+      if (success){
+        showModal('success','The sea closes!',['God parted the waters and brought his people across safely.', '"The Lord will fight for you; you need only to be still." — Exodus 14:14'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'path_of_moses'}, '*');
+      } else {
+        showModal('timeout','The people were swept away!',[reason || 'Too many waves.', '"Do not be afraid. Stand firm and you will see the deliverance the Lord will bring." — Exodus 14:13'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    build();
+    updateStep();
+    setPhase(1);
+    highlight(PATH[0]);
+
+    addEventListener('game-timeout', () => { if (!over) finish(false, 'time up'); });
+  </script>
+</body>
+</html>

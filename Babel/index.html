@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Babel — An interactive comic book from the Genesis 11:1-9. Read offline with our PWA service worker!">
+    <meta name="theme-color" content="#1a0e08">
+    <meta name="color-scheme" content="dark">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>BABEL! — An Interactive Comic Book</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/story-runtime.css">
+    <link rel="stylesheet" href="css/loading-screen.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/babel-comic.css">
+    <link rel="stylesheet" href="css/info-modal.css">
+    <script src="vendor/three.r128.min.js"></script>
+  </head>
+ <body>
+  <div id="startScreen">
+    <div class="comic-cover">
+      <span data-follow="8" style="top:8%;left:12%;"></span>
+      <span data-follow="14" style="top:12%;right:14%;"></span>
+      <span data-follow="10" style="bottom:14%;left:16%;"></span>
+      <span data-follow="18" style="bottom:10%;right:10%;"></span>
+      <div class="issue">Genesis 11:1-9 · SPECIAL EDITION</div>
+      <h1>BABEL</h1>
+      <div class="subtitle">& Can human ambition be redirected toward shared blessing instead of self-exaltation</div>
+      <div class="bigtorch">🔥</div>
+      <p>An interactive 5-chapter comic. Use arrow keys, swipe, or tap Next to navigate. Drag inside the panel to look around each scene.</p>
+      <button id="startBtn">LAUNCH COMIC</button>
+    </div>
+  </div>
+  <div id="app">
+    <div id="babelFieldBackdrop" aria-hidden="true">
+      <div class="babel-field-sun"></div>
+      <div class="babel-grass-field"></div>
+    </div>
+    <div id="bgGradient"></div>
+    <canvas id="particles"></canvas>
+    <div id="rainLayer"><div id="rainStripes"></div><div class="wave-container"><div class="air air1"></div><div class="air air2"></div><div class="air air3"></div><div class="air air4"></div></div></div>
+    <div id="seaLayer"><div id="seaWalls"></div><div class="wave-container"><div class="air air1"></div><div class="air air2"></div><div class="air air3"></div><div class="air air4"></div></div></div>
+    <div id="fireLayer"></div>
+    <div id="thunderLayer"></div>
+    <div id="ambientLayer"><div class="land-arc"></div><div class="bird-container"><div class="bird-fly">🕊️</div><div class="bird-fly">🕊️</div><div class="bird-fly">🕊️</div></div></div>
+    <div id="halftoneOverlay"></div>
+    <div id="hud"><select id="chapterSelect" aria-label="Jump to chapter"></select><div id="dots" role="list" aria-label="Progress"></div></div>
+    <div id="stageWrap"><div id="stage"></div></div>
+    <div id="choices" role="group" aria-label="Choices"></div>
+    <div id="delayNote" role="status"></div>
+    <div id="navHints"><span>◀ Arrow keys or swipe to navigate ▶</span><span>· Drag inside the panel to look around the scene ·</span><span>· ↓ Arrow Down to next chapter ·</span></div>
+    <div id="compass-indicator" class="story-compass" aria-label="Story compass"><span>FEAR</span><i></i><span>TRUST</span></div>
+    <button id="audioToggle" type="button" title="Turn audio off" aria-label="Turn audio off"></button>
+    <button id="nextBtn" aria-label="Next chapter">Next Chapter ↴</button>
+    <button id="nextLineBtn" aria-label="Next line">Next →</button>
+  </div>
+  <div id="portal"></div>
+  <footer class="tools-footer" aria-label="Story creation tools">
+    <span>Create assets</span>
+    <a href="tools/texture-forge.html">Texture Forge</a>
+    <a href="tools/character_head_generator.html">Character Generator</a>
+  </footer>
+  <script src="js/asset-download-manager.js"></script>
+  <script src="js/story-runtime.js"></script>
+  <script src="js/loading-screen.js"></script>
+  <script src="js/audio-manager.js"></script>
+  <script src="js/info-modal.js"></script>
+  <script src="js/babel-scenes-helpers.js"></script>
+  <script src="js/babel-field-background.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/compass.js"></script>
+  <script src="assets/scenes/babel-scenes.js"></script>
+  <script src="js/babel-story.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        const registerStoryWorker = () => navigator.serviceWorker.register('js/sw.js');
+        if (window.__storyAssetsReady) registerStoryWorker();
+        else window.addEventListener('story:assetsready', registerStoryWorker, { once: true });
+      });
+    }
+  </script>
+ 
+  <script>
+    /* follow.js — lightweight cursor-follow accent dots on the start screen.
+       No external dependency: a 60-line inline implementation that mirrors
+       the jwanner83/follow-js API (data-follow attribute + factor). */
+    (function () {
+      'use strict';
+      const FOLLOW_FACTOR_DEFAULT = 12;
+      const FOLLOW_SMOOTH = 0.18;
+      const elements = [];
+      let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+      let target = { x: mouse.x, y: mouse.y };
+
+      function parseFactor(el) {
+        const v = el.getAttribute('data-follow');
+        if (v === null || v === '' || v === 'true') return FOLLOW_FACTOR_DEFAULT;
+        const n = parseFloat(v);
+        return Number.isFinite(n) ? n : FOLLOW_FACTOR_DEFAULT;
+      }
+
+      function refresh() {
+        elements.length = 0;
+        document.querySelectorAll('[data-follow]').forEach(el => {
+          const r = el.getBoundingClientRect();
+          const cx = r.left + r.width / 2;
+          const cy = r.top + r.height / 2;
+          elements.push({ el, cx, cy, factor: parseFactor(el) });
+        });
+      }
+
+      window.addEventListener('mousemove', e => {
+        target.x = e.clientX;
+        target.y = e.clientY;
+      }, { passive: true });
+      window.addEventListener('touchmove', e => {
+        if (e.touches[0]) { target.x = e.touches[0].clientX; target.y = e.touches[0].clientY; }
+      }, { passive: true });
+
+      function tick() {
+        mouse.x += (target.x - mouse.x) * FOLLOW_SMOOTH;
+        mouse.y += (target.y - mouse.y) * FOLLOW_SMOOTH;
+        for (const item of elements) {
+          const dx = mouse.x - item.cx;
+          const dy = mouse.y - item.cy;
+          const f = item.factor / 100;
+          item.el.style.transform = 'translate(' + (dx * f).toFixed(2) + 'px, ' + (dy * f).toFixed(2) + 'px)';
+        }
+        requestAnimationFrame(tick);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => { refresh(); tick(); });
+      } else { refresh(); tick(); }
+      window.addEventListener('resize', refresh);
+      window.Follow = { refresh, destroy: () => elements.length = 0 };
+    })();
+  </script>
+</body>
+</html>

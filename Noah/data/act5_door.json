@@ -1,0 +1,79 @@
+{
+  "id": "door",
+  "name": "Ch.5 \u00b7 The Door Shuts",
+  "bg": "radial-gradient(circle at 50% 20%, #101828, #060c18 65%, #020408)",
+  "particle": "storm",
+  "svg": "ch5_dark_clouds",
+  "lines": [
+    {
+      "id": "door_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch5_dark_clouds",
+      "text": "On the seventh day, the sky changed. The horizon turned the colour of a bruise.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "door_1",
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/flood_thunder.mp3",
+      "fx": "shake",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch5_first_rain",
+      "sfx": "RUMBLE...",
+      "text": "The first drops fell. Then more. Then the sky opened.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "door_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch5_first_rain",
+      "text": "Great springs burst from the deep. Floodgates of heaven broke open.",
+      "cite": "Genesis 7:11",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "door_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "svg": "ch5_door_closes",
+      "text": "And then \u2014 from the outside \u2014 the LORD shut the door.",
+      "cite": "Genesis 7:16",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "door_4",
+      "speaker": "noah",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch5_door_closes",
+      "text": "That sound. The latch. From the outside.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "door_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch5_door_closes",
+      "text": "No more choices. No more preparation. No more anything to do but endure.",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

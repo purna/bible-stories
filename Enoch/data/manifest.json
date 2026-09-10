@@ -1,0 +1,82 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "a_family_record",
+      "name": "Ch.1 · A Family Record",
+      "file": "act1_a_family_record.json",
+      "scene": "a_family_record",
+      "foreground": "fg_a_family_record",
+      "assetFolder": "act_01_a_family_record",
+      "assetStem": "enoch_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "the_first_walk",
+      "name": "Ch.2 · The First Walk",
+      "file": "act2_the_first_walk.json",
+      "scene": "the_first_walk",
+      "foreground": "fg_the_first_walk",
+      "assetFolder": "act_02_the_first_walk",
+      "assetStem": "enoch_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    },
+    {
+      "id": "a_son_named_methuselah",
+      "name": "Ch.3 · A Son Named Methuselah",
+      "file": "act3_a_son_named_methuselah.json",
+      "scene": "a_son_named_methuselah",
+      "foreground": "fg_a_son_named_methuselah",
+      "assetFolder": "act_03_a_son_named_methuselah",
+      "assetStem": "enoch_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "years_of_faithfulness",
+      "name": "Ch.4 · Years of Faithfulness",
+      "file": "act4_years_of_faithfulness.json",
+      "scene": "years_of_faithfulness",
+      "foreground": "fg_years_of_faithfulness",
+      "assetFolder": "act_04_years_of_faithfulness",
+      "assetStem": "enoch_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+    },
+    {
+      "id": "a_warning",
+      "name": "Ch.5 · A Warning",
+      "file": "act5_a_warning.json",
+      "scene": "a_warning",
+      "foreground": "fg_a_warning",
+      "assetFolder": "act_05_a_warning",
+      "assetStem": "enoch_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+    },
+    {
+      "id": "walking_with_god",
+      "name": "Ch.6 · Walking with God",
+      "file": "act6_walking_with_god.json",
+      "scene": "walking_with_god",
+      "foreground": "fg_walking_with_god",
+      "assetFolder": "act_06_walking_with_god",
+      "assetStem": "enoch_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+    },
+    {
+      "id": "taken",
+      "name": "Ch.7 · Taken",
+      "file": "act7_taken.json",
+      "scene": "taken",
+      "foreground": "fg_taken",
+      "assetFolder": "act_07_taken",
+      "assetStem": "enoch_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    }
+  ]
+}

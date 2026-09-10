@@ -1,6 +1,6 @@
 {
   "id": "call_to_courage",
-  "name": "Ch.2 · The Call to Courage",
+  "name": "Ch.2 \u00b7 The Call to Courage",
   "bg": "radial-gradient(circle at 50% 25%, #d4a76a, #6b4423 70%)",
   "particle": "dusk",
   "scene": "call_to_courage",
@@ -10,29 +10,45 @@
   "gameInstructions": "Put the preparations in the wisest order. Tap: listen, gather, then go.",
   "lines": [
     {
+      "id": "call_to_courage_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "God gave Deborah a message for Barak: gather the people and lead them to Mount Tabor."
+      "text": "God gave Deborah a message for Barak: gather the people and lead them to Mount Tabor.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "call_to_courage_1",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "Barak was afraid, but Deborah did not shame him."
+      "text": "Barak was afraid, but Deborah did not shame him.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "call_to_courage_2",
       "speaker": "deborah",
       "fx": "type",
+      "delay": 800,
       "align": "center",
-      "text": "Certainly I will go with you."
+      "text": "Certainly I will go with you.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "call_to_courage_3",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "text": "Courage began with a promise that no one had to stand alone.",
-      "cite": "Judges 4:9"
+      "cite": "Judges 4:9",
+      "width": "1/2",
+      "valign": "middle"
     }
   ]
 }

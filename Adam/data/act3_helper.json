@@ -1,0 +1,99 @@
+{
+  "id": "helper",
+  "name": "Helper Suitable",
+  "bg": "radial-gradient(circle at 50% 40%, #2b1220, #160a14 65%, #0d0709)",
+  "particle": "dream",
+  "svg": "forming_eve",
+  "audio": [
+    "assets/audio/music/Act3_Before_the_Sun_Climbs.ogg",
+    "assets/audio/music/Act3_Before_the_Sun_Climbs.mp3"
+  ],
+  "lines": [
+    {
+      "id": "helper_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "The Lord God said, 'It is not good for the man to be alone. I will make a helper suitable for him.'",
+      "align": "center",
+      "svg": "forming_eve",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "helper_1",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "God brought every creature to Adam to see what he would name them. But among all the beasts, birds, and fish...",
+      "align": "left",
+      "svg": "forming_names",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "helper_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "...no suitable helper was found for Adam.",
+      "align": "right",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "helper_3",
+      "sfx": "WHIRR...",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "text": "So the Lord God caused a deep sleep to fall on the man. While he slept, God took one of his ribs.",
+      "align": "center",
+      "svg": "forming_sleep",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "helper_4",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "And the Lord built a woman from the rib he had taken out of the man. Then He brought her to the man.",
+      "align": "center",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "helper_5",
+      "speaker": "adam",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "This is now bone of my bones, and flesh of my flesh! She shall be called 'woman' \u2014 for she was taken out of man.",
+      "align": "left",
+      "svg": "forming_united",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "helper_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "A man shall leave his father and mother and be united to his wife. And the two shall become one flesh.",
+      "align": "center",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "helper_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Thus the garden held its first couple \u2014 naked in innocence, walking in peace.",
+      "align": "center",
+      "svg": "garden_paradise",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

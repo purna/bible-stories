@@ -1,0 +1,64 @@
+{
+  "id": "reform",
+  "name": "Ch.10 · Reform",
+  "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)",
+  "particle": "dawn",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "reform_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Inspect storerooms and restore shared commitments.",
+      "cite": "Nehemiah 1–13",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "reform_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Can prayerful planning rebuild both walls and communal justice? — Reform is the next step in that question.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "reform_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE WORD STANDS",
+      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "reform_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Walk on with the lesson 📖",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment 🕊️",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "reform",
+  "foreground": "fg_reform",
+  "index": 9
+}

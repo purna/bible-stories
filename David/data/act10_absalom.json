@@ -1,0 +1,118 @@
+{
+  "id": "absalom",
+  "name": "Ch.10 · Absalom",
+  "bg": "radial-gradient(circle at 50% 30%, #1a1420, #0a0610 65%, #040208)",
+  "particle": "storm",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "absalom_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Absalom, David's son by Maacah, grew handsome and popular. He set a chariot and horses at his gate and took the side of the road for anyone with a grievance.",
+      "cite": "2 Samuel 15:6",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "absalom_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "He stole the hearts of the young men of Israel. When the king's counsel went out from the gate, Absalom stood in his place.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "absalom_2",
+      "speaker": "absalom",
+      "fx": "type",
+      "delay": 800,
+      "align": "right",
+      "text": "If I were judge in the land, everyone who has a cause would find justice. The king is far from the people and does not hear them.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "absalom_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The rebellion spread through the hill country. David left Jerusalem at night with his household, crossing the Kidron in the dark.",
+      "cite": "2 Samuel 15:30",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "absalom_4",
+      "speaker": "david",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "O my son Absalom, my son, my son Absalom! Would God I had died for you, O Absalom, my son, my son!",
+      "cite": "2 Samuel 18:33",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "absalom_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The battle was fought in the forest of Ephraim. Absalom's head caught in the branches of an oak, and his mule rode away beneath him. He hung there and died.",
+      "cite": "2 Samuel 18:9",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "absalom_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The king went into the chamber over the gate and wept. The city mourned, and the throne that had once seemed unshakeable sat under the weight of a father's grief.",
+      "cite": "2 Samuel 19:4",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "absalom_7",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "PRIDE IS A TREE THAT FALLS ON ITS OWN BRANCH",
+      "text": "Absalom built his rise on the people's complaints and fell by his own head caught in a tree. The king who had lost a son knew the cost of every crown.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "absalom_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David returned to Jerusalem and sat on his throne, but the kingdom was never the same. A father's grief had become the cost of every decision he made from that day forward.",
+      "choices": [
+        {
+          "label": "Mourn the son and rule the people 🕯️",
+          "note": "Grief does not retire a king. It teaches him what the crown costs."
+        },
+        {
+          "label": "Build the palace higher to forget 🏗️",
+          "note": "Stone cannot hold what a heart will not carry."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "absalom",
+  "foreground": "fg_absalom",
+  "index": 9
+}

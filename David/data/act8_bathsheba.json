@@ -1,0 +1,118 @@
+{
+  "id": "bathsheba",
+  "name": "Ch.8 · Bathsheba and Uriah",
+  "bg": "radial-gradient(circle at 50% 60%, #1a0e08, #0a0604 65%, #040202)",
+  "particle": "ember",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "bathsheba_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "In the spring, when kings go out to battle, David stayed in Jerusalem and walked on his roof. From there he saw a woman bathing, and he sent to learn who she was.",
+      "cite": "2 Samuel 11:3",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "bathsheba_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "She was Bathsheba, the wife of Uriah the Hittite, one of David's own mighty men. David took her, and the child she carried was his.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "bathsheba_2",
+      "speaker": "david",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Send for Uriah. Let him come to me and sleep in his own house. Then we will know whether the child is his.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "bathsheba_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Uriah came. He would not eat or sleep in his own house while his comrades fought under the walls of Rabbah. The king's plan would not work.",
+      "cite": "2 Samuel 11:11",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "bathsheba_4",
+      "speaker": "david",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Put Uriah at the front of the fight. Let the fiercest men surround him. Then retreat and leave him exposed.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "bathsheba_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "audioSfx": "assets/audio/sfx/camp_fire.mp3",
+      "text": "Uriah fell and was killed. The messenger ran to David with the news, and the king said nothing at all. The city kept its silence.",
+      "cite": "2 Samuel 11:25",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "bathsheba_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The child born to Bathsheba fell ill and died within days. David held the infant and wept, but he could not undo what had been done.",
+      "cite": "2 Samuel 12:18",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "bathsheba_7",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "POWER HIDES WHAT CONSCIENCE KNOWS",
+      "text": "The most dangerous thing a king can do is use his power to make a wrong thing look like a right one. The roof was only a roof until he looked from it.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "bathsheba_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The king had taken what was not his to take and killed the man who would not help him hide it. The story does not end with a good choice.",
+      "choices": [
+        {
+          "label": "Wait for the prophet's word 📜",
+          "note": "Truth spoken by another is the only road back from here."
+        },
+        {
+          "label": "Build the palace higher and forget 🏗️",
+          "note": "A greater roof might hide the old one from sight."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "bathsheba",
+  "foreground": "fg_bathsheba",
+  "index": 7
+}

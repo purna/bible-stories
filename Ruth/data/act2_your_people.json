@@ -1,33 +1,47 @@
 {
   "id": "your_people",
-  "name": "Ch.2 · Your People",
+  "name": "Ch.2 \u00b7 Your People",
   "bg": "radial-gradient(circle at 50% 25%, #c89860, #5a4028 70%)",
   "particle": "dawn",
   "lines": [
     {
+      "id": "your_people_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "Naomi and Ruth walked the long road from Moab toward Bethlehem—dusty, weary, but together. The hills rose and fell like waves of stone and dry grass.",
-      "cite": "Ruth 1:19"
+      "text": "Naomi and Ruth walked the long road from Moab toward Bethlehem\u2014dusty, weary, but together. The hills rose and fell like waves of stone and dry grass.",
+      "cite": "Ruth 1:19",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "your_people_1",
       "speaker": "ruth",
       "fx": "type",
+      "delay": 800,
       "align": "right",
-      "text": "We will follow the road. Step by step. I am with you, Naomi."
+      "text": "We will follow the road. Step by step. I am with you, Naomi.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "your_people_2",
       "speaker": "naomi",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
-      "text": "You should not have come. There is nothing for you here. The Almighty has made my life very bitter."
+      "text": "You should not have come. There is nothing for you here. The Almighty has made my life very bitter.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "your_people_3",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "They passed through the rocky valleys, keeping to the paths that travelers knew—avoiding the dangerous shortcuts.",
+      "text": "They passed through the rocky valleys, keeping to the paths that travelers knew\u2014avoiding the dangerous shortcuts.",
       "choices": [
         {
           "label": "Stay on the safe path",
@@ -37,13 +51,19 @@
           "label": "Offer Naomi your arm",
           "note": "Ruth supports her mother-in-law as the road steepens."
         }
-      ]
+      ],
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "your_people_4",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "At last, the walls of Bethlehem appeared on the horizon. The whole town was stirred by their arrival."
+      "text": "At last, the walls of Bethlehem appeared on the horizon. The whole town was stirred by their arrival.",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "svg": "your_people",

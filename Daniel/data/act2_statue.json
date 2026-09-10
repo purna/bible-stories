@@ -1,0 +1,133 @@
+{
+  "id": "statue",
+  "name": "The Dream",
+  "bg": "radial-gradient(circle at 50% 20%, #3d1c08, #1e0f0a 65%, #0d0705)",
+  "particle": "dream",
+  "svg": "throne_room",
+  "reign": "nebuchadnezzar",
+  "vision": "statue_dream",
+  "audio": [
+    "assets/audio/music/Act2_Where_the_Kings_Kneel.ogg",
+    "assets/audio/music/Act2_Where_the_Kings_Kneel.mp3"
+  ],
+  "lines": [
+    {
+      "id": "statue_0",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "text": "The king had a dream that terrified him. He demanded his wise men tell him not just what it meant \u2014 but what it was.",
+      "align": "left",
+      "svg": "throne_room",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "statue_1",
+      "sfx": "TELL ME!",
+      "speaker": "nebuchadnezzar",
+      "fx": "shake",
+      "delay": 800,
+      "text": "Interpret my dream \u2014 or ALL the wise men of Babylon die. Including you, Daniel.",
+      "align": "center",
+      "svg": "throne_room",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "statue_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "No human could answer. But Daniel didn't guess. He prayed first.",
+      "align": "right",
+      "svg": "daniel_prays",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "statue_3",
+      "speaker": "daniel",
+      "audioSfx": "assets/audio/sfx/vision_reveal.mp3",
+      "fx": "fade",
+      "delay": 800,
+      "text": "There is a God in heaven who reveals mysteries.",
+      "svg": "daniel_prays",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "statue_4",
+      "speaker": "daniel",
+      "fx": "type",
+      "delay": 800,
+      "text": "Your dream: a statue of terrifying brightness. Gold head. Silver chest. Bronze belly. Iron legs. Feet of clay.",
+      "svg": "statue_dream",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "statue_5",
+      "speaker": "daniel",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "You are the gold head, O King. But after you will come other kingdoms \u2014 and in the end, God's kingdom will crush them all and stand forever.",
+      "svg": "statue_dream",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "statue_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "The king could have been angry at the news. Instead, he did something no one expected.",
+      "align": "center",
+      "svg": "nebuchadnezzar_bows",
+      "vision": true,
+      "choices": [
+        {
+          "label": "Daniel softens the message \ud83d\ude2c",
+          "note": "A flattering reading protects favor with the king now \u2014 but dents Discernment.",
+          "decisionId": "statue_softened",
+          "tags": [
+            "loyalty:diplomatic",
+            "cost:private"
+          ]
+        },
+        {
+          "label": "Daniel delivers it plainly \u2705",
+          "note": "The true reading, even the uncomfortable parts. That's what earns the king's respect.",
+          "decisionId": "statue_plain",
+          "tags": [
+            "loyalty:god",
+            "cost:public",
+            "risk:self"
+          ]
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "statue_7",
+      "speaker": "nebuchadnezzar",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "Your God is the God of gods and Lord of kings \u2014 a revealer of mysteries!",
+      "svg": "nebuchadnezzar_bows",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "statue_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Daniel used his promotion not to protect himself, but to save the other wise men who had no power to answer.",
+      "svg": "daniel_serve",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

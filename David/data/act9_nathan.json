@@ -1,0 +1,138 @@
+{
+  "id": "nathan",
+  "name": "Ch.9 · Nathan's Parable",
+  "bg": "radial-gradient(circle at 50% 40%, #241a10, #100a04 65%, #060402)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "nathan_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "The prophet Nathan came to the king with a story about a poor man who had one little ewe lamb, and a rich man who took it from him and killed it for his guest.",
+      "cite": "2 Samuel 12:4",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "nathan_1",
+      "speaker": "nathan",
+      "fx": "type",
+      "delay": 800,
+      "align": "right",
+      "text": "The rich man had many flocks and many herds. Yet he took the poor man's only lamb and slew it. What shall be done to him?",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "nathan_2",
+      "speaker": "david",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "left",
+      "text": "As the LORD lives, the man who has done this deserves to die. He shall make restitution fourfold.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "nathan_3",
+      "speaker": "nathan",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "text": "You are the man. You have taken the wife of Uriah the Hittite and killed him with the sword of the Ammonites.",
+      "cite": "2 Samuel 12:7",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "nathan_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David's mouth went dry. The prophet had not spoken against the king in public. He had spoken to the king in private, as a man to a man.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "nathan_5",
+      "speaker": "david",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "I have sinned against the LORD. Nathan, the LORD has put away my sin. I shall not die.",
+      "cite": "2 Samuel 12:13",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "nathan_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The child died, and the king fasted and wept. When the mourning was over, David went in to Bathsheba and comforted her, and she bore a son.",
+      "cite": "2 Samuel 12:22",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "nathan_7",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "CONFESSION OPENS THE WAY FORWARD",
+      "text": "The king could have silenced the prophet. Instead he listened, and the broken place became the place from which a new child — and a new song — would grow.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "nathan_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The child was named Solomon, and the LORD loved him. Nathan spoke to the boy of wisdom and of a house that would be built without hands.",
+      "cite": "2 Samuel 12:24",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "nathan_9",
+      "speaker": "david",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Teach him, Nathan. Let him hear the truth of what his father was and of what the LORD has made of him.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "nathan_10",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David's repentance did not erase the past. It changed what the past would become: a testimony that mercy follows the man who owns his failure.",
+      "choices": [
+        {
+          "label": "Let the story be told honestly 📖",
+          "note": "A king who can name his sin is a king who can be trusted with the truth."
+        },
+        {
+          "label": "Keep the failure buried with the dead 🪦",
+          "note": "Some silences protect a throne. They do not protect a soul."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "nathan",
+  "foreground": "fg_nathan",
+  "index": 8
+}

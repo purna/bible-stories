@@ -1,0 +1,78 @@
+{
+  "id": "dryground",
+  "name": "Ch.8 \u00b7 Dry Ground",
+  "bg": "radial-gradient(circle at 50% 40%, #1a3010, #0c1a08 65%, #050a04)",
+  "particle": "dawn",
+  "svg": "ch8_ramp_down",
+  "lines": [
+    {
+      "id": "dryground_0",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch8_command_leave",
+      "text": "Come out of the ark \u2014 you and your wife, your sons and their wives.",
+      "cite": "Genesis 8:16",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "dryground_1",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch8_command_leave",
+      "text": "Bring out every kind of living creature \u2014 so they can multiply on the earth.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "dryground_2",
+      "speaker": "narrator",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch8_ramp_down",
+      "sfx": "FRESH AIR!",
+      "text": "The ramp came down. For the first time in over a year, Noah stepped onto solid ground.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "dryground_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch8_animals_released",
+      "text": "The animals poured out \u2014 running, flying, leaping. The world filling back up with life.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "dryground_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch8_animals_released",
+      "text": "The whole long year \u2014 the building, the waiting, the enduring \u2014 this was what it was for.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "dryground_5",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch8_noah_stands",
+      "text": "A year and seventeen days after the door was shut \u2014 Noah stood on dry land.",
+      "cite": "Genesis 8:14",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

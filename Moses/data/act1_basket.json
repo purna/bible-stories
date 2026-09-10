@@ -6,51 +6,77 @@
   "svg": "placeholder",
   "lines": [
     {
+      "id": "basket_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "Hebrew slaves filled Egypt. Pharaoh ordered every newborn boy thrown into the Nile."
+      "text": "Hebrew slaves filled Egypt. Pharaoh ordered every newborn boy thrown into the Nile.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "basket_1",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "text": "One woman hid her son for three months. Then she could hide him no longer.",
-      "cite": "Exodus 2:2"
+      "cite": "Exodus 2:2",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "basket_2",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "She made a basket of bulrushes, sealed it with pitch, and laid him among the reeds by the riverbank."
+      "text": "She made a basket of bulrushes, sealed it with pitch, and laid him among the reeds by the riverbank.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "basket_3",
       "speaker": "miriam",
       "fx": "type",
+      "delay": 800,
       "align": "right",
       "svg": "placeholder",
-      "text": "Stay here, little brother. I'll watch from where they cannot see me."
+      "text": "Stay here, little brother. I'll watch from where they cannot see me.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "basket_4",
       "speaker": "narrator",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Pharaoh's daughter came down to bathe in the Nile. Her maids walked along the bank."
+      "text": "Pharaoh's daughter came down to bathe in the Nile. Her maids walked along the bank.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "basket_5",
       "speaker": "pharaohs_daughter",
       "fx": "fade",
+      "delay": 800,
       "align": "right",
       "svg": "placeholder",
-      "text": "One of the maids spotted the basket among the flags. She sent her slave to fetch it."
+      "text": "One of the maids spotted the basket among the flags. She sent her slave to fetch it.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "basket_6",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "text": "She opened it. A child was crying. She felt sorry for him \u2014 though she knew what he was.",
@@ -63,36 +89,54 @@
           "label": "Send him back to the river \ud83c\udf3e",
           "note": "The Hebrew sister \u2014 already watching \u2014 steps forward."
         }
-      ]
+      ],
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "basket_7",
       "speaker": "narrator",
       "fx": "type",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "text": "His sister asked: \"Shall I go and find one of the Hebrew women to nurse the child for you?\"",
-      "cite": "Exodus 2:7"
+      "cite": "Exodus 2:7",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "basket_8",
       "speaker": "pharaohs_daughter",
       "fx": "fade",
+      "delay": 800,
       "align": "right",
       "svg": "placeholder",
-      "text": "Yes. Go."
+      "text": "Yes. Go.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "basket_9",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "So his own mother took him back, nursed him, and when he was older, returned him to Pharaoh's daughter."
+      "text": "So his own mother took him back, nursed him, and when he was older, returned him to Pharaoh's daughter.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "basket_10",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "She named him Moses \u2014 \"drawn from water\" \u2014 and he grew up in the house of the man who ordered Hebrew babies killed."
+      "text": "She named him Moses \u2014 \"drawn from water\" \u2014 and he grew up in the house of the man who ordered Hebrew babies killed.",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "scene": "basket",

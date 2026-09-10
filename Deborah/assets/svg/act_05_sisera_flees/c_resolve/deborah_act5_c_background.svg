@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Deborah act 5 Sisera Flees background">
+  <metadata>{&quot;story&quot;:&quot;Deborah&quot;,&quot;act&quot;:5,&quot;chapter&quot;:&quot;Sisera Flees&quot;,&quot;scene&quot;:&quot;C&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;environment&quot;:&quot;interior&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#342b2a"/><stop offset="1" stop-color="#806149"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#775c45"/><stop offset="1" stop-color="#3c2f28"/></linearGradient></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1500" cy="180" r="64" fill="#f2ddb0" opacity=".82"/>
+  <rect x="0" y="296.4" width="1920" height="470" fill="#69513d"/><path d="M0 296.4 L960 156.39999999999998 1920 296.4" fill="none" stroke="#151313" stroke-width="36" opacity=".35"/><path d="M0 746.4 L99.84 681.822505420167 L192 776.3696832709014 L291.84000000000003 653.1727037948789 L384 780.8931454048492 L483.84000000000003 664.3592622227501 L576 762.1812278880737 L675.84 661.8458313148934 L768 773.6309924894944 L867.84 701.2033047833014 L960 764.4422053777147 L1059.84 645.8917663849192 L1152 769.3680132260546 L1251.84 644.5708570481278 L1344 768.5767457888927 L1443.84 650.830390061927 L1536 775.5478167183231 L1635.84 689.1169510546373 L1728 762.1552091463003 L1827.84 711.4228703707689 L1920 773.6649820509832 V1080 H0Z" fill="#775c45" opacity=".55"/>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/>
+  
+  </svg>

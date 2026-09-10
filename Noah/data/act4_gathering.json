@@ -1,0 +1,89 @@
+{
+  "id": "gathering",
+  "name": "Ch.4 \u00b7 The Gathering",
+  "bg": "radial-gradient(circle at 60% 30%, #1a2e10, #0d1808 65%, #060a04)",
+  "particle": "dusk",
+  "svg": "ch4_animals_arrive",
+  "lines": [
+    {
+      "id": "gathering_0",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch4_animals_arrive",
+      "text": "Seven pairs of every clean animal. One pair of every unclean. Two of every bird.",
+      "cite": "Genesis 7:2\u20133",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "gathering_1",
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/animal_march.mp3",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch4_animals_arrive",
+      "text": "And then something impossible happened. The animals came to Noah.",
+      "interaction": "gathering",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "gathering_2",
+      "speaker": "narrator",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch4_parade",
+      "sfx": "TWO BY TWO!",
+      "text": "Lions and lambs. Elephants and doves. Bears and deer. Marching, pair by pair.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "gathering_3",
+      "speaker": "wife",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "svg": "ch4_parade",
+      "text": "Are those... elephants? Walking TOWARD us?!",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "gathering_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch4_loading",
+      "text": "Noah provisioned the ark with food for every creature. It took days.",
+      "choices": [
+        {
+          "label": "Pack enough for a long journey \ud83d\udce6",
+          "note": "Every stall stocked. Every animal fed for weeks."
+        },
+        {
+          "label": "Pack light \u2014 it won't last long \ud83e\udd1e",
+          "note": "Maybe the flood will be brief. Maybe not."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "gathering_5",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch4_door_open",
+      "text": "When the last pair walked up the ramp, the ark was full. Seven days remained.",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

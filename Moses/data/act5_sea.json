@@ -6,87 +6,131 @@
   "svg": "placeholder",
   "lines": [
     {
+      "id": "sea_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "Pharaoh changed his mind. Six hundred of his best chariots pursued the Israelites to the edge of the sea."
+      "text": "Pharaoh changed his mind. Six hundred of his best chariots pursued the Israelites to the edge of the sea.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "sea_1",
       "speaker": "narrator",
       "fx": "shake",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Trapped. Water before them. Army behind them. No way forward."
+      "text": "Trapped. Water before them. Army behind them. No way forward.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "sea_2",
       "speaker": "israelite_elder",
       "fx": "shake",
+      "delay": 800,
       "align": "right",
       "svg": "placeholder",
-      "text": "Was it because there were no graves in Egypt that you brought us out here to die?!"
+      "text": "Was it because there were no graves in Egypt that you brought us out here to die?!",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "sea_3",
       "speaker": "moses",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "Do not be afraid. Stand firm and you will see the deliverance the LORD will bring you today."
+      "text": "Do not be afraid. Stand firm and you will see the deliverance the LORD will bring you today.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "sea_4",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "text": "Lift up your staff and stretch out your hand over the sea to divide it.",
-      "cite": "Exodus 14:16"
+      "cite": "Exodus 14:16",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "sea_5",
       "speaker": "narrator",
       "audioSfx": "assets/audio/sfx/red_sea_water.mp3",
       "fx": "shake",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "sfx": "ROARRR...",
-      "text": "All that night a strong east wind drove the sea back. The water divided. The seabed was dry ground."
+      "text": "All that night a strong east wind drove the sea back. The water divided. The seabed was dry ground.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "sea_6",
       "speaker": "narrator",
       "audioSfx": "assets/audio/sfx/red_sea_water.mp3",
       "fx": "wave",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "interaction": "sea-walk",
-      "text": "Moses stretched out his hand. The people walked through on dry ground, with walls of water on their right and on their left."
+      "text": "Moses stretched out his hand. The people walked through on dry ground, with walls of water on their right and on their left.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "sea_7",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "The Egyptians followed \u2014 every horse and chariot, every driver \u2014 into the middle of the sea."
+      "text": "The Egyptians followed \u2014 every horse and chariot, every driver \u2014 into the middle of the sea.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "sea_8",
       "speaker": "narrator",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "At daybreak, the LORD looked down from the pillar of fire and cloud and threw the Egyptian army into confusion."
+      "text": "At daybreak, the LORD looked down from the pillar of fire and cloud and threw the Egyptian army into confusion.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "sea_9",
       "speaker": "narrator",
       "fx": "shake",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "sfx": "CRASH!",
-      "text": "Moses stretched out his hand over the sea. The waters rushed back and covered the chariots and horsemen."
+      "text": "Moses stretched out his hand over the sea. The waters rushed back and covered the chariots and horsemen.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "sea_10",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Not one of them survived. Israel saw the great power the LORD displayed against the Egyptians, and the people feared the LORD."
+      "text": "Not one of them survived. Israel saw the great power the LORD displayed against the Egyptians, and the people feared the LORD.",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "scene": "sea",

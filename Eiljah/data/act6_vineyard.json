@@ -1,0 +1,64 @@
+{
+  "id": "vineyard",
+  "name": "Naboth's Vineyard",
+  "bg": "radial-gradient(circle at 20% 80%, #4a6b3c, #2d4a2c 70%)",
+  "particle": "dream",
+  "svg": "naboths_vineyard",
+  "lines": [
+    {
+      "id": "vineyard_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Later, Ahab wanted Naboth's vineyard because it was beside the king's palace. Naboth refused to sell the inheritance that belonged to his family.",
+      "align": "left",
+      "svg": "naboths_vineyard",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "vineyard_1",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "Jezebel arranged false accusations against Naboth. He was condemned and killed, and Ahab took possession of the vineyard.",
+      "align": "center",
+      "svg": "naboths_vineyard",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "vineyard_2",
+      "speaker": "god",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Go down to meet Ahab in Naboth's vineyard. He has gone there to take possession of it.",
+      "align": "right",
+      "svg": "naboths_vineyard",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "vineyard_3",
+      "speaker": "elijah",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "This is what the LORD says: You have murdered Naboth and taken his land. Because you have given yourself to evil, judgment is coming upon your house.",
+      "align": "center",
+      "svg": "naboths_vineyard",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "vineyard_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Elijah's ministry was not only about miracles. He also confronted kings when power was used to crush the innocent.",
+      "align": "center",
+      "svg": "naboths_vineyard",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

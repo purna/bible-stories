@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Stones into Bread — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0;--game-scale:1}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:14px;flex:none;display:flex;flex-direction:column;align-items:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.5rem;margin:0 0 4px}
+    .sub{text-align:center;font-size:.85rem;opacity:.8;margin-bottom:6px}
+    .hud{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:6px;font-size:.9rem;font-weight:800}
+    .chip{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:4px 10px}
+    .chip.warn{background:#ffe5b4;border-color:#a85b00}
+    .chip.bad{background:#ffd0d0;border-color:var(--bad)}
+    .chip.good{background:#d6f5d6;border-color:var(--good)}
+    .stage{width:100%;flex:1;position:relative;border:4px solid var(--ink);border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#fff6cf 0%,#fde4a6 55%,#7a5d2a 55%,#5a3e0a 100%);box-shadow:0 6px 0 #b88f5b}
+    .sun{position:absolute;left:24px;top:20px;width:54px;height:54px;z-index:2}
+    .sun svg{width:100%;height:100%}
+    .jesus{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);width:70px;height:105px;display:flex;align-items:center;justify-content:center;z-index:2;transition:transform .25s}
+    .jesus svg{width:100%;height:100%}
+    .jesus.thinking{transform:translateX(-50%) scale(1.06)}
+    .stones{position:absolute;left:0;right:0;bottom:135px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px;padding:0 20px;z-index:4}
+    .stone{width:70px;height:60px;position:relative;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:transform .15s}
+    .stone svg{width:100%;height:100%}
+    .stone.kept{animation:keepGlow .8s ease-out forwards;pointer-events:none}
+    @keyframes keepGlow{0%{transform:scale(1)}50%{transform:scale(1.1);filter:drop-shadow(0 0 10px rgba(46,125,50,.8))}100%{transform:scale(.85);opacity:.4}}
+    .stone.broken{animation:breakFlash .5s ease-out forwards;pointer-events:none}
+    @keyframes breakFlash{0%{transform:scale(1)}50%{transform:scale(1.1);filter:drop-shadow(0 0 10px rgba(198,40,40,.8))}100%{transform:scale(.85);opacity:.3}}
+    .stone .tempt{position:absolute;top:-36px;left:50%;transform:translateX(-50%);width:52px;height:38px;display:flex;align-items:center;justify-content:center;background:#fff;border:2px dashed #c62828;border-radius:8px;animation:bounceT 1.2s ease-in-out infinite;z-index:5}
+    .stone .tempt svg{width:80%;height:80%}
+    @keyframes bounceT{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-5px)}}
+    .stone .tempt::after{content:"Bread!";position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:#c62828;color:#fff;font-size:.65rem;font-weight:800;padding:0 4px;border-radius:4px;white-space:nowrap}
+    .verse{position:absolute;right:14px;top:14px;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:6px 10px;font-size:.75rem;font-weight:800;z-index:5;max-width:220px;line-height:1.25;box-shadow:0 2px 0 rgba(0,0,0,0.1)}
+    .thought{position:absolute;left:50%;bottom:125px;transform:translateX(-50%);background:#fff;border:2px solid var(--ink);border-radius:12px;padding:6px 12px;font-size:.8rem;font-weight:800;z-index:6;opacity:0;transition:opacity .3s;pointer-events:none;box-shadow:0 3px 0 rgba(0,0,0,0.15)}
+    .thought.show{opacity:1}
+
+    /* Fallback modal styles */
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;z-index:100}
+    .modal-overlay.active{display:flex}
+    .modal-card{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:20px;text-align:center;max-width:320px;box-shadow:0 6px 0 var(--ink)}
+    .modal-icon svg{width:48px;height:48px}
+    .modal-title{font-size:1.3rem;margin:10px 0}
+    .modal-text{font-size:.9rem;margin-bottom:15px}
+    .modal-btn{padding:8px 16px;background:var(--accent);border:2px solid var(--ink);border-radius:8px;font-weight:800;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Stones into Bread</h1>
+    <div class="sub">Tap a stone to keep it. Ignore the bread temptation!</div>
+    <div class="hud">
+      <div class="chip" id="roundChip">Round 1 / 3</div>
+      <div class="chip good" id="keptChip">Stones kept: 0 / 4</div>
+      <div class="chip warn" id="errChip">Yielded: 0 / 3</div>
+    </div>
+    <div class="stage" id="stage">
+      <div class="sun" id="sun"></div>
+      <div class="verse">"Man shall not live by bread alone, but by every word that proceeds from the mouth of God."</div>
+      <div class="stones" id="stones"></div>
+      <div class="thought" id="thought">Stay strong</div>
+      <div class="jesus" id="jesus"></div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 75, timer: true };
+    function fitGameToViewport(){
+      const scale = Math.max(0.2, Math.min(innerWidth / 960, innerHeight / 540));
+      document.documentElement.style.setProperty('--game-scale', scale);
+    }
+    addEventListener('resize', fitGameToViewport); 
+    fitGameToViewport();
+
+    const STONE_SVG='<svg viewBox="0 0 74 64" xmlns="http://www.w3.org/2000/svg"><path d="M6 38 q 0 -16 14 -18 q 4 -8 16 -4 q 8 -2 16 4 q 12 0 14 12 q 4 6 0 14 q -6 12 -22 10 q -10 6 -22 2 q -16 -2 -16 -20 z" fill="#9b8b6e" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><path d="M14 30 q 8 -6 18 -4 M16 40 q 12 2 24 0" stroke="#3a2410" stroke-width="1.5" fill="none" opacity=".5"/></svg>';
+    const BREAD_SVG='<svg viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg"><ellipse cx="20" cy="16" rx="16" ry="10" fill="#d4a86a" stroke="#3a2410" stroke-width="2.5"/><path d="M8 16 q 4 -4 8 0 M16 14 q 4 -2 6 0 M24 14 q 4 -2 7 0" stroke="#3a2410" stroke-width="1.5" fill="none"/></svg>';
+    const JESUS_SVG='<svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="20" r="12" fill="#f8d8b0" stroke="#3a2410" stroke-width="3"/><path d="M28 14 q 12 -8 24 0" stroke="#3a2410" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="35" cy="20" r="1.5" fill="#3a2410"/><circle cx="45" cy="20" r="1.5" fill="#3a2410"/><path d="M36 24 q 4 3 8 0" stroke="#3a2410" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M28 32 q 12 -4 24 0 v 56 h -24 z" fill="#fff" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><path d="M20 60 l -8 4 M60 60 l 8 4" stroke="#f8d8b0" stroke-width="2.5" stroke-linecap="round"/><path d="M30 88 l 0 16 M40 88 l 0 20 M50 88 l 0 16" stroke="#3a2410" stroke-width="2.5" stroke-linecap="round"/></svg>';
+    const SUN_SVG='<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="14" fill="#ffd43b" stroke="#3a2410" stroke-width="3"/><g stroke="#3a2410" stroke-width="3" stroke-linecap="round"><path d="M30 6 v 6 M30 48 v 6 M6 30 h 6 M48 30 h 6 M12 12 l 4 4 M44 44 l 4 4 M48 12 l -4 4 M16 44 l -4 4"/></g></svg>';
+    const SUN_MODAL_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+    const HOURGLASS_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+
+    const stonesEl=document.getElementById('stones'),jesusEl=document.getElementById('jesus'),sunEl=document.getElementById('sun');
+    const roundChip=document.getElementById('roundChip'),keptChip=document.getElementById('keptChip'),errChip=document.getElementById('errChip');
+    const thoughtEl=document.getElementById('thought');
+    const modal=document.getElementById('modal'),modalCard=document.getElementById('modalCard'),modalIcon=document.getElementById('modalIcon'),modalTitle=document.getElementById('modalTitle'),modalText=document.getElementById('modalText'),modalBtn=document.getElementById('modalBtn');
+
+    function showModal(kind, title, lines, btnLabel){
+      modalCard.classList.remove('success','timeout');
+      if(kind==='success') modalCard.classList.add('success');
+      if(kind==='timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind==='success' ? SUN_MODAL_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    const ROUNDS = [
+      { total: 6, tempted: 3, target: 4 },
+      { total: 7, tempted: 4, target: 5 },
+      { total: 8, tempted: 4, target: 6 }
+    ];
+    let round = 0, roundKept = 0, yielded = 0, over = false;
+    const MAX_YIELD = 3;
+    let activeTimers = [];
+
+    jesusEl.innerHTML = JESUS_SVG;
+    sunEl.innerHTML = SUN_SVG;
+
+    function clearRoundTimers(){
+      activeTimers.forEach(t => clearTimeout(t));
+      activeTimers = [];
+    }
+
+    function updateHud(){
+      const r = ROUNDS[round];
+      roundChip.textContent = `Round ${round+1} / ${ROUNDS.length}`;
+      keptChip.textContent = `Stones kept: ${roundKept} / ${r.target}`;
+      errChip.textContent = `Yielded: ${yielded} / ${MAX_YIELD}`;
+    }
+
+    function showThought(text){
+      thoughtEl.textContent = text;
+      thoughtEl.classList.add('show');
+      setTimeout(()=> thoughtEl.classList.remove('show'), 1600);
+    }
+
+    function buildRound(){
+      clearRoundTimers();
+      stonesEl.innerHTML = '';
+      roundKept = 0;
+      updateHud();
+
+      const r = ROUNDS[round];
+      const indices = Array.from({length: r.total}, (_, i) => i);
+      for (let i = indices.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [indices[i], indices[j]] = [indices[j], indices[i]];
+      }
+      const temptedSet = new Set(indices.slice(0, r.tempted));
+
+      for (let i = 0; i < r.total; i++){
+        const s = document.createElement('div');
+        s.className = 'stone';
+        s.dataset.idx = i;
+        s.innerHTML = STONE_SVG;
+        s.addEventListener('click', () => onTap(s));
+        stonesEl.appendChild(s);
+
+        if (temptedSet.has(i)){
+          const delay = 1000 + Math.random() * 2000;
+          const timerId = setTimeout(() => {
+            if (over || s.classList.contains('kept') || s.classList.contains('broken')) return;
+            const t = document.createElement('div');
+            t.className = 'tempt';
+            t.innerHTML = BREAD_SVG;
+            s.appendChild(t);
+            s._hasBread = true;
+
+            const removeTimer = setTimeout(() => {
+              if (s._hasBread && !s.classList.contains('broken') && !s.classList.contains('kept')){
+                t.remove();
+                s._hasBread = false;
+              }
+            }, 3800);
+            activeTimers.push(removeTimer);
+          }, delay);
+          activeTimers.push(timerId);
+        }
+      }
+    }
+
+    function onTap(s){
+      if (over) return;
+      if (s.classList.contains('kept') || s.classList.contains('broken')) return;
+
+      if (s._hasBread){
+        s.classList.add('broken');
+        const t = s.querySelector('.tempt');
+        if (t) t.remove();
+        s._hasBread = false;
+        yielded++;
+        updateHud();
+        showThought('No… bread alone is not life.');
+        jesusEl.classList.add('thinking');
+        setTimeout(() => jesusEl.classList.remove('thinking'), 600);
+        if (yielded >= MAX_YIELD) finish(false, 'too many yields');
+      } else {
+        s.classList.add('kept');
+        roundKept++;
+        updateHud();
+        showThought('Stay strong.');
+        jesusEl.classList.add('thinking');
+        setTimeout(() => jesusEl.classList.remove('thinking'), 400);
+
+        if (roundKept >= ROUNDS[round].target){
+          round++;
+          if (round >= ROUNDS.length){
+            setTimeout(() => finish(true), 600);
+          } else {
+            setTimeout(() => buildRound(), 700);
+          }
+        }
+      }
+    }
+
+    function finish(success, reason){
+      if (over) return;
+      over = true;
+      clearRoundTimers();
+      if (success){
+        showModal('success','You held fast!',['Each stone was kept as God intended.', '"Man shall not live by bread alone, but by every word that proceeds from the mouth of God." — Matthew 4:4'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'stones_bread'}, '*');
+      } else {
+        showModal('timeout','The tempter won.',[reason || 'Too many yields.', '"It is written: \'Man shall not live by bread alone.\'" — Matthew 4:4'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', buildRound);
+    addEventListener('game-timeout', () => { if (!over) finish(false, 'time up'); });
+  </script>
+</body>
+</html>

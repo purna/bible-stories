@@ -1,0 +1,16 @@
+{
+  "Babel": {
+    "title": "Babel",
+    "references": "Genesis 11:1-9",
+    "question": "Can human ambition be redirected toward shared blessing instead of self-exaltation?",
+    "characters": ["noah", "nimrod", "builder", "god"],
+    "materials": ["stone", "brick", "tar", "leaves"],
+    "chapters": [
+      {"number": 1, "title": "The Brick", "game": "Mix clay and shape a brick for the tower."},
+      {"number": 2, "title": "The Tower", "game": "Stack bricks toward the sky without a plan."},
+      {"number": 3, "title": "The Summit", "game": "Reach the top and name the project after yourself."},
+      {"number": 4, "title": "The Confusion", "game": "Watch the languages scatter as the work stops."},
+      {"number": 5, "title": "The Scattering", "game": "Walk away from the half-built city."}
+    ]
+  }
+}

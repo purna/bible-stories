@@ -29,7 +29,7 @@
       "act": 1,
       "chapter": "The Call",
       "objective": "Follow the road markers out of Haran.",
-      "engine": "gather-with-care",
+      "engine": "find-path",
       "game_plan": "Abraham/__docs/abraham-game-plan.md",
       "file": "Abraham/__docs/examples/abraham_act1.html"
     },
@@ -38,7 +38,7 @@
       "act": 2,
       "chapter": "Egypt and Return",
       "objective": "Choose honest repairs after a fearful mistake.",
-      "engine": "ready-then-act",
+      "engine": "fit-pieces",
       "game_plan": "Abraham/__docs/abraham-game-plan.md",
       "file": "Abraham/__docs/examples/abraham_act2.html"
     },
@@ -47,7 +47,7 @@
       "act": 3,
       "chapter": "Lot Chooses",
       "objective": "Survey the land and give Lot first choice.",
-      "engine": "keep-balance",
+      "engine": "watch-and-move",
       "game_plan": "Abraham/__docs/abraham-game-plan.md",
       "file": "Abraham/__docs/examples/abraham_act3.html"
     },
@@ -56,7 +56,7 @@
       "act": 4,
       "chapter": "Rescue of Lot",
       "objective": "Plan a fast night rescue without taking spoil.",
-      "engine": "tap-sequence",
+      "engine": "watch-and-move",
       "game_plan": "Abraham/__docs/abraham-game-plan.md",
       "file": "Abraham/__docs/examples/abraham_act4.html"
     },
@@ -65,7 +65,7 @@
       "act": 5,
       "chapter": "Covenant Stars",
       "objective": "Trace the promised constellation.",
-      "engine": "watch-and-move",
+      "engine": "match-it-up",
       "game_plan": "Abraham/__docs/abraham-game-plan.md",
       "file": "Abraham/__docs/examples/abraham_act5.html"
     },
@@ -74,7 +74,7 @@
       "act": 6,
       "chapter": "Hagar in the Wilderness",
       "objective": "Find water and listen before acting.",
-      "engine": "find-path",
+      "engine": "gather-with-care",
       "game_plan": "Abraham/__docs/abraham-game-plan.md",
       "file": "Abraham/__docs/examples/abraham_act6.html"
     },
@@ -83,7 +83,7 @@
       "act": 7,
       "chapter": "The Visitors",
       "objective": "Prepare hospitality before the guests depart.",
-      "engine": "match-it-up",
+      "engine": "gather-with-care",
       "game_plan": "Abraham/__docs/abraham-game-plan.md",
       "file": "Abraham/__docs/examples/abraham_act7.html"
     },
@@ -91,8 +91,8 @@
       "story": "Abraham",
       "act": 8,
       "chapter": "Sodom and Gomorrah",
-      "objective": "Guide Lot’s household away without looking back.",
-      "engine": "tend-garden",
+      "objective": "Guide Lot\u2019s household away without looking back.",
+      "engine": "find-path",
       "game_plan": "Abraham/__docs/abraham-game-plan.md",
       "file": "Abraham/__docs/examples/abraham_act8.html"
     },
@@ -101,7 +101,7 @@
       "act": 9,
       "chapter": "Isaac Is Born",
       "objective": "Assemble a celebration tent.",
-      "engine": "story-builder",
+      "engine": "fit-pieces",
       "game_plan": "Abraham/__docs/abraham-game-plan.md",
       "file": "Abraham/__docs/examples/abraham_act9.html"
     },
@@ -110,7 +110,7 @@
       "act": 10,
       "chapter": "Moriah",
       "objective": "Climb, gather wood, and respond to the provided ram.",
-      "engine": "look-closely",
+      "engine": "find-path",
       "game_plan": "Abraham/__docs/abraham-game-plan.md",
       "file": "Abraham/__docs/examples/abraham_act10.html"
     },
@@ -118,7 +118,7 @@
       "story": "Adam",
       "act": 1,
       "chapter": "Formed from Dust",
-      "objective": "Gather the garden’s elements in creation order.",
+      "objective": "Gather the garden\u2019s elements in creation order.",
       "engine": "gather-with-care",
       "game_plan": "Adam/__docs/adam-game-plan.md",
       "file": "Adam/__docs/examples/adam_act1.html"
@@ -128,7 +128,7 @@
       "act": 2,
       "chapter": "The Garden",
       "objective": "Tend the garden by planting seeds and pulling weeds before they spread.",
-      "engine": "find-path",
+      "engine": "tend-garden",
       "game_plan": "Adam/__docs/adam-game-plan.md",
       "file": "Adam/__docs/examples/adam_act2.html"
     },
@@ -137,7 +137,7 @@
       "act": 3,
       "chapter": "Together",
       "objective": "Build a shared shelter and tend one plot together.",
-      "engine": "tend-garden",
+      "engine": "fit-pieces",
       "game_plan": "Adam/__docs/adam-game-plan.md",
       "file": "Adam/__docs/examples/adam_act3.html"
     },
@@ -146,7 +146,7 @@
       "act": 4,
       "chapter": "The Boundary",
       "objective": "Navigate abundance while leaving one tree untouched.",
-      "engine": "look-closely",
+      "engine": "find-path",
       "game_plan": "Adam/__docs/adam-game-plan.md",
       "file": "Adam/__docs/examples/adam_act4.html"
     },
@@ -154,8 +154,8 @@
       "story": "Adam",
       "act": 5,
       "chapter": "The Choice",
-      "objective": "Spot the serpent’s half-truths in a dialogue puzzle.",
-      "engine": "fit-pieces",
+      "objective": "Spot the serpent\u2019s half-truths in a dialogue puzzle.",
+      "engine": "look-closely",
       "game_plan": "Adam/__docs/adam-game-plan.md",
       "file": "Adam/__docs/examples/adam_act5.html"
     },
@@ -164,7 +164,7 @@
       "act": 6,
       "chapter": "Hiding",
       "objective": "Follow footprints and admit what happened.",
-      "engine": "match-it-up",
+      "engine": "find-path",
       "game_plan": "Adam/__docs/adam-game-plan.md",
       "file": "Adam/__docs/examples/adam_act6.html"
     },
@@ -173,7 +173,7 @@
       "act": 7,
       "chapter": "East of Eden",
       "objective": "Pack seeds and begin cultivation outside the garden.",
-      "engine": "story-builder",
+      "engine": "gather-with-care",
       "game_plan": "Adam/__docs/adam-game-plan.md",
       "file": "Adam/__docs/examples/adam_act7.html"
     },
@@ -181,8 +181,8 @@
       "story": "Adam",
       "act": 8,
       "chapter": "Cain and Abel",
-      "objective": "Prepare offerings with care, then cool Cain’s anger.",
-      "engine": "watch-and-move",
+      "objective": "Prepare offerings with care, then cool Cain\u2019s anger.",
+      "engine": "gather-with-care",
       "game_plan": "Adam/__docs/adam-game-plan.md",
       "file": "Adam/__docs/examples/adam_act8.html"
     },
@@ -191,7 +191,7 @@
       "act": 9,
       "chapter": "The Field",
       "objective": "Witness consequence and mark a refuge path.",
-      "engine": "keep-balance",
+      "engine": "tap-sequence",
       "game_plan": "Adam/__docs/adam-game-plan.md",
       "file": "Adam/__docs/examples/adam_act9.html"
     },
@@ -200,7 +200,7 @@
       "act": 10,
       "chapter": "A New Line",
       "objective": "Plant a family tree from Seth onward.",
-      "engine": "tap-sequence",
+      "engine": "match-it-up",
       "game_plan": "Adam/__docs/adam-game-plan.md",
       "file": "Adam/__docs/examples/adam_act10.html"
     },
@@ -209,7 +209,7 @@
       "act": 1,
       "chapter": "One Language",
       "objective": "Coordinate a village task with shared symbols.",
-      "engine": "look-closely",
+      "engine": "tap-sequence",
       "game_plan": "Babel/__docs/babel-game-plan.md",
       "file": "Babel/__docs/examples/babel_act1.html"
     },
@@ -218,7 +218,7 @@
       "act": 2,
       "chapter": "The Plain",
       "objective": "Choose a safe settlement site.",
-      "engine": "story-builder",
+      "engine": "keep-balance",
       "game_plan": "Babel/__docs/babel-game-plan.md",
       "file": "Babel/__docs/examples/babel_act2.html"
     },
@@ -227,7 +227,7 @@
       "act": 3,
       "chapter": "Bake the Bricks",
       "objective": "Mix and fire bricks to the right strength.",
-      "engine": "fit-pieces",
+      "engine": "tap-sequence",
       "game_plan": "Babel/__docs/babel-game-plan.md",
       "file": "Babel/__docs/examples/babel_act3.html"
     },
@@ -236,7 +236,7 @@
       "act": 4,
       "chapter": "A Name for Ourselves",
       "objective": "Sort motives behind the tower plan.",
-      "engine": "keep-balance",
+      "engine": "match-it-up",
       "game_plan": "Babel/__docs/babel-game-plan.md",
       "file": "Babel/__docs/examples/babel_act4.html"
     },
@@ -245,7 +245,7 @@
       "act": 5,
       "chapter": "The Tower Rises",
       "objective": "Balance height, safety, and care for workers.",
-      "engine": "tap-sequence",
+      "engine": "keep-balance",
       "game_plan": "Babel/__docs/babel-game-plan.md",
       "file": "Babel/__docs/examples/babel_act5.html"
     },
@@ -254,7 +254,7 @@
       "act": 6,
       "chapter": "Confusion",
       "objective": "Communicate using gesture and visual clues.",
-      "engine": "find-path",
+      "engine": "tap-sequence",
       "game_plan": "Babel/__docs/babel-game-plan.md",
       "file": "Babel/__docs/examples/babel_act6.html"
     },
@@ -263,7 +263,7 @@
       "act": 7,
       "chapter": "Scattered",
       "objective": "Guide families toward different horizons.",
-      "engine": "listen-respond",
+      "engine": "find-path",
       "game_plan": "Babel/__docs/babel-game-plan.md",
       "file": "Babel/__docs/examples/babel_act7.html"
     },
@@ -272,7 +272,7 @@
       "act": 8,
       "chapter": "Nations",
       "objective": "Complete a map mosaic celebrating many peoples.",
-      "engine": "ready-then-act",
+      "engine": "match-it-up",
       "game_plan": "Babel/__docs/babel-game-plan.md",
       "file": "Babel/__docs/examples/babel_act8.html"
     },
@@ -281,7 +281,7 @@
       "act": 1,
       "chapter": "Exile and the Table",
       "objective": "Build a respectful ten-day food test.",
-      "engine": "tend-garden",
+      "engine": "fit-pieces",
       "game_plan": "Daniel/__docs/daniel-game-plan.md",
       "file": "Daniel/__docs/examples/daniel_act1.html"
     },
@@ -290,7 +290,7 @@
       "act": 2,
       "chapter": "The Great Statue",
       "objective": "Reassemble the dream and its meaning.",
-      "engine": "ready-then-act",
+      "engine": "fit-pieces",
       "game_plan": "Daniel/__docs/daniel-game-plan.md",
       "file": "Daniel/__docs/examples/daniel_act2.html"
     },
@@ -299,7 +299,7 @@
       "act": 3,
       "chapter": "The Furnace",
       "objective": "Keep the three friends together through the fire maze.",
-      "engine": "listen-respond",
+      "engine": "tap-sequence",
       "game_plan": "Daniel/__docs/daniel-game-plan.md",
       "file": "Daniel/__docs/examples/daniel_act3.html"
     },
@@ -317,16 +317,16 @@
       "act": 5,
       "chapter": "Writing on the Wall",
       "objective": "Match the mysterious words to their warning.",
-      "engine": "tap-sequence",
+      "engine": "match-it-up",
       "game_plan": "Daniel/__docs/daniel-game-plan.md",
       "file": "Daniel/__docs/examples/daniel_act5.html"
     },
     {
       "story": "Daniel",
       "act": 6,
-      "chapter": "The Lions’ Den",
-      "objective": "Maintain Daniel’s prayer rhythm despite the decree.",
-      "engine": "match-it-up",
+      "chapter": "The Lions\u2019 Den",
+      "objective": "Maintain Daniel\u2019s prayer rhythm despite the decree.",
+      "engine": "listen-respond",
       "game_plan": "Daniel/__docs/daniel-game-plan.md",
       "file": "Daniel/__docs/examples/daniel_act6.html"
     },
@@ -335,7 +335,7 @@
       "act": 7,
       "chapter": "Four Beasts",
       "objective": "Identify symbols without attacking the vision.",
-      "engine": "fit-pieces",
+      "engine": "match-it-up",
       "game_plan": "Daniel/__docs/daniel-game-plan.md",
       "file": "Daniel/__docs/examples/daniel_act7.html"
     },
@@ -343,8 +343,8 @@
       "story": "Daniel",
       "act": 8,
       "chapter": "The Ram and Goat",
-      "objective": "Track the vision’s movements on a map.",
-      "engine": "find-path",
+      "objective": "Track the vision\u2019s movements on a map.",
+      "engine": "watch-and-move",
       "game_plan": "Daniel/__docs/daniel-game-plan.md",
       "file": "Daniel/__docs/examples/daniel_act8.html"
     },
@@ -353,7 +353,7 @@
       "act": 9,
       "chapter": "Seventy Weeks",
       "objective": "Order prayer, confession, and hope.",
-      "engine": "look-closely",
+      "engine": "match-it-up",
       "game_plan": "Daniel/__docs/daniel-game-plan.md",
       "file": "Daniel/__docs/examples/daniel_act9.html"
     },
@@ -362,7 +362,7 @@
       "act": 10,
       "chapter": "Final Vision",
       "objective": "Carry the sealed message to the riverbank.",
-      "engine": "watch-and-move",
+      "engine": "find-path",
       "game_plan": "Daniel/__docs/daniel-game-plan.md",
       "file": "Daniel/__docs/examples/daniel_act10.html"
     },
@@ -370,8 +370,8 @@
       "story": "David",
       "act": 1,
       "chapter": "Anointed",
-      "objective": "Identify the overlooked shepherd among Jesse’s sons.",
-      "engine": "look-closely",
+      "objective": "Identify the overlooked shepherd among Jesse\u2019s sons.",
+      "engine": "match-it-up",
       "game_plan": "David/__docs/david-game-plan.md",
       "file": "David/__docs/examples/david_act1.html"
     },
@@ -380,16 +380,16 @@
       "act": 2,
       "chapter": "Goliath",
       "objective": "Time a sling throw after refusing heavy armour.",
-      "engine": "listen-respond",
+      "engine": "ready-then-act",
       "game_plan": "David/__docs/david-game-plan.md",
       "file": "David/__docs/examples/david_act2.html"
     },
     {
       "story": "David",
       "act": 3,
-      "chapter": "Saul’s Court",
-      "objective": "Play a calming melody while watching Saul’s mood.",
-      "engine": "gather-with-care",
+      "chapter": "Saul\u2019s Court",
+      "objective": "Play a calming melody while watching Saul\u2019s mood.",
+      "engine": "listen-respond",
       "game_plan": "David/__docs/david-game-plan.md",
       "file": "David/__docs/examples/david_act3.html"
     },
@@ -398,7 +398,7 @@
       "act": 4,
       "chapter": "Covenant Friends",
       "objective": "Exchange signals with Jonathan unseen.",
-      "engine": "tap-sequence",
+      "engine": "watch-and-move",
       "game_plan": "David/__docs/david-game-plan.md",
       "file": "David/__docs/examples/david_act4.html"
     },
@@ -407,7 +407,7 @@
       "act": 5,
       "chapter": "The Wilderness",
       "objective": "Escape Saul and spare him in the cave.",
-      "engine": "tend-garden",
+      "engine": "find-path",
       "game_plan": "David/__docs/david-game-plan.md",
       "file": "David/__docs/examples/david_act5.html"
     },
@@ -416,7 +416,7 @@
       "act": 6,
       "chapter": "Abigail",
       "objective": "Deliver provisions before anger becomes violence.",
-      "engine": "fit-pieces",
+      "engine": "gather-with-care",
       "game_plan": "David/__docs/david-game-plan.md",
       "file": "David/__docs/examples/david_act6.html"
     },
@@ -425,7 +425,7 @@
       "act": 7,
       "chapter": "The Throne",
       "objective": "Resolve petitions without favouritism.",
-      "engine": "watch-and-move",
+      "engine": "tap-sequence",
       "game_plan": "David/__docs/david-game-plan.md",
       "file": "David/__docs/examples/david_act7.html"
     },
@@ -434,16 +434,16 @@
       "act": 8,
       "chapter": "Bathsheba and Uriah",
       "objective": "Confront the irreversible harm rather than hiding it.",
-      "engine": "story-builder",
+      "engine": "tap-sequence",
       "game_plan": "David/__docs/david-game-plan.md",
       "file": "David/__docs/examples/david_act8.html"
     },
     {
       "story": "David",
       "act": 9,
-      "chapter": "Nathan’s Parable",
+      "chapter": "Nathan\u2019s Parable",
       "objective": "Recognise the king inside the story and repent.",
-      "engine": "ready-then-act",
+      "engine": "match-it-up",
       "game_plan": "David/__docs/david-game-plan.md",
       "file": "David/__docs/examples/david_act9.html"
     },
@@ -452,7 +452,7 @@
       "act": 10,
       "chapter": "Absalom",
       "objective": "Navigate divided loyalties without celebrating loss.",
-      "engine": "match-it-up",
+      "engine": "find-path",
       "game_plan": "David/__docs/david-game-plan.md",
       "file": "David/__docs/examples/david_act10.html"
     },
@@ -461,7 +461,7 @@
       "act": 11,
       "chapter": "The Census",
       "objective": "Choose responsibility during the plague.",
-      "engine": "find-path",
+      "engine": "look-closely",
       "game_plan": "David/__docs/david-game-plan.md",
       "file": "David/__docs/examples/david_act11.html"
     },
@@ -479,7 +479,7 @@
       "act": 1,
       "chapter": "Under the Palm",
       "objective": "Hear disputes and restore a fair path.",
-      "engine": "ready-then-act",
+      "engine": "listen-respond",
       "game_plan": "Deborah/__docs/deborah-game-plan.md",
       "file": "Deborah/__docs/examples/deborah_act1.html"
     },
@@ -487,8 +487,8 @@
       "story": "Deborah",
       "act": 2,
       "chapter": "The Summons",
-      "objective": "Carry Deborah’s message to Barak.",
-      "engine": "story-builder",
+      "objective": "Carry Deborah\u2019s message to Barak.",
+      "engine": "find-path",
       "game_plan": "Deborah/__docs/deborah-game-plan.md",
       "file": "Deborah/__docs/examples/deborah_act2.html"
     },
@@ -497,7 +497,7 @@
       "act": 3,
       "chapter": "Gather at Tabor",
       "objective": "Rally tribes without alerting Sisera.",
-      "engine": "listen-respond",
+      "engine": "watch-and-move",
       "game_plan": "Deborah/__docs/deborah-game-plan.md",
       "file": "Deborah/__docs/examples/deborah_act3.html"
     },
@@ -514,17 +514,17 @@
       "story": "Deborah",
       "act": 5,
       "chapter": "Sisera Flees",
-      "objective": "Track the fleeing commander to Jael’s tent.",
-      "engine": "tend-garden",
+      "objective": "Track the fleeing commander to Jael\u2019s tent.",
+      "engine": "find-path",
       "game_plan": "Deborah/__docs/deborah-game-plan.md",
       "file": "Deborah/__docs/examples/deborah_act5.html"
     },
     {
       "story": "Deborah",
       "act": 6,
-      "chapter": "Jael’s Choice",
+      "chapter": "Jael\u2019s Choice",
       "objective": "Prepare hospitality, then protect the camp.",
-      "engine": "keep-balance",
+      "engine": "gather-with-care",
       "game_plan": "Deborah/__docs/deborah-game-plan.md",
       "file": "Deborah/__docs/examples/deborah_act6.html"
     },
@@ -533,7 +533,7 @@
       "act": 7,
       "chapter": "The Song",
       "objective": "Rebuild the victory song in call-and-response.",
-      "engine": "watch-and-move",
+      "engine": "fit-pieces",
       "game_plan": "Deborah/__docs/deborah-game-plan.md",
       "file": "Deborah/__docs/examples/deborah_act7.html"
     },
@@ -542,16 +542,16 @@
       "act": 1,
       "chapter": "The Drought",
       "objective": "Follow ravens to daily bread by the brook.",
-      "engine": "keep-balance",
+      "engine": "find-path",
       "game_plan": "Eiljah/__docs/eiljah-game-plan.md",
       "file": "Eiljah/__docs/examples/elijah_act1.html"
     },
     {
       "story": "Eiljah",
       "act": 2,
-      "chapter": "The Widow’s Jar",
+      "chapter": "The Widow\u2019s Jar",
       "objective": "Measure flour and oil without exhausting either.",
-      "engine": "gather-with-care",
+      "engine": "fit-pieces",
       "game_plan": "Eiljah/__docs/eiljah-game-plan.md",
       "file": "Eiljah/__docs/examples/elijah_act2.html"
     },
@@ -560,7 +560,7 @@
       "act": 3,
       "chapter": "The Child Restored",
       "objective": "Carry the child upstairs and persist in prayer.",
-      "engine": "fit-pieces",
+      "engine": "listen-respond",
       "game_plan": "Eiljah/__docs/eiljah-game-plan.md",
       "file": "Eiljah/__docs/examples/elijah_act3.html"
     },
@@ -569,7 +569,7 @@
       "act": 4,
       "chapter": "Mount Carmel",
       "objective": "Repair the altar with twelve stones.",
-      "engine": "tap-sequence",
+      "engine": "fit-pieces",
       "game_plan": "Eiljah/__docs/eiljah-game-plan.md",
       "file": "Eiljah/__docs/examples/elijah_act4.html"
     },
@@ -578,7 +578,7 @@
       "act": 5,
       "chapter": "The Rain Returns",
       "objective": "Spot the small cloud and race from the storm.",
-      "engine": "watch-and-move",
+      "engine": "look-closely",
       "game_plan": "Eiljah/__docs/eiljah-game-plan.md",
       "file": "Eiljah/__docs/examples/elijah_act5.html"
     },
@@ -587,7 +587,7 @@
       "act": 6,
       "chapter": "Under the Broom Tree",
       "objective": "Rest, eat, and accept care before travelling.",
-      "engine": "ready-then-act",
+      "engine": "keep-balance",
       "game_plan": "Eiljah/__docs/eiljah-game-plan.md",
       "file": "Eiljah/__docs/examples/elijah_act6.html"
     },
@@ -596,16 +596,16 @@
       "act": 7,
       "chapter": "The Quiet Voice",
       "objective": "Distinguish wind, quake, fire, and quiet.",
-      "engine": "find-path",
+      "engine": "tap-sequence",
       "game_plan": "Eiljah/__docs/eiljah-game-plan.md",
       "file": "Eiljah/__docs/examples/elijah_act7.html"
     },
     {
       "story": "Eiljah",
       "act": 8,
-      "chapter": "Naboth’s Vineyard",
+      "chapter": "Naboth\u2019s Vineyard",
       "objective": "Expose the false testimony behind the seizure.",
-      "engine": "listen-respond",
+      "engine": "look-closely",
       "game_plan": "Eiljah/__docs/eiljah-game-plan.md",
       "file": "Eiljah/__docs/examples/elijah_act8.html"
     },
@@ -614,7 +614,7 @@
       "act": 9,
       "chapter": "Chariots of Fire",
       "objective": "Cross the Jordan and pass the mantle to Elisha.",
-      "engine": "story-builder",
+      "engine": "find-path",
       "game_plan": "Eiljah/__docs/eiljah-game-plan.md",
       "file": "Eiljah/__docs/examples/elijah_act9.html"
     },
@@ -623,7 +623,7 @@
       "act": 1,
       "chapter": "The Mantle",
       "objective": "Leave the plough and follow Elijah.",
-      "engine": "tend-garden",
+      "engine": "find-path",
       "game_plan": "Elisha/__docs/elisha-game-plan.md",
       "file": "Elisha/__docs/examples/elisha_act1.html"
     },
@@ -639,7 +639,7 @@
     {
       "story": "Elisha",
       "act": 3,
-      "chapter": "The Widow’s Oil",
+      "chapter": "The Widow\u2019s Oil",
       "objective": "Collect jars and pour without waste.",
       "engine": "gather-with-care",
       "game_plan": "Elisha/__docs/elisha-game-plan.md",
@@ -650,7 +650,7 @@
       "act": 4,
       "chapter": "The Shunammite Room",
       "objective": "Arrange a simple guest room.",
-      "engine": "listen-respond",
+      "engine": "tap-sequence",
       "game_plan": "Elisha/__docs/elisha-game-plan.md",
       "file": "Elisha/__docs/examples/elisha_act4.html"
     },
@@ -659,7 +659,7 @@
       "act": 5,
       "chapter": "The Child",
       "objective": "Climb to the room and persist in care.",
-      "engine": "watch-and-move",
+      "engine": "find-path",
       "game_plan": "Elisha/__docs/elisha-game-plan.md",
       "file": "Elisha/__docs/examples/elisha_act5.html"
     },
@@ -668,7 +668,7 @@
       "act": 6,
       "chapter": "Naaman",
       "objective": "Guide the commander through seven Jordan immersions.",
-      "engine": "fit-pieces",
+      "engine": "find-path",
       "game_plan": "Elisha/__docs/elisha-game-plan.md",
       "file": "Elisha/__docs/examples/elisha_act6.html"
     },
@@ -677,7 +677,7 @@
       "act": 7,
       "chapter": "The Floating Axe",
       "objective": "Mark where the borrowed iron fell.",
-      "engine": "keep-balance",
+      "engine": "tap-sequence",
       "game_plan": "Elisha/__docs/elisha-game-plan.md",
       "file": "Elisha/__docs/examples/elisha_act7.html"
     },
@@ -686,7 +686,7 @@
       "act": 8,
       "chapter": "The Unseen Army",
       "objective": "Reveal protection around the frightened servant.",
-      "engine": "tap-sequence",
+      "engine": "watch-and-move",
       "game_plan": "Elisha/__docs/elisha-game-plan.md",
       "file": "Elisha/__docs/examples/elisha_act8.html"
     },
@@ -695,7 +695,7 @@
       "act": 9,
       "chapter": "A Blind Feast",
       "objective": "Lead enemies safely to a meal instead of an ambush.",
-      "engine": "match-it-up",
+      "engine": "find-path",
       "game_plan": "Elisha/__docs/elisha-game-plan.md",
       "file": "Elisha/__docs/examples/elisha_act9.html"
     },
@@ -704,7 +704,7 @@
       "act": 1,
       "chapter": "A Family Record",
       "objective": "Place Enoch correctly in the generations.",
-      "engine": "story-builder",
+      "engine": "fit-pieces",
       "game_plan": "Enoch/__docs/enoch-game-plan.md",
       "file": "Enoch/__docs/examples/enoch_act1.html"
     },
@@ -713,7 +713,7 @@
       "act": 2,
       "chapter": "The First Walk",
       "objective": "Choose a daily route that serves neighbours.",
-      "engine": "watch-and-move",
+      "engine": "find-path",
       "game_plan": "Enoch/__docs/enoch-game-plan.md",
       "file": "Enoch/__docs/examples/enoch_act2.html"
     },
@@ -722,7 +722,7 @@
       "act": 3,
       "chapter": "A Son Named Methuselah",
       "objective": "Prepare the home for a new child.",
-      "engine": "match-it-up",
+      "engine": "gather-with-care",
       "game_plan": "Enoch/__docs/enoch-game-plan.md",
       "file": "Enoch/__docs/examples/enoch_act3.html"
     },
@@ -731,7 +731,7 @@
       "act": 4,
       "chapter": "Years of Faithfulness",
       "objective": "Complete repeated small acts without a fame meter.",
-      "engine": "tend-garden",
+      "engine": "tap-sequence",
       "game_plan": "Enoch/__docs/enoch-game-plan.md",
       "file": "Enoch/__docs/examples/enoch_act4.html"
     },
@@ -740,7 +740,7 @@
       "act": 5,
       "chapter": "A Warning",
       "objective": "Deliver a hard truth without cruelty.",
-      "engine": "ready-then-act",
+      "engine": "listen-respond",
       "game_plan": "Enoch/__docs/enoch-game-plan.md",
       "file": "Enoch/__docs/examples/enoch_act5.html"
     },
@@ -749,7 +749,7 @@
       "act": 6,
       "chapter": "Walking with God",
       "objective": "Follow a quiet path as the landscape changes.",
-      "engine": "gather-with-care",
+      "engine": "find-path",
       "game_plan": "Enoch/__docs/enoch-game-plan.md",
       "file": "Enoch/__docs/examples/enoch_act6.html"
     },
@@ -766,8 +766,8 @@
       "story": "Esther",
       "act": 1,
       "chapter": "The Banquet",
-      "objective": "Navigate the palace feast and hear Vashti’s refusal.",
-      "engine": "gather-with-care",
+      "objective": "Navigate the palace feast and hear Vashti\u2019s refusal.",
+      "engine": "find-path",
       "game_plan": "Esther/__docs/esther-game-plan.md",
       "file": "Esther/__docs/examples/esther_act1.html"
     },
@@ -776,7 +776,7 @@
       "act": 2,
       "chapter": "A New Queen",
       "objective": "Prepare Esther while protecting her identity.",
-      "engine": "look-closely",
+      "engine": "gather-with-care",
       "game_plan": "Esther/__docs/esther-game-plan.md",
       "file": "Esther/__docs/examples/esther_act2.html"
     },
@@ -784,17 +784,17 @@
       "story": "Esther",
       "act": 3,
       "chapter": "The Gate Plot",
-      "objective": "Carry Mordecai’s warning into the royal record.",
-      "engine": "ready-then-act",
+      "objective": "Carry Mordecai\u2019s warning into the royal record.",
+      "engine": "find-path",
       "game_plan": "Esther/__docs/esther-game-plan.md",
       "file": "Esther/__docs/examples/esther_act3.html"
     },
     {
       "story": "Esther",
       "act": 4,
-      "chapter": "Haman’s Decree",
+      "chapter": "Haman\u2019s Decree",
       "objective": "Trace the decree as it spreads across the empire.",
-      "engine": "fit-pieces",
+      "engine": "find-path",
       "game_plan": "Esther/__docs/esther-game-plan.md",
       "file": "Esther/__docs/examples/esther_act4.html"
     },
@@ -803,7 +803,7 @@
       "act": 5,
       "chapter": "For Such a Time",
       "objective": "Fast, gather courage, and approach the throne.",
-      "engine": "story-builder",
+      "engine": "gather-with-care",
       "game_plan": "Esther/__docs/esther-game-plan.md",
       "file": "Esther/__docs/examples/esther_act5.html"
     },
@@ -812,7 +812,7 @@
       "act": 6,
       "chapter": "The First Banquet",
       "objective": "Invite the king and Haman without revealing too soon.",
-      "engine": "listen-respond",
+      "engine": "tap-sequence",
       "game_plan": "Esther/__docs/esther-game-plan.md",
       "file": "Esther/__docs/examples/esther_act6.html"
     },
@@ -820,8 +820,8 @@
       "story": "Esther",
       "act": 7,
       "chapter": "The Sleepless Night",
-      "objective": "Find Mordecai’s forgotten service in the chronicles.",
-      "engine": "keep-balance",
+      "objective": "Find Mordecai\u2019s forgotten service in the chronicles.",
+      "engine": "tap-sequence",
       "game_plan": "Esther/__docs/esther-game-plan.md",
       "file": "Esther/__docs/examples/esther_act7.html"
     },
@@ -830,7 +830,7 @@
       "act": 8,
       "chapter": "The Second Banquet",
       "objective": "Name the threat clearly at the decisive moment.",
-      "engine": "tend-garden",
+      "engine": "tap-sequence",
       "game_plan": "Esther/__docs/esther-game-plan.md",
       "file": "Esther/__docs/examples/esther_act8.html"
     },
@@ -839,7 +839,7 @@
       "act": 9,
       "chapter": "A New Decree",
       "objective": "Send defensive orders before the deadline.",
-      "engine": "watch-and-move",
+      "engine": "match-it-up",
       "game_plan": "Esther/__docs/esther-game-plan.md",
       "file": "Esther/__docs/examples/esther_act9.html"
     },
@@ -848,7 +848,7 @@
       "act": 10,
       "chapter": "Purim",
       "objective": "Assemble gifts, food, and remembrance for every district.",
-      "engine": "find-path",
+      "engine": "fit-pieces",
       "game_plan": "Esther/__docs/esther-game-plan.md",
       "file": "Esther/__docs/examples/esther_act10.html"
     },
@@ -857,7 +857,7 @@
       "act": 1,
       "chapter": "The Journey to Shiloh",
       "objective": "Gather the household for the annual worship journey.",
-      "engine": "fit-pieces",
+      "engine": "find-path",
       "game_plan": "Hannah/__docs/hannah-game-plan.md",
       "file": "Hannah/__docs/examples/hannah_act1.html"
     },
@@ -866,7 +866,7 @@
       "act": 2,
       "chapter": "At the Table",
       "objective": "Navigate hurt without retaliating.",
-      "engine": "tend-garden",
+      "engine": "find-path",
       "game_plan": "Hannah/__docs/hannah-game-plan.md",
       "file": "Hannah/__docs/examples/hannah_act2.html"
     },
@@ -874,8 +874,8 @@
       "story": "Hannah",
       "act": 3,
       "chapter": "Silent Prayer",
-      "objective": "Form Hannah’s prayer from honest fragments.",
-      "engine": "find-path",
+      "objective": "Form Hannah\u2019s prayer from honest fragments.",
+      "engine": "listen-respond",
       "game_plan": "Hannah/__docs/hannah-game-plan.md",
       "file": "Hannah/__docs/examples/hannah_act3.html"
     },
@@ -884,7 +884,7 @@
       "act": 4,
       "chapter": "Misunderstood",
       "objective": "Explain quiet prayer to Eli.",
-      "engine": "story-builder",
+      "engine": "listen-respond",
       "game_plan": "Hannah/__docs/hannah-game-plan.md",
       "file": "Hannah/__docs/examples/hannah_act4.html"
     },
@@ -892,7 +892,7 @@
       "story": "Hannah",
       "act": 5,
       "chapter": "Remembered",
-      "objective": "Prepare for Samuel’s birth.",
+      "objective": "Prepare for Samuel\u2019s birth.",
       "engine": "gather-with-care",
       "game_plan": "Hannah/__docs/hannah-game-plan.md",
       "file": "Hannah/__docs/examples/hannah_act5.html"
@@ -902,7 +902,7 @@
       "act": 6,
       "chapter": "The Little Robe",
       "objective": "Weave and size a yearly robe.",
-      "engine": "match-it-up",
+      "engine": "tap-sequence",
       "game_plan": "Hannah/__docs/hannah-game-plan.md",
       "file": "Hannah/__docs/examples/hannah_act6.html"
     },
@@ -911,14 +911,14 @@
       "act": 7,
       "chapter": "Given Back",
       "objective": "Bring Samuel to serve at Shiloh.",
-      "engine": "watch-and-move",
+      "engine": "tap-sequence",
       "game_plan": "Hannah/__docs/hannah-game-plan.md",
       "file": "Hannah/__docs/examples/hannah_act7.html"
     },
     {
       "story": "Hannah",
       "act": 8,
-      "chapter": "Hannah’s Song",
+      "chapter": "Hannah\u2019s Song",
       "objective": "Arrange lines of reversal and hope.",
       "engine": "listen-respond",
       "game_plan": "Hannah/__docs/hannah-game-plan.md",
@@ -938,7 +938,7 @@
       "act": 2,
       "chapter": "The Holy Throne",
       "objective": "Navigate the temple vision and answer the call.",
-      "engine": "gather-with-care",
+      "engine": "find-path",
       "game_plan": "Isaiah/__docs/isaiah-game-plan.md",
       "file": "Isaiah/__docs/examples/isaiah_act2.html"
     },
@@ -947,7 +947,7 @@
       "act": 3,
       "chapter": "The Vineyard Song",
       "objective": "Tend a vineyard that yields injustice.",
-      "engine": "tend-garden",
+      "engine": "listen-respond",
       "game_plan": "Isaiah/__docs/isaiah-game-plan.md",
       "file": "Isaiah/__docs/examples/isaiah_act3.html"
     },
@@ -956,7 +956,7 @@
       "act": 4,
       "chapter": "Immanuel Sign",
       "objective": "Carry hope to fearful King Ahaz.",
-      "engine": "ready-then-act",
+      "engine": "find-path",
       "game_plan": "Isaiah/__docs/isaiah-game-plan.md",
       "file": "Isaiah/__docs/examples/isaiah_act4.html"
     },
@@ -965,16 +965,16 @@
       "act": 5,
       "chapter": "The Assyrian Shadow",
       "objective": "Map the advancing empire and the surviving stump.",
-      "engine": "look-closely",
+      "engine": "tap-sequence",
       "game_plan": "Isaiah/__docs/isaiah-game-plan.md",
       "file": "Isaiah/__docs/examples/isaiah_act5.html"
     },
     {
       "story": "Isaiah",
       "act": 6,
-      "chapter": "Hezekiah’s Crisis",
+      "chapter": "Hezekiah\u2019s Crisis",
       "objective": "Bring the threatening letter into prayer.",
-      "engine": "fit-pieces",
+      "engine": "listen-respond",
       "game_plan": "Isaiah/__docs/isaiah-game-plan.md",
       "file": "Isaiah/__docs/examples/isaiah_act6.html"
     },
@@ -983,7 +983,7 @@
       "act": 7,
       "chapter": "Comfort My People",
       "objective": "Build a road of return through the wilderness.",
-      "engine": "find-path",
+      "engine": "fit-pieces",
       "game_plan": "Isaiah/__docs/isaiah-game-plan.md",
       "file": "Isaiah/__docs/examples/isaiah_act7.html"
     },
@@ -992,7 +992,7 @@
       "act": 8,
       "chapter": "The Servant",
       "objective": "Match suffering, justice, and healing motifs.",
-      "engine": "tap-sequence",
+      "engine": "match-it-up",
       "game_plan": "Isaiah/__docs/isaiah-game-plan.md",
       "file": "Isaiah/__docs/examples/isaiah_act8.html"
     },
@@ -1001,7 +1001,7 @@
       "act": 9,
       "chapter": "New Creation",
       "objective": "Restore a city garden where all can flourish.",
-      "engine": "story-builder",
+      "engine": "keep-balance",
       "game_plan": "Isaiah/__docs/isaiah-game-plan.md",
       "file": "Isaiah/__docs/examples/isaiah_act9.html"
     },
@@ -1010,7 +1010,7 @@
       "act": 1,
       "chapter": "The Birthright",
       "objective": "Weigh hunger against a lasting inheritance.",
-      "engine": "watch-and-move",
+      "engine": "look-closely",
       "game_plan": "Jacob/__docs/jacob-game-plan.md",
       "file": "Jacob/__docs/examples/jacob_act1.html"
     },
@@ -1019,7 +1019,7 @@
       "act": 2,
       "chapter": "The Stolen Blessing",
       "objective": "Assemble the disguise, then witness its cost.",
-      "engine": "keep-balance",
+      "engine": "fit-pieces",
       "game_plan": "Jacob/__docs/jacob-game-plan.md",
       "file": "Jacob/__docs/examples/jacob_act2.html"
     },
@@ -1037,16 +1037,16 @@
       "act": 4,
       "chapter": "Rachel at the Well",
       "objective": "Move the stone and water the flock.",
-      "engine": "ready-then-act",
+      "engine": "gather-with-care",
       "game_plan": "Jacob/__docs/jacob-game-plan.md",
       "file": "Jacob/__docs/examples/jacob_act4.html"
     },
     {
       "story": "Jacob",
       "act": 5,
-      "chapter": "Laban’s Bargain",
+      "chapter": "Laban\u2019s Bargain",
       "objective": "Track changing wages and wedding promises.",
-      "engine": "tap-sequence",
+      "engine": "watch-and-move",
       "game_plan": "Jacob/__docs/jacob-game-plan.md",
       "file": "Jacob/__docs/examples/jacob_act5.html"
     },
@@ -1064,7 +1064,7 @@
       "act": 7,
       "chapter": "Leaving Haran",
       "objective": "Pack the camp before Laban catches up.",
-      "engine": "story-builder",
+      "engine": "gather-with-care",
       "game_plan": "Jacob/__docs/jacob-game-plan.md",
       "file": "Jacob/__docs/examples/jacob_act7.html"
     },
@@ -1073,7 +1073,7 @@
       "act": 8,
       "chapter": "The Night Wrestling",
       "objective": "Hold on through the night and receive a new name.",
-      "engine": "gather-with-care",
+      "engine": "ready-then-act",
       "game_plan": "Jacob/__docs/jacob-game-plan.md",
       "file": "Jacob/__docs/examples/jacob_act8.html"
     },
@@ -1082,16 +1082,16 @@
       "act": 9,
       "chapter": "Meeting Esau",
       "objective": "Arrange gifts, then step forward unarmed.",
-      "engine": "look-closely",
+      "engine": "tap-sequence",
       "game_plan": "Jacob/__docs/jacob-game-plan.md",
       "file": "Jacob/__docs/examples/jacob_act9.html"
     },
     {
       "story": "Jacob",
       "act": 10,
-      "chapter": "Joseph’s Coats",
+      "chapter": "Joseph\u2019s Coats",
       "objective": "Recognise favouritism forming in the household.",
-      "engine": "listen-respond",
+      "engine": "match-it-up",
       "game_plan": "Jacob/__docs/jacob-game-plan.md",
       "file": "Jacob/__docs/examples/jacob_act10.html"
     },
@@ -1099,8 +1099,8 @@
       "story": "Jeremiah",
       "act": 1,
       "chapter": "The Call",
-      "objective": "Touch the right words to the young prophet’s mouth.",
-      "engine": "find-path",
+      "objective": "Touch the right words to the young prophet\u2019s mouth.",
+      "engine": "listen-respond",
       "game_plan": "Jeremiah/__docs/jeremiah-game-plan.md",
       "file": "Jeremiah/__docs/examples/jeremiah_act1.html"
     },
@@ -1109,7 +1109,7 @@
       "act": 2,
       "chapter": "The Almond Branch",
       "objective": "Spot signs that God is watching over the word.",
-      "engine": "fit-pieces",
+      "engine": "look-closely",
       "game_plan": "Jeremiah/__docs/jeremiah-game-plan.md",
       "file": "Jeremiah/__docs/examples/jeremiah_act2.html"
     },
@@ -1118,7 +1118,7 @@
       "act": 3,
       "chapter": "At the Temple Gate",
       "objective": "Separate ritual confidence from justice.",
-      "engine": "match-it-up",
+      "engine": "tap-sequence",
       "game_plan": "Jeremiah/__docs/jeremiah-game-plan.md",
       "file": "Jeremiah/__docs/examples/jeremiah_act3.html"
     },
@@ -1127,7 +1127,7 @@
       "act": 4,
       "chapter": "The Scroll",
       "objective": "Dictate to Baruch and rebuild the burned scroll.",
-      "engine": "ready-then-act",
+      "engine": "fit-pieces",
       "game_plan": "Jeremiah/__docs/jeremiah-game-plan.md",
       "file": "Jeremiah/__docs/examples/jeremiah_act4.html"
     },
@@ -1136,7 +1136,7 @@
       "act": 5,
       "chapter": "The Potter",
       "objective": "Reshape the clay while it remains workable.",
-      "engine": "look-closely",
+      "engine": "tap-sequence",
       "game_plan": "Jeremiah/__docs/jeremiah-game-plan.md",
       "file": "Jeremiah/__docs/examples/jeremiah_act5.html"
     },
@@ -1144,8 +1144,8 @@
       "story": "Jeremiah",
       "act": 6,
       "chapter": "The Yoke",
-      "objective": "Carry the warning despite Hananiah’s easy promise.",
-      "engine": "tend-garden",
+      "objective": "Carry the warning despite Hananiah\u2019s easy promise.",
+      "engine": "listen-respond",
       "game_plan": "Jeremiah/__docs/jeremiah-game-plan.md",
       "file": "Jeremiah/__docs/examples/jeremiah_act6.html"
     },
@@ -1153,8 +1153,8 @@
       "story": "Jeremiah",
       "act": 7,
       "chapter": "The Cistern",
-      "objective": "Coordinate Ebed-melech’s rope rescue.",
-      "engine": "keep-balance",
+      "objective": "Coordinate Ebed-melech\u2019s rope rescue.",
+      "engine": "watch-and-move",
       "game_plan": "Jeremiah/__docs/jeremiah-game-plan.md",
       "file": "Jeremiah/__docs/examples/jeremiah_act7.html"
     },
@@ -1172,7 +1172,7 @@
       "act": 9,
       "chapter": "The Fall of Jerusalem",
       "objective": "Guide survivors through the breached city.",
-      "engine": "watch-and-move",
+      "engine": "find-path",
       "game_plan": "Jeremiah/__docs/jeremiah-game-plan.md",
       "file": "Jeremiah/__docs/examples/jeremiah_act9.html"
     },
@@ -1181,7 +1181,7 @@
       "act": 10,
       "chapter": "Lament and Hope",
       "objective": "Pair grief lines with stubborn hope.",
-      "engine": "story-builder",
+      "engine": "match-it-up",
       "game_plan": "Jeremiah/__docs/jeremiah-game-plan.md",
       "file": "Jeremiah/__docs/examples/jeremiah_act10.html"
     },
@@ -1189,8 +1189,8 @@
       "story": "Job",
       "act": 1,
       "chapter": "A Blameless Life",
-      "objective": "Tend Job’s household and practice generous justice.",
-      "engine": "gather-with-care",
+      "objective": "Tend Job\u2019s household and practice generous justice.",
+      "engine": "keep-balance",
       "game_plan": "Job/__docs/job-game-plan.md",
       "file": "Job/__docs/examples/job_act1.html"
     },
@@ -1199,7 +1199,7 @@
       "act": 2,
       "chapter": "The Accuser",
       "objective": "Observe the heavenly challenge without controlling it.",
-      "engine": "ready-then-act",
+      "engine": "tap-sequence",
       "game_plan": "Job/__docs/job-game-plan.md",
       "file": "Job/__docs/examples/job_act2.html"
     },
@@ -1208,7 +1208,7 @@
       "act": 3,
       "chapter": "Loss upon Loss",
       "objective": "Receive each messenger and sit with the silence.",
-      "engine": "find-path",
+      "engine": "tap-sequence",
       "game_plan": "Job/__docs/job-game-plan.md",
       "file": "Job/__docs/examples/job_act3.html"
     },
@@ -1217,7 +1217,7 @@
       "act": 4,
       "chapter": "Seven Days",
       "objective": "Keep vigil without offering explanations.",
-      "engine": "fit-pieces",
+      "engine": "keep-balance",
       "game_plan": "Job/__docs/job-game-plan.md",
       "file": "Job/__docs/examples/job_act4.html"
     },
@@ -1226,7 +1226,7 @@
       "act": 5,
       "chapter": "Job Speaks",
       "objective": "Build an honest lament from grief and protest.",
-      "engine": "look-closely",
+      "engine": "fit-pieces",
       "game_plan": "Job/__docs/job-game-plan.md",
       "file": "Job/__docs/examples/job_act5.html"
     },
@@ -1235,7 +1235,7 @@
       "act": 6,
       "chapter": "The Friends",
       "objective": "Identify when counsel becomes accusation.",
-      "engine": "story-builder",
+      "engine": "match-it-up",
       "game_plan": "Job/__docs/job-game-plan.md",
       "file": "Job/__docs/examples/job_act6.html"
     },
@@ -1244,7 +1244,7 @@
       "act": 7,
       "chapter": "Elihu",
       "objective": "Listen, test claims, and resist easy scoring.",
-      "engine": "keep-balance",
+      "engine": "listen-respond",
       "game_plan": "Job/__docs/job-game-plan.md",
       "file": "Job/__docs/examples/job_act7.html"
     },
@@ -1253,7 +1253,7 @@
       "act": 8,
       "chapter": "Out of the Whirlwind",
       "objective": "Explore questions about creation.",
-      "engine": "listen-respond",
+      "engine": "tap-sequence",
       "game_plan": "Job/__docs/job-game-plan.md",
       "file": "Job/__docs/examples/job_act8.html"
     },
@@ -1262,7 +1262,7 @@
       "act": 9,
       "chapter": "Job Responds",
       "objective": "Release the demand to master every answer.",
-      "engine": "tend-garden",
+      "engine": "tap-sequence",
       "game_plan": "Job/__docs/job-game-plan.md",
       "file": "Job/__docs/examples/job_act9.html"
     },
@@ -1271,7 +1271,7 @@
       "act": 10,
       "chapter": "Restoration",
       "objective": "Rebuild community without treating new gifts as replacements.",
-      "engine": "match-it-up",
+      "engine": "fit-pieces",
       "game_plan": "Job/__docs/job-game-plan.md",
       "file": "Job/__docs/examples/job_act10.html"
     },
@@ -1280,7 +1280,7 @@
       "act": 1,
       "chapter": "Run to the Sea",
       "objective": "Choose cargo and board the ship going the wrong way.",
-      "engine": "find-path",
+      "engine": "look-closely",
       "game_plan": "Jonah/__docs/jonah-game-plan.md",
       "file": "Jonah/__docs/examples/jonah_act1.html"
     },
@@ -1288,8 +1288,8 @@
       "story": "Jonah",
       "act": 2,
       "chapter": "The Storm",
-      "objective": "Secure the deck and uncover Jonah’s flight.",
-      "engine": "keep-balance",
+      "objective": "Secure the deck and uncover Jonah\u2019s flight.",
+      "engine": "look-closely",
       "game_plan": "Jonah/__docs/jonah-game-plan.md",
       "file": "Jonah/__docs/examples/jonah_act2.html"
     },
@@ -1298,7 +1298,7 @@
       "act": 3,
       "chapter": "Into the Deep",
       "objective": "Navigate sinking currents toward the great fish.",
-      "engine": "watch-and-move",
+      "engine": "find-path",
       "game_plan": "Jonah/__docs/jonah-game-plan.md",
       "file": "Jonah/__docs/examples/jonah_act3.html"
     },
@@ -1306,8 +1306,8 @@
       "story": "Jonah",
       "act": 4,
       "chapter": "Prayer Below",
-      "objective": "Reassemble Jonah’s prayer from psalm fragments.",
-      "engine": "gather-with-care",
+      "objective": "Reassemble Jonah\u2019s prayer from psalm fragments.",
+      "engine": "fit-pieces",
       "game_plan": "Jonah/__docs/jonah-game-plan.md",
       "file": "Jonah/__docs/examples/jonah_act4.html"
     },
@@ -1316,7 +1316,7 @@
       "act": 5,
       "chapter": "Second Call",
       "objective": "Walk the road to Nineveh.",
-      "engine": "tend-garden",
+      "engine": "find-path",
       "game_plan": "Jonah/__docs/jonah-game-plan.md",
       "file": "Jonah/__docs/examples/jonah_act5.html"
     },
@@ -1334,7 +1334,7 @@
       "act": 7,
       "chapter": "Nineveh Repents",
       "objective": "Coordinate fasting from palace to livestock.",
-      "engine": "ready-then-act",
+      "engine": "gather-with-care",
       "game_plan": "Jonah/__docs/jonah-game-plan.md",
       "file": "Jonah/__docs/examples/jonah_act7.html"
     },
@@ -1343,7 +1343,7 @@
       "act": 8,
       "chapter": "The Plant",
       "objective": "Manage shade, worm, and hot wind.",
-      "engine": "match-it-up",
+      "engine": "keep-balance",
       "game_plan": "Jonah/__docs/jonah-game-plan.md",
       "file": "Jonah/__docs/examples/jonah_act8.html"
     },
@@ -1351,8 +1351,8 @@
       "story": "Jonah",
       "act": 9,
       "chapter": "The Question",
-      "objective": "Compare Jonah’s pity for a plant with God’s pity for a city.",
-      "engine": "fit-pieces",
+      "objective": "Compare Jonah\u2019s pity for a plant with God\u2019s pity for a city.",
+      "engine": "keep-balance",
       "game_plan": "Jonah/__docs/jonah-game-plan.md",
       "file": "Jonah/__docs/examples/jonah_act9.html"
     },
@@ -1361,7 +1361,7 @@
       "act": 1,
       "chapter": "The Coloured Robe",
       "objective": "Assemble the robe and notice the family tension.",
-      "engine": "tap-sequence",
+      "engine": "fit-pieces",
       "game_plan": "Joseph/__docs/joseph-game-plan.md",
       "file": "Joseph/__docs/examples/joseph_act1.html"
     },
@@ -1370,16 +1370,16 @@
       "act": 2,
       "chapter": "Dreams and the Pit",
       "objective": "Order the dreams, then find a path through betrayal.",
-      "engine": "keep-balance",
+      "engine": "match-it-up",
       "game_plan": "Joseph/__docs/joseph-game-plan.md",
       "file": "Joseph/__docs/examples/joseph_act2.html"
     },
     {
       "story": "Joseph",
       "act": 3,
-      "chapter": "Potiphar’s House",
+      "chapter": "Potiphar\u2019s House",
       "objective": "Manage the household with integrity.",
-      "engine": "find-path",
+      "engine": "keep-balance",
       "game_plan": "Joseph/__docs/joseph-game-plan.md",
       "file": "Joseph/__docs/examples/joseph_act3.html"
     },
@@ -1388,16 +1388,16 @@
       "act": 4,
       "chapter": "The Prison",
       "objective": "Care for prisoners and interpret two dreams.",
-      "engine": "watch-and-move",
+      "engine": "keep-balance",
       "game_plan": "Joseph/__docs/joseph-game-plan.md",
       "file": "Joseph/__docs/examples/joseph_act4.html"
     },
     {
       "story": "Joseph",
       "act": 5,
-      "chapter": "Pharaoh’s Dreams",
+      "chapter": "Pharaoh\u2019s Dreams",
       "objective": "Pair cows and grain with seven-year cycles.",
-      "engine": "listen-respond",
+      "engine": "gather-with-care",
       "game_plan": "Joseph/__docs/joseph-game-plan.md",
       "file": "Joseph/__docs/examples/joseph_act5.html"
     },
@@ -1406,7 +1406,7 @@
       "act": 6,
       "chapter": "Storehouses",
       "objective": "Plan grain reserves across Egypt.",
-      "engine": "tend-garden",
+      "engine": "find-path",
       "game_plan": "Joseph/__docs/joseph-game-plan.md",
       "file": "Joseph/__docs/examples/joseph_act6.html"
     },
@@ -1415,16 +1415,16 @@
       "act": 7,
       "chapter": "The Brothers Arrive",
       "objective": "Test recognition while distributing food.",
-      "engine": "match-it-up",
+      "engine": "gather-with-care",
       "game_plan": "Joseph/__docs/joseph-game-plan.md",
       "file": "Joseph/__docs/examples/joseph_act7.html"
     },
     {
       "story": "Joseph",
       "act": 8,
-      "chapter": "Benjamin’s Cup",
-      "objective": "Trace the hidden cup and Judah’s offer.",
-      "engine": "ready-then-act",
+      "chapter": "Benjamin\u2019s Cup",
+      "objective": "Trace the hidden cup and Judah\u2019s offer.",
+      "engine": "match-it-up",
       "game_plan": "Joseph/__docs/joseph-game-plan.md",
       "file": "Joseph/__docs/examples/joseph_act8.html"
     },
@@ -1442,7 +1442,7 @@
       "act": 10,
       "chapter": "Goshen",
       "objective": "Settle the family and preserve the famine record.",
-      "engine": "gather-with-care",
+      "engine": "keep-balance",
       "game_plan": "Joseph/__docs/joseph-game-plan.md",
       "file": "Joseph/__docs/examples/joseph_act10.html"
     },
@@ -1451,7 +1451,7 @@
       "act": 1,
       "chapter": "Be Strong",
       "objective": "Meditate on the instruction before crossing.",
-      "engine": "listen-respond",
+      "engine": "find-path",
       "game_plan": "Joshua/__docs/joshua-game-plan.md",
       "file": "Joshua/__docs/examples/joshua_act1.html"
     },
@@ -1460,7 +1460,7 @@
       "act": 2,
       "chapter": "Rahab and the Spies",
       "objective": "Hide the scouts and mark the scarlet cord.",
-      "engine": "gather-with-care",
+      "engine": "watch-and-move",
       "game_plan": "Joshua/__docs/joshua-game-plan.md",
       "file": "Joshua/__docs/examples/joshua_act2.html"
     },
@@ -1469,7 +1469,7 @@
       "act": 3,
       "chapter": "Crossing Jordan",
       "objective": "Carry twelve memorial stones from the riverbed.",
-      "engine": "keep-balance",
+      "engine": "find-path",
       "game_plan": "Joshua/__docs/joshua-game-plan.md",
       "file": "Joshua/__docs/examples/joshua_act3.html"
     },
@@ -1478,16 +1478,16 @@
       "act": 4,
       "chapter": "Jericho",
       "objective": "March the pattern, sound the trumpets, protect Rahab.",
-      "engine": "find-path",
+      "engine": "ready-then-act",
       "game_plan": "Joshua/__docs/joshua-game-plan.md",
       "file": "Joshua/__docs/examples/joshua_act4.html"
     },
     {
       "story": "Joshua",
       "act": 5,
-      "chapter": "Achan’s Hidden Goods",
-      "objective": "Trace the community’s loss to the buried objects.",
-      "engine": "tap-sequence",
+      "chapter": "Achan\u2019s Hidden Goods",
+      "objective": "Trace the community\u2019s loss to the buried objects.",
+      "engine": "match-it-up",
       "game_plan": "Joshua/__docs/joshua-game-plan.md",
       "file": "Joshua/__docs/examples/joshua_act5.html"
     },
@@ -1496,7 +1496,7 @@
       "act": 6,
       "chapter": "Ai",
       "objective": "Set the ambush without repeating earlier presumption.",
-      "engine": "tend-garden",
+      "engine": "watch-and-move",
       "game_plan": "Joshua/__docs/joshua-game-plan.md",
       "file": "Joshua/__docs/examples/joshua_act6.html"
     },
@@ -1505,7 +1505,7 @@
       "act": 7,
       "chapter": "The Gibeonites",
       "objective": "Inspect the worn supplies and face a rushed oath.",
-      "engine": "ready-then-act",
+      "engine": "look-closely",
       "game_plan": "Joshua/__docs/joshua-game-plan.md",
       "file": "Joshua/__docs/examples/joshua_act7.html"
     },
@@ -1514,7 +1514,7 @@
       "act": 8,
       "chapter": "The Long Campaign",
       "objective": "Resolve territory challenges without spectacle.",
-      "engine": "story-builder",
+      "engine": "tap-sequence",
       "game_plan": "Joshua/__docs/joshua-game-plan.md",
       "file": "Joshua/__docs/examples/joshua_act8.html"
     },
@@ -1523,7 +1523,7 @@
       "act": 9,
       "chapter": "Allot the Land",
       "objective": "Distribute inheritance among tribes.",
-      "engine": "watch-and-move",
+      "engine": "keep-balance",
       "game_plan": "Joshua/__docs/joshua-game-plan.md",
       "file": "Joshua/__docs/examples/joshua_act9.html"
     },
@@ -1541,7 +1541,7 @@
       "act": 1,
       "chapter": "The Child in the River",
       "objective": "Guide the basket through reeds while Miriam keeps watch.",
-      "engine": "listen-respond",
+      "engine": "find-path",
       "game_plan": "Moses/__docs/moses-game-plan.md",
       "file": "Moses/__docs/examples/moses_act1.html"
     },
@@ -1550,7 +1550,7 @@
       "act": 2,
       "chapter": "The Burning Bush",
       "objective": "Herd sheep, approach the fire, and answer the call.",
-      "engine": "tap-sequence",
+      "engine": "listen-respond",
       "game_plan": "Moses/__docs/moses-game-plan.md",
       "file": "Moses/__docs/examples/moses_act2.html"
     },
@@ -1559,7 +1559,7 @@
       "act": 3,
       "chapter": "Before the Throne",
       "objective": "Match signs and warnings to each audience.",
-      "engine": "keep-balance",
+      "engine": "match-it-up",
       "game_plan": "Moses/__docs/moses-game-plan.md",
       "file": "Moses/__docs/examples/moses_act3.html"
     },
@@ -1568,7 +1568,7 @@
       "act": 4,
       "chapter": "Passover Night",
       "objective": "Prepare the meal and mark the doorway before departure.",
-      "engine": "match-it-up",
+      "engine": "gather-with-care",
       "game_plan": "Moses/__docs/moses-game-plan.md",
       "file": "Moses/__docs/examples/moses_act4.html"
     },
@@ -1577,7 +1577,7 @@
       "act": 5,
       "chapter": "Through the Sea",
       "objective": "Keep the people moving along the opened path.",
-      "engine": "ready-then-act",
+      "engine": "tap-sequence",
       "game_plan": "Moses/__docs/moses-game-plan.md",
       "file": "Moses/__docs/examples/moses_act5.html"
     },
@@ -1586,7 +1586,7 @@
       "act": 6,
       "chapter": "Bread in the Wilderness",
       "objective": "Gather only enough manna for the day.",
-      "engine": "watch-and-move",
+      "engine": "gather-with-care",
       "game_plan": "Moses/__docs/moses-game-plan.md",
       "file": "Moses/__docs/examples/moses_act6.html"
     },
@@ -1595,7 +1595,7 @@
       "act": 7,
       "chapter": "Sinai",
       "objective": "Arrange the camp and carry the covenant words.",
-      "engine": "gather-with-care",
+      "engine": "listen-respond",
       "game_plan": "Moses/__docs/moses-game-plan.md",
       "file": "Moses/__docs/examples/moses_act7.html"
     },
@@ -1604,7 +1604,7 @@
       "act": 8,
       "chapter": "The Golden Calf",
       "objective": "Confront the idol and intercede for the people.",
-      "engine": "look-closely",
+      "engine": "tap-sequence",
       "game_plan": "Moses/__docs/moses-game-plan.md",
       "file": "Moses/__docs/examples/moses_act8.html"
     },
@@ -1613,7 +1613,7 @@
       "act": 9,
       "chapter": "Forty Years",
       "objective": "Navigate a provision-and-trust journey map.",
-      "engine": "tend-garden",
+      "engine": "find-path",
       "game_plan": "Moses/__docs/moses-game-plan.md",
       "file": "Moses/__docs/examples/moses_act9.html"
     },
@@ -1622,7 +1622,7 @@
       "act": 10,
       "chapter": "Mount Nebo",
       "objective": "Appoint Joshua and identify the land from afar.",
-      "engine": "story-builder",
+      "engine": "match-it-up",
       "game_plan": "Moses/__docs/moses-game-plan.md",
       "file": "Moses/__docs/examples/moses_act10.html"
     },
@@ -1630,8 +1630,8 @@
       "story": "Nehemiah",
       "act": 1,
       "chapter": "Bad News",
-      "objective": "Map Jerusalem’s broken gates while Nehemiah prays.",
-      "engine": "story-builder",
+      "objective": "Map Jerusalem\u2019s broken gates while Nehemiah prays.",
+      "engine": "listen-respond",
       "game_plan": "Nehemiah/__docs/nehemiah-game-plan.md",
       "file": "Nehemiah/__docs/examples/nehemiah_act1.html"
     },
@@ -1640,7 +1640,7 @@
       "act": 2,
       "chapter": "Before the King",
       "objective": "Choose a clear request and realistic resources.",
-      "engine": "match-it-up",
+      "engine": "look-closely",
       "game_plan": "Nehemiah/__docs/nehemiah-game-plan.md",
       "file": "Nehemiah/__docs/examples/nehemiah_act2.html"
     },
@@ -1649,7 +1649,7 @@
       "act": 3,
       "chapter": "Night Inspection",
       "objective": "Survey ruined walls without alerting opponents.",
-      "engine": "gather-with-care",
+      "engine": "watch-and-move",
       "game_plan": "Nehemiah/__docs/nehemiah-game-plan.md",
       "file": "Nehemiah/__docs/examples/nehemiah_act3.html"
     },
@@ -1658,7 +1658,7 @@
       "act": 4,
       "chapter": "Rise and Build",
       "objective": "Assign families to adjacent wall sections.",
-      "engine": "find-path",
+      "engine": "fit-pieces",
       "game_plan": "Nehemiah/__docs/nehemiah-game-plan.md",
       "file": "Nehemiah/__docs/examples/nehemiah_act4.html"
     },
@@ -1667,7 +1667,7 @@
       "act": 5,
       "chapter": "Sword and Trowel",
       "objective": "Balance guarding with construction.",
-      "engine": "tend-garden",
+      "engine": "keep-balance",
       "game_plan": "Nehemiah/__docs/nehemiah-game-plan.md",
       "file": "Nehemiah/__docs/examples/nehemiah_act5.html"
     },
@@ -1676,7 +1676,7 @@
       "act": 6,
       "chapter": "The Outcry",
       "objective": "Cancel exploitative debts and restore fields.",
-      "engine": "listen-respond",
+      "engine": "keep-balance",
       "game_plan": "Nehemiah/__docs/nehemiah-game-plan.md",
       "file": "Nehemiah/__docs/examples/nehemiah_act6.html"
     },
@@ -1685,7 +1685,7 @@
       "act": 7,
       "chapter": "Plots and Rumours",
       "objective": "Recognise distractions designed to stop the work.",
-      "engine": "tap-sequence",
+      "engine": "match-it-up",
       "game_plan": "Nehemiah/__docs/nehemiah-game-plan.md",
       "file": "Nehemiah/__docs/examples/nehemiah_act7.html"
     },
@@ -1694,7 +1694,7 @@
       "act": 8,
       "chapter": "The Wall Completed",
       "objective": "Close the final gap and set gatekeepers.",
-      "engine": "watch-and-move",
+      "engine": "tap-sequence",
       "game_plan": "Nehemiah/__docs/nehemiah-game-plan.md",
       "file": "Nehemiah/__docs/examples/nehemiah_act8.html"
     },
@@ -1703,7 +1703,7 @@
       "act": 9,
       "chapter": "The Book Read",
       "objective": "Rebuild the platform and help the people understand.",
-      "engine": "ready-then-act",
+      "engine": "fit-pieces",
       "game_plan": "Nehemiah/__docs/nehemiah-game-plan.md",
       "file": "Nehemiah/__docs/examples/nehemiah_act9.html"
     },
@@ -1721,7 +1721,7 @@
       "act": 1,
       "chapter": "The Warning",
       "objective": "Accept the Ark blueprint.",
-      "engine": "keep-balance",
+      "engine": "listen-respond",
       "game_plan": "Noah/__docs/noah-game-plan.md",
       "file": "Noah/__docs/examples/noah_act1.html"
     },
@@ -1730,7 +1730,7 @@
       "act": 2,
       "chapter": "The Blueprint",
       "objective": "Measure the hull to the given proportions.",
-      "engine": "look-closely",
+      "engine": "fit-pieces",
       "game_plan": "Noah/__docs/noah-game-plan.md",
       "file": "Noah/__docs/examples/noah_act2.html"
     },
@@ -1739,7 +1739,7 @@
       "act": 3,
       "chapter": "The Long Build",
       "objective": "Gather timber, fit planks, and seal with pitch.",
-      "engine": "story-builder",
+      "engine": "fit-pieces",
       "game_plan": "Noah/__docs/noah-game-plan.md",
       "file": "Noah/__docs/examples/noah_act3.html"
     },
@@ -1748,7 +1748,7 @@
       "act": 4,
       "chapter": "The Gathering",
       "objective": "Pair animals and stock each pen.",
-      "engine": "match-it-up",
+      "engine": "gather-with-care",
       "game_plan": "Noah/__docs/noah-game-plan.md",
       "file": "Noah/__docs/examples/noah_act4.html"
     },
@@ -1775,7 +1775,7 @@
       "act": 7,
       "chapter": "The Long Wait",
       "objective": "Send raven and doves at the right intervals.",
-      "engine": "find-path",
+      "engine": "tap-sequence",
       "game_plan": "Noah/__docs/noah-game-plan.md",
       "file": "Noah/__docs/examples/noah_act7.html"
     },
@@ -1784,7 +1784,7 @@
       "act": 8,
       "chapter": "Dry Ground",
       "objective": "Release animals habitat by habitat.",
-      "engine": "fit-pieces",
+      "engine": "gather-with-care",
       "game_plan": "Noah/__docs/noah-game-plan.md",
       "file": "Noah/__docs/examples/noah_act8.html"
     },
@@ -1793,7 +1793,7 @@
       "act": 9,
       "chapter": "The Covenant",
       "objective": "Build the altar and reveal the rainbow.",
-      "engine": "listen-respond",
+      "engine": "fit-pieces",
       "game_plan": "Noah/__docs/noah-game-plan.md",
       "file": "Noah/__docs/examples/noah_act9.html"
     },
@@ -1801,8 +1801,8 @@
       "story": "Noah",
       "act": 10,
       "chapter": "The Vineyard",
-      "objective": "Witness Noah’s failure and choose how the sons respond.",
-      "engine": "watch-and-move",
+      "objective": "Witness Noah\u2019s failure and choose how the sons respond.",
+      "engine": "look-closely",
       "game_plan": "Noah/__docs/noah-game-plan.md",
       "file": "Noah/__docs/examples/noah_act10.html"
     },
@@ -1811,7 +1811,7 @@
       "act": 1,
       "chapter": "Leaving Moab",
       "objective": "Pack lightly and choose whether to accompany Naomi.",
-      "engine": "look-closely",
+      "engine": "gather-with-care",
       "game_plan": "Ruth/__docs/ruth-game-plan.md",
       "file": "Ruth/__docs/examples/ruth_act1.html"
     },
@@ -1820,7 +1820,7 @@
       "act": 2,
       "chapter": "Your People",
       "objective": "Follow the road to Bethlehem together.",
-      "engine": "watch-and-move",
+      "engine": "find-path",
       "game_plan": "Ruth/__docs/ruth-game-plan.md",
       "file": "Ruth/__docs/examples/ruth_act2.html"
     },
@@ -1829,7 +1829,7 @@
       "act": 3,
       "chapter": "Gleaning",
       "objective": "Collect only grain left for gleaners.",
-      "engine": "tend-garden",
+      "engine": "gather-with-care",
       "game_plan": "Ruth/__docs/ruth-game-plan.md",
       "file": "Ruth/__docs/examples/ruth_act3.html"
     },
@@ -1838,7 +1838,7 @@
       "act": 4,
       "chapter": "Boaz Notices",
       "objective": "Deliver water and protection instructions to the workers.",
-      "engine": "story-builder",
+      "engine": "gather-with-care",
       "game_plan": "Ruth/__docs/ruth-game-plan.md",
       "file": "Ruth/__docs/examples/ruth_act4.html"
     },
@@ -1846,8 +1846,8 @@
       "story": "Ruth",
       "act": 5,
       "chapter": "At the Threshing Floor",
-      "objective": "Follow Naomi’s plan with restraint and clarity.",
-      "engine": "gather-with-care",
+      "objective": "Follow Naomi\u2019s plan with restraint and clarity.",
+      "engine": "find-path",
       "game_plan": "Ruth/__docs/ruth-game-plan.md",
       "file": "Ruth/__docs/examples/ruth_act5.html"
     },
@@ -1856,7 +1856,7 @@
       "act": 6,
       "chapter": "At the Gate",
       "objective": "Arrange witnesses and present the redemption choice.",
-      "engine": "tap-sequence",
+      "engine": "look-closely",
       "game_plan": "Ruth/__docs/ruth-game-plan.md",
       "file": "Ruth/__docs/examples/ruth_act6.html"
     },
@@ -1883,7 +1883,7 @@
       "act": 1,
       "chapter": "The Boy at Shiloh",
       "objective": "Complete temple tasks beside Eli.",
-      "engine": "listen-respond",
+      "engine": "tap-sequence",
       "game_plan": "Samuel/__docs/samuel-game-plan.md",
       "file": "Samuel/__docs/examples/samuel_act1.html"
     },
@@ -1892,7 +1892,7 @@
       "act": 2,
       "chapter": "The Voice at Night",
       "objective": "Listen three times and answer correctly.",
-      "engine": "tend-garden",
+      "engine": "listen-respond",
       "game_plan": "Samuel/__docs/samuel-game-plan.md",
       "file": "Samuel/__docs/examples/samuel_act2.html"
     },
@@ -1901,7 +1901,7 @@
       "act": 3,
       "chapter": "A Hard Message",
       "objective": "Tell Eli the whole message without embellishment.",
-      "engine": "keep-balance",
+      "engine": "listen-respond",
       "game_plan": "Samuel/__docs/samuel-game-plan.md",
       "file": "Samuel/__docs/examples/samuel_act3.html"
     },
@@ -1919,7 +1919,7 @@
       "act": 5,
       "chapter": "Ebenezer",
       "objective": "Raise a memorial stone after deliverance.",
-      "engine": "find-path",
+      "engine": "fit-pieces",
       "game_plan": "Samuel/__docs/samuel-game-plan.md",
       "file": "Samuel/__docs/examples/samuel_act5.html"
     },
@@ -1928,7 +1928,7 @@
       "act": 6,
       "chapter": "A King Demanded",
       "objective": "Hear the elders and explain the tradeoffs.",
-      "engine": "story-builder",
+      "engine": "listen-respond",
       "game_plan": "Samuel/__docs/samuel-game-plan.md",
       "file": "Samuel/__docs/examples/samuel_act6.html"
     },
@@ -1937,16 +1937,16 @@
       "act": 7,
       "chapter": "Saul Chosen",
       "objective": "Find Saul among the baggage.",
-      "engine": "fit-pieces",
+      "engine": "tap-sequence",
       "game_plan": "Samuel/__docs/samuel-game-plan.md",
       "file": "Samuel/__docs/examples/samuel_act7.html"
     },
     {
       "story": "Samuel",
       "act": 8,
-      "chapter": "Saul’s First Victory",
+      "chapter": "Saul\u2019s First Victory",
       "objective": "Rally the people and refuse revenge.",
-      "engine": "ready-then-act",
+      "engine": "tap-sequence",
       "game_plan": "Samuel/__docs/samuel-game-plan.md",
       "file": "Samuel/__docs/examples/samuel_act8.html"
     },
@@ -1964,7 +1964,7 @@
       "act": 10,
       "chapter": "David Anointed",
       "objective": "Look past height and choose the shepherd son.",
-      "engine": "match-it-up",
+      "engine": "look-closely",
       "game_plan": "Samuel/__docs/samuel-game-plan.md",
       "file": "Samuel/__docs/examples/samuel_act10.html"
     }

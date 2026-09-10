@@ -1,0 +1,64 @@
+{
+  "id": "job_speaks",
+  "name": "Ch.5 · Job Speaks",
+  "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "job_speaks_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Build an honest lament from grief and protest.",
+      "cite": "Job 1–42",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "job_speaks_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Can faith remain honest when suffering refuses a simple explanation? — Job Speaks is the next step in that question.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "job_speaks_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE WORD STANDS",
+      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "job_speaks_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Walk on with the lesson 📖",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment 🕊️",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "job_speaks",
+  "foreground": "fg_job_speaks",
+  "index": 4
+}

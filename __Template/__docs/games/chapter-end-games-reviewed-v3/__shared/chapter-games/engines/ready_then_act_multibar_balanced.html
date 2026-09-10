@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Ready, Then Act — Multi Bar Prototype</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --ink:#30251a;
+  --paper:#fff9e9;
+  --accent:#ffd95a;
+  --good:#2f7d32;
+  --warn:#a85b00;
+  --bad:#b3261e;
+  --sky:#c9e7f5;
+  --ground:#8caf62;
+}
+html,body{margin:0;width:100%;height:100%;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif}
+body{display:flex;align-items:center;justify-content:center;padding:12px}
+.wrap{width:min(930px,100%);height:min(700px,100vh);display:flex;flex-direction:column;gap:9px}
+header{text-align:center}
+h1{margin:0;font-size:clamp(1.4rem,4vw,2rem)}
+.sub{margin:4px 0 0;font-size:clamp(.86rem,2.3vw,1rem)}
+.hud{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.chip{border:3px solid var(--ink);border-radius:11px;background:#fff;padding:7px 11px;font-weight:800;min-height:42px;display:flex;align-items:center}
+.stage{position:relative;flex:1;min-height:390px;border:4px solid var(--ink);border-radius:16px;overflow:hidden;background:linear-gradient(var(--sky) 0 63%,var(--ground) 63% 100%);box-shadow:0 5px 0 rgba(48,37,26,.2)}
+.message{position:absolute;left:50%;top:10px;transform:translateX(-50%);max-width:88%;background:#fff;border:3px solid var(--ink);border-radius:11px;padding:7px 11px;text-align:center;font-weight:800;z-index:6}
+.challenge{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);width:min(720px,84%);display:flex;flex-direction:column;gap:12px}
+.row{display:grid;grid-template-columns:72px 1fr 74px;gap:10px;align-items:center}
+.row-label{font-weight:900;text-align:right}
+.track{position:relative;height:54px;background:#fff;border:4px solid var(--ink);border-radius:14px;overflow:hidden;box-shadow:0 3px 0 rgba(48,37,26,.16)}
+.zone{position:absolute;top:5px;bottom:5px;width:26%;background:rgba(47,125,50,.2);border:3px solid var(--good);border-radius:10px}
+.marker{position:absolute;top:50%;width:22px;height:40px;border-radius:8px;background:var(--bad);border:4px solid var(--ink);transform:translate(-50%,-50%);box-shadow:0 2px 0 rgba(48,37,26,.22)}
+.marker.good{background:var(--good)}
+.state{font-weight:900;text-align:left}
+.state.good{color:var(--good)}
+.state.wait{color:var(--warn)}
+.action-area{position:absolute;left:50%;bottom:7%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
+.ready-text{font-size:1rem;font-weight:900;min-height:24px}
+.action-btn{border:4px solid var(--ink);border-radius:14px;background:var(--accent);padding:12px 30px;font:inherit;font-size:1.2rem;font-weight:900;min-height:54px;cursor:pointer;box-shadow:0 4px 0 #a88720}
+.action-btn:active{transform:translateY(2px);box-shadow:0 2px 0 #a88720}
+.level-controls{display:flex;gap:7px;justify-content:center;flex-wrap:wrap}
+.level-controls button{border:3px solid var(--ink);border-radius:10px;background:#fff;padding:8px 12px;font:inherit;font-weight:800;min-height:44px}
+.level-controls button.active{background:var(--accent)}
+.help{text-align:center;margin:0;font-size:.84rem}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:18px;z-index:1000}
+.modal.active{display:flex}
+.card{width:min(460px,100%);background:#fff;border:4px solid var(--ink);border-radius:16px;padding:20px;text-align:center}
+.card h2{margin-top:0}
+.verse{margin:12px 0;padding:10px;background:#eef7e9;border-left:5px solid var(--good);text-align:left}
+.card button{border:3px solid var(--ink);border-radius:10px;background:var(--accent);padding:10px 18px;font:inherit;font-weight:900}
+@media(max-height:610px){
+  .challenge{top:51%}.row{gap:7px}.track{height:46px}.action-area{bottom:3%}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Ready, Then Act</h1>
+    <p class="sub">Wait until every marker is inside its own moving green zone — then act.</p>
+  </header>
+
+  <div class="hud">
+    <div class="chip" id="levelChip">Level: 1</div>
+    <div class="chip" id="triesChip">Attempts: 0</div>
+    <div class="chip" id="statusChip">Status: Watch</div>
+  </div>
+
+  <div class="stage">
+    <div class="message" id="message">The green target moves too. Act only when every row shows READY.</div>
+    <div class="challenge" id="challenge"></div>
+
+    <div class="action-area">
+      <div class="ready-text" id="readyText">WAIT...</div>
+      <button class="action-btn" id="actionBtn">ACT!</button>
+    </div>
+  </div>
+
+  <div class="level-controls">
+    <button data-level="1" class="active">Level 1</button>
+    <button data-level="2">Level 2</button>
+    <button data-level="3">Level 3</button>
+    <button data-level="4">Level 4</button>
+  </div>
+  <p class="help">Keyboard: Space or Enter to act. The markers and green zones move independently.</p>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="card">
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+    <div class="verse" id="modalVerse"></div>
+    <button id="restartBtn">Try this level again</button>
+  </div>
+</div>
+
+<script>
+const SETTINGS = {
+  maxLevel:4,
+  markerSpeed:[0.18,0.20,0.22,0.24],
+  zoneSpeed:[0.11,0.13,0.15,0.17],
+  zoneWidthByLevel:[32,38,44,50]
+};
+
+const challenge=document.getElementById("challenge");
+const actionBtn=document.getElementById("actionBtn");
+const readyText=document.getElementById("readyText");
+const levelChip=document.getElementById("levelChip");
+const triesChip=document.getElementById("triesChip");
+const statusChip=document.getElementById("statusChip");
+const message=document.getElementById("message");
+const modal=document.getElementById("modal");
+
+let level=1;
+let attempts=0;
+let rows=[];
+let over=false;
+let last=performance.now();
+
+function makeRow(index){
+  const el=document.createElement("div");
+  el.className="row";
+  el.innerHTML=`
+    <div class="row-label">Bar ${index+1}</div>
+    <div class="track">
+      <div class="zone"></div>
+      <div class="marker"></div>
+    </div>
+    <div class="state wait">WAIT</div>
+  `;
+  challenge.appendChild(el);
+
+  const marker=el.querySelector(".marker");
+  const zone=el.querySelector(".zone");
+  const state=el.querySelector(".state");
+
+  const markerStart=(index*23+12)%100;
+  const zoneStart=(index*31+36)%65;
+
+  return {
+    el,marker,zone,state,
+    markerPct:markerStart,
+    markerDir:index%2===0?1:-1,
+    zonePct:zoneStart,
+    zoneDir:index%2===0?-1:1,
+    markerSpeed:SETTINGS.markerSpeed[index],
+    zoneSpeed:SETTINGS.zoneSpeed[index],
+    zoneWidth:SETTINGS.zoneWidthByLevel[level-1]
+  };
+}
+
+function buildLevel(n){
+  level=n;
+  over=false;
+  attempts=0;
+  challenge.innerHTML="";
+  rows=[];
+  for(let i=0;i<n;i++) rows.push(makeRow(i));
+  levelChip.textContent=`Level: ${n}`;
+  triesChip.textContent="Attempts: 0";
+  statusChip.textContent="Status: Watch";
+  readyText.textContent="WAIT...";
+  message.textContent=n===1
+    ? "Watch both the marker and the green zone. Act when they overlap."
+    : `Get all ${n} bars inside their moving green zones at the same time.`;
+  document.querySelectorAll(".level-controls button").forEach(b=>{
+    b.classList.toggle("active",Number(b.dataset.level)===n);
+  });
+  last=performance.now();
+}
+
+function inZone(r){
+  return r.markerPct>=r.zonePct && r.markerPct<=r.zonePct+r.zoneWidth;
+}
+
+function tick(now){
+  const dt=Math.min(40,now-last);
+  last=now;
+
+  if(!over){
+    let allGood=true;
+
+    rows.forEach((r)=>{
+      r.markerPct += r.markerDir*r.markerSpeed*dt*0.1;
+      if(r.markerPct>=100){r.markerPct=100;r.markerDir=-1}
+      if(r.markerPct<=0){r.markerPct=0;r.markerDir=1}
+
+      r.zonePct += r.zoneDir*r.zoneSpeed*dt*0.1;
+      const maxZone=100-r.zoneWidth;
+      if(r.zonePct>=maxZone){r.zonePct=maxZone;r.zoneDir=-1}
+      if(r.zonePct<=0){r.zonePct=0;r.zoneDir=1}
+
+      r.marker.style.left=r.markerPct+"%";
+      r.zone.style.left=r.zonePct+"%";
+      r.zone.style.width=r.zoneWidth+"%";
+
+      const good=inZone(r);
+      r.marker.classList.toggle("good",good);
+      r.state.textContent=good?"READY":"WAIT";
+      r.state.className="state "+(good?"good":"wait");
+      allGood=allGood&&good;
+    });
+
+    readyText.textContent=allGood?"ACT NOW!":"WAIT...";
+    readyText.style.color=allGood?"var(--good)":"var(--warn)";
+    statusChip.textContent="Status: "+(allGood?"All ready!":"Watch");
+  }
+
+  requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+
+function act(){
+  if(over) return;
+  attempts++;
+  triesChip.textContent=`Attempts: ${attempts}`;
+
+  const goodRows=rows.filter(inZone).length;
+
+  if(goodRows===rows.length){
+    over=true;
+    statusChip.textContent="Status: Success";
+    readyText.textContent="PERFECT!";
+    dispatchEvent(new CustomEvent("game-complete",{detail:{game:"ready-then-act-multibar",level}}));
+    if(parent!==window) parent.postMessage({type:"game-complete",game:"ready-then-act-multibar",level},"*");
+
+    setTimeout(()=>{
+      showModal(
+        `Level ${level} complete`,
+        `All ${level} timing bar${level===1?" was":"s were"} inside the moving green target at the same moment.`,
+        "You watched, waited, and acted at the right time."
+      );
+    },180);
+  } else {
+    message.textContent=`${goodRows} of ${rows.length} ready. Watch for the moment when they all line up.`;
+
+    // Gentle assist after repeated misses.
+    if(attempts===4){
+      rows.forEach(r=>r.zoneWidth=Math.min(42,r.zoneWidth+5));
+      message.textContent+=" The green zones are now slightly wider.";
+    }
+    if(attempts===8){
+      rows.forEach(r=>{
+        r.markerSpeed*=0.82;
+        r.zoneSpeed*=0.82;
+        r.zoneWidth=Math.min(46,r.zoneWidth+4);
+      });
+      message.textContent="The movement has slowed a little to help you find the timing.";
+    }
+  }
+}
+
+function showModal(title,text,verse){
+  document.getElementById("modalTitle").textContent=title;
+  document.getElementById("modalText").textContent=text;
+  document.getElementById("modalVerse").textContent=verse;
+  modal.classList.add("active");
+}
+
+actionBtn.addEventListener("click",act);
+addEventListener("keydown",e=>{
+  if(e.key===" "||e.key==="Enter"){
+    e.preventDefault();
+    act();
+  }
+});
+
+document.querySelectorAll(".level-controls button").forEach(btn=>{
+  btn.addEventListener("click",()=>buildLevel(Number(btn.dataset.level)));
+});
+
+document.getElementById("restartBtn").addEventListener("click",()=>{
+  modal.classList.remove("active");
+  buildLevel(level);
+});
+
+buildLevel(1);
+</script>
+</body>
+</html>

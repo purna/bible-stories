@@ -1,0 +1,115 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "be_strong",
+      "name": "Ch.1 · Be Strong",
+      "file": "act1_be_strong.json",
+      "scene": "be_strong",
+      "foreground": "fg_be_strong",
+      "assetFolder": "act_01_be_strong",
+      "assetStem": "joshua_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "rahab_and_the_spies",
+      "name": "Ch.2 · Rahab and the Spies",
+      "file": "act2_rahab_and_the_spies.json",
+      "scene": "rahab_and_the_spies",
+      "foreground": "fg_rahab_and_the_spies",
+      "assetFolder": "act_02_rahab_and_the_spies",
+      "assetStem": "joshua_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    },
+    {
+      "id": "crossing_jordan",
+      "name": "Ch.3 · Crossing Jordan",
+      "file": "act3_crossing_jordan.json",
+      "scene": "crossing_jordan",
+      "foreground": "fg_crossing_jordan",
+      "assetFolder": "act_03_crossing_jordan",
+      "assetStem": "joshua_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "jericho",
+      "name": "Ch.4 · Jericho",
+      "file": "act4_jericho.json",
+      "scene": "jericho",
+      "foreground": "fg_jericho",
+      "assetFolder": "act_04_jericho",
+      "assetStem": "joshua_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+    },
+    {
+      "id": "achan_s_hidden_goods",
+      "name": "Ch.5 · Achan’s Hidden Goods",
+      "file": "act5_achan_s_hidden_goods.json",
+      "scene": "achan_s_hidden_goods",
+      "foreground": "fg_achan_s_hidden_goods",
+      "assetFolder": "act_05_achan_s_hidden_goods",
+      "assetStem": "joshua_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+    },
+    {
+      "id": "ai",
+      "name": "Ch.6 · Ai",
+      "file": "act6_ai.json",
+      "scene": "ai",
+      "foreground": "fg_ai",
+      "assetFolder": "act_06_ai",
+      "assetStem": "joshua_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+    },
+    {
+      "id": "the_gibeonites",
+      "name": "Ch.7 · The Gibeonites",
+      "file": "act7_the_gibeonites.json",
+      "scene": "the_gibeonites",
+      "foreground": "fg_the_gibeonites",
+      "assetFolder": "act_07_the_gibeonites",
+      "assetStem": "joshua_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "the_long_campaign",
+      "name": "Ch.8 · The Long Campaign",
+      "file": "act8_the_long_campaign.json",
+      "scene": "the_long_campaign",
+      "foreground": "fg_the_long_campaign",
+      "assetFolder": "act_08_the_long_campaign",
+      "assetStem": "joshua_act8",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+    },
+    {
+      "id": "allot_the_land",
+      "name": "Ch.9 · Allot the Land",
+      "file": "act9_allot_the_land.json",
+      "scene": "allot_the_land",
+      "foreground": "fg_allot_the_land",
+      "assetFolder": "act_09_allot_the_land",
+      "assetStem": "joshua_act9",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)"
+    },
+    {
+      "id": "choose_this_day",
+      "name": "Ch.10 · Choose This Day",
+      "file": "act10_choose_this_day.json",
+      "scene": "choose_this_day",
+      "foreground": "fg_choose_this_day",
+      "assetFolder": "act_10_choose_this_day",
+      "assetStem": "joshua_act10",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    }
+  ]
+}

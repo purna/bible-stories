@@ -1,0 +1,64 @@
+{
+  "id": "choose_this_day",
+  "name": "Ch.10 · Choose This Day",
+  "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)",
+  "particle": "dawn",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "choose_this_day_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Place household stones beside the covenant witness.",
+      "cite": "Joshua 1–24",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "choose_this_day_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Will courage remain rooted in instruction rather than conquest for its own sake? — Choose This Day is the next step in that question.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "choose_this_day_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE WORD STANDS",
+      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "choose_this_day_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Walk on with the lesson 📖",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment 🕊️",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "choose_this_day",
+  "foreground": "fg_choose_this_day",
+  "index": 9
+}

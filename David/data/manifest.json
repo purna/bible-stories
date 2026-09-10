@@ -1,0 +1,137 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "anointed",
+      "name": "Ch.1 · Anointed",
+      "file": "act1_anointed.json",
+      "scene": "anointed",
+      "foreground": "fg_anointed",
+      "assetFolder": "act_01_anointed",
+      "assetStem": "david_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a3a1a, #0e1a08 65%, #060804)"
+    },
+    {
+      "id": "goliath",
+      "name": "Ch.2 · Goliath",
+      "file": "act2_goliath.json",
+      "scene": "goliath",
+      "foreground": "fg_goliath",
+      "assetFolder": "act_02_goliath",
+      "assetStem": "david_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 60% 40%, #2d1a0e, #120a04 65%, #060402)"
+    },
+    {
+      "id": "court",
+      "name": "Ch.3 · Saul's Court",
+      "file": "act3_court.json",
+      "scene": "court",
+      "foreground": "fg_court",
+      "assetFolder": "act_03_court",
+      "assetStem": "david_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #120a04 65%, #060402)"
+    },
+    {
+      "id": "friends",
+      "name": "Ch.4 · Covenant Friends",
+      "file": "act4_friends.json",
+      "scene": "friends",
+      "foreground": "fg_friends",
+      "assetFolder": "act_04_friends",
+      "assetStem": "david_act4",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 40%, #1a1024, #0a0610 65%, #040208)"
+    },
+    {
+      "id": "wilderness",
+      "name": "Ch.5 · The Wilderness",
+      "file": "act5_wilderness.json",
+      "scene": "wilderness",
+      "foreground": "fg_wilderness",
+      "assetFolder": "act_05_wilderness",
+      "assetStem": "david_act5",
+      "particle": "storm",
+      "bg": "radial-gradient(circle at 40% 50%, #241810, #100a04 65%, #060402)"
+    },
+    {
+      "id": "abigail",
+      "name": "Ch.6 · Abigail",
+      "file": "act6_abigail.json",
+      "scene": "abigail",
+      "foreground": "fg_abigail",
+      "assetFolder": "act_06_abigail",
+      "assetStem": "david_act6",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 60% 40%, #1a2a14, #0a1408 65%, #040802)"
+    },
+    {
+      "id": "throne",
+      "name": "Ch.7 · The Throne",
+      "file": "act7_throne.json",
+      "scene": "throne",
+      "foreground": "fg_throne",
+      "assetFolder": "act_07_throne",
+      "assetStem": "david_act7",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #120a04 65%, #060402)"
+    },
+    {
+      "id": "bathsheba",
+      "name": "Ch.8 · Bathsheba and Uriah",
+      "file": "act8_bathsheba.json",
+      "scene": "bathsheba",
+      "foreground": "fg_bathsheba",
+      "assetFolder": "act_08_bathsheba",
+      "assetStem": "david_act8",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 60%, #1a0e08, #0a0604 65%, #040202)"
+    },
+    {
+      "id": "nathan",
+      "name": "Ch.9 · Nathan's Parable",
+      "file": "act9_nathan.json",
+      "scene": "nathan",
+      "foreground": "fg_nathan",
+      "assetFolder": "act_09_nathan",
+      "assetStem": "david_act9",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 40%, #241a10, #100a04 65%, #060402)"
+    },
+    {
+      "id": "absalom",
+      "name": "Ch.10 · Absalom",
+      "file": "act10_absalom.json",
+      "scene": "absalom",
+      "foreground": "fg_absalom",
+      "assetFolder": "act_10_absalom",
+      "assetStem": "david_act10",
+      "particle": "storm",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1420, #0a0610 65%, #040208)"
+    },
+    {
+      "id": "census",
+      "name": "Ch.11 · The Census",
+      "file": "act11_census.json",
+      "scene": "census",
+      "foreground": "fg_census",
+      "assetFolder": "act_11_census",
+      "assetStem": "david_act11",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 40%, #1a0e08, #0a0604 65%, #040202)"
+    },
+    {
+      "id": "solomon",
+      "name": "Ch.12 · Solomon",
+      "file": "act12_solomon.json",
+      "scene": "solomon",
+      "foreground": "fg_solomon",
+      "assetFolder": "act_12_solomon",
+      "assetStem": "david_act12",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #0a1408 65%, #040802)"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "covenant",
+  "name": "Ch.9 \u00b7 The Altar & the Covenant",
+  "bg": "radial-gradient(circle at 50% 50%, #141e2e, #081018 65%, #020508)",
+  "particle": "rainbow",
+  "svg": "ch9_altar",
+  "lines": [
+    {
+      "id": "covenant_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch9_altar",
+      "text": "The first thing Noah did on dry land was not rebuild a house. It was build an altar.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "covenant_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch9_altar",
+      "text": "He took one of every clean animal and offered it as a burnt offering.",
+      "cite": "Genesis 8:20",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "covenant_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch9_god_covenant",
+      "text": "Never again will I curse the ground because of humans. Never again will I destroy all life.",
+      "cite": "Genesis 8:21",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "covenant_3",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch9_rainbow",
+      "text": "I have set my rainbow in the clouds. It is the sign of the covenant between me and the earth.",
+      "cite": "Genesis 9:13",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "covenant_4",
+      "speaker": "narrator",
+      "fx": "wave",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch9_rainbow",
+      "sfx": "RAINBOW!",
+      "text": "Colour tore across the sky \u2014 red, gold, green, blue \u2014 a promise written in light.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "covenant_5",
+      "speaker": "family",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch9_rainbow",
+      "text": "All eight of them stood in the mud and stared at the sky. Nobody spoke.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "covenant_6",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch9_rainbow",
+      "text": "The story looked like it was over. It was not over.",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

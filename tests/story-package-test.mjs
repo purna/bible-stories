@@ -4,7 +4,15 @@ import process from 'node:process';
 
 const root = path.resolve(import.meta.dirname, '..');
 const stories = ['Adam', 'Daniel', 'Eiljah', 'Jonah', 'Moses', 'Noah'];
-const required = ['asset-download-manager.js', 'loading-screen.css', 'loading-screen.js', 'story-runtime.css', 'story-runtime.js', 'audio-manager.js'];
+// Shared runtime files live under js/ and css/ subdirectories in the refactored layout.
+const required = [
+  { file: 'asset-download-manager.js', dir: 'js' },
+  { file: 'loading-screen.css', dir: 'css' },
+  { file: 'loading-screen.js', dir: 'js' },
+  { file: 'story-runtime.css', dir: 'css' },
+  { file: 'story-runtime.js', dir: 'js' },
+  { file: 'audio-manager.js', dir: 'js' }
+];
 const failures = [];
 const pass = message => console.log(`✓ ${message}`);
 const fail = message => failures.push(message);
@@ -14,12 +22,13 @@ for (const story of stories) {
   const html = fs.readFileSync(path.join(dir, 'index.html'), 'utf8');
   const manifest = JSON.parse(fs.readFileSync(path.join(dir, 'precache-manifest.json'), 'utf8'));
 
-  for (const file of required) {
-    if (!fs.existsSync(path.join(dir, file))) fail(`${story}: missing ${file}`);
-    if (!html.includes(file)) fail(`${story}: index.html does not load ${file}`);
-    if (!manifest.urls.includes(`${story}/${file}`)) fail(`${story}: manifest omits ${file}`);
+for (const { file, dir: sub } of required) {
+    const localPath = path.join(dir, sub, file);
+    if (!fs.existsSync(localPath)) fail(`${story}: missing ${sub}/${file}`);
+    if (!html.includes(`${sub}/${file}`)) fail(`${story}: index.html does not load ${sub}/${file}`);
+    if (!manifest.urls.includes(`${sub}/${file}`)) fail(`${story}: manifest omits ${sub}/${file}`);
   }
-  const runtime = fs.readFileSync(path.join(dir, 'story-runtime.js'), 'utf8');
+  const runtime = fs.readFileSync(path.join(dir, 'js', 'story-runtime.js'), 'utf8');
   for (const mode of ['reading', 'choice', 'game', 'modal', 'transition', 'paused']) {
     if (!runtime.includes(`'${mode}'`)) fail(`${story}: shared runtime omits ${mode} mode`);
   }
@@ -35,10 +44,12 @@ for (const story of stories) {
     if (!fs.existsSync(path.join(dir, local))) fail(`${story}: missing precache asset ${entry}`);
   }
   const storySources = fs.readdirSync(dir).filter(file => /\.(?:js|json)$/.test(file));
-  if (fs.existsSync(path.join(dir, 'data', 'story.json'))) storySources.push(path.join('data', 'story.json'));
-  if (fs.existsSync(path.join(dir, 'data'))) {
-    for (const file of fs.readdirSync(path.join(dir, 'data'))) {
-      if (/^act\d+_.+\.json$/.test(file)) storySources.push(path.join('data', file));
+  for (const sub of ['js', 'css', 'data']) {
+    const subDir = path.join(dir, sub);
+    if (fs.existsSync(subDir)) {
+      for (const file of fs.readdirSync(subDir)) {
+        if (/\.(?:js|json)$/.test(file)) storySources.push(path.join(sub, file));
+      }
     }
   }
   const declaredSfx = storySources.flatMap(file => {
@@ -47,7 +58,7 @@ for (const story of stories) {
   });
   for (const effect of declaredSfx) {
     if (!fs.existsSync(path.join(dir, effect))) fail(`${story}: declared SFX is missing: ${effect}`);
-    if (!manifest.urls.includes(`${story}/${effect}`)) fail(`${story}: declared SFX is not precached: ${effect}`);
+    if (!manifest.urls.includes(effect)) fail(`${story}: declared SFX is not precached: ${effect}`);
   }
   if (declaredSfx.length !== 4) fail(`${story}: expected 4 wired scene SFX, found ${declaredSfx.length}`);
   else pass(`${story} scene SFX wired (${declaredSfx.length})`);
@@ -64,7 +75,7 @@ for (const file of jonahMaps) {
   if (!hotspots.some(item => item.triggerOnce)) fail(`Jonah: no completion hotspot in ${file}`);
 }
 pass(`Jonah completion maps inspected (${jonahMaps.length})`);
-const jonahEngine = fs.readFileSync(path.join(root, 'Jonah', 'isometricEngine.js'), 'utf8');
+const jonahEngine = fs.readFileSync(path.join(root, 'Jonah', 'js', 'isometricEngine.js'), 'utf8');
 if (!jonahEngine.includes('if (!inputEnabled) return;')) fail('Jonah: renderer is not suspended while hidden');
 if (!jonahEngine.includes("new CustomEvent('isometric:error'")) fail('Jonah: map/WebGL recovery event is missing');
 if (jonahEngine.includes('new THREE.SphereGeometry(0.25, 12, 12)')) fail('Jonah: generic blue-sphere hotspots remain');
@@ -81,14 +92,16 @@ for (const scene of scenes) {
   }
 }
 pass(`Daniel vision scenes inspected (${scenes.length})`);
-const danielComic = fs.readFileSync(path.join(root, 'Daniel', 'daniel-comic.js'), 'utf8');
+const danielComic = fs.readFileSync(path.join(root, 'Daniel', 'js', 'daniel-comic.js'), 'utf8');
 if (!danielComic.includes('function startVisionAssembly()')) fail('Daniel: interpretation assembly step is missing');
 if (!danielComic.includes('recordAssemblyMistake')) fail('Daniel: assembly feedback is missing');
 
-const elijahStory = JSON.parse(fs.readFileSync(path.join(root, 'Eiljah', 'elijah-story.json'), 'utf8'));
+const elijahManifest = JSON.parse(fs.readFileSync(path.join(root, 'Eiljah', 'data', 'manifest.json'), 'utf8'));
+const elijahActs = await Promise.all(elijahManifest.acts.map(async act => JSON.parse(fs.readFileSync(path.join(root, 'Eiljah', 'data', act.file), 'utf8'))));
+const elijahStory = elijahActs;
 const hearingLines = elijahStory.flatMap(chapter => chapter.lines || []).filter(line => line.interaction === 'hearing');
 if (hearingLines.length !== 1) fail(`Elijah: expected one hearing interaction, found ${hearingLines.length}`);
-const elijahComic = fs.readFileSync(path.join(root, 'Eiljah', 'elijah-comic.js'), 'utf8');
+const elijahComic = fs.readFileSync(path.join(root, 'Eiljah', 'js', 'elijah-comic.js'), 'utf8');
 for (const layer of ['wind', 'quake', 'fire', 'threat', 'despair']) {
   if (!elijahComic.includes(`data-layer="${layer}"`)) fail(`Elijah: hearing interaction is missing ${layer} layer`);
 }
@@ -113,20 +126,25 @@ for (let i = 1; i <= 10; i += 1) {
 }
 const mosesScenes = ['basket', 'exile', 'throne', 'passover', 'sea', 'bread', 'mountain', 'calf', 'wilderness', 'nebo'];
 for (const id of mosesScenes) {
-  if (!fs.existsSync(path.join(root, 'Moses', 'assets', 'svg', `scene_${id}.svg`))) fail(`Moses: missing scene_${id}.svg`);
-  if (!fs.existsSync(path.join(root, 'Moses', 'assets', 'svg', `fg_${id}.svg`)))     fail(`Moses: missing fg_${id}.svg`);
-  if (!fs.existsSync(path.join(root, 'Moses', 'assets', '3d',   `${id}.json`)))       fail(`Moses: missing 3d/${id}.json`);
-  if (!fs.existsSync(path.join(root, 'Moses', 'scenes',         `${id}.js`)))         fail(`Moses: missing scenes/${id}.js`);
+  const sceneSvg = fs.readdirSync(path.join(root, 'Moses', 'assets', 'svg')).find(name => name.includes(`scene_${id}.svg`));
+  const fgSvg = fs.readdirSync(path.join(root, 'Moses', 'assets', 'svg')).find(name => name.includes(`fg_${id}.svg`));
+  const threeD = fs.readdirSync(path.join(root, 'Moses', 'assets', '3d')).find(name => name.includes(`${id}.json`));
+  const sceneJs = fs.readdirSync(path.join(root, 'Moses', 'assets', 'scenes')).find(name => name.includes(`${id}.js`));
+  if (!sceneSvg) fail(`Moses: missing scene_${id}.svg`);
+  if (!fgSvg)     fail(`Moses: missing fg_${id}.svg`);
+  if (!threeD)    fail(`Moses: missing 3d/${id}.json`);
+  if (!sceneJs)   fail(`Moses: missing scenes/${id}.js`);
 }
 if (!fs.existsSync(path.join(root, 'Moses', 'vendor', 'three.r128.min.js'))) fail('Moses: missing vendor/three.r128.min.js');
-if (!fs.existsSync(path.join(root, 'Moses', 'moses-scenes-helpers.js'))) fail('Moses: missing moses-scenes-helpers.js');
+if (!fs.existsSync(path.join(root, 'Moses', 'js', 'moses-scenes-helpers.js'))) fail('Moses: missing js/moses-scenes-helpers.js');
 const mosesHtml = fs.readFileSync(path.join(root, 'Moses', 'index.html'), 'utf8');
 if (!mosesHtml.includes('vendor/three.r128.min.js')) fail('Moses: index.html does not load three.js');
 if (!mosesHtml.includes('moses-scenes-helpers.js'))  fail('Moses: index.html does not load moses-scenes-helpers.js');
 for (const id of mosesScenes) {
-  if (!mosesHtml.includes(`scenes/${id}.js`)) fail(`Moses: index.html does not load scenes/${id}.js`);
+  const sceneJs = fs.readdirSync(path.join(root, 'Moses', 'assets', 'scenes')).find(name => name.includes(`${id}.js`));
+  if (!mosesHtml.includes(sceneJs)) fail(`Moses: index.html does not load ${sceneJs}`);
 }
-const mosesStory = fs.readFileSync(path.join(root, 'Moses', 'moses-story.js'), 'utf8');
+const mosesStory = fs.readFileSync(path.join(root, 'Moses', 'js', 'moses-story.js'), 'utf8');
 if (!mosesStory.includes('manifest.json')) fail('Moses: engine does not load data/manifest.json');
 if (!mosesStory.includes('SCENE_FACTORIES')) fail('Moses: engine does not register 3D scene factories');
 if (!mosesStory.includes('svg-behind') || !mosesStory.includes('svg-front')) fail('Moses: engine does not render SVG bg + fg layers');

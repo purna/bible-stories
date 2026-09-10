@@ -1,0 +1,55 @@
+{
+  "id": "the_song",
+  "particle": "dawn",
+  "bg": "radial-gradient(circle at 50% 25%, #f6e05e, #7b5a28 72%)",
+  "game": "song",
+  "gameTitle": "Build the victory song",
+  "gameInstructions": "Choose the three words that best remember Deborah\u2019s story.",
+  "lines": [
+    {
+      "id": "the_song_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Deborah and Barak sang, remembering willing leaders, courageous people, and the God who went before them.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_song_1",
+      "speaker": "deborah",
+      "fx": "type",
+      "delay": 800,
+      "align": "center",
+      "text": "Wake up, wake up, Deborah! Wake up, wake up, break out in song!",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_song_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The song honoured those who answered the call and did not hide the cost borne by the land.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_song_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Then the land had peace forty years.",
+      "cite": "Judges 5:1\u201331",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "gameSuccess": "The song remembers courage, wisdom, and people acting together.",
+  "name": "Ch.7 \u00b7 The Song",
+  "assetFolder": "act_07_the_song",
+  "assetStem": "deborah_act7"
+}

@@ -1,0 +1,142 @@
+{
+  "id": "furnace",
+  "name": "The Furnace",
+  "bg": "radial-gradient(circle at 50% 80%, #8b2500, #3d1200 60%, #1a0700)",
+  "particle": "fire",
+  "svg": "plain_of_dura",
+  "reign": null,
+  "audio": [
+    "assets/audio/music/Act3_Seven_Times_Heated.ogg",
+    "assets/audio/music/Act3_Seven_Times_Heated.mp3"
+  ],
+  "lines": [
+    {
+      "id": "furnace_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Years later, Nebuchadnezzar built a colossal golden statue on the plain of Dura.",
+      "align": "left",
+      "svg": "golden_statue",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "furnace_1",
+      "sfx": "BOW DOWN!",
+      "speaker": "nebuchadnezzar",
+      "fx": "shake",
+      "delay": 800,
+      "text": "When the music plays \u2014 EVERYONE bows to my image. Anyone who doesn't will be thrown into the furnace!",
+      "align": "center",
+      "svg": "golden_statue",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "furnace_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "This test was not designed for Daniel. It was designed for his friends: Shadrach, Meshach, and Abednego.",
+      "align": "right",
+      "svg": "plain_of_dura",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "furnace_3",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "Daniel is nowhere in this chapter. Sometimes faithfulness means watching people you love take the risk you didn't have to take.",
+      "align": "center",
+      "svg": "friends_standing",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "furnace_4",
+      "speaker": "friends",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "O king \u2014 our God is able to save us. But even if he doesn't \u2014 we will not bow.",
+      "svg": "friends_standing",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "furnace_5",
+      "sfx": "THROW THEM IN!",
+      "audioSfx": "assets/audio/sfx/furnace_roar.mp3",
+      "speaker": "nebuchadnezzar",
+      "fx": "shake",
+      "delay": 800,
+      "text": "Heat the furnace SEVEN TIMES HOTTER! Bind them! THROW THEM IN!",
+      "svg": "furnace_lit",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "furnace_6",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "text": "The furnace was so hot it killed the soldiers who threw them in. But the three men walked in it \u2014 and a fourth figure walked with them.",
+      "svg": "furnace_lit",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "furnace_7",
+      "speaker": "nebuchadnezzar",
+      "fx": "fade",
+      "delay": 800,
+      "text": "...I threw THREE men in. But I see FOUR walking in the fire. And the fourth looks like a son of the gods.",
+      "align": "center",
+      "svg": "four_in_furnace",
+      "choices": [
+        {
+          "label": "They are rescued before the fire \ud83d\ude4f",
+          "note": "No. They walk IN it. The rescue happens inside the thing they refused to avoid.",
+          "decisionId": "furnace_rescue_inside",
+          "tags": [
+            "loyalty:god",
+            "faith:witnessed"
+          ]
+        },
+        {
+          "label": "They walk out unharmed \u2705",
+          "note": "Not a hair singed. No smell of smoke. The fire had no power over them.",
+          "decisionId": "furnace_unharmed",
+          "tags": [
+            "loyalty:god",
+            "faith:delivered"
+          ]
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "furnace_8",
+      "speaker": "friends",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "We told you. Whether he saves us or not \u2014 we will not bow.",
+      "svg": "friends_standing",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "furnace_9",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "This is the design thesis of the whole story: conviction that doesn't require the rescue to happen.",
+      "svg": "four_in_furnace",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

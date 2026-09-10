@@ -1,0 +1,115 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "bad_news",
+      "name": "Ch.1 · Bad News",
+      "file": "act1_bad_news.json",
+      "scene": "bad_news",
+      "foreground": "fg_bad_news",
+      "assetFolder": "act_01_bad_news",
+      "assetStem": "nehemiah_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "before_the_king",
+      "name": "Ch.2 · Before the King",
+      "file": "act2_before_the_king.json",
+      "scene": "before_the_king",
+      "foreground": "fg_before_the_king",
+      "assetFolder": "act_02_before_the_king",
+      "assetStem": "nehemiah_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    },
+    {
+      "id": "night_inspection",
+      "name": "Ch.3 · Night Inspection",
+      "file": "act3_night_inspection.json",
+      "scene": "night_inspection",
+      "foreground": "fg_night_inspection",
+      "assetFolder": "act_03_night_inspection",
+      "assetStem": "nehemiah_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "rise_and_build",
+      "name": "Ch.4 · Rise and Build",
+      "file": "act4_rise_and_build.json",
+      "scene": "rise_and_build",
+      "foreground": "fg_rise_and_build",
+      "assetFolder": "act_04_rise_and_build",
+      "assetStem": "nehemiah_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+    },
+    {
+      "id": "sword_and_trowel",
+      "name": "Ch.5 · Sword and Trowel",
+      "file": "act5_sword_and_trowel.json",
+      "scene": "sword_and_trowel",
+      "foreground": "fg_sword_and_trowel",
+      "assetFolder": "act_05_sword_and_trowel",
+      "assetStem": "nehemiah_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+    },
+    {
+      "id": "the_outcry",
+      "name": "Ch.6 · The Outcry",
+      "file": "act6_the_outcry.json",
+      "scene": "the_outcry",
+      "foreground": "fg_the_outcry",
+      "assetFolder": "act_06_the_outcry",
+      "assetStem": "nehemiah_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+    },
+    {
+      "id": "plots_and_rumours",
+      "name": "Ch.7 · Plots and Rumours",
+      "file": "act7_plots_and_rumours.json",
+      "scene": "plots_and_rumours",
+      "foreground": "fg_plots_and_rumours",
+      "assetFolder": "act_07_plots_and_rumours",
+      "assetStem": "nehemiah_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "the_wall_completed",
+      "name": "Ch.8 · The Wall Completed",
+      "file": "act8_the_wall_completed.json",
+      "scene": "the_wall_completed",
+      "foreground": "fg_the_wall_completed",
+      "assetFolder": "act_08_the_wall_completed",
+      "assetStem": "nehemiah_act8",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+    },
+    {
+      "id": "the_book_read",
+      "name": "Ch.9 · The Book Read",
+      "file": "act9_the_book_read.json",
+      "scene": "the_book_read",
+      "foreground": "fg_the_book_read",
+      "assetFolder": "act_09_the_book_read",
+      "assetStem": "nehemiah_act9",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)"
+    },
+    {
+      "id": "reform",
+      "name": "Ch.10 · Reform",
+      "file": "act10_reform.json",
+      "scene": "reform",
+      "foreground": "fg_reform",
+      "assetFolder": "act_10_reform",
+      "assetStem": "nehemiah_act10",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    }
+  ]
+}

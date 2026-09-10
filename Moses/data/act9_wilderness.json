@@ -6,84 +6,128 @@
   "svg": "placeholder",
   "lines": [
     {
+      "id": "wilderness_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "Spies went up into Canaan \u2014 twelve of them, one from each tribe. After forty days they came back."
+      "text": "Spies went up into Canaan \u2014 twelve of them, one from each tribe. After forty days they came back.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "wilderness_1",
       "speaker": "narrator",
       "fx": "shake",
+      "delay": 800,
       "align": "right",
       "svg": "placeholder",
       "sfx": "FEAR!",
-      "text": "The land flows with milk and honey \u2014 but the people who live there are powerful, and the cities are fortified and very large!"
+      "text": "The land flows with milk and honey \u2014 but the people who live there are powerful, and the cities are fortified and very large!",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "wilderness_2",
       "speaker": "caleb",
       "fx": "bounce",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "We should go up and take possession of the land, for we can certainly do it."
+      "text": "We should go up and take possession of the land, for we can certainly do it.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "wilderness_3",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "But the other spies spoke against Caleb. The whole assembly talked about stoning them."
+      "text": "But the other spies spoke against Caleb. The whole assembly talked about stoning them.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "wilderness_4",
       "speaker": "narrator",
       "fx": "shake",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "sfx": "WEEP!",
-      "text": "That night all the people of the community raised their voices and wept aloud."
+      "text": "That night all the people of the community raised their voices and wept aloud.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "wilderness_5",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "text": "Not one of you will enter the land I swore with uplifted hand to make your home. Your children will be wanderers in the wilderness for forty years.",
-      "cite": "Numbers 14:30, 33"
+      "cite": "Numbers 14:30, 33",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "wilderness_6",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Years passed. Provision kept coming. Manna every morning. Quail some evenings. Water from the rock. Their clothes did not wear out. Their feet did not swell."
+      "text": "Years passed. Provision kept coming. Manna every morning. Quail some evenings. Water from the rock. Their clothes did not wear out. Their feet did not swell.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "wilderness_7",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "But one day, at Meribah, there was no water again. The people quarrelled with Moses. Moses struck the rock instead of speaking to it."
+      "text": "But one day, at Meribah, there was no water again. The people quarrelled with Moses. Moses struck the rock instead of speaking to it.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "wilderness_8",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Because you did not trust in me enough to honour me as holy in the sight of the Israelites, you will not bring this community into the land I give them."
+      "text": "Because you did not trust in me enough to honour me as holy in the sight of the Israelites, you will not bring this community into the land I give them.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "wilderness_9",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Moses \u2014 who had brought them out of Egypt \u2014 would not bring them in. Joshua would."
+      "text": "Moses \u2014 who had brought them out of Egypt \u2014 would not bring them in. Joshua would.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "wilderness_10",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Forty years after the basket on the Nile, the people stood at the edge of the Jordan \u2014 and one man would not cross with them."
+      "text": "Forty years after the basket on the Nile, the people stood at the edge of the Jordan \u2014 and one man would not cross with them.",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "scene": "wilderness",

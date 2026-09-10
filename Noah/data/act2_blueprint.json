@@ -1,0 +1,88 @@
+{
+  "id": "blueprint",
+  "name": "Ch.2 \u00b7 The Blueprint",
+  "bg": "radial-gradient(circle at 50% 40%, #2a1e0c, #150e06 65%, #080502)",
+  "particle": "dusk",
+  "svg": "ch2_blueprint_scroll",
+  "lines": [
+    {
+      "id": "blueprint_0",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch2_blueprint_scroll",
+      "text": "Three hundred cubits long. Fifty wide. Thirty high. Cypress wood. Sealed with pitch.",
+      "cite": "Genesis 6:15\u201316",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "blueprint_1",
+      "speaker": "noah",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch2_noah_measures",
+      "text": "That is... enormous. Three stories. Rooms inside. A window at the top.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "blueprint_2",
+      "speaker": "wife",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "svg": "ch2_wife_skeptical",
+      "text": "Noah. The neighbours already think you've lost your mind. And now THIS?",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "blueprint_3",
+      "speaker": "noah",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch2_wife_skeptical",
+      "text": "I know how it looks. I'm building it anyway.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "blueprint_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch2_blueprint_scroll",
+      "text": "Three hundred cubits is the length of three football fields. Built by hand, with no machinery.",
+      "choices": [
+        {
+          "label": "Follow the specs exactly \ud83d\udcd0",
+          "note": "Every joint measured twice. Every plank cut to the cubit."
+        },
+        {
+          "label": "Estimate a few measurements \ud83e\udd37",
+          "note": "It'll look about right... but a joint or two will be weaker for it."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "blueprint_5",
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/ark_wood_creak.mp3",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch2_keel_laid",
+      "text": "Noah marked out the keel on the ground. The first timber went down.",
+      "cite": "Genesis 6:22",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

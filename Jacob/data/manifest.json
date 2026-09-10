@@ -1,0 +1,115 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "the_birthright",
+      "name": "Ch.1 · The Birthright",
+      "file": "act1_the_birthright.json",
+      "scene": "the_birthright",
+      "foreground": "fg_the_birthright",
+      "assetFolder": "act_01_the_birthright",
+      "assetStem": "jacob_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "the_stolen_blessing",
+      "name": "Ch.2 · The Stolen Blessing",
+      "file": "act2_the_stolen_blessing.json",
+      "scene": "the_stolen_blessing",
+      "foreground": "fg_the_stolen_blessing",
+      "assetFolder": "act_02_the_stolen_blessing",
+      "assetStem": "jacob_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    },
+    {
+      "id": "bethel",
+      "name": "Ch.3 · Bethel",
+      "file": "act3_bethel.json",
+      "scene": "bethel",
+      "foreground": "fg_bethel",
+      "assetFolder": "act_03_bethel",
+      "assetStem": "jacob_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "rachel_at_the_well",
+      "name": "Ch.4 · Rachel at the Well",
+      "file": "act4_rachel_at_the_well.json",
+      "scene": "rachel_at_the_well",
+      "foreground": "fg_rachel_at_the_well",
+      "assetFolder": "act_04_rachel_at_the_well",
+      "assetStem": "jacob_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+    },
+    {
+      "id": "laban_s_bargain",
+      "name": "Ch.5 · Laban’s Bargain",
+      "file": "act5_laban_s_bargain.json",
+      "scene": "laban_s_bargain",
+      "foreground": "fg_laban_s_bargain",
+      "assetFolder": "act_05_laban_s_bargain",
+      "assetStem": "jacob_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+    },
+    {
+      "id": "the_flocks",
+      "name": "Ch.6 · The Flocks",
+      "file": "act6_the_flocks.json",
+      "scene": "the_flocks",
+      "foreground": "fg_the_flocks",
+      "assetFolder": "act_06_the_flocks",
+      "assetStem": "jacob_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+    },
+    {
+      "id": "leaving_haran",
+      "name": "Ch.7 · Leaving Haran",
+      "file": "act7_leaving_haran.json",
+      "scene": "leaving_haran",
+      "foreground": "fg_leaving_haran",
+      "assetFolder": "act_07_leaving_haran",
+      "assetStem": "jacob_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "the_night_wrestling",
+      "name": "Ch.8 · The Night Wrestling",
+      "file": "act8_the_night_wrestling.json",
+      "scene": "the_night_wrestling",
+      "foreground": "fg_the_night_wrestling",
+      "assetFolder": "act_08_the_night_wrestling",
+      "assetStem": "jacob_act8",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+    },
+    {
+      "id": "meeting_esau",
+      "name": "Ch.9 · Meeting Esau",
+      "file": "act9_meeting_esau.json",
+      "scene": "meeting_esau",
+      "foreground": "fg_meeting_esau",
+      "assetFolder": "act_09_meeting_esau",
+      "assetStem": "jacob_act9",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)"
+    },
+    {
+      "id": "joseph_s_coats",
+      "name": "Ch.10 · Joseph’s Coats",
+      "file": "act10_joseph_s_coats.json",
+      "scene": "joseph_s_coats",
+      "foreground": "fg_joseph_s_coats",
+      "assetFolder": "act_10_joseph_s_coats",
+      "assetStem": "jacob_act10",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    }
+  ]
+}

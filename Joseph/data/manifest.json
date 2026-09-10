@@ -1,0 +1,115 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "the_coloured_robe",
+      "name": "Ch.1 · The Coloured Robe",
+      "file": "act1_the_coloured_robe.json",
+      "scene": "the_coloured_robe",
+      "foreground": "fg_the_coloured_robe",
+      "assetFolder": "act_01_the_coloured_robe",
+      "assetStem": "joseph_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "dreams_and_the_pit",
+      "name": "Ch.2 · Dreams and the Pit",
+      "file": "act2_dreams_and_the_pit.json",
+      "scene": "dreams_and_the_pit",
+      "foreground": "fg_dreams_and_the_pit",
+      "assetFolder": "act_02_dreams_and_the_pit",
+      "assetStem": "joseph_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    },
+    {
+      "id": "potiphar_s_house",
+      "name": "Ch.3 · Potiphar’s House",
+      "file": "act3_potiphar_s_house.json",
+      "scene": "potiphar_s_house",
+      "foreground": "fg_potiphar_s_house",
+      "assetFolder": "act_03_potiphar_s_house",
+      "assetStem": "joseph_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "the_prison",
+      "name": "Ch.4 · The Prison",
+      "file": "act4_the_prison.json",
+      "scene": "the_prison",
+      "foreground": "fg_the_prison",
+      "assetFolder": "act_04_the_prison",
+      "assetStem": "joseph_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+    },
+    {
+      "id": "pharaoh_s_dreams",
+      "name": "Ch.5 · Pharaoh’s Dreams",
+      "file": "act5_pharaoh_s_dreams.json",
+      "scene": "pharaoh_s_dreams",
+      "foreground": "fg_pharaoh_s_dreams",
+      "assetFolder": "act_05_pharaoh_s_dreams",
+      "assetStem": "joseph_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+    },
+    {
+      "id": "storehouses",
+      "name": "Ch.6 · Storehouses",
+      "file": "act6_storehouses.json",
+      "scene": "storehouses",
+      "foreground": "fg_storehouses",
+      "assetFolder": "act_06_storehouses",
+      "assetStem": "joseph_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+    },
+    {
+      "id": "the_brothers_arrive",
+      "name": "Ch.7 · The Brothers Arrive",
+      "file": "act7_the_brothers_arrive.json",
+      "scene": "the_brothers_arrive",
+      "foreground": "fg_the_brothers_arrive",
+      "assetFolder": "act_07_the_brothers_arrive",
+      "assetStem": "joseph_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "benjamin_s_cup",
+      "name": "Ch.8 · Benjamin’s Cup",
+      "file": "act8_benjamin_s_cup.json",
+      "scene": "benjamin_s_cup",
+      "foreground": "fg_benjamin_s_cup",
+      "assetFolder": "act_08_benjamin_s_cup",
+      "assetStem": "joseph_act8",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+    },
+    {
+      "id": "revealed",
+      "name": "Ch.9 · Revealed",
+      "file": "act9_revealed.json",
+      "scene": "revealed",
+      "foreground": "fg_revealed",
+      "assetFolder": "act_09_revealed",
+      "assetStem": "joseph_act9",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)"
+    },
+    {
+      "id": "goshen",
+      "name": "Ch.10 · Goshen",
+      "file": "act10_goshen.json",
+      "scene": "goshen",
+      "foreground": "fg_goshen",
+      "assetFolder": "act_10_goshen",
+      "assetStem": "joseph_act10",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    }
+  ]
+}

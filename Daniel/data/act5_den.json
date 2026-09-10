@@ -1,0 +1,199 @@
+{
+  "id": "den",
+  "name": "The Den",
+  "bg": "radial-gradient(circle at 50% 20%, #0d1b2a, #061224 65%, #030b18)",
+  "particle": "stars",
+  "svg": "persian_court",
+  "reign": "darius",
+  "audio": [
+    "assets/audio/music/Act5_Shadows_on_the_Ridge.ogg",
+    "assets/audio/music/Act5_Shadows_on_the_Ridge.mp3"
+  ],
+  "audioShift": {
+    "line": 8,
+    "audio": [
+      "assets/audio/music/Act6_Sunlight_on_the_Threshold.ogg",
+      "assets/audio/music/Act6_Sunlight_on_the_Threshold.mp3"
+    ]
+  },
+  "lines": [
+    {
+      "id": "den_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Under King Darius the Mede, Daniel rose again to the highest rank. And the satraps hated him for it.",
+      "align": "left",
+      "svg": "persian_court",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_1",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "They searched for something \u2014 anything \u2014 to accuse him of. But they found no fault. Not one.",
+      "align": "center",
+      "svg": "satraps_plotting",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "So they built a trap from the one thing they could not take from him.",
+      "align": "right",
+      "svg": "satraps_plotting",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_3",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "text": "A new law: for thirty days, anyone who prays to anyone but the king is thrown to the lions.",
+      "align": "center",
+      "svg": "satraps_plotting",
+      "choices": [
+        {
+          "label": "Daniel closes his window \ud83e\ude9f",
+          "note": "He didn't. They couldn't find fault in him by catching him pray \u2014 so the window was always open.",
+          "decisionId": "den_window",
+          "tags": [
+            "loyalty:diplomatic",
+            "cost:private",
+            "risk:legal"
+          ]
+        },
+        {
+          "label": "Daniel prays as usual \u2705",
+          "note": "Three times a day. Window open. Facing Jerusalem. Exactly as he always had. Because that's what faithfulness looks like.",
+          "decisionId": "den_pray",
+          "tags": [
+            "loyalty:god",
+            "cost:public",
+            "risk:self"
+          ]
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Daniel went home. He opened the window facing Jerusalem. He got down on his knees. And he prayed.",
+      "svg": "daniel_praying_window",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_5",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "Three times a day. Just like always. Not as a protest. Not to make a point. Simply because it was time to pray.",
+      "svg": "daniel_praying_window",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_6",
+      "speaker": "darius",
+      "fx": "shake",
+      "delay": 800,
+      "text": "I cannot reverse my own law. I'm so sorry, Daniel.",
+      "svg": "darius_distressed",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_7",
+      "sfx": "ROAR!",
+      "audioSfx": "assets/audio/sfx/stone_footsteps.mp3",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "text": "Daniel was thrown in. The stone was sealed. And Darius paced his palace all through the long night.",
+      "svg": "lions_den_sealed",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "At dawn, the king ran.",
+      "svg": "darius_running",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_9",
+      "speaker": "darius",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "DANIEL! Servant of the living God \u2014 has your God been able to save you?!",
+      "svg": "darius_running",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_10",
+      "speaker": "daniel",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "O king, live forever. My God sent his angel, and the lions' mouths were shut. Because I was found innocent before him.",
+      "svg": "lions_den_open",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_11",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Daniel was lifted out. Not a scratch on him. Because he had trusted in his God.",
+      "svg": "lions_den_open",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_12",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires \u2014 seventy years of exile \u2014 he held the line.",
+      "svg": "daniel_old_man",
+      "consequence": {
+        "god_only": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires \u2014 seventy years of exile \u2014 he held the line, unbent and unbroken.",
+        "mixed": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires \u2014 seventy years of exile \u2014 he held the line, faithful despite the compromises.",
+        "compromised": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires \u2014 seventy years of exile \u2014 he held the line, a pragmatic path but a faithful one."
+      },
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "den_13",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "THE END",
+      "svg": "daniel_old_man",
+      "consequence": {
+        "god_only": "THE END \u2014 Conviction sustained across seven decades, unbroken.",
+        "mixed": "THE END \u2014 Faithfulness threaded through with compromise, but the line held.",
+        "compromised": "THE END \u2014 A different kind of faithfulness, but faithful nonetheless."
+      },
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

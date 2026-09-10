@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Watch and Move — River Crossing Prototype</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --ink:#2b251e;
+  --paper:#fff9e9;
+  --water1:#86c9dc;
+  --water2:#5fa9c1;
+  --bank:#9cbd6b;
+  --bank2:#6f9148;
+  --safe:#2f7d32;
+  --warn:#a85b00;
+  --bad:#b3261e;
+  --accent:#ffd95a;
+}
+html,body{margin:0;width:100%;min-height:100%;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif}
+body{display:flex;align-items:center;justify-content:center;padding:10px;overflow:hidden}
+.wrap{width:min(960px,100%);height:min(720px,100vh);display:flex;flex-direction:column;gap:8px}
+header{text-align:center;flex:none}
+h1{margin:0;font-size:clamp(1.4rem,4vw,2rem)}
+.sub{margin:4px 0 0;font-size:clamp(.85rem,2.2vw,1rem)}
+.hud{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;flex:none}
+.chip{min-height:42px;padding:6px 10px;background:#fff;border:3px solid var(--ink);border-radius:11px;font-weight:800;display:flex;align-items:center}
+.game-shell{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.stage{position:relative;width:min(900px,100%);aspect-ratio:16/9;border:4px solid var(--ink);border-radius:16px;overflow:hidden;background:var(--water1);box-shadow:0 5px 0 rgba(43,37,30,.2)}
+.river-bg{position:absolute;inset:0;background:
+  linear-gradient(90deg,var(--bank) 0 10%,transparent 10% 90%,var(--bank) 90% 100%),
+  repeating-linear-gradient(180deg,var(--water1) 0 28px,var(--water2) 28px 56px)}
+.bank-left,.bank-right{position:absolute;top:0;bottom:0;width:10%;background:linear-gradient(var(--bank),var(--bank2))}
+.bank-left{left:0}.bank-right{right:0}
+.bank-left:after,.bank-right:after{
+  content:"";position:absolute;top:0;bottom:0;width:5px;background:#d5c79a
+}
+.bank-left:after{right:0}.bank-right:after{left:0}
+.grid{position:absolute;left:10%;right:10%;top:0;bottom:0;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(7,1fr);pointer-events:none}
+.cell{border-right:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.12)}
+.goal{position:absolute;right:1.2%;top:50%;transform:translateY(-50%);width:7%;aspect-ratio:1;border:3px solid var(--ink);border-radius:12px;background:#fff8c7;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.7rem;text-align:center;z-index:4}
+.boat{position:absolute;width:7%;aspect-ratio:1.35;z-index:10;transition:left .16s ease,top .16s ease;filter:drop-shadow(0 3px 1px rgba(0,0,0,.25))}
+.boat svg{width:100%;height:100%;display:block}
+.hazard{position:absolute;width:7%;aspect-ratio:1;z-index:6}
+.hazard svg{width:100%;height:100%;display:block;filter:drop-shadow(0 2px 1px rgba(0,0,0,.22))}
+.flash{animation:flash .3s ease}
+@keyframes flash{50%{filter:brightness(1.8)}}
+.message{position:absolute;left:50%;top:10px;transform:translateX(-50%);z-index:20;background:#fff;border:3px solid var(--ink);border-radius:10px;padding:6px 10px;font-weight:800;text-align:center;max-width:80%;font-size:.9rem}
+.controls{display:grid;grid-template-columns:repeat(3,64px);grid-template-rows:repeat(2,54px);gap:6px;justify-content:center;flex:none}
+.controls button{border:3px solid var(--ink);background:#fff;border-radius:12px;font-size:1.5rem;font-weight:900;min-width:54px;min-height:54px;cursor:pointer}
+.controls button.primary{background:var(--accent)}
+.controls .up{grid-column:2;grid-row:1}.controls .left{grid-column:1;grid-row:2}.controls .down{grid-column:2;grid-row:2}.controls .right{grid-column:3;grid-row:2}
+.help{text-align:center;margin:0;font-size:.82rem;flex:none}
+.timer{position:absolute;top:8px;right:8px;background:#fff;border:3px solid var(--ink);border-radius:10px;padding:6px 10px;font-weight:900;z-index:25}
+.timer.warn{color:var(--warn);border-color:var(--warn)}
+.timer.bad{color:#fff;background:var(--bad);border-color:var(--bad)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:18px;z-index:1000}
+.modal.active{display:flex}
+.card{width:min(470px,100%);background:#fff;border:4px solid var(--ink);border-radius:16px;padding:20px;text-align:center}
+.card h2{margin-top:0}
+.verse{margin:12px 0;padding:10px;border-left:5px solid var(--safe);background:#f1f8ee;text-align:left}
+.card button{border:3px solid var(--ink);border-radius:10px;background:var(--accent);padding:10px 18px;font:inherit;font-weight:900}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Watch and Move: River Crossing</h1>
+    <p class="sub">Move your boat across the river one grid square at a time. Watch the current and cross when the lane is clear.</p>
+  </header>
+
+  <div class="hud">
+    <div class="chip" id="progress">Across: 0 / 8</div>
+    <div class="chip" id="hits">Collisions: 0</div>
+    <div class="chip" id="difficulty">Current: Normal</div>
+  </div>
+
+  <div class="game-shell">
+    <div class="stage" id="stage">
+      <div class="river-bg"></div>
+      <div class="bank-left"></div>
+      <div class="bank-right"></div>
+      <div class="grid" id="grid"></div>
+      <div class="message" id="message">Watch the lanes, then move when a gap opens.</div>
+      <div class="timer" id="timer">1:30</div>
+      <div class="goal">SAFE<br>BANK</div>
+
+      <div class="boat" id="boat" aria-label="Player boat">
+        <svg viewBox="0 0 90 65" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 39h66l-11 17H25Z" fill="#8b5a2b" stroke="#2b251e" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M45 8v32" stroke="#2b251e" stroke-width="4"/>
+          <path d="M45 10l23 16H45Z" fill="#fff4c7" stroke="#2b251e" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="34" cy="44" r="4" fill="#ffd95a"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls" aria-label="Boat controls">
+    <button class="up" data-dx="0" data-dy="-1" aria-label="Move up">↑</button>
+    <button class="left" data-dx="-1" data-dy="0" aria-label="Move left">←</button>
+    <button class="down" data-dx="0" data-dy="1" aria-label="Move down">↓</button>
+    <button class="right primary" data-dx="1" data-dy="0" aria-label="Move right">→</button>
+  </div>
+
+  <p class="help">Keyboard: arrow keys or WASD. Reach the right bank. A collision pushes you back one column.</p>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="card">
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+    <div class="verse" id="modalVerse"></div>
+    <button id="restartBtn">Play again</button>
+  </div>
+</div>
+
+<script>
+const CONFIG = {
+  cols: 8,
+  rows: 7,
+  timerSeconds: 90,
+  hazardCount: 11,
+  baseSpeed: 0.038,
+  hitPushback: 1
+};
+
+const stage = document.getElementById("stage");
+const grid = document.getElementById("grid");
+const boat = document.getElementById("boat");
+const message = document.getElementById("message");
+const progressEl = document.getElementById("progress");
+const hitsEl = document.getElementById("hits");
+const timerEl = document.getElementById("timer");
+const modal = document.getElementById("modal");
+
+for(let i=0;i<CONFIG.cols*CONFIG.rows;i++){
+  const c=document.createElement("div");
+  c.className="cell";
+  grid.appendChild(c);
+}
+
+let player={x:0,y:3};
+let hits=0;
+let over=false;
+let started=performance.now();
+let hazards=[];
+
+function laneLeft(col){
+  return 10 + (col/CONFIG.cols)*80;
+}
+function laneTop(row){
+  return (row/CONFIG.rows)*100;
+}
+function boatLeft(){
+  if(player.x===0) return 6.4;
+  return 10 + ((player.x-.5)/CONFIG.cols)*80;
+}
+function boatTop(){
+  return ((player.y+.18)/CONFIG.rows)*100;
+}
+
+function placeBoat(){
+  boat.style.left=boatLeft()+"%";
+  boat.style.top=boatTop()+"%";
+  progressEl.textContent=`Across: ${player.x} / ${CONFIG.cols}`;
+}
+placeBoat();
+
+const ROCK_SVG = `
+<svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 47 20 22 42 12 59 28 57 51 39 61 19 58Z" fill="#7f8587" stroke="#2b251e" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M21 31 36 23 48 31" fill="none" stroke="#aeb3b5" stroke-width="4" stroke-linecap="round"/>
+</svg>`;
+const LOG_SVG = `
+<svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8" y="25" width="54" height="22" rx="11" fill="#8a5c32" stroke="#2b251e" stroke-width="4"/>
+  <circle cx="17" cy="36" r="6" fill="#c89458" stroke="#2b251e" stroke-width="3"/>
+  <path d="M32 28v16M44 28v16" stroke="#5b3b20" stroke-width="3"/>
+</svg>`;
+
+function makeHazard(i){
+  const el=document.createElement("div");
+  el.className="hazard";
+  el.innerHTML = i%3===0 ? LOG_SVG : ROCK_SVG;
+  stage.appendChild(el);
+
+  const col = 1 + (i % CONFIG.cols);
+  const dir = i%2===0 ? 1 : -1;
+  const speed = CONFIG.baseSpeed * (0.60 + (i%5)*0.10);
+  const y = (i * 13.7) % 100;
+
+  return {el,col,dir,speed,y,phase:i*0.71};
+}
+
+for(let i=0;i<CONFIG.hazardCount;i++) hazards.push(makeHazard(i));
+
+function updateHazards(dt,now){
+  for(const h of hazards){
+    h.y += h.speed * dt * h.dir;
+    if(h.dir>0 && h.y>108) h.y=-12;
+    if(h.dir<0 && h.y<-12) h.y=108;
+
+    const x = 10 + ((h.col-.5)/CONFIG.cols)*80;
+    h.el.style.left = `calc(${x}% - 3.5%)`;
+    h.el.style.top = h.y + "%";
+    h.el.style.transform = `rotate(${Math.sin(now/500+h.phase)*8}deg)`;
+  }
+}
+
+function hazardCell(h){
+  const row=Math.round((h.y/100)*CONFIG.rows);
+  return {x:h.col,y:row};
+}
+
+function collision(){
+  for(const h of hazards){
+    const hc=hazardCell(h);
+    if(hc.x===player.x && hc.y===player.y) return true;
+  }
+  return false;
+}
+
+function handleHit(){
+  hits++;
+  hitsEl.textContent=`Collisions: ${hits}`;
+  player.x=Math.max(0,player.x-CONFIG.hitPushback);
+  message.textContent="The current caught you. You were pushed back — watch for a clearer gap.";
+  boat.classList.add("flash");
+  setTimeout(()=>boat.classList.remove("flash"),300);
+  placeBoat();
+}
+
+function move(dx,dy){
+  if(over) return;
+  const nx=Math.max(0,Math.min(CONFIG.cols,player.x+dx));
+  const ny=Math.max(0,Math.min(CONFIG.rows-1,player.y+dy));
+
+  if(nx===player.x && ny===player.y) return;
+
+  player.x=nx;
+  player.y=ny;
+  placeBoat();
+
+  if(player.x>=CONFIG.cols){
+    complete();
+    return;
+  }
+
+  setTimeout(()=>{
+    if(!over && collision()) handleHit();
+    else if(!over) message.textContent="Good move. Watch the next lane before crossing.";
+  },170);
+}
+
+document.querySelectorAll(".controls button").forEach(btn=>{
+  btn.addEventListener("click",()=>move(Number(btn.dataset.dx),Number(btn.dataset.dy)));
+});
+
+addEventListener("keydown",e=>{
+  const map={
+    ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1],
+    a:[-1,0],d:[1,0],w:[0,-1],s:[0,1],
+    A:[-1,0],D:[1,0],W:[0,-1],S:[0,1]
+  };
+  if(map[e.key]){
+    e.preventDefault();
+    move(...map[e.key]);
+  }
+});
+
+function complete(){
+  over=true;
+  dispatchEvent(new CustomEvent("game-complete",{detail:{game:"watch-move-river"}}));
+  if(parent!==window) parent.postMessage({type:"game-complete",game:"watch-move-river"},"*");
+  showModal(
+    "River crossed",
+    `You reached the far bank with ${hits} collision${hits===1?"":"s"}.`,
+    "Watch carefully, choose the right moment, and keep moving."
+  );
+}
+
+function timeout(){
+  if(over) return;
+  over=true;
+  dispatchEvent(new CustomEvent("game-over",{detail:{game:"watch-move-river"}}));
+  showModal(
+    "The river kept moving",
+    "Try again and spend more time watching how each lane flows before crossing.",
+    "A wise person sees danger and takes refuge."
+  );
+}
+
+function showModal(title,text,verse){
+  document.getElementById("modalTitle").textContent=title;
+  document.getElementById("modalText").textContent=text;
+  document.getElementById("modalVerse").textContent=verse;
+  modal.classList.add("active");
+}
+document.getElementById("restartBtn").addEventListener("click",()=>location.reload());
+
+let last=performance.now();
+function loop(now){
+  if(over) return;
+  const dt=Math.min(40,now-last);
+  last=now;
+  updateHazards(dt,now);
+
+  if(collision()){
+    handleHit();
+  }
+
+  const remain=Math.max(0,CONFIG.timerSeconds-Math.floor((now-started)/1000));
+  timerEl.textContent=`${Math.floor(remain/60)}:${String(remain%60).padStart(2,"0")}`;
+  timerEl.classList.toggle("warn",remain<=36 && remain>18);
+  timerEl.classList.toggle("bad",remain<=18);
+
+  if(remain<=0){timeout();return;}
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Creation in Motion</title>
+  <style>
+    *{box-sizing:border-box}
+    :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#f8f1df;background:#05070d;--gold:#ffd76a;--ink:#16191f;--panel:#10151dcc}
+    html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#05070d}
+    body{position:relative;touch-action:manipulation}
+    canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+    .shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#03050bbb 0%,transparent 47%),linear-gradient(0deg,#03050b99 0%,transparent 35%)}
+    .hud{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(14px,3vw,28px);pointer-events:none}
+    .intro{width:min(390px,78vw);text-shadow:0 2px 12px #000}
+    .eyebrow{margin:0 0 5px;color:var(--gold);font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.14em}
+    h1{margin:0;font-family:Georgia,serif;font-size:clamp(1.8rem,5vw,3.6rem);line-height:.95;letter-spacing:0}
+    .instruction{margin:10px 0 0;max-width:34ch;color:#d7d8dc;font-size:clamp(.82rem,1.8vw,1rem);line-height:1.4}
+    .steps{display:flex;align-items:flex-end;gap:7px;max-width:100%;pointer-events:auto;overflow-x:auto;padding:5px 2px 2px;scrollbar-width:none}
+    .steps::-webkit-scrollbar{display:none}
+    .step{flex:0 0 auto;min-width:78px;min-height:54px;border:1px solid #ffffff26;border-radius:7px;background:#0d121bcf;color:#dfe3ea;padding:8px 10px;font:inherit;text-align:left;cursor:pointer;backdrop-filter:blur(8px)}
+    .step b{display:block;color:#8e98a7;font-size:.63rem;text-transform:uppercase;letter-spacing:.08em}
+    .step span{display:block;margin-top:2px;font-size:.76rem;font-weight:800}
+    .step.active{border-color:var(--gold);background:#332812e8;color:#fff}.step.active b{color:var(--gold)}
+    .step.done{border-color:#70a987;background:#10231be8}.step:disabled:not(.done){opacity:.42;cursor:not-allowed}
+    .step:focus-visible,.control:focus-visible,.continue:focus-visible{outline:3px solid #fff;outline-offset:2px}
+    .control{position:absolute;right:clamp(14px,3vw,28px);top:clamp(14px,3vw,28px);width:44px;height:44px;border:1px solid #ffffff2e;border-radius:50%;background:#0d121bcc;color:#fff;font-size:1.05rem;cursor:pointer;pointer-events:auto;backdrop-filter:blur(8px)}
+    .status{position:absolute;right:clamp(14px,3vw,28px);bottom:92px;color:#c9ced8;font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;text-shadow:0 1px 8px #000}
+    .complete{position:absolute;inset:0;display:grid;place-items:center;padding:20px;background:#03050a99;opacity:0;visibility:hidden;transition:opacity .35s;pointer-events:none}
+    .complete.show{opacity:1;visibility:visible;pointer-events:auto}
+    .complete-card{width:min(430px,92vw);padding:24px;border:1px solid #f4d98c66;border-radius:8px;background:#0e131cf0;box-shadow:0 24px 80px #000;text-align:center}
+    .complete h2{margin:4px 0 10px;font-family:Georgia,serif;font-size:clamp(1.7rem,5vw,2.5rem);letter-spacing:0}.complete p{color:#d7d9de;line-height:1.5}
+    .verse{font-family:Georgia,serif;color:#ffe8a5!important}.continue{min-height:46px;border:0;border-radius:6px;background:var(--gold);color:var(--ink);padding:0 22px;font:inherit;font-weight:900;cursor:pointer}
+    .fallback{position:absolute;inset:0;display:none;place-items:center;padding:24px;text-align:center;background:radial-gradient(circle,#38280f,#07090e)}
+    @media(max-width:620px){.hud{padding:14px}.intro{width:min(300px,78vw)}.instruction{max-width:28ch}.step{min-width:72px;padding:7px 9px}.status{display:none}.control{right:14px;top:14px}.steps{margin-right:-14px}}
+    @media(prefers-reduced-motion:reduce){.complete{transition:none}}
+  </style>
+</head>
+<body>
+  <div id="fallback" class="fallback">This device cannot display the 3D creation scene, but the story can still continue.</div>
+  <div class="shade"></div>
+  <div class="hud">
+    <div class="intro">
+      <p class="eyebrow" id="dayLabel">The beginning</p>
+      <h1 id="title">Creation in motion</h1>
+      <p class="instruction" id="instruction">Choose Day One to begin, then reveal each part of creation in order.</p>
+    </div>
+    <div class="steps" id="steps" aria-label="Creation days"></div>
+  </div>
+  <button class="control" id="motion" type="button" title="Pause camera orbit" aria-label="Pause camera orbit">Ⅱ</button>
+  <div class="status" id="status">Camera orbiting · planets in motion</div>
+  <div class="complete" id="complete" role="dialog" aria-modal="true" aria-labelledby="completeTitle">
+    <div class="complete-card">
+      <p class="eyebrow">Creation revealed</p>
+      <h2 id="completeTitle">And it was very good.</h2>
+      <p class="verse">“God saw all that he had made, and it was very good.” — Genesis 1:31</p>
+      <button class="continue" id="again" type="button">Watch it orbit</button>
+    </div>
+  </div>
+  <script src="../../../Adam/vendor/three.r128.min.js"></script>
+  <script>
+    (() => {
+      const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const dayData = [
+        ['Day One','Light','Light breaks across the darkness.'],
+        ['Day Two','Sky','The deep opens into sky and space.'],
+        ['Day Three','Land','Earth gathers, ready to bring forth life.'],
+        ['Day Four','Lights','Sun, moon, and stars mark days and seasons.'],
+        ['Day Five','Life','Living things fill sea and sky.'],
+        ['Day Six','Humanity','People receive a place within creation.']
+      ];
+      const steps = document.getElementById('steps');
+      const dayLabel = document.getElementById('dayLabel');
+      const title = document.getElementById('title');
+      const instruction = document.getElementById('instruction');
+      const motionButton = document.getElementById('motion');
+      const status = document.getElementById('status');
+      let unlocked = 0, cameraMoving = !reducedMotion, completed = false;
+
+      dayData.forEach(([day, name], index) => {
+        const button = document.createElement('button');
+        button.type = 'button'; button.className = 'step'; button.dataset.index = index;
+        button.innerHTML = `<b>${day}</b><span>${name}</span>`;
+        button.disabled = index !== 0;
+        button.addEventListener('click', () => reveal(index));
+        steps.appendChild(button);
+      });
+
+      if (!window.THREE) {
+        document.getElementById('fallback').style.display = 'grid';
+        steps.style.display = 'none'; motionButton.style.display = 'none'; status.style.display = 'none';
+        return;
+      }
+
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x05070d, .0065);
+      const camera = new THREE.PerspectiveCamera(48, innerWidth / innerHeight, .1, 500);
+      camera.position.set(0, 48, 88);
+      const renderer = new THREE.WebGLRenderer({antialias:true, alpha:false, powerPreference:'high-performance'});
+      renderer.setPixelRatio(Math.min(devicePixelRatio, 1.7));
+      renderer.setSize(innerWidth, innerHeight); renderer.outputEncoding = THREE.sRGBEncoding;
+      renderer.setClearColor(0x05070d, 1); document.body.prepend(renderer.domElement);
+
+      scene.add(new THREE.AmbientLight(0x7890ba, .22));
+      const sunLight = new THREE.PointLight(0xffd27a, 2.4, 190, 1.5); scene.add(sunLight);
+      const universe = new THREE.Group(); scene.add(universe);
+      const staged = Array.from({length:6}, () => new THREE.Group()); staged.forEach(group => { group.visible = false; universe.add(group); });
+
+      function material(color, emissive=0x000000, emissiveIntensity=0){
+        return new THREE.MeshStandardMaterial({color,roughness:.76,metalness:.05,flatShading:true,emissive,emissiveIntensity});
+      }
+      function sphere(radius, color, detail=2){ return new THREE.Mesh(new THREE.IcosahedronGeometry(radius, detail), material(color)); }
+      function orbitLine(radius, opacity=.22){
+        const points = []; for(let i=0;i<=96;i++){const a=i/96*Math.PI*2;points.push(new THREE.Vector3(Math.cos(a)*radius,0,Math.sin(a)*radius));}
+        return new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),new THREE.LineBasicMaterial({color:0xaab9d3,transparent:true,opacity}));
+      }
+
+      const lightHalo = new THREE.Mesh(new THREE.SphereGeometry(7,24,16),new THREE.MeshBasicMaterial({color:0xffd060,transparent:true,opacity:.12,side:THREE.BackSide}));
+      lightHalo.scale.setScalar(2.1); staged[0].add(lightHalo);
+
+      const sky = new THREE.Mesh(new THREE.SphereGeometry(155,24,16),new THREE.MeshBasicMaterial({color:0x111a31,side:THREE.BackSide,transparent:true,opacity:.62})); staged[1].add(sky);
+      const starsGeometry = new THREE.BufferGeometry(); const starPositions=[];
+      for(let i=0;i<700;i++){const r=75+Math.random()*70,a=Math.random()*Math.PI*2,p=Math.acos(2*Math.random()-1);starPositions.push(r*Math.sin(p)*Math.cos(a),r*Math.cos(p),r*Math.sin(p)*Math.sin(a));}
+      starsGeometry.setAttribute('position',new THREE.Float32BufferAttribute(starPositions,3));
+      staged[1].add(new THREE.Points(starsGeometry,new THREE.PointsMaterial({color:0xdce8ff,size:.38,sizeAttenuation:true,transparent:true,opacity:.76})));
+
+      const earth = sphere(3.4,0x397fc3,3); earth.material = material(0x397fc3); earth.rotation.z=.35;
+      const land = material(0x72a75d); const continents = new THREE.Group();
+      [[2.6,.2,1.9,.9],[2.1,-1.5,1.8,.65],[2.7,1.6,-.4,.7]].forEach(([x,y,z,s])=>{const c=sphere(s,0x72a75d,1);c.position.set(x,y,z);c.scale.set(1.5,.75,.55);continents.add(c);});
+      earth.add(continents); staged[2].add(earth);
+
+      const sun = sphere(7.2,0xffc63f,3); sun.material = new THREE.MeshBasicMaterial({color:0xffca48}); staged[3].add(sun);
+      const glow = new THREE.Mesh(new THREE.SphereGeometry(7.7,24,16),new THREE.MeshBasicMaterial({color:0xffa51e,transparent:true,opacity:.18,side:THREE.BackSide})); glow.scale.setScalar(1.45); staged[3].add(glow);
+      const planets = [];
+      const planetSpecs = [[12,1.0,0xbca58d,.55],[17,1.45,0xe0a45e,.38],[23,3.4,0x397fc3,.25],[30,2.25,0xb4543e,.19],[39,4.8,0xcba06c,.11],[49,4.0,0xc9b376,.08]];
+      planetSpecs.forEach((spec,index)=>{
+        const [radius,size,color,speed]=spec; const pivot=new THREE.Group(); const planet=sphere(size,color,index===4?2:1); planet.position.x=radius; pivot.rotation.y=index*.85; pivot.userData.speed=speed; pivot.add(planet); pivot.add(orbitLine(radius,index===2?.34:.2)); staged[3].add(pivot); planets.push({pivot,planet});
+        if(index===4){const ring=new THREE.Mesh(new THREE.RingGeometry(size*1.35,size*2.05,48),new THREE.MeshBasicMaterial({color:0xd9c49a,side:THREE.DoubleSide,transparent:true,opacity:.72}));ring.rotation.x=Math.PI/2.25;planet.add(ring);}
+      });
+      staged[3].remove(earth); planets[2].planet.add(continents); continents.position.set(0,0,0); continents.scale.set(.95,.95,.95);
+
+      const birds = new THREE.Group();
+      for(let i=0;i<18;i++){const bird=new THREE.Mesh(new THREE.ConeGeometry(.18,.85,3),material(0xe5edf4));bird.position.set((Math.random()-.5)*34,5+Math.random()*12,(Math.random()-.5)*28);bird.rotation.z=Math.PI/2;birds.add(bird);} staged[4].add(birds);
+
+      const people = new THREE.Group();
+      [-1,1].forEach((side,index)=>{const body=new THREE.Mesh(new THREE.CylinderGeometry(.38,.58,1.9,7),material(index?0x8f573e:0xa76b49));body.position.set(side*1.1,-1.4,8);const head=sphere(.55,index?0xb98261:0xc38a64,1);head.position.y=1.4;body.add(head);people.add(body);}); staged[5].add(people);
+
+      function reveal(index){
+        if(index > unlocked) return;
+        staged[index].visible = true;
+        document.querySelectorAll('.step').forEach((button,i)=>{button.classList.toggle('active',i===index);if(i<=index)button.classList.add('done');});
+        dayLabel.textContent = dayData[index][0]; title.textContent = dayData[index][1]; instruction.textContent = dayData[index][2];
+        unlocked = Math.max(unlocked,index+1); const next = document.querySelector(`.step[data-index="${index+1}"]`); if(next) next.disabled=false;
+        if(index===5 && !completed){completed=true;setTimeout(finish,900);}
+      }
+      function finish(){
+        cameraMoving=false; document.getElementById('complete').classList.add('show'); document.getElementById('again').focus();
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if(parent!==window) parent.postMessage({type:'game-complete',game:'creation_orbit'},'*');
+      }
+      document.getElementById('again').addEventListener('click',()=>{document.getElementById('complete').classList.remove('show');cameraMoving=!reducedMotion;motionButton.textContent=cameraMoving?'Ⅱ':'▶';motionButton.focus();});
+      motionButton.addEventListener('click',()=>{cameraMoving=!cameraMoving;motionButton.textContent=cameraMoving?'Ⅱ':'▶';motionButton.title=cameraMoving?'Pause camera orbit':'Resume camera orbit';motionButton.setAttribute('aria-label',motionButton.title);status.textContent=cameraMoving?'Camera orbiting · planets in motion':'Camera paused · planets in motion';});
+      if(reducedMotion){motionButton.textContent='▶';motionButton.title='Start camera orbit';motionButton.setAttribute('aria-label',motionButton.title);status.textContent='Camera paused · reduced motion';}
+
+      const clock = new THREE.Clock(); let cameraAngle=.35;
+      function animate(){
+        requestAnimationFrame(animate); const dt=Math.min(clock.getDelta(),.05);
+        planets.forEach(({pivot,planet})=>{pivot.rotation.y+=dt*pivot.userData.speed;planet.rotation.y+=dt*.45;});
+        sun.rotation.y+=dt*.1; glow.scale.setScalar(1.42+Math.sin(performance.now()*.0015)*.035); birds.rotation.y+=dt*.11;
+        if(cameraMoving){cameraAngle+=dt*.075;camera.position.set(Math.cos(cameraAngle)*83,35+Math.sin(cameraAngle*.55)*10,Math.sin(cameraAngle)*83);}
+        camera.lookAt(0,0,0); renderer.render(scene,camera);
+      }
+      animate();
+      addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
+    })();
+  </script>
+</body>
+</html>

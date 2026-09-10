@@ -1,0 +1,115 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "a_blameless_life",
+      "name": "Ch.1 · A Blameless Life",
+      "file": "act1_a_blameless_life.json",
+      "scene": "a_blameless_life",
+      "foreground": "fg_a_blameless_life",
+      "assetFolder": "act_01_a_blameless_life",
+      "assetStem": "job_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "the_accuser",
+      "name": "Ch.2 · The Accuser",
+      "file": "act2_the_accuser.json",
+      "scene": "the_accuser",
+      "foreground": "fg_the_accuser",
+      "assetFolder": "act_02_the_accuser",
+      "assetStem": "job_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    },
+    {
+      "id": "loss_upon_loss",
+      "name": "Ch.3 · Loss upon Loss",
+      "file": "act3_loss_upon_loss.json",
+      "scene": "loss_upon_loss",
+      "foreground": "fg_loss_upon_loss",
+      "assetFolder": "act_03_loss_upon_loss",
+      "assetStem": "job_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "seven_days",
+      "name": "Ch.4 · Seven Days",
+      "file": "act4_seven_days.json",
+      "scene": "seven_days",
+      "foreground": "fg_seven_days",
+      "assetFolder": "act_04_seven_days",
+      "assetStem": "job_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+    },
+    {
+      "id": "job_speaks",
+      "name": "Ch.5 · Job Speaks",
+      "file": "act5_job_speaks.json",
+      "scene": "job_speaks",
+      "foreground": "fg_job_speaks",
+      "assetFolder": "act_05_job_speaks",
+      "assetStem": "job_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+    },
+    {
+      "id": "the_friends",
+      "name": "Ch.6 · The Friends",
+      "file": "act6_the_friends.json",
+      "scene": "the_friends",
+      "foreground": "fg_the_friends",
+      "assetFolder": "act_06_the_friends",
+      "assetStem": "job_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+    },
+    {
+      "id": "elihu",
+      "name": "Ch.7 · Elihu",
+      "file": "act7_elihu.json",
+      "scene": "elihu",
+      "foreground": "fg_elihu",
+      "assetFolder": "act_07_elihu",
+      "assetStem": "job_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "out_of_the_whirlwind",
+      "name": "Ch.8 · Out of the Whirlwind",
+      "file": "act8_out_of_the_whirlwind.json",
+      "scene": "out_of_the_whirlwind",
+      "foreground": "fg_out_of_the_whirlwind",
+      "assetFolder": "act_08_out_of_the_whirlwind",
+      "assetStem": "job_act8",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+    },
+    {
+      "id": "job_responds",
+      "name": "Ch.9 · Job Responds",
+      "file": "act9_job_responds.json",
+      "scene": "job_responds",
+      "foreground": "fg_job_responds",
+      "assetFolder": "act_09_job_responds",
+      "assetStem": "job_act9",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)"
+    },
+    {
+      "id": "restoration",
+      "name": "Ch.10 · Restoration",
+      "file": "act10_restoration.json",
+      "scene": "restoration",
+      "foreground": "fg_restoration",
+      "assetFolder": "act_10_restoration",
+      "assetStem": "job_act10",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    }
+  ]
+}

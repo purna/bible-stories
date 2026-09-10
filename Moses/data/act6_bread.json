@@ -6,88 +6,134 @@
   "svg": "placeholder",
   "lines": [
     {
+      "id": "bread_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "Three days into the wilderness \u2014 no water. The people came to a place called Marah. The water there was bitter."
+      "text": "Three days into the wilderness \u2014 no water. The people came to a place called Marah. The water there was bitter.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "bread_1",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "They grumbled against Moses. \"What are we to drink?\""
+      "text": "They grumbled against Moses. \"What are we to drink?\"",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "bread_2",
       "speaker": "moses",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "Lord, what shall I do with this people? They are almost ready to stone me."
+      "text": "Lord, what shall I do with this people? They are almost ready to stone me.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "bread_3",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "text": "The LORD showed Moses a piece of wood. He threw it into the water, and the water became sweet.",
-      "cite": "Exodus 15:25"
+      "cite": "Exodus 15:25",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "bread_4",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "A month later \u2014 the whole company had run out of food. Again the grumbling began."
+      "text": "A month later \u2014 the whole company had run out of food. Again the grumbling began.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "bread_5",
       "speaker": "israelite_elder",
       "fx": "shake",
+      "delay": 800,
       "align": "right",
       "svg": "placeholder",
-      "text": "If only we had died by the LORD's hand in Egypt, where we sat around pots of meat and ate all the food we wanted!"
+      "text": "If only we had died by the LORD's hand in Egypt, where we sat around pots of meat and ate all the food we wanted!",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "bread_6",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "text": "I will rain down bread from heaven for you. The people are to go out each day and gather enough for that day.",
-      "cite": "Exodus 16:4"
+      "cite": "Exodus 16:4",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "bread_7",
       "speaker": "god",
       "fx": "bounce",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "On the sixth day they are to prepare what they bring in, and it is to be twice as much as they gather on the other days."
+      "text": "On the sixth day they are to prepare what they bring in, and it is to be twice as much as they gather on the other days.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "bread_8",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "text": "That evening quail came and covered the camp. In the morning there was thin flakes like frost on the ground.",
-      "cite": "Exodus 16:13\u201314"
+      "cite": "Exodus 16:13\u201314",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "bread_9",
       "speaker": "moses",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "svg": "placeholder",
-      "text": "This is the bread the Lord has given you to eat. Gather an omer from each person."
+      "text": "This is the bread the Lord has given you to eat. Gather an omer from each person.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "bread_10",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
-      "text": "Some gathered much. Some gathered little. Each measured exactly an omer \u2014 no more, no less."
+      "text": "Some gathered much. Some gathered little. Each measured exactly an omer \u2014 no more, no less.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "bread_11",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "svg": "placeholder",
       "text": "Those who gathered much had nothing left over. Those who gathered little had no shortage. Each had gathered just as much as they needed.",
@@ -100,7 +146,9 @@
           "label": "Keep a little extra \u2014 just in case \ud83d\udce6",
           "note": "Moses warned them. By morning the extra was wormy and rotten."
         }
-      ]
+      ],
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "scene": "bread",

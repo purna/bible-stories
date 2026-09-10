@@ -1,0 +1,96 @@
+{
+  "id": "build",
+  "name": "Ch.3 \u00b7 The Long Build",
+  "bg": "radial-gradient(circle at 35% 50%, #281808, #120c04 65%, #080402)",
+  "particle": "dusk",
+  "svg": "ch3_ark_under_construction",
+  "lines": [
+    {
+      "id": "build_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch3_ark_under_construction",
+      "text": "Years passed. Ten. Twenty. The ribs of the ark rose above the treeline.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "build_1",
+      "speaker": "crowd",
+      "fx": "shake",
+      "delay": 800,
+      "align": "right",
+      "svg": "ch3_mockery",
+      "text": "HAHAHA! Noah's still at it! Building his boat in the desert! Send for the doctor!",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "build_2",
+      "speaker": "noah",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch3_noah_works",
+      "text": "One plank. Then another. Don't look up. Keep going.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "build_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch3_decades_pass",
+      "text": "Fifty years. The ark's hull was sealed with pitch. The crowd's laughter got louder.",
+      "choices": [
+        {
+          "label": "Skip a coat of pitch to save time \u23e9",
+          "note": "One thin section. The wood will probably hold... probably."
+        },
+        {
+          "label": "Seal every plank twice \ud83d\udd28",
+          "note": "Slow work. Honest work. Every seam watertight."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "build_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch3_decades_pass",
+      "text": "Nobody believed him. But the ark kept growing, plank by plank, year after year.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "build_5",
+      "speaker": "son",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "svg": "ch3_son_helps",
+      "text": "Father... why keep going when no one understands what you're doing?",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "build_6",
+      "speaker": "noah",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch3_son_helps",
+      "text": "Because I was told. And I said yes. That has to be enough.",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

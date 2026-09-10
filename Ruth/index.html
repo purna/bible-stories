@@ -9,15 +9,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <title>The Book of Ruth — An Interactive Comic</title>
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="story-runtime.css">
-    <link rel="stylesheet" href="loading-screen.css">
+<link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/story-runtime.css">
+    <link rel="stylesheet" href="css/loading-screen.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles/ruth-comic.css">
-    <link rel="stylesheet" href="info-modal.css">
+    <link rel="stylesheet" href="css/ruth-comic.css">
+    <link rel="stylesheet" href="css/info-modal.css">
     <script src="vendor/three.r128.min.js"></script>
- </head>
+  </head>
  <body>
 
   <!-- ── Start / Cover Screen ──────────────────────────────── -->
@@ -27,6 +27,10 @@
       <div class="ruth-grass-field"></div>
     </div>
     <div class="comic-cover">
+      <span data-follow="8" style="top:8%;left:12%;"></span>
+      <span data-follow="14" style="top:12%;right:14%;"></span>
+      <span data-follow="10" style="bottom:14%;left:16%;"></span>
+      <span data-follow="18" style="bottom:10%;right:10%;"></span>
       <div class="issue">BIBLE STORY · RUTH</div>
       <h1>RUTH</h1>
       <div class="subtitle">Loyal Kindness · Belonging · Redemption</div>
@@ -116,6 +120,10 @@
       <span>· ↓ Arrow Down to next chapter ·</span>
     </div>
 
+    <div id="compass-indicator" class="story-compass" aria-label="Story compass">
+      <span>FEAR</span><i></i><span>TRUST</span>
+    </div>
+
     <button id="audioToggle" type="button" title="Turn audio off" aria-label="Turn audio off"></button>
     <button id="nextBtn" aria-label="Next chapter">Next Chapter ↴</button>
 
@@ -133,13 +141,23 @@
     <a href="tools/texture-forge.html">Texture Forge</a>
   </footer>
 
-  <script src="asset-download-manager.js"></script>
-  <script src="story-runtime.js"></script>
-  <script src="loading-screen.js"></script>
-  <script src="audio-manager.js"></script>
-  <script src="info-modal.js"></script>
-  <script src="ruth-scenes-helpers.js"></script>
-  <script src="ruth-field-background.js"></script>
+  <script src="js/asset-download-manager.js"></script>
+  <script src="js/story-runtime.js"></script>
+  <script src="js/loading-screen.js"></script>
+  <script src="js/audio-manager.js"></script>
+  <script src="js/info-modal.js"></script>
+  <script src="js/ruth-scenes-helpers.js"></script>
+  <script src="js/ruth-field-background.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/compass.js"></script>
+  <script src="beats/act1.js"></script>
+  <script src="beats/act2.js"></script>
+  <script src="beats/act3.js"></script>
+  <script src="beats/act4.js"></script>
+  <script src="beats/act5.js"></script>
+  <script src="beats/act6.js"></script>
+  <script src="beats/act7.js"></script>
+  <script src="beats/act8.js"></script>
   <script src="assets/scenes/act1_leaving_moab.js"></script>
   <script src="assets/scenes/act2_your_people.js"></script>
   <script src="assets/scenes/act3_gleaning.js"></script>
@@ -148,7 +166,7 @@
   <script src="assets/scenes/act6_at_the_gate.js"></script>
   <script src="assets/scenes/act7_redeemed.js"></script>
   <script src="assets/scenes/act8_obed.js"></script>
-  <script src="ruth-story.js"></script>
+  <script src="js/ruth-story.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       // Clean slate: unregister any previously-cached SW first, then register fresh
@@ -163,11 +181,67 @@
             }
           }
         } catch (e) { /* best-effort cleanup */ }
-        const registerStoryWorker = () => navigator.serviceWorker.register('sw.js');
+        const registerStoryWorker = () => navigator.serviceWorker.register('js/sw.js');
         if (window.__storyAssetsReady) registerStoryWorker();
         else window.addEventListener('story:assetsready', registerStoryWorker, { once: true });
       });
     }
   </script>
- </body>
+ 
+  <script>
+    /* follow.js — lightweight cursor-follow accent dots on the start screen.
+       No external dependency: a 60-line inline implementation that mirrors
+       the jwanner83/follow-js API (data-follow attribute + factor). */
+    (function () {
+      'use strict';
+      const FOLLOW_FACTOR_DEFAULT = 12;
+      const FOLLOW_SMOOTH = 0.18;
+      const elements = [];
+      let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+      let target = { x: mouse.x, y: mouse.y };
+
+      function parseFactor(el) {
+        const v = el.getAttribute('data-follow');
+        if (v === null || v === '' || v === 'true') return FOLLOW_FACTOR_DEFAULT;
+        const n = parseFloat(v);
+        return Number.isFinite(n) ? n : FOLLOW_FACTOR_DEFAULT;
+      }
+
+      function refresh() {
+        elements.length = 0;
+        document.querySelectorAll('[data-follow]').forEach(el => {
+          const r = el.getBoundingClientRect();
+          const cx = r.left + r.width / 2;
+          const cy = r.top + r.height / 2;
+          elements.push({ el, cx, cy, factor: parseFactor(el) });
+        });
+      }
+
+      window.addEventListener('mousemove', e => {
+        target.x = e.clientX;
+        target.y = e.clientY;
+      }, { passive: true });
+      window.addEventListener('touchmove', e => {
+        if (e.touches[0]) { target.x = e.touches[0].clientX; target.y = e.touches[0].clientY; }
+      }, { passive: true });
+
+      function tick() {
+        mouse.x += (target.x - mouse.x) * FOLLOW_SMOOTH;
+        mouse.y += (target.y - mouse.y) * FOLLOW_SMOOTH;
+        for (const item of elements) {
+          const dx = mouse.x - item.cx;
+          const dy = mouse.y - item.cy;
+          const f = item.factor / 100;
+          item.el.style.transform = 'translate(' + (dx * f).toFixed(2) + 'px, ' + (dy * f).toFixed(2) + 'px)';
+        }
+        requestAnimationFrame(tick);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => { refresh(); tick(); });
+      } else { refresh(); tick(); }
+      window.addEventListener('resize', refresh);
+      window.Follow = { refresh, destroy: () => elements.length = 0 };
+    })();
+  </script>
+</body>
 </html>

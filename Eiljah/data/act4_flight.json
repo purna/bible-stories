@@ -1,0 +1,86 @@
+{
+  "id": "flight",
+  "name": "The Flight to Horeb",
+  "bg": "radial-gradient(circle at 50% 50%, #5a3e2b, #3b2a1a 80%)",
+  "particle": "dust",
+  "svg": "wilderness_tree",
+  "lines": [
+    {
+      "id": "flight_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "When Jezebel heard what had happened on Mount Carmel, she sent Elijah a deadly threat.",
+      "align": "left",
+      "svg": "samaria_court",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "flight_1",
+      "speaker": "jezebel",
+      "fx": "shake",
+      "delay": 800,
+      "text": "By tomorrow, I will make your life like the lives of the prophets you have defeated!",
+      "align": "center",
+      "svg": "samaria_court",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "flight_2",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "Elijah was afraid. The prophet who had stood before Ahab now ran into the wilderness for his life.",
+      "align": "right",
+      "svg": "wilderness_tree",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "flight_3",
+      "speaker": "elijah",
+      "fx": "fade",
+      "delay": 800,
+      "text": "I have had enough, LORD. Take my life. I am no better than my ancestors.",
+      "align": "center",
+      "svg": "wilderness_tree",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "flight_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Exhausted, Elijah lay down beneath a broom bush and fell asleep. An angel touched him and told him to eat.",
+      "align": "center",
+      "svg": "wilderness_tree",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "flight_5",
+      "speaker": "angel",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "Get up and eat, for the journey is too much for you.",
+      "align": "center",
+      "svg": "wilderness_tree",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "flight_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "The angel came again with food and water. Strengthened by it, Elijah travelled forty days and forty nights to Horeb, the mountain of God.",
+      "align": "center",
+      "svg": "horeb_cave",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

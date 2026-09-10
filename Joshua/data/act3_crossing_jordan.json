@@ -1,0 +1,64 @@
+{
+  "id": "crossing_jordan",
+  "name": "Ch.3 · Crossing Jordan",
+  "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)",
+  "particle": "ember",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "crossing_jordan_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Carry twelve memorial stones from the riverbed.",
+      "cite": "Joshua 1–24",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "crossing_jordan_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Will courage remain rooted in instruction rather than conquest for its own sake? — Crossing Jordan is the next step in that question.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "crossing_jordan_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE WORD STANDS",
+      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "crossing_jordan_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Walk on with the lesson 📖",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment 🕊️",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "crossing_jordan",
+  "foreground": "fg_crossing_jordan",
+  "index": 2
+}

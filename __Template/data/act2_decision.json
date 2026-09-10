@@ -1,12 +1,14 @@
 {
   "id": "decision",
-  "name": "Ch.2 · Decision",
+  "name": "Ch.2 \u00b7 Decision",
   "bg": "radial-gradient(circle at 50% 25%, #633f2a, #17100d 70%)",
   "particle": "dusk",
   "lines": [
     {
+      "id": "decision_0",
       "speaker": "traveller",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "text": "Use choices for participation and reflection, not a false alternate scripture outcome.",
       "choices": [
@@ -18,7 +20,9 @@
           "label": "Pause and listen",
           "note": "The canonical event continues after a reflective beat."
         }
-      ]
+      ],
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "svg": "decision",

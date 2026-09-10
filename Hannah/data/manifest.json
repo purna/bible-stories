@@ -1,0 +1,93 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "the_journey_to_shiloh",
+      "name": "Ch.1 · The Journey to Shiloh",
+      "file": "act1_the_journey_to_shiloh.json",
+      "scene": "the_journey_to_shiloh",
+      "foreground": "fg_the_journey_to_shiloh",
+      "assetFolder": "act_01_the_journey_to_shiloh",
+      "assetStem": "hannah_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "at_the_table",
+      "name": "Ch.2 · At the Table",
+      "file": "act2_at_the_table.json",
+      "scene": "at_the_table",
+      "foreground": "fg_at_the_table",
+      "assetFolder": "act_02_at_the_table",
+      "assetStem": "hannah_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    },
+    {
+      "id": "silent_prayer",
+      "name": "Ch.3 · Silent Prayer",
+      "file": "act3_silent_prayer.json",
+      "scene": "silent_prayer",
+      "foreground": "fg_silent_prayer",
+      "assetFolder": "act_03_silent_prayer",
+      "assetStem": "hannah_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "misunderstood",
+      "name": "Ch.4 · Misunderstood",
+      "file": "act4_misunderstood.json",
+      "scene": "misunderstood",
+      "foreground": "fg_misunderstood",
+      "assetFolder": "act_04_misunderstood",
+      "assetStem": "hannah_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+    },
+    {
+      "id": "remembered",
+      "name": "Ch.5 · Remembered",
+      "file": "act5_remembered.json",
+      "scene": "remembered",
+      "foreground": "fg_remembered",
+      "assetFolder": "act_05_remembered",
+      "assetStem": "hannah_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+    },
+    {
+      "id": "the_little_robe",
+      "name": "Ch.6 · The Little Robe",
+      "file": "act6_the_little_robe.json",
+      "scene": "the_little_robe",
+      "foreground": "fg_the_little_robe",
+      "assetFolder": "act_06_the_little_robe",
+      "assetStem": "hannah_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+    },
+    {
+      "id": "given_back",
+      "name": "Ch.7 · Given Back",
+      "file": "act7_given_back.json",
+      "scene": "given_back",
+      "foreground": "fg_given_back",
+      "assetFolder": "act_07_given_back",
+      "assetStem": "hannah_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "hannah_s_song",
+      "name": "Ch.8 · Hannah’s Song",
+      "file": "act8_hannah_s_song.json",
+      "scene": "hannah_s_song",
+      "foreground": "fg_hannah_s_song",
+      "assetFolder": "act_08_hannah_s_song",
+      "assetStem": "hannah_act8",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+    }
+  ]
+}

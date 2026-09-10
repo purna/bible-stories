@@ -1,0 +1,61 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "drought",
+      "name": "The Drought",
+      "file": "act1_drought.json",
+      "svg": "samaria_court",
+      "particle": "dust",
+      "bg": "radial-gradient(circle at 50% 10%, #f2a65a, #774f38 80%)"
+    },
+    {
+      "id": "widow",
+      "name": "The Widow of Zarephath",
+      "file": "act2_widow.json",
+      "svg": "zarephath_town",
+      "particle": "dream",
+      "bg": "radial-gradient(circle at 50% 20%, #c6a776, #8c6c4f 70%, #594236)"
+    },
+    {
+      "id": "carmel",
+      "name": "Mount Carmel",
+      "file": "act3_carmel.json",
+      "svg": "mount_carmel_altars",
+      "particle": "wind_carmel",
+      "bg": "radial-gradient(circle at 50% 80%, #8b2500, #3d1200 60%, #1a0700)"
+    },
+    {
+      "id": "flight",
+      "name": "The Flight to Horeb",
+      "file": "act4_flight.json",
+      "svg": "wilderness_tree",
+      "particle": "dust",
+      "bg": "radial-gradient(circle at 50% 50%, #5a3e2b, #3b2a1a 80%)"
+    },
+    {
+      "id": "voice",
+      "name": "The Still, Small Voice",
+      "file": "act5_voice.json",
+      "svg": "horeb_cave",
+      "particle": "constellation",
+      "bg": "radial-gradient(circle at 50% 20%, #0d1b2a, #061224 65%, #030b18)"
+    },
+    {
+      "id": "vineyard",
+      "name": "Naboth's Vineyard",
+      "file": "act6_vineyard.json",
+      "svg": "naboths_vineyard",
+      "particle": "dream",
+      "bg": "radial-gradient(circle at 20% 80%, #4a6b3c, #2d4a2c 70%)"
+    },
+    {
+      "id": "chariot",
+      "name": "The Chariot of Fire",
+      "file": "act7_chariot.json",
+      "svg": "jordan_river",
+      "particle": "wind_chariot",
+      "bg": "radial-gradient(circle at 50% 50%, #ffde7d, #ff914d 80%)"
+    }
+  ]
+}

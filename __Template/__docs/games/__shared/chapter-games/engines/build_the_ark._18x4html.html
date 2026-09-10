@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Build the Ark — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:12px;flex:none;display:flex;flex-direction:column;align-items:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.5rem;margin:0}
+    .sub{text-align:center;font-size:.85rem;opacity:.8;margin-bottom:4px}
+    .hud{display:flex;gap:10px;justify-content:center;margin-bottom:6px;font-size:.9rem;font-weight:800}
+    .hud .chip{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:3px 10px}
+    .hud .chip.warn{background:#ffe5b4;border-color:#a85b00}
+    .hud .chip.bad{background:#ffd0d0;border-color:var(--bad)}
+    .scene{flex:1;display:flex;gap:16px;align-items:center;justify-content:center;width:100%}
+    .tray-wrap{text-align:center}
+    .tray-wrap .label{font-size:.8rem;font-weight:800;margin-bottom:4px}
+    
+    /* 8x4 Grid layout */
+    .tray{width:450px;background:#fff;border:3px solid #c9c3b7;border-radius:14px;padding:8px;display:grid;grid-template-columns:repeat(8,48px);gap:6px;justify-content:center;min-height:230px}
+    .animal{width:48px;height:48px;border-radius:10px;background:var(--accent);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;touch-action:manipulation;transition:transform .14s,filter .14s,opacity .14s, border-color .14s;box-shadow:0 3px 0 #9d7613}
+    .animal svg{width:34px;height:34px;display:block}
+    .animal.selected{transform:scale(1.1);border-color:#000;box-shadow:0 0 0 3px var(--accent), 0 4px 0 #9d7613;filter:brightness(1.1)}
+    .animal.wrong{animation:shake .3s ease-in-out;border-color:var(--bad)}
+    .animal.placed{opacity:.22;pointer-events:none;box-shadow:none;transform:scale(0.9)}
+    
+    .ark-wrap{text-align:center;flex:1;max-width:440px}
+    .ark-wrap .label{font-size:.8rem;font-weight:800;margin-bottom:4px}
+    .ark{position:relative;background:#fff;border:4px solid var(--ink);border-radius:18px 18px 8px 8px;padding:10px;box-shadow:0 6px 0 #5b3624;min-height:230px;display:flex;flex-direction:column;gap:6px;justify-content:center;align-items:center}
+    .ark::before{content:"";position:absolute;top:-18px;left:50%;transform:translateX(-50%);width:50px;height:22px;background:#a67c52;border:3px solid var(--ink);border-radius:20px 20px 4px 4px;box-shadow:0 -2px 0 #5b3624 inset}
+    .deck{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;min-height:180px;width:100%;border:2px dashed #c9c3b7;border-radius:10px;padding:6px;transition:background-color .3s, border-color .3s}
+    .deck .placeholder{font-size:.85rem;font-weight:800;color:#8a7a64;text-align:center;opacity:.6}
+    .deck .animal{cursor:default;box-shadow:none}
+    
+    @keyframes shake{
+      0%, 100%{transform:translateX(0)}
+      20%, 60%{transform:translateX(-4px)}
+      40%, 80%{transform:translateX(4px)}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Build the Ark</h1>
+    <div class="sub" id="instructionSub">Find two matching animals in the grid and click them to load the ark!</div>
+    <div class="hud">
+      <div class="chip" id="levelChip">Level 1 of 5</div>
+      <div class="chip" id="pairChip">Ark Animals: 0 / 5 pairs</div>
+    </div>
+    <div class="scene">
+      <div class="tray-wrap">
+        <div class="label">ANIMALS (8x4 Grid)</div>
+        <div class="tray" id="tray"></div>
+      </div>
+      <div class="ark-wrap">
+        <div class="label">THE ARK</div>
+        <div class="ark" id="ark">
+          <div class="deck" id="deck"><span class="placeholder">Select matching pairs to fill the ark!</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Sail again</button>
+    </div>
+  </div>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 150, timer: true };
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+
+    const HOURGLASS_SVG='<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+    const SUN_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+    
+    const trayEl=document.getElementById('tray');
+    const deckEl=document.getElementById('deck');
+    const levelChip=document.getElementById('levelChip');
+    const pairChip=document.getElementById('pairChip');
+    const instructionSub=document.getElementById('instructionSub');
+    const modal=document.getElementById('modal'),modalCard=document.getElementById('modalCard'),modalIcon=document.getElementById('modalIcon'),modalTitle=document.getElementById('modalTitle'),modalText=document.getElementById('modalText'),modalBtn=document.getElementById('modalBtn');
+
+    // Expanded 32-Animal Land Pool (No Whales / Aquatic-only)
+    const BASE_ANIMALS = [
+      { id:'flamingo', name:'Flamingo', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 38V22c0-5 6-8 10-4" stroke="#e91e63" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="16" r="5" fill="#f48fb1"/><path d="M34 16l6 2" stroke="#333" stroke-width="2.5"/></svg>'},
+      { id:'frog', name:'Frog', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="24" cy="28" rx="14" ry="10" fill="#4caf50" stroke="#1b5e20" stroke-width="2.5"/><circle cx="17" cy="16" r="4" fill="#4caf50" stroke="#1b5e20" stroke-width="2"/><circle cx="31" cy="16" r="4" fill="#4caf50" stroke="#1b5e20" stroke-width="2"/><circle cx="17" cy="16" r="1.5" fill="#000"/><circle cx="31" cy="16" r="1.5" fill="#000"/></svg>'},
+      { id:'giraffe', name:'Giraffe', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 8c-3 0-4 3-3 6 1 2 3 2 4 2 0 3-1 5-3 5l-6 16h12l4-10h6c2 0 4-2 4-4 0-3-2-5-5-5h-3c-1-2-1-4 0-6 1-2 0-4-2-4Z" fill="#ffb74d" stroke="#e65100" stroke-width="2.5" stroke-linejoin="round"/><circle cx="22" cy="11" r="1.5" fill="#000"/></svg>'},
+      { id:'butterfly', name:'Butterfly', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 14c-6 0-8 10 0 12s10-12 0-12ZM36 14c6 0 8 10 0 12s-10-12 0-12Z" fill="#ab47bc" stroke="#4a148c" stroke-width="2"/><path d="M24 12v24" stroke="#4a148c" stroke-width="3" stroke-linecap="round"/></svg>'},
+      { id:'bee', name:'Bee', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="24" cy="26" rx="12" ry="9" fill="#ffeb3b" stroke="#f57f17" stroke-width="2.5"/><path d="M20 17v18M28 17v18" stroke="#000" stroke-width="3"/><ellipse cx="24" cy="14" rx="7" ry="4" fill="#e0f7fa" stroke="#00bcd4" stroke-width="1.5"/></svg>'},
+      { id:'crab', name:'Crab', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="24" cy="28" rx="12" ry="8" fill="#f44336" stroke="#b71c1c" stroke-width="2.5"/><path d="M12 20l-4-4M36 20l4-4" stroke="#f44336" stroke-width="4" stroke-linecap="round"/><circle cx="18" cy="18" r="2" fill="#000"/><circle cx="30" cy="18" r="2" fill="#000"/></svg>'},
+      { id:'bat', name:'Bat', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 22c8-2 10-10 16-4 6-6 8 2 16 4-6 10-10 12-16 6-6 6-10 4-16-6Z" fill="#37474f" stroke="#212121" stroke-width="2"/><circle cx="21" cy="22" r="1" fill="#ffeb3b"/><circle cx="27" cy="22" r="1" fill="#ffeb3b"/></svg>'},
+      { id:'duck', name:'Duck', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="18" r="6" fill="#fff" stroke="#333" stroke-width="2"/><ellipse cx="26" cy="28" rx="10" ry="7" fill="#fff" stroke="#333" stroke-width="2"/><path d="M14 18h-6l4 3z" fill="#ff9800" stroke="#333" stroke-width="1.5"/></svg>'},
+      { id:'fox', name:'Fox', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 14l10 18 10-18-5 1H19z" fill="#ff7043" stroke="#bf360c" stroke-width="2.5" stroke-linejoin="round"/><path d="M21 30l3 2 3-2z" fill="#000"/></svg>'},
+      { id:'turtle', name:'Turtle', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="10" fill="#8bc34a" stroke="#33691e" stroke-width="2.5"/><circle cx="36" cy="24" r="3.5" fill="#8bc34a" stroke="#33691e" stroke-width="2"/><path d="M18 16l12 16M30 16L18 32" stroke="#33691e" stroke-width="1.5"/></svg>'},
+      { id:'snake', name:'Snake', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 32c4 0 4-8 8-8s4 8 8 8 4-8 8-8" stroke="#00e676" stroke-width="5" stroke-linecap="round"/><circle cx="36" cy="24" r="3" fill="#00c853"/></svg>'},
+      { id:'penguin', name:'Penguin', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="24" cy="26" rx="9" ry="12" fill="#263238" stroke="#000" stroke-width="2"/><ellipse cx="24" cy="27" rx="5" ry="8" fill="#fff"/><path d="M22 22l2 3 2-3z" fill="#ff9800"/></svg>'},
+      { id:'owl', name:'Owl', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="25" r="11" fill="#795548" stroke="#3e2723" stroke-width="2.5"/><circle cx="19" cy="22" r="4" fill="#fff" stroke="#3e2723" stroke-width="1.5"/><circle cx="29" cy="22" r="4" fill="#fff" stroke="#3e2723" stroke-width="1.5"/><circle cx="19" cy="22" r="1.5" fill="#000"/><circle cx="29" cy="22" r="1.5" fill="#000"/></svg>'},
+      { id:'pig', name:'Pig', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="11" fill="#f8bbd0" stroke="#c2185b" stroke-width="2.5"/><ellipse cx="24" cy="26" rx="5" ry="3.5" fill="#f48fb1" stroke="#c2185b" stroke-width="1.5"/></svg>'},
+      { id:'snail', name:'Snail', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="24" r="8" fill="#ffb74d" stroke="#e65100" stroke-width="2.5"/><path d="M12 32h20c3 0 4-2 4-4" stroke="#8d6e63" stroke-width="3" stroke-linecap="round"/></svg>'},
+      { id:'elephant', name:'Elephant', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="12" fill="#90a4ae" stroke="#37474f" stroke-width="2.5"/><path d="M24 28c0 6-4 8-4 8" stroke="#37474f" stroke-width="3" stroke-linecap="round"/><circle cx="19" cy="22" r="1.5" fill="#000"/><circle cx="29" cy="22" r="1.5" fill="#000"/></svg>'},
+      { id:'bear', name:'Bear', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="4" fill="#6d4c41"/><circle cx="32" cy="16" r="4" fill="#6d4c41"/><circle cx="24" cy="26" r="11" fill="#6d4c41" stroke="#3e2723" stroke-width="2.5"/><ellipse cx="24" cy="28" rx="4" ry="3" fill="#8d6e63"/><circle cx="24" cy="27" r="1.5" fill="#000"/></svg>'},
+      { id:'mouse', name:'Mouse', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="18" r="5" fill="#b0bec5"/><circle cx="33" cy="18" r="5" fill="#b0bec5"/><circle cx="24" cy="27" r="9" fill="#cfd8dc" stroke="#455a64" stroke-width="2"/><circle cx="24" cy="29" r="2" fill="#e91e63"/></svg>'},
+      { id:'panda', name:'Panda', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="16" r="4" fill="#000"/><circle cx="33" cy="16" r="4" fill="#000"/><circle cx="24" cy="25" r="11" fill="#fff" stroke="#000" stroke-width="2.5"/><circle cx="19" cy="23" r="3" fill="#000"/><circle cx="29" cy="23" r="3" fill="#000"/><circle cx="24" cy="28" r="2" fill="#000"/></svg>'},
+      { id:'koala', name:'Koala', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="18" r="6" fill="#b0bec5"/><circle cx="34" cy="18" r="6" fill="#b0bec5"/><circle cx="24" cy="26" r="10" fill="#90a4ae" stroke="#37474f" stroke-width="2.5"/><ellipse cx="24" cy="26" rx="3" ry="4" fill="#263238"/></svg>'},
+      { id:'hippo', name:'Hippo', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="22" r="10" fill="#78909c" stroke="#263238" stroke-width="2.5"/><ellipse cx="24" cy="30" rx="10" ry="6" fill="#90a4ae" stroke="#263238" stroke-width="2"/><circle cx="19" cy="29" r="1" fill="#000"/><circle cx="29" cy="29" r="1" fill="#000"/></svg>'},
+      { id:'sloth', name:'Sloth', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="11" fill="#d7ccc8" stroke="#4e342e" stroke-width="2.5"/><path d="M15 22h6v4h-6zM27 22h6v4h-6z" fill="#8d6e63"/><circle cx="18" cy="24" r="1" fill="#000"/><circle cx="30" cy="24" r="1" fill="#000"/></svg>'},
+      { id:'hedgehog', name:'Hedgehog', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 28c0-8 6-14 14-14s14 6 14 14z" fill="#5d4037" stroke="#3e2723" stroke-width="2"/><circle cx="20" cy="28" r="7" fill="#d7ccc8"/><circle cx="18" cy="27" r="1" fill="#000"/><circle cx="24" cy="28" r="1.5" fill="#000"/></svg>'},
+      { id:'zebra', name:'Zebra', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="11" fill="#fff" stroke="#000" stroke-width="2.5"/><path d="M15 20l18 2M13 25l18 2M15 30l18 2" stroke="#000" stroke-width="2"/></svg>'},
+      { id:'monkey', name:'Monkey', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="24" r="4" fill="#a1887f"/><circle cx="35" cy="24" r="4" fill="#a1887f"/><circle cx="24" cy="24" r="10" fill="#6d4c41" stroke="#3e2723" stroke-width="2.5"/><ellipse cx="24" cy="26" rx="6" ry="4" fill="#d7ccc8"/></svg>'},
+      { id:'sheep', name:'Sheep', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="12" fill="#eceff1" stroke="#b0bec5" stroke-width="3"/><ellipse cx="24" cy="26" rx="6" ry="5" fill="#424242"/><circle cx="22" cy="25" r="1" fill="#fff"/><circle cx="26" cy="25" r="1" fill="#fff"/></svg>'},
+      { id:'cat', name:'Cat', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 14l5 6h10l5-6v16H14z" fill="#ffb74d" stroke="#e65100" stroke-width="2"/><circle cx="24" cy="26" r="8" fill="#ffb74d" stroke="#e65100" stroke-width="2"/><circle cx="21" cy="25" r="1" fill="#000"/><circle cx="27" cy="25" r="1" fill="#000"/></svg>'},
+      { id:'dog', name:'Dog', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="14" cy="24" rx="3" ry="8" fill="#8d6e63"/><ellipse cx="34" cy="24" rx="3" ry="8" fill="#8d6e63"/><circle cx="24" cy="25" r="9" fill="#d7ccc8" stroke="#5d4037" stroke-width="2.5"/><circle cx="24" cy="27" r="2" fill="#000"/></svg>'},
+      { id:'camel', name:'Camel', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="22" r="6" fill="#ffb74d" stroke="#e65100" stroke-width="2"/><circle cx="30" cy="22" r="6" fill="#ffb74d" stroke="#e65100" stroke-width="2"/><circle cx="12" cy="28" r="4" fill="#ffb74d" stroke="#e65100" stroke-width="2"/></svg>'},
+      { id:'kangaroo', name:'Kangaroo', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 12l4 8M30 12l-4 8" stroke="#bf360c" stroke-width="2.5"/><circle cx="24" cy="26" r="10" fill="#ff7043" stroke="#bf360c" stroke-width="2.5"/><circle cx="21" cy="24" r="1" fill="#000"/><circle cx="27" cy="24" r="1" fill="#000"/></svg>'},
+      { id:'chameleon', name:'Chameleon', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="10" fill="#00e676" stroke="#00a152" stroke-width="2.5"/><circle cx="28" cy="22" r="3" fill="#fff" stroke="#00a152" stroke-width="1.5"/><circle cx="28" cy="22" r="1" fill="#000"/></svg>'},
+      { id:'beaver', name:'Beaver', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="10" fill="#5d4037" stroke="#3e2723" stroke-width="2.5"/><path d="M22 28h4v4h-4z" fill="#fff" stroke="#000" stroke-width="1"/><circle cx="20" cy="23" r="1" fill="#000"/><circle cx="28" cy="23" r="1" fill="#000"/></svg>'}
+    ];
+
+    // Dimorphic Male / Female Pairs (Identical base shape with 1 sex-specific extra)
+    const DIMORPHIC_PAIRS = [
+      {
+        pairId: 'lion_pair',
+        female: { id:'lion_f', pairId:'lion_pair', name:'Lioness', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="10" fill="#ffb74d" stroke="#e65100" stroke-width="2.5"/><circle cx="21" cy="22" r="1" fill="#000"/><circle cx="27" cy="22" r="1" fill="#000"/><path d="M22 26c1 1 3 1 4 0" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg>' },
+        male: { id:'lion_m', pairId:'lion_pair', name:'Lion (Mane)', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="15" fill="#5d4037" stroke="#3e2723" stroke-width="2"/><circle cx="24" cy="24" r="10" fill="#ffb74d" stroke="#e65100" stroke-width="2.5"/><circle cx="21" cy="22" r="1" fill="#000"/><circle cx="27" cy="22" r="1" fill="#000"/><path d="M22 26c1 1 3 1 4 0" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg>' }
+      },
+      {
+        pairId: 'deer_pair',
+        female: { id:'deer_f', pairId:'deer_pair', name:'Doe', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="27" r="10" fill="#a1887f" stroke="#3e2723" stroke-width="2.5"/><circle cx="20" cy="25" r="1" fill="#000"/><circle cx="28" cy="25" r="1" fill="#000"/><ellipse cx="24" cy="29" rx="3" ry="2" fill="#5d4037"/></svg>' },
+        male: { id:'deer_m', pairId:'deer_pair', name:'Buck (Antlers)', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 11l4 7M20 14l-3-2M32 11l-4 7M28 14l3-2" stroke="#3e2723" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="27" r="10" fill="#a1887f" stroke="#3e2723" stroke-width="2.5"/><circle cx="20" cy="25" r="1" fill="#000"/><circle cx="28" cy="25" r="1" fill="#000"/><ellipse cx="24" cy="29" rx="3" ry="2" fill="#5d4037"/></svg>' }
+      },
+      {
+        pairId: 'rhino_pair',
+        female: { id:'rhino_f', pairId:'rhino_pair', name:'Female Rhino', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="26" r="11" fill="#b0bec5" stroke="#37474f" stroke-width="2.5"/><path d="M30 20l4 6h-6z" fill="#eceff1" stroke="#37474f" stroke-width="2"/><circle cx="20" cy="24" r="1" fill="#000"/></svg>' },
+        male: { id:'rhino_m', pairId:'rhino_pair', name:'Male Rhino (Extra Horn)', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="26" r="11" fill="#b0bec5" stroke="#37474f" stroke-width="2.5"/><path d="M26 22l3 4h-4z" fill="#eceff1" stroke="#37474f" stroke-width="1.5"/><path d="M30 18l5 8h-7z" fill="#eceff1" stroke="#37474f" stroke-width="2"/><circle cx="20" cy="24" r="1" fill="#000"/></svg>' }
+      },
+      {
+        pairId: 'bunny_pair',
+        male: { id:'bunny_m', pairId:'bunny_pair', name:'Male Bunny', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="20" cy="14" rx="3" ry="9" fill="#e0e0e0" stroke="#37474f" stroke-width="2"/><ellipse cx="28" cy="14" rx="3" ry="9" fill="#e0e0e0" stroke="#37474f" stroke-width="2"/><ellipse cx="24" cy="28" rx="10" ry="8" fill="#e0e0e0" stroke="#37474f" stroke-width="2.5"/><circle cx="20" cy="26" r="1" fill="#000"/><circle cx="28" cy="26" r="1" fill="#000"/></svg>' },
+        female: { id:'bunny_f', pairId:'bunny_pair', name:'Female Bunny (Bow)', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="20" cy="14" rx="3" ry="9" fill="#e0e0e0" stroke="#37474f" stroke-width="2"/><ellipse cx="28" cy="14" rx="3" ry="9" fill="#e0e0e0" stroke="#37474f" stroke-width="2"/><path d="M26 15c-3-2-3 2 0 0ZM32 15c3-2 3 2 0 0Z" fill="#e91e63" stroke="#880e4f" stroke-width="1.5"/><circle cx="29" cy="15" r="1.5" fill="#f48fb1"/><ellipse cx="24" cy="28" rx="10" ry="8" fill="#e0e0e0" stroke="#37474f" stroke-width="2.5"/><circle cx="20" cy="26" r="1" fill="#000"/><circle cx="28" cy="26" r="1" fill="#000"/></svg>' }
+      },
+      {
+        pairId: 'cow_pair',
+        female: { id:'cow_f', pairId:'cow_pair', name:'Cow (Bow)', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="26" r="10" fill="#fff" stroke="#000" stroke-width="2.5"/><ellipse cx="24" cy="28" rx="5" ry="3" fill="#f8bbd0"/><path d="M16 16c-2-2-2 2 0 0ZM20 16c2-2 2 2 0 0Z" fill="#e91e63"/><circle cx="20" cy="24" r="1" fill="#000"/><circle cx="28" cy="24" r="1" fill="#000"/></svg>' },
+        male: { id:'bull_m', pairId:'cow_pair', name:'Bull (Horns)', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 18c-3-5 0-8 3-4M34 18c3-5 0-8-3-4" stroke="#5d4037" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="26" r="10" fill="#fff" stroke="#000" stroke-width="2.5"/><ellipse cx="24" cy="28" rx="5" ry="3" fill="#d7ccc8"/><circle cx="20" cy="24" r="1" fill="#000"/><circle cx="28" cy="24" r="1" fill="#000"/></svg>' }
+      },
+      {
+        pairId: 'peacock_pair',
+        female: { id:'peahen_f', pairId:'peacock_pair', name:'Peahen', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="9" fill="#8d6e63" stroke="#3e2723" stroke-width="2.5"/><path d="M21 24h-4l2 3z" fill="#ff9800"/><circle cx="25" cy="22" r="1" fill="#000"/></svg>' },
+        male: { id:'peacock_m', pairId:'peacock_pair', name:'Peacock (Crest Feathers)', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 11l4 4M24 10v5M28 11l-4 4" stroke="#00e676" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="10" r="1.5" fill="#00e676"/><circle cx="24" cy="9" r="1.5" fill="#00e676"/><circle cx="28" cy="10" r="1.5" fill="#00e676"/><circle cx="24" cy="24" r="9" fill="#0288d1" stroke="#01579b" stroke-width="2.5"/><path d="M21 24h-4l2 3z" fill="#ff9800"/><circle cx="25" cy="22" r="1" fill="#000"/></svg>' }
+      },
+      {
+        pairId: 'chicken_pair',
+        female: { id:'hen_f', pairId:'chicken_pair', name:'Hen', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="26" r="8" fill="#fff" stroke="#333" stroke-width="2"/><path d="M16 26h-4l4 3z" fill="#ff9800"/></svg>' },
+        male: { id:'rooster_m', pairId:'chicken_pair', name:'Rooster (Comb)', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="26" r="8" fill="#fff" stroke="#333" stroke-width="2"/><path d="M20 17c2-3 6-3 8 0" fill="#f44336" stroke="#b71c1c" stroke-width="2"/><path d="M16 26h-4l4 3z" fill="#ff9800"/></svg>' }
+      },
+      {
+        pairId: 'goat_pair',
+        female: { id:'goat_f', pairId:'goat_pair', name:'Female Goat', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="10" fill="#cfd8dc" stroke="#37474f" stroke-width="2.5"/><circle cx="20" cy="22" r="1" fill="#000"/><circle cx="28" cy="22" r="1" fill="#000"/></svg>' },
+        male: { id:'goat_m', pairId:'goat_pair', name:'Male Goat (Beard)', svg:'<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 34l2 4 2-4z" fill="#fff" stroke="#37474f" stroke-width="1.5"/><circle cx="24" cy="24" r="10" fill="#cfd8dc" stroke="#37474f" stroke-width="2.5"/><circle cx="20" cy="22" r="1" fill="#000"/><circle cx="28" cy="22" r="1" fill="#000"/></svg>' }
+      }
+    ];
+
+    let step = 0, selectedAnimalEl = null, over = false, totalPairsCollected = 0;
+
+    function showModal(kind, title, lines, btnLabel){
+      modalCard.classList.remove('success','timeout');
+      if(kind==='success') modalCard.classList.add('success');
+      if(kind==='timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind==='success' ? SUN_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Sail again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    function updateHud(){
+      levelChip.textContent = `Level ${step+1} of 5`;
+      pairChip.textContent = `Ark Animals: ${totalPairsCollected} / 5 pairs`;
+    }
+
+    function handleAnimalClick(e){
+      if (over) return;
+      const el = e.currentTarget;
+      if (el.classList.contains('placed')) return;
+
+      if (selectedAnimalEl === el) {
+        el.classList.remove('selected');
+        selectedAnimalEl = null;
+        return;
+      }
+
+      if (!selectedAnimalEl) {
+        selectedAnimalEl = el;
+        el.classList.add('selected');
+        return;
+      }
+
+      const firstEl = selectedAnimalEl;
+      const secondEl = el;
+
+      const isMatch = firstEl.dataset.pairId && secondEl.dataset.pairId ? 
+                      (firstEl.dataset.pairId === secondEl.dataset.pairId && firstEl !== secondEl) :
+                      (firstEl.dataset.kind === secondEl.dataset.kind && firstEl !== secondEl);
+
+      if (isMatch) {
+        firstEl.classList.remove('selected');
+        firstEl.classList.add('placed');
+        secondEl.classList.add('placed');
+        selectedAnimalEl = null;
+
+        const ph = deckEl.querySelector('.placeholder');
+        if (ph) ph.remove();
+
+        const item1 = document.createElement('div');
+        item1.className = 'animal';
+        item1.innerHTML = firstEl.innerHTML;
+
+        const item2 = document.createElement('div');
+        item2.className = 'animal';
+        item2.innerHTML = secondEl.innerHTML;
+
+        deckEl.appendChild(item1);
+        deckEl.appendChild(item2);
+
+        totalPairsCollected++;
+        updateHud();
+
+        setTimeout(() => {
+          if (step + 1 >= 5) finish(true);
+          else setLevel(step + 1);
+        }, 700);
+
+      } else {
+        firstEl.classList.remove('selected');
+        firstEl.classList.add('wrong');
+        secondEl.classList.add('wrong');
+
+        setTimeout(() => {
+          firstEl.classList.remove('wrong');
+          secondEl.classList.remove('wrong');
+        }, 400);
+
+        selectedAnimalEl = null;
+      }
+    }
+
+    function setLevel(i){
+      step = i; 
+      selectedAnimalEl = null;
+      trayEl.innerHTML='';
+
+      let gridItems = [];
+
+      if (step < 3) {
+        instructionSub.textContent = "Find two matching animals in the grid and click them to load the ark!";
+        // Pick 31 unique animals + 1 duplicate pair = 32 tiles total
+        const shuffled = [...BASE_ANIMALS].sort(() => Math.random() - 0.5);
+        const unique31 = shuffled.slice(0, 31);
+        
+        const pairAnimal = unique31[0];
+        const unique30 = unique31.slice(1);
+
+        gridItems = [
+          { ...pairAnimal, instanceId: `${pairAnimal.id}-1` },
+          { ...pairAnimal, instanceId: `${pairAnimal.id}-2` },
+          ...unique30.map((a, idx) => ({ ...a, instanceId: `${a.id}-${idx}` }))
+        ].sort(() => Math.random() - 0.5);
+
+      } else {
+        instructionSub.textContent = "Levels 4 & 5: Spot the subtle difference between male and female pairs!";
+        // Pick 1 dimorphic pair (2 tiles) + 30 unique decoy animals = 32 tiles total
+        const pairIndex = (step - 3) % DIMORPHIC_PAIRS.length;
+        const targetPair = DIMORPHIC_PAIRS[pairIndex];
+        
+        const shuffledDecoys = [...BASE_ANIMALS].sort(() => Math.random() - 0.5).slice(0, 30);
+
+        const maleObj = { ...targetPair.male, instanceId: `${targetPair.male.id}-m` };
+        const femaleObj = { ...targetPair.female, instanceId: `${targetPair.female.id}-f` };
+
+        gridItems = [
+          maleObj,
+          femaleObj,
+          ...shuffledDecoys.map((a, idx) => ({ ...a, instanceId: `${a.id}-${idx}` }))
+        ].sort(() => Math.random() - 0.5);
+      }
+
+      gridItems.forEach((animal) => {
+        const el = document.createElement('div');
+        el.className = 'animal';
+        el.dataset.id = animal.instanceId;
+        if (animal.pairId) el.dataset.pairId = animal.pairId;
+        else el.dataset.kind = animal.id;
+        el.setAttribute('aria-label', animal.name);
+        el.innerHTML = animal.svg;
+        el.addEventListener('click', handleAnimalClick);
+        trayEl.appendChild(el);
+      });
+
+      updateHud();
+    }
+
+    setLevel(0);
+
+    function finish(success, reason){
+      if (over) return;
+      over = true;
+      if (success){
+        showModal('success','All aboard!',['The ark is full of male and female pairs of every kind.', '"Two of each kind — male and female — came to Noah and entered the ark." — Genesis 7:9'],'Sail again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'build_the_ark'}, '*');
+      } else {
+        showModal('timeout','The rain came!',[reason || 'Time’s up.', '"Be still before the Lord and wait patiently." — Psalm 37:7'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+    addEventListener('game-timeout', () => finish(false, 'Time’s up! The rain came before the ark was full.'));
+  </script>
+</body>
+</html>

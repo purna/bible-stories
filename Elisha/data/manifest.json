@@ -1,0 +1,104 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "the_mantle",
+      "name": "Ch.1 · The Mantle",
+      "file": "act1_the_mantle.json",
+      "scene": "the_mantle",
+      "foreground": "fg_the_mantle",
+      "assetFolder": "act_01_the_mantle",
+      "assetStem": "elisha_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "the_jordan",
+      "name": "Ch.2 · The Jordan",
+      "file": "act2_the_jordan.json",
+      "scene": "the_jordan",
+      "foreground": "fg_the_jordan",
+      "assetFolder": "act_02_the_jordan",
+      "assetStem": "elisha_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    },
+    {
+      "id": "the_widow_s_oil",
+      "name": "Ch.3 · The Widow’s Oil",
+      "file": "act3_the_widow_s_oil.json",
+      "scene": "the_widow_s_oil",
+      "foreground": "fg_the_widow_s_oil",
+      "assetFolder": "act_03_the_widow_s_oil",
+      "assetStem": "elisha_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "the_shunammite_room",
+      "name": "Ch.4 · The Shunammite Room",
+      "file": "act4_the_shunammite_room.json",
+      "scene": "the_shunammite_room",
+      "foreground": "fg_the_shunammite_room",
+      "assetFolder": "act_04_the_shunammite_room",
+      "assetStem": "elisha_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+    },
+    {
+      "id": "the_child",
+      "name": "Ch.5 · The Child",
+      "file": "act5_the_child.json",
+      "scene": "the_child",
+      "foreground": "fg_the_child",
+      "assetFolder": "act_05_the_child",
+      "assetStem": "elisha_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+    },
+    {
+      "id": "naaman",
+      "name": "Ch.6 · Naaman",
+      "file": "act6_naaman.json",
+      "scene": "naaman",
+      "foreground": "fg_naaman",
+      "assetFolder": "act_06_naaman",
+      "assetStem": "elisha_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+    },
+    {
+      "id": "the_floating_axe",
+      "name": "Ch.7 · The Floating Axe",
+      "file": "act7_the_floating_axe.json",
+      "scene": "the_floating_axe",
+      "foreground": "fg_the_floating_axe",
+      "assetFolder": "act_07_the_floating_axe",
+      "assetStem": "elisha_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "the_unseen_army",
+      "name": "Ch.8 · The Unseen Army",
+      "file": "act8_the_unseen_army.json",
+      "scene": "the_unseen_army",
+      "foreground": "fg_the_unseen_army",
+      "assetFolder": "act_08_the_unseen_army",
+      "assetStem": "elisha_act8",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+    },
+    {
+      "id": "a_blind_feast",
+      "name": "Ch.9 · A Blind Feast",
+      "file": "act9_a_blind_feast.json",
+      "scene": "a_blind_feast",
+      "foreground": "fg_a_blind_feast",
+      "assetFolder": "act_09_a_blind_feast",
+      "assetStem": "elisha_act9",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)"
+    }
+  ]
+}

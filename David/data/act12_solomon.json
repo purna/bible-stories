@@ -1,0 +1,107 @@
+{
+  "id": "solomon",
+  "name": "Ch.12 · Solomon",
+  "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #0a1408 65%, #040802)",
+  "particle": "dawn",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "solomon_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "David was old and full of days. The kingdom was at peace on every side, and the king gathered the leaders of Israel to his bedside.",
+      "cite": "1 Kings 1:39",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "solomon_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "He had not built a house for the name of the LORD with his own hands. The temple had waited through a lifetime of battles and grief.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "solomon_2",
+      "speaker": "david",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "text": "My son, I have it in my heart to build a house for the name of the LORD my God. Take these plans and build it well.",
+      "cite": "1 Chronicles 28:12",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "solomon_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David gave his son the pattern of the temple, the gold and the silver, the cedar and the bronze. The old king had one last work to hand on.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "solomon_4",
+      "speaker": "solomon",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "text": "Father, I am young and do not know how to go out or come in. Give me a wise and understanding heart to judge Thy people.",
+      "cite": "1 Kings 3:7",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "solomon_5",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "WISDOM IS THE ONLY CROWN THAT STAYS",
+      "text": "You have not asked for riches or long life. You asked for wisdom to rule My people. That is the request of a king after My own heart.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "solomon_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David slept with his fathers and was buried in the city of David. Solomon sat on his throne, and the kingdom was established in his hand.",
+      "cite": "1 Kings 2:12",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "solomon_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The shepherd boy had come through caves and courts, through failure and repentance, to the end of his days. The last thing he gave away was not gold but the plan for a house where the people could meet their God.",
+      "choices": [
+        {
+          "label": "Build the temple and let the name of the LORD be great 🕍",
+          "note": "A king's final work is not his own glory."
+        },
+        {
+          "label": "Hold the plans close and keep the kingdom 🛡️",
+          "note": "Power kept is power, but it dies with the man who holds it."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "solomon",
+  "foreground": "fg_solomon",
+  "index": 11
+}

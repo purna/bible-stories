@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Deborah act 4 The Storm background">
+  <metadata>{&quot;story&quot;:&quot;Deborah&quot;,&quot;act&quot;:4,&quot;chapter&quot;:&quot;The Storm&quot;,&quot;scene&quot;:&quot;A&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;environment&quot;:&quot;sea&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#233c58"/><stop offset="1" stop-color="#7c8fa0"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#3b667b"/><stop offset="1" stop-color="#153747"/></linearGradient></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1510" cy="360" r="86" fill="#d5a35c" opacity=".78"/>
+  <path d="M0 661.4 Q500 616.4 980 654.4 T1920 636.4 V806.4 H0Z" fill="#265268" opacity=".65"/><path d="M0 746.4 Q220 701.4 440 746.4 T880 746.4 T1320 746.4 T1760 746.4 T2200 746.4" fill="none" stroke="#dbe7ea" stroke-width="12" opacity=".3"/>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/>
+  
+  </svg>

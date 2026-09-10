@@ -1,0 +1,95 @@
+{
+  "id": "friends",
+  "name": "Ch.4 · Covenant Friends",
+  "bg": "radial-gradient(circle at 50% 40%, #1a1024, #0a0610 65%, #040208)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "friends_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "David fled to the wilderness, first to Gath and then into the caves of Adullam. Men came to him — the dispossessed, the in debt, the discontented — and he became their leader.",
+      "cite": "1 Samuel 22:2",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "friends_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Saul's son Jonathan, heir to the throne, knew David from the palace. A friendship grew between them that neither could name.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "friends_2",
+      "speaker": "jonathan",
+      "fx": "type",
+      "delay": 800,
+      "align": "right",
+      "text": "My father's spear is in your hand and his robe is on your back. There is nothing between us but silence.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "friends_3",
+      "speaker": "david",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "I am a man under the shadow of your father's wrath. Your friendship is the only roof I have.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "friends_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "They met in secret at the stone of the threshing floor, and Jonathan gave David his robe, his armour, and his sword.",
+      "cite": "1 Samuel 20:42",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "friends_5",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "LOVE IS STRONGER THAN FEAR",
+      "text": "Jonathan chose David over his father and his throne. The covenant between them outlived the palace.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "friends_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The two parted in the dark, each carrying the other's life in his keeping. A spear could not cut what they had bound together.",
+      "choices": [
+        {
+          "label": "Remember this when the throne comes 🤝",
+          "note": "Jonathan's gift is a promise to be kept long after David wears a crown."
+        },
+        {
+          "label": "Put the memory away for now 🌑",
+          "note": "The wilderness is no place for sentiment. Survival comes first."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "friends",
+  "foreground": "fg_friends",
+  "index": 3
+}

@@ -1,0 +1,85 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "warning",
+      "name": "Ch.1 · The Warning",
+      "file": "act1_warning.json",
+      "svg": "ch1_corrupt_world",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 40% 30%, #2e2010, #14100a 65%, #080604)"
+    },
+    {
+      "id": "blueprint",
+      "name": "Ch.2 · The Blueprint",
+      "file": "act2_blueprint.json",
+      "svg": "ch2_blueprint_scroll",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 40%, #2a1e0c, #150e06 65%, #080502)"
+    },
+    {
+      "id": "build",
+      "name": "Ch.3 · The Long Build",
+      "file": "act3_build.json",
+      "svg": "ch3_ark_under_construction",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 35% 50%, #281808, #120c04 65%, #080402)"
+    },
+    {
+      "id": "gathering",
+      "name": "Ch.4 · The Gathering",
+      "file": "act4_gathering.json",
+      "svg": "ch4_animals_arrive",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 60% 30%, #1a2e10, #0d1808 65%, #060a04)"
+    },
+    {
+      "id": "door",
+      "name": "Ch.5 · The Door Shuts",
+      "file": "act5_door.json",
+      "svg": "ch5_dark_clouds",
+      "particle": "storm",
+      "bg": "radial-gradient(circle at 50% 20%, #101828, #060c18 65%, #020408)"
+    },
+    {
+      "id": "flood",
+      "name": "Ch.6 · Forty Days",
+      "file": "act6_flood.json",
+      "svg": "ch6_water_rising",
+      "particle": "flood",
+      "bg": "radial-gradient(circle at 50% 60%, #061430, #020810 65%, #010306)"
+    },
+    {
+      "id": "waiting",
+      "name": "Ch.7 · The Long Wait",
+      "file": "act7_waiting.json",
+      "svg": "ch7_ark_on_ararat",
+      "particle": "flood",
+      "bg": "radial-gradient(circle at 50% 40%, #0c1428, #060a18 65%, #020408)"
+    },
+    {
+      "id": "dryground",
+      "name": "Ch.8 · Dry Ground",
+      "file": "act8_dryground.json",
+      "svg": "ch8_ramp_down",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 40%, #1a3010, #0c1a08 65%, #050a04)"
+    },
+    {
+      "id": "covenant",
+      "name": "Ch.9 · The Altar & the Covenant",
+      "file": "act9_covenant.json",
+      "svg": "ch9_altar",
+      "particle": "rainbow",
+      "bg": "radial-gradient(circle at 50% 50%, #141e2e, #081018 65%, #020508)"
+    },
+    {
+      "id": "vineyard",
+      "name": "Ch.10 · The Vineyard",
+      "file": "act10_vineyard.json",
+      "svg": "ch10_noah_plants",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 30% 70%, #1a0e08, #0c0604 65%, #040202)"
+    }
+  ]
+}

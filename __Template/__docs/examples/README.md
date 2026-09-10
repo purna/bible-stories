@@ -23,6 +23,88 @@ Both game-end events are dispatched on `window`:
 
 Prototypes that load inside an iframe also `postMessage({ type: 'game-complete', game: '<mechanic>' }, '*')` to the parent so a chapter shell can advance.
 
+## Engine type names
+
+Use the engine type identifier in each story game plan and in generated act configuration. The identifier names the reusable interaction model; individual prototypes are size or story-themed variants of that engine.
+
+| Game engine type | Display name | Closest prototype examples | Best fit |
+|---|---|---|---|
+| `find-path` | Find the Faithful Path | `find_path_6x6.html`, `find_path_9x9.html`, `find_path_18x9.html`, `find_path_18x9_adv.html`, `jonah_path.html`, `path_of_moses.html` | Routes, journeys, escapes and guided crossings |
+| `listen-respond` | Listen and Respond | `listen_respond_3x2.html`, `listen_respond_4x2.html` | Hearing, discerning and responding to a cue or message |
+| `tend-garden` | Tend the Garden | `garde_game_3x3.html`, `garde_game_4x3.html`, `garde_game_4x4.html`, `garde_game_5x3.html`, `garde_game_5x4.html`, `garde_game_5x5.html` | Planting, cultivation and removing unwanted growth |
+| `fit-pieces` | Fit the Pieces | `fit_pieces_3x3.html`, `fit_pieces_4x3.html`, `fit_pieces_4x4.html` | Repairing, assembling and placing parts in matching slots |
+| `look-closely` | Look Closely | `look_closely_3x3.html`, `look_closely_4x3.html`, `stones_bread.html`, `sheep_count.html`, `build_the_ark_9x4.html`, `build_the_ark._18x4html.html`, `plagues_tap_adv_5x3.html`, `plagues_tap_adv_7x2.html` | Observation, memory, evidence and careful comparison |
+| `tap-sequence` | Complete the Story Beat | `tap_sequence_3x2.html`, `tap_sequence_4x1.html`, `plagues_tap.html` | Repeating or completing actions in a clear order |
+| `match-it-up` | See the Pattern | `match_it_up_3x4.html`, `match_it_up_4x4.html`, `fruit_spirit.html` | Sorting, pairing, categorising and recognising relationships |
+| `keep-balance` | Keep the Balance | `keep_balance_x3.html`, `keep_balance_x3_v2.html` | Sharing limited resources and keeping several needs stable |
+| `ready-then-act` | Ready, Then Act | `ready_then_act_multibar_balanced.html`, `david_goliath.html`, `daniels_den.html` | Timing a decisive action after waiting for the right moment |
+| `watch-and-move` | Watch and Move | `watch_move_river_crossing_easy.html` | Moving through hazards, patrols or safe openings |
+| `gather-with-care` | Gather with Care | `manna_drop.html`, `good_samaritan.html` | Collecting, carrying, preparing or helping without taking excess |
+| `story-builder` | Build the Scene | `temple_builder.html`, `temple_builder_v1.html`, `tower_babel.html` | Constructing a story object where the build itself is the main action |
+
+| Game engine type | Display name | Best fit |
+|---|---|---|
+| `find-path` | Find the Faithful Path | Routes, journeys, escapes and guided crossings |
+| `listen-respond` | Listen and Respond | Hearing, discerning and responding to a cue or message |
+| `tend-garden` | Tend the Garden | Planting, cultivation and removing unwanted growth |
+| `fit-pieces` | Fit the Pieces | Repairing, assembling and placing parts in matching slots |
+| `look-closely` | Look Closely | Observation, memory, evidence and careful comparison |
+| `tap-sequence` | Complete the Story Beat | Repeating or completing actions in a clear order |
+| `match-it-up` | See the Pattern | Sorting, pairing, categorising and recognising relationships |
+| `keep-balance` | Keep the Balance | Sharing limited resources and keeping several needs stable |
+| `ready-then-act` | Ready, Then Act | Timing a decisive action after waiting for the right moment |
+| `watch-and-move` | Watch and Move | Moving through hazards, patrols or safe openings |
+| `gather-with-care` | Gather with Care | Collecting, carrying, preparing or helping without taking excess |
+| `story-builder` | Build the Scene | Constructing a story object where the build itself is the main action |
+
+## All example games
+
+This is the complete prototype inventory. Every HTML game in this folder appears exactly once.
+
+| Example game | Game engine type | Variant / intended use |
+|---|---|---|
+| [`find_path_6x6.html`](./find_path_6x6.html) | `find-path` | Compact 6×6 route board |
+| [`find_path_9x9.html`](./find_path_9x9.html) | `find-path` | Medium 9×9 route board |
+| [`find_path_18x9.html`](./find_path_18x9.html) | `find-path` | Large 18×9 route board |
+| [`find_path_18x9_adv.html`](./find_path_18x9_adv.html) | `find-path` | Advanced large route board |
+| [`jonah_path.html`](./jonah_path.html) | `find-path` | Jonah-themed journey variant |
+| [`path_of_moses.html`](./path_of_moses.html) | `find-path` | Moses-themed journey variant |
+| [`listen_respond_3x2.html`](./listen_respond_3x2.html) | `listen-respond` | Six-signal listening board |
+| [`listen_respond_4x2.html`](./listen_respond_4x2.html) | `listen-respond` | Eight-signal listening board |
+| [`garde_game_3x3.html`](./garde_game_3x3.html) | `tend-garden` | Compact garden plot |
+| [`garde_game_4x3.html`](./garde_game_4x3.html) | `tend-garden` | Twelve-tile garden plot |
+| [`garde_game_4x4.html`](./garde_game_4x4.html) | `tend-garden` | Sixteen-tile garden plot |
+| [`garde_game_5x3.html`](./garde_game_5x3.html) | `tend-garden` | Wide garden plot |
+| [`garde_game_5x4.html`](./garde_game_5x4.html) | `tend-garden` | Large garden plot |
+| [`garde_game_5x5.html`](./garde_game_5x5.html) | `tend-garden` | Largest garden plot |
+| [`fit_pieces_3x3.html`](./fit_pieces_3x3.html) | `fit-pieces` | Compact fitting board |
+| [`fit_pieces_4x3.html`](./fit_pieces_4x3.html) | `fit-pieces` | Twelve-slot fitting board |
+| [`fit_pieces_4x4.html`](./fit_pieces_4x4.html) | `fit-pieces` | Sixteen-slot fitting board |
+| [`look_closely_3x3.html`](./look_closely_3x3.html) | `look-closely` | Compact observation board |
+| [`look_closely_4x3.html`](./look_closely_4x3.html) | `look-closely` | Twelve-card observation board |
+| [`stones_bread.html`](./stones_bread.html) | `look-closely` | Temptation-themed observation variant |
+| [`sheep_count.html`](./sheep_count.html) | `look-closely` | Counting and observation variant |
+| [`build_the_ark_9x4.html`](./build_the_ark_9x4.html) | `look-closely` | Compact ark-building board |
+| [`build_the_ark._18x4html.html`](./build_the_ark._18x4html.html) | `look-closely` | Large ark-building board |
+| [`plagues_tap_adv_5x3.html`](./plagues_tap_adv_5x3.html) | `look-closely` | Fifteen-tile plague memory variant |
+| [`plagues_tap_adv_7x2.html`](./plagues_tap_adv_7x2.html) | `look-closely` | Fourteen-tile plague memory variant |
+| [`tap_sequence_3x2.html`](./tap_sequence_3x2.html) | `tap-sequence` | Six-object sequence board |
+| [`tap_sequence_4x1.html`](./tap_sequence_4x1.html) | `tap-sequence` | Four-object sequence strip |
+| [`plagues_tap.html`](./plagues_tap.html) | `tap-sequence` | Plagues-themed sequence variant |
+| [`match_it_up_3x4.html`](./match_it_up_3x4.html) | `match-it-up` | Three-category matching board |
+| [`match_it_up_4x4.html`](./match_it_up_4x4.html) | `match-it-up` | Four-category matching board |
+| [`fruit_spirit.html`](./fruit_spirit.html) | `match-it-up` | Fruit-themed matching variant |
+| [`keep_balance_x3.html`](./keep_balance_x3.html) | `keep-balance` | Three-resource balance board |
+| [`keep_balance_x3_v2.html`](./keep_balance_x3_v2.html) | `keep-balance` | Revised three-resource balance board |
+| [`ready_then_act_multibar_balanced.html`](./ready_then_act_multibar_balanced.html) | `ready-then-act` | Multi-bar timing challenge |
+| [`david_goliath.html`](./david_goliath.html) | `ready-then-act` | Sling-timing story variant |
+| [`daniels_den.html`](./daniels_den.html) | `ready-then-act` | Daniel-themed hazard variant |
+| [`watch_move_river_crossing_easy.html`](./watch_move_river_crossing_easy.html) | `watch-and-move` | Accessible river-crossing variant |
+| [`manna_drop.html`](./manna_drop.html) | `gather-with-care` | Falling-object collection variant |
+| [`good_samaritan.html`](./good_samaritan.html) | `gather-with-care` | Helping and care variant |
+| [`temple_builder.html`](./temple_builder.html) | `story-builder` | Detailed temple-building variant |
+| [`temple_builder_v1.html`](./temple_builder_v1.html) | `story-builder` | Earlier temple-building variant |
+| [`tower_babel.html`](./tower_babel.html) | `story-builder` | Tower-building story variant |
 ## Mechanics
 
 Sizes shown are the prototypes available in this folder. Pick the closest fit to your story's board complexity and theming.

@@ -1,0 +1,105 @@
+{
+  "id": "throne",
+  "name": "Ch.7 · The Throne",
+  "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #120a04 65%, #060402)",
+  "particle": "ember",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "throne_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "After the death of Saul and Jonathan on Mount Gilboa, David was anointed king over the house of Judah at Hebron. Years later the tribes gathered and made him king over all Israel.",
+      "cite": "2 Samuel 5:3",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "throne_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The city of Jerusalem was taken from the Jebusites and made David's stronghold. From that hill he ruled a kingdom that stretched from the river to the sea.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "throne_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The people came with petitions: a boundary dispute, a marriage question, a complaint about a neighbour's flock. The king sat on his throne and the decisions fell to him.",
+      "cite": "2 Samuel 8:15",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "throne_3",
+      "speaker": "michal",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "text": "You rule from morning until night. There is no rest for you, and no one to share the burden.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "throne_4",
+      "speaker": "david",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "text": "A king who cannot hear his people is a king who cannot rule. The weight is mine to carry.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "throne_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David judged without favouritism. A rich man's son received no more than a poor man's, and the weak found a voice in the palace that had once been a cave.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "throne_6",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "JUSTICE IS THE THRONE'S FOUNDATION",
+      "text": "A kingdom built on partiality falls quickly. The king who hears the small and the weak builds on rock.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "throne_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The people left the palace quieter than they had entered. They carried home the sense that their king had listened.",
+      "choices": [
+        {
+          "label": "Keep the throne open to the small 🏛️",
+          "note": "A ruler's first duty is to be reachable."
+        },
+        {
+          "label": "Let the court manage the crowd 👑",
+          "note": "Protocol keeps order, but it also builds distance."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "throne",
+  "foreground": "fg_throne",
+  "index": 6
+}

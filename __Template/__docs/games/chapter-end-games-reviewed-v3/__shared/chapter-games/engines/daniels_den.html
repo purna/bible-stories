@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Daniel’s Den — Sky Animation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="_shared/timer.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    :root {
+      --ink: #3a2410;
+      --good: #2e7d32;
+      --bad: #c62828;
+      --accent: #ffd84d;
+      --bg: #fffaf0;
+    }
+
+    body {
+      --animation-speed: 24s;
+      font-family: 'Comic Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    body.pause {
+      --animation-speed: 0s;
+    }
+
+    .wrap {
+      width: 960px;
+      height: 540px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      transform: scale(var(--game-scale, 1));
+      transform-origin: center;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 0 4px;
+    }
+
+    .sub {
+      text-align: center;
+      font-size: .85rem;
+      opacity: .8;
+      margin-bottom: 6px;
+    }
+
+    .hud {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 6px;
+      font-size: .9rem;
+      font-weight: 800;
+    }
+
+    .chip {
+      background: #fff;
+      border: 2px solid var(--ink);
+      border-radius: 10px;
+      padding: 4px 10px;
+    }
+
+    .chip.warn {
+      background: #ffe5b4;
+      border-color: #a85b00;
+    }
+
+    .faith-chip {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff;
+      border: 2px solid var(--ink);
+      border-radius: 10px;
+      padding: 4px 10px;
+    }
+
+    .faith-bar-container {
+      width: 90px;
+      height: 12px;
+      background: #e0e0e0;
+      border: 1.5px solid var(--ink);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .faith-bar-fill {
+      width: 20%;
+      height: 100%;
+      background: linear-gradient(90deg, #ffd84d 0%, #4caf50 100%);
+      transition: width 0.3s ease-out;
+    }
+
+    .stage {
+      flex: 1;
+      position: relative;
+      width: 100%;
+      background: linear-gradient(180deg, #3a2a1a 0%, #1a1108 100%);
+      border: 4px solid var(--ink);
+      border-radius: 18px;
+      box-shadow: 0 6px 0 #1a1108;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .den {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* --- SKY WINDOW PORTAL WIDGET --- */
+    .sky-window {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid var(--ink);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      z-index: 5;
+    }
+
+    /* Sky Phases Animation */
+    @keyframes sunrise {
+      from { transform: rotate(-45deg); }
+      to { transform: rotate(315deg); }
+    }
+
+    @keyframes dawn {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      60% { opacity: 0; }
+    }
+
+    @keyframes noon {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      75% { opacity: 0; }
+    }
+
+    @keyframes dusk {
+      0% { opacity: 0; }
+      50% { opacity: 0; }
+      70% { opacity: 1; }
+      90% { opacity: 0; }
+    }
+
+    @keyframes midnight {
+      0% { opacity: 1; }
+      25% { opacity: 0; }
+      50% { opacity: 0; }
+      80% { opacity: 1; }
+    }
+
+    .sky__phase {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transition: opacity 0.2s;
+    }
+
+    .sky__dawn {
+      background: linear-gradient(0deg, rgba(254, 215, 102, 1) 0%, rgba(205, 237, 246, 1) 100%);
+      animation: linear dawn infinite var(--animation-speed);
+    }
+
+    .sky__noon {
+      background: linear-gradient(0deg, rgba(205, 237, 246, 1) 0%, rgba(36, 123, 160, 1) 100%);
+      animation: linear noon infinite var(--animation-speed);
+    }
+
+    .sky__dusk {
+      background: linear-gradient(0deg, rgba(255, 32, 110, 1) 0%, rgba(10, 0, 94, 1) 100%);
+      animation: linear dusk infinite var(--animation-speed);
+    }
+
+    .sky__midnight {
+      background: linear-gradient(0deg, rgba(2, 0, 20, 1) 0%, rgba(10, 0, 94, 1) 100%);
+      animation: linear midnight infinite var(--animation-speed);
+    }
+
+    /* Scaled Orbit & Celestial Bodies */
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      margin-top: -30px;
+      margin-left: -30px;
+      transform: rotate(-45deg);
+      animation: linear sunrise infinite var(--animation-speed);
+      z-index: 2;
+    }
+
+    .sun {
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      width: 16px;
+      height: 16px;
+      background-color: rgb(254, 215, 102);
+      border-radius: 50%;
+      box-shadow: 0 0 6px 3px rgba(254, 215, 102, 0.5);
+    }
+
+    .moon {
+      position: absolute;
+      bottom: -6px;
+      right: -6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.4);
+    }
+
+    #sky__stars > div {
+      width: 2px;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    /* Desert Foreground Overlay */
+    .sky-window .ground {
+      width: 110px;
+      height: 28px;
+      background-color: rgb(251, 222, 5);
+      position: absolute;
+      bottom: 0;
+      z-index: 4;
+    }
+
+    .sky-window .pyramid {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-55%);
+      border: 32px solid rgb(251, 245, 229);
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      z-index: 5;
+    }
+
+    .sky-window .pyramid::after {
+      content: '';
+      position: absolute;
+      border: 16px solid rgb(247, 224, 164);
+      border-right-color: transparent;
+      border-top-color: transparent;
+      transform: skew(15deg) translateX(4px);
+    }
+
+    /* Toggle Button */
+    #toggle-animation {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: rgb(2, 0, 20);
+      color: #fff;
+      border: 2px solid var(--ink);
+      border-radius: 6px;
+      padding: 0.4em 0.8em;
+      font-family: inherit;
+      font-size: 0.75rem;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 20;
+    }
+
+    #toggle-animation:hover {
+      background-color: rgb(61, 0, 21);
+    }
+
+    .paused { display: none; }
+    .pause .paused { display: block; }
+    .pause .playing { display: none; }
+
+    /* Den Layout Elements */
+    .den .floor {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 50px;
+      background: #3a2a1a;
+      border-top: 3px solid var(--ink);
+    }
+
+    .den .stalactite {
+      position: absolute;
+      top: 0;
+      width: 0; height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 18px solid #1a1108;
+    }
+
+    .daniel {
+      position: absolute;
+      left: 50%;
+      bottom: 55px;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      transition: transform .2s;
+    }
+
+    .daniel .shadow {
+      position: absolute;
+      bottom: -6px;
+      width: 120px;
+      height: 14px;
+      background: rgba(0, 0, 0, .4);
+      border-radius: 50%;
+    }
+
+    .daniel .body { position: relative; width: 80px; height: 140px; }
+
+    .daniel .head {
+      position: absolute;
+      left: 50%; top: 0;
+      transform: translateX(-50%);
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: #f8d8b0;
+      border: 3px solid var(--ink);
+    }
+
+    .daniel .hair {
+      position: absolute;
+      left: 50%; top: -2px;
+      transform: translateX(-50%);
+      width: 38px; height: 14px;
+      background: #3a2410;
+      border: 3px solid var(--ink);
+      border-radius: 8px 8px 0 0;
+    }
+
+    .daniel .robe {
+      position: absolute;
+      left: 50%; top: 32px;
+      transform: translateX(-50%);
+      width: 60px; height: 90px;
+      background: #7e57c2;
+      border: 3px solid var(--ink);
+      border-radius: 6px 6px 30px 30px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+    }
+
+    .daniel .arms-pray {
+      position: absolute;
+      left: 50%; top: 48px;
+      transform: translateX(-50%);
+      width: 50px; height: 50px;
+    }
+
+    .daniel .arms-pray::before, .daniel .arms-pray::after {
+      content: "";
+      position: absolute;
+      width: 14px; height: 42px;
+      background: #f8d8b0;
+      border: 3px solid var(--ink);
+      border-radius: 8px;
+      top: 0;
+    }
+
+    .daniel .arms-pray::before { left: 0; transform: rotate(28deg); }
+    .daniel .arms-pray::after { right: 0; transform: rotate(-28deg); }
+
+    .daniel .arms-open {
+      position: absolute;
+      left: 50%; top: 60px;
+      transform: translateX(-50%);
+      width: 80px; height: 18px;
+    }
+
+    .daniel .arms-open::before, .daniel .arms-open::after {
+      content: "";
+      position: absolute;
+      width: 30px; height: 10px;
+      background: #f8d8b0;
+      border: 3px solid var(--ink);
+      border-radius: 6px;
+      top: 0;
+    }
+
+    .daniel .arms-open::before { left: 0; transform: rotate(-10deg); }
+    .daniel .arms-open::after { right: 0; transform: rotate(10deg); }
+
+    .daniel .mouth-pray {
+      position: absolute;
+      left: 50%; top: 18px;
+      transform: translateX(-50%);
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #3a2410;
+    }
+
+    .daniel .mouth-cry {
+      position: absolute;
+      left: 50%; top: 18px;
+      transform: translateX(-50%);
+      width: 10px; height: 6px;
+      border-radius: 0 0 10px 10px;
+      background: #3a2410;
+    }
+
+    .daniel .eyes-pray {
+      position: absolute;
+      left: 50%; top: 10px;
+      transform: translateX(-50%);
+      width: 18px; height: 4px;
+    }
+
+    .daniel .eyes-pray::before, .daniel .eyes-pray::after {
+      content: "";
+      position: absolute;
+      width: 5px; height: 2px;
+      background: #3a2410;
+      border-radius: 1px;
+      top: 0;
+    }
+
+    .daniel .eyes-pray::before { left: 0; }
+    .daniel .eyes-pray::after { right: 0; }
+
+    .daniel .eyes-fear {
+      position: absolute;
+      left: 50%; top: 10px;
+      transform: translateX(-50%);
+      width: 18px; height: 8px;
+    }
+
+    .daniel .eyes-fear::before, .daniel .eyes-fear::after {
+      content: "";
+      position: absolute;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1.5px solid #3a2410;
+      top: 0;
+    }
+
+    .daniel .eyes-fear::before { left: 0; }
+    .daniel .eyes-fear::after { right: 0; }
+
+    .daniel.praying .arms-open { display: none; }
+    .daniel.praying .arms-pray { display: block; }
+    .daniel.praying .mouth-cry { display: none; }
+    .daniel.praying .mouth-pray { display: block; }
+    .daniel.praying .eyes-fear { display: none; }
+    .daniel.praying .eyes-pray { display: block; }
+
+    .daniel:not(.praying) .arms-open { display: block; }
+    .daniel:not(.praying) .arms-pray { display: none; }
+    .daniel:not(.praying) .mouth-pray { display: none; }
+    .daniel:not(.praying) .mouth-cry { display: block; }
+    .daniel:not(.praying) .eyes-pray { display: none; }
+    .daniel:not(.praying) .eyes-fear { display: block; }
+
+    .daniel.shake { animation: shake .35s; }
+    .daniel.scared { transform: translateX(-50%) scale(1.05); }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(-50%) translateX(0); }
+      25% { transform: translateX(-50%) translateX(-10px); }
+      75% { transform: translateX(-50%) translateX(10px); }
+    }
+
+    .halo {
+      position: absolute;
+      left: 50%;
+      bottom: 160px;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      border: 3px dashed rgba(255, 216, 77, .8);
+      transform: translateX(-50%) scale(0);
+      opacity: 0;
+      transition: transform .3s, opacity .3s;
+    }
+
+    .daniel.praying .halo {
+      transform: translateX(-50%) scale(1.2);
+      opacity: 1;
+      animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: translateX(-50%) scale(1.2) rotate(0); }
+      100% { transform: translateX(-50%) scale(1.2) rotate(360deg); }
+    }
+
+    .lions { position: absolute; inset: 0; z-index: 10; }
+
+    .lion {
+      position: absolute;
+      width: 65px; height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: peep .3s ease-out;
+      cursor: pointer;
+      filter: drop-shadow(0px 3px 2px rgba(0,0,0,0.5));
+    }
+
+    .lion svg { width: 100%; height: 100%; }
+    .lion.pounce { animation: pounce .5s ease-out; }
+
+    @keyframes peep {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes pounce {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+
+    .hud-tap {
+      text-align: center;
+      margin-top: 6px;
+      font-size: .95rem;
+      font-weight: 800;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Daniel’s Den</h1>
+    <div class="sub">Click on the lions as they appear to tame them!</div>
+    <div class="hud">
+      <div class="chip" id="stateChip">Status: Standing</div>
+      <div class="faith-chip">
+        <span>Faith:</span>
+        <div class="faith-bar-container">
+          <div class="faith-bar-fill" id="faithFill"></div>
+        </div>
+      </div>
+      <div class="chip warn" id="lifeChip">Lives: 5</div>
+      <div class="chip" id="lionsChip">Lions seen: 0</div>
+    </div>
+    <div class="stage">
+      <div class="den" id="den">
+        
+        <!-- Sky Portal Widget -->
+        <div class="sky-window">
+          <div class="sky__phase sky__dawn"></div>
+          <div class="sky__phase sky__noon"></div>
+          <div class="sky__phase sky__dusk"></div>
+          <div class="sky__phase sky__midnight">
+            <div id="sky__stars"></div>
+          </div>
+          <div class="orbit">
+            <div class="sun"></div>
+            <div class="moon"></div>
+          </div>
+          <div class="pyramid"></div>
+          <div class="ground"></div>
+        </div>
+
+        <button id="toggle-animation">
+          <span class="playing">Pause Sky</span>
+          <span class="paused">Play Sky</span>
+        </button>
+
+        <div class="stalactite" style="left:16%"></div>
+        <div class="stalactite" style="left:28%"></div>
+        <div class="stalactite" style="left:42%"></div>
+        <div class="stalactite" style="left:58%"></div>
+        <div class="stalactite" style="left:72%"></div>
+        <div class="stalactite" style="left:86%"></div>
+        <div class="lions" id="lions"></div>
+        <div class="daniel" id="daniel">
+          <div class="halo"></div>
+          <div class="body">
+            <div class="hair"></div>
+            <div class="head">
+              <div class="eyes-pray"></div>
+              <div class="eyes-fear"></div>
+              <div class="mouth-pray"></div>
+              <div class="mouth-cry"></div>
+            </div>
+            <div class="robe"></div>
+            <div class="arms-pray"></div>
+            <div class="arms-open"></div>
+          </div>
+          <div class="shadow"></div>
+        </div>
+        <div class="floor"></div>
+      </div>
+    </div>
+    <div class="hud-tap" id="tapHint">Tame the lions before they pounce!</div>
+  </div>
+
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 60, timer: true };
+
+    function fitGameToViewport() {
+      document.documentElement.style.setProperty('--game-scale', Math.min(innerWidth / 960, innerHeight / 540));
+    }
+    addEventListener('resize', fitGameToViewport);
+    fitGameToViewport();
+
+    // Star Generator & Pause Controller
+    const stars = 20;
+    const skyStars = document.getElementById("sky__stars");
+    const toggleAnimation = document.getElementById("toggle-animation");
+
+    function createStars() {
+      for (let i = 0; i < stars; i++) {
+        let x = Math.floor(Math.random() * 100 + 1);
+        let y = Math.floor(Math.random() * 100 + 1);
+        const starPoint = document.createElement("div");
+        starPoint.style.left = `${x}%`;
+        starPoint.style.top = `${y}%`;
+        skyStars.appendChild(starPoint);
+      }
+    }
+
+    function playAnimation() {
+      document.body.classList.toggle("pause");
+    }
+
+    createStars();
+    toggleAnimation.addEventListener("click", playAnimation);
+
+    // Game Logic
+    const LION_SVG = '<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.14 95.83"><defs><style>.cls-1{fill-rule:evenodd;fill:#ffd84d;}</style></defs><path class="cls-1" d="M47.22,37.38c-.36.02.15-2.67.62-3.1,1.09-.34.58.16,1.59-.05-.39-.91.47-.29,2.23.09-.29,1.71-1.29,1.21-3.29,1.05-.07,0,.28.82.22.84-.25.78-.78.98-1.37,1.17ZM27.97,35.11c.36.02.96-.46.49-.89-1.09-.34.17.77-.84.57.24-1.56-2.2-1.16-3.56-1.57.29,1.74,2.13,3.58,4.16,3.39.4-.22-.27-1.5-.26-1.5ZM38.07,83.16c-2.71,0-1.22-4.49-3.82-5.25,1.13,2.79,2.59,6.61,3.82,9.15,1.23-2.54,1.99-5.75,3.12-8.54-.34,3.21-.41,4.63-3.12,4.63ZM37.29,95.83c-3.05-4.97-10.06-15.43-16.74-12.87-7.22-.76-11.44-12.79-12.78-10.23-4.05-1.31-3.13-5.42-4.4-7.81-2.73,6-1.05-11.67-1.42-12.78-4.49-13.71,2.91-24.08,2.57-25.52-3.16-4.11-2.68-11.3,6.28-14.83-1.02-3.35,4.79-8.94,11.16-9.64-.04-.69-1.15-.58-2.27-1.14,6.59-1.5,12.71-1.59,18.37,1.68C43.72-.59,49.69-.07,56.28,1.43c-1.12.57-2.06,0-2.1.7,6.37.7,12.86,5.51,11.85,8.86,8.96,3.53,8.02,11.06,4.85,15.17-.34,1.44,8.19,12.4,3.7,26.11-.37,1.12.3,19.36-2.44,13.36-1.27,2.39.08,6.68-3.97,7.99-1.34-2.56-5.34,8.52-12.57,9.29-6.69-2.56-14.29,7.62-17.34,12.59-.26.37-.96.35-.96.35ZM38.83,26.99c-.04.09-15.09-10.19-19.48-.76-6.58,18.44,1.44,17.26,3.5,22.16,1.42-.22.61-.1,1.78-.87-.66,3.11-1.19,4.33-.89,6.14.98.95,5.49,1.79,6.91,1.93-2.11.37-4.86-1.46-6.26-2.04.06.71.77,1.56.92,1.98,1.1.25,2.92,1.07,5.73.9-1.38.64-4,.86-5.02.5,1.18,6.15,7.4,3.28,10.93,1.17.98-7.02-7.84-5.87-6.96-9.21.64-2.69,6.41-.58,8.07-.58s6.14-1.79,6.78.9c.88,3.34-6.82,1.95-5.84,8.97,3.52,2.11,10.89,4.92,12.07-1.23-1.02.36-4.76-.33-6.14-.97,2.81.16,5.59,1.34,6.7,1.09.16-.42-.05-1.86,0-2.57-1.4.58-3.17.27-5.28-.1,1.42-.14,5.03.21,6.02-.75.31-1.81-.43-3.07-1.1-6.18,1.17.77.64.74,2.06.96,2.06-4.9,9.37-3.51,2.79-21.95-4.39-9.43-18.1.15-18.12.1.39.23.81.4.81.41ZM30.17,64.89c0,1.92-.44,4.95,1.74,3.51,1.12,1.77,2.56,3.46,4.5.87,1.98,3.79,1.59,4.61,3.57.83,1.95,2.59,3.12,0,4.24-1.77,2.18,1.45,2.22-1.25,2.23-3.17-3.46-3.67-14.34-4.35-17.8-.69-.26.37,1.52.42,1.52.42ZM32.81,83.31c-4.56-3.45-10.13-9.82-12.06-18.52-3.79,7.13,5.62,15.69,12.06,18.52ZM15.38,73.19c-2.12-6.52,3.17-15.01,4.59-22.85-6.01,2.76-7.78,18.23-4.59,22.85ZM14.23,37.02c-4.83,4.07-10.7,17.26-6.54,25.62-1.4-12.09,5.37-15.87,6.54-25.62ZM4.81,43.62c2.86-5.73,10.19-15.91,14.01-19.66-4.61,2.94-13.48,11.01-14.01,19.66ZM25.2,19.21c-15.63-11.63-18.55,6.88-12.31,6.22-4.36-10.32,8.15-8.1,12.31-6.22ZM35.42,18.32c1.66-7.56.22-14.46-6.46-15.28,1.5,1.12,2.98,4.04,2.75,6.61-2.78-1.88-10.24-3.94-15.54.32,9.94,3.71,17.21,5.25,19.54,8.8.18.42-.28-.46-.28-.46ZM31.17,34.82c2.01.31-.86,6.42-1.34,9.88-1.22-2.84.69-4.37-.17-6.81-4.8,1.25-4.73-.71-5.63-2.54-.92-1.98-3.69-.73-3.12-2.94,4.06.79,6.91-2.57,9.83.84.59-1.27.61-1.48.72-3.57.79,2.87,1.87,4.6.17,6.78-.35.29-.47-1.64-.46-1.64ZM42.76,85.04c4.56-3.45,11.09-10.13,13.02-18.83,3.79,7.13-6.58,15.99-13.02,18.83ZM59.17,74.09c2.12-6.52,3.09-12.05,1.66-19.89,6.01,2.76,1.52,15.27-1.66,19.89ZM61.54,38.98c4.83,4.07,12.25,14.43,8.1,22.79,1.4-12.09-6.92-13.04-8.1-22.79ZM72.75,44.77c-2.86-5.73-7.54-12.91-11.36-16.66,4.61,2.94,10.83,8.02,11.36,16.66ZM53.8,17.73c15.63-11.63,17.15,8.12,10.91,7.45,4.36-10.32-6.74-9.34-10.91-7.45ZM38.94,18.71c-1.66-7.56,1.47-13.38,8.16-14.19-1.5,1.12-2.91,2.66-2.68,5.23,2.78-1.88,8.97-5.25,14.28-1-11.74-.13-17.05,5.78-19.37,9.33-.3.35-.39.63-.39.63ZM45.25,36.62c-2.01.31.07,6.01.55,9.47,1.22-2.84-.16-5.67.7-8.11,4.8,1.25,6.36-.01,7.26-1.84.92-1.98,2.44-2.79,1.86-5-4.06.79-6.78-.44-9.69,2.97-.59-1.27-2.1-3.46-2.21-5.55-.79,2.87.5,4.5,2.2,6.67.24.39-.66,1.39-.66,1.39Z"/></svg>';
+    const SUN_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+    const HOURGLASS_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+
+    const daniel = document.getElementById('daniel'), lionsLayer = document.getElementById('lions');
+    const stateChip = document.getElementById('stateChip'), lifeChip = document.getElementById('lifeChip'), lionsChip = document.getElementById('lionsChip'), faithFill = document.getElementById('faithFill');
+    const modal = document.getElementById('modal'), modalCard = document.getElementById('modalCard'), modalIcon = document.getElementById('modalIcon'), modalTitle = document.getElementById('modalTitle'), modalText = document.getElementById('modalText'), modalBtn = document.getElementById('modalBtn');
+
+    function showModal(kind, title, lines, btnLabel) {
+      modalCard.classList.remove('success', 'timeout');
+      if (kind === 'success') modalCard.classList.add('success');
+      if (kind === 'timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind === 'success' ? SUN_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    let lives = 5, lionsSeen = 0, faith = 20, over = false, nextTimer = null;
+
+    function updateFaith(amount) {
+      faith = Math.max(0, Math.min(100, faith + amount));
+      faithFill.style.width = faith + '%';
+      if (faith >= 100 && !over) {
+        finish(true);
+      }
+    }
+
+    setInterval(() => {
+      if (!over && faith > 0) {
+        updateFaith(-0.5);
+      }
+    }, 1000);
+
+    function setDanielPraying(isPraying) {
+      if (isPraying) {
+        daniel.classList.add('praying');
+        stateChip.textContent = 'Status: Praying';
+      } else {
+        daniel.classList.remove('praying');
+        stateChip.textContent = 'Status: Standing';
+      }
+    }
+
+    function spawnLion() {
+      if (over) return;
+
+      const lion = document.createElement('div');
+      lion.className = 'lion';
+      lion.innerHTML = LION_SVG;
+
+      let rx = 10 + Math.random() * 70;
+      if (rx > 38 && rx < 62) {
+        rx = rx < 50 ? 32 : 68;
+      }
+      const ry = 15 + Math.random() * 45;
+
+      lion.style.left = rx + '%';
+      lion.style.top = ry + '%';
+
+      lionsLayer.appendChild(lion);
+      lionsSeen++;
+      lionsChip.textContent = `Lions seen: ${lionsSeen}`;
+
+      let clicked = false;
+
+      const tameLion = (e) => {
+        if (e) e.stopPropagation();
+        if (clicked || over) return;
+        clicked = true;
+
+        updateFaith(15);
+        setDanielPraying(true);
+        setTimeout(() => setDanielPraying(false), 500);
+
+        lion.remove();
+        scheduleNext();
+      };
+
+      lion.addEventListener('click', tameLion);
+      lion.addEventListener('touchstart', (e) => { e.preventDefault(); tameLion(e); }, { passive: false });
+
+      const attackDelay = 1400;
+      setTimeout(() => {
+        if (over || clicked) return;
+
+        lion.classList.add('pounce');
+        daniel.classList.add('shake', 'scared');
+        updateFaith(-10);
+        loseLife('Daniel was caught off-guard!');
+
+        setTimeout(() => {
+          daniel.classList.remove('shake', 'scared');
+          lion.remove();
+          if (!over) scheduleNext();
+        }, 400);
+      }, attackDelay);
+    }
+
+    function loseLife(reason) {
+      lives--;
+      lifeChip.textContent = `Lives: ${lives}`;
+      if (lives <= 0) {
+        finish(false, reason);
+      }
+    }
+
+    function scheduleNext() {
+      if (over) return;
+      if (nextTimer) clearTimeout(nextTimer);
+      const delay = 800 + Math.random() * 1000;
+      nextTimer = setTimeout(spawnLion, delay);
+    }
+
+    function finish(success, reason) {
+      if (over) return;
+      over = true;
+      if (nextTimer) clearTimeout(nextTimer);
+      if (success) {
+        showModal('success', 'The lions were tamed!', ['God shut the lions’ mouths.', '"My God sent his angel, and he shut the mouths of the lions." — Daniel 6:22'], 'Try again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({ type: 'game-complete', game: 'daniels_den' }, '*');
+      } else {
+        showModal('timeout', 'Daniel was caught!', [reason || 'Too many scares.', '"The Lord is my light and my salvation — whom shall I fear?" — Psalm 27:1'], 'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    addEventListener('game-timeout', () => { if (!over) finish(true); });
+    setDanielPraying(false);
+    scheduleNext();
+  </script>
+</body>
+
+</html>

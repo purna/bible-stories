@@ -1,0 +1,115 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "the_banquet",
+      "name": "Ch.1 · The Banquet",
+      "file": "act1_the_banquet.json",
+      "scene": "the_banquet",
+      "foreground": "fg_the_banquet",
+      "assetFolder": "act_01_the_banquet",
+      "assetStem": "esther_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "a_new_queen",
+      "name": "Ch.2 · A New Queen",
+      "file": "act2_a_new_queen.json",
+      "scene": "a_new_queen",
+      "foreground": "fg_a_new_queen",
+      "assetFolder": "act_02_a_new_queen",
+      "assetStem": "esther_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+    },
+    {
+      "id": "the_gate_plot",
+      "name": "Ch.3 · The Gate Plot",
+      "file": "act3_the_gate_plot.json",
+      "scene": "the_gate_plot",
+      "foreground": "fg_the_gate_plot",
+      "assetFolder": "act_03_the_gate_plot",
+      "assetStem": "esther_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)"
+    },
+    {
+      "id": "haman_s_decree",
+      "name": "Ch.4 · Haman’s Decree",
+      "file": "act4_haman_s_decree.json",
+      "scene": "haman_s_decree",
+      "foreground": "fg_haman_s_decree",
+      "assetFolder": "act_04_haman_s_decree",
+      "assetStem": "esther_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1420, #060402 65%)"
+    },
+    {
+      "id": "for_such_a_time",
+      "name": "Ch.5 · For Such a Time",
+      "file": "act5_for_such_a_time.json",
+      "scene": "for_such_a_time",
+      "foreground": "fg_for_such_a_time",
+      "assetFolder": "act_05_for_such_a_time",
+      "assetStem": "esther_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+    },
+    {
+      "id": "the_first_banquet",
+      "name": "Ch.6 · The First Banquet",
+      "file": "act6_the_first_banquet.json",
+      "scene": "the_first_banquet",
+      "foreground": "fg_the_first_banquet",
+      "assetFolder": "act_06_the_first_banquet",
+      "assetStem": "esther_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "the_sleepless_night",
+      "name": "Ch.7 · The Sleepless Night",
+      "file": "act7_the_sleepless_night.json",
+      "scene": "the_sleepless_night",
+      "foreground": "fg_the_sleepless_night",
+      "assetFolder": "act_07_the_sleepless_night",
+      "assetStem": "esther_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+    },
+    {
+      "id": "the_second_banquet",
+      "name": "Ch.8 · The Second Banquet",
+      "file": "act8_the_second_banquet.json",
+      "scene": "the_second_banquet",
+      "foreground": "fg_the_second_banquet",
+      "assetFolder": "act_08_the_second_banquet",
+      "assetStem": "esther_act8",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+    },
+    {
+      "id": "a_new_decree",
+      "name": "Ch.9 · A New Decree",
+      "file": "act9_a_new_decree.json",
+      "scene": "a_new_decree",
+      "foreground": "fg_a_new_decree",
+      "assetFolder": "act_09_a_new_decree",
+      "assetStem": "esther_act9",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+    },
+    {
+      "id": "purim",
+      "name": "Ch.10 · Purim",
+      "file": "act10_purim.json",
+      "scene": "purim",
+      "foreground": "fg_purim",
+      "assetFolder": "act_10_purim",
+      "assetStem": "esther_act10",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    }
+  ]
+}

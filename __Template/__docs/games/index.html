@@ -31,16 +31,17 @@
       const container = document.getElementById('content');
       try {
         const manifest = await fetch('manifest.json').then(r => r.json());
-        const files = Array.isArray(manifest.files) ? manifest.files : [];
+        const gamesList = Array.isArray(manifest.games) ? manifest.games : [];
         const byStory = {};
-        for (const file of files) {
+        for (const g of gamesList) {
+          const file = g.file;
+          if (!file || !g.story || !g.act) continue;
           const parts = file.split('/');
-          const story = parts[0];
           const actFile = parts[parts.length - 1];
           const actMatch = actFile.match(/act(\d+)\.html$/);
-          const act = actMatch ? parseInt(actMatch[1], 10) : null;
-          byStory[story] = byStory[story] || [];
-          byStory[story].push({ act, file });
+          const act = actMatch ? parseInt(actMatch[1], 10) : g.act;
+          byStory[g.story] = byStory[g.story] || [];
+          byStory[g.story].push({ act, file, chapter: g.chapter || '', objective: g.objective || '' });
         }
         const stories = Object.keys(byStory).sort();
         container.innerHTML = '';
@@ -64,12 +65,6 @@
             acc[String(ch.chapter)] = ch.objective;
             return acc;
           }, {});
-          const manifestActs = (manifest.games || [])
-            .filter(g => g.story === story)
-            .reduce((acc, g) => {
-              acc[String(g.act)] = g;
-              return acc;
-            }, {});
           const section = document.createElement('div');
           section.className = 'story';
           const title = document.createElement('h2');
@@ -82,11 +77,11 @@
             item.className = 'game-item';
             const link = document.createElement('a');
             link.href = a.file;
-            const chapterName = chapterByAct[String(a.act)] || ('Act ' + a.act);
+            const chapterName = chapterByAct[String(a.act)] || a.chapter || ('Act ' + a.act);
             link.textContent = 'Act ' + a.act + ' — ' + esc(chapterName);
             item.appendChild(link);
             const note = planChapters[chapterName];
-            const objective = (manifestActs[String(a.act)] || {}).objective;
+            const objective = a.objective;
             const parts = [];
             if (note) parts.push('Note: ' + note);
             if (objective) parts.push('Objective: ' + objective);

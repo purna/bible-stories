@@ -1,0 +1,64 @@
+{
+  "id": "the_almond_branch",
+  "name": "Ch.2 · The Almond Branch",
+  "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "the_almond_branch_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Spot signs that God is watching over the word.",
+      "cite": "Jeremiah 1–52; Lamentations",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_almond_branch_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Can truth be spoken and hope planted while a city collapses? — The Almond Branch is the next step in that question.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_almond_branch_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE WORD STANDS",
+      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_almond_branch_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Walk on with the lesson 📖",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment 🕊️",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "the_almond_branch",
+  "foreground": "fg_the_almond_branch",
+  "index": 1
+}

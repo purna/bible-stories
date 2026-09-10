@@ -1,0 +1,70 @@
+{
+  "id": "jaels_choice",
+  "particle": "ember",
+  "bg": "radial-gradient(circle at 50% 30%, #8a6948, #181821 74%)",
+  "game": "wisdom",
+  "gameTitle": "Act with care",
+  "gameInstructions": "Choose the response that protects those threatened by Sisera without turning violence into spectacle.",
+  "lines": [
+    {
+      "id": "jaels_choice_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Jael welcomed Sisera, covered him, and gave him milk when he asked for water.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "jaels_choice_1",
+      "speaker": "sisera",
+      "fx": "type",
+      "delay": 800,
+      "align": "center",
+      "text": "Stand in the doorway. If anyone asks whether a man is here, say no.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "jaels_choice_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "When he slept, Jael made a grave and decisive choice that ended the commander\u2019s threat.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "jaels_choice_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Jael went out to meet Barak and showed him that Sisera\u2019s power was finished.",
+      "cite": "Judges 4:18\u201322",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "gameChoices": [
+    [
+      "wrong",
+      "Ignore the danger outside the tent"
+    ],
+    [
+      "wrong",
+      "Seek praise for a dramatic display"
+    ],
+    [
+      "right",
+      "Protect those in danger and tell the truth"
+    ]
+  ],
+  "gameSuccess": "Jael acts decisively, and Sisera\u2019s threat is ended.",
+  "gameRetry": "Not quite. Choose the response that protects others without seeking glory.",
+  "name": "Ch.6 \u00b7 Jael\u2019s Choice",
+  "assetFolder": "act_06_jael_s_choice",
+  "assetStem": "deborah_act6"
+}

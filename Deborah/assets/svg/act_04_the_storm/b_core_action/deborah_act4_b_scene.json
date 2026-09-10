@@ -1,0 +1,32 @@
+{
+  "story": "Deborah",
+  "act": 4,
+  "chapter": "The Storm",
+  "brief": "Use the flooded ground to break the chariot advantage.",
+  "scene": {
+    "id": "B",
+    "name": "Core Action"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "environment": "sea",
+  "time": "sunset",
+  "seed": 1,
+  "background": "deborah_act4_b_background.svg",
+  "foreground": "deborah_act4_b_foreground.svg",
+  "foregroundBackgroundIncluded": false,
+  "foregroundDetails": {
+    "plants": true,
+    "rocks": true,
+    "structures": true,
+    "props": true,
+    "framing": true
+  },
+  "layering": [
+    "background",
+    "optional middle-ground/characters",
+    "foreground"
+  ]
+}

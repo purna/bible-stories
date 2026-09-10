@@ -1,0 +1,116 @@
+{
+  "id": "abigail",
+  "name": "Ch.6 · Abigail",
+  "bg": "radial-gradient(circle at 60% 40%, #1a2a14, #0a1408 65%, #040802)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "abigail_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Nabal was a wealthy man in Maon, and his servants grazed his sheep in Carmel. David and his men had protected those flocks through the winter.",
+      "cite": "1 Samuel 25:2",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "abigail_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "When the shearing came, David sent men to ask Nabal for a gift. Nabal answered with insults and a curse.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "abigail_2",
+      "speaker": "david",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "text": "By the living God, I will not spare one man of this household. Go and get your swords ready.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "abigail_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "A servant ran ahead and told Nabal's wife. Abigail was beautiful and wise. She loaded two donkeys with bread, wine, figs, and raisins.",
+      "cite": "1 Samuel 25:18",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "abigail_4",
+      "speaker": "abigail",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "text": "My lord, let your hand be blessed. Take this gift. I have come to speak for the men of the house, for Nabal is a fool.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "abigail_5",
+      "speaker": "david",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "The LORD has kept me from harming you. Go in peace. Your wisdom has saved your household from death.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "abigail_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Ten days later the LORD struck Nabal and he died. David took Abigail to be his wife.",
+      "cite": "1 Samuel 25:38",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "abigail_7",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "WISDOM SAVES WHAT ANGER DESTROYS",
+      "text": "A woman's quiet speech turned a band of men away from slaughter. Mercy spoken at the right moment is worth more than a sword.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "abigail_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David's men named her a blessing. The wilderness had taught him restraint, and Abigail taught him that restraint has a voice.",
+      "choices": [
+        {
+          "label": "Hold fast to her counsel 🕊️",
+          "note": "A wise companion keeps a king from the worst of himself."
+        },
+        {
+          "label": "Keep the sword close for next time ⚔️",
+          "note": "The wilderness is wide, and not every insult comes with a gift."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "abigail",
+  "foreground": "fg_abigail",
+  "index": 5
+}

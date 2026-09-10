@@ -1,6 +1,6 @@
 {
   "id": "river_rose",
-  "name": "Ch.3 · The River Rose",
+  "name": "Ch.3 \u00b7 The River Rose",
   "bg": "radial-gradient(circle at 50% 25%, #4a5568, #1a202c 70%)",
   "particle": "storm",
   "scene": "river_rose",
@@ -10,29 +10,45 @@
   "gameInstructions": "Tap every iron chariot before it crosses the rushing Kishon.",
   "lines": [
     {
+      "id": "river_rose_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "Sisera came with iron chariots, certain that strength would win the day."
+      "text": "Sisera came with iron chariots, certain that strength would win the day.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "river_rose_1",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "Deborah gave the signal. Barak and his people swept down Mount Tabor—and the heavens opened."
+      "text": "Deborah gave the signal. Barak and his people swept down Mount Tabor\u2014and the heavens opened.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "river_rose_2",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "The Kishon River flooded; the heavy chariots sank into mud, and the frightened army scattered."
+      "text": "The Kishon River flooded; the heavy chariots sank into mud, and the frightened army scattered.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "river_rose_3",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "text": "Up! This is the day the Lord has given Sisera into your hands.",
-      "cite": "Judges 4:14"
+      "cite": "Judges 4:14",
+      "width": "1/2",
+      "valign": "middle"
     }
   ]
 }

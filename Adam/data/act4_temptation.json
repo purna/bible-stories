@@ -1,0 +1,123 @@
+{
+  "id": "temptation",
+  "name": "The Temptation",
+  "bg": "radial-gradient(circle at 50% 60%, #8b2500, #3d1200 65%, #1a0700)",
+  "particle": "fire",
+  "svg": "serpent_tree",
+  "audio": [
+    "assets/audio/music/Act4_The_Open_Gate_at_Twilight.ogg",
+    "assets/audio/music/Act4_The_Open_Gate_at_Twilight.mp3"
+  ],
+  "lines": [
+    {
+      "id": "temptation_0",
+      "speaker": "serpent",
+      "sfx": "SSSSSSSS",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "Did God really say, 'You must not eat from any tree in the garden'?",
+      "align": "left",
+      "svg": "serpent_tree",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "temptation_1",
+      "speaker": "eve",
+      "fx": "fade",
+      "delay": 800,
+      "text": "We may eat fruit from the trees in the garden. But as for the fruit of the tree that is in the middle of the garden...",
+      "align": "right",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "temptation_2",
+      "speaker": "serpent",
+      "fx": "shake",
+      "delay": 800,
+      "text": "You will not certainly die. For God knows that when you eat from it, your eyes will be opened \u2014 and you will be like God, knowing good and evil.",
+      "align": "left",
+      "svg": "serpent_deceive",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "temptation_3",
+      "speaker": "eve",
+      "fx": "type",
+      "delay": 800,
+      "text": "Are you sure? He said we would die if we eat. But you say we will be like God...",
+      "align": "right",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "temptation_4",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "The fruit was good for food and pleasing to the eye. It promised wisdom \u2014 the one thing God had withheld.",
+      "align": "center",
+      "svg": "forbidden_fruit",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "temptation_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "She looked at the fruit, longing for what it promised. Then she took some and ate it.",
+      "align": "center",
+      "svg": "forbidden_taken",
+      "choices": [
+        {
+          "label": "Resist the serpent \ud83d\udee1\ufe0f",
+          "note": "The moment passes. Temptation without action is just a whisper."
+        },
+        {
+          "label": "Taste the fruit \ud83c\udf4e",
+          "note": "The first bite changes everything. Knowledge comes at the price of innocence."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "temptation_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "She gave some to her husband, who was with her. And he ate it.",
+      "align": "left",
+      "svg": "serpent_taken",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "temptation_7",
+      "sfx": "CRACK!",
+      "audioSfx": "assets/audio/sfx/fall_crack.mp3",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "text": "The moment the fruit touched their lips, something tore. Shame flooded in. Their eyes were opened.",
+      "align": "center",
+      "svg": "the_fall",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "temptation_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "They heard God approaching. And they hid \u2014 from each other, and from Him.",
+      "align": "center",
+      "svg": "the_hiding",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

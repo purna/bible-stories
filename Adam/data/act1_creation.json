@@ -1,0 +1,140 @@
+{
+  "id": "creation",
+  "name": "Let There Be Light",
+  "bg": "radial-gradient(circle at 30% 30%, #0a0812, #1a1224 65%, #0d1b2a)",
+  "particle": "constellation",
+  "svg": "creation_cosmos",
+  "audio": [
+    "assets/audio/music/Act1_Morning_on_the_Mesa.ogg",
+    "assets/audio/music/Act1_Morning_on_the_Mesa.mp3"
+  ],
+  "lines": [
+    {
+      "id": "creation_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "In the beginning, God created the heavens and the earth. The earth was formless and empty \u2014 and darkness was over the surface of the deep.",
+      "align": "left",
+      "svg": "creation_cosmos",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "creation_1",
+      "sfx": "LET THERE BE LIGHT!",
+      "audioSfx": "assets/audio/sfx/creation_light.mp3",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "Let there be light.",
+      "align": "center",
+      "svg": "creation_light",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "creation_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "And God saw that the light was good. He separated the light from the darkness \u2014 calling the light 'Day' and the darkness 'Night.'",
+      "align": "center",
+      "svg": "creation_separation",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "creation_3",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "interaction": "ordering",
+      "text": "Now watch the days unfold. Place each part of the world in the order God spoke it.",
+      "align": "center",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "creation_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "On the second day, God formed the sky \u2014 a vault between the waters above and the waters below. And it was so.",
+      "align": "right",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "creation_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "On the third day, the waters gathered. Dry ground appeared. And every seed-bearing plant and tree with fruit burst forth across the earth.",
+      "align": "left",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "creation_6",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "On the fourth day, God set the sun, moon, and stars in the vault to govern day and night.",
+      "align": "center",
+      "choices": [
+        {
+          "label": "Admire the vastness \u2728",
+          "note": "The cosmos stretches beyond counting \u2014 each star named by Him."
+        },
+        {
+          "label": "Wonder at their purpose \ud83d\udd2d",
+          "note": "Lights to mark seasons, days, and years. Order from chaos."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "creation_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "On the fifth day, the waters teemed with living creatures, and birds filled the sky. On the sixth, the land animals.",
+      "align": "right",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "creation_8",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "Then God said, 'Let us make mankind in our image, to rule over every living creature.' And it was so.",
+      "svg": "creation_days",
+      "align": "center",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "creation_9",
+      "speaker": "god",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Let us make mankind in our image, to have dominion \u2014",
+      "align": "center",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "creation_10",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "Male and female, in our image, we create them.",
+      "align": "center",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

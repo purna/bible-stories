@@ -1,0 +1,70 @@
+{
+  "id": "under_the_palm",
+  "particle": "dawn",
+  "bg": "radial-gradient(circle at 50% 25%, #6db86a, #2d5f2d 70%)",
+  "game": "wisdom",
+  "gameTitle": "Restore a fair path",
+  "gameInstructions": "Listen to both sides, then choose the response that brings truth and peace.",
+  "lines": [
+    {
+      "id": "under_the_palm_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "For twenty years, King Jabin\u2019s power and Sisera\u2019s iron chariots pressed hard upon Israel.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "under_the_palm_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Under a palm between Ramah and Bethel sat Deborah\u2014a prophet, a judge, and a listener.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "under_the_palm_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "People brought their disputes to her, and she made room for truth, fairness, and peace.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "under_the_palm_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The Israelites went up to her to have their disputes decided.",
+      "cite": "Judges 4:4\u20135",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "gameChoices": [
+    [
+      "wrong",
+      "Decide before hearing the whole dispute"
+    ],
+    [
+      "right",
+      "Listen to both sides and seek truth"
+    ],
+    [
+      "wrong",
+      "Choose whoever speaks the loudest"
+    ]
+  ],
+  "gameSuccess": "Wise judgment makes room for truth and peace.",
+  "gameRetry": "Not quite. Wisdom begins by hearing both sides before deciding.",
+  "name": "Ch.1 \u00b7 Under the Palm",
+  "assetFolder": "act_01_under_the_palm",
+  "assetStem": "deborah_act1"
+}

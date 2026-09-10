@@ -1,0 +1,127 @@
+{
+  "id": "writing",
+  "name": "The Writing on the Wall",
+  "bg": "radial-gradient(circle at 30% 30%, #2b1220, #160a14 60%, #090510)",
+  "particle": "constellation",
+  "svg": "belshazzar_feast",
+  "reign": "belshazzar",
+  "vision": "writing_wall",
+  "audio": [
+    "assets/audio/music/Act4_Seven_Lamps_Burning.ogg",
+    "assets/audio/music/Act4_Seven_Lamps_Burning.mp3"
+  ],
+  "lines": [
+    {
+      "id": "writing_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Decades later. Babylon was falling. And Belshazzar, its last king, held a feast \u2014 using the sacred cups stolen from Jerusalem's temple.",
+      "align": "left",
+      "svg": "belshazzar_feast",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "writing_1",
+      "speaker": "belshazzar",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "BRING the gold and silver cups from the temple! Tonight we drink from the vessels of Judah's God!",
+      "align": "center",
+      "svg": "belshazzar_feast",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "writing_2",
+      "sfx": "MENE...",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "text": "Suddenly, a human hand appeared and wrote on the wall.",
+      "svg": "hand_writing",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "writing_3",
+      "speaker": "belshazzar",
+      "fx": "shake",
+      "delay": 800,
+      "text": "My legs... they've turned to water. BRING ME A WISE MAN \u2014 anyone who can read this gets gold and the third rank in my kingdom!",
+      "svg": "hand_writing",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "writing_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "No one could read it. The queen remembered Daniel. And Daniel, now an old man, was brought in.",
+      "align": "right",
+      "svg": "daniel_reads",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "writing_5",
+      "speaker": "daniel",
+      "fx": "type",
+      "delay": 800,
+      "text": "Keep your gold, O King. I'll tell you what it means anyway.",
+      "align": "left",
+      "svg": "daniel_reads",
+      "vision": true,
+      "choices": [
+        {
+          "label": "Daniel asks for the reward \ud83d\udcb0",
+          "note": "He doesn't. When there's nothing left to gain, the truth still costs something to tell.",
+          "decisionId": "writing_reward",
+          "tags": [
+            "loyalty:diplomatic",
+            "cost:private"
+          ]
+        },
+        {
+          "label": "Daniel refuses the reward \u2705",
+          "note": "Integrity in a moment with no long game left to protect. That's the point.",
+          "decisionId": "writing_refuse",
+          "tags": [
+            "loyalty:god",
+            "cost:public",
+            "risk:self"
+          ]
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "writing_6",
+      "speaker": "daniel",
+      "fx": "fade",
+      "delay": 800,
+      "text": "MENE: God has numbered your kingdom and brought it to an end. TEKEL: You have been weighed and found wanting. PERES: Your kingdom is divided and given to the Medes and Persians.",
+      "svg": "daniel_reads",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "writing_7",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "That very night, Belshazzar was killed. And Babylon fell to the Persians.",
+      "svg": "babylon_falls",
+      "consequence": {
+        "god_only": "That very night, Belshazzar was killed. Babylon fell \u2014 and the court recalled how Daniel's words had always cut true, never softened for safety.",
+        "mixed": "That very night, Belshazzar was killed. Babylon fell \u2014 and those who remembered Daniel's earlier compromises wondered if this last, unflinching reading had been worth the risk.",
+        "compromised": "That very night, Belshazzar was killed. Babylon fell \u2014 and for a moment Daniel wondered if a different path might have spared more than he could save."
+      },
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

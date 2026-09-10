@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Tap the Sequence — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--card:#fffaf0;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);text-align:center;display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:16px;flex:none;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.6rem;margin:4px 0}
+    .sub{font-size:.9rem;opacity:.8;margin-bottom:10px}
+    .progress{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:6px 14px;font-weight:800;margin:2px 0 4px}
+    .prompt{font-size:1.05rem;margin:12px 0;font-weight:600}
+    .board{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:24px}
+    .step{width:110px;height:110px;border-radius:14px;border:2px solid var(--ink);background:var(--card);display:flex;align-items:center;justify-content:center;cursor:pointer;touch-action:manipulation;transition:transform .14s,filter .14s}
+    .step svg{width:64px;height:64px;display:block}
+    .step:active,.step.picked{transform:scale(.92);filter:brightness(1.08)}
+    .step.released{animation:releasePop .24s ease-out}
+    .step.active{animation:pulse .6s infinite alternate}
+    .step.correct{background:var(--good);color:#fff}
+    .step.wrong{animation:wrongShake .35s ease;background:color-mix(in srgb, var(--bad) 25%, #fff)}
+    @keyframes pulse{0%{transform:scale(1)} 100%{transform:scale(1.1)}}
+    @keyframes wrongShake{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+
+    /* Modals & Overlay (styled like keep_balance.html) */
+
+    @keyframes releasePop{50%{transform:scale(1.08)}}
+  </style>
+  <link rel="stylesheet" href="_shared/modal.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Tap the Sequence
+      <svg viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <circle cx="16" cy="14" r="6" fill="#ffd84d"/>
+        <rect x="15" y="20" width="2" height="8" rx="1" fill="#3a2410"/>
+        <circle cx="16" cy="29" r="1.5" fill="#3a2410"/>
+      </svg>
+    </h1>
+    <div class="sub">Watch, repeat, then remember one more step each round.</div>
+    <div class="progress" id="progress">Sequence: 3 of 10</div>
+    <div class="prompt" id="prompt">Watch the glowing order, then repeat it!</div>
+    <div class="board">
+      <div class="step" data-key="boat" aria-label="Boat"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 20l3-11h14l3 11" stroke="#3a2410" stroke-width="2" stroke-linejoin="round" fill="#ccae81"/><path d="M16 20V6m0 0 7 6H16" fill="#fffaf0" stroke="#3a2410" stroke-width="2" stroke-linejoin="round"/><path d="M3 20c2 3 5 3 7 1 2 2 5 2 7 0 2 2 5 2 7 0 2 2 4 2 5-1" stroke="#1a73e8" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+      <div class="step" data-key="storm" aria-label="Storm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18a6 6 0 0 1 1-11.9A8 8 0 0 1 25 10a5 5 0 0 1-1 10H9z" fill="#9aa7b0" stroke="#3a2410" stroke-width="2" stroke-linejoin="round"/><path d="M17 18l-4 6h4l-3 6" stroke="#ffd84d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="step" data-key="fish" aria-label="Fish"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 16c0-5 4-9 9-9 3 0 6 2 7 5-3 1-5 3-6 6 4-1 8 2 9 6-2 1-4 2-7 2-5 0-9-4-9-9z" fill="#1a73e8"/></svg></div>
+      <div class="step" data-key="city" aria-label="City"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="14" width="7" height="14" fill="#ccae81" stroke="#3a2410" stroke-width="2"/><rect x="13" y="6" width="7" height="22" fill="#e3af32" stroke="#3a2410" stroke-width="2"/><rect x="22" y="11" width="6" height="17" fill="#ccae81" stroke="#3a2410" stroke-width="2"/><path d="M15 10h1M15 14h1M15 18h1M24 15h1M24 19h1" stroke="#3a2410" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 90, timer: true };
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+
+    const keys = ['boat', 'storm', 'fish', 'city'];
+    const CHECK_SVG = '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="15" fill="#e8f5e9" stroke="var(--good)" stroke-width="2"/><path d="M8 16.5l5.5 5.5L24 11" stroke="var(--good)" stroke-width="3.4" stroke-linecap="round"/></svg>';
+
+    let order = [], previous = localStorage.getItem('tap-sequence-order'), signature = '';
+    do {
+      order = [];
+      while (order.length < 10) {
+        const choices = keys.filter(key => key !== order[order.length - 1]);
+        order.push(choices[Math.floor(Math.random() * choices.length)]);
+      }
+      signature = order.join(',');
+    } while (signature === previous);
+    localStorage.setItem('tap-sequence-order', signature);
+
+    let roundLength = 3;
+    let phase = 'watching';
+    let idx = 0;
+    const steps = document.querySelectorAll('.step');
+    const prompt = document.getElementById('prompt');
+    const progress = document.getElementById('progress');
+
+    addPressEffects('.step,.btn');
+    function addPressEffects(selector){
+      document.addEventListener('pointerdown', e => { const el = e.target.closest(selector); if(el) el.classList.add('picked'); });
+      document.addEventListener('pointerup', e => {
+        const el = e.target.closest(selector);
+        if (!el) return;
+        el.classList.remove('picked');
+        el.classList.remove('released');
+        void el.offsetWidth;
+        el.classList.add('released');
+      });
+    }
+
+    function stepOf(key){ return document.querySelector(`.step[data-key="${key}"]`); }
+
+    async function playSequence(){
+      phase = 'watching';
+      idx = 0;
+      steps.forEach(step => step.classList.remove('correct', 'wrong'));
+      progress.textContent = `Sequence: ${roundLength} of 10`;
+      prompt.textContent = 'Watch closely…';
+      for (const k of order.slice(0, roundLength)) {
+        stepOf(k).classList.add('active');
+        await new Promise(r => setTimeout(r, 480));
+        stepOf(k).classList.remove('active');
+        await new Promise(r => setTimeout(r, 170));
+      }
+      phase = 'repeating';
+      prompt.textContent = 'Now tap them in the same order!';
+    }
+
+    steps.forEach(s => {
+      s.addEventListener('click', () => {
+        if (phase !== 'repeating') return;
+        const key = s.dataset.key;
+        if (key === order[idx]) {
+          s.classList.add('correct');
+          idx++;
+          if (idx >= roundLength) {
+            phase = 'between';
+            if (roundLength === 10) { finish(true); return; }
+            roundLength++;
+            prompt.textContent = 'Well done! One more step…';
+            setTimeout(playSequence, 750);
+          }
+        } else {
+          phase = 'retrying';
+          s.classList.add('wrong');
+          prompt.textContent = 'Nearly! Watch the same sequence again.';
+          setTimeout(playSequence, 800);
+        }
+      });
+    });
+
+    
+    const modal = document.getElementById('modal');
+    const modalCard = document.getElementById('modalCard');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
+    const modalBtn = document.getElementById('modalBtn');
+    function showModal(kind, title, lines, btnLabel) {
+      modalCard.classList.remove('success', 'timeout');
+      if (kind === 'success') modalCard.classList.add('success');
+      if (kind === 'timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind === 'success'
+        ? "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><path d=\"M8 16.5l5.5 5.5L24 11\" fill=\"none\" stroke=\"#1b5e20\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+        : "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><path d=\"M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z\" fill=\"#fff\" stroke=\"#1b5e20\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><path d=\"M16 4v24\" stroke=\"#1b5e20\" stroke-width=\"2\" stroke-dasharray=\"2 2\"/></svg>";
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l =>
+        /[“”"]/.test(l)
+          ? '<div class="modal-verse">' + l + '</div>'
+          : '<div>' + l + '</div>'
+      ).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+    function finish(success, reason) {
+      if (modal.classList.contains('active')) return;
+      if (success === true) {
+        showModal('success', "You remembered all 10 steps!", ["You remembered all 10 steps!","\"The word of the Lord is right and true.\" — Psalm 119:138"], "Play again");
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({ type: 'game-complete', game: 'tap_sequence' }, '*');
+      } else {
+        showModal('timeout', "Time’s up!", ["Time’s up!"], "Try again");
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    addEventListener('game-timeout', () => finish(false, 'Time’s up! The clock ran out.'));
+
+    playSequence();
+  </script>
+</body>
+</html>

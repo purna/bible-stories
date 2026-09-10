@@ -1,40 +1,58 @@
 {
   "id": "gleaning",
-  "name": "Ch.3 · Gleaning",
+  "name": "Ch.3 \u00b7 Gleaning",
   "bg": "radial-gradient(circle at 50% 25%, #8a9a48, #2a3818 70%)",
   "particle": "dawn",
   "lines": [
     {
+      "id": "gleaning_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "text": "When they arrived in Bethlehem, the barley harvest had just begun. Ruth spoke to Naomi with a plan.",
-      "cite": "Ruth 2:2"
+      "cite": "Ruth 2:2",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "gleaning_1",
       "speaker": "ruth",
       "fx": "type",
+      "delay": 800,
       "align": "right",
-      "text": "Let me go to the fields and pick up the grain left behind by anyone in whose eyes I find favor."
+      "text": "Let me go to the fields and pick up the grain left behind by anyone in whose eyes I find favor.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "gleaning_2",
       "speaker": "naomi",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
-      "text": "Go ahead, my daughter."
+      "text": "Go ahead, my daughter.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "gleaning_3",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "text": "Ruth went out and gleaned in the field behind the harvesters. She happened to be working in a field belonging to Boaz, from the clan of Elimelek.",
-      "cite": "Ruth 2:3"
+      "cite": "Ruth 2:3",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "gleaning_4",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "She gathered only what the law allowed—the grain left for the poor and the foreigner. Patiently, stalk by stalk, she filled her apron.",
+      "text": "She gathered only what the law allowed\u2014the grain left for the poor and the foreigner. Patiently, stalk by stalk, she filled her apron.",
       "cite": "Leviticus 19:9-10",
       "choices": [
         {
@@ -45,13 +63,19 @@
           "label": "Rest briefly in the shade",
           "note": "Even gleaners need a moment's rest under the harvest sun."
         }
-      ]
+      ],
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "gleaning_5",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "The sun rose higher. Ruth kept her head down and her hands steady. The field was generous to those who came last."
+      "text": "The sun rose higher. Ruth kept her head down and her hands steady. The field was generous to those who came last.",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "svg": "gleaning",

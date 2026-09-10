@@ -1,0 +1,86 @@
+{
+  "id": "drought",
+  "name": "The Drought",
+  "bg": "radial-gradient(circle at 50% 10%, #f2a65a, #774f38 80%)",
+  "particle": "dust",
+  "svg": "samaria_court",
+  "lines": [
+    {
+      "id": "drought_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "In the northern kingdom of Israel, King Ahab had turned away from the LORD. Queen Jezebel had promoted the worship of Baal, and the nation was being led deeper into idolatry.",
+      "align": "left",
+      "svg": "samaria_court",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "drought_1",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "Then Elijah the Tishbite appeared before Ahab. He came with a warning from the living God.",
+      "align": "center",
+      "svg": "samaria_court",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "drought_2",
+      "speaker": "elijah",
+      "audioSfx": "assets/audio/sfx/desert_wind.mp3",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "As surely as the LORD, the God of Israel, lives\u2014the God I serve\u2014there will be no dew or rain unless the LORD gives the word.",
+      "align": "center",
+      "svg": "samaria_court",
+      "choices": [
+        {
+          "label": "Stand boldly on God's word",
+          "note": "Elijah's message is clear: Israel's drought is a direct challenge to Baal, the god they claimed controlled the rain."
+        },
+        {
+          "label": "Feel the weight of the king's threat",
+          "note": "Elijah is brave, but the story will soon show that even a courageous prophet can become afraid."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "drought_3",
+      "speaker": "god",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Leave here. Go east and hide beside the Kerith Ravine. You will drink from the brook, and I have commanded ravens to provide food for you there.",
+      "align": "center",
+      "svg": "kerith_ravine",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "drought_4",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "Elijah obeyed. Morning and evening the ravens brought him bread and meat, and he drank from the brook.",
+      "align": "left",
+      "svg": "kerith_ravine",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "drought_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "But after a time the brook dried up. The drought had reached even the place where God had provided for Elijah.",
+      "align": "right",
+      "svg": "kerith_ravine",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

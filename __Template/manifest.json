@@ -5,5 +5,7 @@
   "display": "standalone",
   "background_color": "#101927",
   "theme_color": "#c87a30",
-  "icons": []
+  "icons": [],
+  "assetFolder": "template",
+  "assetStem": "template"
 }

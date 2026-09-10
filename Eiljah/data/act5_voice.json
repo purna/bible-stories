@@ -1,0 +1,108 @@
+{
+  "id": "voice",
+  "name": "The Still, Small Voice",
+  "bg": "radial-gradient(circle at 50% 20%, #0d1b2a, #061224 65%, #030b18)",
+  "particle": "constellation",
+  "svg": "horeb_cave",
+  "lines": [
+    {
+      "id": "voice_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "At Horeb, Elijah entered a cave and spent the night. God asked him a question that reached beyond the storm outside.",
+      "align": "left",
+      "svg": "horeb_cave",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "voice_1",
+      "speaker": "god",
+      "fx": "type",
+      "delay": 800,
+      "text": "What are you doing here, Elijah?",
+      "align": "center",
+      "svg": "horeb_cave",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "voice_2",
+      "speaker": "elijah",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "I have been zealous for the LORD. Israel has broken your covenant, destroyed your altars, and killed your prophets. I am the only one left, and they are trying to kill me too.",
+      "align": "center",
+      "svg": "horeb_cave",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "voice_3",
+      "speaker": "god",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Go out and stand on the mountain. The LORD is about to pass by.",
+      "align": "center",
+      "svg": "horeb_cave",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "voice_4",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "text": "A powerful wind tore at the mountain. But the LORD was not in the wind. Then came an earthquake\u2014but the LORD was not in the earthquake.",
+      "align": "center",
+      "svg": "horeb_cave",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "voice_5",
+      "speaker": "narrator",
+      "fx": "shake",
+      "delay": 800,
+      "text": "Then came fire. But the LORD was not in the fire. After the fire came a gentle whisper.",
+      "align": "center",
+      "svg": "horeb_cave",
+      "interaction": "hearing",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "voice_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "When Elijah heard it, he covered his face with his cloak and stood at the entrance of the cave.",
+      "align": "center",
+      "svg": "horeb_cave",
+      "choices": [
+        {
+          "label": "Listen for God in the quiet",
+          "note": "Elijah discovers that God's presence is not limited to spectacular signs. The quiet voice matters too."
+        },
+        {
+          "label": "Expect another great sign",
+          "note": "Elijah has seen fire, rain, wind, and earthquakes. Now the story turns his attention from spectacle to listening."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "voice_7",
+      "speaker": "god",
+      "fx": "type",
+      "delay": 800,
+      "text": "Go back. Anoint Hazael king over Aram, Jehu king over Israel, and Elisha to succeed you as prophet. And remember: I have kept seven thousand in Israel who have not bowed to Baal.",
+      "align": "center",
+      "svg": "horeb_cave",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

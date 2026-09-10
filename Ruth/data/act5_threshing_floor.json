@@ -1,31 +1,45 @@
 {
   "id": "threshing_floor",
-  "name": "Ch.5 · Threshing Floor",
+  "name": "Ch.5 \u00b7 Threshing Floor",
   "bg": "radial-gradient(circle at 50% 25%, #6a5840, #2a2018 70%)",
   "particle": "dusk",
   "lines": [
     {
+      "id": "threshing_floor_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "text": "When Ruth returned home, Naomi had a plan. Boaz was winnowing barley at the threshing floor that night.",
-      "cite": "Ruth 3:2-3"
+      "cite": "Ruth 3:2-3",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "threshing_floor_1",
       "speaker": "naomi",
       "fx": "type",
+      "delay": 800,
       "align": "left",
-      "text": "My daughter, I must seek security for you, so that it may go well. Wash and perfume yourself and go down to the threshing floor. Don't let him know you are there until he has finished eating and drinking."
+      "text": "My daughter, I must seek security for you, so that it may go well. Wash and perfume yourself and go down to the threshing floor. Don't let him know you are there until he has finished eating and drinking.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "threshing_floor_2",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "Ruth did everything Naomi instructed. When Boaz had eaten and drunk and was in good spirits, he went to lie down at the far end of the grain heap."
+      "text": "Ruth did everything Naomi instructed. When Boaz had eaten and drunk and was in good spirits, he went to lie down at the far end of the grain heap.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "threshing_floor_3",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "text": "Ruth approached quietly, uncovered his feet, and lay down. In the middle of the night, something startled the man, and he turned over and discovered a woman lying at his feet.",
       "cite": "Ruth 3:7-8",
@@ -38,21 +52,31 @@
           "label": "Speak clearly when asked",
           "note": "Ruth answers Boaz with honesty and directness."
         }
-      ]
+      ],
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "threshing_floor_4",
       "speaker": "ruth",
       "fx": "type",
+      "delay": 800,
       "align": "right",
       "text": "I am your servant Ruth. Spread the corner of your garment over your servant, for you are a guardian-redeemer of our family.",
-      "cite": "Ruth 3:9"
+      "cite": "Ruth 3:9",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "threshing_floor_5",
       "speaker": "boaz",
       "fx": "fade",
+      "delay": 800,
       "align": "left",
       "text": "The LORD bless you, my daughter. This kindness is greater than that which you showed earlier. Come morning, I will do whatever you ask. All the people of my town know that you are a woman of noble character.",
-      "cite": "Ruth 3:10-11"
+      "cite": "Ruth 3:10-11",
+      "width": "1/2",
+      "valign": "middle"
     }
   ],
   "svg": "threshing_floor",

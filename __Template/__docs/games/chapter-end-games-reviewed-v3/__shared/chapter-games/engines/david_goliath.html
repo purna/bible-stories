@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>David vs Goliath — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:16px;flex:none;display:flex;flex-direction:column;align-items:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.6rem;margin:2px 0}
+    .sub{text-align:center;font-size:.9rem;opacity:.8;margin-bottom:6px}
+    .hud{display:flex;gap:10px;justify-content:center;margin-bottom:8px;font-size:.95rem;font-weight:800}
+    .hud .chip{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:4px 12px}
+    .hud .chip.warn{background:#ffe5b4;border-color:#a85b00}
+    .hud .chip.bad{background:#ffd0d0;border-color:var(--bad)}
+    .stage{flex:1;position:relative;width:100%;max-width:760px;background:linear-gradient(to bottom,#a8d6f8 0%,#a8d6f8 55%,#7a9c4e 55%,#5a7a36 100%);border:4px solid var(--ink);border-radius:14px;box-shadow:0 5px 0 #5b3624;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:18px;gap:14px}
+    .giant{position:absolute;top:24px;right:32px;width:120px;height:200px;display:flex;align-items:center;justify-content:center}
+    .giant svg{width:100%;height:100%;display:block;filter:drop-shadow(0 4px 0 rgba(0,0,0,.18))}
+    .giant.shake{animation:gShake .35s ease}
+    @keyframes gShake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+    .giant.down{animation:gDown .55s ease forwards}
+    @keyframes gDown{0%{transform:translateY(0) rotate(0);opacity:1}100%{transform:translateY(160px) rotate(80deg);opacity:0}}
+    .stones{display:flex;gap:10px;justify-content:center}
+    .stone{width:60px;height:60px;border-radius:50%;background:#a8a8a8;border:3px solid var(--ink);box-shadow:0 4px 0 #555,inset -4px -4px 0 #888;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;color:#fff;transition:transform .12s,filter .12s,background .2s}
+    .stone.smooth{background:#d6d6d6;color:#3a2410}
+    .stone:active{transform:scale(.92)}
+    .stone.tapped{transform:scale(.95);filter:brightness(1.1)}
+    .sling{position:relative;width:300px;height:64px;background:#fff;border:3px solid var(--ink);border-radius:14px;overflow:hidden;box-shadow:0 4px 0 #5b3624}
+    .sling .track{position:absolute;left:14px;right:14px;top:50%;height:8px;background:#f1e6c0;border-radius:4px;transform:translateY(-50%)}
+    .sling .zone{position:absolute;top:0;bottom:0;width:36%;background:rgba(46,125,50,.18);border-left:2px solid var(--good);border-right:2px solid var(--good)}
+    .sling .marker{position:absolute;top:50%;left:0;width:18px;height:36px;background:var(--bad);border:3px solid var(--ink);border-radius:6px;transform:translate(-50%,-50%);box-shadow:0 2px 0 #5b3624;transition:background .15s}
+    .sling .marker.sweet{background:var(--good)}
+    .sling .label{position:absolute;left:14px;top:4px;font-size:.7rem;font-weight:800;color:var(--ink);opacity:.6}
+    .sling .value{position:absolute;right:14px;top:4px;font-size:.8rem;font-weight:800;color:var(--ink);min-width:34px;text-align:center}
+    .slingBtn{display:block;margin:6px auto 0;font-family:inherit;font-size:1rem;font-weight:800;background:var(--accent);color:var(--ink);border:3px solid var(--ink);border-radius:10px;padding:8px 18px;cursor:pointer;box-shadow:0 3px 0 #9d7613;min-width:160px}
+    .slingBtn:active{transform:translateY(2px);box-shadow:0 1px 0 #9d7613}
+    .slingBtn:disabled{opacity:.4;cursor:not-allowed}
+    .stone-flight{position:absolute;width:18px;height:18px;border-radius:50%;background:#666;border:2px solid var(--ink);pointer-events:none;z-index:30}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>David vs Goliath</h1>
+    <div class="sub">Smooth 5 stones, then time your sling within the green zone.</div>
+    <div class="hud">
+      <div class="chip" id="stonesChip">Stones: 0 / 5</div>
+      <div class="chip" id="shotsChip">Shots: 0 / 3</div>
+    </div>
+    <div class="stage" id="stage">
+      <div class="giant" id="giant">
+        <svg viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <ellipse cx="40" cy="20" rx="13" ry="14" fill="#f1c193" stroke="#3a2410" stroke-width="2.5"/>
+          <path d="M30 8c0-3 4-5 10-5s10 2 10 5l-3 4M30 8h20" stroke="#3a2410" stroke-width="2.5" fill="none"/>
+          <rect x="22" y="32" width="36" height="48" rx="6" fill="#8a6a3b" stroke="#3a2410" stroke-width="2.5"/>
+          <path d="M28 40h24M28 50h24M28 60h24M28 70h24" stroke="#3a2410" stroke-width="2"/>
+          <rect x="18" y="36" width="10" height="22" rx="4" fill="#f1c193" stroke="#3a2410" stroke-width="2.5"/>
+          <rect x="52" y="36" width="10" height="22" rx="4" fill="#f1c193" stroke="#3a2410" stroke-width="2.5"/>
+          <rect x="22" y="80" width="14" height="40" rx="4" fill="#5b3a1d" stroke="#3a2410" stroke-width="2.5"/>
+          <rect x="44" y="80" width="14" height="40" rx="4" fill="#5b3a1d" stroke="#3a2410" stroke-width="2.5"/>
+          <rect x="18" y="118" width="20" height="10" rx="3" fill="#3a2410"/>
+          <rect x="42" y="118" width="20" height="10" rx="3" fill="#3a2410"/>
+          <circle cx="36" cy="18" r="1.6" fill="#3a2410"/>
+          <circle cx="44" cy="18" r="1.6" fill="#3a2410"/>
+          <path d="M34 26c2 1 4 1 6 0" stroke="#3a2410" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="stones" id="stones"></div>
+      <div class="sling" id="sling">
+        <span class="label">Power</span>
+        <span class="value" id="slingVal">0%</span>
+        <div class="track"></div>
+        <div class="zone" style="left:42%"></div>
+        <div class="marker" id="slingMarker" style="left:0%"></div>
+      </div>
+      <button class="slingBtn" id="slingBtn" disabled>Slingshot!</button>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 75, timer: true };
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+    const STONES_NEEDED = 5, SHOTS = 3;
+    const stonesEl=document.getElementById('stones');
+    const stonesChip=document.getElementById('stonesChip');
+    const shotsChip=document.getElementById('shotsChip');
+    const slingMarker=document.getElementById('slingMarker');
+    const slingVal=document.getElementById('slingVal');
+    const slingBtn=document.getElementById('slingBtn');
+    const stage=document.getElementById('stage');
+    const giant=document.getElementById('giant');
+    const modal=document.getElementById('modal'),modalCard=document.getElementById('modalCard'),modalIcon=document.getElementById('modalIcon'),modalTitle=document.getElementById('modalTitle'),modalText=document.getElementById('modalText'),modalBtn=document.getElementById('modalBtn');
+    const CHECK_SVG='<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16.5l5.5 5.5L24 11" stroke="#1b5e20" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    const HOURGLASS_SVG='<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+    const SUN_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+
+    function showModal(kind, title, lines, btnLabel){
+      modalCard.classList.remove('success','timeout');
+      if(kind==='success') modalCard.classList.add('success');
+      if(kind==='timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind==='success' ? SUN_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“"]”"/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    let stonesSmoothed = 0, shotsLeft = SHOTS, markerPct = 0, markerDir = 1, markerRaf = null, over = false;
+
+    function updateHud(){
+      stonesChip.textContent = `Stones: ${stonesSmoothed} / ${STONES_NEEDED}`;
+      shotsChip.textContent = `Shots: ${SHOTS - shotsLeft} / ${SHOTS}`;
+      shotsChip.classList.toggle('bad', shotsLeft <= 1);
+      slingBtn.disabled = !(stonesSmoothed >= STONES_NEEDED && shotsLeft > 0);
+    }
+
+    for (let i=0; i<STONES_NEEDED; i++){
+      const s = document.createElement('button');
+      s.type = 'button';
+      s.className = 'stone';
+      s.textContent = '✦';
+      s.setAttribute('aria-label', `Stone ${i+1}`);
+      s.addEventListener('click', () => smoothStone(s));
+      stonesEl.appendChild(s);
+    }
+    function smoothStone(s){
+      if (s.classList.contains('smooth')) return;
+      s.classList.add('smooth','tapped');
+      setTimeout(()=>s.classList.remove('tapped'), 150);
+      stonesSmoothed++;
+      updateHud();
+    }
+    updateHud();
+
+    function markerTick(){
+      if (over) return;
+      markerPct += markerDir * 1.6;
+      if (markerPct >= 100) { markerPct = 100; markerDir = -1; }
+      if (markerPct <= 0) { markerPct = 0; markerDir = 1; }
+      slingMarker.style.left = markerPct + '%';
+      const sweet = markerPct >= 32 && markerPct <= 68;
+      slingMarker.classList.toggle('sweet', sweet);
+      slingVal.textContent = Math.round(markerPct) + '%';
+      slingVal.style.color = sweet ? 'var(--good)' : 'var(--bad)';
+      markerRaf = requestAnimationFrame(markerTick);
+    }
+    markerTick();
+
+    slingBtn.addEventListener('click', fireStone);
+    function fireStone(){
+      if (over) return;
+      if (stonesSmoothed < STONES_NEEDED || shotsLeft <= 0) return;
+      const sweet = markerPct >= 32 && markerPct <= 68;
+      const sRect = slingBtn.getBoundingClientRect();
+      const gRect = giant.getBoundingClientRect();
+      const stRect = stage.getBoundingClientRect();
+      const sx = sRect.left + sRect.width/2 - stRect.left;
+      const sy = sRect.top - stRect.top;
+      const tx = gRect.left + gRect.width/2 - stRect.left;
+      const ty = gRect.top + 30 - stRect.top;
+      const stone = document.createElement('div');
+      stone.className = 'stone-flight';
+      stone.style.left = sx + 'px';
+      stone.style.top = sy + 'px';
+      stage.appendChild(stone);
+      const dur = 600;
+      const start = performance.now();
+      function fly(now){
+        const t = Math.min(1, (now - start) / dur);
+        const cx = sx + (tx - sx) * t;
+        const cy = sy + (ty - sy) * t - 80 * Math.sin(Math.PI * t);
+        stone.style.left = cx + 'px';
+        stone.style.top = cy + 'px';
+        if (t < 1) requestAnimationFrame(fly);
+        else {
+          stone.remove();
+          if (sweet){
+            giant.classList.add('shake');
+            setTimeout(()=> giant.classList.remove('shake'), 350);
+            giant.classList.add('down');
+            setTimeout(()=> finish(true), 600);
+          } else {
+            giant.classList.add('shake');
+            setTimeout(()=> giant.classList.remove('shake'), 350);
+            shotsLeft--;
+            updateHud();
+            if (shotsLeft <= 0) finish(false, 'All your stones missed! Goliath still stands.');
+          }
+        }
+      }
+      requestAnimationFrame(fly);
+    }
+
+    function finish(success, reason){
+      if (over) return;
+      over = true;
+      if (markerRaf) cancelAnimationFrame(markerRaf);
+      slingBtn.disabled = true;
+      if (success){
+        showModal('success','Goliath falls!',['One smooth stone, placed in faith.', '"You come against me with sword and spear, but I come against you in the name of the Lord." — 1 Samuel 17:45'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({type:'game-complete', game:'david_goliath'}, '*');
+      } else {
+        showModal('timeout','Be strong!',[reason || 'Time’s up.', '"Be strong and courageous." — Joshua 1:9'],'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+    addEventListener('game-timeout', () => finish(false, 'Time’s up! The battle is long.'));
+  </script>
+</body>
+</html>

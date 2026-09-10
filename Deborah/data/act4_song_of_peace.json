@@ -1,6 +1,6 @@
 {
   "id": "song_of_peace",
-  "name": "Ch.4 · A Song of Peace",
+  "name": "Ch.4 \u00b7 A Song of Peace",
   "bg": "radial-gradient(circle at 50% 25%, #f6e05e, #b7791f 70%)",
   "particle": "dawn",
   "scene": "song_of_peace",
@@ -10,29 +10,45 @@
   "gameInstructions": "Choose the three words that best tell Deborah's story.",
   "lines": [
     {
+      "id": "song_of_peace_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "When the danger had passed, Deborah and Barak sang."
+      "text": "When the danger had passed, Deborah and Barak sang.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "song_of_peace_1",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "They remembered every willing heart, every brave step, and the God who had gone before them."
+      "text": "They remembered every willing heart, every brave step, and the God who had gone before them.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "song_of_peace_2",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "The land rested for forty years."
+      "text": "The land rested for forty years.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "song_of_peace_3",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "text": "Deborah's story reminds us: listen closely, stand together, and use courage to make peace.",
-      "cite": "Judges 5:2"
+      "cite": "Judges 5:2",
+      "width": "1/2",
+      "valign": "middle"
     }
   ]
 }

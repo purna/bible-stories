@@ -1,0 +1,104 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "a_city_in_need",
+      "name": "Ch.1 · A City in Need",
+      "file": "act1_a_city_in_need.json",
+      "scene": "a_city_in_need",
+      "foreground": "fg_a_city_in_need",
+      "assetFolder": "act_01_a_city_in_need",
+      "assetStem": "isaiah_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "the_holy_throne",
+      "name": "Ch.2 · The Holy Throne",
+      "file": "act2_the_holy_throne.json",
+      "scene": "the_holy_throne",
+      "foreground": "fg_the_holy_throne",
+      "assetFolder": "act_02_the_holy_throne",
+      "assetStem": "isaiah_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    },
+    {
+      "id": "the_vineyard_song",
+      "name": "Ch.3 · The Vineyard Song",
+      "file": "act3_the_vineyard_song.json",
+      "scene": "the_vineyard_song",
+      "foreground": "fg_the_vineyard_song",
+      "assetFolder": "act_03_the_vineyard_song",
+      "assetStem": "isaiah_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "immanuel_sign",
+      "name": "Ch.4 · Immanuel Sign",
+      "file": "act4_immanuel_sign.json",
+      "scene": "immanuel_sign",
+      "foreground": "fg_immanuel_sign",
+      "assetFolder": "act_04_immanuel_sign",
+      "assetStem": "isaiah_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+    },
+    {
+      "id": "the_assyrian_shadow",
+      "name": "Ch.5 · The Assyrian Shadow",
+      "file": "act5_the_assyrian_shadow.json",
+      "scene": "the_assyrian_shadow",
+      "foreground": "fg_the_assyrian_shadow",
+      "assetFolder": "act_05_the_assyrian_shadow",
+      "assetStem": "isaiah_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+    },
+    {
+      "id": "hezekiah_s_crisis",
+      "name": "Ch.6 · Hezekiah’s Crisis",
+      "file": "act6_hezekiah_s_crisis.json",
+      "scene": "hezekiah_s_crisis",
+      "foreground": "fg_hezekiah_s_crisis",
+      "assetFolder": "act_06_hezekiah_s_crisis",
+      "assetStem": "isaiah_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+    },
+    {
+      "id": "comfort_my_people",
+      "name": "Ch.7 · Comfort My People",
+      "file": "act7_comfort_my_people.json",
+      "scene": "comfort_my_people",
+      "foreground": "fg_comfort_my_people",
+      "assetFolder": "act_07_comfort_my_people",
+      "assetStem": "isaiah_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "the_servant",
+      "name": "Ch.8 · The Servant",
+      "file": "act8_the_servant.json",
+      "scene": "the_servant",
+      "foreground": "fg_the_servant",
+      "assetFolder": "act_08_the_servant",
+      "assetStem": "isaiah_act8",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+    },
+    {
+      "id": "new_creation",
+      "name": "Ch.9 · New Creation",
+      "file": "act9_new_creation.json",
+      "scene": "new_creation",
+      "foreground": "fg_new_creation",
+      "assetFolder": "act_09_new_creation",
+      "assetStem": "isaiah_act9",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)"
+    }
+  ]
+}

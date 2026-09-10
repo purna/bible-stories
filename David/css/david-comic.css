@@ -1,0 +1,761 @@
+:root {
+  --ink: #0A0812;
+  --cream: #FFF7E8;
+  --panel-bg: #1a1208;
+  --panel-dots: #2a1d10;
+  --accent-color: #c87a30;
+  --bubble-bg: #FFF1D2;
+  --text-color: #0A0812;
+}
+
+/* ── Act Palettes ─────────────────────── */
+.palette-act-1 { --panel-bg:#2a3a1a; --panel-dots:#3a4a28; --accent-color:#7EC850; --bubble-bg:#eafade; --text-color:#0A0812; }
+.palette-act-2 { --panel-bg:#2d1a0e; --panel-dots:#3d2a18; --accent-color:#C8A84B; --bubble-bg:#fff7e8; --text-color:#0A0812; }
+.palette-act-3 { --panel-bg:#2a1a10; --panel-dots:#3a2a18; --accent-color:#E8B84B; --bubble-bg:#fff0d8; --text-color:#0A0812; }
+.palette-act-4 { --panel-bg:#1a1024; --panel-dots:#2a1834; --accent-color:#E94560; --bubble-bg:#ffe0e8; --text-color:#0A0812; }
+.palette-act-5 { --panel-bg:#241810; --panel-dots:#342818; --accent-color:#D4A76A; --bubble-bg:#fde8c4; --text-color:#0A0812; }
+.palette-act-6 { --panel-bg:#1a2a14; --panel-dots:#2a3a20; --accent-color:#7EC850; --bubble-bg:#eafade; --text-color:#0A0812; }
+.palette-act-7 { --panel-bg:#2a1a10; --panel-dots:#3a2a18; --accent-color:#E8B84B; --bubble-bg:#fff7e8; --text-color:#0A0812; }
+.palette-act-8 { --panel-bg:#1a0e08; --panel-dots:#2a1810; --accent-color:#C84B4B; --bubble-bg:#ffe6e0; --text-color:#0A0812; }
+.palette-act-9 { --panel-bg:#241a10; --panel-dots:#342a18; --accent-color:#D4A76A; --bubble-bg:#fde8c4; --text-color:#0A0812; }
+.palette-act-10{ --panel-bg:#1a1420; --panel-dots:#2a2430; --accent-color:#E94560; --bubble-bg:#ffe0e8; --text-color:#0A0812; }
+.palette-act-11{ --panel-bg:#1a0e08; --panel-dots:#2a1810; --accent-color:#C84B4B; --bubble-bg:#ffe6e0; --text-color:#0A0812; }
+.palette-act-12{ --panel-bg:#1a2a1a; --panel-dots:#2a3a28; --accent-color:#7EC850; --bubble-bg:#eafade; --text-color:#0A0812; }
+
+/* Ch 1 Basket on the Nile — soft water / reeds */
+
+/* Ch 2 Burning Bush — firelight against desert night */
+
+/* Ch 3 Before the Throne — palace dark with gold */
+
+/* Ch 4 Passover Night — dim lamp-lit, deep red */
+
+/* Ch 5 Red Sea — twilight blue */
+
+/* Ch 6 Wilderness Bread — warm dusty */
+
+/* Ch 7 Sinai — thunder purple-black */
+
+/* Ch 8 Golden Calf — collapsing dark amber */
+
+/* Ch 9 Forty Years — weathered brown-grey */
+
+/* Ch 10 Mount Nebo — distant green-gold horizon */
+.palette-act-10{ --panel-bg:#10140a; --panel-dots:#1c2014; --accent-color:#c8c060; --bubble-bg:#fff8d8; --text-color:#0A0812; }
+
+/* Contextual lower surface: Nile water, desert sand, or green land. */
+
+.palette-act-2,
+.palette-act-3,
+.palette-act-4,
+.palette-act-6,
+.palette-act-7,
+.palette-act-8,
+
+
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0; height: 100%; overflow: hidden;
+  background: var(--ink);
+  font-family: 'Nunito', sans-serif;
+  color: var(--cream);
+}
+
+/* ── Start Screen ─────────────────────────────── */
+#startScreen {
+  position: fixed; inset: 0; z-index: 100;
+  background: linear-gradient(160deg, #1a0e08, #4a2a14 60%, #1a0e08);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 30px; transition: opacity .5s;
+}
+#startScreen .comic-cover {
+  width: min(90vw, 460px);
+  background: #1a0e08;
+  padding: 30px;
+  border: 6px solid var(--ink);
+  box-shadow: 12px 12px 0px var(--ink);
+  background-image: radial-gradient(#4a2a14 15%, transparent 15%);
+  background-size: 12px 12px;
+}
+#startScreen .issue {
+  font-family: 'Space Mono', monospace; font-size: 12px;
+  color: var(--ink); background: #E8B84B;
+  display: inline-block; padding: 4px 10px; margin-bottom: 14px;
+  font-weight: 700; border: 2px solid var(--ink);
+}
+#startScreen h1 {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(54px, 14vw, 96px);
+  margin: 0; color: #E8B84B;
+  -webkit-text-stroke: 4px var(--ink);
+  paint-order: stroke fill; line-height: 1;
+  text-shadow: 6px 6px 0 #c84b4b;
+}
+#startScreen .subtitle {
+  font-family: 'Baloo 2', sans-serif; font-size: 22px;
+  color: var(--cream); margin: 4px 0 16px; font-weight: 800;
+  text-shadow: 2px 2px 0px var(--ink);
+}
+.bigtorch { font-size: 64px; margin-bottom: 10px; animation: popInAnim .8s .2s both; filter: drop-shadow(0 0 10px rgba(255,180,80,0.5)); }
+#startScreen p {
+  font-family: 'Press Start 2P', monospace; font-size: 10px;
+  max-width: 460px; color: var(--cream); opacity: .9;
+  margin: 18px 0 26px; line-height: 2;
+}
+#startBtn {
+  font-family: 'Press Start 2P', monospace; font-size: 14px;
+  background: #c87a30; color: var(--ink);
+  border: 4px solid var(--ink); padding: 16px 30px; cursor: pointer;
+  box-shadow: 6px 6px 0 var(--ink); transition: all .1s;
+}
+#startBtn:hover { box-shadow: 4px 4px 0 var(--ink); transform: translateY(2px); }
+#startScreen.hide { opacity: 0; visibility: hidden; pointer-events: none; }
+
+/* ── App Shell ────────────────────────────────── */
+#app { position: fixed; inset: 0; overflow: hidden; background: var(--ink); }
+
+#halftoneOverlay {
+  position: fixed; inset: 0;
+  background: radial-gradient(circle, #fff 15%, #000 85%);
+  background-size: 8px 8px;
+  mix-blend-mode: multiply; opacity: 0.16; pointer-events: none; z-index: 50;
+}
+#bgGradient { position: absolute; inset: 0; transition: background 1.1s ease; z-index: 0; }
+#particles   { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+
+/* This lower silhouette becomes terrain outside the dedicated Red Sea scene. */
+#rainLayer {
+  position: absolute; inset: 0; z-index: 2;
+  pointer-events: none; opacity: 0; transition: opacity 1.2s ease;
+}
+#rainLayer.active { opacity: .78; }
+#rainLayer #rainStripes { display: none; }
+#rainLayer .wave-container { height: 112px; }
+#rainLayer .air {
+  background-image: none;
+  background-color: var(--surface-1, #9a6d38);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath d='M0 60C150 100 350 20 500 60s350-40 500 0v40H0z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath d='M0 60C150 100 350 20 500 60s350-40 500 0v40H0z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-x; mask-repeat: repeat-x;
+  -webkit-mask-size: 1000px 100px; mask-size: 1000px 100px;
+}
+#rainLayer .air1 { background-color: var(--surface-1); }
+#rainLayer .air2 { background-color: var(--surface-2); }
+#rainLayer .air3 { background-color: var(--surface-3); }
+#rainLayer .air4 { background-color: var(--surface-4); }
+
+/* ── Gentle wind-swept field — chapters 1–3, 9 and 10 ──── */
+#mosesFieldBackdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  background: linear-gradient(180deg, #527b9d 0%, #91a67f 58%, #77602e 100%);
+  transition: opacity 1.2s ease, visibility 0s linear 1.2s;
+}
+
+body.palette-act-1 #mosesFieldBackdrop,
+body.palette-act-2 #mosesFieldBackdrop,
+body.palette-act-3 #mosesFieldBackdrop,
+body.palette-act-9 #mosesFieldBackdrop,
+body.palette-act-10 #mosesFieldBackdrop {
+  opacity: .48;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.moses-field-sun {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 220%;
+  transform: translateY(-42%);
+  background: radial-gradient(circle at 52% 47%, rgba(255, 220, 105, .95) 0 4%, rgba(229, 166, 58, .48) 8%, rgba(82, 123, 157, .08) 27%, transparent 48%);
+}
+
+.moses-grass-field { position: absolute; inset: 0; }
+
+.moses-grass-clump {
+  position: absolute;
+  bottom: -1px;
+  width: var(--clump-size);
+  height: var(--clump-size);
+  overflow: hidden;
+  transform: translateX(-50%);
+  transform-origin: 50% 100%;
+  opacity: var(--clump-opacity);
+  animation: mosesGentleBreeze var(--sway-time) ease-in-out var(--sway-delay) infinite;
+  will-change: transform;
+}
+
+.moses-grass-blade {
+  position: absolute;
+  bottom: -100%;
+  left: -50%;
+  width: 100%;
+  height: 160%;
+  border-right: max(2px, 1.8vmin) solid var(--blade-color);
+  border-top-right-radius: 50%;
+}
+
+.moses-grass-blade:nth-child(2) {
+  bottom: -230%;
+  left: -150%;
+  width: 200%;
+  height: 300%;
+  border-top-right-radius: 20%;
+}
+
+.moses-grass-blade:nth-child(3) {
+  bottom: -300%;
+  left: 50%;
+  width: 200%;
+  height: 360%;
+  border-right: 0;
+  border-left: max(2px, 1.8vmin) solid var(--blade-color);
+  border-top-left-radius: 15%;
+}
+
+@keyframes mosesGentleBreeze {
+  0%, 100% { transform: translateX(-50%) rotate(-.35deg); }
+  50% { transform: translateX(-50%) rotate(.35deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moses-grass-clump { animation: none; }
+}
+
+/* ── Wind-swept field backdrop (Ch 1, 2, 6, 9, 12) ─── */
+body.palette-act-1 #davidFieldBackdrop,
+body.palette-act-2 #davidFieldBackdrop,
+body.palette-act-6 #davidFieldBackdrop,
+body.palette-act-9 #davidFieldBackdrop,
+body.palette-act-12 #davidFieldBackdrop {
+  opacity: .48;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.david-field-sun {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 220%;
+  transform: translateY(-42%);
+  background: radial-gradient(circle at 52% 47%, rgba(255, 220, 105, .95) 0 4%, rgba(229, 166, 58, .48) 8%, rgba(82, 123, 157, .08) 27%, transparent 48%);
+}
+
+.david-grass-field { position: absolute; inset: 0; }
+
+.david-grass-clump {
+  position: absolute;
+  bottom: -1px;
+  width: var(--clump-size);
+  height: var(--clump-size);
+  overflow: hidden;
+  transform: translateX(-50%);
+  transform-origin: 50% 100%;
+  opacity: var(--clump-opacity);
+  animation: davidGentleBreeze var(--sway-time) ease-in-out var(--sway-delay) infinite;
+  will-change: transform;
+}
+
+.david-grass-blade {
+  position: absolute;
+  bottom: -100%;
+  left: -50%;
+  width: 100%;
+  height: 160%;
+  border-right: max(2px, 1.8vmin) solid var(--blade-color);
+  border-top-right-radius: 50%;
+}
+
+.david-grass-blade:nth-child(2) {
+  bottom: -230%;
+  left: -150%;
+  width: 200%;
+  height: 300%;
+  border-top-right-radius: 20%;
+}
+
+.david-grass-blade:nth-child(3) {
+  bottom: -300%;
+  left: 50%;
+  width: 200%;
+  height: 360%;
+  border-right: 0;
+  border-left: max(2px, 1.8vmin) solid var(--blade-color);
+  border-top-left-radius: 15%;
+}
+
+@keyframes davidGentleBreeze {
+  0%, 100% { transform: translateX(-50%) rotate(-.35deg); }
+  50% { transform: translateX(-50%) rotate(.35deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .david-grass-clump { animation: none; }
+}
+
+/* ── Sea Layer (Ch 5) ────────────────────────── */
+#seaLayer {
+  position: absolute; inset: 0; z-index: 2;
+  pointer-events: none; opacity: 0; transition: opacity 1.2s ease;
+}
+#seaLayer.active { opacity: 1; }
+#seaWalls {
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px, transparent 8px,
+    rgba(80, 140, 200, 0.18) 8px, rgba(80, 140, 200, 0.18) 9px
+  );
+}
+.wave-container { position: absolute; bottom: 0; left: 0; width: 100%; height: 120px; }
+.sea-wall-left, .sea-wall-right {
+  position: absolute; bottom: 0; width: 30%; height: 90%;
+  pointer-events: none;
+}
+.sea-wall-left { left: 0; background: linear-gradient(90deg, rgba(20,40,90,0.85), rgba(20,40,90,0.0)); }
+.sea-wall-right { right: 0; background: linear-gradient(270deg, rgba(20,40,90,0.85), rgba(20,40,90,0.0)); }
+.sea-wall-left.active, .sea-wall-right.active { opacity: 1; }
+.air { position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; background-size: 1000px 100px; }
+.air.air1 { animation: waveScroll 16s linear infinite; z-index: 4; opacity: .9; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C150,100 350,20 500,60 C650,100 850,20 1000,60 L1000,100 L0,100 Z' fill='%235fb8e0' opacity='0.6'/%3E%3C/svg%3E"); }
+.air.air2 { animation: waveScrollRev 9s linear infinite; z-index: 3; opacity: .55; bottom: 8px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C150,100 350,20 500,60 C650,100 850,20 1000,60 L1000,100 L0,100 Z' fill='%23173f70' opacity='0.5'/%3E%3C/svg%3E"); }
+.air.air3 { animation: waveScroll 20s linear infinite; z-index: 2; opacity: .35; bottom: 14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C150,100 350,20 500,60 C650,100 850,20 1000,60 L1000,100 L0,100 Z' fill='%2388d0ff' opacity='0.4'/%3E%3C/svg%3E"); }
+.air.air4 { animation: waveScrollRev 6s linear infinite; z-index: 1; opacity: .6; bottom: 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C150,100 350,20 500,60 C650,100 850,20 1000,60 L1000,100 L0,100 Z' fill='%23fff7e8' opacity='0.2'/%3E%3C/svg%3E"); }
+@keyframes waveScroll { 0% { background-position-x: 0; } 100% { background-position-x: 1000px; } }
+@keyframes waveScrollRev { 0% { background-position-x: 0; } 100% { background-position-x: -1000px; } }
+
+/* ── Fire Layer (Ch 2 burning bush) ───────────── */
+#fireLayer {
+  position: absolute; inset: 0; z-index: 2;
+  pointer-events: none; opacity: 0; transition: opacity 1.2s ease;
+}
+#fireLayer.active { opacity: 1; }
+#fireLayer::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 60%, rgba(255,160,60,0.25), transparent 50%);
+  animation: firePulse 2.4s ease-in-out infinite;
+}
+#fireLayer::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 70%, rgba(255,80,40,0.18), transparent 40%);
+  animation: firePulse 1.8s ease-in-out infinite reverse;
+}
+@keyframes firePulse { 0%,100% { opacity: .6; } 50% { opacity: 1; } }
+
+/* ── Thunder Layer (Ch 7 Sinai) ──────────────── */
+#thunderLayer {
+  position: absolute; inset: 0; z-index: 2;
+  pointer-events: none; opacity: 0; transition: opacity .4s ease;
+  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.95), rgba(140,120,255,0.2) 40%, transparent 80%);
+}
+#thunderLayer.active { opacity: 1; animation: thunderFlash 4s ease-in-out infinite; }
+@keyframes thunderFlash {
+  0%, 38%, 42%, 100% { opacity: 0; }
+  40% { opacity: 1; }
+  70% { opacity: 0.25; }
+}
+
+/* ── Ambient Layer (dawn / hope) ─────────────── */
+#ambientLayer {
+  position: absolute; inset: 0; z-index: 2;
+  pointer-events: none; opacity: 0; transition: opacity 1.2s ease;
+}
+#ambientLayer.active { opacity: 1; }
+.bird-container { position: absolute; top: 0; left: 0; width: 100%; height: 200px; }
+.bird-fly {
+  position: absolute; top: -20px; font-size: 18px;
+  animation: birdFloat 14s linear infinite; opacity: 0.75;
+}
+@keyframes birdFloat { 0% { left: -5%; top: 35%; } 100% { left: 110%; top: 18%; } }
+.bird-fly:nth-child(2) { animation-duration: 18s; animation-delay: -6s; top: 12%; font-size: 14px; }
+.bird-fly:nth-child(3) { animation-duration: 21s; animation-delay: -3s; top: 50%; font-size: 11px; }
+.land-arc {
+  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 200%; height: 70%;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: linear-gradient(180deg, rgba(40,120,40,0.18), rgba(40,80,40,0.45));
+  opacity: 0; transition: opacity 2s ease; pointer-events: none;
+}
+#ambientLayer.land .land-arc { opacity: 1; }
+
+/* ── HUD ─────────────────────────────────────── */
+#hud {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 28px; pointer-events: auto; gap: 10px;
+}
+#chapterSelect {
+  font-family: 'Press Start 2P', monospace; font-size: 9px;
+  letter-spacing: .05em; text-transform: uppercase;
+  background-color: var(--accent-color); color: var(--ink);
+  border: 4px solid var(--ink); padding: 10px 34px 10px 16px;
+  box-shadow: 4px 4px 0px var(--ink); cursor: pointer;
+  -webkit-appearance: none; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%230A0812'%3E%3Cpath d='M0 3h12L6 9z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center;
+  transition: background-color 0.5s;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
+}
+#dots { display: flex; gap: 8px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.25); transition: .3s; flex-shrink: 0; }
+.dot.on { background: var(--accent-color); transform: scale(1.3); border: 1px solid var(--ink); }
+
+/* ── Stage / Frame ───────────────────────────── */
+#stageWrap {
+  position: absolute; top: 90px; left: 0; right: 0; bottom: 24vh;
+  z-index: 10; display: flex; align-items: center; justify-content: center;
+}
+#stage {
+  position: relative; width: min(94vw, 760px); height: 100%;
+  perspective: 1200px; display: flex; align-items: center; justify-content: center;
+}
+.comic-frame {
+  width: 100%; height: 100%;
+  background: var(--panel-bg);
+  border: 6px solid var(--ink);
+  box-shadow: 12px 12px 0px var(--ink);
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: 24px;
+  background-image: radial-gradient(var(--panel-dots) 20%, transparent 20%),
+                    radial-gradient(var(--panel-dots) 20%, transparent 20%);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+  transition: background 0.5s ease-in-out;
+}
+#graphicContainer {
+  position: absolute; inset: 0; z-index: 1;
+  display: flex; align-items: center; justify-content: center; pointer-events: none;
+}
+#svgLayer {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 3; transition: opacity 0.5s;
+}
+#svgLayer svg {
+  width: 85%; height: auto; max-height: 85%;
+  filter: drop-shadow(6px 6px 0px var(--ink));
+}
+
+/* ── Layered render: SVG bg (z1) + 3D canvas (z2) + SVG fg (z5) ── */
+#svgLayer.svg-behind { position: absolute; inset: 0; z-index: 1; pointer-events: none; display: block; }
+#svgLayer.svg-behind svg { width: 100%; height: 100%; max-height: none; filter: none; }
+#fgLayer.svg-front    { position: absolute; inset: 0; z-index: 5; pointer-events: none; display: block; }
+#fgLayer.svg-front svg { width: 100%; height: 100%; max-height: none; filter: drop-shadow(3px 3px 0 var(--ink)); }
+#graphicContainer.canvas-mode { background: transparent; }
+#graphicContainer > canvas    { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+
+/* ── Content Overlay ─────────────────────────── */
+.content-overlay {
+  position: relative; z-index: 4; width: 100%; height: 100%;
+  display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+}
+.char-container {
+  width: 110px; height: 110px;
+  filter: drop-shadow(4px 4px 0px var(--ink));
+  animation: floatChar 3s ease-in-out infinite alternate;
+  position: absolute; bottom: 20px; left: 20px;
+}
+.char-container.right { left: auto; right: 20px; }
+@keyframes floatChar { 0% { transform: translateY(0) rotate(-1deg); } 100% { transform: translateY(-5px) rotate(2deg); } }
+
+/* ── Caption (narrator) ─────────────────────── */
+.caption {
+  background-color: #E8B84B;
+  background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 15%);
+  background-size: 6px 6px;
+  color: var(--ink); font-family: 'Press Start 2P', monospace;
+  font-size: clamp(10px, 1.8vw, 13px); line-height: 1.6;
+  padding: 14px 18px; border: 4px solid var(--ink);
+  transform: rotate(-0.5deg); box-shadow: 6px 6px 0px var(--ink);
+  width: 90%; text-align: center; hyphens: none; word-break: keep-all;
+  max-width: 100%; margin-top: 10px;
+}
+.caption.caption-left  { width: 54%; align-self: flex-start; transform: rotate(-0.3deg); text-align: left; }
+.caption.caption-center{ width: 72%; align-self: center; transform: rotate(-0.5deg); text-align: center; }
+.caption.caption-right { width: 90%; align-self: flex-end; transform: rotate(0.3deg); text-align: right; }
+
+/* ── Speech Bubbles ─────────────────────────── */
+.bubble-wrap { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 10px; padding: 0 40px; }
+.bubble-wrap.align-left  { align-items: flex-start; }
+.bubble-wrap.align-center{ align-items: center; }
+.bubble-wrap.align-right { align-items: flex-end; }
+.bubble {
+  position: relative; background-color: var(--bubble-bg); color: var(--text-color);
+  padding: 18px 24px; border: 4px solid var(--ink);
+  font-family: 'Baloo 2', sans-serif; font-weight: 800;
+  font-size: clamp(16px, 2.8vw, 24px); line-height: 1.35;
+  width: 100%; border-radius: 16px; box-shadow: 6px 6px 0px var(--ink);
+  text-align: center; hyphens: none; word-break: keep-all; max-width: 100%;
+  transition: background-color 0.5s, color 0.5s;
+}
+.bubble.bubble-left  { width: 54%; text-align: left; }
+.bubble.bubble-center{ width: 72%; text-align: center; }
+.bubble.bubble-right { width: 90%; text-align: right; }
+.bubble::after {
+  content: ''; position: absolute; bottom: -20px; left: 25%;
+  border-width: 20px 15px 0; border-style: solid;
+  border-color: var(--ink) transparent; display: block; width: 0;
+}
+.bubble::before {
+  content: ''; position: absolute; bottom: -12px; left: 25%;
+  border-width: 16px 11px 0; border-style: solid; border-color: inherit;
+  display: block; width: 0; z-index: 1; margin-left: 4px;
+}
+/* God's voice — gold dashed border, Bangers font */
+.bubble.god {
+  background-color: #E8B84B; color: #0A0812;
+  font-family: 'Bangers', cursive; font-size: clamp(24px, 4.5vw, 40px);
+  letter-spacing: .05em; border-radius: 4px; border: 5px dashed var(--ink);
+}
+.bubble.god::after  { left: 50%; transform: translateX(-50%); }
+.bubble.god::before { left: 50%; transform: translateX(-50%); border-top-color: #E8B84B; margin-left: 0; }
+.bubble.moses { border-radius: 24px; }
+.bubble.pharaoh { background: #c8a84b; color: #0a0812; }
+.bubble.pharaohs_daughter { background: #f0d0e8; color: #0a0812; }
+.bubble.aaron { background: #d0e0f0; color: #0a0812; }
+.bubble.miriam { background: #f0c8c8; color: #0a0812; }
+.bubble.zipporah { background: #e0f0d0; color: #0a0812; }
+.bubble.jethro { background: #c8c890; color: #0a0812; }
+.bubble.burning_bush { background: #ff9b3a; color: #0a0812; border-radius: 8px; }
+.bubble.pharaoh::before { border-top-color: #c8a84b; }
+.bubble.pharaohs_daughter::before { border-top-color: #f0d0e8; }
+.bubble.aaron::before { border-top-color: #d0e0f0; }
+.bubble.miriam::before { border-top-color: #f0c8c8; }
+.bubble.zipporah::before { border-top-color: #e0f0d0; }
+.bubble.jethro::before { border-top-color: #c8c890; }
+.bubble.burning_bush::before { border-top-color: #ff9b3a; }
+
+/* ── SFX Text ─────────────────────────────────── */
+.sfx {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(54px, 10vw, 90px);
+  color: #E8B84B; -webkit-text-stroke: 4px var(--ink); paint-order: stroke fill;
+  text-shadow: 6px 6px 0 #c84b4b;
+  transform: rotate(-6deg) scale(1.05); line-height: 1;
+  position: absolute; top: 35%; z-index: 4; pointer-events: none;
+}
+
+/* ── Choices ─────────────────────────────────── */
+#choices {
+  position: absolute; left: 50%; bottom: 11.5vh; transform: translateX(-50%);
+  z-index: 15; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+  width: min(92vw, 760px); opacity: 0; pointer-events: none; transition: opacity .4s ease;
+}
+#choices.show { opacity: 1; pointer-events: auto; }
+.choiceBtn {
+  font-family: 'Press Start 2P', monospace; font-size: 10px;
+  background: #c87a30; border: 4px solid var(--ink); color: var(--ink);
+  padding: 12px 20px; cursor: pointer; transition: all .1s;
+  box-shadow: 0 6px 0 var(--ink); text-align: center;
+}
+.choiceBtn:hover { box-shadow: 0 4px 0 var(--ink); transform: translateY(2px); }
+.choiceBtn:active{ box-shadow: 0 0 0 var(--ink); transform: translateY(6px); }
+
+/* ── Delay Note ──────────────────────────────── */
+#delayNote {
+  position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%) rotate(-0.5deg);
+  z-index: 15; font-family: 'Press Start 2P', monospace; font-size: clamp(9px, 1.6vw, 12px);
+  color: var(--ink); background-color: #E8B84B;
+  background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 15%);
+  background-size: 6px 6px; padding: 14px 22px; border: 4px solid var(--ink);
+  box-shadow: 6px 6px 0px var(--ink); opacity: 0; pointer-events: none; transition: opacity .4s;
+  text-align: center; width: 90%; line-height: 1.6;
+}
+#delayNote.show { opacity: 1; pointer-events: auto; }
+
+/* ── Navigation ──────────────────────────────── */
+#navHints {
+  position: absolute; bottom: 2.4vh; left: 0; right: 0; z-index: 20;
+  display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+  row-gap: 4px; gap: clamp(8px, 3vw, 22px); padding: 0 12px;
+  font-family: 'Space Mono', monospace; font-size: clamp(8px, 2.4vw, 11px);
+  letter-spacing: .05em; color: rgba(255,255,255,.5); pointer-events: none; text-align: center;
+}
+#nextBtn, #nextLineBtn {
+  position: absolute; bottom: 6.2vh; right: 4vw; z-index: 25;
+  font-family: 'Baloo 2', sans-serif; font-weight: 900;
+  color: var(--ink); border: 3px solid var(--ink); padding: 12px 24px; cursor: pointer;
+  box-shadow: 4px 4px 0px var(--ink); opacity: 0; transform: translateY(20px);
+  transition: .4s; pointer-events: none;
+}
+#nextBtn     { font-size: 16px; background: #c84b4b; }
+#nextLineBtn { font-size: 14px; background: #c87a30; }
+#nextBtn.show, #nextLineBtn.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+#nextBtn:hover, #nextLineBtn:hover { transform: translateY(-2px); box-shadow: 6px 6px 0px var(--ink); }
+#nextBtn.finale { background: #E8B84B; }
+
+/* ── Portal Transition ───────────────────────── */
+#portal {
+  position: fixed; inset: 0; z-index: 60; pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, transparent 0%, transparent 150%, #000 150%);
+}
+#portal.falling { animation: fallIn .75s cubic-bezier(.7,0,.9,.4) forwards; }
+@keyframes fallIn {
+  0%   { background: radial-gradient(circle at 50% 50%, transparent 0%, transparent 150%, #000 150%); }
+  100% { background: radial-gradient(circle at 50% 50%, transparent 0%, transparent 0%, #000 0%); }
+}
+#portal.rising  { animation: riseOut .7s cubic-bezier(.2,.8,.3,1) forwards; }
+@keyframes riseOut {
+  0%   { background: radial-gradient(circle at 50% 50%, transparent 0%, transparent 0%, #000 0%); }
+  100% { background: radial-gradient(circle at 50% 50%, transparent 0%, transparent 150%, #000 150%); }
+}
+
+/* ── Frame Entry Animation ───────────────────── */
+.popIn  { animation: popInAnim  .6s cubic-bezier(.2,1.4,.4,1) both; }
+.popOut { animation: popOutAnim .4s ease both; }
+@keyframes popInAnim  { 0% { opacity:0; transform: scale(.95) translateY(20px); } 100% { opacity:1; transform: scale(1) translateY(0); } }
+@keyframes popOutAnim { 0% { opacity:1; transform: scale(1) translateY(0); } 100% { opacity:0; transform: scale(.98) translateY(-10px); } }
+
+/* ── Text Animation Effects ──────────────────── */
+.fx-fade .word   { opacity:0; transform:translateY(10px); animation: chFade .4s ease both; }
+@keyframes chFade { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+.fx-type .word   { display:inline-block; opacity:0; transform:translateY(4px); animation: chType .2s ease both; }
+@keyframes chType { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+.fx-wave .word   { opacity:0; animation: chWaveIn .3s ease both, chWaveBob 1.5s ease-in-out infinite; }
+@keyframes chWaveIn { from { opacity:0; } to { opacity:1; } }
+@keyframes chWaveBob { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-6px); } }
+.fx-bounce .word { display:inline-block; opacity:0; transform:scale(.3) translateY(20px); animation: wordBounce .5s cubic-bezier(.34,1.56,.64,1) both; }
+@keyframes wordBounce { from { opacity:0; transform:scale(.3) translateY(20px); } to { opacity:1; transform:scale(1) translateY(0); } }
+.fx-shake .line-inner { display:inline-block; animation: shakeIt .4s ease-in-out infinite; }
+@keyframes shakeIt { 0%,100% { transform:translate(0,0); } 20% { transform:translate(-3px,2px); } 40% { transform:translate(3px,-2px); } 60% { transform:translate(-2px,1px); } 80% { transform:translate(2px,-1px); } }
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width:600px) {
+  #hud { flex-direction: column; align-items: center; padding: 14px 12px; gap: 8px; }
+  #chapterSelect { order:2; font-size:8px; }
+  #dots { order:1; flex-wrap:wrap; justify-content:center; max-width:90vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .air, #thunderLayer, .bird-fly { animation: none !important; }
+}
+
+/* =========================================================================
+   RED SEA STEP INTERACTION — Chapter 5: A Path Through the Water
+   Walk the people between walls of water. Hold the staff up until the path opens.
+   ========================================================================= */
+.sea-walk-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(10, 24, 56, 0.55), rgba(2, 8, 24, 0.85));
+  color: #e8f4ff;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+}
+.sea-walk-panel {
+  width: min(640px, 96%);
+  background: linear-gradient(180deg, rgba(20, 36, 64, 0.96), rgba(8, 16, 36, 0.98));
+  border: 3px solid #5fb8e0;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.55), inset 0 0 24px rgba(95, 184, 224, 0.08);
+  padding: 18px;
+  border-radius: 6px;
+  text-align: center;
+}
+.sea-walk-kicker { font-family: "Bangers", cursive; letter-spacing: 0.18em; font-size: 16px; color: #5fb8e0; text-shadow: 2px 2px 0 #0A0812; }
+.sea-walk-title  { font-family: "Bangers", cursive; font-size: clamp(22px, 4vw, 30px); margin: 4px 0 6px; color: #e8f4ff; letter-spacing: 0.04em; }
+.sea-walk-prompt { font-size: 13px; line-height: 1.55; color: #c8d8e8; margin: 0 0 12px; }
+.sea-walk-stage  { position: relative; height: 110px; margin: 8px 0 14px; background: linear-gradient(180deg, #c8e8ff 0%, #5fb8e0 60%, #173f70 100%); border: 3px solid #0A0812; border-radius: 4px; overflow: hidden; box-shadow: inset 0 0 18px rgba(0,0,0,0.4); }
+.sea-walk-path   { position: absolute; left: 50%; top: 8px; bottom: 8px; width: 30px; transform: translateX(-50%); background: linear-gradient(180deg, #f4e0b0, #c8a060); border: 2px dashed #0A0812; }
+.sea-walk-crowd  { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 36px; transition: transform 0.6s ease; }
+.sea-walk-status { font-family: "Bangers", cursive; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 10px; color: #ffd84d; min-height: 18px; }
+.sea-walk-status.done { color: #b9f2d8; }
+.sea-walk-staff  { font-family: "Bangers", cursive; font-size: 16px; padding: 10px 18px; background: #c87a30; color: #0A0812; border: 3px solid #0A0812; cursor: pointer; box-shadow: 4px 4px 0 #0A0812; }
+.sea-walk-staff:active { box-shadow: 1px 1px 0 #0A0812; transform: translate(3px, 3px); }
+.sea-walk-staff.holding { background: #ffd84d; }
+.sea-walk-help { font-size: 12px; color: #a8c0d8; margin-top: 8px; line-height: 1.4; }
+
+/* =========================================================================
+   TABLETS INTERACTION — Chapter 7 / 8: The Carved Stone
+   A simple reveal interaction for the covenant tablets (no narrative choice).
+   ========================================================================= */
+.tablets-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(10, 8, 24, 0.55), rgba(2, 4, 16, 0.85));
+  color: #ece0f8;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+}
+.tablets-panel {
+  width: min(640px, 96%);
+  background: linear-gradient(180deg, rgba(20, 16, 40, 0.96), rgba(8, 6, 24, 0.98));
+  border: 3px solid #b078d0;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.55), inset 0 0 24px rgba(176, 120, 208, 0.08);
+  padding: 18px;
+  border-radius: 6px;
+  text-align: center;
+}
+.tablets-kicker { font-family: "Bangers", cursive; letter-spacing: 0.18em; font-size: 16px; color: #b078d0; text-shadow: 2px 2px 0 #0A0812; }
+.tablets-title  { font-family: "Bangers", cursive; font-size: clamp(22px, 4vw, 30px); margin: 4px 0 6px; color: #fff; letter-spacing: 0.04em; }
+.tablets-prompt { font-size: 13px; line-height: 1.55; color: #d8c8e8; margin: 0 0 12px; }
+.tablets-grid   { display: flex; gap: 14px; justify-content: center; margin: 10px 0 14px; }
+.tablet-stone   {
+  width: 110px; height: 150px; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(180deg, #d4c098, #8a6a30);
+  border: 4px solid #0A0812; border-radius: 6px;
+  font-family: "Press Start 2P", monospace; font-size: 10px; line-height: 1.6; color: #0A0812;
+  box-shadow: 4px 4px 0 #0A0812;
+  transition: transform .3s;
+}
+.tablet-stone.lift { transform: translateY(-6px); }
+.tablets-status { font-family: "Bangers", cursive; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 10px; color: #ffd84d; min-height: 18px; }
+.tablets-status.done { color: #b9f2d8; }
+.tablets-btn    { font-family: "Bangers", cursive; font-size: 16px; padding: 10px 18px; background: #b078d0; color: #0A0812; border: 3px solid #0A0812; cursor: pointer; box-shadow: 4px 4px 0 #0A0812; }
+.tablets-btn:hover { box-shadow: 1px 1px 0 #0A0812; transform: translate(3px, 3px); }
+.tablets-help { font-size: 12px; color: #b3a3c8; margin-top: 8px; line-height: 1.4; }
+
+/* ── Comic-cover pulse + follow.js cursor effect ─── */
+#startScreen .comic-cover {
+  animation: comicCoverPulse 3.2s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform, box-shadow;
+  transition: box-shadow .2s ease;
+}
+#startScreen .comic-cover:hover {
+  animation: comicCoverPulseHover 1.6s ease-in-out infinite;
+  box-shadow: 14px 14px 0px var(--ink), 0 0 0 4px rgba(255,210,80,.5);
+}
+@keyframes comicCoverPulse {
+  0%, 100% { transform: scale(1); box-shadow: 12px 12px 0px var(--ink); }
+  50%      { transform: scale(1.018); box-shadow: 14px 14px 0px var(--ink), 0 0 24px rgba(255,210,80,.35); }
+}
+@keyframes comicCoverPulseHover {
+  0%, 100% { transform: scale(1.03); box-shadow: 16px 16px 0px var(--ink), 0 0 32px rgba(255,210,80,.55); }
+  50%      { transform: scale(1.05); box-shadow: 18px 18px 0px var(--ink), 0 0 44px rgba(255,210,80,.7); }
+}
+/* follow.js target elements — subtle accent dots that drift toward the cursor */
+[data-follow] {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,210,80,.9), rgba(255,210,80,0) 70%);
+  box-shadow: 0 0 12px rgba(255,210,80,.6);
+  transition: transform .08s linear;
+  will-change: transform;
+}

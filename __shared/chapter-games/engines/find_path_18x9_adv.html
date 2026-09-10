@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Find the Path — Terrain Cost Variant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none
+    }
+
+    :root {
+      --ink: #3a2410;
+      --path: #fffaf0;
+      --goal: #ffd84d;
+      --wall: #5b3624;
+      --trail: #2e7d32;
+      --bad: #c62828;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden
+    }
+
+    body {
+      font-family: 'Comic Neue', Arial, Helvetica, sans-serif;
+      background: var(--path);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .wrap {
+      width: 960px;
+      max-width: none;
+      height: 540px;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      flex: none;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      transform: scale(var(--game-scale, 1));
+      transform-origin: center
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      text-align: center;
+      margin: 2px 0;
+      color: var(--ink)
+    }
+
+    .sub {
+      text-align: center;
+      font-size: .8rem;
+      opacity: .8;
+      margin-bottom: 4px
+    }
+
+    .legend {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 6px;
+      font-size: .75rem;
+      font-weight: 700;
+      background: #fff;
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      padding: 3px 8px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .legend-swatch {
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--ink);
+      border-radius: 3px;
+    }
+
+    /* Pixel patterns for terrain */
+    .swatch-easy { 
+      background: #c8e6c9; 
+      background-image: radial-gradient(#81c784 1px, transparent 1px);
+      background-size: 4px 4px;
+    }
+    .swatch-mid { 
+      background: #a5d6a7; 
+      background-image: linear-gradient(45deg, #66bb6a 25%, transparent 25%), linear-gradient(-45deg, #66bb6a 25%, transparent 25%);
+      background-size: 6px 6px;
+    }
+    .swatch-hard { 
+      background: #bcaaa4; 
+      background-image: repeating-linear-gradient(0deg, #8d6e63, #8d6e63 2px, #bcaaa4 2px, #bcaaa4 4px);
+    }
+
+    .hud {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 6px;
+      font-size: .85rem;
+      font-weight: 800;
+      align-items: center;
+    }
+
+    .hud .chip {
+      background: #fff;
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      padding: 2px 8px
+    }
+
+    .hud .chip.warn {
+      background: #ffe5b4;
+      border-color: #a85b00
+    }
+
+    .hud .chip.bad {
+      background: #ffd0d0;
+      border-color: var(--bad)
+    }
+
+    .action-btn {
+      font-family: inherit;
+      font-size: .8rem;
+      font-weight: 800;
+      background: var(--goal);
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      padding: 2px 10px;
+      cursor: pointer;
+      box-shadow: 0 2px 0 var(--ink);
+      transition: transform .1s, box-shadow .1s;
+    }
+    .action-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 var(--ink);
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(18, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+      gap: 2px;
+      width: 95vmin;
+      max-width: 600px;
+      background: #e9dcc0;
+      padding: 3px;
+      border: 3px solid var(--ink);
+      border-radius: 8px
+    }
+
+    .cell {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 3px;
+      touch-action: manipulation;
+      transition: transform .14s, filter .14s
+    }
+
+    /* Distinct Pixel Textures */
+    .cell.t-0 { 
+      background: #c8e6c9; 
+      background-image: radial-gradient(#81c784 1.5px, transparent 1.5px);
+      background-size: 5px 5px;
+    }
+    .cell.t-1 { 
+      background: #a5d6a7; 
+      background-image: linear-gradient(45deg, #4caf50 25%, transparent 25%), linear-gradient(-45deg, #4caf50 25%, transparent 25%);
+      background-size: 6px 6px;
+    }
+    .cell.t-2 { 
+      background: #bcaaa4; 
+      background-image: repeating-linear-gradient(45deg, #8d6e63, #8d6e63 2px, #bcaaa4 2px, #bcaaa4 5px);
+    }
+
+    .cell svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      height: 70%;
+      pointer-events: none
+    }
+
+    .cell:active,
+    .cell.picked {
+      transform: scale(.92);
+      filter: brightness(1.08)
+    }
+
+    .cell.released {
+      animation: releasePop .24s ease-out
+    }
+
+    .cell.drop-pop {
+      animation: releasePop .24s ease-out
+    }
+
+    .cell.start {
+      background: var(--goal) !important;
+      background-image: none !important;
+      box-shadow: 0 0 6px #0002
+    }
+
+    .cell.goal {
+      background: #a8e6a3 !important;
+      background-image: none !important;
+    }
+
+    .cell.wall {
+      background: var(--wall) !important;
+      background-image: repeating-linear-gradient(0deg, #422612, #422612 3px, #5b3624 3px, #5b3624 6px) !important;
+    }
+
+    .cell.path {
+      background: var(--trail) !important;
+      background-image: none !important;
+    }
+
+    .cost-badge {
+      position: absolute;
+      bottom: 1px;
+      right: 2px;
+      font-size: 0.5rem;
+      font-weight: 800;
+      color: var(--ink);
+      background: rgba(255,255,255,0.85);
+      padding: 0 2px;
+      border-radius: 2px;
+      pointer-events: none;
+      border: 1px solid var(--ink);
+    }
+
+    @keyframes releasePop {
+      50% {
+        transform: scale(1.08)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Find the Path · Terrain Cost Variant (18×9)
+      <svg viewBox="0 0 32 32" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        focusable="false">
+        <path d="M4 28l12-12 12 12" stroke="#3a2410" stroke-width="2.5" stroke-linecap="round" />
+        <circle cx="16" cy="14" r="5" fill="#ffd84d" />
+      </svg>
+    </h1>
+    <div class="sub">Tap neighbouring squares. Different terrains cost more budget! Reach the goal within budget.</div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch swatch-easy"></div> Plains (Cost 1)</div>
+      <div class="legend-item"><div class="legend-swatch swatch-mid"></div> Woods (Cost 2)</div>
+      <div class="legend-item"><div class="legend-swatch swatch-hard"></div> Hills (Cost 3)</div>
+    </div>
+    <div class="hud">
+      <div class="chip" id="stepsChip">Steps: 0</div>
+      <div class="chip" id="costChip">Total Cost: 0</div>
+      <div class="chip" id="budgetChip">Budget Left: 45</div>
+      <button type="button" class="action-btn" id="undoBtn">Undo Step</button>
+      <button type="button" class="action-btn" id="resetBtn">Reset</button>
+    </div>
+    <div class="board" id="board"></div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Walk again</button>
+    </div>
+  </div>
+  <script src="_shared/timer.js"></script>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 120, timer: true };
+    function fitGameToViewport() { document.documentElement.style.setProperty('--game-scale', Math.min(innerWidth / 960, innerHeight / 540)); }
+    addEventListener('resize', fitGameToViewport); fitGameToViewport();
+    const ROWS = 9, COLS = 18, BUDGET = 45;
+
+    function buildLayout() {
+      const grid = [];
+      const w = ROWS, h = COLS;
+      while (true) {
+        grid.length = 0;
+        for (let i = 0; i < w; i++) {
+          const row = [];
+          for (let j = 0; j < h; j++) {
+            const rand = Math.random();
+            if (rand < 0.20) {
+              row.push('#');
+            } else {
+              const t = Math.floor(Math.random() * 3);
+              row.push(t.toString());
+            }
+          }
+          grid.push(row);
+        }
+        grid[0][0] = 's';
+        grid[w - 1][h - 1] = 'g';
+        
+        const carveOk = bfsReachable(grid, 0, 0, w - 1, h - 1);
+        if (carveOk) break;
+      }
+      return grid.map(row => row.join(''));
+    }
+
+    function bfsReachable(g, sr, sc, gr, gc) {
+      const w = g.length, h = g[0].length;
+      const seen = Array.from({ length: w }, () => Array(h).fill(false));
+      const q = [[sr, sc]]; seen[sr][sc] = true;
+      while (q.length) {
+        const [r, c] = q.shift();
+        if (r === gr && c === gc) return true;
+        for (const [dr, dc] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+          const nr = r + dr, nc = c + dc;
+          if (nr < 0 || nr >= w || nc < 0 || nc >= h) continue;
+          if (seen[nr][nc] || g[nr][nc] === '#') continue;
+          seen[nr][nc] = true; q.push([nr, nc]);
+        }
+      }
+      return false;
+    }
+
+    const previous = Number(localStorage.getItem('find-path-cost-layout'));
+    let layoutIndex = -1, grid = null;
+    for (let attempt = 0; attempt < 6; attempt++) {
+      const candidate = Math.floor(Math.random() * 1000);
+      if (candidate === previous) continue;
+      const test = buildLayout();
+      const flat = test.join('');
+      if (flat.length === ROWS * COLS) {
+        grid = test.map(row => row.split(''));
+        layoutIndex = candidate;
+        break;
+      }
+    }
+    if (!grid) { grid = buildLayout().map(row => row.split('')); }
+    localStorage.setItem('find-path-cost-layout', layoutIndex);
+
+    let r = 0, c = 0, steps = 0, totalCost = 0, budgetLeft = BUDGET;
+    let history = [{ r: 0, c: 0, cost: 0, stepCost: 0 }];
+
+    const board = document.getElementById('board');
+    const modal = document.getElementById('modal'), modalCard = document.getElementById('modalCard'), modalIcon = document.getElementById('modalIcon'), modalTitle = document.getElementById('modalTitle'), modalText = document.getElementById('modalText'), modalBtn = document.getElementById('modalBtn');
+    const CHECK_SVG = '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16.5l5.5 5.5L24 11" stroke="#1b5e20" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    const HOURGLASS_SVG = '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+    const stepsChip = document.getElementById('stepsChip');
+    const costChip = document.getElementById('costChip');
+    const budgetChip = document.getElementById('budgetChip');
+    const undoBtn = document.getElementById('undoBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const cells = [];
+    board.dataset.layout = layoutIndex;
+
+    addPressEffects('.cell,.modal-btn,.action-btn');
+    function addPressEffects(selector) { document.addEventListener('pointerdown', e => { const el = e.target.closest(selector); if (el) el.classList.add('picked') }); document.addEventListener('pointerup', e => { const el = e.target.closest(selector); if (!el) return; el.classList.remove('picked'); el.classList.remove('released'); void el.offsetWidth; el.classList.add('released') }); }
+
+    function cellChar(row, col) { return grid[row][col]; }
+    function getCellCost(ch) {
+      if (ch === '0') return 1;
+      if (ch === '1') return 2;
+      if (ch === '2') return 3;
+      return 0;
+    }
+
+    function updateHud() {
+      stepsChip.textContent = `Steps: ${steps}`;
+      costChip.textContent = `Total Cost: ${totalCost}`;
+      budgetChip.textContent = `Budget Left: ${budgetLeft}`;
+      budgetChip.classList.toggle('warn', budgetLeft <= 12 && budgetLeft > 4);
+      budgetChip.classList.toggle('bad', budgetLeft <= 4);
+    }
+
+    const START_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 4v26" stroke="#3a2410" stroke-width="2.5" stroke-linecap="round"/><path d="M8 5c5 0 11 1 11 6s-6 6-11 6" fill="#c62828" stroke="#3a2410" stroke-width="2" stroke-linejoin="round"/></svg>';
+    const GOAL_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 28l5-3V7l-5 3Z" fill="#fff" stroke="#3a2410" stroke-width="2" stroke-linejoin="round"/><path d="M10 10h17l-3 7 3 7H10Z" fill="#c62828" stroke="#3a2410" stroke-width="2" stroke-linejoin="round"/><path d="M5 10h5M5 16h5M5 22h5" stroke="#3a2410" stroke-width="2" stroke-linecap="round"/></svg>';
+    const TRAIL_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 5c1-2 4-2 5 0M18 5c1-2 4-2 5 0" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><ellipse cx="11" cy="11" rx="3" ry="4" fill="#fff"/><ellipse cx="21" cy="11" rx="3" ry="4" fill="#fff"/><ellipse cx="16" cy="22" rx="5" ry="6" fill="#fff"/></svg>';
+
+    for (let i = 0; i < ROWS; i++) {
+      const row = [];
+      for (let j = 0; j < COLS; j++) {
+        const ch = grid[i][j];
+        const el = document.createElement('div');
+        el.className = 'cell';
+        if (ch === 's') {
+          el.classList.add('start');
+          el.innerHTML = START_SVG;
+        } else if (ch === 'g') {
+          el.classList.add('goal');
+          el.innerHTML = GOAL_SVG;
+        } else if (ch === '#') {
+          el.classList.add('wall');
+        } else {
+          el.classList.add('t-' + ch);
+          const costVal = getCellCost(ch);
+          const badge = document.createElement('span');
+          badge.className = 'cost-badge';
+          badge.textContent = `+${costVal}`;
+          el.appendChild(badge);
+        }
+        el.dataset.row = i; el.dataset.col = j;
+        row.push(el);
+        board.appendChild(el);
+      }
+      cells.push(row);
+    }
+
+    function isAdjacent(r1, c1, r2, c2) { return (Math.abs(r1 - r2) + Math.abs(c1 - c2)) === 1; }
+
+    board.addEventListener('click', e => {
+      if (budgetLeft <= 0 || modal.classList.contains('active')) return;
+      const cell = e.target.closest('.cell');
+      if (!cell || cell.dataset.row === undefined) return;
+      const nr = +cell.dataset.row, nc = +cell.dataset.col;
+      if (!isAdjacent(r, c, nr, nc)) return;
+      const ch = cellChar(nr, nc);
+      if (ch === '#') return;
+      if (cells[nr][nc].classList.contains('path') || cells[nr][nc].classList.contains('start')) return;
+      
+      const stepCost = (ch === 'g' || ch === 's') ? 1 : getCellCost(ch);
+      if (budgetLeft < stepCost) return;
+
+      cells[nr][nc].classList.add('path');
+      cells[nr][nc].classList.remove('drop-pop'); void cells[nr][nc].offsetWidth; cells[nr][nc].classList.add('drop-pop');
+      cells[nr][nc].innerHTML = ch === 'g' ? GOAL_SVG : TRAIL_SVG;
+      
+      r = nr; c = nc;
+      steps++;
+      totalCost += stepCost;
+      budgetLeft -= stepCost;
+      history.push({ r, c, cost: stepCost });
+      updateHud();
+
+      if (ch === 'g') finish(true);
+      else if (budgetLeft <= 0 && ch !== 'g') finish(false, 'Out of budget! The path couldn\'t reach the goal.');
+    });
+
+    undoBtn.addEventListener('click', () => {
+      if (history.length <= 1 || modal.classList.contains('active')) return;
+      const last = history.pop();
+      const prev = history[history.length - 1];
+      
+      // Clear path icon/class from current pos
+      cells[r][c].classList.remove('path', 'drop-pop');
+      const origCh = cellChar(r, c);
+      if (origCh === 'g') {
+        cells[r][c].innerHTML = GOAL_SVG;
+        cells[r][c].classList.add('goal');
+      } else {
+        cells[r][c].innerHTML = `<span class="cost-badge">+${getCellCost(origCh)}</span>`;
+      }
+
+      r = prev.r;
+      c = prev.c;
+      steps--;
+      totalCost -= last.cost;
+      budgetLeft += last.cost;
+      updateHud();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      location.reload();
+    });
+
+    function showModal(kind, title, lines, btnLabel) {
+      modalCard.classList.remove('success', 'timeout');
+      if (kind === 'success') modalCard.classList.add('success');
+      if (kind === 'timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind === 'success' ? CHECK_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Walk again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    function finish(success, reason) {
+      if (modal.classList.contains('active')) return;
+      const verse = "“The Lord directs the steps of the godly. He delights in every detail of their lives.” — Psalm 37:23";
+      if (success === true) {
+        showModal('success', 'Goal reached efficiently!', [`Reached goal in ${steps} steps with a total cost of ${totalCost}!`, '"Your word is a lamp for my feet, a light on my path." — Psalm 119:105'], 'Walk again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({ type: 'game-complete', game: 'find_path' }, '*');
+      } else if (success === 'timeout') {
+        showModal('timeout', 'Time’s up!', [`⏱ ${reason || 'Time’s up!'}`, verse], 'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      } else {
+        showModal('timeout', 'Budget exceeded!', [reason || 'Out of budget! Path failed.', verse], 'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+    addEventListener('game-timeout', () => { if (modal.classList.contains('active')) return; finish('timeout', 'Time’s up!'); });
+
+    updateHud();
+  </script>
+</body>
+
+</html>

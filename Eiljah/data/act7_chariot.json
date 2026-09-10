@@ -1,0 +1,120 @@
+{
+  "id": "chariot",
+  "name": "The Chariot of Fire",
+  "bg": "radial-gradient(circle at 50% 50%, #ffde7d, #ff914d 80%)",
+  "particle": "wind_chariot",
+  "svg": "jordan_river",
+  "lines": [
+    {
+      "id": "chariot_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "The time came for the LORD to take Elijah up to heaven in a whirlwind. Elijah and Elisha travelled together from Gilgal.",
+      "align": "left",
+      "svg": "jordan_river",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "chariot_1",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "At the Jordan, Elijah struck the water with his cloak. The river divided, and they crossed on dry ground.",
+      "align": "center",
+      "svg": "jordan_river",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "chariot_2",
+      "speaker": "elijah",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Tell me what I can do for you before I am taken from you.",
+      "align": "right",
+      "svg": "jordan_river",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "chariot_3",
+      "speaker": "elisha",
+      "fx": "bounce",
+      "delay": 800,
+      "text": "Please let me inherit a double portion of your spirit.",
+      "align": "center",
+      "svg": "jordan_river",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "chariot_4",
+      "speaker": "elijah",
+      "fx": "fade",
+      "delay": 800,
+      "text": "You have asked for something difficult. Yet if you see me when I am taken from you, it will be granted.",
+      "align": "center",
+      "svg": "jordan_river",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "chariot_5",
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/heavenly_transition.mp3",
+      "fx": "shake",
+      "delay": 800,
+      "text": "Suddenly a chariot of fire and horses of fire appeared. They separated Elijah and Elisha, and Elijah was carried up into heaven in a whirlwind.",
+      "align": "center",
+      "svg": "chariot_of_fire",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "chariot_6",
+      "speaker": "elisha",
+      "fx": "fly",
+      "delay": 800,
+      "text": "My father! My father! The chariots and horsemen of Israel!",
+      "align": "center",
+      "svg": "elijah_ascends",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "chariot_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "Elisha picked up Elijah's cloak. The prophetic mission did not end\u2014it passed to the next generation.",
+      "align": "center",
+      "svg": "elisha_mantle",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "chariot_8",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "text": "The story of Elijah ends with a prophet taken from the earth, but God's work continues through Elisha.",
+      "align": "center",
+      "svg": "elisha_mantle",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "chariot_9",
+      "speaker": "narrator",
+      "fx": "fly",
+      "delay": 800,
+      "text": "THE END",
+      "align": "center",
+      "svg": "elisha_mantle",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

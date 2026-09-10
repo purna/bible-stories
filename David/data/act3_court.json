@@ -1,0 +1,125 @@
+{
+  "id": "court",
+  "name": "Ch.3 · Saul's Court",
+  "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #120a04 65%, #060402)",
+  "particle": "ember",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "court_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "The giant's head was carried to Jerusalem and David's fame spread through every tribe. Saul summoned the young man to live at his side.",
+      "cite": "1 Samuel 18:2",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "court_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The people sang in the streets. Saul's own spear lay across his knees while David's hand was near the king's.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "court_2",
+      "speaker": "saul",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "text": "They have given him ten thousands, and me only thousands. What more can he want but the kingdom?",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "court_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "An evil spirit troubled Saul. When the music of a lyre rose from the palace, the shadow on his face lifted for a moment.",
+      "cite": "1 Samuel 16:23",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "court_4",
+      "speaker": "saul",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "text": "Play for me, David. The noise in my head is louder tonight.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "court_5",
+      "speaker": "david",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "text": "I will play, my king. But the music is not the cure. It only holds the dark at bay.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "court_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David played, and Saul's hand steadied. But the king watched the musician with a look that was not gratitude.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "court_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Saul's jealousy grew with David's honour. The spear that once defended the king became the thing he lifted against the lyre-player.",
+      "cite": "1 Samuel 18:11",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "court_8",
+      "speaker": "david",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "What have I done? Is there not a cause for this spear?",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "court_9",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "David fled the palace that night. The anointed shepherd left the king's house with nothing but the echo of a song.",
+      "choices": [
+        {
+          "label": "Run before the spear finds me 🏃",
+          "note": "Survival first. The calling can wait for safer ground."
+        },
+        {
+          "label": "Stay and face the king 🛡️",
+          "note": "A servant's trust does not leave when the master is afraid."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "court",
+  "foreground": "fg_court",
+  "index": 2
+}

@@ -1,0 +1,117 @@
+{
+  "id": "anointed",
+  "name": "Ch.1 · Anointed",
+  "bg": "radial-gradient(circle at 50% 30%, #2a3a1a, #0e1a08 65%, #060804)",
+  "particle": "dawn",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "anointed_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "In the hill country of Judah, a man named Jesse had eight sons. The eldest were tall and broad-shouldered — the kind of men the people expected a king to be.",
+      "cite": "1 Samuel 16:1",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "anointed_1",
+      "speaker": "samuel",
+      "fx": "type",
+      "delay": 800,
+      "align": "right",
+      "text": "Jesse, bring your sons. The LORD has chosen one of them to be the next king.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "anointed_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Samuel anointed each eldest son in turn. The LORD said nothing. Seven passed before the prophet's eyes.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "anointed_3",
+      "speaker": "samuel",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "text": "Is this all of them? The LORD has not spoken through any of these.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "anointed_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Jesse turned to a shepherd boy keeping the flock. The youngest, ruddy and quiet, sent from the fields.",
+      "cite": "1 Samuel 16:12",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "anointed_5",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "audioSfx": "assets/audio/sfx/shepherd_footsteps.mp3",
+      "sfx": "THE LORD SEES THE HEART!",
+      "text": "Do not look on his appearance or on his height, because I have rejected him. The LORD looks on the heart.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "anointed_6",
+      "speaker": "samuel",
+      "fx": "fade",
+      "delay": 800,
+      "align": "right",
+      "text": "Send for him. We will not sit down until he comes.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "anointed_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The boy was brought in, fresh from the sheepfold. Samuel took the horn of oil and anointed him in the sight of his brothers.",
+      "cite": "1 Samuel 16:13",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "anointed_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "From that day forward, the Spirit of the LORD came upon David. The quiet shepherd carried a calling he could not yet see the shape of.",
+      "choices": [
+        {
+          "label": "Wonder what lies ahead 🌄",
+          "note": "The road is long and the outcome is not his to control."
+        },
+        {
+          "label": "Hold fast to the flock 🐑",
+          "note": "He keeps his hands on the work he knows while the anointing waits."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "anointed",
+  "foreground": "fg_anointed",
+  "index": 0
+}

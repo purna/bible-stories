@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Find the Path — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none
+    }
+
+    :root {
+      --ink: #3a2410;
+      --path: #fffaf0;
+      --goal: #ffd84d;
+      --wall: #5b3624;
+      --trail: #2e7d32;
+      --bad: #c62828;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden
+    }
+
+    body {
+      font-family: 'Comic Neue', Arial, Helvetica, sans-serif;
+      background: var(--path);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .wrap {
+      width: 960px;
+      max-width: none;
+      height: 540px;
+      margin: 0;
+      padding: 16px;
+      display: flex;
+      flex: none;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      transform: scale(var(--game-scale, 1));
+      transform-origin: center
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+      margin: 4px 0;
+      color: var(--ink)
+    }
+
+    .sub {
+      text-align: center;
+      font-size: .9rem;
+      opacity: .8;
+      margin-bottom: 8px
+    }
+
+    .hud {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      margin-bottom: 10px;
+      font-size: .95rem;
+      font-weight: 800
+    }
+
+    .hud .chip {
+      background: #fff;
+      border: 2px solid var(--ink);
+      border-radius: 10px;
+      padding: 4px 10px
+    }
+
+    .hud .chip.warn {
+      background: #ffe5b4;
+      border-color: #a85b00
+    }
+
+    .hud .chip.bad {
+      background: #ffd0d0;
+      border-color: var(--bad)
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+      gap: 4px;
+      width: 90vmin;
+      max-width: 360px;
+      background: #e9dcc0;
+      padding: 4px;
+      border: 3px solid var(--ink);
+      border-radius: 10px
+    }
+
+    .cell {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 6px;
+      background: #f1e6c0;
+      touch-action: manipulation;
+      transition: transform .14s, filter .14s
+    }
+
+    .cell svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: 60%;
+      pointer-events: none
+    }
+
+    .cell:active,
+    .cell.picked {
+      transform: scale(.92);
+      filter: brightness(1.08)
+    }
+
+    .cell.released {
+      animation: releasePop .24s ease-out
+    }
+
+    .cell.drop-pop {
+      animation: releasePop .24s ease-out
+    }
+
+    .cell.start {
+      background: var(--goal);
+      box-shadow: 0 0 6px #0002
+    }
+
+    .cell.goal {
+      background: #a8e6a3
+    }
+
+    .cell.wall {
+      background: var(--wall)
+    }
+
+    .cell.path {
+      background: var(--trail)
+    }
+
+    @keyframes releasePop {
+      50% {
+        transform: scale(1.08)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Find the Path · 9×9
+      <svg viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        focusable="false">
+        <path d="M4 28l12-12 12 12" stroke="#3a2410" stroke-width="2.5" stroke-linecap="round" />
+        <circle cx="16" cy="14" r="5" fill="#ffd84d" />
+      </svg>
+    </h1>
+    <div class="sub">Tap neighbouring squares to walk the path. Stay on the path and reach the goal!</div>
+    <div class="hud">
+      <div class="chip" id="stepsChip">Steps: 0</div>
+      <div class="chip" id="budgetChip">Clicks left: 20</div>
+    </div>
+    <div class="board" id="board"></div>
+  </div>
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Walk again</button>
+    </div>
+  </div>
+  <script src="_shared/timer.js"></script>
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 90, timer: true };
+    function fitGameToViewport() { document.documentElement.style.setProperty('--game-scale', Math.min(innerWidth / 960, innerHeight / 540)); }
+    addEventListener('resize', fitGameToViewport); fitGameToViewport();
+    const ROWS = 9, COLS = 9, BUDGET = 20;
+    const layouts = [
+      's.......#',
+      '..##.....',
+      '.##.#....',
+      '......#..',
+      '..####...',
+      '.....#...',
+      '..##..#..',
+      '.#......#',
+      '....#...g',
+    ];
+    function buildLayout() {
+      const grid = [];
+      const w = ROWS, h = COLS;
+      let r = 0, c = 0, gR = w - 1, gC = h - 1;
+      while (grid.flat().filter(x => x === 's').length === 0) {
+        grid.length = 0;
+        for (let i = 0; i < w; i++) grid.push(Array(h).fill('.'));
+        const wallCount = Math.floor(w * h * 0.22);
+        for (let k = 0; k < wallCount; k++) {
+          const wr = Math.floor(Math.random() * w), wc = Math.floor(Math.random() * h);
+          if ((wr === 0 && wc === 0) || (wr === w - 1 && wc === h - 1)) continue;
+          grid[wr][wc] = '#';
+        }
+        const carveOk = bfsReachable(grid, 0, 0, w - 1, h - 1);
+        if (!carveOk) {
+          r = 0; c = 0; continue;
+        }
+        break;
+      }
+      grid[0][0] = 's';
+      grid[w - 1][h - 1] = 'g';
+      return grid.map(row => row.join(''));
+    }
+    function bfsReachable(g, sr, sc, gr, gc) {
+      const w = g.length, h = g[0].length;
+      const seen = Array.from({ length: w }, () => Array(h).fill(false));
+      const q = [[sr, sc]]; seen[sr][sc] = true;
+      while (q.length) {
+        const [r, c] = q.shift();
+        if (r === gr && c === gc) return true;
+        for (const [dr, dc] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+          const nr = r + dr, nc = c + dc;
+          if (nr < 0 || nr >= w || nc < 0 || nc >= h) continue;
+          if (seen[nr][nc] || g[nr][nc] === '#') continue;
+          seen[nr][nc] = true; q.push([nr, nc]);
+        }
+      }
+      return false;
+    }
+    const previous = Number(localStorage.getItem('find-path-layout'));
+    let layoutIndex = -1, grid = null;
+    for (let attempt = 0; attempt < 6; attempt++) {
+      const candidate = Math.floor(Math.random() * 1000);
+      if (candidate === previous) continue;
+      const test = buildLayout();
+      const flat = test.join('');
+      if (flat.length === ROWS * COLS) {
+        grid = test.map(row => row.split(''));
+        layoutIndex = candidate;
+        break;
+      }
+    }
+    if (!grid) { grid = buildLayout().map(row => row.split('')); }
+    localStorage.setItem('find-path-layout', layoutIndex);
+    let r = 0, c = 0, steps = 0, budgetLeft = BUDGET;
+    const board = document.getElementById('board');
+    const modal = document.getElementById('modal'), modalCard = document.getElementById('modalCard'), modalIcon = document.getElementById('modalIcon'), modalTitle = document.getElementById('modalTitle'), modalText = document.getElementById('modalText'), modalBtn = document.getElementById('modalBtn');
+    const CHECK_SVG = '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16.5l5.5 5.5L24 11" stroke="#1b5e20" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    const HOURGLASS_SVG = '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+    const stepsChip = document.getElementById('stepsChip');
+    const budgetChip = document.getElementById('budgetChip');
+    const cells = [];
+    board.dataset.layout = layoutIndex;
+    addPressEffects('.cell,.modal-btn');
+    function addPressEffects(selector) { document.addEventListener('pointerdown', e => { const el = e.target.closest(selector); if (el) el.classList.add('picked') }); document.addEventListener('pointerup', e => { const el = e.target.closest(selector); if (!el) return; el.classList.remove('picked'); el.classList.remove('released'); void el.offsetWidth; el.classList.add('released') }); }
+
+    function cellChar(row, col) { return grid[row][col]; }
+    function updateHud() {
+      stepsChip.textContent = `Steps: ${steps}`;
+      budgetChip.textContent = `Clicks left: ${budgetLeft}`;
+      budgetChip.classList.toggle('warn', budgetLeft <= 8 && budgetLeft > 3);
+      budgetChip.classList.toggle('bad', budgetLeft <= 3);
+    }
+
+    const START_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 4v26" stroke="#3a2410" stroke-width="2.5" stroke-linecap="round"/><path d="M8 5c5 0 11 1 11 6s-6 6-11 6" fill="#c62828" stroke="#3a2410" stroke-width="2" stroke-linejoin="round"/></svg>';
+    const GOAL_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 28l5-3V7l-5 3Z" fill="#fff" stroke="#3a2410" stroke-width="2" stroke-linejoin="round"/><path d="M10 10h17l-3 7 3 7H10Z" fill="#c62828" stroke="#3a2410" stroke-width="2" stroke-linejoin="round"/><path d="M5 10h5M5 16h5M5 22h5" stroke="#3a2410" stroke-width="2" stroke-linecap="round"/></svg>';
+    const TRAIL_SVG = '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 5c1-2 4-2 5 0M18 5c1-2 4-2 5 0" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><ellipse cx="11" cy="11" rx="3" ry="4" fill="#fff"/><ellipse cx="21" cy="11" rx="3" ry="4" fill="#fff"/><ellipse cx="16" cy="22" rx="5" ry="6" fill="#fff"/></svg>';
+
+    for (let i = 0; i < ROWS; i++) {
+      const row = [];
+      for (let j = 0; j < COLS; j++) {
+        const ch = grid[i][j];
+        const el = document.createElement('div');
+        el.className = 'cell';
+        if (ch === 's') { el.classList.add('start'); el.innerHTML = START_SVG; }
+        if (ch === 'g') { el.classList.add('goal'); el.innerHTML = GOAL_SVG; }
+        if (ch === '#') el.classList.add('wall');
+        el.dataset.row = i; el.dataset.col = j;
+        row.push(el);
+        board.appendChild(el);
+      }
+      cells.push(row);
+    }
+
+    function isAdjacent(r1, c1, r2, c2) { return (Math.abs(r1 - r2) + Math.abs(c1 - c2)) === 1; }
+
+    board.addEventListener('click', e => {
+      if (budgetLeft <= 0 || modal.classList.contains('active')) return;
+      const cell = e.target.closest('.cell');
+      if (!cell || cell.dataset.row === undefined) return;
+      const nr = +cell.dataset.row, nc = +cell.dataset.col;
+      if (!isAdjacent(r, c, nr, nc)) return;
+      if (cellChar(nr, nc) === '#') return;
+      if (cells[nr][nc].classList.contains('path') || cells[nr][nc].classList.contains('start')) return;
+      cells[nr][nc].classList.add('path');
+      cells[nr][nc].classList.remove('drop-pop'); void cells[nr][nc].offsetWidth; cells[nr][nc].classList.add('drop-pop');
+      cells[nr][nc].innerHTML = cellChar(nr, nc) === 'g' ? GOAL_SVG : TRAIL_SVG;
+      r = nr; c = nc;
+      steps++;
+      budgetLeft--;
+      updateHud();
+      if (cellChar(r, c) === 'g') finish(true);
+      else if (budgetLeft === 0) finish(false, 'Out of clicks! The path got stuck.');
+    });
+
+    function showModal(kind, title, lines, btnLabel) {
+      modalCard.classList.remove('success', 'timeout');
+      if (kind === 'success') modalCard.classList.add('success');
+      if (kind === 'timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind === 'success' ? CHECK_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Walk again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+
+    function finish(success, reason) {
+      if (modal.classList.contains('active')) return;
+      const verse = "“The Lord directs the steps of the godly. He delights in every detail of their lives.” — Psalm 37:23";
+      if (success === true) {
+        showModal('success', 'You reached the goal!', [`You reached the goal in ${steps} steps!`, '"Your word is a lamp for my feet, a light on my path." — Psalm 119:105'], 'Walk again');
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({ type: 'game-complete', game: 'find_path' }, '*');
+      } else if (success === 'timeout') {
+        showModal('timeout', 'Time’s up!', [`⏱ ${reason || 'Time’s up!'}`, verse], 'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      } else {
+        showModal('timeout', 'Out of clicks!', [reason || 'Out of clicks! The path got stuck.', verse], 'Try again');
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+    addEventListener('game-timeout', () => { if (modal.classList.contains('active')) return; finish('timeout', 'Time’s up!'); });
+
+    updateHud();
+  </script>
+</body>
+
+</html>

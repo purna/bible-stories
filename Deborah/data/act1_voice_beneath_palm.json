@@ -1,6 +1,6 @@
 {
   "id": "voice_beneath_palm",
-  "name": "Ch.1 · A Voice Beneath the Palm",
+  "name": "Ch.1 \u00b7 A Voice Beneath the Palm",
   "bg": "radial-gradient(circle at 50% 25%, #6db86a, #2d5f2d 70%)",
   "particle": "dawn",
   "scene": "voice_beneath_palm",
@@ -10,29 +10,45 @@
   "gameInstructions": "Help Deborah answer with fairness. Choose the response that brings truth and peace.",
   "lines": [
     {
+      "id": "voice_beneath_palm_0",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "Israel had forgotten the ways of peace, and fear lay over the land."
+      "text": "Israel had forgotten the ways of peace, and fear lay over the land.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "voice_beneath_palm_1",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "Yet beneath a palm tree in the hills of Ephraim sat Deborah—a prophet, a judge, and a listener."
+      "text": "Yet beneath a palm tree in the hills of Ephraim sat Deborah\u2014a prophet, a judge, and a listener.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "voice_beneath_palm_2",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
-      "text": "People came to her with tangled troubles, and she answered with wisdom and courage."
+      "text": "People came to her with tangled troubles, and she answered with wisdom and courage.",
+      "width": "1/2",
+      "valign": "middle"
     },
     {
+      "id": "voice_beneath_palm_3",
       "speaker": "narrator",
       "fx": "fade",
+      "delay": 800,
       "align": "center",
       "text": "The Israelites went up to her to have their disputes decided.",
-      "cite": "Judges 4:5"
+      "cite": "Judges 4:5",
+      "width": "1/2",
+      "valign": "middle"
     }
   ]
 }

@@ -1,0 +1,133 @@
+{
+  "id": "warning",
+  "name": "Ch.1 \u00b7 The Warning",
+  "bg": "radial-gradient(circle at 40% 30%, #2e2010, #14100a 65%, #080604)",
+  "particle": "dusk",
+  "svg": "ch1_corrupt_world",
+  "lines": [
+    {
+      "id": "warning_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch1_corrupt_world",
+      "text": "Long ago, the earth was full of people \u2014 but their hearts had gone wrong.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "warning_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch1_corrupt_world",
+      "text": "Violence everywhere. Every thought twisted. Every day worse than the last.",
+      "cite": "Genesis 6:5",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "warning_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch1_god_grieves",
+      "text": "And the LORD looked at what he had made... and His heart broke.",
+      "cite": "Genesis 6:6",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "warning_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch1_noah_walks",
+      "text": "But one man walked differently. His name was Noah.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "warning_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch1_noah_walks",
+      "text": "Righteous. Blameless. A man who actually listened.",
+      "cite": "Genesis 6:9",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "warning_5",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch1_god_speaks",
+      "text": "Noah. The end of all flesh has come before me. The earth is filled with violence because of them.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "warning_6",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch1_god_speaks",
+      "text": "Make yourself an ark of cypress wood.",
+      "cite": "Genesis 6:14",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "warning_7",
+      "speaker": "noah",
+      "fx": "type",
+      "delay": 800,
+      "align": "left",
+      "svg": "ch1_noah_listens",
+      "text": "An... ark. Here. In the middle of dry land. Where it has never rained like this.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "warning_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch1_noah_listens",
+      "text": "No flood had ever come. No one would believe him. He had every reason to walk away.",
+      "choices": [
+        {
+          "label": "Trust the voice \u2014 pick up the axe \ud83e\ude93",
+          "note": "\"Noah did everything just as God commanded him.\" \u2014 Gen 6:22"
+        },
+        {
+          "label": "Ask for a sign first... \ud83c\udf29\ufe0f",
+          "note": "Noah waits. The silence is the sign. He picks up the axe anyway."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "warning_9",
+      "speaker": "narrator",
+      "fx": "type",
+      "delay": 800,
+      "align": "center",
+      "svg": "ch1_noah_axe",
+      "text": "So Noah picked up his axe, and began.",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "hannah_s_song",
+  "name": "Ch.8 · Hannah’s Song",
+  "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "hannah_s_song_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Arrange lines of reversal and hope.",
+      "cite": "1 Samuel 1–2",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "hannah_s_song_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Can longing be voiced honestly and a cherished gift released faithfully? — Hannah’s Song is the next step in that question.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "hannah_s_song_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE WORD STANDS",
+      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "hannah_s_song_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Walk on with the lesson 📖",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment 🕊️",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "hannah_s_song",
+  "foreground": "fg_hannah_s_song",
+  "index": 7
+}

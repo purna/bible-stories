@@ -1,0 +1,64 @@
+{
+  "id": "the_sleepless_night",
+  "name": "Ch.7 · The Sleepless Night",
+  "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)",
+  "particle": "dawn",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "the_sleepless_night_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Find Mordecai’s forgotten service in the chronicles.",
+      "cite": "Esther 1–10",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_sleepless_night_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Will hidden identity become courageous advocacy at the right moment? — The Sleepless Night is the next step in that question.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_sleepless_night_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE WORD STANDS",
+      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_sleepless_night_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Walk on with the lesson 📖",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment 🕊️",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "the_sleepless_night",
+  "foreground": "fg_the_sleepless_night",
+  "index": 6
+}

@@ -19,6 +19,10 @@
     'story-builder': { name: 'Build the Scene', file: 'temple_builder_v1.html' }
   };
   const engine = engines[engineId] || engines['tap-sequence'];
+  const requestedPrototype = script.dataset.prototype;
+  const prototype = requestedPrototype && /^[a-z0-9_.]+\.html$/.test(requestedPrototype)
+    ? requestedPrototype
+    : engine.file;
   const escapeHtml = value => String(value ?? '').replace(/[&<>"]/g, character => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'
   })[character]);
@@ -45,7 +49,7 @@
         <p class="objective">${escapeHtml(chapter.game)}</p>
       </header>
       <div class="engine">${escapeHtml(engine.name)}</div>
-      <iframe title="${escapeHtml(engine.name)}: ${escapeHtml(chapter.title)}" src="../../../__shared/chapter-games/engines/${engine.file}"></iframe>
+      <iframe title="${escapeHtml(engine.name)}: ${escapeHtml(chapter.title)}" src="../../../__shared/chapter-games/engines/${prototype}"></iframe>
     </main>`;
   }
 

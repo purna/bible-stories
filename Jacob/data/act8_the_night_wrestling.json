@@ -1,0 +1,64 @@
+{
+  "id": "the_night_wrestling",
+  "name": "Ch.8 · The Night Wrestling",
+  "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "the_night_wrestling_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Hold on through the night and receive a new name.",
+      "cite": "Genesis 25–50",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_night_wrestling_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Can a grasping deceiver become someone who receives blessing without stealing it? — The Night Wrestling is the next step in that question.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_night_wrestling_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE WORD STANDS",
+      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_night_wrestling_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Walk on with the lesson 📖",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment 🕊️",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "the_night_wrestling",
+  "foreground": "fg_the_night_wrestling",
+  "index": 7
+}

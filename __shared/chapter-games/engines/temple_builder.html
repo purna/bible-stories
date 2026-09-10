@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Temple Builder — Enhanced Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_shared/modal.css">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{
+      --ink:#3a2410;
+      --good:#2e7d32;
+      --good-glow:rgba(46,125,50,0.4);
+      --bad:#c62828;
+      --accent:#ffd84d;
+      --accent-dark:#d4a317;
+      --bg:#1a1008;
+      --panel-bg:rgba(255, 250, 240, 0.92);
+    }
+    html,body{width:100%;height:100%;overflow:hidden;background:#100a05}
+    body{
+      font-family:'Comic Neue',Arial,sans-serif;
+      color:var(--ink);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: radial-gradient(circle at 50% 30%, #3a2212 0%, #120904 100%);
+    }
+
+    .wrap{
+      width:960px;
+      height:540px;
+      margin:0;
+      padding:16px;
+      flex:none;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:space-between;
+      overflow:hidden;
+      transform:scale(var(--game-scale,1));
+      transform-origin:center;
+      position:relative;
+    }
+
+    /* Ambient Background Atmosphere */
+    .bg-sky {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg, #3d2314 0%, #7c4822 50%, #ca884c 85%, #5a8c2f 85%, #3a5c1e 100%);
+      z-index: 0;
+      border-radius: 20px;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.6), inset 0 0 40px rgba(0,0,0,0.3);
+      border: 4px solid #5a3c1e;
+      overflow: hidden;
+    }
+
+    .cloud {
+      position: absolute;
+      background: rgba(255, 240, 220, 0.25);
+      border-radius: 50px;
+      animation: floatCloud 35s linear infinite;
+    }
+    .cloud::before, .cloud::after {
+      content: ''; position: absolute; background: inherit; border-radius: 50%;
+    }
+    .cloud1 { width: 120px; height: 30px; top: 35px; left: -130px; }
+    .cloud1::before { width: 50px; height: 50px; top: -20px; left: 20px; }
+    .cloud1::after { width: 40px; height: 40px; top: -15px; left: 55px; }
+    
+    .cloud2 { width: 160px; height: 40px; top: 75px; left: -180px; animation-delay: -18s; animation-duration: 45s; }
+    .cloud2::before { width: 60px; height: 60px; top: -25px; left: 25px; }
+    .cloud2::after { width: 50px; height: 50px; top: -20px; left: 70px; }
+
+    @keyframes floatCloud {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(1150px); }
+    }
+
+    /* Particles Canvas */
+    #fxCanvas {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* Content Layout */
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 2px;
+      text-shadow: 0 2px 4px rgba(255,255,255,0.4);
+    }
+    h1{
+      font-size:1.8rem;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 0 3px 0 var(--ink), 0 0 10px rgba(255,216,77,0.5);
+      letter-spacing: 1px;
+    }
+    .sub{
+      text-align:center;
+      font-size:.92rem;
+      color: #ffe8cc;
+      font-weight: 700;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+      margin-bottom: 4px;
+    }
+
+    .hud{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      margin-bottom:6px;
+      font-size:.95rem;
+      font-weight:800;
+    }
+    .hud .chip{
+      background: var(--panel-bg);
+      border:2.5px solid var(--ink);
+      border-radius:12px;
+      padding:4px 14px;
+      box-shadow: 0 4px 0 rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .scene{
+      flex:1;
+      display:flex;
+      gap:24px;
+      justify-content:center;
+      align-items:center;
+      width:100%;
+      margin-bottom: 6px;
+    }
+
+    /* Tray Styling */
+    .tray-wrap{text-align:center;}
+    .tray-wrap .label, .site-wrap .label{
+      font-size:.85rem;
+      font-weight:800;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      letter-spacing: 1.5px;
+      margin-bottom:6px;
+    }
+    .tray{
+      width:270px;
+      background: var(--panel-bg);
+      border:3px solid var(--ink);
+      border-radius:16px;
+      padding:14px;
+      display:grid;
+      grid-template-columns:repeat(3, 72px);
+      gap:10px;
+      justify-content:center;
+      align-content:start;
+      max-height:290px;
+      overflow-y:auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.35), inset 0 2px 6px rgba(255,255,255,0.8);
+    }
+    
+    /* Interactive Blocks */
+    .block{
+      width:72px;
+      height:72px;
+      border-radius:14px;
+      background: linear-gradient(135deg, #ffe885 0%, #ffd033 100%);
+      border:3px solid var(--ink);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:grab;
+      touch-action:none;
+      transition:transform .18s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter .14s, box-shadow .14s;
+      box-shadow:0 4px 0 #9d7613, 0 5px 8px rgba(0,0,0,0.2);
+      position:relative;
+      flex:none;
+    }
+    .block:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow:0 7px 0 #9d7613, 0 7px 12px rgba(0,0,0,0.25);
+    }
+    .block .shape{width:54px;height:54px;display:block;filter: drop-shadow(0 2px 2px rgba(0,0,0,0.15));}
+    .block.sortable-chosen, .block.sortable-ghost{
+      opacity:0.9;
+      transform:scale(1.1) rotate(-3deg);
+      box-shadow:0 12px 20px rgba(0,0,0,0.3);
+      cursor:grabbing;
+    }
+    .block.placed{
+      opacity:0.15;
+      pointer-events:none;
+      box-shadow:none;
+      filter: grayscale(1);
+      transform: scale(0.92);
+    }
+
+    /* Temple Site */
+    .site-wrap{text-align:center;flex:1;max-width:440px}
+    .site{
+      position:relative;
+      width:390px;
+      height:290px;
+      margin:0 auto;
+      background: linear-gradient(180deg, #d2a679 0%, #b88a5c 100%);
+      border:4px solid var(--ink);
+      border-radius:16px;
+      box-shadow:0 8px 0 #5c3e21, 0 12px 24px rgba(0,0,0,0.4);
+      overflow:hidden;
+    }
+    .site .ground{
+      position:absolute;
+      left:0;right:0;bottom:0;
+      height:44px;
+      background: linear-gradient(180deg, #6ba336 0%, #467320 100%);
+      border-top:3.5px solid var(--ink);
+    }
+    
+    .site .temple-roof{
+      position:absolute;
+      left:50%;
+      top:-2px;
+      transform:translateX(-50%);
+      width:280px;
+      height:32px;
+      background: linear-gradient(180deg, #f7d262 0%, #c99a22 100%);
+      border:3.5px solid var(--ink);
+      border-radius:6px 6px 2px 2px;
+      z-index: 3;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    .site .temple-roof::before {
+      content:'';
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: var(--roof-half, 140px) solid transparent;
+      border-right: var(--roof-half, 140px) solid transparent;
+      border-bottom: 16px solid #c99a22;
+    }
+
+    .site .temple-outline{
+      position:absolute;
+      left:50%;
+      top:30px;
+      transform:translateX(-50%);
+      width:250px;
+      height:220px;
+      border:3px dashed rgba(58,36,16,.6);
+      border-radius:8px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      grid-template-rows:repeat(3,1fr);
+      gap:6px;
+      padding:8px;
+      background:rgba(255,255,255,.22);
+      backdrop-filter: blur(2px);
+      z-index: 2;
+    }
+
+    .site .temple-outline .cell{
+      background:rgba(255,255,255,.45);
+      border:2px dashed rgba(58,36,16,.4);
+      border-radius:8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:0;
+      min-width:0;
+      position: relative;
+      transition: all 0.2s ease;
+      padding: 6px;
+    }
+    .site .temple-outline .cell.target-slot {
+      background: rgba(255, 235, 175, 0.55);
+      border-color: rgba(180, 120, 20, 0.7);
+    }
+    .site .temple-outline .cell.target-slot::before {
+      content: '';
+      position: absolute;
+      opacity: 0.25;
+      width: 70%;
+      height: 70%;
+      background-image: var(--ghost-img);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+    }
+
+    .site .temple-outline .cell.correct{
+      background:rgba(46,125,50,.3);
+      border: 2.5px solid var(--good);
+      box-shadow: inset 0 0 12px var(--good-glow);
+      animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .site .temple-outline .cell.correct::before { opacity: 0; }
+    
+    .site .temple-outline .cell.wrong{
+      animation: shake 0.4s ease;
+      border-color: var(--bad);
+      background: rgba(198, 40, 40, 0.3);
+    }
+
+    .site .temple-outline .cell .label{
+      font-size:.68rem;
+      font-weight:800;
+      color:var(--ink);
+      opacity:.65;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+      line-height: 1.1;
+    }
+    .site .temple-outline .cell.correct .label{display:none;}
+    .site .temple-outline .cell svg{
+      width:80%;
+      height:80%;
+      display:block;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    .site .temple-pillar{
+      position:absolute;
+      left:50%;
+      top:30px;
+      transform:translateX(-50%);
+      width:10px;
+      height:190px;
+      background:#ccae81;
+      border:2px solid var(--ink);
+      z-index:1;
+      pointer-events:none;
+      border-radius:4px;
+      opacity:.5;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.8); }
+      50% { transform: scale(1.12); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="bg-sky">
+      <div class="cloud cloud1"></div>
+      <div class="cloud cloud2"></div>
+    </div>
+
+    <canvas id="fxCanvas"></canvas>
+
+    <div class="content">
+      <header>
+        <h1>Temple Builder</h1>
+        <div class="sub">Drag every stone and decoration into place — the temple grows with each level!</div>
+      </header>
+
+      <div class="hud">
+        <div class="chip" id="levelChip">Level: 1 / 4</div>
+        <div class="chip" id="placedChip">Placed: 0 / 4</div>
+        <div class="chip" id="triesChip">Tries: 0</div>
+      </div>
+
+      <div class="scene">
+        <div class="tray-wrap">
+          <div class="label">BUILDING PIECES</div>
+          <div class="tray" id="tray"></div>
+        </div>
+        <div class="site-wrap">
+          <div class="label">THE TEMPLE</div>
+          <div class="site" id="site">
+            <div class="temple-roof"></div>
+            <div class="temple-outline" id="outline"></div>
+            <div class="temple-pillar"></div>
+            <div class="ground"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Build again</button>
+    </div>
+  </div>
+
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 420, timer: true };
+
+    function fitGameToViewport(){
+      document.documentElement.style.setProperty('--game-scale', Math.min(innerWidth/960, innerHeight/540));
+    }
+    addEventListener('resize', fitGameToViewport); 
+    fitGameToViewport();
+
+    // --- Audio Synthesizer Engine ---
+    class SoundEngine {
+      constructor() {
+        this.ctx = null;
+      }
+      init() {
+        if (!this.ctx) {
+          this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+      }
+      playTone(freq, type, duration, startGain=0.15) {
+        if (!this.ctx) return;
+        try {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+          gain.gain.setValueAtTime(startGain, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + duration);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + duration);
+        } catch(e){}
+      }
+      playPick() {
+        this.init();
+        this.playTone(320, 'sine', 0.08, 0.1);
+      }
+      playCorrect() {
+        this.init();
+        if (!this.ctx) return;
+        const now = this.ctx.currentTime;
+        // Heavy satisfying thud + chime
+        this.playTone(180, 'triangle', 0.2, 0.25);
+        setTimeout(() => this.playTone(523.25, 'sine', 0.25, 0.2), 50); // C5
+        setTimeout(() => this.playTone(659.25, 'sine', 0.3, 0.2), 120);  // E5
+      }
+      playWrong() {
+        this.init();
+        if (!this.ctx) return;
+        this.playTone(160, 'sawtooth', 0.18, 0.15);
+        setTimeout(() => this.playTone(130, 'sawtooth', 0.22, 0.15), 100);
+      }
+      playWin() {
+        this.init();
+        if (!this.ctx) return;
+        const notes = [440, 554.37, 659.25, 880];
+        notes.forEach((freq, i) => {
+          setTimeout(() => this.playTone(freq, 'triangle', 0.4, 0.25), i * 110);
+        });
+      }
+    }
+    const SFX = new SoundEngine();
+
+    // --- Particle FX Engine ---
+    const canvas = document.getElementById('fxCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = 960;
+      canvas.height = 540;
+    }
+    resizeCanvas();
+
+    function createDust(x, y) {
+      for (let i = 0; i < 24; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 4 + 1;
+        particles.push({
+          x: x,
+          y: y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed - 1,
+          size: Math.random() * 6 + 3,
+          color: Math.random() > 0.4 ? '#ffd84d' : '#e3d4b4',
+          alpha: 1,
+          decay: Math.random() * 0.03 + 0.02
+        });
+      }
+    }
+
+    function renderParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.alpha -= p.decay;
+        if (p.alpha <= 0) {
+          particles.splice(i, 1);
+          continue;
+        }
+        ctx.save();
+        ctx.globalAlpha = p.alpha;
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+      requestAnimationFrame(renderParticles);
+    }
+    requestAnimationFrame(renderParticles);
+
+    // SVGs & Shapes Data
+    const HOURGLASS_SVG='<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z" fill="#fff" stroke="#1b5e20" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 4v24" stroke="#1b5e20" stroke-width="2" stroke-dasharray="2 2"/></svg>';
+    const SUN_SVG='<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="7" fill="#ffd43b" stroke="#1b5e20" stroke-width="2.5"/><g stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6 6l3 3M23 23l3 3M26 6l-3 3M9 23l-3 3"/></g></svg>';
+
+    // Every piece has a full-color svg for the tray/placed cell, and a
+    // simple solid "ghost" silhouette used as the blueprint hint in empty cells.
+    const POOL = [
+      { id:'square',  name:'Stone Block',   svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="48" height="48" rx="4" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><path d="M14 18h32M14 30h32M14 42h32M22 10v40M38 10v40" stroke="#3a2410" stroke-width="1.5" opacity=".5"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><rect x="6" y="6" width="48" height="48" rx="4" fill="%233a2410"/></svg>' },
+      { id:'arch',    name:'Arch Stone',    svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M10 50V30a20 20 0 0 1 40 0v20" fill="#e3d4b4" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/><rect x="6" y="46" width="48" height="8" fill="#a8861d" stroke="#3a2410" stroke-width="3"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M10 50V30a20 20 0 0 1 40 0v20Z" fill="%233a2410"/></svg>' },
+      { id:'pillar',  name:'Pillar',        svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="22" y="6" width="16" height="6" rx="1" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><rect x="20" y="12" width="20" height="38" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><rect x="22" y="50" width="16" height="6" rx="1" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><path d="M26 18v26M30 18v26M34 18v26" stroke="#3a2410" stroke-width="1.5" opacity=".4"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><rect x="20" y="6" width="20" height="48" fill="%233a2410"/></svg>' },
+      { id:'window',  name:'Window',        svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="6" width="40" height="48" rx="6" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><path d="M30 6v48M10 30h40" stroke="#3a2410" stroke-width="2.5"/><circle cx="30" cy="30" r="6" fill="#7CC6FF" stroke="#173b59" stroke-width="2"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><rect x="10" y="6" width="40" height="48" rx="6" fill="%233a2410"/></svg>' },
+      { id:'brick',   name:'Brick Row',     svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="48" height="48" rx="3" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><path d="M6 22h48M6 38h24M30 38h24M6 6v16M30 22v16M54 22v16M18 38v16M42 38v16" stroke="#3a2410" stroke-width="1.5" opacity=".5"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><rect x="6" y="6" width="48" height="48" rx="3" fill="%233a2410"/></svg>' },
+      { id:'keystone',name:'Keystone',      svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h20l8 48H12Z" fill="#e3d4b4" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M20 6h20l8 48H12Z" fill="%233a2410"/></svg>' },
+      { id:'step',    name:'Stair Step',    svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M6 54V42h12V30h12V18h12V6h12v48Z" fill="#e3d4b4" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M6 54V42h12V30h12V18h12V6h12v48Z" fill="%233a2410"/></svg>' },
+      { id:'corner',  name:'Corner Stone',  svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M8 8h20v20h24v24H8Z" fill="#e3d4b4" stroke="#3a2410" stroke-width="3" stroke-linejoin="round"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M8 8h20v20h24v24H8Z" fill="%233a2410"/></svg>' },
+      { id:'lamp',    name:'Oil Lamp',      svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M10 40c0-8 8-14 20-14s20 6 20 14-9 10-20 10-20-2-20-10Z" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><path d="M30 26c2-6 2-10-1-14" stroke="#3a2410" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M27 10c0-3 2-5 3-5s3 2 3 5-3 6-3 6-3-3-3-6Z" fill="#ff8a3d" stroke="#3a2410" stroke-width="2"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M10 40c0-8 8-14 20-14s20 6 20 14-9 10-20 10-20-2-20-10Z" fill="%233a2410"/></svg>' },
+      { id:'wreath',  name:'Vine Wreath',   svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="18" fill="none" stroke="#6ba336" stroke-width="6"/><circle cx="30" cy="30" r="18" fill="none" stroke="#3a2410" stroke-width="2"/><g fill="#3f7d20" stroke="#3a2410" stroke-width="1"><ellipse cx="30" cy="10" rx="6" ry="3"/><ellipse cx="50" cy="30" rx="3" ry="6"/><ellipse cx="30" cy="50" rx="6" ry="3"/><ellipse cx="10" cy="30" rx="3" ry="6"/></g></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><circle cx="30" cy="30" r="20" fill="%233a2410"/></svg>' },
+      { id:'banner',  name:'Temple Curtain',svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="44" height="6" rx="2" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><path d="M12 14 Q12 40 18 50 Q24 40 24 14 Z" fill="#c62828" stroke="#3a2410" stroke-width="2"/><path d="M24 14 Q24 40 30 50 Q36 40 36 14 Z" fill="#7c2020" stroke="#3a2410" stroke-width="2"/><path d="M36 14 Q36 40 42 50 Q48 40 48 14 Z" fill="#c62828" stroke="#3a2410" stroke-width="2"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><rect x="10" y="8" width="40" height="42" rx="4" fill="%233a2410"/></svg>' },
+      { id:'urn',     name:'Flower Urn',    svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M20 24h20l-4 26a4 4 0 0 1-4 3.5h-4a4 4 0 0 1-4-3.5Z" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><rect x="17" y="18" width="26" height="8" rx="2" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><circle cx="30" cy="10" r="5" fill="#ff8a3d" stroke="#3a2410" stroke-width="2"/><circle cx="22" cy="14" r="4" fill="#ffd84d" stroke="#3a2410" stroke-width="2"/><circle cx="38" cy="14" r="4" fill="#ffd84d" stroke="#3a2410" stroke-width="2"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M20 20h20l-4 30a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4Z" fill="%233a2410"/></svg>' },
+      { id:'incense', name:'Incense Bowl',  svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M12 34c0 10 8 16 18 16s18-6 18-16" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><ellipse cx="30" cy="34" rx="18" ry="6" fill="#c9a15a" stroke="#3a2410" stroke-width="3"/><path d="M30 28c-2-6 4-8 2-14M27 14c1 3 5 3 4 7" stroke="#8a8a8a" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><ellipse cx="30" cy="34" rx="20" ry="14" fill="%233a2410"/></svg>' },
+      { id:'scroll',  name:'Torah Scroll',  svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="8" width="28" height="44" fill="#f3e6c8" stroke="#3a2410" stroke-width="2.5"/><rect x="8" y="6" width="8" height="48" rx="4" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><rect x="44" y="6" width="8" height="48" rx="4" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><path d="M20 18h20M20 26h20M20 34h20M20 42h14" stroke="#3a2410" stroke-width="1.5" opacity=".5"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><rect x="8" y="6" width="44" height="48" rx="4" fill="%233a2410"/></svg>' },
+      { id:'menorah', name:'Menorah',       svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 10v34M30 10c-6 0-10 4-10 10M30 10c6 0 10 4 10 10M30 16c-10 0-16 6-16 14M30 16c10 0 16 6 16 14" stroke="#a8861d" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="16" y="44" width="28" height="6" rx="2" fill="#a8861d" stroke="#3a2410" stroke-width="2"/><rect x="26" y="50" width="8" height="6" fill="#a8861d" stroke="#3a2410" stroke-width="2"/><g fill="#ff8a3d"><circle cx="30" cy="8" r="3"/><circle cx="20" cy="18" r="2.5"/><circle cx="40" cy="18" r="2.5"/><circle cx="14" cy="28" r="2.5"/><circle cx="46" cy="28" r="2.5"/></g></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M14 50h32l-4-38h-24Z" fill="%233a2410"/></svg>' },
+      { id:'shofar',  name:'Shofar Horn',   svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M10 40c0-14 10-28 26-30 6-1 12 2 12 6 0 6-8 6-14 8-14 4-20 12-20 22 0 6 4 8 8 8s6-4 6-8" fill="none" stroke="#a8861d" stroke-width="5" stroke-linecap="round"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="24" ry="12" fill="%233a2410" transform="rotate(-20 30 30)"/></svg>' },
+      { id:'dove',    name:'Dove',          svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M12 34c6-10 18-14 28-10-4-6-2-12 4-14-2 8 2 14 8 16-6 2-10 0-14-4-2 8-12 14-22 14-2 0-3-1-4-2Z" fill="#fff" stroke="#3a2410" stroke-width="2.5" stroke-linejoin="round"/><circle cx="16" cy="30" r="1.5" fill="#3a2410"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="22" ry="12" fill="%233a2410"/></svg>' },
+      { id:'star',    name:'Star',          svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 6l6 16 16 2-12 12 4 16-14-8-14 8 4-16-12-12 16-2Z" fill="#ffd84d" stroke="#3a2410" stroke-width="2.5" stroke-linejoin="round"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30 6l6 16 16 2-12 12 4 16-14-8-14 8 4-16-12-12 16-2Z" fill="%233a2410"/></svg>' },
+      { id:'crown',   name:'Crown',         svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M10 44 6 20l12 10 12-16 12 16 12-10-4 24Z" fill="#ffd84d" stroke="#3a2410" stroke-width="2.5" stroke-linejoin="round"/><rect x="8" y="44" width="44" height="8" rx="2" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M10 44 6 20l12 10 12-16 12 16 12-10-4 24Z" fill="%233a2410"/></svg>' },
+      { id:'chalice', name:'Chalice',       svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M18 8h24l-2 14a10 10 0 0 1-20 0Z" fill="#e3d4b4" stroke="#3a2410" stroke-width="3"/><rect x="27" y="32" width="6" height="14" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/><rect x="18" y="46" width="24" height="6" rx="2" fill="#a8861d" stroke="#3a2410" stroke-width="2.5"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M16 8h28l-3 44H19Z" fill="%233a2410"/></svg>' },
+      { id:'basket',  name:'Bread Basket',  svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M10 26h40l-6 24a4 4 0 0 1-4 3H20a4 4 0 0 1-4-3Z" fill="#c99a5b" stroke="#3a2410" stroke-width="3"/><path d="M14 26c0-10 6-16 16-16s16 6 16 16" fill="none" stroke="#3a2410" stroke-width="2.5"/><ellipse cx="24" cy="20" rx="7" ry="5" fill="#e3b45c" stroke="#3a2410" stroke-width="2"/><ellipse cx="36" cy="18" rx="7" ry="5" fill="#e3b45c" stroke="#3a2410" stroke-width="2"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M10 26h40l-6 24a4 4 0 0 1-4 3H20a4 4 0 0 1-4-3Z" fill="%233a2410"/></svg>' },
+      { id:'harp',    name:'Harp',          svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M14 10c8 4 10 30 4 44M14 10l30-4v46l-16 2" fill="none" stroke="#a8861d" stroke-width="3" stroke-linejoin="round"/><path d="M18 14v36M22 15v34M26 16v32M30 17v30M34 18v28" stroke="#3a2410" stroke-width="1"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M14 10c8 4 10 30 4 44L44 52V6Z" fill="%233a2410"/></svg>' },
+      { id:'jar',     name:'Water Jar',     svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M22 10h16v8c8 4 12 12 12 20 0 10-9 16-20 16s-20-6-20-16c0-8 4-16 12-20Z" fill="#c99a5b" stroke="#3a2410" stroke-width="3"/><rect x="22" y="6" width="16" height="6" rx="2" fill="#a8861d" stroke="#3a2410" stroke-width="2"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><ellipse cx="30" cy="36" rx="18" ry="18" fill="%233a2410"/></svg>' },
+      { id:'gate',    name:'Temple Gate',   svg:'<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="8" width="20" height="44" rx="2" fill="#a8861d" stroke="#3a2410" stroke-width="3"/><rect x="32" y="8" width="20" height="44" rx="2" fill="#a8861d" stroke="#3a2410" stroke-width="3"/><circle cx="24" cy="30" r="2" fill="#3a2410"/><circle cx="36" cy="30" r="2" fill="#3a2410"/></svg>', ghost:'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><rect x="8" y="8" width="44" height="44" rx="4" fill="%233a2410"/></svg>' },
+    ];
+
+    // 4 levels, each wider than the last (rows stay at 4 so the site's height never changes)
+    const LEVELS = [
+      { cols:3, rows:4 },
+      { cols:4, rows:4 },
+      { cols:5, rows:4 },
+      { cols:6, rows:4 },
+    ];
+
+    const trayEl=document.getElementById('tray');
+    const outlineEl=document.getElementById('outline');
+    const levelChip=document.getElementById('levelChip');
+    const placedChip=document.getElementById('placedChip');
+    const triesChip=document.getElementById('triesChip');
+    const siteEl=document.getElementById('site');
+    const roofEl=document.querySelector('.temple-roof');
+    const modal=document.getElementById('modal'), modalCard=document.getElementById('modalCard'), modalIcon=document.getElementById('modalIcon'), modalTitle=document.getElementById('modalTitle'), modalText=document.getElementById('modalText'), modalBtn=document.getElementById('modalBtn');
+
+    function showModal(kind, title, lines, btnLabel, onClick){
+      modalCard.classList.remove('success','timeout');
+      if(kind==='success') modalCard.classList.add('success');
+      if(kind==='timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind==='success' ? SUN_SVG : HOURGLASS_SVG;
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l => /[“”"]/.test(l) ? `<div class="modal-verse">${l}</div>` : `<div>${l}</div>`).join('');
+      modalBtn.textContent = btnLabel || 'Build again';
+      modal.classList.add('active');
+      modalBtn.onclick = onClick || (() => location.reload());
+    }
+
+    let level = 0, shapes = [], placed = 0, tries = 0, over = false, locked = false, tray = null;
+    const cellSortables = [];
+    // Which decor items appear (used sparingly), in the order they get added as levels grow
+    const DECOR_IDS = ['lamp','wreath','banner','urn','incense','scroll','menorah','shofar','dove','star','crown','chalice','basket','harp','jar','gate'];
+    // The rest of the structural variety, each appearing once per level when there's room
+    const VARIETY_IDS = ['arch','window','brick','keystone','corner','step'];
+    const CELL = 72;
+    const GAP = 10;
+
+    // Build this level's piece list: a handful of decor + one of each structural variety,
+    // with the remaining slots filled by repeated Stone Blocks and Pillars — like a real build.
+    function composeLevel(count){
+      const byId = id => POOL.find(p => p.id === id);
+      const decorCount = Math.max(2, Math.floor(count / 6));
+      const decorIds = DECOR_IDS.slice(0, decorCount);
+      let remaining = count - decorIds.length;
+
+      const varietyCount = Math.max(0, Math.min(VARIETY_IDS.length, remaining));
+      const varietyIds = VARIETY_IDS.slice(0, varietyCount);
+      remaining -= varietyIds.length;
+
+      const squareCount = Math.ceil(remaining / 2);
+      const pillarCount = remaining - squareCount;
+
+      const list = [];
+      decorIds.forEach(id => list.push(byId(id)));
+      varietyIds.forEach(id => list.push(byId(id)));
+      for (let i = 0; i < squareCount; i++) list.push(byId('square'));
+      for (let i = 0; i < pillarCount; i++) list.push(byId('pillar'));
+
+      return list.sort(() => Math.random() - 0.5);
+    }
+
+    function updateHud(){
+      levelChip.textContent = `Level: ${level + 1} / ${LEVELS.length}`;
+      placedChip.textContent = `Placed: ${placed} / ${shapes.length}`;
+      triesChip.textContent = `Tries: ${tries}`;
+    }
+
+    function build(levelIdx){
+      level = levelIdx;
+      placed = 0;
+      locked = false;
+
+      // Tear down the previous level's board
+      cellSortables.forEach(s => { try{ s.destroy(); }catch(e){} });
+      cellSortables.length = 0;
+      if (tray) { try{ tray.destroy(); }catch(e){} tray = null; }
+      outlineEl.innerHTML = '';
+      trayEl.innerHTML = '';
+
+      const { cols, rows } = LEVELS[level];
+      const count = cols * rows;
+      shapes = composeLevel(count);
+
+      // Size the grid, site, and roof for this level (rows stay at 4, so height never changes)
+      const outlineW = cols * CELL + (cols - 1) * GAP + 16;
+      const outlineH = rows * CELL + (rows - 1) * GAP + 16;
+      outlineEl.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+      outlineEl.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+      outlineEl.style.width = outlineW + 'px';
+      outlineEl.style.height = outlineH + 'px';
+      siteEl.style.width = (outlineW + 40) + 'px';
+      roofEl.style.width = (outlineW + 30) + 'px';
+      roofEl.style.setProperty('--roof-half', ((outlineW + 30) / 2) + 'px');
+
+      for (let idx = 0; idx < count; idx++){
+        const c = document.createElement('div');
+        c.className = 'cell target-slot';
+        c.dataset.idx = idx;
+        const shape = shapes[idx];
+        c.dataset.shape = shape.id;
+        c.dataset.target = '1';
+        c.style.setProperty('--ghost-img', `url('${shape.ghost}')`);
+
+        outlineEl.appendChild(c);
+
+        const s = new Sortable(c, {
+          group: 'temple',
+          draggable: '.tray .block',
+          sort: false,
+          animation: 150,
+          ghostClass: 'sortable-ghost',
+          chosenClass: 'sortable-chosen',
+          forceFallback: true,
+          fallbackOnBody: true,
+          fallbackTolerance: 3,
+          onStart: () => SFX.playPick(),
+          onAdd: function(evt){
+            if (over || locked) { evt.item.remove(); return; }
+            const clone = evt.item;
+            const shapeId = clone.dataset.shape;
+            tries++;
+
+            const existing = c.querySelector('.block');
+            if (existing) existing.remove();
+
+            if (shapeId === c.dataset.shape && c.dataset.target === '1'){
+              c.classList.add('correct');
+              c.classList.remove('wrong');
+
+              // Mark corresponding tray block as placed
+              const trayBlock = trayEl.querySelector(`.block[data-shape="${shapeId}"]:not(.placed)`);
+              if (trayBlock) trayBlock.classList.add('placed');
+
+              const shapeObj = shapes.find(s => s.id === shapeId);
+              c.innerHTML = shapeObj.svg;
+
+              // Particle explosion at target center
+              const rect = c.getBoundingClientRect();
+              const wrapRect = document.querySelector('.wrap').getBoundingClientRect();
+              const scale = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--game-scale')) || 1;
+              const posX = (rect.left + rect.width / 2 - wrapRect.left) / scale;
+              const posY = (rect.top + rect.height / 2 - wrapRect.top) / scale;
+
+              createDust(posX, posY);
+              SFX.playCorrect();
+
+              placed++;
+              updateHud();
+
+              if (placed >= shapes.length){
+                locked = true;
+                setTimeout(() => onLevelPieceComplete(), 600);
+              }
+            } else {
+              SFX.playWrong();
+              c.classList.add('wrong');
+              setTimeout(() => c.classList.remove('wrong'), 500);
+              clone.remove();
+              updateHud();
+            }
+          }
+        });
+        cellSortables.push(s);
+      }
+
+      // Populate Tray
+      const shuffled = [...shapes].sort(() => Math.random() - 0.5);
+      shuffled.forEach(shape => {
+        const b = document.createElement('div');
+        b.className = 'block';
+        b.dataset.shape = shape.id;
+        b.setAttribute('aria-label', shape.name);
+        b.innerHTML = '<div class="shape">' + shape.svg + '</div>';
+        trayEl.appendChild(b);
+      });
+
+      tray = new Sortable(trayEl, {
+        group: { name: 'temple', pull: 'clone', put: false },
+        draggable: '.block',
+        sort: false,
+        animation: 150,
+        ghostClass: 'sortable-ghost',
+        chosenClass: 'sortable-chosen',
+        forceFallback: true,
+        fallbackOnBody: true,
+        fallbackTolerance: 3,
+        onStart: () => SFX.playPick()
+      });
+
+      updateHud();
+    }
+
+    function onLevelPieceComplete(){
+      if (level < LEVELS.length - 1){
+        SFX.playWin();
+        showModal('success', `Level ${level + 1} Complete!`, [
+          `The builders press on to a grander design.`,
+        ], 'Next Level →', () => {
+          modal.classList.remove('active');
+          build(level + 1);
+        });
+      } else {
+        finish(true);
+      }
+    }
+
+    build(0);
+
+    function finish(success, reason){
+      if (over) return;
+      over = true;
+      if (tray) { try{ tray.option('disabled', true); }catch(e){} }
+      cellSortables.forEach(s => { try{ s.option('disabled', true); }catch(e){} });
+
+      if (success){
+        SFX.playWin();
+        showModal('success', 'The Temple is Built!', [
+          'Every stone placed with craft and precision.',
+          '"The temple of the Lord was finished." — 1 Kings 6:14'
+        ], 'Build again');
+        
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) {
+          window.parent.postMessage({ type: 'game-complete', game: 'temple_builder' }, '*');
+        }
+      } else {
+        showModal('timeout', 'Work Stopped!', [
+          reason || 'Time’s up.',
+          '"Be still before the Lord and wait patiently." — Psalm 37:7'
+        ], 'Try again');
+        
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    addEventListener('game-timeout', () => finish(false, 'Time’s up! The builders had to rest.'));
+  </script>
+</body>
+</html>

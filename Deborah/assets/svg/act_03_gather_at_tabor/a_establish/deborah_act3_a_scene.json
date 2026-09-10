@@ -1,0 +1,32 @@
+{
+  "story": "Deborah",
+  "act": 3,
+  "chapter": "Gather at Tabor",
+  "brief": "Rally tribes without alerting Sisera.",
+  "scene": {
+    "id": "A",
+    "name": "Establish"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "environment": "desert",
+  "time": "day",
+  "seed": 1,
+  "background": "deborah_act3_a_background.svg",
+  "foreground": "deborah_act3_a_foreground.svg",
+  "foregroundBackgroundIncluded": false,
+  "foregroundDetails": {
+    "plants": true,
+    "rocks": true,
+    "structures": true,
+    "props": true,
+    "framing": true
+  },
+  "layering": [
+    "background",
+    "optional middle-ground/characters",
+    "foreground"
+  ]
+}

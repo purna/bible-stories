@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Look Closely (4x3) — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;800&display=swap" rel="stylesheet">
+  <script src="_shared/timer.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+    :root{--ink:#3a2410;--good:#2e7d32;--bad:#c62828;--accent:#ffd84d;--bg:#fffaf0}
+    html,body{width:100%;height:100%;overflow:hidden}
+    body{font-family:'Comic Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);text-align:center;display:flex;align-items:center;justify-content:center}
+    .wrap{width:960px;max-width:none;height:540px;margin:0;padding:16px;display:flex;flex:none;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;transform:scale(var(--game-scale,1));transform-origin:center}
+    h1{font-size:1.6rem;margin:4px 0}
+    h1 svg{display:inline-block;width:32px;height:32px;vertical-align:-0.3rem}
+    .sub{font-size:.9rem;opacity:.8;margin-bottom:12px}
+    .hud{display:flex;gap:10px;justify-content:center;margin-bottom:10px;font-size:.95rem;font-weight:800}
+    .hud .chip{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:4px 12px}
+    .hud .chip.warn{background:#ffe5b4;border-color:#a85b00}
+    .hud .chip.bad{background:#ffd0d0;border-color:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;justify-content:center;margin:0 auto;width:480px;max-width:94vw;position:relative}
+    .card{aspect-ratio:1/1;width:100%;border:3px solid var(--ink);border-radius:14px;display:flex;align-items:center;justify-content:center;background:var(--accent);cursor:pointer;touch-action:manipulation;transition:transform .14s,filter .14s,background .2s;position:relative;font-size:2.2rem;font-weight:900}
+    .card::before{content:'?';position:absolute}
+    .card svg{width:54px;height:54px;display:none}
+    .card.revealed::before,.card.matched::before{display:none}
+    .card.revealed svg,.card.matched svg{display:block}
+    .card.revealed, .card.matched{border-color:var(--good);background:#e8f5e9}
+    .card:active{transform:scale(.92);filter:brightness(1.08)}
+    .card.picked{transform:scale(.92);filter:brightness(1.08)}
+
+    /* Sparkle animation effect */
+    .sparkle{position:absolute;width:16px;height:16px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:18;animation:spark .5s ease-out forwards}
+    @keyframes spark{0%{transform:scale(0) rotate(0);opacity:1}100%{transform:scale(1.6) rotate(360deg);opacity:0}}
+
+    /* Set Complete Modal Banner */
+    .welldone{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(58,36,16,.45);z-index:1200;flex-direction:column;gap:14px;padding:24px}
+    .welldone.active{display:flex}
+    .welldone .stamp{font-size:3.4rem;font-weight:800;color:var(--good);background:#fff;border:4px solid var(--good);border-radius:18px;padding:14px 32px;transform:rotate(-6deg);box-shadow:0 6px 0 #b9cbb4;letter-spacing:.02em;animation:stamp .55s cubic-bezier(.2,1.4,.4,1) both}
+    .welldone .sub-stamp{font-size:1.1rem;font-weight:700;background:var(--accent);color:var(--ink);border:2px solid var(--ink);border-radius:10px;padding:4px 14px;transform:rotate(-6deg)}
+    .nextbtn{font-family:inherit;font-size:1.1rem;font-weight:800;background:var(--good);color:#fff;border:3px solid var(--ink);border-radius:12px;padding:10px 22px;cursor:pointer;box-shadow:0 3px 0 #1b5e20;transition:transform .12s,filter .12s}
+    .nextbtn:active{transform:translateY(2px);box-shadow:0 1px 0 #1b5e20}
+
+    /* Modal Overlay */
+    @keyframes stamp{0%{transform:rotate(-6deg) scale(2);opacity:0}60%{transform:rotate(-6deg) scale(.95);opacity:1}100%{transform:rotate(-6deg) scale(1)}}
+  </style>
+  <link rel="stylesheet" href="_shared/modal.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Look Closely
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <circle cx="16" cy="16" r="8" fill="none" stroke="#3a2410" stroke-width="2"/>
+        <path d="M8 16c2-4 6-6 8-6s6 2 8 6" stroke="#3a2410" stroke-width="2"/>
+      </svg>
+    </h1>
+    <div class="sub">Turn over three cards. Find the four matching sets.</div>
+    <div class="hud">
+      <div class="chip" id="attemptsChip">Attempts: 0 / 14</div>
+      <div class="chip" id="setsChip">Sets: 0 / 4</div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <!-- Set Completed Banner Overlay -->
+  <div class="welldone" id="welldone" role="dialog" aria-live="assertive">
+    <div class="stamp">Set Matched!</div>
+    <div class="sub-stamp" id="welldoneSub">Great eyes!</div>
+    <button type="button" class="nextbtn" id="welldoneNext">Continue →</button>
+  </div>
+
+  <!-- Game End / Timeout Modal Overlay -->
+  <div class="modal-overlay" id="modal" role="dialog" aria-live="assertive">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-text" id="modalText"></div>
+      <button type="button" class="modal-btn" id="modalBtn">Try again</button>
+    </div>
+  </div>
+
+  <script>
+    window.GAME_CONFIG = { timerSeconds: 120, timer: true };
+    function fitGameToViewport(){document.documentElement.style.setProperty('--game-scale',Math.min(innerWidth/960,innerHeight/540));}
+    addEventListener('resize',fitGameToViewport); fitGameToViewport();
+
+    const MAX_ATTEMPTS = 14;
+    const TOTAL_SETS = 4;
+    const CHECK_SVG = '<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="15" fill="#e8f5e9" stroke="var(--good)" stroke-width="2"/><path d="M8 16.5l5.5 5.5L24 11" stroke="var(--good)" stroke-width="3.4" stroke-linecap="round"/></svg>';
+    const grid = document.getElementById('grid');
+    const attemptsChip = document.getElementById('attemptsChip');
+    const setsChip = document.getElementById('setsChip');
+    const welldone = document.getElementById('welldone');
+    const welldoneSub = document.getElementById('welldoneSub');
+    const welldoneNext = document.getElementById('welldoneNext');
+
+    const cards = [
+      {label:'sun',svg:'<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="14" fill="#ffd43b" stroke="#6b4b00" stroke-width="3"/><g stroke="#e89b00" stroke-width="4" stroke-linecap="round"><path d="M32 5v8M32 51v8M5 32h8M51 32h8M13 13l6 6M45 45l6 6M51 13l-6 6M19 45l-6 6"/></g></svg>'},
+      {label:'moon',svg:'<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M45 48A24 24 0 1 1 40 9a20 20 0 0 0 5 39Z" fill="#7b8fcb" stroke="#283b72" stroke-width="3"/></svg>'},
+      {label:'star',svg:'<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m32 6 7.5 15.2 16.8 2.4-12.1 11.8 2.9 16.7L32 44.2l-15.1 7.9 2.9-16.7L7.7 23.6l16.8-2.4Z" fill="#ff9f1c" stroke="#7a3e00" stroke-width="3" stroke-linejoin="round"/></svg>'},
+      {label:'cloud',svg:'<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 46h28a12 12 0 0 0 3.8-23.4 14 14 0 0 0-26.6-4.2A11 11 0 0 0 18 46Z" fill="#e0f2fe" stroke="#0284c7" stroke-width="3" stroke-linejoin="round"/></svg>'}
+    ];
+
+    // Helper to generate a shuffled deck of 12 cards (3 of each symbol type)
+    function generateLayout(){
+      const deck = [0,0,0, 1,1,1, 2,2,2, 3,3,3];
+      for(let i = deck.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [deck[i], deck[j]] = [deck[j], deck[i]];
+      }
+      return deck;
+    }
+
+    let layout = generateLayout();
+    let selected = [], setsFound = 0, attempts = 0, locked = false, over = false;
+
+    layout.forEach((symIdx) => {
+      const c = cards[symIdx];
+      const el = document.createElement('div');
+      el.className = 'card';
+      el.dataset.label = c.label;
+      el.innerHTML = c.svg;
+      el.setAttribute('aria-label', 'Hidden card');
+      grid.appendChild(el);
+    });
+
+    function updateHud(){
+      attemptsChip.textContent = `Attempts: ${attempts} / ${MAX_ATTEMPTS}`;
+      attemptsChip.classList.toggle('warn', attempts >= MAX_ATTEMPTS - 3 && attempts < MAX_ATTEMPTS);
+      attemptsChip.classList.toggle('bad', attempts >= MAX_ATTEMPTS);
+      setsChip.textContent = `Sets: ${setsFound} / ${TOTAL_SETS}`;
+    }
+    updateHud();
+
+    function showSetCompleteBanner(){
+      welldoneSub.textContent = `Set ${setsFound} of ${TOTAL_SETS} complete!`;
+      welldone.classList.add('active');
+    }
+
+    welldoneNext.addEventListener('click', () => {
+      welldone.classList.remove('active');
+      locked = false;
+    });
+
+    grid.addEventListener('click', e => {
+      if (over) return;
+      const card = e.target.closest('.card');
+      if(!card || locked || selected.includes(card) || card.classList.contains('matched')) return;
+      card.classList.add('revealed');
+      card.setAttribute('aria-label', card.dataset.label);
+      selected.push(card);
+      if(selected.length < 3) return;
+      
+      locked = true;
+      const match = selected.every(item => item.dataset.label === selected[0].dataset.label);
+      attempts++;
+      updateHud();
+
+      if(match){
+        selected.forEach(item => item.classList.replace('revealed', 'matched'));
+        showSparkles(selected);
+        selected = [];
+        setsFound++;
+        updateHud();
+        if(setsFound === TOTAL_SETS){
+          setTimeout(() => finish(true), 600);
+        } else {
+          setTimeout(() => showSetCompleteBanner(), 400);
+        }
+      } else {
+        const attempt = [...selected];
+        selected = [];
+        setTimeout(() => {
+          attempt.forEach(item => { item.classList.remove('revealed'); item.setAttribute('aria-label', 'Hidden card'); });
+          locked = false;
+          if (attempts >= MAX_ATTEMPTS) finish(false, `You used all ${MAX_ATTEMPTS} attempts.`);
+        }, 700);
+      }
+    });
+
+    
+    const modal = document.getElementById('modal');
+    const modalCard = document.getElementById('modalCard');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
+    const modalBtn = document.getElementById('modalBtn');
+    function showModal(kind, title, lines, btnLabel) {
+      modalCard.classList.remove('success', 'timeout');
+      if (kind === 'success') modalCard.classList.add('success');
+      if (kind === 'timeout') modalCard.classList.add('timeout');
+      modalIcon.innerHTML = kind === 'success'
+        ? "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><path d=\"M8 16.5l5.5 5.5L24 11\" fill=\"none\" stroke=\"#1b5e20\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+        : "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><path d=\"M9 4h14l-1 3c-1 3-4 5-6 7 2 2 5 4 6 7l1 3H9l1-3c1-3 4-5 6-7-2-2-5-4-6-7Z\" fill=\"#fff\" stroke=\"#1b5e20\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><path d=\"M16 4v24\" stroke=\"#1b5e20\" stroke-width=\"2\" stroke-dasharray=\"2 2\"/></svg>";
+      modalTitle.textContent = title;
+      modalText.innerHTML = lines.map(l =>
+        /[“”"]/.test(l)
+          ? '<div class="modal-verse">' + l + '</div>'
+          : '<div>' + l + '</div>'
+      ).join('');
+      modalBtn.textContent = btnLabel || 'Try again';
+      modal.classList.add('active');
+      modalBtn.onclick = () => location.reload();
+    }
+    function finish(success, reason) {
+      if (modal.classList.contains('active')) return;
+      if (success === true) {
+        showModal('success', "Every set found!", ["Every set found!","\"The earth is the Lord’s, and everything in it.\" — Psalm 24:1"], "Look again");
+        window.dispatchEvent(new CustomEvent('game-complete'));
+        if (window.parent !== window) window.parent.postMessage({ type: 'game-complete', game: 'look_closely' }, '*');
+      } else {
+        showModal('timeout', "Time’s up!", ["Time’s up!"], "Try again");
+        window.dispatchEvent(new CustomEvent('game-over'));
+      }
+    }
+
+    addEventListener('game-timeout', () => finish(false, 'Time’s up! The clock ran out.'));
+
+    function showSparkles(matchedCards){
+      matchedCards.forEach((c) => {
+        const rect = c.getBoundingClientRect();
+        const spark = document.createElement('div');
+        spark.className = 'sparkle';
+        spark.style.left = (rect.left + rect.width / 2 - grid.getBoundingClientRect().left) + 'px';
+        spark.style.top = (rect.top + rect.height / 2 - grid.getBoundingClientRect().top) + 'px';
+        grid.appendChild(spark);
+        setTimeout(() => spark.remove(), 500);
+      });
+    }
+  </script>
+</body>
+</html>

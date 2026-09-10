@@ -1,0 +1,115 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "the_call",
+      "name": "Ch.1 · The Call",
+      "file": "act1_the_call.json",
+      "scene": "the_call",
+      "foreground": "fg_the_call",
+      "assetFolder": "act_01_the_call",
+      "assetStem": "jeremiah_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "the_almond_branch",
+      "name": "Ch.2 · The Almond Branch",
+      "file": "act2_the_almond_branch.json",
+      "scene": "the_almond_branch",
+      "foreground": "fg_the_almond_branch",
+      "assetFolder": "act_02_the_almond_branch",
+      "assetStem": "jeremiah_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    },
+    {
+      "id": "at_the_temple_gate",
+      "name": "Ch.3 · At the Temple Gate",
+      "file": "act3_at_the_temple_gate.json",
+      "scene": "at_the_temple_gate",
+      "foreground": "fg_at_the_temple_gate",
+      "assetFolder": "act_03_at_the_temple_gate",
+      "assetStem": "jeremiah_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "the_scroll",
+      "name": "Ch.4 · The Scroll",
+      "file": "act4_the_scroll.json",
+      "scene": "the_scroll",
+      "foreground": "fg_the_scroll",
+      "assetFolder": "act_04_the_scroll",
+      "assetStem": "jeremiah_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+    },
+    {
+      "id": "the_potter",
+      "name": "Ch.5 · The Potter",
+      "file": "act5_the_potter.json",
+      "scene": "the_potter",
+      "foreground": "fg_the_potter",
+      "assetFolder": "act_05_the_potter",
+      "assetStem": "jeremiah_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+    },
+    {
+      "id": "the_yoke",
+      "name": "Ch.6 · The Yoke",
+      "file": "act6_the_yoke.json",
+      "scene": "the_yoke",
+      "foreground": "fg_the_yoke",
+      "assetFolder": "act_06_the_yoke",
+      "assetStem": "jeremiah_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+    },
+    {
+      "id": "the_cistern",
+      "name": "Ch.7 · The Cistern",
+      "file": "act7_the_cistern.json",
+      "scene": "the_cistern",
+      "foreground": "fg_the_cistern",
+      "assetFolder": "act_07_the_cistern",
+      "assetStem": "jeremiah_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+    },
+    {
+      "id": "buy_the_field",
+      "name": "Ch.8 · Buy the Field",
+      "file": "act8_buy_the_field.json",
+      "scene": "buy_the_field",
+      "foreground": "fg_buy_the_field",
+      "assetFolder": "act_08_buy_the_field",
+      "assetStem": "jeremiah_act8",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+    },
+    {
+      "id": "the_fall_of_jerusalem",
+      "name": "Ch.9 · The Fall of Jerusalem",
+      "file": "act9_the_fall_of_jerusalem.json",
+      "scene": "the_fall_of_jerusalem",
+      "foreground": "fg_the_fall_of_jerusalem",
+      "assetFolder": "act_09_the_fall_of_jerusalem",
+      "assetStem": "jeremiah_act9",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)"
+    },
+    {
+      "id": "lament_and_hope",
+      "name": "Ch.10 · Lament and Hope",
+      "file": "act10_lament_and_hope.json",
+      "scene": "lament_and_hope",
+      "foreground": "fg_lament_and_hope",
+      "assetFolder": "act_10_lament_and_hope",
+      "assetStem": "jeremiah_act10",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+    }
+  ]
+}

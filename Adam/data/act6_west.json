@@ -1,0 +1,24 @@
+{
+  "id": "west",
+  "name": "West of the Divide",
+  "bg": "radial-gradient(circle at 50% 50%, #0d1b2a, #061224 65%, #030b18)",
+  "particle": "stars",
+  "svg": "exile_dawn",
+  "audio": [
+    "assets/audio/music/Act6_West_of_the_Divide.ogg",
+    "assets/audio/music/Act6_West_of_the_Divide.mp3"
+  ],
+  "lines": [
+    {
+      "id": "west_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "The story continues west of the divide \u2014 where the seed of the woman journeys through promise and peril, toward the dawn of redemption.",
+      "align": "center",
+      "svg": "exile_dawn",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "garden",
+  "name": "The Garden",
+  "bg": "radial-gradient(circle at 50% 30%, #2b1d0c, #1a0e06 65%, #0d0705)",
+  "particle": "dusk",
+  "svg": "garden_eden",
+  "audio": [
+    "assets/audio/music/Act2_After_the_Spring_Rain.ogg",
+    "assets/audio/music/Act2_After_the_Spring_Rain.mp3"
+  ],
+  "lines": [
+    {
+      "id": "garden_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "The Lord God formed a man from the dust of the ground, and breathed into his nostrils the breath of life. And the man became a living being.",
+      "align": "left",
+      "svg": "garden_eden",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "garden_1",
+      "speaker": "god",
+      "fx": "fade",
+      "delay": 800,
+      "text": "I have placed him in the garden to work it and keep it.",
+      "align": "center",
+      "svg": "garden_placed",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "garden_2",
+      "speaker": "narrator",
+      "audioSfx": "assets/audio/sfx/garden_water.mp3",
+      "fx": "type",
+      "delay": 800,
+      "text": "The garden was a paradise \u2014 every tree was pleasing to the eye, and every fruit was good for food. The tree of life and the tree of the knowledge of good and evil stood in its midst.",
+      "align": "right",
+      "svg": "garden_trees",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "garden_3",
+      "speaker": "god",
+      "fx": "shake",
+      "delay": 800,
+      "text": "You may eat from any tree. But from the tree of the knowledge of good and evil \u2014 you must not eat.",
+      "align": "center",
+      "svg": "garden_command",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "garden_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "For on the day that you eat from it, you will surely die.",
+      "align": "center",
+      "svg": "garden_warning",
+      "choices": [
+        {
+          "label": "Why this one tree? \ud83e\udd14",
+          "note": "A fair question. Some boundaries exist not to withhold, but to protect."
+        },
+        {
+          "label": "Trust without question \u2705",
+          "note": "Obedience is its own reward when the giver is love."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "garden_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "text": "So the man tended the garden. He named every creature. And he walked with God in the cool of the day.",
+      "align": "center",
+      "svg": "garden_tended",
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ]
+}

@@ -25,7 +25,7 @@ const css = `
 button,select,input{font:inherit}.app{display:grid;grid-template-columns:390px minmax(0,1fr);height:100vh;overflow:hidden}
 .sidebar{background:var(--panel);border-right:1px solid var(--border);padding:20px;overflow:auto}.brand{font-size:1.35rem;font-weight:800;display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding-bottom:14px;border-bottom:1px solid var(--border)}.brand small{font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:.12em}
 .group{padding:16px 0;border-bottom:1px solid var(--border);display:grid;gap:10px}.group h3{margin:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}label{display:grid;gap:5px;font-size:.78rem;color:var(--dim)}select,input[type="number"],input[type="text"]{width:100%;background:var(--panel2);border:1px solid var(--border);border-radius:6px;padding:8px;color:var(--text)}input[type="range"]{width:100%}.checks{display:grid;grid-template-columns:1fr 1fr;gap:7px}.checks label,.export-option{display:flex;align-items:center;gap:7px;background:var(--panel2);padding:8px;border:1px solid var(--border);border-radius:6px}.hint{margin:0;color:var(--dim);font-size:.72rem;line-height:1.4}.colors{display:grid;grid-template-columns:1fr 1fr;gap:9px}.color{display:flex;align-items:center;justify-content:space-between;background:var(--panel2);padding:7px 8px;border:1px solid var(--border);border-radius:6px}.color input{width:40px;height:28px;border:0;padding:0;background:transparent}.brief{font-size:.8rem;line-height:1.45;color:var(--dim);background:var(--panel2);padding:10px;border-radius:6px;border:1px solid var(--border)}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:14px}.actions button:first-child{grid-column:1/-1}.btn{border:1px solid var(--accent);border-radius:6px;padding:10px;background:var(--accent);color:white;font-weight:700;cursor:pointer}.btn.secondary{background:var(--panel2);border-color:var(--border);color:var(--text)}.btn.ok{background:var(--ok);border-color:var(--ok)}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:14px}.actions button:first-child,.actions .bulk{grid-column:1/-1}.btn{border:1px solid var(--accent);border-radius:6px;padding:10px;background:var(--accent);color:white;font-weight:700;cursor:pointer}.btn.secondary{background:var(--panel2);border-color:var(--border);color:var(--text)}.btn.ok{background:var(--ok);border-color:var(--ok)}.btn:disabled{cursor:wait;opacity:.65}.export-status{grid-column:1/-1;min-height:1.2em;margin:0;color:var(--dim);font-size:.72rem;text-align:center}
 .stage{min-width:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background-image:radial-gradient(var(--border) 1px,transparent 1px);background-size:24px 24px}.topbar{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 18px;background:rgba(13,13,18,.92);border-bottom:1px solid var(--border)}.scene-name{font-weight:800}.scene-meta{font-size:.75rem;color:var(--dim)}
 .preview-wrap{display:flex;align-items:center;justify-content:center;padding:24px;min-height:0}.preview{position:relative;width:min(100%,1200px);aspect-ratio:16/9;background:#111;border:1px solid var(--border);box-shadow:0 24px 60px rgba(0,0,0,.45);overflow:hidden}.preview svg{position:absolute;inset:0;width:100%;height:100%;display:block}.preview .fg{pointer-events:none}
 .layerbar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:12px 18px;background:var(--panel);border-top:1px solid var(--border);font-size:.78rem;color:var(--dim)}.layerbar label{display:flex;align-items:center;gap:6px}.filename{margin-left:auto;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.7rem}
@@ -84,6 +84,8 @@ root.innerHTML = `
       <button class="btn ok" id="downloadFg">Foreground SVG</button>
       <button class="btn secondary" id="downloadManifest">Scene JSON</button>
       <button class="btn secondary" id="randomise">Randomise Seed</button>
+      <button class="btn ok bulk" id="downloadAll">Export All Scenes (.zip)</button>
+      <p class="export-status" id="exportStatus" role="status" aria-live="polite"></p>
     </div>
   </aside>
   <main class="stage">
@@ -119,7 +121,7 @@ function currentBeat(){return beats.find(b=>b.id===$("beat").value)||beats[0]}
 function sceneText(){const c=currentChapter(); return `${c.title} ${c.brief}`.toLowerCase()}
 function detectEnvironment(){
   const s=sceneText();
-  if(/sea|ship|storm|deep|flood|ark|water opened|through the sea/.test(s)) return "sea";
+  if(/sea|ship|storm|deep|flood|\bark\b|water opened|through the sea/.test(s)) return "sea";
   if(/river|jordan|well|brook|water|reeds|cistern/.test(s)) return "river";
   if(/palace|king|throne|temple|shiloh|banquet|court|furnace|prison|house|room|table/.test(s)) return "palace";
   if(/city|wall|gate|tower|jericho|nineveh|jerusalem|storehouse|brick/.test(s)) return "city";
@@ -298,6 +300,47 @@ function treeLine(rand,y,color,n){let o=`<g fill="${color}" opacity=".67">`;for(
 function mountainPath(rand,base,amp,n){let d=`M0 ${base}`;for(let i=0;i<n;i++){const x=(i+1)*1920/n,peak=base-amp*(.6+rand()*1.5);d+=` L${x-1920/n*.48} ${peak} L${x} ${base+rand()*35}`}return d+" V1080 H0Z"}
 function download(text,name,type="image/svg+xml"){const blob=new Blob([text],{type});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
 function manifest(){return JSON.stringify({story:displayStory(storyKey),act:last.act,chapter:last.chapter.title,brief:last.chapter.brief,scene:{id:last.beat.id,name:last.beat.name},canvas:{width:1920,height:1080},environment:last.settings.env,time:last.settings.tod,seed:last.settings.seed,background:`${last.base}_background.svg`,foreground:`${last.base}_foreground.svg`,foregroundBackgroundIncluded:$("includeBgInFg").checked,foregroundDetails:{plants:last.settings.fgPlants,rocks:last.settings.fgRocks,structures:last.settings.fgStructures,props:last.settings.fgProps,framing:last.settings.fgFraming},layering:["background","optional middle-ground/characters","foreground"]},null,2)}
+function crc32(bytes){let crc=0xffffffff;for(const byte of bytes){crc^=byte;for(let i=0;i<8;i++)crc=(crc>>>1)^((crc&1)?0xedb88320:0)}return(crc^0xffffffff)>>>0}
+function u16(n){return Uint8Array.of(n&255,n>>>8&255)}
+function u32(n){return Uint8Array.of(n&255,n>>>8&255,n>>>16&255,n>>>24&255)}
+function joinBytes(parts){const size=parts.reduce((n,p)=>n+p.length,0),out=new Uint8Array(size);let at=0;for(const p of parts){out.set(p,at);at+=p.length}return out}
+function makeZip(files){
+  const encoder=new TextEncoder(),locals=[],central=[];let offset=0;
+  for(const file of files){
+    const name=encoder.encode(file.name),data=encoder.encode(file.text),crc=crc32(data);
+    const local=joinBytes([u32(0x04034b50),u16(20),u16(0x0800),u16(0),u16(0),u16(0),u32(crc),u32(data.length),u32(data.length),u16(name.length),u16(0),name,data]);
+    locals.push(local);
+    central.push(joinBytes([u32(0x02014b50),u16(20),u16(20),u16(0x0800),u16(0),u16(0),u16(0),u32(crc),u32(data.length),u32(data.length),u16(name.length),u16(0),u16(0),u16(0),u16(0),u32(0),u32(offset),name]));
+    offset+=local.length;
+  }
+  const body=joinBytes(locals),directory=joinBytes(central);
+  return new Blob([body,directory,joinBytes([u32(0x06054b50),u16(0),u16(0),u16(files.length),u16(files.length),u32(directory.length),u32(body.length),u16(0)])],{type:"application/zip"});
+}
+async function downloadAllScenes(){
+  const button=$("downloadAll"),status=$("exportStatus"),chapterValue=$("chapter").value,beatValue=$("beat").value;
+  button.disabled=true;status.textContent="Preparing scenes…";
+  try{
+    const files=[];
+    for(let chapter=0;chapter<chapters.length;chapter++){
+      $("chapter").value=chapter;resetPalette();
+      for(const beat of beats){
+        $("beat").value=beat.id;render();
+        const folder=`act_${String(last.act).padStart(2,"0")}_${slug(last.chapter.title)}/${last.beat.id.toLowerCase()}_${slug(last.beat.name)}`;
+        files.push({name:`${folder}/${last.base}_background.svg`,text:last.bg});
+        files.push({name:`${folder}/${last.base}_foreground.svg`,text:foregroundExport()});
+        files.push({name:`${folder}/${last.base}_scene.json`,text:manifest()});
+      }
+      status.textContent=`Prepared act ${chapter+1} of ${chapters.length}…`;
+      await new Promise(resolve=>setTimeout(resolve,0));
+    }
+    const index={story:displayStory(storyKey),exportedAt:new Date().toISOString(),acts:chapters.length,beatsPerAct:beats.length,sceneCount:chapters.length*beats.length,fileCount:files.length,canvas:{width:1920,height:1080},foregroundBackgroundIncluded:$("includeBgInFg").checked};
+    files.unshift({name:"scene-export.json",text:JSON.stringify(index,null,2)});
+    const blob=makeZip(files),name=`${slug(displayStory(storyKey))}_all_scenes.zip`,a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+    status.textContent=`Exported ${index.sceneCount} scenes (${files.length} files).`;
+  }catch(error){console.error(error);status.textContent="Bulk export failed. Please try again."}
+  finally{$("chapter").value=chapterValue;$("beat").value=beatValue;resetPalette();render();button.disabled=false}
+}
 function colorField(id,label,value){return `<label class="color">${label}<input id="${id}" type="color" value="${value}"></label>`}
 function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,"_").replace(/^_|_$/g,"")}
 function displayStory(s){return s==="Eiljah"?"Elijah":s}
@@ -317,6 +360,7 @@ $("randomise").onclick=()=>{$("seed").value=1+Math.floor(Math.random()*9999);ren
 $("downloadBg").onclick=()=>download(last.bg,`${last.base}_background.svg`);
 $("downloadFg").onclick=()=>download(foregroundExport(),`${last.base}_foreground.svg`);
 $("downloadManifest").onclick=()=>download(manifest(),`${last.base}_scene.json`,"application/json");
+$("downloadAll").onclick=downloadAllScenes;
 $("showBg").onchange=()=>$("bgLayer").style.display=$("showBg").checked?"":"none";
 $("showFg").onchange=()=>$("fgLayer").style.display=$("showFg").checked?"":"none";
 resetPalette(); render();
