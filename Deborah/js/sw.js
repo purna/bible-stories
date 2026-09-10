@@ -9,27 +9,33 @@ function localPath(entry) {
 }
 
 self.addEventListener('install', event => {
+  self.skipWaiting();
   event.waitUntil((async () => {
     const cache = await caches.open(STORY_CACHE);
-    const response = await fetch('precache-manifest.json');
-    const manifest = await response.json();
+    let manifest = { urls: [] };
+    try {
+      const response = await fetch('precache-manifest.json');
+      if (response.ok) manifest = await response.json();
+      else console.warn('precache-manifest.json not found, skipping precache');
+    } catch (error) {
+      console.warn('Failed to load precache-manifest.json:', error);
+    }
     for (const entry of manifest.urls || []) {
       const request = new URL(localPath(entry), STORY_SCOPE);
       try {
         const asset = await fetch(request);
         if (asset.ok) await cache.put(request, asset.clone());
       } catch (error) {
-        console.warn('Story asset was not cached:', request.pathname, error);
+        // Silent: assets may not be reachable on file:// or in dev
       }
     }
-    await self.skipWaiting();
   })());
 });
 
 self.addEventListener('activate', event => {
   event.waitUntil((async () => {
     const names = await caches.keys();
-    await Promise.all(names.filter(name => name.startsWith(`${STORY_FOLDER}-comic-`) && name !== STORY_CACHE).map(name => caches.delete(name)));
+    await Promise.all(names.filter(name => name !== STORY_CACHE && name !== 'story-downloads-v1').map(name => caches.delete(name)));
     await self.clients.claim();
   })());
 });
@@ -42,14 +48,21 @@ self.addEventListener('fetch', event => {
   if (event.request.mode === 'navigate') {
     event.respondWith(fetch(event.request).catch(async () =>
       (await caches.match(event.request)) ||
-      (await caches.match(new URL('index.html', STORY_SCOPE))) ||
-      caches.match(new URL('offline.html', STORY_SCOPE))
+      (await caches.match(new URL('index.html', STORY_SCOPE)))
     ));
     return;
   }
 
+  // For data/precache manifest fetches, always go to network (don't serve stale)
+  if (url.pathname.includes('/precache-manifest.json') || url.pathname.includes('/data/manifest.json')) {
+    return;
+  }
+
   event.respondWith(caches.match(event.request, { ignoreSearch: true }).then(cached => cached || fetch(event.request).then(response => {
-    if (response.ok) caches.open(STORY_CACHE).then(cache => cache.put(event.request, response.clone()));
+    if (response.ok) {
+      const clone = response.clone();
+      caches.open(STORY_CACHE).then(cache => cache.put(event.request, clone));
+    }
     return response;
   })));
 });

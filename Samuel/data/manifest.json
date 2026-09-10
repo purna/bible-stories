@@ -1,0 +1,115 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "the_boy_at_shiloh",
+      "name": "Ch.1 · The Boy at Shiloh",
+      "file": "act1_the_boy_at_shiloh.json",
+      "scene": "the_boy_at_shiloh",
+      "foreground": "fg_the_boy_at_shiloh",
+      "assetFolder": "act_01_the_boy_at_shiloh",
+      "assetStem": "samuel_act1",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "the_voice_at_night",
+      "name": "Ch.2 · The Voice at Night",
+      "file": "act2_the_voice_at_night.json",
+      "scene": "the_voice_at_night",
+      "foreground": "fg_the_voice_at_night",
+      "assetFolder": "act_02_the_voice_at_night",
+      "assetStem": "samuel_act2",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "a_hard_message",
+      "name": "Ch.3 · A Hard Message",
+      "file": "act3_a_hard_message.json",
+      "scene": "a_hard_message",
+      "foreground": "fg_a_hard_message",
+      "assetFolder": "act_03_a_hard_message",
+      "assetStem": "samuel_act3",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "the_ark_captured",
+      "name": "Ch.4 · The Ark Captured",
+      "file": "act4_the_ark_captured.json",
+      "scene": "the_ark_captured",
+      "foreground": "fg_the_ark_captured",
+      "assetFolder": "act_04_the_ark_captured",
+      "assetStem": "samuel_act4",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "ebenezer",
+      "name": "Ch.5 · Ebenezer",
+      "file": "act5_ebenezer.json",
+      "scene": "ebenezer",
+      "foreground": "fg_ebenezer",
+      "assetFolder": "act_05_ebenezer",
+      "assetStem": "samuel_act5",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "a_king_demanded",
+      "name": "Ch.6 · A King Demanded",
+      "file": "act6_a_king_demanded.json",
+      "scene": "a_king_demanded",
+      "foreground": "fg_a_king_demanded",
+      "assetFolder": "act_06_a_king_demanded",
+      "assetStem": "samuel_act6",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "saul_chosen",
+      "name": "Ch.7 · Saul Chosen",
+      "file": "act7_saul_chosen.json",
+      "scene": "saul_chosen",
+      "foreground": "fg_saul_chosen",
+      "assetFolder": "act_07_saul_chosen",
+      "assetStem": "samuel_act7",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "saul_s_first_victory",
+      "name": "Ch.8 · Saul’s First Victory",
+      "file": "act8_saul_s_first_victory.json",
+      "scene": "saul_s_first_victory",
+      "foreground": "fg_saul_s_first_victory",
+      "assetFolder": "act_08_saul_s_first_victory",
+      "assetStem": "samuel_act8",
+      "particle": "dusk",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "the_rejected_king",
+      "name": "Ch.9 · The Rejected King",
+      "file": "act9_the_rejected_king.json",
+      "scene": "the_rejected_king",
+      "foreground": "fg_the_rejected_king",
+      "assetFolder": "act_09_the_rejected_king",
+      "assetStem": "samuel_act9",
+      "particle": "ember",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    },
+    {
+      "id": "david_anointed",
+      "name": "Ch.10 · David Anointed",
+      "file": "act10_david_anointed.json",
+      "scene": "david_anointed",
+      "foreground": "fg_david_anointed",
+      "assetFolder": "act_10_david_anointed",
+      "assetStem": "samuel_act10",
+      "particle": "dawn",
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+    }
+  ]
+}

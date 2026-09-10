@@ -211,7 +211,7 @@ fs.writeFileSync(path.join(dir, 'assets', 'scenes', `${story.toLowerCase()}-scen
 const cssPalettes = manifestActs.map((act, i) =>
   `.palette-act-${i + 1} { --panel-bg:${pal.acts[i % pal.acts.length]}; --panel-dots:${shade(pal.acts[i % pal.acts.length], -20)}; --accent-color:${pal.accent}; --bubble-bg:#fff7e8; --text-color:#0A0812; }`
 ).join('\n');
-const css = `/* ${story} — Comic CSS. Palettes derived from canon.json. */
+let css = `/* ${story} — Comic CSS. Palettes derived from canon.json. */
 :root { --ink: #0A0812; --cream: #FFF7E8; --panel-bg: ${pal.base}; --panel-dots: ${shade(pal.base, -20)}; --accent-color: ${pal.accent}; --bubble-bg: #FFF1D2; --text-color: #0A0812; }
 
 /* ── Act Palettes ─────────────────────────────── */
@@ -267,6 +267,9 @@ body.palette-act-10 #${story.toLowerCase()}FieldBackdrop {
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: var(--ink); font-family: 'Nunito', sans-serif; color: var(--cream); }
 `;
+// ── 5. CSS — template base + story-specific palettes + field backdrop ──
+const templateCss = fs.readFileSync(path.join(root, '__Template', 'css', 'template-comic.css'), 'utf8');
+css = templateCss + css;
 fs.writeFileSync(path.join(dir, 'css', `${story.toLowerCase()}-comic.css`), css);
 
 // ── 6. index.html ─────────────────────────────────────────────

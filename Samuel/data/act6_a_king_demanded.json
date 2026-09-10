@@ -1,0 +1,64 @@
+{
+  "id": "a_king_demanded",
+  "name": "Ch.6 · A King Demanded",
+  "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
+  "particle": "ember",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "a_king_demanded_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Hear the elders and explain the tradeoffs.",
+      "cite": "1 Samuel 1–16; 25",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "a_king_demanded_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Will a listener speak truth when people demand the wrong kind of power? — A King Demanded is the next step in that question.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "a_king_demanded_2",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE WORD STANDS",
+      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "a_king_demanded_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Walk on with the lesson 📖",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment 🕊️",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "a_king_demanded",
+  "foreground": "fg_a_king_demanded",
+  "index": 5
+}

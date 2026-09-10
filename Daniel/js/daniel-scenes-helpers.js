@@ -30,6 +30,11 @@
         } else {
             opts = Object.assign({}, colorOrOpts);
         }
+        // MeshToonMaterial does not support metalness/roughness — strip them
+        // so they don't produce console warnings. Metallic looks still come
+        // through the gradient map and the base colour.
+        delete opts.metalness;
+        delete opts.roughness;
         opts.gradientMap = gradientMap;
         return new THREE.MeshToonMaterial(opts);
     };
