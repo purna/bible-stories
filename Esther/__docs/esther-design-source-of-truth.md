@@ -93,6 +93,70 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 01B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “navigate the palace feast and hear vashti’s refusal”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 01C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01A — ESTABLISH (32mm, high angle, palace hall wide)     │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🔷 FRAMING MOSAIC BORDER (bottom/sides, mosaic)   │   │
+│       │  🏆 GOLDEN CUP EDGE (right, hammered_gold)         │   │
+│       │  🟣 CURTAIN EDGE (left, fabric_weave)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  COLUMNAR HALL, clerestory shafts        │  │   │
+│       │  │  👑  AHASUERUS on THRONE (hero 3D, gold)      │  │   │
+│       │  │  👑  VASHTI on balcony (distant)             │  │   │
+│       │  │  👥  12 COURTIERS at tables                   │  │   │
+│       │  │  🔷  PATTERNED WALLS (mosaic, hammered_gold)  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "180 days...riches of kingdom"     │  │   │
+│       │  │  [CAPTION] "Seventh day...commanded Vashti"   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01B — INTERACT (50mm, chest height, scepter handoff)     │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS ON SCEPTER (center, hammered_gold) ◄──PULSE │
+│       │  👔 EUNUCH'S CUFF (fabric_weave)                   │   │
+│       │  🏛️  COLUMN BASE FRAME (left, masonry)             │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  COLUMNS SIMPLIFIED, reduced saturation   │  │   │
+│       │  │  👑  AHASUERUS leaning, scepter extended      │  │   │
+│       │  │  👤  EUNUCH kneeling, receiving               │  │   │
+│       │  │  👑  VASHTI on balcony, refusing (back turn)  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Bring Queen Vashti..."             │  │   │
+│       │  │  [CHOICE]    ▢ Exact  ▢ Soften  ▢ Threat      │  │   │
+│       │  │  [BUBBLE]  "I will not come."                 │  │   │
+│       │  │  [CAPTION] "Queen Vashti refused..."          │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01C — RESOLVE (50mm, eye level, pull-back, decree)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  📜 DECREE SCROLL corner (top-right, fabric+gold)  │   │
+│       │  👑 CROWN ON CUSHION (bottom-left, hammered_gold)  │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  HALL OPENED for scripture space         │  │   │
+│       │  │  👑  AHASUERUS standing, advisers around      │  │   │
+│       │  │  📜  DECREE SCROLL on table (hero 3D)         │  │   │
+│       │  │  👑  VASHTI'S CROWN removed, on cushion       │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Vashti has wronged the king..."    │  │   │
+│       │  │  [CAPTION] "A royal decree went out..."       │  │   │
+│       │  │  [SCRIPTURE] "— Esther 1:19"                 │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 2: A New Queen
 
 **Act summary:** Prepare Esther while protecting her identity.
@@ -102,6 +166,71 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 02A | Establish | lapis blue, royal plum, limestone, hammered gold. high clerestory or lamp light with sharp architectural shadow. | `mosaic` + `hammered_gold` | Wide, three-plane tableau. FG SVG: framing mosaic, nearby silhouettes, and an edge prop tied to “a new queen”. MG: character group and optional low-detail 3D landmark. BG SVG: columns, patterned wall, and distant court silhouettes. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. formal dolly-in with a slight off-axis shift when power is challenged. | SVG: banners, curtain edges, and lamp glow breathe subtly. 3D: throne, table, seal, or architectural hero object moves only when handled. Characters begin in readable held poses before any movement. |
 | 02B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “prepare esther while protecting her identity”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 02C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02A — ESTABLISH (30mm, harem interior wide)              │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🔷 ARCHED MOSAIC BORDER (top, mosaic)             │   │
+│       │  🫙 PERFUME VESSELS (right, hammered_gold)         │   │
+│       │  🟣 SILK DRAPE EDGE (left, fabric_weave shot silk) │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🛁  HAREM CHAMBERS, tiled pools, niches      │  │   │
+│       │  │  👩  ESTHER seated, attendants with oils      │  │   │
+│       │  │  👤  HEGAI observing, clipboard               │  │   │
+│       │  │  👥  6 CANDIDATES in background niches        │  │   │
+│       │  │  🫙  ALABASTER MYRRH VESSEL (hero 3D)         │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Entrusted to Hegai..."            │  │   │
+│       │  │  [CAPTION] "Twelve months...myrrh, perfumes"  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02B — INTERACT (50mm, chest height, gate grille)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS THROUGH GRILLE (center, stone+gold) ◄──PULSE│
+│       │  🕯️  WAX SEAL IMPRESSION (fabric_weave+gold)        │   │
+│       │  🏛️  MASONRY GRILLE BARS (stone texture)            │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🚪  HAREM GATE EXTERIOR, palace wall         │  │   │
+│       │  │  👤  MORDECAI at gate, ring extended          │  │   │
+│       │  │  👩  ESTHER at screened window, receiving     │  │   │
+│       │  │  👁️  HEGAI watching from distance             │  │   │
+│       │  │  💍  SIGNET RING (hero 3D, hammered_gold)     │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Do not make known your people..."  │  │   │
+│       │  │  [CHOICE]    ▢ Promise  ▢ Ask why  ▢ Hesitate │  │   │
+│       │  │  [BUBBLE]  "I will do as you say."            │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02C — RESOLVE (50mm, eye level, crown moment)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  👑 CROWN CORNER FRAME (top-center, hammered_gold) │   │
+│       │  💍 SIGNET IMPRESSION (bottom-left, fabric_weave)  │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌅  HAREM DAWN LIGHT, crown motif in space   │  │   │
+│       │  │  👑  ESTHER crowned, royal robe (fabric_weave)│  │   │
+│       │  │  👑  AHASUERUS placing crown                  │  │   │
+│       │  │  👤  MORDECAI at gate distant, watching       │  │   │
+│       │  │  👑  ROYAL CROWN (hero 3D, hammered_gold)     │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "This one pleases me..."            │  │   │
+│       │  │  [CAPTION] "The king loved Esther more..."    │  │   │
+│       │  │  [SCRIPTURE] "— Esther 2:17"                 │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 3: The Gate Plot
 
@@ -113,6 +242,72 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 03B | Interact | Increase local contrast around the action while retaining sun-baked clay, limestone, slate shadow, muted bronze. Key light follows the story’s real light source. | `wood_dark` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “carry mordecai’s warning into the royal record”. BG SVG: simplified city silhouette, towers, and atmospheric street depth with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 03C | Resolve / reflect | Let the accent move toward a quieter sun-baked clay, limestone, slate shadow, muted bronze; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `stone` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: city silhouette, towers, and atmospheric street depth, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03A — ESTABLISH (32mm, city gate late afternoon)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧱 FRAMING STONE BORDER (ashlar courses, stone)   │   │
+│       │  🔩 GATE PIVOT HINGE (right, wood_dark iron-band)  │   │
+│       │  ✨ DUST MOTES in light shaft (animated)           │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏰  GATE TOWERS, carved reliefs, shadows     │  │   │
+│       │  │  👤  MORDECAI seated, sackcloth under robe    │  │   │
+│       │  │  🛡️  TWO GUARDS at posts (gold helms)         │  │   │
+│       │  │  👥  BIGTHAN &amp; TERESH whispering in alcove    │  │   │
+│       │  │  🪵  GATE GUARDIAN'S STAFF (hero 3D, wood_dark)│  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Mordecai sat at the king's gate"  │  │   │
+│       │  │  [CAPTION] "Two eunuchs...sought to lay hands"│  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03B — INTERACT (50mm, chest height, tablet writing)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS ON TABLET+STYLUS (center, stone+wood) ◄PULSE│
+│       │  👔 SCRIBE'S CUFF (fabric_weave)                   │   │
+│       │  🧱 STONE SILL (bottom frame)                      │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  GATE PASSAGE, archive suggested beyond  │  │   │
+│       │  │  👤  MORDECAI writing urgently                │  │   │
+│       │  │  🏃  HATHACH receiving, running to palace     │  │   │
+│       │  │  👑  ESTHER at palace window above            │  │   │
+│       │  │  📜  CLAY TABLET+STYLUS (hero 3D, stone+wood) │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Write this in the king's chronicles"│ │   │
+│       │  │  [CHOICE]    ▢ Exactly  ▢ Add timing  ▢ Names │  │   │
+│       │  │  [BUBBLE]  "I will carry it to the queen..."  │  │   │
+│       │  │  [CAPTION] "Written in the book of chronicles"│  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03C — RESOLVE (50mm, eye level, archive morning)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  📜 TABLET ON SHELF corner (top-right, stone)      │   │
+│       │  🪵 STAFF AT GATE BASE (bottom-left, wood_dark)    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  📚  ARCHIVE INTERIOR, morning light          │  │   │
+│       │  │  👤  MORDECAI at gate again, unnoticed        │  │   │
+│       │  │  🛡️  GUARDS leading conspirators away         │  │   │
+│       │  │  📜  SCRIBE filing tablet indifferently       │  │   │
+│       │  │  📜  ARCHIVED TABLET (hero 3D, stone)         │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Plot investigated...two hanged"   │  │   │
+│       │  │  [CAPTION] "Recorded...but Mordecai not rewarded"││   │
+│       │  │  [SCRIPTURE] "— Esther 2:23"                 │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 4: Haman’s Decree
 
 **Act summary:** Trace the decree as it spreads across the empire.
@@ -122,6 +317,72 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 04A | Establish | lapis blue, royal plum, limestone, hammered gold. high clerestory or lamp light with sharp architectural shadow. | `mosaic` + `hammered_gold` | Wide, three-plane tableau. FG SVG: framing mosaic, nearby silhouettes, and an edge prop tied to “haman’s decree”. MG: character group and optional low-detail 3D landmark. BG SVG: columns, patterned wall, and distant court silhouettes. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. formal dolly-in with a slight off-axis shift when power is challenged. | SVG: banners, curtain edges, and lamp glow breathe subtly. 3D: throne, table, seal, or architectural hero object moves only when handled. Characters begin in readable held poses before any movement. |
 | 04B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “trace the decree as it spreads across the empire”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 04C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04A — ESTABLISH (30mm, throne room, seal transfer)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🔷 FRAMING MOSAIC (floor pattern up edges)        │   │
+│       │  💍 RING IMPRESSION IN WAX (center, gold on fabric)│   │
+│       │  🖋️  QUILL &amp; INKPOT (wood_dark/stone)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  THRONE ROOM, columns, clerestory        │  │   │
+│       │  │  👑  AHASUERUS extending ring to HAMAN       │  │   │
+│       │  │  👤  HAMAN receiving, triumphant              │  │   │
+│       │  │  👥  4 SCRIBES writing scrolls (fabric_weave) │  │   │
+│       │  │  💍  KING'S SIGNET RING (hero 3D, hammered_gold)│ │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "The silver is given to you..."     │  │   │
+│       │  │  [BUBBLE] "Let a decree be written..."        │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04B — INTERACT (50mm, chest height, courtyard dispatch)  │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS ON SCROLL CASE (center, wood_dark+gold)◄PULSE│
+│       │  🏇 COURIER'S REINS (fabric_weave leather)         │   │
+│       │  🏛️  PALACE GATE THRESHOLD (stone arch)            │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏰  COURTYARD, gates opening, roads stretch  │  │   │
+│       │  │  👤  HAMAN handing case to first courier      │  │   │
+│       │  │  🏇  5 COURIERS mounted, horses (wood_dark)   │  │   │
+│       │  │  👤  MORDECAI at gate, sackcloth, watching    │  │   │
+│       │  │  📦  DECREE SCROLL CASE (hero 3D, wood_dark)  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Ride swiftly...cannot be revoked"  │  │   │
+│       │  │  [CHOICE]    ▢ Ride now  ▢ Verify  ▢ Pray     │  │   │
+│       │  │  [BUBBLE]  "The decree goes out..."           │  │   │
+│       │  │  [CAPTION] "Letters sent by couriers..."      │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04C — RESOLVE (50mm, eye level, Susa square)             │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  📜 POSTED EDICT corner (top-left, fabric+gold)    │   │
+│       │  🧵 TORN CLOTH fragment (bottom-right, fabric_weave)│   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  SUSA SQUARE, palace distant             │  │   │
+│       │  │  📜  POSTED EDICT on pillar (hero 3D)         │  │   │
+│       │  │  👤  MORDECAI in sackcloth, ashes             │  │   │
+│       │  │  👥  JEWS mourning, tearing clothes           │  │   │
+│       │  │  🏇  COURIERS riding out through gate         │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Decree issued in Susa..."         │  │   │
+│       │  │  [CAPTION] "Mordecai tore clothes...ashes"    │  │   │
+│       │  │  [SCRIPTURE] "— Esther 3:15"                 │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 5: For Such a Time
 
@@ -133,6 +394,71 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 05B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “fast, gather courage, and approach the throne”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 05C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05A — ESTABLISH (30mm, queen's chambers, fasting)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🔷 ARCHED MOSAIC DOORWAY (top frame)              │   │
+│       │  🫙 FASTING VESSELS (right: jug, empty plate)      │   │
+│       │  🟦 SHAWL FRINGE TZITZIT (bottom, fabric_dots)     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏠  ESTHER'S CHAMBERS, screened windows      │  │   │
+│       │  │  👩  ESTHER kneeling in PRAYER SHAWL (hero)   │  │   │
+│       │  │  👥  4 MAIDENS fasting, heads bowed           │  │   │
+│       │  │  🏃  HATHACH departing with message           │  │   │
+│       │  │  🧣  TALLIT with TZITZIT (hero 3D, fabric)    │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Do not think you will escape..."   │  │   │
+│       │  │  [CAPTION] "Three days. No food. No water."   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05B — INTERACT (50mm, chest height, threshold of death)  │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  👑 SCEPTER TIP AT THRESHOLD (center, gold) ◄──PULSE │
+│       │  ✋ ESTHER'S HAND REACHING (fabric_weave sleeve)    │   │
+│       │  🏛️  COLUMN BASE (left, stone)                     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  INNER COURT COLONNADE, throne visible   │  │   │
+│       │  │  👩  ESTHER at threshold, royal robe          │  │   │
+│       │  │  👑  AHASUERUS silhouette, scepter extended   │  │   │
+│       │  │  🛡️  GUARDS at posts (gold helms)             │  │   │
+│       │  │  👑  GOLDEN SCEPTER TIP (hero 3D, hammered_gold)│ │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "If I perish, I perish."            │  │   │
+│       │  │  [CHOICE]    ▢ Bold  ▢ Tremble  ▢ Prostrate   │  │   │
+│       │  │  [BUBBLE]  "What is it, Queen Esther?..."     │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05C — RESOLVE (50mm, eye level, invitation)              │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  📜 INVITATION SCROLL corner (top-right, fabric)   │   │
+│       │  👑 SCEPTER TIP RESTING (bottom-center, gold)      │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  THRONE ROOM WARM, acceptance            │  │   │
+│       │  │  👩  ESTHER standing, scepter touched         │  │   │
+│       │  │  👑  AHASUERUS leaning forward, pleased       │  │   │
+│       │  │  👤  HAMAN entering behind, surprised         │  │   │
+│       │  │  📜  BANQUET INVITATION (hero 3D, fabric)     │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Let the king and Haman come..."    │  │   │
+│       │  │  [CAPTION] "The king extended the golden..."  │  │   │
+│       │  │  [SCRIPTURE] "— Esther 5:2–3"                │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 6: The First Banquet
 
 **Act summary:** Invite the king and Haman without revealing too soon.
@@ -142,6 +468,70 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 06A | Establish | lapis blue, royal plum, limestone, hammered gold. high clerestory or lamp light with sharp architectural shadow. | `mosaic` + `hammered_gold` | Wide, three-plane tableau. FG SVG: framing mosaic, nearby silhouettes, and an edge prop tied to “the first banquet”. MG: character group and optional low-detail 3D landmark. BG SVG: columns, patterned wall, and distant court silhouettes. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. formal dolly-in with a slight off-axis shift when power is challenged. | SVG: banners, curtain edges, and lamp glow breathe subtly. 3D: throne, table, seal, or architectural hero object moves only when handled. Characters begin in readable held poses before any movement. |
 | 06B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “invite the king and haman without revealing too soon”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 06C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06A — ESTABLISH (30mm, intimate banquet chamber)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🔷 FRAMING MOSAIC BORDER (geometric)              │   │
+│       │  🍇 POMEGRANATE GARNISH (right, gold/enamel)       │   │
+│       │  🟣 CUSHION FRINGE TASSELS (bottom, fabric_dots)   │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏠  BANQUET CHAMBER, cushioned couches       │  │   │
+│       │  │  👩  ESTHER reclining at head, composed       │  │   │
+│       │  │  👑  AHASUERUS center, relaxed                │  │   │
+│       │  │  👤  HAMAN right, pleased, fine robes         │  │   │
+│       │  │  🍷  WINE SERVICE SET (hero 3D, hammered_gold)│  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Esther prepared a banquet..."     │  │   │
+│       │  │  [BUBBLE] "Enjoy, Haman. This is the queen's"│  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06B — INTERACT (50mm, chest height, wine cup offer)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS ON WINE CUP (center, hammered_gold) ◄─PULSE │
+│       │  🍷 WINE POURING STREAM (animated, gold)           │   │
+│       │  🪵 TABLE EDGE (wood_dark grain)                   │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🕯️  LAMP LIGHT INTIMATE on table             │  │   │
+│       │  │  👑  AHASUERUS filling cup, extending         │  │   │
+│       │  │  👩  ESTHER receiving, eyes on Haman          │  │   │
+│       │  │  👤  HAMAN drinking, oblivious                │  │   │
+│       │  │  🍷  WINE CUP (hero 3D, hammered_gold)        │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "What is your wish? Half kingdom"  │  │   │
+│       │  │  [CHOICE]    ▢ 2nd banquet  ▢ Now  ▢ People   │  │   │
+│       │  │  [BUBBLE]  "My petition: let king and Haman" │  │   │
+│       │  │  [BUBBLE]  "I am honored — tomorrow I come"  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06C — RESOLVE (50mm, eye level, corridor night)          │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💍 HAMAN'S SIGNET RING corner (top-left, gold)    │   │
+│       │  🪵 MORDECAI'S STAFF (bottom-right, wood_dark)     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  PALACE CORRIDOR NIGHT, gate visible     │  │   │
+│       │  │  👤  HAMAN exiting, beaming → fury shift      │  │   │
+│       │  │  👤  MORDECAI at gate, not rising, sackcloth │  │   │
+│       │  │  💍  HAMAN'S SIGNET RING (hero 3D, gold)     │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Haman went out joyful...saw..."  │  │   │
+│       │  │  [SCRIPTURE] "— Esther 5:9"                 │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 7: The Sleepless Night
 
@@ -153,6 +543,71 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 07B | Interact | Increase local contrast around the action while retaining near-black blue, cool slate, lamp amber, muted earth. Key light follows the story’s real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “find mordecai’s forgotten service in the chronicles”. BG SVG: simplified receding rock or masonry silhouettes with minimal detail with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 07C | Resolve / reflect | Let the accent move toward a quieter near-black blue, cool slate, lamp amber, muted earth; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: receding rock or masonry silhouettes with minimal detail, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07A — ESTABLISH (30mm, bedchamber night, slow dolly)     │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🔷 FRAMING MOSAIC CANOPY (top, pattern)           │   │
+│       │  💡 LAMP GLOW FRINGE (right, hammered_gold rays)   │   │
+│       │  📖 CHRONICLE EDGE (left, fabric_weave binding)    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🛏️  BEDCHAMBER, canopied bed, archive shelves│  │   │
+│       │  │  👑  AHASUERUS propped, sleepless             │  │   │
+│       │  │  👤  SERVANT reading chronicle                │  │   │
+│       │  │  💡  LAMP (hero 3D, hammered_gold, single shaft)│ │   │
+│       │  │  📖  CHRONICLE VOLUME (hero 3D, fabric+gold)  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "That night the king could not sleep"│ │   │
+│       │  │  [BUBBLE] "Here: Mordecai told of Bigthana..."│  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07B — INTERACT (50mm, chest height, open chronicle)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS ON CHRONICLE PAGE (center, fabric_weave)◄PULSE│
+│       │  💡 LAMP SHADOW OF HANDS (gold rays)               │   │
+│       │  📖 BOOK EDGE (wood_dark binding)                  │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  📖 CHRONICLE PAGE ILLUMINATED, shelves dark │  │   │
+│       │  │  👑  AHASUERUS leaning, reading               │  │   │
+│       │  │  👤  SERVANT finger on Mordecai's entry       │  │   │
+│       │  │  👤  HAMAN at door, listening unseen          │  │   │
+│       │  │  📖  OPEN CHRONICLE (hero 3D, fabric+gold)    │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "What honor...for Mordecai?"        │  │   │
+│       │  │  [CHOICE] ▢ Ask directly ▢ Reward now ▢ Counsel│ │   │
+│       │  │  [BUBBLE]  "Nothing has been done for him."   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07C — RESOLVE (50mm, eye level, honor decreed at dawn)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🟣 ROYAL ROBE corner (top-right, fabric_weave)    │   │
+│       │  🏇 HORSE TRAPPINGS (bottom-left, hammered_gold)   │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌅  COURT AT DAWN, night ending              │  │   │
+│       │  │  👑  AHASUERUS seated, commanding             │  │   │
+│       │  │  👤  HAMAN entering, bowing, thinking of self │  │   │
+│       │  │  👤  SERVANT bringing robe and horse items    │  │   │
+│       │  │  🟣  ROYAL ROBE + HORSE (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "What should be done...honor?"      │  │   │
+│       │  │  [BUBBLE]  "For whom...but me?" (Haman)       │  │   │
+│       │  │  [SCRIPTURE] "— Esther 6:6"                  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 8: The Second Banquet
 
 **Act summary:** Name the threat clearly at the decisive moment.
@@ -162,6 +617,70 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 08A | Establish | lapis blue, royal plum, limestone, hammered gold. high clerestory or lamp light with sharp architectural shadow. | `mosaic` + `hammered_gold` | Wide, three-plane tableau. FG SVG: framing mosaic, nearby silhouettes, and an edge prop tied to “the second banquet”. MG: character group and optional low-detail 3D landmark. BG SVG: columns, patterned wall, and distant court silhouettes. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. formal dolly-in with a slight off-axis shift when power is challenged. | SVG: banners, curtain edges, and lamp glow breathe subtly. 3D: throne, table, seal, or architectural hero object moves only when handled. Characters begin in readable held poses before any movement. |
 | 08B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “name the threat clearly at the decisive moment”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 08C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08A — ESTABLISH (30mm, final banquet wide)               │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🔷 FRAMING MOSAIC BORDER (geometric)              │   │
+│       │  🍇 POMEGRANATE GARNISH (right, gold/enamel)       │   │
+│       │  📜 PETITION SCROLL EDGE (bottom-left, fabric)     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏠  INTIMATE BANQUET CHAMBER, lamp light     │  │   │
+│       │  │  👩  ESTHER composed at table                 │  │   │
+│       │  │  👑  AHASUERUS center, listening              │  │   │
+│       │  │  👤  HAMAN right, honored and unaware         │  │   │
+│       │  │  🍷  WINE CUP + SCROLL (hero 3D)              │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "We are sold, I and my people..."   │  │   │
+│       │  │  [BUBBLE]  "Who is he?"                       │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08B — INTERACT (50mm, chest height, accusation)          │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  ✋ ESTHER'S POINTING HAND (center) ◄──PULSE        │   │
+│       │  🍷 SPILLED WINE (animated, gold/red)              │   │
+│       │  🟥 HAMAN'S TERROR SILHOUETTE (right edge)         │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🕯️  DRAMATIC LAMP LIGHT, simplified hall     │  │   │
+│       │  │  👩  ESTHER pointing across table             │  │   │
+│       │  │  👑  AHASUERUS rising in fury                 │  │   │
+│       │  │  👤  HAMAN pleading, exposed                  │  │   │
+│       │  │  🍷  WINE CUP (hero 3D, overturned)           │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "A foe and enemy! This wicked Haman!"│ │   │
+│       │  │  [CHOICE] ▢ Bold ▢ Weep ▢ Justice             │  │   │
+│       │  │  [CAPTION] "Haman was terrified before them"  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08C — RESOLVE (50mm, eye level, gallows at dawn)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💍 RING TRANSFER corner (top-left, hammered_gold) │   │
+│       │  🪵 GALLOWS SILHOUETTE (bottom-right, wood_dark)   │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌅  COURTYARD AT DAWN, gallows visible       │  │   │
+│       │  │  👑  AHASUERUS commanding from dais           │  │   │
+│       │  │  👤  MORDECAI honored, royal robe             │  │   │
+│       │  │  👑  KING'S SIGNET RING transferred (hero 3D) │  │   │
+│       │  │  👤  HAMAN silhouette, removed from power     │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "They hanged Haman..."             │  │   │
+│       │  │  [SCRIPTURE] "— Esther 7:10"                 │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 9: A New Decree
 
@@ -173,6 +692,67 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 09B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “send defensive orders before the deadline”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 09C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09A — ESTABLISH (30mm, throne room, counter-decree)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🔷 FRAMING MOSAIC (floor pattern up edges)        │   │
+│       │  💍 SIGNET RING PRESSING WAX (center, gold)        │   │
+│       │  🏇 COURIER HORSES EDGE (right, wood_dark)         │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  THRONE ROOM, scribes at tables          │  │   │
+│       │  │  👑  AHASUERUS authorizing the decree         │  │   │
+│       │  │  👤  MORDECAI in royal robes, directing       │  │   │
+│       │  │  👥  SCRIBES writing copies (fabric_weave)    │  │   │
+│       │  │  📜  NEW DECREE SCROLL (hero 3D, fabric)      │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Write as you please...seal it..."  │  │   │
+│       │  │  [CAPTION] "The counter-decree is prepared"   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09B — INTERACT (50mm, chest height, couriers race)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS ON REINS (center, wood_dark+fabric)◄PULSE │   │
+│       │  💨 SPEED BLUR (animated, fabric_weave)            │   │
+│       │  📦 DECREE SCROLL CASES (bottom, wood_dark)        │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏰  PALACE GATES, roads stretching outward  │  │   │
+│       │  │  🏇  COURIERS mounted, swift steeds           │  │   │
+│       │  │  👤  MORDECAI authority at gate               │  │   │
+│       │  │  📜  SEALED DECREE CASE (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CHOICE] ▢ Susa first ▢ Split routes ▢ Pray  │  │   │
+│       │  │  [CAPTION] "Riders hurry to every province"   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09C — RESOLVE (50mm, eye level, defense ready)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🚩 ASSEMBLY STANDARD corner (top-left, fabric)    │   │
+│       │  🕊️ WEAPONS LAID DOWN (bottom-right, wood_dark)    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  CITY SQUARE, Jews gathering              │  │   │
+│       │  │  👤  MORDECAI in authority, calm              │  │   │
+│       │  │  👥  FAMILIES assembling, prepared            │  │   │
+│       │  │  🚩  JEWISH ASSEMBLY STANDARD (hero 3D)       │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The Jews gathered in their cities"│  │   │
+│       │  │  [SCRIPTURE] "— Esther 8:17"                 │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 10: Purim
 
 **Act summary:** Assemble gifts, food, and remembrance for every district.
@@ -182,6 +762,68 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 10A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `fabric_weave` + `fabric_dots` | Wide, three-plane tableau. FG SVG: framing fabric weave, nearby silhouettes, and an edge prop tied to “purim”. MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
 | 10B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `fabric_dots` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “assemble gifts, food, and remembrance for every district”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 10C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `fabric_weave` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10A — ESTABLISH (30mm, village square, feast established)│
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🟨 FABRIC WEAVE BORDER (top/sides, fabric_weave) │   │
+│       │  🧺 FOOD BASKETS (right, wood_dark+fabric)         │   │
+│       │  🔵 FABRIC DOTS PATTERN (bottom, fabric_dots)      │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏘️  VILLAGE SQUARE, tables laden            │  │   │
+│       │  │  👥  FAMILIES exchanging gifts and food       │  │   │
+│       │  │  👤  MORDECAI reading the Megillah            │  │   │
+│       │  │  👩  ESTHER among the people, rejoicing       │  │   │
+│       │  │  📜  MEGILLAH SCROLL (hero 3D, fabric+gold)   │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Mordecai recorded these things..."│  │   │
+│       │  │  [CAPTION] "Observe the 14th and 15th of Adar"│  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10B — INTERACT (50mm, chest height, gifts to districts)  │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS PACKING BASKET (center, fabric_weave)◄PULSE│   │
+│       │  🥣 PORTION MEASURE (right, stone)                 │   │
+│       │  🔵 FABRIC DOTS CLOTH (bottom, fabric_dots)        │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏠  DOMESTIC INTERIORS, distribution route   │  │   │
+│       │  │  👥  HANDS packing portions and gifts         │  │   │
+│       │  │  👤  POOR REMEMBERED at threshold             │  │   │
+│       │  │  🧺  GIFT BASKET (hero 3D, wood_dark+fabric)  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CHOICE] ▢ Extra for poor ▢ Distant kin ▢ Note│ │   │
+│       │  │  [CAPTION] "Portions were sent to one another"│  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10C — RESOLVE (50mm, eye level, remembrance forever)     │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  📜 MEGILLAH CORNER (top-right, fabric+gold)       │   │
+│       │  🫒 FRUITING OLIVE BRANCH (bottom-left, wood_dark) │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌅  QUIET GOLD, multi-generational gathering │  │   │
+│       │  │  👵🧑👶  GENERATIONS celebrating together      │  │   │
+│       │  │  📜  MEGILLAH AT REST on stand (hero 3D)      │  │   │
+│       │  │  🍞  TABLES of feasting and gifts             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "These days of Purim should never" │  │   │
+│       │  │  [CAPTION] "cease among the Jews."            │  │   │
+│       │  │  [SCRIPTURE] "— Esther 9:28"                 │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Panel acceptance checklist
 

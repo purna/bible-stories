@@ -137,6 +137,68 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 01B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story's real light source. | `wood_oak` + `wall_brick` | Medium action composition with a clear left-to-right path. **FG SVG: hands on a scroll, quill and inkwell at edge, fringe of Deborah's robe**; MG 3D: the single tactile object required to "hear disputes and restore a fair path". BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 01C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `wall_brick` + `fabric_weave` | Balanced medium-wide aftermath. **FG SVG: the chapter's symbolic object (olive branch or opened scroll) as a corner frame**; MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01A — ESTABLISH (35mm, high angle, palm and hill country)│
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  PALM FRONDS arching overhead (fabric_weave)        |  │
+│       |  WOVEN MAT BORDER along bottom edge                 |  │
+│       |  OLIVE BRANCHES at palm base                        |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  LAYERED HILL COUNTRY, distant villages       |    |  │
+│       |  |  DEBORAH seated beneath the palm (hero 3D)    |    |  │
+│       |  |  VILLAGERS approaching from left              |    |  │
+│       |  |  PALM TREE trunk and articulated fronds       |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Twenty years under Jabin..."      |    |  │
+│       |  |  [CAPTION] "Under a palm...sat Deborah"       |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01B — INTERACT (50mm, chest height, judgment scroll)     │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS ON SCROLL center (wood_oak + fabric_weave)  |  │
+│       |  QUILL AND INKWELL at left edge                     |  │
+│       |  DEBORAH'S ROBE FRINGE at bottom                    |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED HILL COUNTRY, reduced saturation    |    |  │
+│       |  |  VILLAGE WOMAN left, Deborah right              |    |  │
+│       |  |  SCROLL / JUDGMENT TABLE (hero 3D)              |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "My neighbor moved the boundary..."   |    |  │
+│       |  |  [CHOICE] Hear both / Decide quickly / Avoid    |    |  │
+│       |  |  [BUBBLE] "Truth needs both voices."            |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01C — RESOLVE (50mm, eye level, fair path restored)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  OLIVE BRANCH corner frame (wood_oak)               |  │
+│       |  OPENED SCROLL corner frame (fabric_weave)          |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  HILL COUNTRY opened for scripture space        |    |  │
+│       |  |  Deborah and villagers separated cleanly        |    |  │
+│       |  |  SCROLL at rest on table (hero 3D)              |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "She made room for truth..."         |    |  │
+│       |  |  [CAPTION] "The Israelites went up to her..."   |    |  │
+│       |  |  [SCRIPTURE] "Judges 4:4-5"                    |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 2: The Summons
 
 **Act summary:** Carry Deborah's message to Barak.
@@ -146,6 +208,68 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 02A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `wood_oak` + `wall_brick` | Wide, three-plane tableau. **FG SVG: messenger's staff leaning at frame edge, olive branch wreath border, dust motes in sunbeam**; MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
 | 02B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story's real light source. | `wall_brick` + `stone` | Medium action composition with a clear left-to-right path. **FG SVG: hands extending a folded scroll, rope ties, wax seal impression**; MG 3D: the single tactile object required to "carry deborah's message to barak". BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 02C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `wood_oak` | Balanced medium-wide aftermath. **FG SVG: the chapter's symbolic object (staff with messenger's pouch) as a corner frame**; MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02A — ESTABLISH (35mm, road to Kedesh, messenger staff)  │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  MESSENGER STAFF leaning at frame edge              |  │
+│       |  OLIVE BRANCH WREATH border                         |  │
+│       |  DUST MOTES in sunbeam                              |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  LAYERED ROAD, Kedesh-naphtali in distance     |    |  │
+│       |  |  Deborah's messenger walking right             |    |  │
+│       |  |  SEALED SCROLL pouch at hip (hero 3D)          |    |  │
+│       |  |  Barak's settlement silhouettes                |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Deborah sent a messenger..."        |    |  │
+│       |  |  [CAPTION] "The staff leaned...scroll sealed"   |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02B — INTERACT (50mm, chest height, scroll handoff)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS EXTENDING FOLDED SCROLL center               |  │
+│       |  ROPE TIES + WAX SEAL impression                    |  │
+│       |  MESSENGER SLEEVE fringe                            |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  KADESH COURTYARD, simplified architecture      |    |  │
+│       |  |  MESSENGER left, Barak right                    |    |  │
+│       |  |  SCROLL (hero 3D, fabric_weave + wood_oak)      |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "The Lord commands—gather at Tabor"   |    |  │
+│       |  |  [CHOICE] Deliver exactly / Soften / Add warning|    |  │
+│       |  |  [BUBBLE] "If you go with me, I will go..."     |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02C — RESOLVE (50mm, eye level, shared road)             │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  STAFF WITH MESSENGER POUCH corner frame            |  │
+│       |  OLIVE WREATH corner frame                          |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  ROAD OPENED toward Mount Tabor                 |    |  │
+│       |  |  Deborah and Barak walking side by side         |    |  │
+│       |  |  STAFF at rest (hero 3D)                        |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Certainly I will go with you..."     |    |  │
+│       |  |  [CAPTION] "The road would not lead to glory"   |    |  │
+│       |  |  [SCRIPTURE] "Judges 4:6-10"                   |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 3: Gather at Tabor
 
@@ -157,6 +281,67 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 03B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story's real light source. | `stone` + `grass` | Medium action composition with a clear left-to-right path. **FG SVG: hands placing muster tokens on a map, counting stones, tribal seal**; MG 3D: the single tactile object required to "rally tribes without alerting sisera". BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 03C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `grass` + `wall_brick` | Balanced medium-wide aftermath. **FG SVG: the chapter's symbolic object (gathered tribal banner) as a corner frame**; MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03A — ESTABLISH (35mm, high angle, Tabor muster camp)    │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  TENT PEGS AND ROPE border                          |  │
+│       |  TRIBAL STANDARDS at corners                        |  │
+│       |  DRY GRASS FRINGE along bottom                      |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  MOUNT TABOR SLOPES, tribal camps below        |    |  │
+│       |  |  Deborah and Barak centered on rise             |    |  │
+│       |  |  TRIBES arriving in staggered groups            |    |  │
+│       |  |  MUSTER MAP + STONES (hero 3D)                  |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Deborah sent to gather..."          |    |  │
+│       |  |  [CAPTION] "Tribes answered from the hills..."  |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03B — INTERACT (50mm, chest height, muster tokens)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS PLACING MUSTER TOKENS center                 |  │
+│       |  COUNTING STONES + TRIBAL SEAL                      |  │
+│       |  MAP CLOTH edge (fabric_weave)                      |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED CAMP, reduced saturation            |    |  │
+│       |  |  Deborah left, Barak and scouts right           |    |  │
+│       |  |  MUSTER MAP (hero 3D, fabric_weave + stone)     |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Rally the tribes without alarm"      |    |  │
+│       |  |  [CHOICE] Send scouts / Sound call / Wait       |    |  │
+│       |  |  [CAPTION] "The camp tightened into resolve"    |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03C — RESOLVE (50mm, eye level, tribes gathered)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  GATHERED TRIBAL BANNER corner frame                |  │
+│       |  DRY GRASS + ROPE corner frame                      |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  CAMP OPENED for scripture space                |    |  │
+│       |  |  Tribes separated into clean silhouettes        |    |  │
+│       |  |  BANNER at rest (hero 3D)                       |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "The tribes gathered at Tabor"       |    |  │
+│       |  |  [SCRIPTURE] "Judges 5:14-15"                  |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 4: The Storm
 
 **Act summary:** Use the flooded ground to break the chariot advantage.
@@ -166,6 +351,67 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 04A | Establish | deep indigo, river teal, foam blue, wet silver. low raking light with broken water reflections. | `water_fast` + `wood_oak` | Wide, three-plane tableau. **FG SVG: reeds and cattails at water's edge, floating debris, broken chariot wheel rim**; MG: character group and optional low-detail 3D landmark. BG SVG: waterline, cloud bank, and distant shore. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow lateral drift with a restrained rise on the reveal. | SVG: ripple paths, reeds, cloud bands, and spray loop at different parallax speeds. 3D: hero vessel or crossing prop rocks gently; water-adjacent props react with small secondary motion. Characters begin in readable held poses before any movement. |
 | 04B | Interact | Increase local contrast around the action while retaining deep indigo, river teal, foam blue, wet silver. Key light follows the story's real light source. | `wood_oak` + `stone` | Medium action composition with a clear left-to-right path. **FG SVG: hands gripping a staff, water streaming off edge, mud-splattered hem**; MG 3D: the single tactile object required to "use the flooded ground to break the chariot advantage". BG SVG: simplified waterline, cloud bank, and distant shore with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 04C | Resolve / reflect | Let the accent move toward a quieter deep indigo, river teal, foam blue, wet silver; lower saturation behind captions and preserve warm skin tones. | `stone` + `water_fast` | Balanced medium-wide aftermath. **FG SVG: the chapter's symbolic object (mired chariot wheel half-buried) as a corner frame**; MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: waterline, cloud bank, and distant shore, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04A — ESTABLISH (32mm, lateral drift, Kishon flood)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  REEDS AND CATTAILS at water edge                   |  │
+│       |  FLOATING DEBRIS across lower frame                 |  │
+│       |  BROKEN CHARIOT WHEEL RIM at right                  |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  WATERLINE, cloud bank, distant shore           |    |  │
+│       |  |  Deborah and Barak on rise, army beyond         |    |  │
+│       |  |  CHARIOTS small in floodplain distance          |    |  │
+│       |  |  CROSSING PROP / STAFF (hero 3D)                |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Sisera brought nine hundred..."     |    |  │
+│       |  |  [CAPTION] "Dark clouds gathered..."            |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04B — INTERACT (50mm, chest height, signal advance)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS GRIPPING STAFF center (wood_oak)             |  │
+│       |  WATER STREAMING off staff edge                     |  │
+│       |  MUD-SPLATTERED HEM at bottom                       |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED WATERLINE, reduced saturation       |    |  │
+│       |  |  Deborah signals; Barak charges left-to-right   |    |  │
+│       |  |  STAFF / FLOODED GROUND (hero 3D)               |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Go! This is the day..."              |    |  │
+│       |  |  [CHOICE] Charge now / Wait / Scout ford        |    |  │
+│       |  |  [CAPTION] "The storm broke—the river rose"     |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04C — RESOLVE (50mm, eye level, chariots mired)          │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  MIRED CHARIOT WHEEL corner frame (stone)           |  │
+│       |  REEDS + WATER corner frame (water_fast)            |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  WATERLINE OPENED for scripture space           |    |  │
+│       |  |  Israelites separated into clean silhouettes    |    |  │
+│       |  |  WHEEL at rest, half-buried (hero 3D)           |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "The river Kishon swept them away"   |    |  │
+│       |  |  [SCRIPTURE] "Judges 4:12-16; 5:20-21"         |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 5: Sisera Flees
 
@@ -177,6 +423,68 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 05B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story's real light source. | `wood_oak` + `grass` | Medium action composition with a clear left-to-right path. **FG SVG: hands following tracks, broken spear shaft, sweat on brow**; MG 3D: the single tactile object required to "track the fleeing commander to jael's tent". BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 05C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `grass` + `fabric_weave` | Balanced medium-wide aftermath. **FG SVG: the chapter's symbolic object (commander's helmet at tent threshold) as a corner frame**; MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05A — ESTABLISH (35mm, high angle, flight to the tent)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  TENT FLAP EDGE at left                             |  │
+│       |  ROPE TIES + GOAT-HAIR CLOTH texture                |  │
+│       |  SCATTERED HOOF PRINTS across bottom                |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  LAYERED LANDSCAPE, road from battlefield       |    |  │
+│       |  |  Sisera alone, exhausted, moving right          |    |  │
+│       |  |  Jael's tent small in distance                  |    |  │
+│       |  |  COMMANDER HELMET (hero 3D)                     |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Sisera fled on foot to the tent..." |    |  │
+│       |  |  [CAPTION] "Jael came out to meet him"          |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05B — INTERACT (50mm, chest height, tracking the flight) │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS FOLLOWING TRACKS center                      |  │
+│       |  BROKEN SPEAR SHAFT at edge                         |  │
+│       |  SWEAT ON BROW silhouette                            |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED ROAD, reduced saturation            |    |  │
+│       |  |  Jael left, Sisera approaching right            |    |  │
+│       |  |  HOOF PRINT PATH (hero 3D, grass + stone)       |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Turn aside, my lord, turn aside..."  |    |  │
+│       |  |  [CHOICE] Offer shelter / Send him on / Watch   |    |  │
+│       |  |  [CAPTION] "He said, 'Give me a little water'"  |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05C — RESOLVE (50mm, eye level, threshold shelter)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  COMMANDER HELMET corner frame (stone)              |  │
+│       |  TENT FLAP + ROPE corner frame                      |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  TENT THRESHOLD opened for scripture space      |    |  │
+│       |  |  Jael and Sisera separated cleanly              |    |  │
+│       |  |  HELMET at rest (hero 3D)                       |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Stand in the doorway...say no man"   |    |  │
+│       |  |  [CAPTION] "She covered him and he slept"       |    |  │
+│       |  |  [SCRIPTURE] "Judges 4:18-20"                  |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 6: Jael's Choice
 
 **Act summary:** Prepare hospitality, then protect the camp.
@@ -187,6 +495,67 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 06B | Interact | Increase local contrast around the action while retaining near-black blue, cool slate, lamp amber, muted earth. Key light follows the story's real light source. | `stone` + `wood_oak` | Medium action composition with a clear left-to-right path. **FG SVG: hand on tent peg, mallet raised, milk curds spilling, lamp flare**; MG 3D: the single tactile object required to "prepare hospitality, then protect the camp". BG SVG: simplified receding rock or masonry silhouettes with minimal detail with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 06C | Resolve / reflect | Let the accent move toward a quieter near-black blue, cool slate, lamp amber, muted earth; lower saturation behind captions and preserve warm skin tones. | `wood_oak` + `wall_brick` | Balanced medium-wide aftermath. **FG SVG: the chapter's symbolic object (tent peg standing upright, mallet beside it) as a corner frame**; MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: receding rock or masonry silhouettes with minimal detail, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06A — ESTABLISH (30mm, slow dolly, tent interior)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  TENT PEG AND MALLET on ground                      |  │
+│       |  MILK BOWL RIM at lower edge                        |  │
+│       |  LAMP SHADOW stretching across floor                |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  TENT INTERIOR, goat-hair cloth, low lamp       |    |  │
+│       |  |  Jael left, Sisera reclining right              |    |  │
+│       |  |  MILK BOWL + LAMP (hero 3D)                     |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Sisera fled to the tent of Jael"    |    |  │
+│       |  |  [CAPTION] "There was peace between their clans"|    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06B — INTERACT (50mm, chest height, decisive protection) │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HAND ON TENT PEG center (stone)                    |  │
+│       |  MALLET RAISED at right                             |  │
+│       |  MILK CURDS SPILLING at left                        |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED TENT, reduced saturation            |    |  │
+│       |  |  Jael foreground, Sisera asleep background      |    |  │
+│       |  |  TENT PEG + MALLET (hero 3D)                    |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Come in, my lord. Rest."             |    |  │
+│       |  |  [CHOICE] Shelter / Send away / Act             |    |  │
+│       |  |  [CAPTION] "When he slept, Jael took the peg"   |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06C — RESOLVE (50mm, eye level, camp protected)          │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  TENT PEG UPRIGHT corner frame (stone)              |  │
+│       |  MALLET BESIDE IT corner frame (wood_oak)           |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  TENT DOORWAY opened for scripture space        |    |  │
+│       |  |  Jael meets Barak outside                       |    |  │
+│       |  |  PEG + MALLET at rest (hero 3D)                 |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Come, and I will show you..."        |    |  │
+│       |  |  [CAPTION] "Sisera's power was finished"        |    |  │
+│       |  |  [SCRIPTURE] "Judges 4:21-22"                  |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 7: The Song
 
 **Act summary:** Rebuild the victory song in call-and-response.
@@ -196,6 +565,68 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 07A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `wall_brick` + `stone` | Wide, three-plane tableau. **FG SVG: lyre and harp frame edges, scroll with song text unfurling, olive wreath border**; MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
 | 07B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story's real light source. | `stone` + `wood_oak` | Medium action composition with a clear left-to-right path. **FG SVG: hands on lyre strings, voice lines as visual waves, scroll unfurling verse by verse**; MG 3D: the single tactile object required to "rebuild the victory song in call-and-response". BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 07C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `wood_oak` + `wall_brick` | Balanced medium-wide aftermath. **FG SVG: the chapter's symbolic object (lyre at rest, completed scroll) as a corner frame**; MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07A — ESTABLISH (35mm, wide, victory gathering)          │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  LYRE AND HARP frame edges                          |  │
+│       |  SCROLL WITH SONG TEXT unfurling                    |  │
+│       |  OLIVE WREATH border                                |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  LAYERED HILL COUNTRY, people gathering         |    |  │
+│       |  |  Deborah and Barak centered                     |    |  │
+│       |  |  TRIBES / FAMILIES in staggered groups          |    |  │
+│       |  |  LYRE (hero 3D, wood_oak + fabric_weave)        |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Then Deborah and Barak sang..."     |    |  │
+│       |  |  [CAPTION] "The land had rest forty years"      |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07B — INTERACT (50mm, chest height, call and response)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS ON LYRE STRINGS center                       |  │
+│       |  VOICE LINES as visual waves                        |  │
+│       |  SCROLL UNFURLING verse by verse                    |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED GATHERING, reduced saturation       |    |  │
+│       |  |  Deborah left, Barak right, people between      |    |  │
+│       |  |  LYRE + SCROLL (hero 3D)                        |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CHOICE] Call / Answer / Hold the refrain      |    |  │
+│       |  |  [BUBBLE] "Awake, awake, Deborah..."            |    |  │
+│       |  |  [BUBBLE] "Awake, awake, utter a song!"         |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                    |
+                                    v
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07C — RESOLVE (50mm, eye level, song completed)          │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  LYRE AT REST corner frame (wood_oak)               |  │
+│       |  COMPLETED SCROLL corner frame (fabric_weave)       |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  LANDSCAPE OPENED for scripture space           |    |  │
+│       |  |  Community separated into clean silhouettes     |    |  │
+│       |  |  LYRE + SCROLL at rest (hero 3D)                |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "So may all your enemies perish"     |    |  │
+│       |  |  [CAPTION] "But may your friends rise..."       |    |  │
+│       |  |  [SCRIPTURE] "Judges 5:31"                     |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Panel acceptance checklist
 
