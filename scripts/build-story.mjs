@@ -111,8 +111,8 @@ for (let i = 0; i < acts.length; i += 1) {
       align: 'center',
       text: `The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.`,
       choices: [
-        { label: 'Walk on with the lesson 📖', note: 'The story keeps its shape and the player carries the reflection forward.' },
-        { label: 'Rest here a moment 🕊️', note: 'A pause does not change the outcome. It only lets the player breathe.' }
+        { label: 'Walk on with the lesson', note: 'The story keeps its shape and the player carries the reflection forward.' },
+        { label: 'Rest here a moment', note: 'A pause does not change the outcome. It only lets the player breathe.' }
       ],
       width: '1/2',
       valign: 'middle'
@@ -300,7 +300,7 @@ const html = `<!DOCTYPE html>
       <div class="issue">${meta.references} · SPECIAL EDITION</div>
       <h1>${story.toUpperCase()}</h1>
       <div class="subtitle">& ${meta.question.replace(/[?]/,'')}</div>
-      <div class="bigtorch">🔥</div>
+      <div class="bigtorch"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
       <p>An interactive ${acts.length}-chapter comic. Use arrow keys, swipe, or tap Next to navigate. Drag inside the panel to look around each scene.</p>
       <button id="startBtn">LAUNCH COMIC</button>
     </div>
@@ -316,7 +316,7 @@ const html = `<!DOCTYPE html>
     <div id="seaLayer"><div id="seaWalls"></div><div class="wave-container"><div class="air air1"></div><div class="air air2"></div><div class="air air3"></div><div class="air air4"></div></div></div>
     <div id="fireLayer"></div>
     <div id="thunderLayer"></div>
-    <div id="ambientLayer"><div class="land-arc"></div><div class="bird-container"><div class="bird-fly">🕊️</div><div class="bird-fly">🕊️</div><div class="bird-fly">🕊️</div></div></div>
+    <div id="ambientLayer"><div class="land-arc"></div><div class="bird-container"><div class="bird-fly"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h.01"/><path d="M4 14c2-2 4-4 6-4s3 2 5 2 4-2 6-4"/><path d="M16 14l-4 3-4-3"/><path d="M20 10l-4 6-4-6"/></svg></div><div class="bird-fly"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h.01"/><path d="M4 14c2-2 4-4 6-4s3 2 5 2 4-2 6-4"/><path d="M16 14l-4 3-4-3"/><path d="M20 10l-4 6-4-6"/></svg></div><div class="bird-fly"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h.01"/><path d="M4 14c2-2 4-4 6-4s3 2 5 2 4-2 6-4"/><path d="M16 14l-4 3-4-3"/><path d="M20 10l-4 6-4-6"/></svg></div></div></div>
     <div id="halftoneOverlay"></div>
     <div id="hud"><select id="chapterSelect" aria-label="Jump to chapter"></select><div id="dots" role="list" aria-label="Progress"></div></div>
     <div id="stageWrap"><div id="stage"></div></div>

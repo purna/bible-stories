@@ -46,11 +46,11 @@
       "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
       "choices": [
         {
-          "label": "Walk on with the lesson 📖",
+          "label": "Walk on with the lesson",
           "note": "The story keeps its shape and the player carries the reflection forward."
         },
         {
-          "label": "Rest here a moment 🕊️",
+          "label": "Rest here a moment",
           "note": "A pause does not change the outcome. It only lets the player breathe."
         }
       ],

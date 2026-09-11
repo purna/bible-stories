@@ -458,7 +458,7 @@ function startGatheringInteraction(container, deck) {
   }
 
   function completeGathering() {
-    setStatus('The ark is full of life. 🕊️', true);
+    setStatus('The ark is full of life.', true);
     finishBtn.hidden = false;
     finishBtn.focus();
   }
