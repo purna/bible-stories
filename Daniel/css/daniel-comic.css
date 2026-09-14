@@ -633,15 +633,14 @@ body {
 
 #choices {
   position: absolute;
-  left: 50%;
+  left: 4vw;
   bottom: 11.5vh;
-  transform: translateX(-50%);
   z-index: 15;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  justify-content: center;
-  width: min(92vw, 760px);
+  justify-content: flex-start;
+  width: min(45vw, 420px);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
@@ -673,9 +672,8 @@ body {
 
 #delayNote {
   position: absolute;
-  left: 50%;
+  right: 4vw;
   bottom: 20px;
-  transform: translateX(-50%);
   z-index: 15;
   font-family: "Press Start 2P", monospace;
   font-size: clamp(10px, 1.8vw, 13px);
@@ -690,7 +688,7 @@ body {
   pointer-events: none;
   transition: opacity 0.4s;
   text-align: center;
-  width: 90%;
+  width: min(40vw, 360px);
   line-height: 1.6;
 }
 #delayNote.show {
