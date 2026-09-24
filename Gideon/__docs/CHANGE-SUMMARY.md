@@ -1,0 +1,13 @@
+# Gideon documentation revision — 23 September 2026
+
+All four uploaded Markdown files have corrected replacements with their original filenames. Uploaded originals and synced project references were not modified.
+
+- Rebuilt the two audio documents, which contained Enoch chapters, filenames and motif direction, including unrelated court material. Music now preserves the seven Gideon cue basenames, tempos and shofar/lyre motif from the design source. SFX now defines 27 explicit Gideon event triggers, with codec and repeat-variant rules.
+- Consolidated duplicated game tables and moved detailed score ownership out of the design document into the music source. Added authority links and clarified that chapters and acts are the same seven units.
+- Checked story order against Judges 6–8. Added the 6:25–35 altar/muster bridge, both reductions and both fleece outcomes, Purah, the dream’s two speakers, battle hand positions, and the distinction between Oreb/Zeeb and Zebah/Zalmunna. Removed the unsupported claim that pursuit ends beneath the Ophrah tree. Act 7 now includes non-graphic consequences and the ephod warning before forty years of rest; its reference is 8:1–28. Later verses are explicitly outside playable scope.
+- Made offering preparation three player steps followed by the angel’s automatic action; replaced 300 individual selections with four representative cards; reconciled battle actions into one four-step sequence for all three companies; replaced the invented crown/throne puzzle with six chronological aftermath cards. Retained engine keys and prototype references, with adaptation caveats.
+- Clarified filename casing, music versus physical SFX/voice ownership, narrative-state triggers, fallbacks, loop handling, mute, page visibility, replay cleanup, once-per-run completion and non-blocking audio failure. Added timing-free controls, equivalent text, selection alternatives to drag, visible focus and assisted completion.
+
+Validation completed: all four titles, seven act names, seven retained music basenames, 27 unique SFX event IDs, Markdown table structure, paired section markers, local links/anchors and removal of obsolete Enoch cue filenames. Scripture sources are linked in the design document. No application, audio audition or asset-license validation was possible from the supplied documentation alone.
+
+Integration still requires the actual Gideon story JSON/runtime, audio assets, character presets, Texture Forge and shared template/UI assets. Verify their schemas and paths before applying these contracts. Select one display Bible translation and record its permissions before final dialogue production; the revised narrative summaries are paraphrases.
