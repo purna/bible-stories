@@ -1,66 +1,72 @@
 {
-  "Enoch": {
-    "title": "Enoch",
-    "references": "Genesis 5; Hebrews 11:5; Jude 14–15",
-    "question": "What does it mean to walk faithfully across an ordinary lifetime?",
+  "Gideon": {
+    "title": "Gideon",
+    "references": "Judges 6–8",
+    "question": "When God calls the unlikely, will we trust His strength over our own?",
     "characters": [
-      "enoch",
-      "jared",
-      "methuselah",
-      "family_member",
-      "neighbour",
-      "traveller"
+      "gideon",
+      "angel",
+      "joash",
+      "midianite_soldier",
+      "midianite_king",
+      "purah",
+      "ephraimite",
+      "israelite_warrior"
     ],
     "materials": [
-      "grass",
-      "stone",
-      "wood_oak",
-      "fabric_weave",
-      "water_still",
-      "leaves"
+      "wheat_stalks",
+      "rock_surface",
+      "wool_fleece",
+      "water_ripple",
+      "clay_jar",
+      "trumpet_horn",
+      "torch_flame",
+      "camel_hair",
+      "tent_fabric",
+      "sword_iron"
     ],
     "chapters": [
       {
         "number": 1,
-        "title": "A Family Record",
-        "game": "Place Enoch correctly in the generations.",
-        "engine": "fit-pieces"
-      },
-      {
-        "number": 2,
-        "title": "The First Walk",
-        "game": "Choose a daily route that serves neighbours.",
-        "engine": "find-path"
-      },
-      {
-        "number": 3,
-        "title": "A Son Named Methuselah",
-        "game": "Prepare the home for a new child.",
-        "engine": "gather-with-care"
-      },
-      {
-        "number": 4,
-        "title": "Years of Faithfulness",
-        "game": "Complete repeated small acts without a fame meter.",
-        "engine": "tap-sequence"
-      },
-      {
-        "number": 5,
-        "title": "A Warning",
-        "game": "Deliver a hard truth without cruelty.",
+        "title": "The Winepress",
+        "game": "Thresh wheat in hiding, hear the Angel's call.",
         "engine": "listen-respond"
       },
       {
-        "number": 6,
-        "title": "Walking with God",
-        "game": "Follow a quiet path as the landscape changes.",
+        "number": 2,
+        "title": "The Sign",
+        "game": "Prepare the offering, witness fire from the rock.",
+        "engine": "tap-sequence"
+      },
+      {
+        "number": 3,
+        "title": "The Fleece",
+        "game": "Lay out the fleece, check for dew at dawn.",
+        "engine": "watch-and-move"
+      },
+      {
+        "number": 4,
+        "title": "The Army Reduced",
+        "game": "Watch men drink, identify the 300 who lap.",
+        "engine": "gather-with-care"
+      },
+      {
+        "number": 5,
+        "title": "The Dream",
+        "game": "Creep to the camp, overhear the barley cake dream.",
         "engine": "find-path"
       },
       {
+        "number": 6,
+        "title": "The Battle",
+        "game": "Shatter jars, blow trumpets, hold torches high.",
+        "engine": "tap-sequence"
+      },
+      {
         "number": 7,
-        "title": "Taken",
-        "game": "Let go of the route and enter the final light.",
-        "engine": "find-path"
+        "title": "The Victory",
+        "game": "Pursue the kings, declare the Lord's rule.",
+        "engine": "fit-pieces"
       }
     ]
   }

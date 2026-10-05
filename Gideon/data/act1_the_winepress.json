@@ -1,0 +1,111 @@
+{
+  "id": "the_winepress",
+  "name": "Ch.1 · The Winepress",
+  "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #0a0502 65%)",
+  "particle": "dawn",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "the_winepress_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Seven years the Midianites ruled. Each harvest, raiders swept the land like locusts.",
+      "cite": "Judges 6:1–6",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_winepress_1",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Gideon beat wheat in a winepress, hidden from the raiders. A man of the least family, in the smallest clan.",
+      "cite": "Judges 6:11, 15",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_winepress_2",
+      "speaker": "angel",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE CALL",
+      "text": "The Lord is with you, mighty warrior.",
+      "cite": "Judges 6:12",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_winepress_3",
+      "speaker": "gideon",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "If the Lord is with us, why has all this happened? Where are His wonders?",
+      "cite": "Judges 6:13",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_winepress_4",
+      "speaker": "angel",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "text": "Go in the strength you have. I am sending you to break Midian's yoke.",
+      "cite": "Judges 6:14",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_winepress_5",
+      "speaker": "gideon",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "How can I save Israel? My clan is the weakest, and I am the least in my father's house.",
+      "cite": "Judges 6:15",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_winepress_6",
+      "speaker": "angel",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE PROMISE",
+      "text": "I will be with you, and you shall strike the Midianites as one man.",
+      "cite": "Judges 6:16",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_winepress_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The call does not turn on a hero's strength. It turns on the presence of the Lord with the unlikely.",
+      "choices": [
+        {
+          "label": "Answer the call",
+          "note": "The story keeps its shape; Gideon carries the promise forward."
+        },
+        {
+          "label": "Rest in the winepress",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "the_winepress",
+  "foreground": "fg_the_winepress",
+  "index": 0
+}

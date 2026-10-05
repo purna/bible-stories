@@ -28,9 +28,8 @@ const audio = new AudioManager();
 
 /* ── Character portraits ─────────────────────── */
 const CHARACTER_KEYS = {
-  babel:'babel', naomi:'naomi', orpah:'orpah', boaz:'boaz',
-  kinsman_redeemer:'kinsman_redeemer', field_overseer:'field_overseer',
-  bethlehem_woman:'bethlehem_woman', obed:'obed', narrator:null, god:null
+  noah:'noah', nimrod:'nimrod', builder:'builder', god:'god',
+  narrator:null
 };
 const charCache = {};
 async function loadCharacter(key) {

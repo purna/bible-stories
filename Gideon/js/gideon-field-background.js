@@ -1,6 +1,6 @@
-/* Gentle wind-swept field shared with Ruth, scoped to chapters 1–3, 9 and 10. */
-(function createEnochFieldBackground() {
-  const field = document.querySelector('.enoch-grass-field');
+/* Gentle wind-swept field, scoped to all Gideon chapters. */
+(function createGideonFieldBackground() {
+  const field = document.querySelector('.gideon-grass-field');
   if (!field) return;
 
   const colors = ['#586b2d', '#6f7830', '#8d8032', '#aa943e', '#c3a64b'];
@@ -9,7 +9,7 @@
   for (let x = -3; x <= 103; x += 3 + ((x % 4) + 4) % 4) {
     const seed = Math.abs(Math.sin((x + 17) * 12.9898));
     const clump = document.createElement('div');
-    clump.className = 'enoch-grass-clump';
+    clump.className = 'gideon-grass-clump';
     clump.style.left = `${x}%`;
     clump.style.setProperty('--clump-size', `${62 + Math.round(seed * 38)}vmin`);
     clump.style.setProperty('--clump-opacity', `${0.48 + seed * 0.36}`);
@@ -19,7 +19,7 @@
 
     for (let bladeIndex = 0; bladeIndex < 3; bladeIndex += 1) {
       const blade = document.createElement('div');
-      blade.className = 'enoch-grass-blade';
+      blade.className = 'gideon-grass-blade';
       clump.appendChild(blade);
     }
 

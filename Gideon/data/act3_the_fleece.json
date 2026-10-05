@@ -1,0 +1,99 @@
+{
+  "id": "the_fleece",
+  "name": "Ch.3 · The Fleece",
+  "bg": "radial-gradient(circle at 50% 30%, #1a1420, #0a0502 65%)",
+  "particle": "dew",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "the_fleece_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Before the battle, Gideon asks God for one more sign. He lays a fleece of wool on the threshing floor.",
+      "cite": "Judges 6:36–37",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_fleece_1",
+      "speaker": "gideon",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "If dew is on the fleece only, and the ground is dry, then I will know You will save Israel by my hand.",
+      "cite": "Judges 6:37",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_fleece_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "At dawn, Gideon wrings the fleece — a bowl of water from the wool. The ground is dry.",
+      "cite": "Judges 6:38",
+      "sfx": "Dew on wool",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_fleece_3",
+      "speaker": "gideon",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Let not Your anger burn against me. One more sign: let the fleece be dry, and dew be on the ground.",
+      "cite": "Judges 6:39",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_fleece_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "That night God does so. The fleece is dry; dew is on all the ground.",
+      "cite": "Judges 6:40",
+      "sfx": "Ground wet",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_fleece_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "God condescends to the weakness of one man. The fleece is not a command — it is a gift of reassurance.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_fleece_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The test settles. The confirmation was given, not earned. What remains is trust, not timing skill.",
+      "choices": [
+        {
+          "label": "March at dawn",
+          "note": "The story keeps its shape; Gideon carries the reassurance forward."
+        },
+        {
+          "label": "Rest on the floor",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "the_fleece",
+  "foreground": "fg_the_fleece",
+  "index": 2
+}

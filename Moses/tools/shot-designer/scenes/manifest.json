@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "default": "nile",
+  "scenes": [
+    {
+      "id": "nile",
+      "name": "The Nile (Low Poly)",
+      "file": "nile.js",
+      "type": "module"
+    },
+    {
+      "id": "nile_hd",
+      "name": "The Nile (High Definition)",
+      "file": "nile_hd.js",
+      "type": "module"
+    }
+  ]
+}
+
+

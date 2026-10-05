@@ -1,6 +1,6 @@
 /* =========================================================================
-   MOSES — 3D Scene Helpers
-   Mirrors adam-scenes-helpers.js but trimmed for Moses scenes.
+   GIDEON — 3D Scene Helpers
+   Mirrors adam-scenes-helpers.js but trimmed for Gideon scenes.
    Exposes toonMat / addOutline / makeFog / loadJSONScene / helpers.
    ========================================================================= */
 (function (global) {

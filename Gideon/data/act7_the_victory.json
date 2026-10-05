@@ -1,0 +1,132 @@
+{
+  "id": "the_victory",
+  "name": "Ch.7 · The Victory",
+  "bg": "radial-gradient(circle at 50% 30%, #1a2010, #0a0502 65%)",
+  "particle": "dawn",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "the_victory_0",
+      "speaker": "ephraimite",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "Why did you not call us to fight the Midianites? We will burn your house over you.",
+      "cite": "Judges 8:1–2",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_victory_1",
+      "speaker": "gideon",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "What have I done compared to you? God gave Oreb and Zeeb into Ephraim's hand. Let your anger soften.",
+      "cite": "Judges 8:2–3",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_victory_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Gideon crosses the Jordan, faint but pursuing. He asks Succoth and Penuel for bread; both refuse him.",
+      "cite": "Judges 8:4–8",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_victory_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "He catches Zebah and Zalmunna, the Midianite kings. He takes revenge for his brothers, then returns.",
+      "cite": "Judges 8:9–21",
+      "sfx": "The kings taken",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_victory_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The reprisals and the kings' deaths are a narrated summary — no reward, no execution to play.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_victory_5",
+      "speaker": "israelite_warrior",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "text": "Rule over us, you and your son and your grandson. You have saved us from Midian.",
+      "cite": "Judges 8:22",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_victory_6",
+      "speaker": "gideon",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE REFUSAL",
+      "text": "I will not rule over you, and my son will not rule over you. The Lord will rule over you.",
+      "cite": "Judges 8:23",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_victory_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Gideon asks for the earrings of spoil and makes an ephod. All Israel prostitutes itself with it, and it becomes a snare to Gideon's house.",
+      "cite": "Judges 8:24–27",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_victory_8",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The land has rest for forty years, in the lifetime of Gideon. But the warning stands: peace is not the same as unbroken faithfulness.",
+      "cite": "Judges 8:28",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_victory_9",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The account settles. Six labelled cards rebuild the story — complaint, pursuit, kings, refusal, ephod, rest. What remains is a reflection, not a rewrite.",
+      "choices": [
+        {
+          "label": "Carry the warning forward",
+          "note": "The story keeps its shape; Gideon's refusal and the ephod stay together."
+        },
+        {
+          "label": "Rest under the terebinth",
+          "note": "A calm image may close the act. The warning is not erased."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "the_victory",
+  "foreground": "fg_the_victory",
+  "index": 6
+}

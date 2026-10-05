@@ -1,7 +1,6 @@
 /**
- * CONFIG.JS — Template
+ * CONFIG.JS — Babel
  * A single source of truth for all settings and constants.
- * Copy and customize for your story.
  */
 
 const CONFIG = {
@@ -40,7 +39,7 @@ const CONFIG = {
     // and export a JSON file of overrides that can be merged into /data.
     editMode: {
         enabled: true,
-        storageKey: 'template-comic-edit-settings',
+        storageKey: 'babel-comic-edit-settings',
         toggleKey: 'KeyE',
         effects: ['fade', 'type', 'wave', 'bounce', 'shake'],
         fadeDefault: 600,

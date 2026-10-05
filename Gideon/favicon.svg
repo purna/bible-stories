@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc" data-character="enoch">
-  <title id="title">Enoch — Enoch favicon</title>
-  <desc id="desc">Stylised head-and-shoulders portrait derived from the enoch character generator preset.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc" data-character="gideon">
+  <title id="title">Gideon — Gideon favicon</title>
+  <desc id="desc">Stylised head-and-shoulders portrait derived from the gideon character generator preset.</desc>
   <defs><clipPath id="frame"><rect x="3" y="3" width="90" height="90" rx="20"/></clipPath></defs>
   <rect x="3" y="3" width="90" height="90" rx="20" fill="#322216" stroke="#c99b46" stroke-width="3"/>
   <g clip-path="url(#frame)">

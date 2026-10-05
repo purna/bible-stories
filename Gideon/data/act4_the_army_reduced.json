@@ -1,0 +1,112 @@
+{
+  "id": "the_army_reduced",
+  "name": "Ch.4 · The Army Reduced",
+  "bg": "radial-gradient(circle at 50% 30%, #101820, #0a0502 65%)",
+  "particle": "water",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "the_army_reduced_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "The Spirit of the Lord clothes Gideon. He sounds the trumpet. Thirty-two thousand gather at the spring of Harod.",
+      "cite": "Judges 7:1",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_army_reduced_1",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE COUNT",
+      "text": "The people are too many. I cannot give Midian into their hands, lest Israel boast against Me.",
+      "cite": "Judges 7:2",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_army_reduced_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Whosoever is fearful and afraid, let him return. Twenty-two thousand leave. Ten thousand remain.",
+      "cite": "Judges 7:3",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_army_reduced_3",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "text": "The people are still too many. Bring them to the water, and I will test them there.",
+      "cite": "Judges 7:4",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_army_reduced_4",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "At the water, three hundred lap with their hands to their mouths. All the rest kneel down to drink.",
+      "cite": "Judges 7:5–6",
+      "sfx": "Water ripple",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_army_reduced_5",
+      "speaker": "god",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "sfx": "THE THREE HUNDRED",
+      "text": "With the three hundred who lapped I will save you and give the Midianites into your hand.",
+      "cite": "Judges 7:7",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_army_reduced_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The point is not alertness or virtue. Israel cannot boast of saving itself — the victory belongs to the Lord.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_army_reduced_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The three hundred take provisions and trumpets. The rest go to their tents. The army is reduced to a handful.",
+      "cite": "Judges 7:8",
+      "choices": [
+        {
+          "label": "Stand with the three hundred",
+          "note": "The story keeps its shape; the reduced band carries the promise forward."
+        },
+        {
+          "label": "Rest at the spring",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "the_army_reduced",
+  "foreground": "fg_the_army_reduced",
+  "index": 3
+}

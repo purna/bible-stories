@@ -43,7 +43,7 @@ html, body {
 #startScreen {
   position: fixed; inset: 0; z-index: 100;
   background: linear-gradient(160deg, #1a0e08, #4a2a14 60%, #1a0e08);
-  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; padding: 30px; transition: opacity .5s;
 }
 #startScreen .comic-cover {
@@ -214,11 +214,11 @@ html, body {
 /* ── Stage / Frame ───────────────────────────── */
 #stageWrap {
   position: absolute; top: 90px; left: 0; right: 0; bottom: 24vh;
-  z-index: 10; display: flex; align-items: center; justify-content: flex-start;
+  z-index: 10; display: flex; align-items: center; justify-content: center;
 }
 #stage {
   position: relative; width: min(94vw, 760px); height: 100%;
-  perspective: 1200px; display: flex; align-items: center; justify-content: flex-start;
+  perspective: 1200px; display: flex; align-items: center; justify-content: center;
 }
 .comic-frame {
   width: 100%; height: 100%;
@@ -236,11 +236,11 @@ html, body {
 }
 #graphicContainer {
   position: absolute; inset: 0; z-index: 1;
-  display: flex; align-items: center; justify-content: flex-start; pointer-events: none;
+  display: flex; align-items: center; justify-content: center; pointer-events: none;
 }
 #svgLayer {
   width: 100%; height: 100%;
-  display: flex; align-items: center; justify-content: flex-start;
+  display: flex; align-items: center; justify-content: center;
   z-index: 3; transition: opacity 0.5s;
 }
 #svgLayer svg {
@@ -287,7 +287,7 @@ html, body {
 .caption.caption-right { width: 90%; align-self: flex-end; transform: rotate(0.3deg); text-align: right; }
 
 /* ── Speech Bubbles ─────────────────────────── */
-.bubble-wrap { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin-top: 10px; padding: 0 40px; }
+.bubble-wrap { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 10px; padding: 0 40px; }
 .bubble-wrap.align-left  { align-items: flex-start; }
 .bubble-wrap.align-center{ align-items: center; }
 .bubble-wrap.align-right { align-items: flex-end; }
@@ -378,7 +378,7 @@ html, body {
 /* ── Navigation ──────────────────────────────── */
 #navHints {
   position: absolute; bottom: 2.4vh; left: 0; right: 0; z-index: 20;
-  display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap;
+  display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
   row-gap: 4px; gap: clamp(8px, 3vw, 22px); padding: 0 12px;
   font-family: 'Space Mono', monospace; font-size: clamp(8px, 2.4vw, 11px);
   letter-spacing: .05em; color: rgba(255,255,255,.5); pointer-events: none; text-align: center;

@@ -1,5 +1,5 @@
 /* =========================================================================
-   THE BOOK OF ENOCH — Interactive Comic Book (layered renderer)
+   GIDEON — Interactive Comic Book (layered renderer)
    Stack per frame:
      1. SVG background  (assets/svg/actN_scene_<id>.svg) — parallax via mouse
      2. Three.js midground (assets/scenes/actN_<id>.js factory)
@@ -28,9 +28,10 @@ const audio = new AudioManager();
 
 /* ── Character portraits ─────────────────────── */
 const CHARACTER_KEYS = {
-  enoch:'enoch', naomi:'naomi', orpah:'orpah', boaz:'boaz',
-  kinsman_redeemer:'kinsman_redeemer', field_overseer:'field_overseer',
-  bethlehem_woman:'bethlehem_woman', obed:'obed', narrator:null, god:null
+  gideon:'gideon', angel:'angel', joash:'joash',
+  midianite_soldier:'midianite_soldier', midianite_king:'midianite_king',
+  purah:'purah', ephraimite:'ephraimite', israelite_warrior:'israelite_warrior',
+  narrator:null, god:null
 };
 const charCache = {};
 async function loadCharacter(key) {

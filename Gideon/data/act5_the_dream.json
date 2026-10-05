@@ -1,0 +1,109 @@
+{
+  "id": "the_dream",
+  "name": "Ch.5 · The Dream",
+  "bg": "radial-gradient(circle at 50% 30%, #100a1a, #0a0502 65%)",
+  "particle": "night",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "the_dream_0",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "left",
+      "text": "That night, the Lord says: arise, go down to the camp. I have given it into your hand.",
+      "cite": "Judges 7:9",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_dream_1",
+      "speaker": "gideon",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "If you will save Israel by my hand, let this be the sign: a fleece of dew, a bowl of water.",
+      "cite": "Judges 6:37",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_dream_2",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Gideon goes down with Purah, his servant, to the edge of the armed camp. The Midianites are countless, their camels like sand.",
+      "cite": "Judges 7:10–12",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_dream_3",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "In a tent, a soldier tells his friend a dream: a barley cake tumbled into the camp, struck the tent, and it lay flat.",
+      "cite": "Judges 7:13",
+      "sfx": "The dream",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_dream_4",
+      "speaker": "midianite_soldier",
+      "fx": "bounce",
+      "delay": 800,
+      "align": "center",
+      "text": "This is nothing but the sword of Gideon. God has given the Midianites and their camp into his hand.",
+      "cite": "Judges 7:14",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_dream_5",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "Gideon hears the dream and its meaning. He worships, then returns to his camp and gives the order: arise, the Lord has given them into your hand.",
+      "cite": "Judges 7:15",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_dream_6",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The dream is not Gideon's, and the falling tent is not a real attack. It is a whisper the enemy spoke against itself.",
+      "width": "1/2",
+      "valign": "middle"
+    },
+    {
+      "id": "the_dream_7",
+      "speaker": "narrator",
+      "fx": "fade",
+      "delay": 800,
+      "align": "center",
+      "text": "The overheard assurance settles. The route was an adaptation — it cannot change the outcome. What remains is trust.",
+      "choices": [
+        {
+          "label": "Return to the three hundred",
+          "note": "The story keeps its shape; Gideon carries the assurance forward."
+        },
+        {
+          "label": "Rest at the camp's edge",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "width": "1/2",
+      "valign": "middle"
+    }
+  ],
+  "scene": "the_dream",
+  "foreground": "fg_the_dream",
+  "index": 4
+}

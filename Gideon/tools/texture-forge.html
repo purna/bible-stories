@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Texture Forge — Enoch</title>
+<title>Texture Forge — Gideon</title>
 <style>
   :root{
     --bg: #14110f;
@@ -142,7 +142,7 @@
 <div id="app">
   <header>
     <h1>Texture Forge</h1>
-    <div class="sub">Seamless SVG materials used in the story of Enoch.</div>
+    <div class="sub">Seamless SVG materials used in the story of Gideon.</div>
   </header>
 
   <div id="groupRow"></div>
@@ -291,7 +291,7 @@ function diamondPath(r){
 /* ============================================================
    Texture Library
 ============================================================ */
-const STORY_TEXTURE_CONFIG = {"story":"Enoch","keys":["grass","stone","wood_oak","fabric_weave","water_still","leaves"]};
+const STORY_TEXTURE_CONFIG = {"story":"Gideon","keys":["wheat_stalks","rock_surface","wool_fleece","water_ripple","clay_jar","trumpet_horn","torch_flame","camel_hair","tent_fabric","sword_iron"]};
 const FULL_LIB = {
 
   water_still: {
@@ -887,7 +887,58 @@ const FULL_LIB = {
   stone_tablets: {
     label:'Stone Tablets', group:'Moses', colors:['#77746b','#44443f','#b8b2a5'], colorNames:['stone','cut','edge'],
     params:{ cracks:{label:'Fine cracks',min:1,max:20,step:1,def:7}, grain:{label:'Stone grain',min:3,max:45,step:1,def:18} },
-    shapes:[{key:'hewn',label:'Hewn stone',build(rng,p,c){const w=120,h=90;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.grain;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.5,2.2))}" fill="${rng()>.5?c[1]:c[2]}" opacity=".3"/>`;for(let i=0;i<p.cracks;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h);body+=`<path d="M${fmt(x)} ${fmt(y)} l${fmt(rnd(rng,-8,8))} ${fmt(rnd(rng,3,12))} l${fmt(rnd(rng,-5,5))} ${fmt(rnd(rng,2,8))}" stroke="${c[1]}" opacity=".55" fill="none"/>`;}return{w,h,body};}}]
+    shapes:[{key:'hewn',label:'Hewn stone',build(rng,p,c){const w=120,h=90;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.grain;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.5,2.2))}" fill="${rng()>.5?c[1]:c[2]}" opacity=".3"/>`;for(let i=0;i<p.cracks;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h);body+=`<path d="M${fmt(x)} ${fmt(y)} l${fmt(rnd(rng,-8,8))} ${fmt(rnd(rng,3,12))} l${fmt(rng,-5,5)} ${fmt(rnd(rng,2,8))}" stroke="${c[1]}" opacity=".55" fill="none"/>`;}return{w,h,body};}}]
+  },
+
+  wheat_stalks: {
+    label:'Wheat Stalks', group:'Gideon', colors:['#8a6a2c','#d4af5a','#f0d98a'], colorNames:['ground','stalk','grain'],
+    params:{ stalks:{label:'Stalk count',min:6,max:44,step:1,def:20}, height:{label:'Stalk height',min:8,max:30,step:1,def:20}, bend:{label:'Wind bend',min:0,max:18,step:1,def:6} },
+    shapes:[{key:'field',label:'Wheat field',build(rng,p,c){const w=80,h=p.height+10;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.stalks;i++){const x=rnd(rng,0,w),bh=rnd(rng,p.height*0.5,p.height),bend=rnd(rng,-p.bend,p.bend),col=rng()>.5?c[1]:c[2],tw=fmt(rnd(rng,0.8,2.2));const d=`M ${fmt(x)} ${h} Q ${fmt(x+bend)} ${fmt(h-bh*0.6)} ${fmt(x+bend*1.4)} ${fmt(h-bh)}`;body+=`<path d="${d}" stroke="${col}" stroke-width="${tw}" fill="none" stroke-linecap="round" opacity="${fmt(rnd(rng,0.6,1))}"/>`;body+=`<ellipse cx="${fmt(x+bend*1.4)}" cy="${fmt(h-bh)}" rx="${fmt(tw*0.8)}" ry="${fmt(rnd(rng,1.5,3))}" fill="${c[2]}" opacity="0.8"/>`;if(x<6)body+=`<path d="${d}" stroke="${col}" stroke-width="${tw}" fill="none" stroke-linecap="round" opacity="${fmt(rnd(rng,0.6,1))}" transform="translate(${w} 0)"/>`;if(x>w-6)body+=`<path d="${d}" stroke="${col}" stroke-width="${tw}" fill="none" stroke-linecap="round" opacity="${fmt(rnd(rng,0.6,1))}" transform="translate(${-w} 0)"/>`;}return{w,h,body};}}]
+  },
+  rock_surface: {
+    label:'Rock Surface', group:'Gideon', colors:['#6b6258','#443f38','#9a9184'], colorNames:['rock','shadow','edge'],
+    params:{ cracks:{label:'Fine cracks',min:1,max:20,step:1,def:7}, grain:{label:'Stone grain',min:3,max:45,step:1,def:18} },
+    shapes:[{key:'hewn',label:'Hewn rock',build(rng,p,c){const w=120,h=90;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.grain;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.5,2.2))}" fill="${rng()>.5?c[1]:c[2]}" opacity=".3"/>`;for(let i=0;i<p.cracks;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h);body+=`<path d="M${fmt(x)} ${fmt(y)} l${fmt(rnd(rng,-8,8))} ${fmt(rnd(rng,3,12))} l${fmt(rnd(rng,-5,5))} ${fmt(rnd(rng,2,8))}" stroke="${c[1]}" opacity=".55" fill="none"/>`;}return{w,h,body};}}]
+  },
+  wool_fleece: {
+    label:'Wool Fleece', group:'Gideon', colors:['#e8e0cc','#b8ab90','#f8f4e8'], colorNames:['wool','shadow','highlight'],
+    params:{ loops:{label:'Wool loops',min:10,max:80,step:1,def:36}, pile:{label:'Pile height',min:2,max:10,step:0.5,def:4}, curl:{label:'Curl irregularity',min:0,max:10,step:1,def:3} },
+    shapes:[{key:'fleece',label:'Loose fleece',build(rng,p,c){const w=100,h=100;let body=`<rect width="${w}" height="${h}" fill="${c[1]}"/>`;for(let i=0;i<p.loops;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h),r=rnd(rng,p.pile,p.pile*2.2),col=rng()>.4?c[0]:c[2];body+=`<circle cx="${fmt(x)}" cy="${fmt(y)}" r="${fmt(r)}" fill="${col}" opacity="${fmt(rnd(rng,0.5,0.9))}"/>`;body+=`<path d="M${fmt(x-r*0.6)} ${fmt(y)} q${fmt(r*0.6)} ${fmt(-r*0.8)} ${fmt(r*1.2)} 0" stroke="${c[1]}" stroke-width="0.6" fill="none" opacity="0.5"/>`;}return{w,h,body};}}]
+  },
+  water_ripple: {
+    label:'Water Ripple', group:'Gideon', colors:['#1c4f63','#2e7488','#bfe6e8'], colorNames:['deep','mid','glint'],
+    params:{ lines:{label:'Ripple lines',min:3,max:18,step:1,def:7}, wave:{label:'Wave height',min:1,max:14,step:0.5,def:3} },
+    shapes:[{key:'ripples',label:'Concentric ripples',build(rng,p,c){const w=100,h=100;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.lines;i++){const cx=rnd(rng,10,w-10),cy=rnd(rng,10,h-10);for(let r=2;r<p.lines*3;r+=3){body+=`<circle cx="${fmt(cx)}" cy="${fmt(cy)}" r="${fmt(r+rnd(rng,0,p.wave))}" stroke="${r%6<3?c[1]:c[2]}" stroke-width="0.8" fill="none" opacity="${fmt(0.7-r*0.06)}"/>`;}}return{w,h,body};}}]
+  },
+  clay_jar: {
+    label:'Clay Jar', group:'Gideon', colors:['#a9683f','#70442d','#d29a68'], colorNames:['clay','shadow','sun'],
+    params:{ courses:{label:'Wheel bands',min:2,max:8,step:1,def:4}, roughness:{label:'Surface roughness',min:4,max:50,step:1,def:22} },
+    shapes:[{key:'stretcher',label:'Wheel-thrown bands',build(rng,p,c){const w=120,h=80,row=h/p.courses;let body=`<rect width="${w}" height="${h}" fill="${c[1]}"/>`;for(let y=0;y<p.courses;y++){const off=y%2?15:0;for(let x=-30;x<w+30;x+=30){const bx=x+off;body+=`<rect x="${bx+1}" y="${y*row+1}" width="28" height="${row-2}" rx="1.5" fill="${mix(c[0],c[2],rnd(rng,0,.22))}"/>`;}}for(let i=0;i<p.roughness;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.4,1.5))}" fill="${c[1]}" opacity=".45"/>`;return{w,h,body};}}]
+  },
+  trumpet_horn: {
+    label:'Trumpet Horn', group:'Gideon', colors:['#c9952f','#805821','#f2cf67'], colorNames:['brass','shadow','glint'],
+    params:{ dents:{label:'Hammer marks',min:5,max:70,step:1,def:32}, glints:{label:'Bright glints',min:1,max:20,step:1,def:7} },
+    shapes:[{key:'hammered',label:'Hammered sheet',build(rng,p,c){const w=100,h=100;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.dents;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h),r=rnd(rng,2,7);body+=`<circle cx="${fmt(x)}" cy="${fmt(y)}" r="${fmt(r)}" fill="none" stroke="${c[1]}" opacity=".25"/>`;}for(let i=0;i<p.glints;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.5,2))}" fill="${c[2]}"/>`;return{w,h,body};}}]
+  },
+  torch_flame: {
+    label:'Torch Flame', group:'Gideon', colors:['#7a2a08','#e06818','#ffd84d'], colorNames:['ember','flame','core'],
+    params:{ flames:{label:'Flame tongues',min:4,max:30,step:1,def:14}, flicker:{label:'Flicker',min:2,max:16,step:1,def:6} },
+    shapes:[{key:'flames',label:'Leaping flames',build(rng,p,c){const w=100,h=100;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.flames;i++){const x=rnd(rng,10,w-10),base=h-rnd(rng,0,10),fh=rnd(rng,15,h*0.7),fw=rnd(rng,3,8),flick=rnd(rng,-p.flicker,p.flicker);body+=`<path d="M${fmt(x-fw)} ${fmt(base)} Q${fmt(x-fw*0.4)} ${fmt(base-fh*0.5)} ${fmt(x+flick)} ${fmt(base-fh)} Q${fmt(x+fw*0.4)} ${fmt(base-fh*0.5)} ${fmt(x+fw)} ${fmt(base)} Z" fill="${rng()>.4?c[1]:c[2]}" opacity="${fmt(rnd(rng,0.55,0.95))}"/>`;}return{w,h,body};}}]
+  },
+  camel_hair: {
+    label:'Camel Hair', group:'Gideon', colors:['#6b5233','#8f7350','#b89a6e'], colorNames:['ground','hair A','hair B'],
+    params:{ scale:{label:'Stitch size',min:4,max:16,step:1,def:8}, thickness:{label:'Thread thickness',min:0.2,max:0.6,step:0.02,def:0.34}, mix:{label:'Colour mix %',min:0,max:100,step:5,def:50} },
+    shapes:[{key:'weave',label:'Herringbone',build(rng,p,c){const u=p.scale,w=u*4,h=u*4;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;const stickW=u*0.95,stickH=u*p.thickness;for(let row=-1;row<=4;row++){const y=row*u*0.5;const dir=row%2?1:-1;for(let col=-1;col<=4;col++){const x=col*u;const sh=shade(mix(c[1],c[2],p.mix/100),rnd(rng,-0.06,0.06));body+=`<rect x="${fmt(x)}" y="${fmt(y)}" width="${fmt(stickW)}" height="${fmt(stickH)}" rx="${fmt(stickH/2)}" fill="${sh}" transform="rotate(${dir*45} ${fmt(x+u/2)} ${fmt(y)})"/>`;}}return{w,h,body};}}]
+  },
+  tent_fabric: {
+    label:'Tent Fabric', group:'Gideon', colors:['#5c4a34','#8a7350','#3c2f20'], colorNames:['warp','weft','shadow'],
+    params:{ thread:{label:'Thread width',min:3,max:14,step:0.5,def:6}, gap:{label:'Thread gap',min:0,max:6,step:0.5,def:1.5}, fray:{label:'Fray / irregularity',min:0,max:14,step:1,def:3} },
+    shapes:[{key:'basket',label:'Basket weave',build(rng,p,c){const t=p.thread,g=p.gap,u=t+g,w=u*2,h=u*2;let body=`<rect width="${w}" height="${h}" fill="${c[2]}"/>`;for(let row=0;row<2;row++){const y=row*u;const jitter=rnd(rng,-p.fray*0.3,p.fray*0.3);body+=`<rect x="${-u}" y="${fmt(y+jitter)}" width="${w+u*2}" height="${fmt(t)}" fill="${c[1]}" opacity="0.9"/>`;}for(let col=0;col<2;col++){const x=col*u;for(let row=0;row<2;row++){const y=row*u;const onTop=(col+row)%2===0;if(onTop){body+=`<rect x="${fmt(x+rnd(rng,-p.fray*0.2,p.fray*0.2))}" y="${fmt(y-g)}" width="${fmt(t)}" height="${fmt(t+g*2)}" fill="${c[0]}"/>`;}}}return{w,h,body};}}]
+  },
+  sword_iron: {
+    label:'Sword Iron', group:'Gideon', colors:['#5a5f66','#3a3e44','#a8b0b8'], colorNames:['iron','shadow','edge'],
+    params:{ scratches:{label:'Blade scratches',min:1,max:20,step:1,def:7}, grain:{label:'Metal grain',min:3,max:45,step:1,def:18} },
+    shapes:[{key:'blade',label:'Forged blade',build(rng,p,c){const w=120,h=90;let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;for(let i=0;i<p.grain;i++)body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.5,2.2))}" fill="${rng()>.5?c[1]:c[2]}" opacity=".3"/>`;for(let i=0;i<p.scratches;i++){const x=rnd(rng,0,w),y=rnd(rng,0,h);body+=`<path d="M${fmt(x)} ${fmt(y)} l${fmt(rnd(rng,-8,8))} ${fmt(rnd(rng,3,12))} l${fmt(rnd(rng,-5,5))} ${fmt(rnd(rng,2,8))}" stroke="${c[2]}" opacity=".4" fill="none"/>`;}return{w,h,body};}}]
   }
 
 };
@@ -900,12 +951,12 @@ const LIB = Object.fromEntries(STORY_TEXTURE_CONFIG.keys.filter(key => FULL_LIB[
    State
 ============================================================ */
 let state = {
-  texKey: 'grass',
-  shapeKey: FULL_LIB['grass'].shapes[0].key,
+  texKey: 'wheat_stalks',
+  shapeKey: FULL_LIB['wheat_stalks'].shapes[0].key,
   seed: 1,
   colors: [],
   params: {},
-  activeGroup: 'Enoch'
+  activeGroup: 'Gideon'
 };
 
 function currentTex(){ return LIB[state.texKey]; }
