@@ -30,17 +30,11 @@
         "assets/materials/water_fast-churn.svg",
         "assets/materials/fabric_weave-basket.svg"
       ],
-      "materialKeys": [
-        "desert_sand",
-        "stone",
-        "water_fast",
-        "fabric_weave"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_01_drought/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_01_drought/a_establish/elijah_act1_a_background.svg",
             "middleGround": "assets/svg/act_01_drought/a_establish/elijah_act1_a_middle_ground.svg",
@@ -49,8 +43,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_01_drought/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_01_drought/b_core_action/elijah_act1_b_background.svg",
             "middleGround": "assets/svg/act_01_drought/b_core_action/elijah_act1_b_middle_ground.svg",
@@ -59,32 +53,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_01_drought/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_01_drought/c_resolve/elijah_act1_c_background.svg",
             "middleGround": "assets/svg/act_01_drought/c_resolve/elijah_act1_c_middle_ground.svg",
             "foreground": "assets/svg/act_01_drought/c_resolve/elijah_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_drought/a_establish/elijah_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_drought/a_establish/elijah_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_drought/a_establish/elijah_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_drought/b_core_action/elijah_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_drought/b_core_action/elijah_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_drought/b_core_action/elijah_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_drought/c_resolve/elijah_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_drought/c_resolve/elijah_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_drought/c_resolve/elijah_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -97,14 +74,11 @@
       "materials": [
         "assets/materials/desert_sand-dunes.svg"
       ],
-      "materialKeys": [
-        "desert_sand"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_02_widow/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_02_widow/a_establish/elijah_act2_a_background.svg",
             "middleGround": "assets/svg/act_02_widow/a_establish/elijah_act2_a_middle_ground.svg",
@@ -113,8 +87,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_02_widow/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_02_widow/b_core_action/elijah_act2_b_background.svg",
             "middleGround": "assets/svg/act_02_widow/b_core_action/elijah_act2_b_middle_ground.svg",
@@ -123,32 +97,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_02_widow/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_02_widow/c_resolve/elijah_act2_c_background.svg",
             "middleGround": "assets/svg/act_02_widow/c_resolve/elijah_act2_c_middle_ground.svg",
             "foreground": "assets/svg/act_02_widow/c_resolve/elijah_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_widow/a_establish/elijah_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_widow/a_establish/elijah_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_widow/a_establish/elijah_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_widow/b_core_action/elijah_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_widow/b_core_action/elijah_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_widow/b_core_action/elijah_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_widow/c_resolve/elijah_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_widow/c_resolve/elijah_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_widow/c_resolve/elijah_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -161,14 +118,11 @@
       "materials": [
         "assets/materials/stone-flagstone.svg"
       ],
-      "materialKeys": [
-        "stone"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_03_carmel/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_03_carmel/a_establish/elijah_act3_a_background.svg",
             "middleGround": "assets/svg/act_03_carmel/a_establish/elijah_act3_a_middle_ground.svg",
@@ -177,8 +131,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_03_carmel/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_03_carmel/b_core_action/elijah_act3_b_background.svg",
             "middleGround": "assets/svg/act_03_carmel/b_core_action/elijah_act3_b_middle_ground.svg",
@@ -187,32 +141,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_03_carmel/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_03_carmel/c_resolve/elijah_act3_c_background.svg",
             "middleGround": "assets/svg/act_03_carmel/c_resolve/elijah_act3_c_middle_ground.svg",
             "foreground": "assets/svg/act_03_carmel/c_resolve/elijah_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_carmel/a_establish/elijah_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_carmel/a_establish/elijah_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_carmel/a_establish/elijah_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_carmel/b_core_action/elijah_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_carmel/b_core_action/elijah_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_carmel/b_core_action/elijah_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_carmel/c_resolve/elijah_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_carmel/c_resolve/elijah_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_carmel/c_resolve/elijah_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -226,15 +163,11 @@
         "assets/materials/stone-flagstone.svg",
         "assets/materials/water_fast-churn.svg"
       ],
-      "materialKeys": [
-        "stone",
-        "water_fast"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_04_flight/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_04_flight/a_establish/elijah_act4_a_background.svg",
             "middleGround": "assets/svg/act_04_flight/a_establish/elijah_act4_a_middle_ground.svg",
@@ -243,8 +176,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_04_flight/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_04_flight/b_core_action/elijah_act4_b_background.svg",
             "middleGround": "assets/svg/act_04_flight/b_core_action/elijah_act4_b_middle_ground.svg",
@@ -253,32 +186,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_04_flight/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_04_flight/c_resolve/elijah_act4_c_background.svg",
             "middleGround": "assets/svg/act_04_flight/c_resolve/elijah_act4_c_middle_ground.svg",
             "foreground": "assets/svg/act_04_flight/c_resolve/elijah_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_flight/a_establish/elijah_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_flight/a_establish/elijah_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_flight/a_establish/elijah_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_flight/b_core_action/elijah_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_flight/b_core_action/elijah_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_flight/b_core_action/elijah_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_flight/c_resolve/elijah_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_flight/c_resolve/elijah_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_flight/c_resolve/elijah_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -293,16 +209,11 @@
         "assets/materials/water_fast-churn.svg",
         "assets/materials/fabric_weave-basket.svg"
       ],
-      "materialKeys": [
-        "wood_oak",
-        "water_fast",
-        "fabric_weave"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_05_voice/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_05_voice/a_establish/elijah_act5_a_background.svg",
             "middleGround": "assets/svg/act_05_voice/a_establish/elijah_act5_a_middle_ground.svg",
@@ -311,8 +222,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_05_voice/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_05_voice/b_core_action/elijah_act5_b_background.svg",
             "middleGround": "assets/svg/act_05_voice/b_core_action/elijah_act5_b_middle_ground.svg",
@@ -321,32 +232,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_05_voice/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_05_voice/c_resolve/elijah_act5_c_background.svg",
             "middleGround": "assets/svg/act_05_voice/c_resolve/elijah_act5_c_middle_ground.svg",
             "foreground": "assets/svg/act_05_voice/c_resolve/elijah_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_voice/a_establish/elijah_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_voice/a_establish/elijah_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_voice/a_establish/elijah_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_voice/b_core_action/elijah_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_voice/b_core_action/elijah_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_voice/b_core_action/elijah_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_voice/c_resolve/elijah_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_voice/c_resolve/elijah_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_voice/c_resolve/elijah_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -362,17 +256,11 @@
         "assets/materials/water_fast-churn.svg",
         "assets/materials/leaves-canopy.svg"
       ],
-      "materialKeys": [
-        "desert_sand",
-        "wood_oak",
-        "water_fast",
-        "leaves"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_06_vineyard/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_06_vineyard/a_establish/elijah_act6_a_background.svg",
             "middleGround": "assets/svg/act_06_vineyard/a_establish/elijah_act6_a_middle_ground.svg",
@@ -381,8 +269,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_06_vineyard/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_06_vineyard/b_core_action/elijah_act6_b_background.svg",
             "middleGround": "assets/svg/act_06_vineyard/b_core_action/elijah_act6_b_middle_ground.svg",
@@ -391,32 +279,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_06_vineyard/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_06_vineyard/c_resolve/elijah_act6_c_background.svg",
             "middleGround": "assets/svg/act_06_vineyard/c_resolve/elijah_act6_c_middle_ground.svg",
             "foreground": "assets/svg/act_06_vineyard/c_resolve/elijah_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_vineyard/a_establish/elijah_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_vineyard/a_establish/elijah_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_vineyard/a_establish/elijah_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_vineyard/b_core_action/elijah_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_vineyard/b_core_action/elijah_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_vineyard/b_core_action/elijah_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_vineyard/c_resolve/elijah_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_vineyard/c_resolve/elijah_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_vineyard/c_resolve/elijah_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -430,15 +301,11 @@
         "assets/materials/stone-flagstone.svg",
         "assets/materials/wood_oak-planks3.svg"
       ],
-      "materialKeys": [
-        "stone",
-        "wood_oak"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_07_chariot/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_07_chariot/a_establish/elijah_act7_a_background.svg",
             "middleGround": "assets/svg/act_07_chariot/a_establish/elijah_act7_a_middle_ground.svg",
@@ -447,8 +314,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_07_chariot/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_07_chariot/b_core_action/elijah_act7_b_background.svg",
             "middleGround": "assets/svg/act_07_chariot/b_core_action/elijah_act7_b_middle_ground.svg",
@@ -457,32 +324,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_07_chariot/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_background.svg",
             "middleGround": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_middle_ground.svg",
             "foreground": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_07_chariot/a_establish/elijah_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_chariot/a_establish/elijah_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_chariot/a_establish/elijah_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_07_chariot/b_core_action/elijah_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_chariot/b_core_action/elijah_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_chariot/b_core_action/elijah_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

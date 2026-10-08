@@ -3,18 +3,13 @@
   "act": 12,
   "chapter": "Ch.12 · Solomon",
   "artSource": "art/act12_solomon.md",
-  "artFolder": "assets/svg/act_12_solomon",
+  "artFolder": "act_12_solomon",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "en_gedi_cave-limestone.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "valley_stones-brook.svg",
-    "wood_dark-plank.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "david_act12_b_background.svg",

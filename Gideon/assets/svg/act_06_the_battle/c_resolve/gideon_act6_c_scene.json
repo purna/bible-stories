@@ -3,15 +3,15 @@
   "act": 6,
   "chapter": "Ch.6 · The Battle",
   "artSource": "art/act6_the_battle.md",
-  "artFolder": "assets/svg/act_06_the_battle",
+  "artFolder": "act_06_the_battle",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "sword_iron-blade.svg",
-    "tent_fabric-basket.svg",
-    "torch_flame-flames.svg",
-    "wheat_stalks-field.svg"
+    "assets/materials/wheat_stalks-field.svg",
+    "assets/materials/torch_flame-flames.svg",
+    "assets/materials/tent_fabric-basket.svg",
+    "assets/materials/sword_iron-blade.svg"
   ],
   "layers": {
     "background": "gideon_act6_c_background.svg",

@@ -3,15 +3,13 @@
   "act": 6,
   "chapter": "Ch.6 · Naaman",
   "artSource": "art/act6_naaman.md",
-  "artFolder": "assets/svg/act_06_naaman",
+  "artFolder": "act_06_naaman",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/water_still-eddies.svg",
+    "assets/materials/water_fast-churn.svg"
   ],
   "layers": {
     "background": "elisha_act6_c_background.svg",

@@ -3,16 +3,15 @@
   "act": 10,
   "chapter": "Ch.10 · The Golden Calf",
   "artSource": "art/act10_calf.md",
-  "artFolder": "assets/svg/act_10_calf",
+  "artFolder": "act_10_calf",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "desert_sand-dunes.svg",
-    "hammered_gold-hammered.svg",
-    "nile_reeds-riverbank.svg",
-    "stone-rough.svg",
-    "stone_tablets-hewn.svg"
+    "assets/materials/nile_reeds-riverbank.svg",
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/stone_tablets-hewn.svg"
   ],
   "layers": {
     "background": "moses_act10_b_background.svg",

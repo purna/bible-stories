@@ -63,24 +63,7 @@
             "foreground": "assets/svg/act_01_bad_news/c_resolve/nehemiah_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_bad_news/a_establish/nehemiah_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_bad_news/a_establish/nehemiah_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_bad_news/a_establish/nehemiah_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_bad_news/b_core_action/nehemiah_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_bad_news/b_core_action/nehemiah_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_bad_news/b_core_action/nehemiah_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_bad_news/c_resolve/nehemiah_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_bad_news/c_resolve/nehemiah_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_bad_news/c_resolve/nehemiah_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -131,24 +114,7 @@
             "foreground": "assets/svg/act_02_before_the_king/c_resolve/nehemiah_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_before_the_king/a_establish/nehemiah_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_before_the_king/a_establish/nehemiah_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_before_the_king/a_establish/nehemiah_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_before_the_king/b_core_action/nehemiah_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_before_the_king/b_core_action/nehemiah_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_before_the_king/b_core_action/nehemiah_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_before_the_king/c_resolve/nehemiah_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_before_the_king/c_resolve/nehemiah_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_before_the_king/c_resolve/nehemiah_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -199,24 +165,7 @@
             "foreground": "assets/svg/act_03_night_inspection/c_resolve/nehemiah_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_night_inspection/a_establish/nehemiah_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_night_inspection/a_establish/nehemiah_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_night_inspection/a_establish/nehemiah_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_night_inspection/b_core_action/nehemiah_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_night_inspection/b_core_action/nehemiah_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_night_inspection/b_core_action/nehemiah_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_night_inspection/c_resolve/nehemiah_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_night_inspection/c_resolve/nehemiah_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_night_inspection/c_resolve/nehemiah_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -267,24 +216,7 @@
             "foreground": "assets/svg/act_04_rise_and_build/c_resolve/nehemiah_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_rise_and_build/a_establish/nehemiah_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_rise_and_build/a_establish/nehemiah_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_rise_and_build/a_establish/nehemiah_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_rise_and_build/b_core_action/nehemiah_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_rise_and_build/b_core_action/nehemiah_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_rise_and_build/b_core_action/nehemiah_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_rise_and_build/c_resolve/nehemiah_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_rise_and_build/c_resolve/nehemiah_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_rise_and_build/c_resolve/nehemiah_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -333,24 +265,7 @@
             "foreground": "assets/svg/act_05_sword_and_trowel/c_resolve/nehemiah_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_sword_and_trowel/a_establish/nehemiah_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_sword_and_trowel/a_establish/nehemiah_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sword_and_trowel/a_establish/nehemiah_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_sword_and_trowel/b_core_action/nehemiah_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_sword_and_trowel/b_core_action/nehemiah_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sword_and_trowel/b_core_action/nehemiah_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_sword_and_trowel/c_resolve/nehemiah_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_sword_and_trowel/c_resolve/nehemiah_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sword_and_trowel/c_resolve/nehemiah_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -407,24 +322,7 @@
             "foreground": "assets/svg/act_06_the_outcry/c_resolve/nehemiah_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_the_outcry/a_establish/nehemiah_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_the_outcry/a_establish/nehemiah_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_the_outcry/a_establish/nehemiah_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_the_outcry/b_core_action/nehemiah_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_the_outcry/b_core_action/nehemiah_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_the_outcry/b_core_action/nehemiah_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_the_outcry/c_resolve/nehemiah_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_the_outcry/c_resolve/nehemiah_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_the_outcry/c_resolve/nehemiah_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -473,24 +371,7 @@
             "foreground": "assets/svg/act_07_plots_and_rumours/c_resolve/nehemiah_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_07_plots_and_rumours/a_establish/nehemiah_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_plots_and_rumours/a_establish/nehemiah_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_plots_and_rumours/a_establish/nehemiah_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_07_plots_and_rumours/b_core_action/nehemiah_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_plots_and_rumours/b_core_action/nehemiah_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_plots_and_rumours/b_core_action/nehemiah_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_07_plots_and_rumours/c_resolve/nehemiah_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_plots_and_rumours/c_resolve/nehemiah_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_plots_and_rumours/c_resolve/nehemiah_act7_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 8,
@@ -539,24 +420,7 @@
             "foreground": "assets/svg/act_08_the_wall_completed/c_resolve/nehemiah_act8_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_08_the_wall_completed/a_establish/nehemiah_act8_a_background.svg",
-          "middleGround": "assets/svg/act_08_the_wall_completed/a_establish/nehemiah_act8_a_middle_ground.svg",
-          "foreground": "assets/svg/act_08_the_wall_completed/a_establish/nehemiah_act8_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_08_the_wall_completed/b_core_action/nehemiah_act8_b_background.svg",
-          "middleGround": "assets/svg/act_08_the_wall_completed/b_core_action/nehemiah_act8_b_middle_ground.svg",
-          "foreground": "assets/svg/act_08_the_wall_completed/b_core_action/nehemiah_act8_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_08_the_wall_completed/c_resolve/nehemiah_act8_c_background.svg",
-          "middleGround": "assets/svg/act_08_the_wall_completed/c_resolve/nehemiah_act8_c_middle_ground.svg",
-          "foreground": "assets/svg/act_08_the_wall_completed/c_resolve/nehemiah_act8_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 9,
@@ -607,24 +471,7 @@
             "foreground": "assets/svg/act_09_the_book_read/c_resolve/nehemiah_act9_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_09_the_book_read/a_establish/nehemiah_act9_a_background.svg",
-          "middleGround": "assets/svg/act_09_the_book_read/a_establish/nehemiah_act9_a_middle_ground.svg",
-          "foreground": "assets/svg/act_09_the_book_read/a_establish/nehemiah_act9_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_09_the_book_read/b_core_action/nehemiah_act9_b_background.svg",
-          "middleGround": "assets/svg/act_09_the_book_read/b_core_action/nehemiah_act9_b_middle_ground.svg",
-          "foreground": "assets/svg/act_09_the_book_read/b_core_action/nehemiah_act9_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_09_the_book_read/c_resolve/nehemiah_act9_c_background.svg",
-          "middleGround": "assets/svg/act_09_the_book_read/c_resolve/nehemiah_act9_c_middle_ground.svg",
-          "foreground": "assets/svg/act_09_the_book_read/c_resolve/nehemiah_act9_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 10,
@@ -673,24 +520,7 @@
             "foreground": "assets/svg/act_10_reform/c_resolve/nehemiah_act10_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_10_reform/a_establish/nehemiah_act10_a_background.svg",
-          "middleGround": "assets/svg/act_10_reform/a_establish/nehemiah_act10_a_middle_ground.svg",
-          "foreground": "assets/svg/act_10_reform/a_establish/nehemiah_act10_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_10_reform/b_core_action/nehemiah_act10_b_background.svg",
-          "middleGround": "assets/svg/act_10_reform/b_core_action/nehemiah_act10_b_middle_ground.svg",
-          "foreground": "assets/svg/act_10_reform/b_core_action/nehemiah_act10_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_10_reform/c_resolve/nehemiah_act10_c_background.svg",
-          "middleGround": "assets/svg/act_10_reform/c_resolve/nehemiah_act10_c_middle_ground.svg",
-          "foreground": "assets/svg/act_10_reform/c_resolve/nehemiah_act10_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

@@ -3,16 +3,14 @@
   "act": 5,
   "chapter": "Covenant Stars",
   "artSource": "art/act5_covenant_stars.md",
-  "artFolder": "assets/svg/act_05_covenant_stars",
+  "artFolder": "act_05_covenant_stars",
   "sceneId": "",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "fabric_weave-basket.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "abraham_act5_a_background.svg",

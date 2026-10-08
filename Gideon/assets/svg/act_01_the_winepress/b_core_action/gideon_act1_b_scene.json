@@ -3,12 +3,12 @@
   "act": 1,
   "chapter": "Ch.1 · The Winepress",
   "artSource": "art/act1_the_winepress.md",
-  "artFolder": "assets/svg/act_01_the_winepress",
+  "artFolder": "act_01_the_winepress",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "wheat_stalks-field.svg"
+    "assets/materials/wheat_stalks-field.svg"
   ],
   "layers": {
     "background": "gideon_act1_b_background.svg",

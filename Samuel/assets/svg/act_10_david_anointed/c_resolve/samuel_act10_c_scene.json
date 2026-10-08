@@ -3,12 +3,12 @@
   "act": 10,
   "chapter": "Ch.10 · David Anointed",
   "artSource": "art/act10_david_anointed.md",
-  "artFolder": "assets/svg/act_10_david_anointed",
+  "artFolder": "act_10_david_anointed",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "hammered_gold-hammered.svg"
+    "assets/materials/hammered_gold-hammered.svg"
   ],
   "layers": {
     "background": "samuel_act10_c_background.svg",

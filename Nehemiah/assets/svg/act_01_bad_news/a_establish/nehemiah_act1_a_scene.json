@@ -3,16 +3,13 @@
   "act": 1,
   "chapter": "Ch.1 · Bad News",
   "artSource": "art/act1_bad_news.md",
-  "artFolder": "assets/svg/act_01_bad_news",
+  "artFolder": "act_01_bad_news",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "nehemiah_act1_a_background.svg",

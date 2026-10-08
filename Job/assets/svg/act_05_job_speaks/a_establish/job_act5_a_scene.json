@@ -3,13 +3,12 @@
   "act": 5,
   "chapter": "Ch.5 · Job Speaks",
   "artSource": "art/act5_job_speaks.md",
-  "artFolder": "assets/svg/act_05_job_speaks",
+  "artFolder": "act_05_job_speaks",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "job_act5_a_background.svg",

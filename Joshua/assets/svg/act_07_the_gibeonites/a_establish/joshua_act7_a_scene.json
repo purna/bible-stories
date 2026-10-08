@@ -3,15 +3,14 @@
   "act": 7,
   "chapter": "Ch.7 · The Gibeonites",
   "artSource": "art/act7_the_gibeonites.md",
-  "artFolder": "assets/svg/act_07_the_gibeonites",
+  "artFolder": "act_07_the_gibeonites",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "desert_sand-dunes.svg",
-    "fabric_weave-basket.svg",
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/fabric_weave-basket.svg"
   ],
   "layers": {
     "background": "joshua_act7_a_background.svg",

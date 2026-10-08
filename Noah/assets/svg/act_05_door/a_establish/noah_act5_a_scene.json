@@ -3,16 +3,14 @@
   "act": 5,
   "chapter": "Ch.5 · The Door Shuts",
   "artSource": "art/act5_door.md",
-  "artFolder": "assets/svg/act_05_door",
+  "artFolder": "act_05_door",
   "sceneId": "ch5_dark_clouds",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/wood_dark-plank.svg",
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "noah_act5_a_background.svg",

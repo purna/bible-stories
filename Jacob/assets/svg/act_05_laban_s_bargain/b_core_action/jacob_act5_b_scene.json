@@ -3,15 +3,14 @@
   "act": 5,
   "chapter": "Ch.5 · Laban’s Bargain",
   "artSource": "art/act5_laban_s_bargain.md",
-  "artFolder": "assets/svg/act_05_laban_s_bargain",
+  "artFolder": "act_05_laban_s_bargain",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "fabric_weave-basket.svg",
-    "grass-tufts.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/grass-tufts.svg"
   ],
   "layers": {
     "background": "jacob_act5_b_background.svg",

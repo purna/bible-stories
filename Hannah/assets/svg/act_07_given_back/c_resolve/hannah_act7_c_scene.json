@@ -3,14 +3,13 @@
   "act": 7,
   "chapter": "Ch.7 · Given Back",
   "artSource": "art/act7_given_back.md",
-  "artFolder": "assets/svg/act_07_given_back",
+  "artFolder": "act_07_given_back",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "hammered_gold-hammered.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/hammered_gold-hammered.svg"
   ],
   "layers": {
     "background": "hannah_act7_c_background.svg",

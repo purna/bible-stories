@@ -3,19 +3,16 @@
   "act": 5,
   "chapter": "Ch.5 · For Such a Time",
   "artSource": "art/act5_for_such_a_time.md",
-  "artFolder": "assets/svg/act_05_for_such_a_time",
+  "artFolder": "act_05_for_such_a_time",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "fabric_dots-grid.svg",
-    "fabric_dots-scatterMix.svg",
-    "fabric_weave-basket.svg",
-    "mosaic-chips.svg",
-    "mosaic-grid.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/mosaic-chips.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/fabric_dots-scatterMix.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "esther_act5_c_background.svg",

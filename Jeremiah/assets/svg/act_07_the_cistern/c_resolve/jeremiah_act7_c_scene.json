@@ -3,17 +3,15 @@
   "act": 7,
   "chapter": "Ch.7 · The Cistern",
   "artSource": "art/act7_the_cistern.md",
-  "artFolder": "assets/svg/act_07_the_cistern",
+  "artFolder": "act_07_the_cistern",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "fabric_weave-basket.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_dark-plank.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "jeremiah_act7_c_background.svg",

@@ -63,24 +63,7 @@
             "foreground": "assets/svg/act_01_the_coloured_robe/c_resolve/joseph_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_the_coloured_robe/a_establish/joseph_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_the_coloured_robe/a_establish/joseph_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_the_coloured_robe/a_establish/joseph_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_the_coloured_robe/b_core_action/joseph_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_the_coloured_robe/b_core_action/joseph_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_the_coloured_robe/b_core_action/joseph_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_the_coloured_robe/c_resolve/joseph_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_the_coloured_robe/c_resolve/joseph_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_the_coloured_robe/c_resolve/joseph_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -137,24 +120,7 @@
             "foreground": "assets/svg/act_02_dreams_and_the_pit/c_resolve/joseph_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_dreams_and_the_pit/a_establish/joseph_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_dreams_and_the_pit/a_establish/joseph_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_dreams_and_the_pit/a_establish/joseph_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_dreams_and_the_pit/b_core_action/joseph_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_dreams_and_the_pit/b_core_action/joseph_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_dreams_and_the_pit/b_core_action/joseph_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_dreams_and_the_pit/c_resolve/joseph_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_dreams_and_the_pit/c_resolve/joseph_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_dreams_and_the_pit/c_resolve/joseph_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -201,24 +167,7 @@
             "foreground": "assets/svg/act_03_potiphar_s_house/c_resolve/joseph_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_potiphar_s_house/a_establish/joseph_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_potiphar_s_house/a_establish/joseph_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_potiphar_s_house/a_establish/joseph_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_potiphar_s_house/b_core_action/joseph_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_potiphar_s_house/b_core_action/joseph_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_potiphar_s_house/b_core_action/joseph_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_potiphar_s_house/c_resolve/joseph_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_potiphar_s_house/c_resolve/joseph_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_potiphar_s_house/c_resolve/joseph_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -265,24 +214,7 @@
             "foreground": "assets/svg/act_04_the_prison/c_resolve/joseph_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_the_prison/a_establish/joseph_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_the_prison/a_establish/joseph_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_prison/a_establish/joseph_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_the_prison/b_core_action/joseph_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_the_prison/b_core_action/joseph_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_prison/b_core_action/joseph_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_the_prison/c_resolve/joseph_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_the_prison/c_resolve/joseph_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_prison/c_resolve/joseph_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -331,24 +263,7 @@
             "foreground": "assets/svg/act_05_pharaoh_s_dreams/c_resolve/joseph_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_pharaoh_s_dreams/a_establish/joseph_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_pharaoh_s_dreams/a_establish/joseph_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_pharaoh_s_dreams/a_establish/joseph_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_pharaoh_s_dreams/b_core_action/joseph_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_pharaoh_s_dreams/b_core_action/joseph_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_pharaoh_s_dreams/b_core_action/joseph_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_pharaoh_s_dreams/c_resolve/joseph_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_pharaoh_s_dreams/c_resolve/joseph_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_pharaoh_s_dreams/c_resolve/joseph_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -399,24 +314,7 @@
             "foreground": "assets/svg/act_06_storehouses/c_resolve/joseph_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_storehouses/a_establish/joseph_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_storehouses/a_establish/joseph_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_storehouses/a_establish/joseph_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_storehouses/b_core_action/joseph_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_storehouses/b_core_action/joseph_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_storehouses/b_core_action/joseph_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_storehouses/c_resolve/joseph_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_storehouses/c_resolve/joseph_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_storehouses/c_resolve/joseph_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -463,24 +361,7 @@
             "foreground": "assets/svg/act_07_the_brothers_arrive/c_resolve/joseph_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_07_the_brothers_arrive/a_establish/joseph_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_the_brothers_arrive/a_establish/joseph_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_the_brothers_arrive/a_establish/joseph_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_07_the_brothers_arrive/b_core_action/joseph_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_the_brothers_arrive/b_core_action/joseph_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_the_brothers_arrive/b_core_action/joseph_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_07_the_brothers_arrive/c_resolve/joseph_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_the_brothers_arrive/c_resolve/joseph_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_the_brothers_arrive/c_resolve/joseph_act7_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 8,
@@ -537,24 +418,7 @@
             "foreground": "assets/svg/act_08_benjamin_s_cup/c_resolve/joseph_act8_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_08_benjamin_s_cup/a_establish/joseph_act8_a_background.svg",
-          "middleGround": "assets/svg/act_08_benjamin_s_cup/a_establish/joseph_act8_a_middle_ground.svg",
-          "foreground": "assets/svg/act_08_benjamin_s_cup/a_establish/joseph_act8_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_08_benjamin_s_cup/b_core_action/joseph_act8_b_background.svg",
-          "middleGround": "assets/svg/act_08_benjamin_s_cup/b_core_action/joseph_act8_b_middle_ground.svg",
-          "foreground": "assets/svg/act_08_benjamin_s_cup/b_core_action/joseph_act8_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_08_benjamin_s_cup/c_resolve/joseph_act8_c_background.svg",
-          "middleGround": "assets/svg/act_08_benjamin_s_cup/c_resolve/joseph_act8_c_middle_ground.svg",
-          "foreground": "assets/svg/act_08_benjamin_s_cup/c_resolve/joseph_act8_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 9,
@@ -601,24 +465,7 @@
             "foreground": "assets/svg/act_09_revealed/c_resolve/joseph_act9_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_09_revealed/a_establish/joseph_act9_a_background.svg",
-          "middleGround": "assets/svg/act_09_revealed/a_establish/joseph_act9_a_middle_ground.svg",
-          "foreground": "assets/svg/act_09_revealed/a_establish/joseph_act9_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_09_revealed/b_core_action/joseph_act9_b_background.svg",
-          "middleGround": "assets/svg/act_09_revealed/b_core_action/joseph_act9_b_middle_ground.svg",
-          "foreground": "assets/svg/act_09_revealed/b_core_action/joseph_act9_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_09_revealed/c_resolve/joseph_act9_c_background.svg",
-          "middleGround": "assets/svg/act_09_revealed/c_resolve/joseph_act9_c_middle_ground.svg",
-          "foreground": "assets/svg/act_09_revealed/c_resolve/joseph_act9_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 10,
@@ -675,24 +522,7 @@
             "foreground": "assets/svg/act_10_goshen/c_resolve/joseph_act10_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_10_goshen/a_establish/joseph_act10_a_background.svg",
-          "middleGround": "assets/svg/act_10_goshen/a_establish/joseph_act10_a_middle_ground.svg",
-          "foreground": "assets/svg/act_10_goshen/a_establish/joseph_act10_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_10_goshen/b_core_action/joseph_act10_b_background.svg",
-          "middleGround": "assets/svg/act_10_goshen/b_core_action/joseph_act10_b_middle_ground.svg",
-          "foreground": "assets/svg/act_10_goshen/b_core_action/joseph_act10_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_10_goshen/c_resolve/joseph_act10_c_background.svg",
-          "middleGround": "assets/svg/act_10_goshen/c_resolve/joseph_act10_c_middle_ground.svg",
-          "foreground": "assets/svg/act_10_goshen/c_resolve/joseph_act10_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

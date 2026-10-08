@@ -3,14 +3,13 @@
   "act": 6,
   "chapter": "Ch.6 · The Little Robe",
   "artSource": "art/act6_the_little_robe.md",
-  "artFolder": "assets/svg/act_06_the_little_robe",
+  "artFolder": "act_06_the_little_robe",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "fabric_weave-basket.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "hannah_act6_b_background.svg",

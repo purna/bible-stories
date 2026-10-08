@@ -3,16 +3,14 @@
   "act": 2,
   "chapter": "Ch.2 · The Voice at Night",
   "artSource": "art/act2_the_voice_at_night.md",
-  "artFolder": "assets/svg/act_02_the_voice_at_night",
+  "artFolder": "act_02_the_voice_at_night",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "hammered_gold-hammered.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/hammered_gold-hammered.svg"
   ],
   "layers": {
     "background": "samuel_act2_a_background.svg",

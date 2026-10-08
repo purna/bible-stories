@@ -3,15 +3,14 @@
   "act": 15,
   "chapter": "Ch.15 · Mount Nebo",
   "artSource": "art/act15_nebo.md",
-  "artFolder": "assets/svg/act_15_nebo",
+  "artFolder": "act_15_nebo",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "desert_sand-dunes.svg",
-    "nile_reeds-riverbank.svg",
-    "stone-rough.svg",
-    "stone_tablets-hewn.svg"
+    "assets/materials/nile_reeds-riverbank.svg",
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/stone_tablets-hewn.svg"
   ],
   "layers": {
     "background": "moses_act15_c_background.svg",

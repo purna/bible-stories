@@ -3,18 +3,13 @@
   "act": 2,
   "chapter": "Ch.2 · Goliath",
   "artSource": "art/act2_goliath.md",
-  "artFolder": "assets/svg/act_02_goliath",
+  "artFolder": "act_02_goliath",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "en_gedi_cave-limestone.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "valley_stones-brook.svg",
-    "wood_dark-plank.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "david_act2_a_background.svg",

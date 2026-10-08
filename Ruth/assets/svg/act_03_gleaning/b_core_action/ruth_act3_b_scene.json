@@ -3,14 +3,13 @@
   "act": 3,
   "chapter": "Ch.3 · Gleaning",
   "artSource": "art/act3_gleaning.md",
-  "artFolder": "assets/svg/act_03_gleaning",
+  "artFolder": "act_03_gleaning",
   "sceneId": "gleaning",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "grass-tufts.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/grass-tufts.svg",
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "ruth_act3_b_background.svg",

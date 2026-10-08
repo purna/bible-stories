@@ -3,15 +3,14 @@
   "act": 2,
   "chapter": "Ch.2 · The Stolen Blessing",
   "artSource": "art/act2_the_stolen_blessing.md",
-  "artFolder": "assets/svg/act_02_the_stolen_blessing",
+  "artFolder": "act_02_the_stolen_blessing",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "fabric_weave-basket.svg",
-    "grass-tufts.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/grass-tufts.svg"
   ],
   "layers": {
     "background": "jacob_act2_a_background.svg",

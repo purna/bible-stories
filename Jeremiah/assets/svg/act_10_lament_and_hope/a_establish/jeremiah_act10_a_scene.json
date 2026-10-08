@@ -3,13 +3,13 @@
   "act": 10,
   "chapter": "Ch.10 · Lament and Hope",
   "artSource": "art/act10_lament_and_hope.md",
-  "artFolder": "assets/svg/act_10_lament_and_hope",
+  "artFolder": "act_10_lament_and_hope",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "fabric_weave-basket.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/wood_dark-plank.svg",
+    "assets/materials/fabric_weave-basket.svg"
   ],
   "layers": {
     "background": "jeremiah_act10_a_background.svg",

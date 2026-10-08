@@ -3,13 +3,12 @@
   "act": 8,
   "chapter": "Ch.8 · Obed",
   "artSource": "art/act8_obed.md",
-  "artFolder": "assets/svg/act_08_obed",
+  "artFolder": "act_08_obed",
   "sceneId": "obed",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "ruth_act8_c_background.svg",

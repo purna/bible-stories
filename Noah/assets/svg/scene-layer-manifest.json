@@ -67,24 +67,7 @@
             "foreground": "assets/svg/act_01_warning/c_resolve/noah_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_warning/a_establish/noah_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_warning/a_establish/noah_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_warning/a_establish/noah_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_warning/b_core_action/noah_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_warning/b_core_action/noah_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_warning/b_core_action/noah_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_warning/c_resolve/noah_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_warning/c_resolve/noah_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_warning/c_resolve/noah_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -131,24 +114,7 @@
             "foreground": "assets/svg/act_02_blueprint/c_resolve/noah_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_blueprint/a_establish/noah_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_blueprint/a_establish/noah_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_blueprint/a_establish/noah_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_blueprint/b_core_action/noah_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_blueprint/b_core_action/noah_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_blueprint/b_core_action/noah_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_blueprint/c_resolve/noah_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_blueprint/c_resolve/noah_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_blueprint/c_resolve/noah_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -199,24 +165,7 @@
             "foreground": "assets/svg/act_03_build/c_resolve/noah_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_build/a_establish/noah_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_build/a_establish/noah_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_build/a_establish/noah_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_build/b_core_action/noah_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_build/b_core_action/noah_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_build/b_core_action/noah_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_build/c_resolve/noah_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_build/c_resolve/noah_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_build/c_resolve/noah_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -263,24 +212,7 @@
             "foreground": "assets/svg/act_04_gathering/c_resolve/noah_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_gathering/a_establish/noah_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_gathering/a_establish/noah_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_gathering/a_establish/noah_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_gathering/b_core_action/noah_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_gathering/b_core_action/noah_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_gathering/b_core_action/noah_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_gathering/c_resolve/noah_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_gathering/c_resolve/noah_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_gathering/c_resolve/noah_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -331,24 +263,7 @@
             "foreground": "assets/svg/act_05_door/c_resolve/noah_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_door/a_establish/noah_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_door/a_establish/noah_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_door/a_establish/noah_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_door/b_core_action/noah_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_door/b_core_action/noah_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_door/b_core_action/noah_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_door/c_resolve/noah_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_door/c_resolve/noah_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_door/c_resolve/noah_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -399,24 +314,7 @@
             "foreground": "assets/svg/act_06_flood/c_resolve/noah_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_flood/a_establish/noah_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_flood/a_establish/noah_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_flood/a_establish/noah_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_flood/b_core_action/noah_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_flood/b_core_action/noah_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_flood/b_core_action/noah_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_flood/c_resolve/noah_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_flood/c_resolve/noah_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_flood/c_resolve/noah_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -469,24 +367,7 @@
             "foreground": "assets/svg/act_07_waiting/c_resolve/noah_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_07_waiting/a_establish/noah_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_waiting/a_establish/noah_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_waiting/a_establish/noah_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_07_waiting/b_core_action/noah_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_waiting/b_core_action/noah_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_waiting/b_core_action/noah_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_07_waiting/c_resolve/noah_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_waiting/c_resolve/noah_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_waiting/c_resolve/noah_act7_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 8,
@@ -539,24 +420,7 @@
             "foreground": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_08_dryground/a_establish/noah_act8_a_background.svg",
-          "middleGround": "assets/svg/act_08_dryground/a_establish/noah_act8_a_middle_ground.svg",
-          "foreground": "assets/svg/act_08_dryground/a_establish/noah_act8_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_background.svg",
-          "middleGround": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_middle_ground.svg",
-          "foreground": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_background.svg",
-          "middleGround": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_middle_ground.svg",
-          "foreground": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 9,
@@ -607,24 +471,7 @@
             "foreground": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_09_covenant/a_establish/noah_act9_a_background.svg",
-          "middleGround": "assets/svg/act_09_covenant/a_establish/noah_act9_a_middle_ground.svg",
-          "foreground": "assets/svg/act_09_covenant/a_establish/noah_act9_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_background.svg",
-          "middleGround": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_middle_ground.svg",
-          "foreground": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_background.svg",
-          "middleGround": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_middle_ground.svg",
-          "foreground": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 10,
@@ -675,24 +522,7 @@
             "foreground": "assets/svg/act_01_vineyard/c_resolve/noah_act10_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_vineyard/a_establish/noah_act10_a_background.svg",
-          "middleGround": "assets/svg/act_01_vineyard/a_establish/noah_act10_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_vineyard/a_establish/noah_act10_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_vineyard/b_core_action/noah_act10_b_background.svg",
-          "middleGround": "assets/svg/act_01_vineyard/b_core_action/noah_act10_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_vineyard/b_core_action/noah_act10_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_vineyard/c_resolve/noah_act10_c_background.svg",
-          "middleGround": "assets/svg/act_01_vineyard/c_resolve/noah_act10_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_vineyard/c_resolve/noah_act10_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

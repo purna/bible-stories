@@ -3,15 +3,13 @@
   "act": 9,
   "chapter": "Ch.9 · Nathan&#x27;s Parable",
   "artSource": "art/act9_nathan.md",
-  "artFolder": "assets/svg/act_09_nathan",
+  "artFolder": "act_09_nathan",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "grass-tufts.svg",
-    "wood_dark-plank.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/grass-tufts.svg"
   ],
   "layers": {
     "background": "david_act9_c_background.svg",

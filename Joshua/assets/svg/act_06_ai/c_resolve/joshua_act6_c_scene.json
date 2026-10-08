@@ -3,16 +3,13 @@
   "act": 6,
   "chapter": "Ch.6 · Ai",
   "artSource": "art/act6_ai.md",
-  "artFolder": "assets/svg/act_06_ai",
+  "artFolder": "act_06_ai",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wall_brick-herringbone.svg"
   ],
   "layers": {
     "background": "joshua_act6_c_background.svg",

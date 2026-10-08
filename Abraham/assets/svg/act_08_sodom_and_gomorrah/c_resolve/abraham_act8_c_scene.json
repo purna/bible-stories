@@ -3,13 +3,12 @@
   "act": 8,
   "chapter": "Sodom and Gomorrah",
   "artSource": "art/act8_sodom_and_gomorrah.md",
-  "artFolder": "assets/svg/act_08_sodom_and_gomorrah",
+  "artFolder": "act_08_sodom_and_gomorrah",
   "sceneId": "",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "abraham_act8_c_background.svg",

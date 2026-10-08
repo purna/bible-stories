@@ -61,24 +61,7 @@
             "foreground": "assets/svg/act_01_basket/c_resolve/moses_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_basket/a_establish/moses_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_basket/a_establish/moses_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_basket/a_establish/moses_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_basket/b_core_action/moses_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_basket/b_core_action/moses_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_basket/b_core_action/moses_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_basket/c_resolve/moses_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_basket/c_resolve/moses_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_basket/c_resolve/moses_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -127,24 +110,7 @@
             "foreground": "assets/svg/act_02_exile/c_resolve/moses_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_exile/a_establish/moses_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_exile/a_establish/moses_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_exile/a_establish/moses_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_exile/b_core_action/moses_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_exile/b_core_action/moses_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_exile/b_core_action/moses_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_exile/c_resolve/moses_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_exile/c_resolve/moses_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_exile/c_resolve/moses_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -197,24 +163,7 @@
             "foreground": "assets/svg/act_03_throne/c_resolve/moses_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_throne/a_establish/moses_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_throne/a_establish/moses_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_throne/a_establish/moses_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_throne/b_core_action/moses_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_throne/b_core_action/moses_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_throne/b_core_action/moses_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_throne/c_resolve/moses_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_throne/c_resolve/moses_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_throne/c_resolve/moses_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -263,24 +212,7 @@
             "foreground": "assets/svg/act_04_passover/c_resolve/moses_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_passover/a_establish/moses_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_passover/a_establish/moses_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_passover/a_establish/moses_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_passover/b_core_action/moses_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_passover/b_core_action/moses_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_passover/b_core_action/moses_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_passover/c_resolve/moses_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_passover/c_resolve/moses_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_passover/c_resolve/moses_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -329,24 +261,7 @@
             "foreground": "assets/svg/act_05_sea/c_resolve/moses_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_sea/a_establish/moses_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_sea/a_establish/moses_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sea/a_establish/moses_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_sea/b_core_action/moses_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_sea/b_core_action/moses_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sea/b_core_action/moses_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_sea/c_resolve/moses_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_sea/c_resolve/moses_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sea/c_resolve/moses_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -393,24 +308,7 @@
             "foreground": "assets/svg/act_06_bread/c_resolve/moses_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_bread/a_establish/moses_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_bread/a_establish/moses_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_bread/a_establish/moses_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_bread/b_core_action/moses_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_bread/b_core_action/moses_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_bread/b_core_action/moses_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_bread/c_resolve/moses_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_bread/c_resolve/moses_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_bread/c_resolve/moses_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -461,24 +359,7 @@
             "foreground": "assets/svg/act_07_rock/c_resolve/moses_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_07_rock/a_establish/moses_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_rock/a_establish/moses_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_rock/a_establish/moses_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_07_rock/b_core_action/moses_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_rock/b_core_action/moses_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_rock/b_core_action/moses_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_07_rock/c_resolve/moses_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_rock/c_resolve/moses_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_rock/c_resolve/moses_act7_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 8,
@@ -531,24 +412,7 @@
             "foreground": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_08_jethro/a_establish/moses_act8_a_background.svg",
-          "middleGround": "assets/svg/act_08_jethro/a_establish/moses_act8_a_middle_ground.svg",
-          "foreground": "assets/svg/act_08_jethro/a_establish/moses_act8_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_background.svg",
-          "middleGround": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_middle_ground.svg",
-          "foreground": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_background.svg",
-          "middleGround": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_middle_ground.svg",
-          "foreground": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 9,
@@ -597,24 +461,7 @@
             "foreground": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_09_mountain/a_establish/moses_act9_a_background.svg",
-          "middleGround": "assets/svg/act_09_mountain/a_establish/moses_act9_a_middle_ground.svg",
-          "foreground": "assets/svg/act_09_mountain/a_establish/moses_act9_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_background.svg",
-          "middleGround": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_middle_ground.svg",
-          "foreground": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_background.svg",
-          "middleGround": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_middle_ground.svg",
-          "foreground": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 10,
@@ -667,24 +514,7 @@
             "foreground": "assets/svg/act_10_calf/c_resolve/moses_act10_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_10_calf/a_establish/moses_act10_a_background.svg",
-          "middleGround": "assets/svg/act_10_calf/a_establish/moses_act10_a_middle_ground.svg",
-          "foreground": "assets/svg/act_10_calf/a_establish/moses_act10_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_10_calf/b_core_action/moses_act10_b_background.svg",
-          "middleGround": "assets/svg/act_10_calf/b_core_action/moses_act10_b_middle_ground.svg",
-          "foreground": "assets/svg/act_10_calf/b_core_action/moses_act10_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_10_calf/c_resolve/moses_act10_c_background.svg",
-          "middleGround": "assets/svg/act_10_calf/c_resolve/moses_act10_c_middle_ground.svg",
-          "foreground": "assets/svg/act_10_calf/c_resolve/moses_act10_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 11,
@@ -741,24 +571,7 @@
             "foreground": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_11_tablets/a_establish/moses_act11_a_background.svg",
-          "middleGround": "assets/svg/act_11_tablets/a_establish/moses_act11_a_middle_ground.svg",
-          "foreground": "assets/svg/act_11_tablets/a_establish/moses_act11_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_background.svg",
-          "middleGround": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_middle_ground.svg",
-          "foreground": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_background.svg",
-          "middleGround": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_middle_ground.svg",
-          "foreground": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 12,
@@ -811,24 +624,7 @@
             "foreground": "assets/svg/act_12_spies/c_resolve/moses_act12_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_12_spies/a_establish/moses_act12_a_background.svg",
-          "middleGround": "assets/svg/act_12_spies/a_establish/moses_act12_a_middle_ground.svg",
-          "foreground": "assets/svg/act_12_spies/a_establish/moses_act12_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_12_spies/b_core_action/moses_act12_b_background.svg",
-          "middleGround": "assets/svg/act_12_spies/b_core_action/moses_act12_b_middle_ground.svg",
-          "foreground": "assets/svg/act_12_spies/b_core_action/moses_act12_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_12_spies/c_resolve/moses_act12_c_background.svg",
-          "middleGround": "assets/svg/act_12_spies/c_resolve/moses_act12_c_middle_ground.svg",
-          "foreground": "assets/svg/act_12_spies/c_resolve/moses_act12_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 13,
@@ -879,24 +675,7 @@
             "foreground": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_background.svg",
-          "middleGround": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_middle_ground.svg",
-          "foreground": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_background.svg",
-          "middleGround": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_middle_ground.svg",
-          "foreground": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_background.svg",
-          "middleGround": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_middle_ground.svg",
-          "foreground": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 14,
@@ -949,24 +728,7 @@
             "foreground": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_14_reviews/a_establish/moses_act14_a_background.svg",
-          "middleGround": "assets/svg/act_14_reviews/a_establish/moses_act14_a_middle_ground.svg",
-          "foreground": "assets/svg/act_14_reviews/a_establish/moses_act14_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_background.svg",
-          "middleGround": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_middle_ground.svg",
-          "foreground": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_background.svg",
-          "middleGround": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_middle_ground.svg",
-          "foreground": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 15,
@@ -1017,24 +779,7 @@
             "foreground": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_15_nebo/a_establish/moses_act15_a_background.svg",
-          "middleGround": "assets/svg/act_15_nebo/a_establish/moses_act15_a_middle_ground.svg",
-          "foreground": "assets/svg/act_15_nebo/a_establish/moses_act15_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_background.svg",
-          "middleGround": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_middle_ground.svg",
-          "foreground": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_background.svg",
-          "middleGround": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_middle_ground.svg",
-          "foreground": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

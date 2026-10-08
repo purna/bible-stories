@@ -3,16 +3,14 @@
   "act": 2,
   "chapter": "Ch.2 · The First Walk",
   "artSource": "art/act2_the_first_walk.md",
-  "artFolder": "assets/svg/act_02_the_first_walk",
+  "artFolder": "act_02_the_first_walk",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "grass-tufts.svg",
-    "leaves-canopy.svg",
-    "leaves-scatter.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/grass-tufts.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/leaves-canopy.svg"
   ],
   "layers": {
     "background": "enoch_act2_b_background.svg",

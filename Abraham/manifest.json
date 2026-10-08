@@ -1,0 +1,10 @@
+{
+  "name": "Abraham and Babel — Bible Stories",
+  "short_name": "Abraham",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#171411",
+  "theme_color": "#2a2118",
+  "icons": [{"src": "favicon.svg", "sizes": "any", "type": "image/svg+xml"}]
+}

@@ -3,15 +3,14 @@
   "act": 2,
   "chapter": "Egypt and Return",
   "artSource": "art/act2_egypt_and_return.md",
-  "artFolder": "assets/svg/act_02_egypt_and_return",
+  "artFolder": "act_02_egypt_and_return",
   "sceneId": "",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "desert_sand-dunes.svg",
-    "fabric_weave-basket.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/fabric_weave-basket.svg"
   ],
   "layers": {
     "background": "abraham_act2_c_background.svg",

@@ -29,16 +29,11 @@
         "assets/materials/stone-flagstone.svg",
         "assets/materials/water_still-eddies.svg"
       ],
-      "materialKeys": [
-        "wall_brick",
-        "stone",
-        "water_still"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_01_table/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_01_table/a_establish/daniel_act1_a_background.svg",
             "middleGround": "assets/svg/act_01_table/a_establish/daniel_act1_a_middle_ground.svg",
@@ -47,8 +42,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_01_table/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_01_table/b_core_action/daniel_act1_b_background.svg",
             "middleGround": "assets/svg/act_01_table/b_core_action/daniel_act1_b_middle_ground.svg",
@@ -57,32 +52,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_01_table/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_01_table/c_resolve/daniel_act1_c_background.svg",
             "middleGround": "assets/svg/act_01_table/c_resolve/daniel_act1_c_middle_ground.svg",
             "foreground": "assets/svg/act_01_table/c_resolve/daniel_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_table/a_establish/daniel_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_table/a_establish/daniel_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_table/a_establish/daniel_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_table/b_core_action/daniel_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_table/b_core_action/daniel_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_table/b_core_action/daniel_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_table/c_resolve/daniel_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_table/c_resolve/daniel_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_table/c_resolve/daniel_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -97,16 +75,11 @@
         "assets/materials/hammered_gold-hammered.svg",
         "assets/materials/stone-flagstone.svg"
       ],
-      "materialKeys": [
-        "wall_brick",
-        "hammered_gold",
-        "stone"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_02_statue/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_02_statue/a_establish/daniel_act2_a_background.svg",
             "middleGround": "assets/svg/act_02_statue/a_establish/daniel_act2_a_middle_ground.svg",
@@ -115,8 +88,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_02_statue/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_background.svg",
             "middleGround": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_middle_ground.svg",
@@ -125,32 +98,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_02_statue/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_background.svg",
             "middleGround": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_middle_ground.svg",
             "foreground": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_statue/a_establish/daniel_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_statue/a_establish/daniel_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_statue/a_establish/daniel_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -168,19 +124,11 @@
         "assets/materials/fabric_weave-basket.svg",
         "assets/materials/water_still-eddies.svg"
       ],
-      "materialKeys": [
-        "wall_brick",
-        "mosaic",
-        "hammered_gold",
-        "stone",
-        "fabric_weave",
-        "water_still"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_03_furnace/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_background.svg",
             "middleGround": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_middle_ground.svg",
@@ -189,8 +137,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_03_furnace/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_background.svg",
             "middleGround": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_middle_ground.svg",
@@ -199,32 +147,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_03_furnace/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_background.svg",
             "middleGround": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_middle_ground.svg",
             "foreground": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -240,17 +171,11 @@
         "assets/materials/hammered_gold-hammered.svg",
         "assets/materials/stone-flagstone.svg"
       ],
-      "materialKeys": [
-        "wall_brick",
-        "mosaic",
-        "hammered_gold",
-        "stone"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_04_writing/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_04_writing/a_establish/daniel_act4_a_background.svg",
             "middleGround": "assets/svg/act_04_writing/a_establish/daniel_act4_a_middle_ground.svg",
@@ -259,8 +184,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_04_writing/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_background.svg",
             "middleGround": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_middle_ground.svg",
@@ -269,32 +194,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_04_writing/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_background.svg",
             "middleGround": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_middle_ground.svg",
             "foreground": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_writing/a_establish/daniel_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_writing/a_establish/daniel_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_writing/a_establish/daniel_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -310,17 +218,11 @@
         "assets/materials/hammered_gold-hammered.svg",
         "assets/materials/stone-flagstone.svg"
       ],
-      "materialKeys": [
-        "wall_brick",
-        "mosaic",
-        "hammered_gold",
-        "stone"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_05_den/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_05_den/a_establish/daniel_act5_a_background.svg",
             "middleGround": "assets/svg/act_05_den/a_establish/daniel_act5_a_middle_ground.svg",
@@ -329,8 +231,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_05_den/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_05_den/b_core_action/daniel_act5_b_background.svg",
             "middleGround": "assets/svg/act_05_den/b_core_action/daniel_act5_b_middle_ground.svg",
@@ -339,32 +241,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_05_den/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_05_den/c_resolve/daniel_act5_c_background.svg",
             "middleGround": "assets/svg/act_05_den/c_resolve/daniel_act5_c_middle_ground.svg",
             "foreground": "assets/svg/act_05_den/c_resolve/daniel_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_den/a_establish/daniel_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_den/a_establish/daniel_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_den/a_establish/daniel_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_den/b_core_action/daniel_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_den/b_core_action/daniel_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_den/b_core_action/daniel_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_den/c_resolve/daniel_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_den/c_resolve/daniel_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_den/c_resolve/daniel_act5_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

@@ -3,18 +3,16 @@
   "act": 5,
   "chapter": "Ch.5 · Achan’s Hidden Goods",
   "artSource": "art/act5_achan_s_hidden_goods.md",
-  "artFolder": "assets/svg/act_05_achan_s_hidden_goods",
+  "artFolder": "act_05_achan_s_hidden_goods",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "desert_sand-dunes.svg",
-    "fabric_weave-basket.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "joshua_act5_a_background.svg",

@@ -3,12 +3,12 @@
   "act": 7,
   "chapter": "Ch.7 · Elihu",
   "artSource": "art/act7_elihu.md",
-  "artFolder": "assets/svg/act_07_elihu",
+  "artFolder": "act_07_elihu",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "fabric_weave-basket.svg"
+    "assets/materials/fabric_weave-basket.svg"
   ],
   "layers": {
     "background": "job_act7_a_background.svg",

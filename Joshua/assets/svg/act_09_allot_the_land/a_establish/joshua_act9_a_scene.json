@@ -3,13 +3,13 @@
   "act": 9,
   "chapter": "Ch.9 · Allot the Land",
   "artSource": "art/act9_allot_the_land.md",
-  "artFolder": "assets/svg/act_09_allot_the_land",
+  "artFolder": "act_09_allot_the_land",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "fabric_weave-basket.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "joshua_act9_a_background.svg",

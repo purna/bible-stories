@@ -3,17 +3,14 @@
   "act": 4,
   "chapter": "Ch.4 · Rise and Build",
   "artSource": "art/act4_rise_and_build.md",
-  "artFolder": "assets/svg/act_04_rise_and_build",
+  "artFolder": "act_04_rise_and_build",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "hammered_gold-hammered.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/hammered_gold-hammered.svg"
   ],
   "layers": {
     "background": "nehemiah_act4_a_background.svg",

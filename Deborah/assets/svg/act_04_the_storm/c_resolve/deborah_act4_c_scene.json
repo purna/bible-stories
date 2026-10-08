@@ -3,18 +3,14 @@
   "act": 4,
   "chapter": "Ch.4 · The Storm",
   "artSource": "art/act4_the_storm.md",
-  "artFolder": "assets/svg/act_04_the_storm",
+  "artFolder": "act_04_the_storm",
   "sceneId": "",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg",
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/water_fast-churn.svg"
   ],
   "layers": {
     "background": "deborah_act4_c_background.svg",

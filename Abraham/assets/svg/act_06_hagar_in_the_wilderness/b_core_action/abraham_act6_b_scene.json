@@ -3,16 +3,14 @@
   "act": 6,
   "chapter": "Hagar in the Wilderness",
   "artSource": "art/act6_hagar_in_the_wilderness.md",
-  "artFolder": "assets/svg/act_06_hagar_in_the_wilderness",
+  "artFolder": "act_06_hagar_in_the_wilderness",
   "sceneId": "",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "desert_sand-dunes.svg",
-    "leaves-canopy.svg",
-    "leaves-scatter.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/water_still-eddies.svg",
+    "assets/materials/leaves-canopy.svg"
   ],
   "layers": {
     "background": "abraham_act6_b_background.svg",

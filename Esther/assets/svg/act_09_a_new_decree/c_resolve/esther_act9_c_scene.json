@@ -3,16 +3,14 @@
   "act": 9,
   "chapter": "Ch.9 · A New Decree",
   "artSource": "art/act9_a_new_decree.md",
-  "artFolder": "assets/svg/act_09_a_new_decree",
+  "artFolder": "act_09_a_new_decree",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "hammered_gold-hammered.svg",
-    "mosaic-chips.svg",
-    "mosaic-grid.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/mosaic-chips.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "esther_act9_c_background.svg",

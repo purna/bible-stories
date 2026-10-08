@@ -3,20 +3,17 @@
   "act": 4,
   "chapter": "Ch.4 · Haman’s Decree",
   "artSource": "art/act4_haman_s_decree.md",
-  "artFolder": "assets/svg/act_04_haman_s_decree",
+  "artFolder": "act_04_haman_s_decree",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "fabric_dots-grid.svg",
-    "fabric_dots-scatterMix.svg",
-    "fabric_weave-basket.svg",
-    "hammered_gold-hammered.svg",
-    "mosaic-chips.svg",
-    "mosaic-grid.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/mosaic-chips.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/fabric_dots-scatterMix.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "esther_act4_c_background.svg",

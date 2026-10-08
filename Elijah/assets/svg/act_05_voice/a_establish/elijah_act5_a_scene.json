@@ -3,17 +3,14 @@
   "act": 5,
   "chapter": "The Still, Small Voice",
   "artSource": "art/act5_voice.md",
-  "artFolder": "assets/svg/act_05_voice",
+  "artFolder": "act_05_voice",
   "sceneId": "horeb_cave",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "fabric_weave-basket.svg",
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg",
-    "wood_texture.svg"
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/fabric_weave-basket.svg"
   ],
   "layers": {
     "background": "elijah_act5_a_background.svg",

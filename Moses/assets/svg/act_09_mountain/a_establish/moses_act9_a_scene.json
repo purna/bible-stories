@@ -3,14 +3,13 @@
   "act": 9,
   "chapter": "Ch.9 · Thunder on Sinai",
   "artSource": "art/act9_mountain.md",
-  "artFolder": "assets/svg/act_09_mountain",
+  "artFolder": "act_09_mountain",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "desert_sand-dunes.svg",
-    "stone-rough.svg",
-    "stone_tablets-hewn.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/stone_tablets-hewn.svg"
   ],
   "layers": {
     "background": "moses_act9_a_background.svg",

@@ -3,14 +3,13 @@
   "act": 4,
   "chapter": "Rescue of Lot",
   "artSource": "art/act4_rescue_of_lot.md",
-  "artFolder": "assets/svg/act_04_rescue_of_lot",
+  "artFolder": "act_04_rescue_of_lot",
   "sceneId": "",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "desert_sand-dunes.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "abraham_act4_c_background.svg",

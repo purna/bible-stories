@@ -3,17 +3,13 @@
   "act": 4,
   "chapter": "Ch.4 · Covenant Friends",
   "artSource": "art/act4_friends.md",
-  "artFolder": "assets/svg/act_04_friends",
+  "artFolder": "act_04_friends",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "fabric_dots-grid.svg",
-    "fabric_herringbone-weave..svg",
-    "fabric_houndstooth-classic.svg",
-    "fabric_tartan-sett.svg",
-    "fabric_weave-basket.svg",
-    "grass-tufts.svg"
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/grass-tufts.svg"
   ],
   "layers": {
     "background": "david_act4_c_background.svg",

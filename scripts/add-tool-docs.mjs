@@ -193,7 +193,7 @@ const TOOL_DOCS = {
     path: 'scene_designer.html',
     body: '2D scene staging app for laying out each scene before SVG export. Open `scene_designer.html` in a browser.\n\n' +
       '- The scene list and its one-line briefs live in the `data-scenes` attribute; full director notes are in the comment at the top of the file and in this README.\n' +
-      '- App logic is shared across stories: `../../shared-tools/scene-designer.js`.\n' +
+      '- The renderer is inline in `scene_designer.html`, so each story’s scene designer can be edited independently.\n' +
       '- Use it to position characters and props per scene, then export the staged scene.',
   },
   'texture-forge': {

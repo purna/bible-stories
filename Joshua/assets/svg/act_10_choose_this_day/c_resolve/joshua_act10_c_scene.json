@@ -3,13 +3,12 @@
   "act": 10,
   "chapter": "Ch.10 · Choose This Day",
   "artSource": "art/act10_choose_this_day.md",
-  "artFolder": "assets/svg/act_10_choose_this_day",
+  "artFolder": "act_10_choose_this_day",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "joshua_act10_c_background.svg",

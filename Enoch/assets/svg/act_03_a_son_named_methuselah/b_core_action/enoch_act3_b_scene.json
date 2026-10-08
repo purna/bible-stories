@@ -3,14 +3,13 @@
   "act": 3,
   "chapter": "Ch.3 · A Son Named Methuselah",
   "artSource": "art/act3_a_son_named_methuselah.md",
-  "artFolder": "assets/svg/act_03_a_son_named_methuselah",
+  "artFolder": "act_03_a_son_named_methuselah",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "fabric_weave-basket.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/fabric_weave-basket.svg"
   ],
   "layers": {
     "background": "enoch_act3_b_background.svg",

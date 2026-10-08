@@ -29,11 +29,6 @@
         "assets/materials/water_still-eddies.svg",
         "assets/materials/wood_dark-plank.svg"
       ],
-      "materialKeys": [
-        "water_fast",
-        "water_still",
-        "wood_dark"
-      ],
       "beats": [
         {
           "id": "A",
@@ -65,24 +60,7 @@
             "foreground": "assets/svg/act_01_ship_map/c_resolve/jonah_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_ship_map/a_establish/jonah_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_ship_map/a_establish/jonah_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_ship_map/a_establish/jonah_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_ship_map/b_core_action/jonah_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_ship_map/b_core_action/jonah_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_ship_map/b_core_action/jonah_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_ship_map/c_resolve/jonah_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_ship_map/c_resolve/jonah_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_ship_map/c_resolve/jonah_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -97,12 +75,6 @@
         "assets/materials/water_still-eddies.svg",
         "assets/materials/wood_dark-plank.svg",
         "assets/materials/leaves-canopy.svg"
-      ],
-      "materialKeys": [
-        "water_fast",
-        "water_still",
-        "wood_dark",
-        "leaves"
       ],
       "beats": [
         {
@@ -135,24 +107,7 @@
             "foreground": "assets/svg/act_02_whale_map/c_resolve/jonah_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_whale_map/a_establish/jonah_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_whale_map/a_establish/jonah_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_whale_map/a_establish/jonah_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_whale_map/b_core_action/jonah_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_whale_map/b_core_action/jonah_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_whale_map/b_core_action/jonah_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_whale_map/c_resolve/jonah_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_whale_map/c_resolve/jonah_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_whale_map/c_resolve/jonah_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -168,13 +123,6 @@
         "assets/materials/desert_sand-dunes.svg",
         "assets/materials/leaves-canopy.svg",
         "assets/materials/fabric_weave-basket.svg"
-      ],
-      "materialKeys": [
-        "water_fast",
-        "water_still",
-        "desert_sand",
-        "leaves",
-        "fabric_weave"
       ],
       "beats": [
         {
@@ -207,24 +155,7 @@
             "foreground": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_nineveh_map/a_establish/jonah_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/a_establish/jonah_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/a_establish/jonah_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -237,10 +168,6 @@
       "materials": [
         "assets/materials/desert_sand-dunes.svg",
         "assets/materials/leaves-canopy.svg"
-      ],
-      "materialKeys": [
-        "desert_sand",
-        "leaves"
       ],
       "beats": [
         {
@@ -273,24 +200,7 @@
             "foreground": "assets/svg/act_04_figtree_map/c_resolve/jonah_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_figtree_map/a_establish/jonah_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_figtree_map/a_establish/jonah_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_figtree_map/a_establish/jonah_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_figtree_map/b_core_action/jonah_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_figtree_map/b_core_action/jonah_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_figtree_map/b_core_action/jonah_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_figtree_map/c_resolve/jonah_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_figtree_map/c_resolve/jonah_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_figtree_map/c_resolve/jonah_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -306,13 +216,6 @@
         "assets/materials/desert_sand-dunes.svg",
         "assets/materials/leaves-canopy.svg",
         "assets/materials/fabric_weave-basket.svg"
-      ],
-      "materialKeys": [
-        "water_fast",
-        "water_still",
-        "desert_sand",
-        "leaves",
-        "fabric_weave"
       ],
       "beats": [
         {
@@ -345,24 +248,7 @@
             "foreground": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_nineveh_map/a_establish/jonah_act5_a_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/a_establish/jonah_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/a_establish/jonah_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act5_b_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act5_c_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -378,13 +264,6 @@
         "assets/materials/desert_sand-dunes.svg",
         "assets/materials/leaves-canopy.svg",
         "assets/materials/fabric_weave-basket.svg"
-      ],
-      "materialKeys": [
-        "water_fast",
-        "water_still",
-        "desert_sand",
-        "leaves",
-        "fabric_weave"
       ],
       "beats": [
         {
@@ -417,24 +296,7 @@
             "foreground": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_nineveh_map/a_establish/jonah_act6_a_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/a_establish/jonah_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/a_establish/jonah_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act6_b_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act6_c_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -450,13 +312,6 @@
         "assets/materials/desert_sand-dunes.svg",
         "assets/materials/leaves-canopy.svg",
         "assets/materials/fabric_weave-basket.svg"
-      ],
-      "materialKeys": [
-        "water_fast",
-        "water_still",
-        "desert_sand",
-        "leaves",
-        "fabric_weave"
       ],
       "beats": [
         {
@@ -489,24 +344,7 @@
             "foreground": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_nineveh_map/a_establish/jonah_act7_a_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/a_establish/jonah_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/a_establish/jonah_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act7_b_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/b_core_action/jonah_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act7_c_background.svg",
-          "middleGround": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_nineveh_map/c_resolve/jonah_act7_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 8,
@@ -519,10 +357,6 @@
       "materials": [
         "assets/materials/desert_sand-dunes.svg",
         "assets/materials/leaves-canopy.svg"
-      ],
-      "materialKeys": [
-        "desert_sand",
-        "leaves"
       ],
       "beats": [
         {
@@ -555,24 +389,7 @@
             "foreground": "assets/svg/act_04_figtree_map/c_resolve/jonah_act8_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_figtree_map/a_establish/jonah_act8_a_background.svg",
-          "middleGround": "assets/svg/act_04_figtree_map/a_establish/jonah_act8_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_figtree_map/a_establish/jonah_act8_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_figtree_map/b_core_action/jonah_act8_b_background.svg",
-          "middleGround": "assets/svg/act_04_figtree_map/b_core_action/jonah_act8_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_figtree_map/b_core_action/jonah_act8_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_figtree_map/c_resolve/jonah_act8_c_background.svg",
-          "middleGround": "assets/svg/act_04_figtree_map/c_resolve/jonah_act8_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_figtree_map/c_resolve/jonah_act8_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 9,
@@ -585,10 +402,6 @@
       "materials": [
         "assets/materials/desert_sand-dunes.svg",
         "assets/materials/leaves-canopy.svg"
-      ],
-      "materialKeys": [
-        "desert_sand",
-        "leaves"
       ],
       "beats": [
         {
@@ -621,24 +434,7 @@
             "foreground": "assets/svg/act_04_figtree_map/c_resolve/jonah_act9_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_figtree_map/a_establish/jonah_act9_a_background.svg",
-          "middleGround": "assets/svg/act_04_figtree_map/a_establish/jonah_act9_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_figtree_map/a_establish/jonah_act9_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_figtree_map/b_core_action/jonah_act9_b_background.svg",
-          "middleGround": "assets/svg/act_04_figtree_map/b_core_action/jonah_act9_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_figtree_map/b_core_action/jonah_act9_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_figtree_map/c_resolve/jonah_act9_c_background.svg",
-          "middleGround": "assets/svg/act_04_figtree_map/c_resolve/jonah_act9_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_figtree_map/c_resolve/jonah_act9_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

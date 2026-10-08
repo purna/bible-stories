@@ -3,14 +3,13 @@
   "act": 8,
   "chapter": "Ch.8 · The Long Campaign",
   "artSource": "art/act8_the_long_campaign.md",
-  "artFolder": "assets/svg/act_08_the_long_campaign",
+  "artFolder": "act_08_the_long_campaign",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "desert_sand-dunes.svg",
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/water_fast-churn.svg"
   ],
   "layers": {
     "background": "joshua_act8_a_background.svg",

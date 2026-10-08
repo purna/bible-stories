@@ -3,16 +3,14 @@
   "act": 5,
   "chapter": "Ch.5 · Ebenezer",
   "artSource": "art/act5_ebenezer.md",
-  "artFolder": "assets/svg/act_05_ebenezer",
+  "artFolder": "act_05_ebenezer",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "grass-tufts.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/grass-tufts.svg"
   ],
   "layers": {
     "background": "samuel_act5_b_background.svg",

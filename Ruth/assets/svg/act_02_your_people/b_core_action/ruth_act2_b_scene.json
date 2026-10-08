@@ -3,14 +3,13 @@
   "act": 2,
   "chapter": "Ch.2 · Your People",
   "artSource": "art/act2_your_people.md",
-  "artFolder": "assets/svg/act_02_your_people",
+  "artFolder": "act_02_your_people",
   "sceneId": "your_people",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "grass-tufts.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/grass-tufts.svg",
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "ruth_act2_b_background.svg",

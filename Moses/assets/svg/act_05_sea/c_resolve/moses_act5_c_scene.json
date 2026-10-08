@@ -3,14 +3,13 @@
   "act": 5,
   "chapter": "Ch.5 · Through the Sea",
   "artSource": "art/act5_sea.md",
-  "artFolder": "assets/svg/act_05_sea",
+  "artFolder": "act_05_sea",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "egypt_mud_brick-stretcher.svg",
-    "stone-rough.svg",
-    "stone_tablets-hewn.svg"
+    "assets/materials/egypt_mud_brick-stretcher.svg",
+    "assets/materials/stone_tablets-hewn.svg"
   ],
   "layers": {
     "background": "moses_act5_c_background.svg",

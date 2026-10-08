@@ -3,12 +3,12 @@
   "act": 2,
   "chapter": "Ch.2 · The Blueprint",
   "artSource": "art/act2_blueprint.md",
-  "artFolder": "assets/svg/act_02_blueprint",
+  "artFolder": "act_02_blueprint",
   "sceneId": "ch2_blueprint_scroll",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "wood_dark-plank.svg"
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "noah_act2_b_background.svg",

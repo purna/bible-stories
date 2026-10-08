@@ -31,7 +31,7 @@ Browser-based character portrait generator. Open `character-designer/index.html`
 2D scene staging app for laying out each scene before SVG export. Open `scene_designer.html` in a browser.
 
 - The scene list and its one-line briefs live in the `data-scenes` attribute; full director notes are in the comment at the top of the file and in this README.
-- App logic is shared across stories: `../../shared-tools/scene-designer.js`.
+- The renderer is inline in `scene_designer.html`, so this story’s scene designer can be edited independently.
 - Use it to position characters and props per scene, then export the staged scene.
 
 ### Texture Forge — `texture-forge.html`

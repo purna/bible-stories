@@ -29,11 +29,6 @@
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/grass-tufts.svg"
       ],
-      "materialKeys": [
-        "fabric_weave",
-        "wood_oak",
-        "grass"
-      ],
       "beats": [
         {
           "id": "A",
@@ -65,24 +60,7 @@
             "foreground": "assets/svg/act_01_a_blameless_life/c_resolve/job_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_a_blameless_life/a_establish/job_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_a_blameless_life/a_establish/job_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_a_blameless_life/a_establish/job_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_a_blameless_life/b_core_action/job_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_a_blameless_life/b_core_action/job_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_a_blameless_life/b_core_action/job_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_a_blameless_life/c_resolve/job_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_a_blameless_life/c_resolve/job_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_a_blameless_life/c_resolve/job_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -99,14 +77,6 @@
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/grass-tufts.svg",
         "assets/materials/water_still-eddies.svg"
-      ],
-      "materialKeys": [
-        "desert_sand",
-        "stone",
-        "fabric_weave",
-        "wood_oak",
-        "grass",
-        "water_still"
       ],
       "beats": [
         {
@@ -139,24 +109,7 @@
             "foreground": "assets/svg/act_02_the_accuser/c_resolve/job_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_the_accuser/a_establish/job_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_the_accuser/a_establish/job_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_accuser/a_establish/job_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_the_accuser/b_core_action/job_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_the_accuser/b_core_action/job_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_accuser/b_core_action/job_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_the_accuser/c_resolve/job_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_the_accuser/c_resolve/job_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_accuser/c_resolve/job_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -173,14 +126,6 @@
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/grass-tufts.svg",
         "assets/materials/water_still-eddies.svg"
-      ],
-      "materialKeys": [
-        "desert_sand",
-        "stone",
-        "fabric_weave",
-        "wood_oak",
-        "grass",
-        "water_still"
       ],
       "beats": [
         {
@@ -213,24 +158,7 @@
             "foreground": "assets/svg/act_03_loss_upon_loss/c_resolve/job_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_loss_upon_loss/a_establish/job_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_loss_upon_loss/a_establish/job_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_loss_upon_loss/a_establish/job_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_loss_upon_loss/b_core_action/job_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_loss_upon_loss/b_core_action/job_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_loss_upon_loss/b_core_action/job_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_loss_upon_loss/c_resolve/job_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_loss_upon_loss/c_resolve/job_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_loss_upon_loss/c_resolve/job_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -243,10 +171,6 @@
       "materials": [
         "assets/materials/stone-flagstone.svg",
         "assets/materials/water_still-eddies.svg"
-      ],
-      "materialKeys": [
-        "stone",
-        "water_still"
       ],
       "beats": [
         {
@@ -279,24 +203,7 @@
             "foreground": "assets/svg/act_04_seven_days/c_resolve/job_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_seven_days/a_establish/job_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_seven_days/a_establish/job_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_seven_days/a_establish/job_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_seven_days/b_core_action/job_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_seven_days/b_core_action/job_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_seven_days/b_core_action/job_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_seven_days/c_resolve/job_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_seven_days/c_resolve/job_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_seven_days/c_resolve/job_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -308,9 +215,6 @@
       "assetStem": "job_act5",
       "materials": [
         "assets/materials/wood_oak-planks3.svg"
-      ],
-      "materialKeys": [
-        "wood_oak"
       ],
       "beats": [
         {
@@ -343,24 +247,7 @@
             "foreground": "assets/svg/act_05_job_speaks/c_resolve/job_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_job_speaks/a_establish/job_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_job_speaks/a_establish/job_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_job_speaks/a_establish/job_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_job_speaks/b_core_action/job_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_job_speaks/b_core_action/job_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_job_speaks/b_core_action/job_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_job_speaks/c_resolve/job_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_job_speaks/c_resolve/job_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_job_speaks/c_resolve/job_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -373,10 +260,6 @@
       "materials": [
         "assets/materials/desert_sand-dunes.svg",
         "assets/materials/fabric_weave-basket.svg"
-      ],
-      "materialKeys": [
-        "desert_sand",
-        "fabric_weave"
       ],
       "beats": [
         {
@@ -409,24 +292,7 @@
             "foreground": "assets/svg/act_06_the_friends/c_resolve/job_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_the_friends/a_establish/job_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_the_friends/a_establish/job_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_the_friends/a_establish/job_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_the_friends/b_core_action/job_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_the_friends/b_core_action/job_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_the_friends/b_core_action/job_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_the_friends/c_resolve/job_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_the_friends/c_resolve/job_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_the_friends/c_resolve/job_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -438,9 +304,6 @@
       "assetStem": "job_act7",
       "materials": [
         "assets/materials/fabric_weave-basket.svg"
-      ],
-      "materialKeys": [
-        "fabric_weave"
       ],
       "beats": [
         {
@@ -473,24 +336,7 @@
             "foreground": "assets/svg/act_07_elihu/c_resolve/job_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_07_elihu/a_establish/job_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_elihu/a_establish/job_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_elihu/a_establish/job_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_07_elihu/b_core_action/job_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_elihu/b_core_action/job_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_elihu/b_core_action/job_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_07_elihu/c_resolve/job_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_elihu/c_resolve/job_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_elihu/c_resolve/job_act7_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 8,
@@ -503,10 +349,6 @@
       "materials": [
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/water_still-eddies.svg"
-      ],
-      "materialKeys": [
-        "wood_oak",
-        "water_still"
       ],
       "beats": [
         {
@@ -539,24 +381,7 @@
             "foreground": "assets/svg/act_08_out_of_the_whirlwind/c_resolve/job_act8_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_08_out_of_the_whirlwind/a_establish/job_act8_a_background.svg",
-          "middleGround": "assets/svg/act_08_out_of_the_whirlwind/a_establish/job_act8_a_middle_ground.svg",
-          "foreground": "assets/svg/act_08_out_of_the_whirlwind/a_establish/job_act8_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_08_out_of_the_whirlwind/b_core_action/job_act8_b_background.svg",
-          "middleGround": "assets/svg/act_08_out_of_the_whirlwind/b_core_action/job_act8_b_middle_ground.svg",
-          "foreground": "assets/svg/act_08_out_of_the_whirlwind/b_core_action/job_act8_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_08_out_of_the_whirlwind/c_resolve/job_act8_c_background.svg",
-          "middleGround": "assets/svg/act_08_out_of_the_whirlwind/c_resolve/job_act8_c_middle_ground.svg",
-          "foreground": "assets/svg/act_08_out_of_the_whirlwind/c_resolve/job_act8_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 9,
@@ -568,9 +393,6 @@
       "assetStem": "job_act9",
       "materials": [
         "assets/materials/water_still-eddies.svg"
-      ],
-      "materialKeys": [
-        "water_still"
       ],
       "beats": [
         {
@@ -603,24 +425,7 @@
             "foreground": "assets/svg/act_09_job_responds/c_resolve/job_act9_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_09_job_responds/a_establish/job_act9_a_background.svg",
-          "middleGround": "assets/svg/act_09_job_responds/a_establish/job_act9_a_middle_ground.svg",
-          "foreground": "assets/svg/act_09_job_responds/a_establish/job_act9_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_09_job_responds/b_core_action/job_act9_b_background.svg",
-          "middleGround": "assets/svg/act_09_job_responds/b_core_action/job_act9_b_middle_ground.svg",
-          "foreground": "assets/svg/act_09_job_responds/b_core_action/job_act9_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_09_job_responds/c_resolve/job_act9_c_background.svg",
-          "middleGround": "assets/svg/act_09_job_responds/c_resolve/job_act9_c_middle_ground.svg",
-          "foreground": "assets/svg/act_09_job_responds/c_resolve/job_act9_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 10,
@@ -634,11 +439,6 @@
         "assets/materials/fabric_weave-basket.svg",
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/grass-tufts.svg"
-      ],
-      "materialKeys": [
-        "fabric_weave",
-        "wood_oak",
-        "grass"
       ],
       "beats": [
         {
@@ -671,24 +471,7 @@
             "foreground": "assets/svg/act_10_restoration/c_resolve/job_act10_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_10_restoration/a_establish/job_act10_a_background.svg",
-          "middleGround": "assets/svg/act_10_restoration/a_establish/job_act10_a_middle_ground.svg",
-          "foreground": "assets/svg/act_10_restoration/a_establish/job_act10_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_10_restoration/b_core_action/job_act10_b_background.svg",
-          "middleGround": "assets/svg/act_10_restoration/b_core_action/job_act10_b_middle_ground.svg",
-          "foreground": "assets/svg/act_10_restoration/b_core_action/job_act10_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_10_restoration/c_resolve/job_act10_c_background.svg",
-          "middleGround": "assets/svg/act_10_restoration/c_resolve/job_act10_c_middle_ground.svg",
-          "foreground": "assets/svg/act_10_restoration/c_resolve/job_act10_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

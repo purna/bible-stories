@@ -3,13 +3,12 @@
   "act": 3,
   "chapter": "Ch.3 · At the Temple Gate",
   "artSource": "art/act3_at_the_temple_gate.md",
-  "artFolder": "assets/svg/act_03_at_the_temple_gate",
+  "artFolder": "act_03_at_the_temple_gate",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "jeremiah_act3_c_background.svg",

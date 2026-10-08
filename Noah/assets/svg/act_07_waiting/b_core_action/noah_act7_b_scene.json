@@ -3,18 +3,15 @@
   "act": 7,
   "chapter": "Ch.7 · The Long Wait",
   "artSource": "art/act7_waiting.md",
-  "artFolder": "assets/svg/act_07_waiting",
+  "artFolder": "act_07_waiting",
   "sceneId": "ch7_ark_on_ararat",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "leaves-canopy.svg",
-    "leaves-scatter.svg",
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/wood_dark-plank.svg",
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/water_still-eddies.svg",
+    "assets/materials/leaves-canopy.svg"
   ],
   "layers": {
     "background": "noah_act7_b_background.svg",

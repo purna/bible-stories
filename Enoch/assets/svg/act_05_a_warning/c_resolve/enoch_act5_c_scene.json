@@ -3,13 +3,12 @@
   "act": 5,
   "chapter": "Ch.5 · A Warning",
   "artSource": "art/act5_a_warning.md",
-  "artFolder": "assets/svg/act_05_a_warning",
+  "artFolder": "act_05_a_warning",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "enoch_act5_c_background.svg",

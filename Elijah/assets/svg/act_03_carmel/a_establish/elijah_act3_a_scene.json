@@ -3,15 +3,12 @@
   "act": 3,
   "chapter": "Mount Carmel",
   "artSource": "art/act3_carmel.md",
-  "artFolder": "assets/svg/act_03_carmel",
+  "artFolder": "act_03_carmel",
   "sceneId": "mount_carmel_altars",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "stone_texture.svg",
-    "temple-flagstone.svg"
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "elijah_act3_a_background.svg",

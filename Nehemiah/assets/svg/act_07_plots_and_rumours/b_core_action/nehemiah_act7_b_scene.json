@@ -3,16 +3,13 @@
   "act": 7,
   "chapter": "Ch.7 · Plots and Rumours",
   "artSource": "art/act7_plots_and_rumours.md",
-  "artFolder": "assets/svg/act_07_plots_and_rumours",
+  "artFolder": "act_07_plots_and_rumours",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "nehemiah_act7_b_background.svg",

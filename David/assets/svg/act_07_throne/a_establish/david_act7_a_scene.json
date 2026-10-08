@@ -3,22 +3,14 @@
   "act": 7,
   "chapter": "Ch.7 · The Throne",
   "artSource": "art/act7_throne.md",
-  "artFolder": "assets/svg/act_07_throne",
+  "artFolder": "act_07_throne",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "en_gedi_cave-limestone.svg",
-    "fabric_dots-grid.svg",
-    "fabric_herringbone-weave..svg",
-    "fabric_houndstooth-classic.svg",
-    "fabric_tartan-sett.svg",
-    "fabric_weave-basket.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "valley_stones-brook.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "david_act7_a_background.svg",

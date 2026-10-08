@@ -3,12 +3,12 @@
   "act": 4,
   "chapter": "Ch.4 · The Gathering",
   "artSource": "art/act4_gathering.md",
-  "artFolder": "assets/svg/act_04_gathering",
+  "artFolder": "act_04_gathering",
   "sceneId": "ch4_animals_arrive",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "wood_dark-plank.svg"
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "noah_act4_b_background.svg",

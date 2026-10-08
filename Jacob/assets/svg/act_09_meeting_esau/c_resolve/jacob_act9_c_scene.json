@@ -3,15 +3,14 @@
   "act": 9,
   "chapter": "Ch.9 · Meeting Esau",
   "artSource": "art/act9_meeting_esau.md",
-  "artFolder": "assets/svg/act_09_meeting_esau",
+  "artFolder": "act_09_meeting_esau",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "desert_sand-dunes.svg",
-    "fabric_weave-basket.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/fabric_weave-basket.svg"
   ],
   "layers": {
     "background": "jacob_act9_c_background.svg",

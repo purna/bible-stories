@@ -3,13 +3,12 @@
   "act": 3,
   "chapter": "Ch.3 · Gather at Tabor",
   "artSource": "art/act3_gather_at_tabor.md",
-  "artFolder": "assets/svg/act_03_gather_at_tabor",
+  "artFolder": "act_03_gather_at_tabor",
   "sceneId": "",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "deborah_act3_c_background.svg",

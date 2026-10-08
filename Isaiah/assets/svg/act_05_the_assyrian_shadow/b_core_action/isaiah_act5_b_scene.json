@@ -3,14 +3,13 @@
   "act": 5,
   "chapter": "Ch.5 · The Assyrian Shadow",
   "artSource": "art/act5_the_assyrian_shadow.md",
-  "artFolder": "assets/svg/act_05_the_assyrian_shadow",
+  "artFolder": "act_05_the_assyrian_shadow",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "fabric_weave-basket.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "isaiah_act5_b_background.svg",

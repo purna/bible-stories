@@ -3,12 +3,12 @@
   "act": 7,
   "chapter": "Ch.7 · Saul Chosen",
   "artSource": "art/act7_saul_chosen.md",
-  "artFolder": "assets/svg/act_07_saul_chosen",
+  "artFolder": "act_07_saul_chosen",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "hammered_gold-hammered.svg"
+    "assets/materials/hammered_gold-hammered.svg"
   ],
   "layers": {
     "background": "samuel_act7_a_background.svg",

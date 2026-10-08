@@ -3,14 +3,13 @@
   "act": 4,
   "chapter": "Ch.4 · Misunderstood",
   "artSource": "art/act4_misunderstood.md",
-  "artFolder": "assets/svg/act_04_misunderstood",
+  "artFolder": "act_04_misunderstood",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "hammered_gold-hammered.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/hammered_gold-hammered.svg"
   ],
   "layers": {
     "background": "hannah_act4_b_background.svg",

@@ -3,15 +3,13 @@
   "act": 4,
   "chapter": "Ch.4 · Seven Days",
   "artSource": "art/act4_seven_days.md",
-  "artFolder": "assets/svg/act_04_seven_days",
+  "artFolder": "act_04_seven_days",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "job_act4_b_background.svg",

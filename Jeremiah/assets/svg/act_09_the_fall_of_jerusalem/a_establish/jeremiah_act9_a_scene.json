@@ -3,17 +3,14 @@
   "act": 9,
   "chapter": "Ch.9 · The Fall of Jerusalem",
   "artSource": "art/act9_the_fall_of_jerusalem.md",
-  "artFolder": "assets/svg/act_09_the_fall_of_jerusalem",
+  "artFolder": "act_09_the_fall_of_jerusalem",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "desert_sand-dunes.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/desert_sand-dunes.svg"
   ],
   "layers": {
     "background": "jeremiah_act9_a_background.svg",

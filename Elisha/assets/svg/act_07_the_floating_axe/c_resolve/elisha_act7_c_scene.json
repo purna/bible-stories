@@ -3,17 +3,14 @@
   "act": 7,
   "chapter": "Ch.7 · The Floating Axe",
   "artSource": "art/act7_the_floating_axe.md",
-  "artFolder": "assets/svg/act_07_the_floating_axe",
+  "artFolder": "act_07_the_floating_axe",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/water_still-eddies.svg",
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "elisha_act7_c_background.svg",

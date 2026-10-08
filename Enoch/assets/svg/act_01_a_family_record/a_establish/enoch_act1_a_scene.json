@@ -3,14 +3,13 @@
   "act": 1,
   "chapter": "Ch.1 · A Family Record",
   "artSource": "art/act1_a_family_record.md",
-  "artFolder": "assets/svg/act_01_a_family_record",
+  "artFolder": "act_01_a_family_record",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "fabric_weave-basket.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/fabric_weave-basket.svg"
   ],
   "layers": {
     "background": "enoch_act1_a_background.svg",

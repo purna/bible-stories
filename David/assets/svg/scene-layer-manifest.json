@@ -27,14 +27,11 @@
       "materials": [
         "assets/materials/grass-tufts.svg"
       ],
-      "materialKeys": [
-        "grass"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_01_anointed/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_01_anointed/a_establish/david_act1_a_background.svg",
             "middleGround": "assets/svg/act_01_anointed/a_establish/david_act1_a_middle_ground.svg",
@@ -43,8 +40,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_01_anointed/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_01_anointed/b_core_action/david_act1_b_background.svg",
             "middleGround": "assets/svg/act_01_anointed/b_core_action/david_act1_b_middle_ground.svg",
@@ -53,32 +50,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_01_anointed/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_01_anointed/c_resolve/david_act1_c_background.svg",
             "middleGround": "assets/svg/act_01_anointed/c_resolve/david_act1_c_middle_ground.svg",
             "foreground": "assets/svg/act_01_anointed/c_resolve/david_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_anointed/a_establish/david_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_anointed/a_establish/david_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_anointed/a_establish/david_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_anointed/b_core_action/david_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_anointed/b_core_action/david_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_anointed/b_core_action/david_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_anointed/c_resolve/david_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_anointed/c_resolve/david_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_anointed/c_resolve/david_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -92,15 +72,11 @@
         "assets/materials/stone-flagstone.svg",
         "assets/materials/wood_oak-planks3.svg"
       ],
-      "materialKeys": [
-        "stone",
-        "wood_oak"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_02_goliath/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_02_goliath/a_establish/david_act2_a_background.svg",
             "middleGround": "assets/svg/act_02_goliath/a_establish/david_act2_a_middle_ground.svg",
@@ -109,8 +85,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_02_goliath/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_02_goliath/b_core_action/david_act2_b_background.svg",
             "middleGround": "assets/svg/act_02_goliath/b_core_action/david_act2_b_middle_ground.svg",
@@ -119,32 +95,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_02_goliath/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_02_goliath/c_resolve/david_act2_c_background.svg",
             "middleGround": "assets/svg/act_02_goliath/c_resolve/david_act2_c_middle_ground.svg",
             "foreground": "assets/svg/act_02_goliath/c_resolve/david_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_goliath/a_establish/david_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_goliath/a_establish/david_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_goliath/a_establish/david_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_goliath/b_core_action/david_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_goliath/b_core_action/david_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_goliath/b_core_action/david_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_goliath/c_resolve/david_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_goliath/c_resolve/david_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_goliath/c_resolve/david_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -157,14 +116,11 @@
       "materials": [
         "assets/materials/stone-flagstone.svg"
       ],
-      "materialKeys": [
-        "stone"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_03_court/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_03_court/a_establish/david_act3_a_background.svg",
             "middleGround": "assets/svg/act_03_court/a_establish/david_act3_a_middle_ground.svg",
@@ -173,8 +129,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_03_court/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_03_court/b_core_action/david_act3_b_background.svg",
             "middleGround": "assets/svg/act_03_court/b_core_action/david_act3_b_middle_ground.svg",
@@ -183,32 +139,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_03_court/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_03_court/c_resolve/david_act3_c_background.svg",
             "middleGround": "assets/svg/act_03_court/c_resolve/david_act3_c_middle_ground.svg",
             "foreground": "assets/svg/act_03_court/c_resolve/david_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_court/a_establish/david_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_court/a_establish/david_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_court/a_establish/david_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_court/b_core_action/david_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_court/b_core_action/david_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_court/b_core_action/david_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_court/c_resolve/david_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_court/c_resolve/david_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_court/c_resolve/david_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -222,15 +161,11 @@
         "assets/materials/fabric_weave-basket.svg",
         "assets/materials/grass-tufts.svg"
       ],
-      "materialKeys": [
-        "fabric_weave",
-        "grass"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_04_friends/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_04_friends/a_establish/david_act4_a_background.svg",
             "middleGround": "assets/svg/act_04_friends/a_establish/david_act4_a_middle_ground.svg",
@@ -239,8 +174,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_04_friends/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_04_friends/b_core_action/david_act4_b_background.svg",
             "middleGround": "assets/svg/act_04_friends/b_core_action/david_act4_b_middle_ground.svg",
@@ -249,32 +184,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_04_friends/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_04_friends/c_resolve/david_act4_c_background.svg",
             "middleGround": "assets/svg/act_04_friends/c_resolve/david_act4_c_middle_ground.svg",
             "foreground": "assets/svg/act_04_friends/c_resolve/david_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_friends/a_establish/david_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_friends/a_establish/david_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_friends/a_establish/david_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_friends/b_core_action/david_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_friends/b_core_action/david_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_friends/b_core_action/david_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_friends/c_resolve/david_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_friends/c_resolve/david_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_friends/c_resolve/david_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -290,17 +208,11 @@
         "assets/materials/fabric_weave-basket.svg",
         "assets/materials/grass-tufts.svg"
       ],
-      "materialKeys": [
-        "stone",
-        "wood_oak",
-        "fabric_weave",
-        "grass"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_05_wilderness/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_05_wilderness/a_establish/david_act5_a_background.svg",
             "middleGround": "assets/svg/act_05_wilderness/a_establish/david_act5_a_middle_ground.svg",
@@ -309,8 +221,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_05_wilderness/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_05_wilderness/b_core_action/david_act5_b_background.svg",
             "middleGround": "assets/svg/act_05_wilderness/b_core_action/david_act5_b_middle_ground.svg",
@@ -319,32 +231,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_05_wilderness/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_05_wilderness/c_resolve/david_act5_c_background.svg",
             "middleGround": "assets/svg/act_05_wilderness/c_resolve/david_act5_c_middle_ground.svg",
             "foreground": "assets/svg/act_05_wilderness/c_resolve/david_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_wilderness/a_establish/david_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_wilderness/a_establish/david_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_wilderness/a_establish/david_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_wilderness/b_core_action/david_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_wilderness/b_core_action/david_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_wilderness/b_core_action/david_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_wilderness/c_resolve/david_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_wilderness/c_resolve/david_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_wilderness/c_resolve/david_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -357,14 +252,11 @@
       "materials": [
         "assets/materials/water_still-eddies.svg"
       ],
-      "materialKeys": [
-        "water_still"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_06_abigail/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_06_abigail/a_establish/david_act6_a_background.svg",
             "middleGround": "assets/svg/act_06_abigail/a_establish/david_act6_a_middle_ground.svg",
@@ -373,8 +265,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_06_abigail/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_06_abigail/b_core_action/david_act6_b_background.svg",
             "middleGround": "assets/svg/act_06_abigail/b_core_action/david_act6_b_middle_ground.svg",
@@ -383,32 +275,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_06_abigail/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_06_abigail/c_resolve/david_act6_c_background.svg",
             "middleGround": "assets/svg/act_06_abigail/c_resolve/david_act6_c_middle_ground.svg",
             "foreground": "assets/svg/act_06_abigail/c_resolve/david_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_abigail/a_establish/david_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_abigail/a_establish/david_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_abigail/a_establish/david_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_abigail/b_core_action/david_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_abigail/b_core_action/david_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_abigail/b_core_action/david_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_abigail/c_resolve/david_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_abigail/c_resolve/david_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_abigail/c_resolve/david_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -423,16 +298,11 @@
         "assets/materials/fabric_weave-basket.svg",
         "assets/materials/water_still-eddies.svg"
       ],
-      "materialKeys": [
-        "stone",
-        "fabric_weave",
-        "water_still"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_07_throne/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_07_throne/a_establish/david_act7_a_background.svg",
             "middleGround": "assets/svg/act_07_throne/a_establish/david_act7_a_middle_ground.svg",
@@ -441,8 +311,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_07_throne/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_07_throne/b_core_action/david_act7_b_background.svg",
             "middleGround": "assets/svg/act_07_throne/b_core_action/david_act7_b_middle_ground.svg",
@@ -451,32 +321,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_07_throne/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_07_throne/c_resolve/david_act7_c_background.svg",
             "middleGround": "assets/svg/act_07_throne/c_resolve/david_act7_c_middle_ground.svg",
             "foreground": "assets/svg/act_07_throne/c_resolve/david_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_07_throne/a_establish/david_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_throne/a_establish/david_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_throne/a_establish/david_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_07_throne/b_core_action/david_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_throne/b_core_action/david_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_throne/b_core_action/david_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_07_throne/c_resolve/david_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_throne/c_resolve/david_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_throne/c_resolve/david_act7_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 8,
@@ -489,14 +342,11 @@
       "materials": [
         "assets/materials/water_still-eddies.svg"
       ],
-      "materialKeys": [
-        "water_still"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_08_bathsheba/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_08_bathsheba/a_establish/david_act8_a_background.svg",
             "middleGround": "assets/svg/act_08_bathsheba/a_establish/david_act8_a_middle_ground.svg",
@@ -505,8 +355,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_08_bathsheba/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_08_bathsheba/b_core_action/david_act8_b_background.svg",
             "middleGround": "assets/svg/act_08_bathsheba/b_core_action/david_act8_b_middle_ground.svg",
@@ -515,32 +365,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_08_bathsheba/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_08_bathsheba/c_resolve/david_act8_c_background.svg",
             "middleGround": "assets/svg/act_08_bathsheba/c_resolve/david_act8_c_middle_ground.svg",
             "foreground": "assets/svg/act_08_bathsheba/c_resolve/david_act8_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_08_bathsheba/a_establish/david_act8_a_background.svg",
-          "middleGround": "assets/svg/act_08_bathsheba/a_establish/david_act8_a_middle_ground.svg",
-          "foreground": "assets/svg/act_08_bathsheba/a_establish/david_act8_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_08_bathsheba/b_core_action/david_act8_b_background.svg",
-          "middleGround": "assets/svg/act_08_bathsheba/b_core_action/david_act8_b_middle_ground.svg",
-          "foreground": "assets/svg/act_08_bathsheba/b_core_action/david_act8_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_08_bathsheba/c_resolve/david_act8_c_background.svg",
-          "middleGround": "assets/svg/act_08_bathsheba/c_resolve/david_act8_c_middle_ground.svg",
-          "foreground": "assets/svg/act_08_bathsheba/c_resolve/david_act8_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 9,
@@ -554,15 +387,11 @@
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/grass-tufts.svg"
       ],
-      "materialKeys": [
-        "wood_oak",
-        "grass"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_09_nathan/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_09_nathan/a_establish/david_act9_a_background.svg",
             "middleGround": "assets/svg/act_09_nathan/a_establish/david_act9_a_middle_ground.svg",
@@ -571,8 +400,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_09_nathan/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_09_nathan/b_core_action/david_act9_b_background.svg",
             "middleGround": "assets/svg/act_09_nathan/b_core_action/david_act9_b_middle_ground.svg",
@@ -581,32 +410,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_09_nathan/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_09_nathan/c_resolve/david_act9_c_background.svg",
             "middleGround": "assets/svg/act_09_nathan/c_resolve/david_act9_c_middle_ground.svg",
             "foreground": "assets/svg/act_09_nathan/c_resolve/david_act9_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_09_nathan/a_establish/david_act9_a_background.svg",
-          "middleGround": "assets/svg/act_09_nathan/a_establish/david_act9_a_middle_ground.svg",
-          "foreground": "assets/svg/act_09_nathan/a_establish/david_act9_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_09_nathan/b_core_action/david_act9_b_background.svg",
-          "middleGround": "assets/svg/act_09_nathan/b_core_action/david_act9_b_middle_ground.svg",
-          "foreground": "assets/svg/act_09_nathan/b_core_action/david_act9_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_09_nathan/c_resolve/david_act9_c_background.svg",
-          "middleGround": "assets/svg/act_09_nathan/c_resolve/david_act9_c_middle_ground.svg",
-          "foreground": "assets/svg/act_09_nathan/c_resolve/david_act9_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 10,
@@ -621,16 +433,11 @@
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/water_still-eddies.svg"
       ],
-      "materialKeys": [
-        "stone",
-        "wood_oak",
-        "water_still"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_10_absalom/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_10_absalom/a_establish/david_act10_a_background.svg",
             "middleGround": "assets/svg/act_10_absalom/a_establish/david_act10_a_middle_ground.svg",
@@ -639,8 +446,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_10_absalom/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_10_absalom/b_core_action/david_act10_b_background.svg",
             "middleGround": "assets/svg/act_10_absalom/b_core_action/david_act10_b_middle_ground.svg",
@@ -649,32 +456,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_10_absalom/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_10_absalom/c_resolve/david_act10_c_background.svg",
             "middleGround": "assets/svg/act_10_absalom/c_resolve/david_act10_c_middle_ground.svg",
             "foreground": "assets/svg/act_10_absalom/c_resolve/david_act10_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_10_absalom/a_establish/david_act10_a_background.svg",
-          "middleGround": "assets/svg/act_10_absalom/a_establish/david_act10_a_middle_ground.svg",
-          "foreground": "assets/svg/act_10_absalom/a_establish/david_act10_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_10_absalom/b_core_action/david_act10_b_background.svg",
-          "middleGround": "assets/svg/act_10_absalom/b_core_action/david_act10_b_middle_ground.svg",
-          "foreground": "assets/svg/act_10_absalom/b_core_action/david_act10_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_10_absalom/c_resolve/david_act10_c_background.svg",
-          "middleGround": "assets/svg/act_10_absalom/c_resolve/david_act10_c_middle_ground.svg",
-          "foreground": "assets/svg/act_10_absalom/c_resolve/david_act10_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 11,
@@ -689,16 +479,11 @@
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/fabric_weave-basket.svg"
       ],
-      "materialKeys": [
-        "stone",
-        "wood_oak",
-        "fabric_weave"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_11_census/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_11_census/a_establish/david_act11_a_background.svg",
             "middleGround": "assets/svg/act_11_census/a_establish/david_act11_a_middle_ground.svg",
@@ -707,8 +492,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_11_census/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_11_census/b_core_action/david_act11_b_background.svg",
             "middleGround": "assets/svg/act_11_census/b_core_action/david_act11_b_middle_ground.svg",
@@ -717,32 +502,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_11_census/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_11_census/c_resolve/david_act11_c_background.svg",
             "middleGround": "assets/svg/act_11_census/c_resolve/david_act11_c_middle_ground.svg",
             "foreground": "assets/svg/act_11_census/c_resolve/david_act11_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_11_census/a_establish/david_act11_a_background.svg",
-          "middleGround": "assets/svg/act_11_census/a_establish/david_act11_a_middle_ground.svg",
-          "foreground": "assets/svg/act_11_census/a_establish/david_act11_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_11_census/b_core_action/david_act11_b_background.svg",
-          "middleGround": "assets/svg/act_11_census/b_core_action/david_act11_b_middle_ground.svg",
-          "foreground": "assets/svg/act_11_census/b_core_action/david_act11_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_11_census/c_resolve/david_act11_c_background.svg",
-          "middleGround": "assets/svg/act_11_census/c_resolve/david_act11_c_middle_ground.svg",
-          "foreground": "assets/svg/act_11_census/c_resolve/david_act11_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 12,
@@ -756,15 +524,11 @@
         "assets/materials/stone-flagstone.svg",
         "assets/materials/wood_oak-planks3.svg"
       ],
-      "materialKeys": [
-        "stone",
-        "wood_oak"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_12_solomon/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_12_solomon/a_establish/david_act12_a_background.svg",
             "middleGround": "assets/svg/act_12_solomon/a_establish/david_act12_a_middle_ground.svg",
@@ -773,8 +537,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_12_solomon/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_12_solomon/b_core_action/david_act12_b_background.svg",
             "middleGround": "assets/svg/act_12_solomon/b_core_action/david_act12_b_middle_ground.svg",
@@ -783,32 +547,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_12_solomon/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_12_solomon/c_resolve/david_act12_c_background.svg",
             "middleGround": "assets/svg/act_12_solomon/c_resolve/david_act12_c_middle_ground.svg",
             "foreground": "assets/svg/act_12_solomon/c_resolve/david_act12_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_12_solomon/a_establish/david_act12_a_background.svg",
-          "middleGround": "assets/svg/act_12_solomon/a_establish/david_act12_a_middle_ground.svg",
-          "foreground": "assets/svg/act_12_solomon/a_establish/david_act12_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_12_solomon/b_core_action/david_act12_b_background.svg",
-          "middleGround": "assets/svg/act_12_solomon/b_core_action/david_act12_b_middle_ground.svg",
-          "foreground": "assets/svg/act_12_solomon/b_core_action/david_act12_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_12_solomon/c_resolve/david_act12_c_background.svg",
-          "middleGround": "assets/svg/act_12_solomon/c_resolve/david_act12_c_middle_ground.svg",
-          "foreground": "assets/svg/act_12_solomon/c_resolve/david_act12_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

@@ -3,20 +3,14 @@
   "act": 1,
   "chapter": "The King&#x27;s Table",
   "artSource": "art/act1_table.md",
-  "artFolder": "assets/svg/act_01_table",
+  "artFolder": "act_01_table",
   "sceneId": "babylon_court",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "stone_texture.svg",
-    "temple-flagstone.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "daniel_act1_c_background.svg",

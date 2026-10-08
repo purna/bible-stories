@@ -3,14 +3,13 @@
   "act": 4,
   "chapter": "Ch.4 · Passover Night",
   "artSource": "art/act4_passover.md",
-  "artFolder": "assets/svg/act_04_passover",
+  "artFolder": "act_04_passover",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "egypt_mud_brick-stretcher.svg",
-    "stone-rough.svg",
-    "stone_tablets-hewn.svg"
+    "assets/materials/egypt_mud_brick-stretcher.svg",
+    "assets/materials/stone_tablets-hewn.svg"
   ],
   "layers": {
     "background": "moses_act4_b_background.svg",

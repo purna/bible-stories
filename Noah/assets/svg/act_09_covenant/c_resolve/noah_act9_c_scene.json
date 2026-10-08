@@ -3,17 +3,14 @@
   "act": 9,
   "chapter": "Ch.9 · The Altar & the Covenant",
   "artSource": "art/act9_covenant.md",
-  "artFolder": "assets/svg/act_09_covenant",
+  "artFolder": "act_09_covenant",
   "sceneId": "ch9_altar",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/water_still-eddies.svg",
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "noah_act9_c_background.svg",

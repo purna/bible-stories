@@ -3,13 +3,13 @@
   "act": 2,
   "chapter": "Ch.2 · The Burning Bush",
   "artSource": "art/act2_exile.md",
-  "artFolder": "assets/svg/act_02_exile",
+  "artFolder": "act_02_exile",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "desert_sand-dunes.svg",
-    "nile_reeds-riverbank.svg"
+    "assets/materials/nile_reeds-riverbank.svg",
+    "assets/materials/desert_sand-dunes.svg"
   ],
   "layers": {
     "background": "moses_act2_b_background.svg",

@@ -3,13 +3,12 @@
   "act": 5,
   "chapter": "Ch.5 · Remembered",
   "artSource": "art/act5_remembered.md",
-  "artFolder": "assets/svg/act_05_remembered",
+  "artFolder": "act_05_remembered",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "hannah_act5_b_background.svg",

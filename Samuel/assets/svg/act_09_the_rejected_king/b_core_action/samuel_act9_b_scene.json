@@ -3,15 +3,14 @@
   "act": 9,
   "chapter": "Ch.9 · The Rejected King",
   "artSource": "art/act9_the_rejected_king.md",
-  "artFolder": "assets/svg/act_09_the_rejected_king",
+  "artFolder": "act_09_the_rejected_king",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "fabric_weave-basket.svg",
-    "grass-tufts.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/grass-tufts.svg"
   ],
   "layers": {
     "background": "samuel_act9_b_background.svg",

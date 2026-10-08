@@ -3,17 +3,14 @@
   "act": 2,
   "chapter": "Ch.2 · Rahab and the Spies",
   "artSource": "art/act2_rahab_and_the_spies.md",
-  "artFolder": "assets/svg/act_02_rahab_and_the_spies",
+  "artFolder": "act_02_rahab_and_the_spies",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "joshua_act2_b_background.svg",

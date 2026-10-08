@@ -67,24 +67,7 @@
             "foreground": "assets/svg/act_01_the_boy_at_shiloh/c_resolve/samuel_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_the_boy_at_shiloh/a_establish/samuel_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_the_boy_at_shiloh/a_establish/samuel_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_the_boy_at_shiloh/a_establish/samuel_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_the_boy_at_shiloh/b_core_action/samuel_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_the_boy_at_shiloh/b_core_action/samuel_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_the_boy_at_shiloh/b_core_action/samuel_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_the_boy_at_shiloh/c_resolve/samuel_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_the_boy_at_shiloh/c_resolve/samuel_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_the_boy_at_shiloh/c_resolve/samuel_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -135,24 +118,7 @@
             "foreground": "assets/svg/act_02_the_voice_at_night/c_resolve/samuel_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_the_voice_at_night/a_establish/samuel_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_the_voice_at_night/a_establish/samuel_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_voice_at_night/a_establish/samuel_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_the_voice_at_night/b_core_action/samuel_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_the_voice_at_night/b_core_action/samuel_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_voice_at_night/b_core_action/samuel_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_the_voice_at_night/c_resolve/samuel_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_the_voice_at_night/c_resolve/samuel_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_voice_at_night/c_resolve/samuel_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -199,24 +165,7 @@
             "foreground": "assets/svg/act_03_a_hard_message/c_resolve/samuel_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_a_hard_message/a_establish/samuel_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_a_hard_message/a_establish/samuel_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_a_hard_message/a_establish/samuel_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_a_hard_message/b_core_action/samuel_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_a_hard_message/b_core_action/samuel_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_a_hard_message/b_core_action/samuel_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_a_hard_message/c_resolve/samuel_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_a_hard_message/c_resolve/samuel_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_a_hard_message/c_resolve/samuel_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -269,24 +218,7 @@
             "foreground": "assets/svg/act_04_the_ark_captured/c_resolve/samuel_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_the_ark_captured/a_establish/samuel_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_the_ark_captured/a_establish/samuel_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_ark_captured/a_establish/samuel_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_the_ark_captured/b_core_action/samuel_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_the_ark_captured/b_core_action/samuel_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_ark_captured/b_core_action/samuel_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_the_ark_captured/c_resolve/samuel_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_the_ark_captured/c_resolve/samuel_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_ark_captured/c_resolve/samuel_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -337,24 +269,7 @@
             "foreground": "assets/svg/act_05_ebenezer/c_resolve/samuel_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_ebenezer/a_establish/samuel_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_ebenezer/a_establish/samuel_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_ebenezer/a_establish/samuel_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_ebenezer/b_core_action/samuel_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_ebenezer/b_core_action/samuel_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_ebenezer/b_core_action/samuel_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_ebenezer/c_resolve/samuel_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_ebenezer/c_resolve/samuel_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_ebenezer/c_resolve/samuel_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -401,24 +316,7 @@
             "foreground": "assets/svg/act_06_a_king_demanded/c_resolve/samuel_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_a_king_demanded/a_establish/samuel_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_a_king_demanded/a_establish/samuel_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_a_king_demanded/a_establish/samuel_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_a_king_demanded/b_core_action/samuel_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_a_king_demanded/b_core_action/samuel_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_a_king_demanded/b_core_action/samuel_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_a_king_demanded/c_resolve/samuel_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_a_king_demanded/c_resolve/samuel_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_a_king_demanded/c_resolve/samuel_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -465,24 +363,7 @@
             "foreground": "assets/svg/act_07_saul_chosen/c_resolve/samuel_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_07_saul_chosen/a_establish/samuel_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_saul_chosen/a_establish/samuel_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_saul_chosen/a_establish/samuel_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_07_saul_chosen/b_core_action/samuel_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_saul_chosen/b_core_action/samuel_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_saul_chosen/b_core_action/samuel_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_07_saul_chosen/c_resolve/samuel_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_saul_chosen/c_resolve/samuel_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_saul_chosen/c_resolve/samuel_act7_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 8,
@@ -529,24 +410,7 @@
             "foreground": "assets/svg/act_08_saul_s_first_victory/c_resolve/samuel_act8_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_08_saul_s_first_victory/a_establish/samuel_act8_a_background.svg",
-          "middleGround": "assets/svg/act_08_saul_s_first_victory/a_establish/samuel_act8_a_middle_ground.svg",
-          "foreground": "assets/svg/act_08_saul_s_first_victory/a_establish/samuel_act8_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_08_saul_s_first_victory/b_core_action/samuel_act8_b_background.svg",
-          "middleGround": "assets/svg/act_08_saul_s_first_victory/b_core_action/samuel_act8_b_middle_ground.svg",
-          "foreground": "assets/svg/act_08_saul_s_first_victory/b_core_action/samuel_act8_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_08_saul_s_first_victory/c_resolve/samuel_act8_c_background.svg",
-          "middleGround": "assets/svg/act_08_saul_s_first_victory/c_resolve/samuel_act8_c_middle_ground.svg",
-          "foreground": "assets/svg/act_08_saul_s_first_victory/c_resolve/samuel_act8_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 9,
@@ -597,24 +461,7 @@
             "foreground": "assets/svg/act_09_the_rejected_king/c_resolve/samuel_act9_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_09_the_rejected_king/a_establish/samuel_act9_a_background.svg",
-          "middleGround": "assets/svg/act_09_the_rejected_king/a_establish/samuel_act9_a_middle_ground.svg",
-          "foreground": "assets/svg/act_09_the_rejected_king/a_establish/samuel_act9_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_09_the_rejected_king/b_core_action/samuel_act9_b_background.svg",
-          "middleGround": "assets/svg/act_09_the_rejected_king/b_core_action/samuel_act9_b_middle_ground.svg",
-          "foreground": "assets/svg/act_09_the_rejected_king/b_core_action/samuel_act9_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_09_the_rejected_king/c_resolve/samuel_act9_c_background.svg",
-          "middleGround": "assets/svg/act_09_the_rejected_king/c_resolve/samuel_act9_c_middle_ground.svg",
-          "foreground": "assets/svg/act_09_the_rejected_king/c_resolve/samuel_act9_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 10,
@@ -661,24 +508,7 @@
             "foreground": "assets/svg/act_10_david_anointed/c_resolve/samuel_act10_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_10_david_anointed/a_establish/samuel_act10_a_background.svg",
-          "middleGround": "assets/svg/act_10_david_anointed/a_establish/samuel_act10_a_middle_ground.svg",
-          "foreground": "assets/svg/act_10_david_anointed/a_establish/samuel_act10_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_10_david_anointed/b_core_action/samuel_act10_b_background.svg",
-          "middleGround": "assets/svg/act_10_david_anointed/b_core_action/samuel_act10_b_middle_ground.svg",
-          "foreground": "assets/svg/act_10_david_anointed/b_core_action/samuel_act10_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_10_david_anointed/c_resolve/samuel_act10_c_background.svg",
-          "middleGround": "assets/svg/act_10_david_anointed/c_resolve/samuel_act10_c_middle_ground.svg",
-          "foreground": "assets/svg/act_10_david_anointed/c_resolve/samuel_act10_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

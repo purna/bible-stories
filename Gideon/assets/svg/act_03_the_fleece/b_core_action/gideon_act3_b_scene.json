@@ -3,14 +3,14 @@
   "act": 3,
   "chapter": "Ch.3 · The Fleece",
   "artSource": "art/act3_the_fleece.md",
-  "artFolder": "assets/svg/act_03_the_fleece",
+  "artFolder": "act_03_the_fleece",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "tent_fabric-basket.svg",
-    "torch_flame-flames.svg",
-    "wool_fleece-fleece.svg"
+    "assets/materials/wool_fleece-fleece.svg",
+    "assets/materials/torch_flame-flames.svg",
+    "assets/materials/tent_fabric-basket.svg"
   ],
   "layers": {
     "background": "gideon_act3_b_background.svg",

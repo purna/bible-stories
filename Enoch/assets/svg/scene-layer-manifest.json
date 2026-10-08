@@ -28,15 +28,11 @@
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/fabric_weave-basket.svg"
       ],
-      "materialKeys": [
-        "wood_oak",
-        "fabric_weave"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_01_a_family_record/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_01_a_family_record/a_establish/enoch_act1_a_background.svg",
             "middleGround": "assets/svg/act_01_a_family_record/a_establish/enoch_act1_a_middle_ground.svg",
@@ -45,8 +41,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_01_a_family_record/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_01_a_family_record/b_core_action/enoch_act1_b_background.svg",
             "middleGround": "assets/svg/act_01_a_family_record/b_core_action/enoch_act1_b_middle_ground.svg",
@@ -55,32 +51,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_01_a_family_record/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_01_a_family_record/c_resolve/enoch_act1_c_background.svg",
             "middleGround": "assets/svg/act_01_a_family_record/c_resolve/enoch_act1_c_middle_ground.svg",
             "foreground": "assets/svg/act_01_a_family_record/c_resolve/enoch_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_a_family_record/a_establish/enoch_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_a_family_record/a_establish/enoch_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_a_family_record/a_establish/enoch_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_a_family_record/b_core_action/enoch_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_a_family_record/b_core_action/enoch_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_a_family_record/b_core_action/enoch_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_a_family_record/c_resolve/enoch_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_a_family_record/c_resolve/enoch_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_a_family_record/c_resolve/enoch_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -95,16 +74,11 @@
         "assets/materials/stone-flagstone.svg",
         "assets/materials/leaves-canopy.svg"
       ],
-      "materialKeys": [
-        "grass",
-        "stone",
-        "leaves"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_02_the_first_walk/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_02_the_first_walk/a_establish/enoch_act2_a_background.svg",
             "middleGround": "assets/svg/act_02_the_first_walk/a_establish/enoch_act2_a_middle_ground.svg",
@@ -113,8 +87,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_02_the_first_walk/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_02_the_first_walk/b_core_action/enoch_act2_b_background.svg",
             "middleGround": "assets/svg/act_02_the_first_walk/b_core_action/enoch_act2_b_middle_ground.svg",
@@ -123,32 +97,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_02_the_first_walk/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_02_the_first_walk/c_resolve/enoch_act2_c_background.svg",
             "middleGround": "assets/svg/act_02_the_first_walk/c_resolve/enoch_act2_c_middle_ground.svg",
             "foreground": "assets/svg/act_02_the_first_walk/c_resolve/enoch_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_the_first_walk/a_establish/enoch_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_the_first_walk/a_establish/enoch_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_first_walk/a_establish/enoch_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_the_first_walk/b_core_action/enoch_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_the_first_walk/b_core_action/enoch_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_first_walk/b_core_action/enoch_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_the_first_walk/c_resolve/enoch_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_the_first_walk/c_resolve/enoch_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_first_walk/c_resolve/enoch_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -162,15 +119,11 @@
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/fabric_weave-basket.svg"
       ],
-      "materialKeys": [
-        "wood_oak",
-        "fabric_weave"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_03_a_son_named_methuselah/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_03_a_son_named_methuselah/a_establish/enoch_act3_a_background.svg",
             "middleGround": "assets/svg/act_03_a_son_named_methuselah/a_establish/enoch_act3_a_middle_ground.svg",
@@ -179,8 +132,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_03_a_son_named_methuselah/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_03_a_son_named_methuselah/b_core_action/enoch_act3_b_background.svg",
             "middleGround": "assets/svg/act_03_a_son_named_methuselah/b_core_action/enoch_act3_b_middle_ground.svg",
@@ -189,32 +142,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_03_a_son_named_methuselah/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_background.svg",
             "middleGround": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_middle_ground.svg",
             "foreground": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_a_son_named_methuselah/a_establish/enoch_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_a_son_named_methuselah/a_establish/enoch_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_a_son_named_methuselah/a_establish/enoch_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_a_son_named_methuselah/b_core_action/enoch_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_a_son_named_methuselah/b_core_action/enoch_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_a_son_named_methuselah/b_core_action/enoch_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -230,17 +166,11 @@
         "assets/materials/water_still-eddies.svg",
         "assets/materials/leaves-canopy.svg"
       ],
-      "materialKeys": [
-        "grass",
-        "wood_oak",
-        "water_still",
-        "leaves"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_04_years_of_faithfulness/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_04_years_of_faithfulness/a_establish/enoch_act4_a_background.svg",
             "middleGround": "assets/svg/act_04_years_of_faithfulness/a_establish/enoch_act4_a_middle_ground.svg",
@@ -249,8 +179,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_04_years_of_faithfulness/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_04_years_of_faithfulness/b_core_action/enoch_act4_b_background.svg",
             "middleGround": "assets/svg/act_04_years_of_faithfulness/b_core_action/enoch_act4_b_middle_ground.svg",
@@ -259,32 +189,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_04_years_of_faithfulness/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_04_years_of_faithfulness/c_resolve/enoch_act4_c_background.svg",
             "middleGround": "assets/svg/act_04_years_of_faithfulness/c_resolve/enoch_act4_c_middle_ground.svg",
             "foreground": "assets/svg/act_04_years_of_faithfulness/c_resolve/enoch_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_years_of_faithfulness/a_establish/enoch_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_years_of_faithfulness/a_establish/enoch_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_years_of_faithfulness/a_establish/enoch_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_years_of_faithfulness/b_core_action/enoch_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_years_of_faithfulness/b_core_action/enoch_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_years_of_faithfulness/b_core_action/enoch_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_years_of_faithfulness/c_resolve/enoch_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_years_of_faithfulness/c_resolve/enoch_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_years_of_faithfulness/c_resolve/enoch_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -297,14 +210,11 @@
       "materials": [
         "assets/materials/wood_oak-planks3.svg"
       ],
-      "materialKeys": [
-        "wood_oak"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_05_a_warning/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_05_a_warning/a_establish/enoch_act5_a_background.svg",
             "middleGround": "assets/svg/act_05_a_warning/a_establish/enoch_act5_a_middle_ground.svg",
@@ -313,8 +223,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_05_a_warning/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_05_a_warning/b_core_action/enoch_act5_b_background.svg",
             "middleGround": "assets/svg/act_05_a_warning/b_core_action/enoch_act5_b_middle_ground.svg",
@@ -323,32 +233,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_05_a_warning/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_05_a_warning/c_resolve/enoch_act5_c_background.svg",
             "middleGround": "assets/svg/act_05_a_warning/c_resolve/enoch_act5_c_middle_ground.svg",
             "foreground": "assets/svg/act_05_a_warning/c_resolve/enoch_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_a_warning/a_establish/enoch_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_a_warning/a_establish/enoch_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_a_warning/a_establish/enoch_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_a_warning/b_core_action/enoch_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_a_warning/b_core_action/enoch_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_a_warning/b_core_action/enoch_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_a_warning/c_resolve/enoch_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_a_warning/c_resolve/enoch_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_a_warning/c_resolve/enoch_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -363,16 +256,11 @@
         "assets/materials/water_still-eddies.svg",
         "assets/materials/leaves-canopy.svg"
       ],
-      "materialKeys": [
-        "wood_oak",
-        "water_still",
-        "leaves"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_06_walking_with_god/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_06_walking_with_god/a_establish/enoch_act6_a_background.svg",
             "middleGround": "assets/svg/act_06_walking_with_god/a_establish/enoch_act6_a_middle_ground.svg",
@@ -381,8 +269,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_06_walking_with_god/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_06_walking_with_god/b_core_action/enoch_act6_b_background.svg",
             "middleGround": "assets/svg/act_06_walking_with_god/b_core_action/enoch_act6_b_middle_ground.svg",
@@ -391,32 +279,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_06_walking_with_god/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_06_walking_with_god/c_resolve/enoch_act6_c_background.svg",
             "middleGround": "assets/svg/act_06_walking_with_god/c_resolve/enoch_act6_c_middle_ground.svg",
             "foreground": "assets/svg/act_06_walking_with_god/c_resolve/enoch_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_walking_with_god/a_establish/enoch_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_walking_with_god/a_establish/enoch_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_walking_with_god/a_establish/enoch_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_walking_with_god/b_core_action/enoch_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_walking_with_god/b_core_action/enoch_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_walking_with_god/b_core_action/enoch_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_walking_with_god/c_resolve/enoch_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_walking_with_god/c_resolve/enoch_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_walking_with_god/c_resolve/enoch_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -431,16 +302,11 @@
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/leaves-canopy.svg"
       ],
-      "materialKeys": [
-        "stone",
-        "wood_oak",
-        "leaves"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_07_taken/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_07_taken/a_establish/enoch_act7_a_background.svg",
             "middleGround": "assets/svg/act_07_taken/a_establish/enoch_act7_a_middle_ground.svg",
@@ -449,8 +315,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_07_taken/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_07_taken/b_core_action/enoch_act7_b_background.svg",
             "middleGround": "assets/svg/act_07_taken/b_core_action/enoch_act7_b_middle_ground.svg",
@@ -459,32 +325,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_07_taken/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_07_taken/c_resolve/enoch_act7_c_background.svg",
             "middleGround": "assets/svg/act_07_taken/c_resolve/enoch_act7_c_middle_ground.svg",
             "foreground": "assets/svg/act_07_taken/c_resolve/enoch_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_07_taken/a_establish/enoch_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_taken/a_establish/enoch_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_taken/a_establish/enoch_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_07_taken/b_core_action/enoch_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_taken/b_core_action/enoch_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_taken/b_core_action/enoch_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_07_taken/c_resolve/enoch_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_taken/c_resolve/enoch_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_taken/c_resolve/enoch_act7_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

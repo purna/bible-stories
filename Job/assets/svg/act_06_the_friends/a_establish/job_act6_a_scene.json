@@ -3,13 +3,13 @@
   "act": 6,
   "chapter": "Ch.6 · The Friends",
   "artSource": "art/act6_the_friends.md",
-  "artFolder": "assets/svg/act_06_the_friends",
+  "artFolder": "act_06_the_friends",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "desert_sand-dunes.svg",
-    "fabric_weave-basket.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/fabric_weave-basket.svg"
   ],
   "layers": {
     "background": "job_act6_a_background.svg",

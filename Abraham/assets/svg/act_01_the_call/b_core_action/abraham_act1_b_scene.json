@@ -3,16 +3,14 @@
   "act": 1,
   "chapter": "The Call",
   "artSource": "art/act1_the_call.md",
-  "artFolder": "assets/svg/act_01_the_call",
+  "artFolder": "act_01_the_call",
   "sceneId": "",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "desert_sand-dunes.svg",
-    "leaves-canopy.svg",
-    "leaves-scatter.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/leaves-canopy.svg"
   ],
   "layers": {
     "background": "abraham_act1_b_background.svg",

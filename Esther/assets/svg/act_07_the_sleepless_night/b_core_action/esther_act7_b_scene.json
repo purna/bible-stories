@@ -3,15 +3,14 @@
   "act": 7,
   "chapter": "Ch.7 · The Sleepless Night",
   "artSource": "art/act7_the_sleepless_night.md",
-  "artFolder": "assets/svg/act_07_the_sleepless_night",
+  "artFolder": "act_07_the_sleepless_night",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "hammered_gold-hammered.svg",
-    "mosaic-chips.svg",
-    "mosaic-grid.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/mosaic-chips.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "esther_act7_b_background.svg",

@@ -3,12 +3,12 @@
   "act": 2,
   "chapter": "Ch.2 · The Summons",
   "artSource": "art/act2_the_summons.md",
-  "artFolder": "assets/svg/act_02_the_summons",
+  "artFolder": "act_02_the_summons",
   "sceneId": "",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "grass-tufts.svg"
+    "assets/materials/grass-tufts.svg"
   ],
   "layers": {
     "background": "deborah_act2_c_background.svg",

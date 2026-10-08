@@ -3,14 +3,13 @@
   "act": 1,
   "chapter": "Ch.1 · Be Strong",
   "artSource": "art/act1_be_strong.md",
-  "artFolder": "assets/svg/act_01_be_strong",
+  "artFolder": "act_01_be_strong",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "desert_sand-dunes.svg",
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/water_fast-churn.svg"
   ],
   "layers": {
     "background": "joshua_act1_b_background.svg",

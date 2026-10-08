@@ -3,16 +3,13 @@
   "act": 8,
   "chapter": "Ch.8 · The Wall Completed",
   "artSource": "art/act8_the_wall_completed.md",
-  "artFolder": "assets/svg/act_08_the_wall_completed",
+  "artFolder": "act_08_the_wall_completed",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "nehemiah_act8_b_background.svg",

@@ -3,18 +3,14 @@
   "act": 9,
   "chapter": "Ch.9 · The Book Read",
   "artSource": "art/act9_the_book_read.md",
-  "artFolder": "assets/svg/act_09_the_book_read",
+  "artFolder": "act_09_the_book_read",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "nehemiah_act9_c_background.svg",

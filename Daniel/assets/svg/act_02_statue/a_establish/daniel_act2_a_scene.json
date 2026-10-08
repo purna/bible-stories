@@ -3,19 +3,14 @@
   "act": 2,
   "chapter": "The Dream",
   "artSource": "art/act2_statue.md",
-  "artFolder": "assets/svg/act_02_statue",
+  "artFolder": "act_02_statue",
   "sceneId": "throne_room",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "hammered_gold-hammered.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "stone_texture.svg",
-    "temple-flagstone.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "daniel_act2_a_background.svg",

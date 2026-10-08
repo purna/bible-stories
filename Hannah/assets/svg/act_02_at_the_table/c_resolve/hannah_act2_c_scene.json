@@ -3,14 +3,13 @@
   "act": 2,
   "chapter": "Ch.2 · At the Table",
   "artSource": "art/act2_at_the_table.md",
-  "artFolder": "assets/svg/act_02_at_the_table",
+  "artFolder": "act_02_at_the_table",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "hammered_gold-hammered.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/hammered_gold-hammered.svg"
   ],
   "layers": {
     "background": "hannah_act2_c_background.svg",

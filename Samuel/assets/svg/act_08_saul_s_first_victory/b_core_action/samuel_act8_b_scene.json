@@ -3,12 +3,12 @@
   "act": 8,
   "chapter": "Ch.8 · Saul’s First Victory",
   "artSource": "art/act8_saul_s_first_victory.md",
-  "artFolder": "assets/svg/act_08_saul_s_first_victory",
+  "artFolder": "act_08_saul_s_first_victory",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "grass-tufts.svg"
+    "assets/materials/grass-tufts.svg"
   ],
   "layers": {
     "background": "samuel_act8_b_background.svg",

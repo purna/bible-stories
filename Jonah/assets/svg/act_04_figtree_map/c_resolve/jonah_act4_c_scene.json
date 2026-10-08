@@ -3,14 +3,13 @@
   "act": 4,
   "chapter": "Prayer Below",
   "artSource": "art/act4_figtree_map.md",
-  "artFolder": "assets/svg/act_04_figtree_map",
+  "artFolder": "act_04_figtree_map",
   "sceneId": "",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "desert_sand-dunes.svg",
-    "leaves-canopy.svg",
-    "leaves-scatter.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/leaves-canopy.svg"
   ],
   "layers": {
     "background": "jonah_act4_c_background.svg",

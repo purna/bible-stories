@@ -3,12 +3,12 @@
   "act": 8,
   "chapter": "Ch.8 · The Servant",
   "artSource": "art/act8_the_servant.md",
-  "artFolder": "assets/svg/act_08_the_servant",
+  "artFolder": "act_08_the_servant",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "desert_sand-dunes.svg"
+    "assets/materials/desert_sand-dunes.svg"
   ],
   "layers": {
     "background": "isaiah_act8_b_background.svg",

@@ -3,17 +3,13 @@
   "act": 1,
   "chapter": "Let There Be Light",
   "artSource": "art/act1_creation.md",
-  "artFolder": "assets/svg/act_01_creation",
+  "artFolder": "act_01_creation",
   "sceneId": "creation_cosmos",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "gourd-vine-leaves.svg",
-    "leaves-canopy.svg",
-    "leaves-scatter.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg",
-    "wood_texture.svg"
+    "assets/materials/leaves-canopy.svg",
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "adam_act1_b_background.svg",

@@ -3,13 +3,13 @@
   "act": 10,
   "chapter": "Ch.10 · Joseph’s Coats",
   "artSource": "art/act10_joseph_s_coats.md",
-  "artFolder": "assets/svg/act_10_joseph_s_coats",
+  "artFolder": "act_10_joseph_s_coats",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "fabric_weave-basket.svg",
-    "grass-tufts.svg"
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/grass-tufts.svg"
   ],
   "layers": {
     "background": "jacob_act10_a_background.svg",

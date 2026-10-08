@@ -1141,3 +1141,6 @@ html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: 
   transition: transform .08s linear;
   will-change: transform;
 }
+
+#abrahamHomeLink{position:fixed;z-index:1200;top:12px;right:14px;padding:8px 13px;border:2px solid #17120d;border-radius:8px;background:#f0c769;color:#21170e;font:800 13px/1 Nunito,sans-serif;text-decoration:none;box-shadow:3px 3px 0 #17120d}
+#abrahamHomeLink:hover{background:#ffe08b}

@@ -3,12 +3,12 @@
   "act": 6,
   "chapter": "Ch.6 · Bread in the Wilderness",
   "artSource": "art/act6_bread.md",
-  "artFolder": "assets/svg/act_06_bread",
+  "artFolder": "act_06_bread",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "desert_sand-dunes.svg"
+    "assets/materials/desert_sand-dunes.svg"
   ],
   "layers": {
     "background": "moses_act6_b_background.svg",

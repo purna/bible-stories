@@ -28,10 +28,6 @@
         "assets/materials/leaves-canopy.svg",
         "assets/materials/wood_oak-planks3.svg"
       ],
-      "materialKeys": [
-        "leaves",
-        "wood_oak"
-      ],
       "beats": [
         {
           "id": "A",
@@ -63,24 +59,7 @@
             "foreground": "assets/svg/act_01_creation/c_resolve/adam_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_creation/a_establish/adam_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_creation/a_establish/adam_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_creation/a_establish/adam_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_creation/b_core_action/adam_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_creation/b_core_action/adam_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_creation/b_core_action/adam_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_creation/c_resolve/adam_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_creation/c_resolve/adam_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_creation/c_resolve/adam_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -94,11 +73,6 @@
         "assets/materials/leaves-canopy.svg",
         "assets/materials/water_still-eddies.svg",
         "assets/materials/wood_oak-planks3.svg"
-      ],
-      "materialKeys": [
-        "leaves",
-        "water_still",
-        "wood_oak"
       ],
       "beats": [
         {
@@ -131,24 +105,7 @@
             "foreground": "assets/svg/act_02_garden/c_resolve/adam_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_garden/a_establish/adam_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_garden/a_establish/adam_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_garden/a_establish/adam_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_garden/b_core_action/adam_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_garden/b_core_action/adam_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_garden/b_core_action/adam_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_garden/c_resolve/adam_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_garden/c_resolve/adam_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_garden/c_resolve/adam_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -165,14 +122,6 @@
         "assets/materials/stone-flagstone.svg",
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/fabric_weave-basket.svg"
-      ],
-      "materialKeys": [
-        "leaves",
-        "grass",
-        "water_still",
-        "stone",
-        "wood_oak",
-        "fabric_weave"
       ],
       "beats": [
         {
@@ -205,24 +154,7 @@
             "foreground": "assets/svg/act_03_helper/c_resolve/adam_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_helper/a_establish/adam_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_helper/a_establish/adam_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_helper/a_establish/adam_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_helper/b_core_action/adam_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_helper/b_core_action/adam_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_helper/b_core_action/adam_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_helper/c_resolve/adam_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_helper/c_resolve/adam_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_helper/c_resolve/adam_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -237,12 +169,6 @@
         "assets/materials/water_still-eddies.svg",
         "assets/materials/stone-flagstone.svg",
         "assets/materials/wood_oak-planks3.svg"
-      ],
-      "materialKeys": [
-        "leaves",
-        "water_still",
-        "stone",
-        "wood_oak"
       ],
       "beats": [
         {
@@ -275,24 +201,7 @@
             "foreground": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_temptation/a_establish/adam_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_temptation/a_establish/adam_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_temptation/a_establish/adam_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -305,10 +214,6 @@
       "materials": [
         "assets/materials/leaves-canopy.svg",
         "assets/materials/wood_oak-planks3.svg"
-      ],
-      "materialKeys": [
-        "leaves",
-        "wood_oak"
       ],
       "beats": [
         {
@@ -341,24 +246,7 @@
             "foreground": "assets/svg/act_05_exile/c_resolve/adam_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_exile/a_establish/adam_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_exile/a_establish/adam_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_exile/a_establish/adam_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_exile/b_core_action/adam_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_exile/b_core_action/adam_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_exile/b_core_action/adam_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_exile/c_resolve/adam_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_exile/c_resolve/adam_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_exile/c_resolve/adam_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -373,12 +261,6 @@
         "assets/materials/grass-tufts.svg",
         "assets/materials/water_still-eddies.svg",
         "assets/materials/wood_oak-planks3.svg"
-      ],
-      "materialKeys": [
-        "leaves",
-        "grass",
-        "water_still",
-        "wood_oak"
       ],
       "beats": [
         {
@@ -411,24 +293,7 @@
             "foreground": "assets/svg/act_06_west/c_resolve/adam_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_west/a_establish/adam_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_west/a_establish/adam_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_west/a_establish/adam_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_west/b_core_action/adam_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_west/b_core_action/adam_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_west/b_core_action/adam_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_west/c_resolve/adam_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_west/c_resolve/adam_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_west/c_resolve/adam_act6_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

@@ -3,16 +3,13 @@
   "act": 5,
   "chapter": "Ch.5 · Sword and Trowel",
   "artSource": "art/act5_sword_and_trowel.md",
-  "artFolder": "assets/svg/act_05_sword_and_trowel",
+  "artFolder": "act_05_sword_and_trowel",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "nehemiah_act5_c_background.svg",

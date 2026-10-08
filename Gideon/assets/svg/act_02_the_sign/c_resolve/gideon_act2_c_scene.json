@@ -3,15 +3,15 @@
   "act": 2,
   "chapter": "Ch.2 · The Sign",
   "artSource": "art/act2_the_sign.md",
-  "artFolder": "assets/svg/act_02_the_sign",
+  "artFolder": "act_02_the_sign",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "clay_jar-stretcher.svg",
-    "rock_surface-hewn.svg",
-    "torch_flame-flames.svg",
-    "wheat_stalks-field.svg"
+    "assets/materials/wheat_stalks-field.svg",
+    "assets/materials/rock_surface-hewn.svg",
+    "assets/materials/clay_jar-stretcher.svg",
+    "assets/materials/torch_flame-flames.svg"
   ],
   "layers": {
     "background": "gideon_act2_c_background.svg",

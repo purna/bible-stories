@@ -3,14 +3,13 @@
   "act": 10,
   "chapter": "Ch.10 · Purim",
   "artSource": "art/act10_purim.md",
-  "artFolder": "assets/svg/act_10_purim",
+  "artFolder": "act_10_purim",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "esther_act10_c_background.svg",

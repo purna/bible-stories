@@ -3,13 +3,12 @@
   "act": 3,
   "chapter": "Ch.3 · Bethel",
   "artSource": "art/act3_bethel.md",
-  "artFolder": "assets/svg/act_03_bethel",
+  "artFolder": "act_03_bethel",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "jacob_act3_b_background.svg",

@@ -3,12 +3,12 @@
   "act": 6,
   "chapter": "Ch.6 · The Yoke",
   "artSource": "art/act6_the_yoke.md",
-  "artFolder": "assets/svg/act_06_the_yoke",
+  "artFolder": "act_06_the_yoke",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "wood_dark-plank.svg"
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "jeremiah_act6_b_background.svg",

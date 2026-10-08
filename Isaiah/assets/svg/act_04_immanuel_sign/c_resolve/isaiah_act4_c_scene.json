@@ -3,12 +3,12 @@
   "act": 4,
   "chapter": "Ch.4 · Immanuel Sign",
   "artSource": "art/act4_immanuel_sign.md",
-  "artFolder": "assets/svg/act_04_immanuel_sign",
+  "artFolder": "act_04_immanuel_sign",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "desert_sand-dunes.svg"
+    "assets/materials/desert_sand-dunes.svg"
   ],
   "layers": {
     "background": "isaiah_act4_c_background.svg",

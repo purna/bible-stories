@@ -3,13 +3,12 @@
   "act": 6,
   "chapter": "Ch.6 · Abigail",
   "artSource": "art/act6_abigail.md",
-  "artFolder": "assets/svg/act_06_abigail",
+  "artFolder": "act_06_abigail",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "david_act6_c_background.svg",

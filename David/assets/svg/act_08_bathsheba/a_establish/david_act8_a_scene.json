@@ -3,13 +3,12 @@
   "act": 8,
   "chapter": "Ch.8 · Bathsheba and Uriah",
   "artSource": "art/act8_bathsheba.md",
-  "artFolder": "assets/svg/act_08_bathsheba",
+  "artFolder": "act_08_bathsheba",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "david_act8_a_background.svg",

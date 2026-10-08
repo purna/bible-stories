@@ -3,12 +3,12 @@
   "act": 7,
   "chapter": "Ch.7 · Comfort My People",
   "artSource": "art/act7_comfort_my_people.md",
-  "artFolder": "assets/svg/act_07_comfort_my_people",
+  "artFolder": "act_07_comfort_my_people",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "desert_sand-dunes.svg"
+    "assets/materials/desert_sand-dunes.svg"
   ],
   "layers": {
     "background": "isaiah_act7_a_background.svg",

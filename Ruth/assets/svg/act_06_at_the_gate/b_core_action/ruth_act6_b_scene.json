@@ -3,13 +3,12 @@
   "act": 6,
   "chapter": "Ch.6 · At the Gate",
   "artSource": "art/act6_at_the_gate.md",
-  "artFolder": "assets/svg/act_06_at_the_gate",
+  "artFolder": "act_06_at_the_gate",
   "sceneId": "at_the_gate",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "ruth_act6_b_background.svg",

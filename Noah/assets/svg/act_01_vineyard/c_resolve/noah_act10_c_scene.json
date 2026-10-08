@@ -3,15 +3,14 @@
   "act": 10,
   "chapter": "Ch.10 · The Vineyard",
   "artSource": "art/act10_vineyard.md",
-  "artFolder": "assets/svg/act_01_vineyard",
+  "artFolder": "act_01_vineyard",
   "sceneId": "ch10_noah_plants",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "fabric_weave-basket.svg",
-    "leaves-canopy.svg",
-    "leaves-scatter.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/wood_dark-plank.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/leaves-canopy.svg"
   ],
   "layers": {
     "background": "noah_act10_c_background.svg",

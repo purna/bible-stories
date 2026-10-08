@@ -3,16 +3,15 @@
   "act": 12,
   "chapter": "Ch.12 · The Spies and Rebellion",
   "artSource": "art/act12_spies.md",
-  "artFolder": "assets/svg/act_12_spies",
+  "artFolder": "act_12_spies",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "bulrush_basket-woven.svg",
-    "desert_sand-dunes.svg",
-    "egypt_mud_brick-stretcher.svg",
-    "stone-rough.svg",
-    "stone_tablets-hewn.svg"
+    "assets/materials/egypt_mud_brick-stretcher.svg",
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/bulrush_basket-woven.svg",
+    "assets/materials/stone_tablets-hewn.svg"
   ],
   "layers": {
     "background": "moses_act12_b_background.svg",

@@ -3,13 +3,12 @@
   "act": 4,
   "chapter": "Ch.4 · The Prison",
   "artSource": "art/act4_the_prison.md",
-  "artFolder": "assets/svg/act_04_the_prison",
+  "artFolder": "act_04_the_prison",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "joseph_act4_c_background.svg",

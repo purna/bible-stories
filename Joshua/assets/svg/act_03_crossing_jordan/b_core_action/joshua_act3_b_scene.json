@@ -3,16 +3,14 @@
   "act": 3,
   "chapter": "Ch.3 · Crossing Jordan",
   "artSource": "art/act3_crossing_jordan.md",
-  "artFolder": "assets/svg/act_03_crossing_jordan",
+  "artFolder": "act_03_crossing_jordan",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "joshua_act3_b_background.svg",

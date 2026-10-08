@@ -27,14 +27,11 @@
       "materials": [
         "assets/materials/stone-flagstone.svg"
       ],
-      "materialKeys": [
-        "stone"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_01_under_the_palm/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_01_under_the_palm/a_establish/deborah_act1_a_background.svg",
             "middleGround": "assets/svg/act_01_under_the_palm/a_establish/deborah_act1_a_middle_ground.svg",
@@ -43,8 +40,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_01_under_the_palm/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_01_under_the_palm/b_core_action/deborah_act1_b_background.svg",
             "middleGround": "assets/svg/act_01_under_the_palm/b_core_action/deborah_act1_b_middle_ground.svg",
@@ -53,32 +50,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_01_under_the_palm/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_background.svg",
             "middleGround": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_middle_ground.svg",
             "foreground": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_under_the_palm/a_establish/deborah_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_under_the_palm/a_establish/deborah_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_under_the_palm/a_establish/deborah_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_under_the_palm/b_core_action/deborah_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_under_the_palm/b_core_action/deborah_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_under_the_palm/b_core_action/deborah_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -91,14 +71,11 @@
       "materials": [
         "assets/materials/grass-tufts.svg"
       ],
-      "materialKeys": [
-        "grass"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_02_the_summons/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_02_the_summons/a_establish/deborah_act2_a_background.svg",
             "middleGround": "assets/svg/act_02_the_summons/a_establish/deborah_act2_a_middle_ground.svg",
@@ -107,8 +84,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_02_the_summons/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_02_the_summons/b_core_action/deborah_act2_b_background.svg",
             "middleGround": "assets/svg/act_02_the_summons/b_core_action/deborah_act2_b_middle_ground.svg",
@@ -117,32 +94,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_02_the_summons/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_background.svg",
             "middleGround": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_middle_ground.svg",
             "foreground": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_the_summons/a_establish/deborah_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_the_summons/a_establish/deborah_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_summons/a_establish/deborah_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_the_summons/b_core_action/deborah_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_the_summons/b_core_action/deborah_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_summons/b_core_action/deborah_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -155,14 +115,11 @@
       "materials": [
         "assets/materials/wood_oak-planks3.svg"
       ],
-      "materialKeys": [
-        "wood_oak"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_03_gather_at_tabor/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_03_gather_at_tabor/a_establish/deborah_act3_a_background.svg",
             "middleGround": "assets/svg/act_03_gather_at_tabor/a_establish/deborah_act3_a_middle_ground.svg",
@@ -171,8 +128,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_03_gather_at_tabor/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_03_gather_at_tabor/b_core_action/deborah_act3_b_background.svg",
             "middleGround": "assets/svg/act_03_gather_at_tabor/b_core_action/deborah_act3_b_middle_ground.svg",
@@ -181,32 +138,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_03_gather_at_tabor/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_03_gather_at_tabor/c_resolve/deborah_act3_c_background.svg",
             "middleGround": "assets/svg/act_03_gather_at_tabor/c_resolve/deborah_act3_c_middle_ground.svg",
             "foreground": "assets/svg/act_03_gather_at_tabor/c_resolve/deborah_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_gather_at_tabor/a_establish/deborah_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_gather_at_tabor/a_establish/deborah_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_gather_at_tabor/a_establish/deborah_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_gather_at_tabor/b_core_action/deborah_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_gather_at_tabor/b_core_action/deborah_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_gather_at_tabor/b_core_action/deborah_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_gather_at_tabor/c_resolve/deborah_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_gather_at_tabor/c_resolve/deborah_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_gather_at_tabor/c_resolve/deborah_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -221,16 +161,11 @@
         "assets/materials/stone-flagstone.svg",
         "assets/materials/water_fast-churn.svg"
       ],
-      "materialKeys": [
-        "wall_brick",
-        "stone",
-        "water_fast"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_04_the_storm/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_04_the_storm/a_establish/deborah_act4_a_background.svg",
             "middleGround": "assets/svg/act_04_the_storm/a_establish/deborah_act4_a_middle_ground.svg",
@@ -239,8 +174,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_04_the_storm/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_04_the_storm/b_core_action/deborah_act4_b_background.svg",
             "middleGround": "assets/svg/act_04_the_storm/b_core_action/deborah_act4_b_middle_ground.svg",
@@ -249,32 +184,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_04_the_storm/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_background.svg",
             "middleGround": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_middle_ground.svg",
             "foreground": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_the_storm/a_establish/deborah_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_the_storm/a_establish/deborah_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_storm/a_establish/deborah_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_the_storm/b_core_action/deborah_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_the_storm/b_core_action/deborah_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_storm/b_core_action/deborah_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -290,17 +208,11 @@
         "assets/materials/grass-tufts.svg",
         "assets/materials/water_fast-churn.svg"
       ],
-      "materialKeys": [
-        "fabric_weave",
-        "wood_oak",
-        "grass",
-        "water_fast"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_05_sisera_flees/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_05_sisera_flees/a_establish/deborah_act5_a_background.svg",
             "middleGround": "assets/svg/act_05_sisera_flees/a_establish/deborah_act5_a_middle_ground.svg",
@@ -309,8 +221,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_05_sisera_flees/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_05_sisera_flees/b_core_action/deborah_act5_b_background.svg",
             "middleGround": "assets/svg/act_05_sisera_flees/b_core_action/deborah_act5_b_middle_ground.svg",
@@ -319,32 +231,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_05_sisera_flees/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_05_sisera_flees/c_resolve/deborah_act5_c_background.svg",
             "middleGround": "assets/svg/act_05_sisera_flees/c_resolve/deborah_act5_c_middle_ground.svg",
             "foreground": "assets/svg/act_05_sisera_flees/c_resolve/deborah_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_sisera_flees/a_establish/deborah_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_sisera_flees/a_establish/deborah_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sisera_flees/a_establish/deborah_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_sisera_flees/b_core_action/deborah_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_sisera_flees/b_core_action/deborah_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sisera_flees/b_core_action/deborah_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_sisera_flees/c_resolve/deborah_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_sisera_flees/c_resolve/deborah_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sisera_flees/c_resolve/deborah_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -359,16 +254,11 @@
         "assets/materials/wood_oak-planks3.svg",
         "assets/materials/stone-flagstone.svg"
       ],
-      "materialKeys": [
-        "fabric_weave",
-        "wood_oak",
-        "stone"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_06_jael_s_choice/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_06_jael_s_choice/a_establish/deborah_act6_a_background.svg",
             "middleGround": "assets/svg/act_06_jael_s_choice/a_establish/deborah_act6_a_middle_ground.svg",
@@ -377,8 +267,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_06_jael_s_choice/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_06_jael_s_choice/b_core_action/deborah_act6_b_background.svg",
             "middleGround": "assets/svg/act_06_jael_s_choice/b_core_action/deborah_act6_b_middle_ground.svg",
@@ -387,32 +277,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_06_jael_s_choice/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_background.svg",
             "middleGround": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_middle_ground.svg",
             "foreground": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_jael_s_choice/a_establish/deborah_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_jael_s_choice/a_establish/deborah_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_jael_s_choice/a_establish/deborah_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_jael_s_choice/b_core_action/deborah_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_jael_s_choice/b_core_action/deborah_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_jael_s_choice/b_core_action/deborah_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -425,14 +298,11 @@
       "materials": [
         "assets/materials/water_fast-churn.svg"
       ],
-      "materialKeys": [
-        "water_fast"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_07_the_song/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_07_the_song/a_establish/deborah_act7_a_background.svg",
             "middleGround": "assets/svg/act_07_the_song/a_establish/deborah_act7_a_middle_ground.svg",
@@ -441,8 +311,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_07_the_song/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_07_the_song/b_core_action/deborah_act7_b_background.svg",
             "middleGround": "assets/svg/act_07_the_song/b_core_action/deborah_act7_b_middle_ground.svg",
@@ -451,32 +321,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_07_the_song/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_07_the_song/c_resolve/deborah_act7_c_background.svg",
             "middleGround": "assets/svg/act_07_the_song/c_resolve/deborah_act7_c_middle_ground.svg",
             "foreground": "assets/svg/act_07_the_song/c_resolve/deborah_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_07_the_song/a_establish/deborah_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_the_song/a_establish/deborah_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_the_song/a_establish/deborah_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_07_the_song/b_core_action/deborah_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_the_song/b_core_action/deborah_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_the_song/b_core_action/deborah_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_07_the_song/c_resolve/deborah_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_the_song/c_resolve/deborah_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_the_song/c_resolve/deborah_act7_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

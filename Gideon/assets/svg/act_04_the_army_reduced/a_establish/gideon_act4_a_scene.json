@@ -3,13 +3,13 @@
   "act": 4,
   "chapter": "Ch.4 · The Army Reduced",
   "artSource": "art/act4_the_army_reduced.md",
-  "artFolder": "assets/svg/act_04_the_army_reduced",
+  "artFolder": "act_04_the_army_reduced",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "sword_iron-blade.svg",
-    "water_ripple-ripples.svg"
+    "assets/materials/water_ripple-ripples.svg",
+    "assets/materials/sword_iron-blade.svg"
   ],
   "layers": {
     "background": "gideon_act4_a_background.svg",

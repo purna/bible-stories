@@ -3,17 +3,15 @@
   "act": 5,
   "chapter": "Ch.5 · Sisera Flees",
   "artSource": "art/act5_sisera_flees.md",
-  "artFolder": "assets/svg/act_05_sisera_flees",
+  "artFolder": "act_05_sisera_flees",
   "sceneId": "",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "fabric_weave-basket.svg",
-    "grass-tufts.svg",
-    "water_fast-churn.svg",
-    "water_fast-rapids.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/grass-tufts.svg",
+    "assets/materials/water_fast-churn.svg"
   ],
   "layers": {
     "background": "deborah_act5_b_background.svg",

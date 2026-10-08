@@ -3,18 +3,14 @@
   "act": 3,
   "chapter": "Ch.3 · Night Inspection",
   "artSource": "art/act3_night_inspection.md",
-  "artFolder": "assets/svg/act_03_night_inspection",
+  "artFolder": "act_03_night_inspection",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg"
   ],
   "layers": {
     "background": "nehemiah_act3_b_background.svg",

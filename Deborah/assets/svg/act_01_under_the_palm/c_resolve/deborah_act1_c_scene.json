@@ -3,13 +3,12 @@
   "act": 1,
   "chapter": "Ch.1 · Under the Palm",
   "artSource": "art/act1_under_the_palm.md",
-  "artFolder": "assets/svg/act_01_under_the_palm",
+  "artFolder": "act_01_under_the_palm",
   "sceneId": "",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "deborah_act1_c_background.svg",

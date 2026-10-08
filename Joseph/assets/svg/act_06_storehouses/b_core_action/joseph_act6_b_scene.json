@@ -3,17 +3,14 @@
   "act": 6,
   "chapter": "Ch.6 · Storehouses",
   "artSource": "art/act6_storehouses.md",
-  "artFolder": "assets/svg/act_06_storehouses",
+  "artFolder": "act_06_storehouses",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "egypt_mud_brick-stretcher.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/egypt_mud_brick-stretcher.svg"
   ],
   "layers": {
     "background": "joseph_act6_b_background.svg",

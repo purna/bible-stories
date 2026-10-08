@@ -3,23 +3,15 @@
   "act": 5,
   "chapter": "The Den",
   "artSource": "art/act5_den.md",
-  "artFolder": "assets/svg/act_05_den",
+  "artFolder": "act_05_den",
   "sceneId": "persian_court",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "broken-tile-mosaic.svg",
-    "hammered_gold-hammered.svg",
-    "mosaic-chips.svg",
-    "mosaic-grid.svg",
-    "palace-mosaic-floor.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "stone_texture.svg",
-    "temple-flagstone.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/mosaic-chips.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "daniel_act5_a_background.svg",

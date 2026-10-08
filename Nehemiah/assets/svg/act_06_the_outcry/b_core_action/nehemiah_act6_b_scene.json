@@ -3,21 +3,17 @@
   "act": 6,
   "chapter": "Ch.6 · The Outcry",
   "artSource": "art/act6_the_outcry.md",
-  "artFolder": "assets/svg/act_06_the_outcry",
+  "artFolder": "act_06_the_outcry",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "desert_sand-dunes.svg",
-    "fabric_weave-basket.svg",
-    "hammered_gold-hammered.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/desert_sand-dunes.svg"
   ],
   "layers": {
     "background": "nehemiah_act6_b_background.svg",

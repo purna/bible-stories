@@ -3,17 +3,15 @@
   "act": 1,
   "chapter": "Ch.1 · The Banquet",
   "artSource": "art/act1_the_banquet.md",
-  "artFolder": "assets/svg/act_01_the_banquet",
+  "artFolder": "act_01_the_banquet",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "hammered_gold-hammered.svg",
-    "mosaic-chips.svg",
-    "mosaic-grid.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/mosaic-chips.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_dark-plank.svg"
   ],
   "layers": {
     "background": "esther_act1_a_background.svg",

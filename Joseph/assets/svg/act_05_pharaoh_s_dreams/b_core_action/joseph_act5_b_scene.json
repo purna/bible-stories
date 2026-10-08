@@ -3,14 +3,13 @@
   "act": 5,
   "chapter": "Ch.5 · Pharaoh’s Dreams",
   "artSource": "art/act5_pharaoh_s_dreams.md",
-  "artFolder": "assets/svg/act_05_pharaoh_s_dreams",
+  "artFolder": "act_05_pharaoh_s_dreams",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "hammered_gold-hammered.svg",
-    "mosaic-chips.svg",
-    "mosaic-grid.svg"
+    "assets/materials/mosaic-chips.svg",
+    "assets/materials/hammered_gold-hammered.svg"
   ],
   "layers": {
     "background": "joseph_act5_b_background.svg",

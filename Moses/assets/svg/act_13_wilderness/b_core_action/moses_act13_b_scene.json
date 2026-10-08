@@ -3,15 +3,14 @@
   "act": 13,
   "chapter": "Ch.13 · The Long Wilderness",
   "artSource": "art/act13_wilderness.md",
-  "artFolder": "assets/svg/act_13_wilderness",
+  "artFolder": "act_13_wilderness",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "bulrush_basket-woven.svg",
-    "desert_sand-dunes.svg",
-    "stone-rough.svg",
-    "stone_tablets-hewn.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/bulrush_basket-woven.svg",
+    "assets/materials/stone_tablets-hewn.svg"
   ],
   "layers": {
     "background": "moses_act13_b_background.svg",

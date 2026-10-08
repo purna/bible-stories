@@ -3,21 +3,17 @@
   "act": 4,
   "chapter": "Ch.4 · The Scroll",
   "artSource": "art/act4_the_scroll.md",
-  "artFolder": "assets/svg/act_04_the_scroll",
+  "artFolder": "act_04_the_scroll",
   "sceneId": "placeholder",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "desert_sand-dunes.svg",
-    "fabric_weave-basket.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg",
-    "wood_dark-plank.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_dark-plank.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "jeremiah_act4_b_background.svg",

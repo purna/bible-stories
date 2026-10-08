@@ -317,6 +317,15 @@
           "assets/materials/wood_oak-planks3.svg"
         ]
       }
+    ],
+    "bonusStories": [
+      {
+        "id": "babel",
+        "title": "The Tower of Babel",
+        "references": "Genesis 11:1–9",
+        "entry": "Babel/index.html",
+        "chapters": 5
+      }
     ]
   }
 }

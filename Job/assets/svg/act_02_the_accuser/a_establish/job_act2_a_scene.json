@@ -3,20 +3,17 @@
   "act": 2,
   "chapter": "Ch.2 · The Accuser",
   "artSource": "art/act2_the_accuser.md",
-  "artFolder": "assets/svg/act_02_the_accuser",
+  "artFolder": "act_02_the_accuser",
   "sceneId": "placeholder",
   "beat": "A",
   "beatName": "Establish",
   "materials": [
-    "desert_sand-dunes.svg",
-    "fabric_weave-basket.svg",
-    "grass-tufts.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "water_still-calm.svg",
-    "water_still-eddies.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/grass-tufts.svg",
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "job_act2_a_background.svg",

@@ -3,17 +3,14 @@
   "act": 7,
   "chapter": "Ch.7 · Taken",
   "artSource": "art/act7_taken.md",
-  "artFolder": "assets/svg/act_07_taken",
+  "artFolder": "act_07_taken",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "leaves-canopy.svg",
-    "leaves-scatter.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "wood_oak-plank.svg",
-    "wood_oak-planks3.svg"
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/leaves-canopy.svg"
   ],
   "layers": {
     "background": "enoch_act7_c_background.svg",

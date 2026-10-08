@@ -3,14 +3,13 @@
   "act": 1,
   "chapter": "Ch.1 · The Coloured Robe",
   "artSource": "art/act1_the_coloured_robe.md",
-  "artFolder": "assets/svg/act_01_the_coloured_robe",
+  "artFolder": "act_01_the_coloured_robe",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "fabric_dots-grid.svg",
-    "fabric_dots-scatterMix.svg",
-    "hammered_gold-hammered.svg"
+    "assets/materials/fabric_dots-scatterMix.svg",
+    "assets/materials/hammered_gold-hammered.svg"
   ],
   "layers": {
     "background": "joseph_act1_c_background.svg",

@@ -27,14 +27,11 @@
       "materials": [
         "assets/materials/wheat_stalks-field.svg"
       ],
-      "materialKeys": [
-        "wheat_stalks"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_01_the_winepress/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_background.svg",
             "middleGround": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_middle_ground.svg",
@@ -43,8 +40,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_01_the_winepress/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_background.svg",
             "middleGround": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_middle_ground.svg",
@@ -53,32 +50,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_01_the_winepress/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_background.svg",
             "middleGround": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_middle_ground.svg",
             "foreground": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 2,
@@ -94,17 +74,11 @@
         "assets/materials/clay_jar-stretcher.svg",
         "assets/materials/torch_flame-flames.svg"
       ],
-      "materialKeys": [
-        "wheat_stalks",
-        "rock_surface",
-        "clay_jar",
-        "torch_flame"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_02_the_sign/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_background.svg",
             "middleGround": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_middle_ground.svg",
@@ -113,8 +87,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_02_the_sign/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_background.svg",
             "middleGround": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_middle_ground.svg",
@@ -123,32 +97,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_02_the_sign/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_background.svg",
             "middleGround": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_middle_ground.svg",
             "foreground": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 3,
@@ -163,16 +120,11 @@
         "assets/materials/torch_flame-flames.svg",
         "assets/materials/tent_fabric-basket.svg"
       ],
-      "materialKeys": [
-        "wool_fleece",
-        "torch_flame",
-        "tent_fabric"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_03_the_fleece/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_background.svg",
             "middleGround": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_middle_ground.svg",
@@ -181,8 +133,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_03_the_fleece/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_background.svg",
             "middleGround": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_middle_ground.svg",
@@ -191,32 +143,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_03_the_fleece/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_background.svg",
             "middleGround": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_middle_ground.svg",
             "foreground": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 4,
@@ -230,15 +165,11 @@
         "assets/materials/water_ripple-ripples.svg",
         "assets/materials/sword_iron-blade.svg"
       ],
-      "materialKeys": [
-        "water_ripple",
-        "sword_iron"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_04_the_army_reduced/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_background.svg",
             "middleGround": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_middle_ground.svg",
@@ -247,8 +178,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_04_the_army_reduced/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_background.svg",
             "middleGround": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_middle_ground.svg",
@@ -257,32 +188,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_04_the_army_reduced/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_background.svg",
             "middleGround": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_middle_ground.svg",
             "foreground": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 5,
@@ -297,16 +211,11 @@
         "assets/materials/tent_fabric-basket.svg",
         "assets/materials/sword_iron-blade.svg"
       ],
-      "materialKeys": [
-        "torch_flame",
-        "tent_fabric",
-        "sword_iron"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_05_the_dream/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_05_the_dream/a_establish/gideon_act5_a_background.svg",
             "middleGround": "assets/svg/act_05_the_dream/a_establish/gideon_act5_a_middle_ground.svg",
@@ -315,8 +224,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_05_the_dream/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_05_the_dream/b_core_action/gideon_act5_b_background.svg",
             "middleGround": "assets/svg/act_05_the_dream/b_core_action/gideon_act5_b_middle_ground.svg",
@@ -325,32 +234,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_05_the_dream/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_background.svg",
             "middleGround": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_middle_ground.svg",
             "foreground": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_05_the_dream/a_establish/gideon_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_the_dream/a_establish/gideon_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_the_dream/a_establish/gideon_act5_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_05_the_dream/b_core_action/gideon_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_the_dream/b_core_action/gideon_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_the_dream/b_core_action/gideon_act5_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 6,
@@ -366,17 +258,11 @@
         "assets/materials/tent_fabric-basket.svg",
         "assets/materials/sword_iron-blade.svg"
       ],
-      "materialKeys": [
-        "wheat_stalks",
-        "torch_flame",
-        "tent_fabric",
-        "sword_iron"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_06_the_battle/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_background.svg",
             "middleGround": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_middle_ground.svg",
@@ -385,8 +271,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_06_the_battle/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_background.svg",
             "middleGround": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_middle_ground.svg",
@@ -395,32 +281,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_06_the_battle/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_background.svg",
             "middleGround": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_middle_ground.svg",
             "foreground": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_foreground.svg"
-        }
-      }
+      ]
     },
     {
       "act": 7,
@@ -434,15 +303,11 @@
         "assets/materials/water_ripple-ripples.svg",
         "assets/materials/sword_iron-blade.svg"
       ],
-      "materialKeys": [
-        "water_ripple",
-        "sword_iron"
-      ],
       "beats": [
         {
           "id": "A",
-          "name": "a_establish",
-          "folder": "assets/svg/act_07_the_victory/a_establish",
+          "name": "Establishing",
+          "folder": "a_establish",
           "layers": {
             "background": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_background.svg",
             "middleGround": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_middle_ground.svg",
@@ -451,8 +316,8 @@
         },
         {
           "id": "B",
-          "name": "b_core_action",
-          "folder": "assets/svg/act_07_the_victory/b_core_action",
+          "name": "Core Action",
+          "folder": "b_core_action",
           "layers": {
             "background": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_background.svg",
             "middleGround": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_middle_ground.svg",
@@ -461,32 +326,15 @@
         },
         {
           "id": "C",
-          "name": "c_resolve",
-          "folder": "assets/svg/act_07_the_victory/c_resolve",
+          "name": "Resolution",
+          "folder": "c_resolve",
           "layers": {
             "background": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_background.svg",
             "middleGround": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_middle_ground.svg",
             "foreground": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_foreground.svg"
           }
         }
-      ],
-      "sceneLayers": {
-        "a_establish": {
-          "background": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_foreground.svg"
-        },
-        "b_core_action": {
-          "background": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_foreground.svg"
-        },
-        "c_resolve": {
-          "background": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_foreground.svg"
-        }
-      }
+      ]
     }
   ]
 }

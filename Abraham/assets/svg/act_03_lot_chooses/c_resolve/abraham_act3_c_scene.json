@@ -3,13 +3,12 @@
   "act": 3,
   "chapter": "Lot Chooses",
   "artSource": "art/act3_lot_chooses.md",
-  "artFolder": "assets/svg/act_03_lot_chooses",
+  "artFolder": "act_03_lot_chooses",
   "sceneId": "",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "water_still-calm.svg",
-    "water_still-eddies.svg"
+    "assets/materials/water_still-eddies.svg"
   ],
   "layers": {
     "background": "abraham_act3_c_background.svg",

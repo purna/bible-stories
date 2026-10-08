@@ -3,23 +3,15 @@
   "act": 4,
   "chapter": "The Writing on the Wall",
   "artSource": "art/act4_writing.md",
-  "artFolder": "assets/svg/act_04_writing",
+  "artFolder": "act_04_writing",
   "sceneId": "belshazzar_feast",
   "beat": "B",
   "beatName": "Core Action",
   "materials": [
-    "broken-tile-mosaic.svg",
-    "hammered_gold-hammered.svg",
-    "mosaic-chips.svg",
-    "mosaic-grid.svg",
-    "palace-mosaic-floor.svg",
-    "stone-flagstone.svg",
-    "stone-rough.svg",
-    "stone_texture.svg",
-    "temple-flagstone.svg",
-    "wall_brick-herringbone.svg",
-    "wall_brick-running.svg",
-    "wall_brick-stacked.svg"
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/mosaic-chips.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "daniel_act4_b_background.svg",

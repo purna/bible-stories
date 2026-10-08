@@ -3,13 +3,12 @@
   "act": 8,
   "chapter": "Ch.8 · The Unseen Army",
   "artSource": "art/act8_the_unseen_army.md",
-  "artFolder": "assets/svg/act_08_the_unseen_army",
+  "artFolder": "act_08_the_unseen_army",
   "sceneId": "placeholder",
   "beat": "C",
   "beatName": "Resolve",
   "materials": [
-    "stone-flagstone.svg",
-    "stone-rough.svg"
+    "assets/materials/stone-flagstone.svg"
   ],
   "layers": {
     "background": "elisha_act8_c_background.svg",
