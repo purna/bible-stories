@@ -144,7 +144,6 @@
     },
     {
       "id": "bathsheba_5",
-      "audioSfx": "assets/audio/sfx/camp_fire.mp3",
       "cite": "2 Samuel 11:25",
       "items": [
         {
@@ -169,7 +168,8 @@
           "width": "1/2",
           "zIndex": 1
         }
-      ]
+      ],
+      "sfx": "assets/audio/sfx/camp_fire.mp3"
     },
     {
       "id": "bathsheba_6",

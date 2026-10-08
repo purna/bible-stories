@@ -276,7 +276,6 @@
     },
     {
       "id": "goliath_9",
-      "audioSfx": "assets/audio/sfx/sling_impact.mp3",
       "cite": "1 Samuel 17:49",
       "items": [
         {
@@ -301,7 +300,8 @@
           "width": "1/2",
           "zIndex": 1
         }
-      ]
+      ],
+      "sfx": "assets/audio/sfx/sling_impact.mp3"
     },
     {
       "id": "goliath_10",

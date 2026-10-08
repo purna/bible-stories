@@ -67,7 +67,6 @@
     },
     {
       "id": "garden_2",
-      "audioSfx": "assets/audio/sfx/garden_water.mp3",
       "items": [
         {
           "id": "garden_2_text",
@@ -92,7 +91,8 @@
           "zIndex": 1
         }
       ],
-      "svg": "garden_trees"
+      "svg": "garden_trees",
+      "sfx": "assets/audio/sfx/garden_water.mp3"
     },
     {
       "id": "garden_3",

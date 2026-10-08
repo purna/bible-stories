@@ -147,7 +147,6 @@
     },
     {
       "id": "chariot_5",
-      "audioSfx": "assets/audio/sfx/heavenly_transition.mp3",
       "items": [
         {
           "id": "chariot_5_text",
@@ -172,7 +171,8 @@
           "zIndex": 1
         }
       ],
-      "svg": "chariot_of_fire"
+      "svg": "chariot_of_fire",
+      "sfx": "assets/audio/sfx/heavenly_transition.mp3"
     },
     {
       "id": "chariot_6",

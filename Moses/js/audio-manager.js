@@ -128,8 +128,11 @@ class AudioManager {
     preloadAct(act) {
         const sources = Array.isArray(act && act.audio) ? act.audio : (act && act.audio ? [act.audio] : []);
         const effects = Array.isArray(act && act.sfx) ? act.sfx : [];
-        const itemEffects = (act && act.lines || []).flatMap(line => (line.items || []).map(item => item.audioSfx).filter(Boolean));
-        return this.preloadFiles([...sources, ...effects, ...itemEffects, act && act.transitionSfx]);
+        const lines = act && act.lines || [];
+        const lineEffects = lines.flatMap(line => { const sound = line.sfx || line.audioSfx; return Array.isArray(sound) ? sound : (sound ? [sound] : []); });
+        const itemEffects = lines.flatMap(line => (line.items || []).map(item => item.audioSfx).filter(Boolean));
+        const choiceEffects = lines.flatMap(line => (line.choices || []).map(choice => choice.audioSfx).filter(Boolean));
+        return this.preloadFiles([...sources, ...effects, ...lineEffects, ...itemEffects, ...choiceEffects, act && act.transitionSfx]);
     }
 
     preloadStory(story, extraEffects = []) {
@@ -140,9 +143,11 @@ class AudioManager {
             const effects = Array.isArray(act.sfx) ? act.sfx : [];
             files.push(...music, ...effects, act.transitionSfx);
             (act.lines || []).forEach(line => {
-                const lineEffects = Array.isArray(line.audioSfx) ? line.audioSfx : (line.audioSfx ? [line.audioSfx] : []);
+                const lineSound = line.sfx || line.audioSfx;
+                const lineEffects = Array.isArray(lineSound) ? lineSound : (lineSound ? [lineSound] : []);
                 const itemEffects = (line.items || []).map(item => item.audioSfx).filter(Boolean);
-                files.push(...lineEffects, ...itemEffects);
+                const choiceEffects = (line.choices || []).map(choice => choice.audioSfx).filter(Boolean);
+                files.push(...lineEffects, ...itemEffects, ...choiceEffects);
             });
         });
         return this.preloadFiles(files);
@@ -172,7 +177,8 @@ class AudioManager {
     }
 
     playLineSfx(line) {
-        const effects = Array.isArray(line && line.audioSfx) ? line.audioSfx : (line && line.audioSfx ? [line.audioSfx] : []);
+        const lineSound = line && (line.sfx || line.audioSfx);
+        const effects = Array.isArray(lineSound) ? lineSound : (lineSound ? [lineSound] : []);
         const itemEffects = (Array.isArray(line && line.items) ? line.items : [])
             .filter(item => typeof item.audioSfx === 'string' && item.audioSfx.trim())
             .map(item => ({ path: item.audioSfx, delay: Math.max(0, Number(item.delay) || 0) }));

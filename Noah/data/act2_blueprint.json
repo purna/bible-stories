@@ -158,7 +158,6 @@
     },
     {
       "id": "blueprint_5",
-      "audioSfx": "assets/audio/sfx/ark_wood_creak.mp3",
       "cite": "Genesis 6:22",
       "items": [
         {
@@ -184,7 +183,8 @@
           "zIndex": 1
         }
       ],
-      "svg": "ch2_keel_laid"
+      "svg": "ch2_keel_laid",
+      "sfx": "assets/audio/sfx/ark_wood_creak.mp3"
     }
   ],
   "assetFolder": "act_02_blueprint",

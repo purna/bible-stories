@@ -40,7 +40,6 @@
     },
     {
       "id": "table_1",
-      "audioSfx": "assets/audio/sfx/babylon_crowd.mp3",
       "items": [
         {
           "id": "table_1_text",
@@ -65,7 +64,8 @@
           "zIndex": 1
         }
       ],
-      "svg": "training_house"
+      "svg": "training_house",
+      "sfx": "assets/audio/sfx/babylon_crowd.mp3"
     },
     {
       "id": "table_2",

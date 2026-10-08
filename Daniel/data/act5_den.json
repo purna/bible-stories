@@ -237,7 +237,6 @@
     },
     {
       "id": "den_7",
-      "audioSfx": "assets/audio/sfx/stone_footsteps.mp3",
       "items": [
         {
           "id": "den_7_text",
@@ -284,7 +283,8 @@
           "zIndex": 2
         }
       ],
-      "svg": "lions_den_sealed"
+      "svg": "lions_den_sealed",
+      "sfx": "assets/audio/sfx/stone_footsteps.mp3"
     },
     {
       "id": "den_8",

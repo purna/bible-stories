@@ -63,7 +63,6 @@
     },
     {
       "id": "drought_2",
-      "audioSfx": "assets/audio/sfx/desert_wind.mp3",
       "choices": [
         {
           "label": "Stand boldly on God's word",
@@ -98,7 +97,8 @@
           "zIndex": 1
         }
       ],
-      "svg": "samaria_court"
+      "svg": "samaria_court",
+      "sfx": "assets/audio/sfx/desert_wind.mp3"
     },
     {
       "id": "drought_3",

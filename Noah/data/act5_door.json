@@ -35,7 +35,6 @@
     },
     {
       "id": "door_1",
-      "audioSfx": "assets/audio/sfx/flood_thunder.mp3",
       "items": [
         {
           "id": "door_1_text",
@@ -82,7 +81,8 @@
           "zIndex": 2
         }
       ],
-      "svg": "ch5_first_rain"
+      "svg": "ch5_first_rain",
+      "sfx": "assets/audio/sfx/flood_thunder.mp3"
     },
     {
       "id": "door_2",

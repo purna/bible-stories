@@ -34,6 +34,16 @@
     [data-story-style="outline"]{color:#fff!important;text-shadow:2px 2px #111,-2px -2px #111,2px -2px #111,-2px 2px #111;background:#0004!important;border-color:transparent!important}
     [data-story-style="soft"]{border-radius:24px!important;border:1px solid #ffffff70!important;background:#332c40dd!important;color:#fff!important;font-weight:500!important}
     [data-story-style="caption"]{font-family:system-ui,sans-serif!important;border-radius:5px!important}
+    .choiceBtn[data-story-style="thought-balloon"],.choiceBtn[data-story-style="burst-balloon"],.choiceBtn[data-story-style="rough-balloon"],.choiceBtn[data-story-style="telepathic-balloon"],.choiceBtn[data-story-style="whispering"],.choiceBtn[data-story-style^="caption-"]{background-color:transparent!important;background-repeat:no-repeat!important;background-position:center!important;background-size:100% 100%!important;border:0!important;box-shadow:none!important}
+    .choiceBtn[data-story-style="thought-balloon"]{background-image:url("assets/svg/lettering/thought-balloon.svg")!important;padding:var(--choice-padding,13% 17% 22% 17%)!important;font-style:italic}
+    .choiceBtn[data-story-style="burst-balloon"]{background-image:url("assets/svg/lettering/burst-balloon.svg")!important;padding:var(--choice-padding,16% 19%)!important;font-weight:900}
+    .choiceBtn[data-story-style="rough-balloon"]{background-image:url("assets/svg/lettering/rough-balloon.svg")!important;padding:var(--choice-padding,17%)!important;font-weight:800}
+    .choiceBtn[data-story-style="telepathic-balloon"]{background-image:url("assets/svg/lettering/telepathic-balloon.svg")!important;padding:var(--choice-padding,18% 20%)!important;color:#38315f}
+    .choiceBtn[data-story-style="whispering"]{background-image:url("assets/svg/lettering/whisper-balloon.svg")!important;padding:var(--choice-padding,18% 20%)!important;color:#707984;font-style:italic}
+    .choiceBtn[data-story-style="caption-location-time"]{background-image:url("assets/svg/lettering/caption-location-time.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important}
+    .choiceBtn[data-story-style="caption-internal-monologue"]{background-image:url("assets/svg/lettering/caption-internal-monologue.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important;font-style:italic}
+    .choiceBtn[data-story-style="caption-spoken"]{background-image:url("assets/svg/lettering/caption-spoken.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important}
+    .choiceBtn[data-story-style="caption-editorial"]{background-image:url("assets/svg/lettering/caption-editorial.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important;font-family:Georgia,serif}
     [data-story-sfx="true"]{font-family:Bangers,cursive!important;font-size:clamp(28px,7vw,64px)!important;font-weight:900!important;color:#ffd84d!important;-webkit-text-stroke:2px var(--ink,#111);paint-order:stroke fill;text-shadow:3px 3px #ff6b5b;background:transparent!important;background-image:none!important;border-color:transparent!important;box-shadow:none!important;text-align:center!important}
     [data-story-sfx="true"][data-story-style="sfx-outline"]{color:#fff!important;-webkit-text-stroke:3px #17131f;text-shadow:4px 4px #ff6b5b}
     [data-story-sfx="true"][data-story-style="sfx-neon"]{color:#7df9ff!important;-webkit-text-stroke:1px #fff;text-shadow:0 0 8px #00eaff,0 0 20px #00eaff}
@@ -54,7 +64,7 @@
   `;
   document.head.appendChild(sceneLayerCss);
 
-  let byText=new Map();
+  let byText=new Map(),byChoice=new Map();
   const normalize=value=>String(value||'').replace(/\s+/g,' ').trim();
   const defaultPosition=line=>{
     const h={left:'left',center:'middle',right:'right'}[line?.align]||'middle';
@@ -64,9 +74,10 @@
     try{
       const manifest=await(await fetch('data/manifest.json')).json();
       const acts=await Promise.all(manifest.acts.map(a=>fetch(`data/${a.file}`).then(r=>r.json())));
-      byText=new Map();
+      byText=new Map();byChoice=new Map();
       acts.forEach(act=>(act.lines||[]).forEach(line=>{
-        [line.text,line.sfx,...(line.items||[]).map(item=>item.text)].filter(Boolean).forEach(text=>byText.set(normalize(text),line));
+        [line.text,...(line.items||[]).map(item=>item.text)].filter(Boolean).forEach(text=>byText.set(normalize(text),line));
+        (line.choices||[]).forEach(choice=>{if(choice.label)byChoice.set(normalize(choice.label),choice);});
       }));
       scan(document.getElementById('stage'));
     }catch(_){/* This page may not be a JSON-driven story. */}
@@ -89,6 +100,25 @@
     if(Number(item.fontSize)>0)element.style.setProperty('font-size',`${Number(item.fontSize)}px`,'important');
     if(item.bold)element.style.fontWeight='900';
     if(item.italic)element.style.fontStyle='italic';
+  }
+  function applyChoiceStyle(button,choice){
+    if(!button||!choice)return;
+    button.dataset.storyStyle=styles.has(choice.style)?choice.style:'comic';
+    button.dataset.storySfx='false';
+    button.style.setProperty('--choice-padding',textPadding(choice,choice.style||'comic',String(choice.style||'').startsWith('caption-')));
+    if(positions.has(choice.position))button.dataset.storyPosition=choice.position;else delete button.dataset.storyPosition;
+    button.style.setProperty('--story-margin',({S:'3%',M:'5%',L:'8%',XL:'12%'})[choice.margin]||'5%');
+    button.style.setProperty('--story-rotation',`${Number(choice.rotation)||0}deg`);
+    button.style.zIndex=String(Math.max(1,Math.min(10,Number(choice.zIndex)||1)));
+    button.style.width=`${({'1/4':25,'1/3':33.333,'1/2':50,'2/3':66.667,'3/4':75,'1':100}[choice.width||'1/2'])||50}%`;
+    button.style.maxWidth='90%';button.style.textAlign=choice.align||'center';
+    const padding=choice.padding==='S' ? 0.75 : choice.padding==='L' ? 1.25 : choice.padding==='XL' ? 1.5 : 1;
+    button.style.padding=`${14*padding}px ${22*padding}px`;
+    button.style.margin=positions.has(choice.position)?'0':({S:'3%',M:'5%',L:'8%',XL:'12%'})[choice.margin]||'5%';
+    if(fontFamilies[choice.font])button.style.setProperty('font-family',`"${fontFamilies[choice.font]}"`,'important');
+    if(Number(choice.fontSize)>0)button.style.setProperty('font-size',`${Number(choice.fontSize)}px`,'important');
+    if(choice.bold)button.style.fontWeight='900';if(choice.italic)button.style.fontStyle='italic';
+    if(!button.dataset.storyChoiceAnimated){button.dataset.storyChoiceAnimated='true';button.style.opacity='0';window.setTimeout(()=>{if(button.isConnected){button.style.opacity='1';if(choice.entryFx&&choice.entryFx!=='none')entrance(button,choice.entryFx);}},Math.min(30000,Number(choice.delay)||0));}
   }
   function makeItem(item,line){
     let wrapper,textTarget;
@@ -181,6 +211,8 @@
     const candidates=[];
     if(root.matches?.('.caption,.bubble-wrap,.sfx'))candidates.push(root);
     root.querySelectorAll?.('.caption,.bubble-wrap,.sfx').forEach(el=>candidates.push(el));
+    const choiceButtons=[];if(root.matches?.('.choiceBtn'))choiceButtons.push(root);root.querySelectorAll?.('.choiceBtn').forEach(el=>choiceButtons.push(el));
+    for(const button of choiceButtons){const choice=byChoice.get(normalize(button.innerText||button.textContent));if(choice)applyChoiceStyle(button,choice);}
     for(const element of candidates){
       const text=normalize(element.innerText||element.textContent),line=byText.get(text);
       if(!line)continue;
@@ -192,6 +224,12 @@
       if(line.visibleDuration>0)window.setTimeout(()=>exit(element,line.exitFx||'fade'),Number(line.visibleDuration));
     }
   }
+  document.addEventListener('click',event=>{
+    const button=event.target instanceof Element?event.target.closest('.choiceBtn'):null;
+    if(!button)return;
+    const choice=byChoice.get(normalize(button.innerText||button.textContent));
+    if(choice?.audioSfx){const audio=new Audio(choice.audioSfx);audio.play().catch(()=>{});}
+  });
   const start=()=>{
     const stage=document.getElementById('stage');
     if(stage)new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>{if(node.nodeType===1)scan(node);}))).observe(stage,{childList:true,subtree:true});

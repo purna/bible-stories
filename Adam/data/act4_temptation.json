@@ -237,7 +237,6 @@
     },
     {
       "id": "temptation_7",
-      "audioSfx": "assets/audio/sfx/fall_crack.mp3",
       "items": [
         {
           "id": "temptation_7_text",
@@ -284,7 +283,8 @@
           "zIndex": 2
         }
       ],
-      "svg": "the_fall"
+      "svg": "the_fall",
+      "sfx": "assets/audio/sfx/fall_crack.mp3"
     },
     {
       "id": "temptation_8",

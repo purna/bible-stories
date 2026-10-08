@@ -226,7 +226,6 @@
     },
     {
       "id": "exile_7",
-      "audioSfx": "assets/audio/sfx/exile_footsteps.mp3",
       "items": [
         {
           "id": "exile_7_text",
@@ -251,7 +250,8 @@
           "zIndex": 1
         }
       ],
-      "svg": "exile_driven"
+      "svg": "exile_driven",
+      "sfx": "assets/audio/sfx/exile_footsteps.mp3"
     },
     {
       "id": "exile_8",

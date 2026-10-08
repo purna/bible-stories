@@ -56,7 +56,7 @@
   }
   const styleText = `
     #storyEditorToggle{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:10020;border:2px solid #20162a;border-radius:9px;padding:10px 15px;background:#ffd84d;color:#20162a;font:800 14px/1.2 system-ui;box-shadow:4px 4px 0 #20162a;cursor:pointer}
-    #storyEditorPanel{position:fixed;z-index:2147483000;right:0;top:0;width:min(220px,100vw);height:100dvh;box-sizing:border-box;display:none;grid-template-rows:auto auto minmax(0,1fr) auto;background:#17131f;color:#fff;font:12px/1.35 system-ui;box-shadow:-8px 0 30px #0008;pointer-events:auto;isolation:isolate}
+    #storyEditorPanel{position:fixed;z-index:2147483000;right:0;top:0;width:min(360px,100vw);height:100dvh;box-sizing:border-box;display:none;grid-template-rows:auto auto minmax(0,1fr) auto;background:#17131f;color:#fff;font:12px/1.35 system-ui;box-shadow:-8px 0 30px #0008;pointer-events:auto;isolation:isolate}
     #storyEditorPanel.open{display:grid} #storyEditorPanel *{box-sizing:border-box} #storyEditorPanel button,#storyEditorPanel select,#storyEditorPanel input,#storyEditorPanel textarea{font:inherit}
     .se-head{display:flex;align-items:center;justify-content:space-between;padding:10px;background:#241d2d;border-bottom:1px solid #ffffff24}.se-head h2{margin:0;font-size:16px}.se-head button,.se-actions button{border:1px solid #ffffff55;border-radius:6px;background:#342b40;color:#fff;padding:7px 5px;cursor:pointer}
     .se-selects{display:grid;grid-template-columns:1fr;gap:6px;padding:8px}.se-selects select{width:100%;min-width:0;padding:7px 26px 7px 9px;border:1px solid #8b779e;border-radius:7px;background:#2d2437;color:white;font-size:11px!important;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23ffd84d' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:11px;background-position:right 8px center}.se-selects select:focus,.se-items select:focus,.se-field select:focus{outline:2px solid #ffd84d;outline-offset:1px;border-color:#ffd84d}.se-selects option,.se-items option,.se-field select option{background:#241d2d;color:#fff}
@@ -66,7 +66,7 @@
     .se-font-links{display:flex;justify-content:space-between;gap:4px;margin-top:4px;font-size:9px}.se-font-links a{color:#ffd84d;text-decoration:underline}
     .se-formrow{display:grid;grid-template-columns:1fr;gap:2px}.se-field input,.se-field select{width:100%;min-width:0;padding:7px 25px 7px 8px;border:1px solid #8b779e;border-radius:7px;background-color:#2d2437;color:white;font-size:11px!important}.se-field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23ffd84d' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:10px;background-position:right 8px center}.se-field input[type=range]{padding:0;accent-color:#ffd84d}.se-field button[data-action=preview-audio]{margin-top:4px;padding:6px 9px;border:1px solid #ffffff44;border-radius:6px;background:#342b40;color:#fff;cursor:pointer}.se-field button[data-action=preview-audio]:disabled{opacity:.5;cursor:default}.se-toggles{display:flex;gap:10px;margin-top:8px}.se-toggles label{display:flex;align-items:center;gap:4px}.se-rotation{display:flex;align-items:center;gap:6px}.se-rotation input[type=range]{flex:1;min-width:0}.se-rotation output{min-width:36px;text-align:right;font-variant-numeric:tabular-nums}.se-sfx-field{margin:8px 0;padding:0;border:0}
     .se-actions{display:grid;grid-template-columns:repeat(2,1fr);gap:5px;padding:8px;border-top:1px solid #ffffff24}.se-actions button{display:flex;align-items:center;justify-content:center;gap:5px;font-size:10px!important;line-height:1.1}.se-actions button.primary{background:#ffd84d;color:#20162a;border-color:#ffd84d;font-weight:800}.se-icon{width:14px;height:14px;flex:none;fill:currentColor}.se-status{grid-column:1/-1;min-height:18px;color:#cdb8e3;font-size:10px}
-    .se-choice-list{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:4px;margin:6px 0}.se-choice-list select{min-width:0;width:100%;padding:5px 20px 5px 6px;border:1px solid #8b779e;border-radius:6px;background:#2d2437;color:#fff}.se-choice-list button{border:1px solid #ffffff44;border-radius:5px;background:#342b40;color:#fff;padding:4px 6px;cursor:pointer}.se-note{min-height:54px}
+    .se-choice-list{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:4px;margin:6px 0}.se-choice-list select{min-width:0;width:100%;padding:5px 20px 5px 6px;border:1px solid #8b779e;border-radius:6px;background:#2d2437;color:#fff}.se-choice-list button{border:1px solid #ffffff44;border-radius:5px;background:#342b40;color:#fff;padding:4px 6px;cursor:pointer}.se-note{min-height:54px}.se-help{margin:5px 0;color:#cdb8e3;font-size:10px}
     [data-story-sfx="true"]{font-family:Bangers,cursive!important;font-size:clamp(28px,7vw,64px)!important;font-weight:900!important;color:#ffd84d!important;-webkit-text-stroke:2px var(--ink,#111);paint-order:stroke fill;text-shadow:3px 3px #ff6b5b;background:transparent!important;background-image:none!important;border-color:transparent!important;box-shadow:none!important;text-align:center!important}
     [data-story-sfx="true"][data-story-style="sfx-outline"]{color:#fff!important;-webkit-text-stroke:3px #17131f;text-shadow:4px 4px #ff6b5b}
     [data-story-sfx="true"][data-story-style="sfx-neon"]{color:#7df9ff!important;-webkit-text-stroke:1px #fff;text-shadow:0 0 8px #00eaff,0 0 20px #00eaff}
@@ -98,6 +98,7 @@
   const fileInput = panel.querySelector('input[type=file]');
   let acts = [], currentActIndex = 0, currentLineIndex = 0, currentItemIndex = 0, currentChoiceIndex = 0, replayToken = 0;
   const savedStoryElements = new Map();
+  const savedChoiceButtonStyles = new Map();
   const replayElements = new Set();
   const editorScriptUrl = document.currentScript?.src || new URL('../shared-tools/story-editor.js', location.href).href;
   const sharedSfxCatalogUrl = new URL('../shared/audio/sfx/catalog.json', editorScriptUrl);
@@ -170,6 +171,7 @@
       choice.font=choice.font||'default';choice.fontSize=Math.max(0,Math.min(160,Number(choice.fontSize)||0));
       choice.bold=Boolean(choice.bold);choice.italic=Boolean(choice.italic);
       choice.align=['left','center','right'].includes(choice.align)?choice.align:'center';
+      choice.position=positions.some(([value])=>value===choice.position)?choice.position:'';
       choice.width=widthChoices.some(([value])=>value===choice.width)?choice.width:'1/2';
       choice.margin=marginOffsets[choice.margin]?choice.margin:'M';choice.padding=paddingFactors[choice.padding]?choice.padding:'M';
       choice.rotation=Math.max(-180,Math.min(180,Number(choice.rotation)||0));choice.zIndex=Math.max(1,Math.min(10,Number(choice.zIndex)||index+1));
@@ -307,10 +309,15 @@
     const choiceStyles=styles.filter(([value])=>!value.startsWith('sfx-'));
     const choiceFonts=fontOptionMarkup(choice.font||'default');
     const styleOptions=choiceStyles.map(([value,label])=>`<option value="${value}" ${choice.style===value?'selected':''}>${label}</option>`).join('');
+    const currentChoiceAudio=choice.audioSfx||'';
+    const currentChoiceAudioOptions=audioCatalog.map(sound=>{const value=sharedAudioPath(sound.file);return `<option value="${escape(value)}" ${currentChoiceAudio===value?'selected':''}>${escape(sound.label)}</option>`;}).join('');
+    const missingChoiceAudio=currentChoiceAudio&&!audioCatalog.some(sound=>sharedAudioPath(sound.file)===currentChoiceAudio);
     choiceFields.innerHTML=`<div class="se-choice-list"><select data-field="choice" aria-label="Choice">${choices.map((item,index)=>new Option(`Choice ${index+1}: ${(item.label||'New choice').slice(0,22)}`,index).outerHTML).join('')}</select><button type="button" data-action="add-choice" title="Add a choice">+</button><button type="button" data-action="remove-choice" title="Remove choice">−</button></div>
       <div class="se-field">${field('Choice label',`<textarea class="se-text" data-choice-prop="label">${escape(choice.label)}</textarea>`)}</div>
       <div class="se-field">${field('Choice note',`<textarea class="se-text se-note" data-choice-prop="note">${escape(choice.note)}</textarea>`)}</div>
       <div class="se-field">${field('Choice style',`<select data-choice-prop="style">${styleOptions}</select>`)}</div>
+      <div class="se-field">${field('Position',`<select data-choice-prop="position"><option value="" ${!choice.position?'selected':''}>Keep in choice list</option>${positions.map(([value,label])=>`<option value="${value}" ${choice.position===value?'selected':''}>${label}</option>`).join('')}</select>`)}</div>
+      <div class="se-field">${field('Choice audio',`<select data-choice-prop="audioSfx"><option value="" ${!currentChoiceAudio?'selected':''}>No audio</option>${missingChoiceAudio?`<option value="${escape(currentChoiceAudio)}" selected>${escape(currentChoiceAudio.split('/').pop())} (current)</option>`:''}${currentChoiceAudioOptions}</select><button type="button" data-action="preview-choice-audio" ${currentChoiceAudio?'':'disabled'}>▶ Preview</button>`)}</div>
       <div class="se-field">${field('Font',`<select data-choice-prop="font">${choiceFonts}</select>`)}</div>
       <div class="se-field">${field('Font size (px, 0 = story default)',`<input data-choice-prop="fontSize" type="number" min="0" max="160" step="1" value="${choice.fontSize}"><input data-choice-slider="fontSize" type="range" min="0" max="160" step="1" value="${choice.fontSize}" aria-label="Choice font size in pixels">`)}</div>
       <div class="se-toggles"><label><input type="checkbox" data-choice-prop="bold" ${choice.bold?'checked':''}> Bold</label><label><input type="checkbox" data-choice-prop="italic" ${choice.italic?'checked':''}> Italic</label></div>
@@ -319,25 +326,47 @@
       <div class="se-field">${field('Rotation',`<div class="se-rotation"><input data-choice-prop="rotation" type="range" min="-180" max="180" step="1" value="${choice.rotation}" aria-label="Choice rotation"><output data-choice-rotation>${choice.rotation}°</output></div>`)}</div>
       <div class="se-field">${field('Stack order (1–10)',`<div class="se-rotation"><input data-choice-prop="zIndex" type="range" min="1" max="10" step="1" value="${choice.zIndex}" aria-label="Choice stack order"><output data-choice-zindex>${choice.zIndex}</output></div>`)}</div>
       <div class="se-formrow"><div class="se-field">${field('Appear effect',`<select data-choice-prop="entryFx">${effects.map(value=>`<option value="${value}" ${choice.entryFx===value?'selected':''}>${value}</option>`).join('')}</select>`)}</div><div class="se-field">${field('Disappear effect',`<select data-choice-prop="exitFx">${effects.map(value=>`<option value="${value}" ${choice.exitFx===value?'selected':''}>${value}</option>`).join('')}</select>`)}</div></div>
-      <p class="se-help">Choices stay available until the reader selects one; their saved time-on-screen value does not auto-hide options.</p>`;
+      <div class="se-field">${field('Appear delay (seconds)',`<input data-choice-prop="delay" type="number" min="0" max="30" step="0.1" value="${choice.delay/1000}">`)}</div>
+      <p class="se-help">Choices remain available until the reader selects one.</p>`;
     const select=choiceFields.querySelector('[data-field="choice"]');select.value=String(currentChoiceIndex);
     previewChoice(choice);
+  }
+  function previewChoice(choice){
+    if(!choice)return;
+    const button=panel.querySelectorAll('#choices .choiceBtn')[currentChoiceIndex];if(!button)return;
+    if(!savedChoiceButtonStyles.has(button))savedChoiceButtonStyles.set(button,{style:button.getAttribute('style'),styleName:button.dataset.storyStyle,sfx:button.dataset.storySfx,position:button.dataset.storyPosition});
+    button.textContent=choice.label||'';
+    button.dataset.storyStyle=choice.style||'comic';button.dataset.storySfx='false';
+    if(choice.position)button.dataset.storyPosition=choice.position;else delete button.dataset.storyPosition;
+    button.style.setProperty('--choice-padding',textPadding(choice,choice.style||'comic',String(choice.style||'').startsWith('caption-')));
+    button.style.fontFamily=fontFamilies[choice.font]||'';
+    button.style.fontSize=Number(choice.fontSize)>0?`${choice.fontSize}px`:'';
+    button.style.fontWeight=choice.bold?'900':'';button.style.fontStyle=choice.italic?'italic':'';
+    button.style.textAlign=choice.align||'center';
+    button.style.width=`${({'1/4':25,'1/3':33.333,'1/2':50,'2/3':66.667,'3/4':75,'1':100}[choice.width||'1/2'])||50}%`;
+    button.style.margin=choice.position?'0':marginOffsets[choice.margin||'M'];
+    const paddingScale=paddingFactors[choice.padding||'M']||1;
+    button.style.padding=`${14*paddingScale}px ${22*paddingScale}px`;
+    button.style.rotate=`${Number(choice.rotation)||0}deg`;button.style.zIndex=String(choice.zIndex||1);
+    button.dataset.storyChoiceId=choice.id||'';
+  }
+  function restoreChoiceButtonStyles(){
+    for(const [button,saved] of savedChoiceButtonStyles){
+      if(saved.style===null)button.removeAttribute('style');else button.setAttribute('style',saved.style);
+      if(saved.styleName===undefined)delete button.dataset.storyStyle;else button.dataset.storyStyle=saved.styleName;
+      if(saved.sfx===undefined)delete button.dataset.storySfx;else button.dataset.storySfx=saved.sfx;
+      if(saved.position===undefined)delete button.dataset.storyPosition;else button.dataset.storyPosition=saved.position;
+      delete button.dataset.storyChoiceId;
+    }
+    savedChoiceButtonStyles.clear();
   }
   function field(label, control){ return `<label class="se-label">${label}</label>${control}`; }
   function renderForm(){
     const line=activeLine(),item=activeItem(); if(!line||!item){fields.textContent='No items in this scene yet. Add text or SFX above.';return;}
     const position=item.position || defaultPosition(line);
     const availableStyles=styles.filter(([value])=>item.sfx?value.startsWith('sfx-'):!value.startsWith('sfx-'));
-    const currentAudio=item.audioSfx||'';
-    const audioOptions=audioCatalog.map(sound=>{const value=sharedAudioPath(sound.file);return `<option value="${escape(value)}" ${currentAudio===value?'selected':''}>${escape(sound.label)}</option>`;}).join('');
-    const currentAudioMissing=currentAudio&&!audioCatalog.some(sound=>sharedAudioPath(sound.file)===currentAudio);
-    const currentTransition=activeAct()?.transitionSfx||'';
-    const transitionOptions=transitionCatalog.map(sound=>{const value=sharedAudioPath(sound.file,'transitions');return `<option value="${escape(value)}" ${currentTransition===value?'selected':''}>${escape(sound.label)}</option>`;}).join('');
-    const currentTransitionMissing=currentTransition&&!transitionCatalog.some(sound=>sharedAudioPath(sound.file,'transitions')===currentTransition);
     fields.innerHTML = `<div class="se-field">${field('Text',`<textarea class="se-text" data-prop="text">${escape(item.text||'')}</textarea>`)}</div>
-      <div class="se-field">${field('Chapter transition sound',`<select data-prop="transitionSfx"><option value="" ${!currentTransition?'selected':''}>No transition sound</option>${currentTransitionMissing?`<option value="${escape(currentTransition)}" selected>${escape(currentTransition.split('/').pop())} (current)</option>`:''}${transitionOptions}</select><button type="button" data-action="preview-transition" ${currentTransition?'':'disabled'}>▶ Preview transition</button>`)}</div>
       <fieldset class="se-sfx-field"><legend class="se-label">Special effect (SFX)</legend><label class="se-toggles"><input type="checkbox" data-prop="sfx" ${item.sfx?'checked':''}> Show this item as a special effect</label></fieldset>
-      <div class="se-field">${field('Audio clip',`<select data-prop="audioSfx"><option value="" ${!currentAudio?'selected':''}>No audio</option>${currentAudioMissing?`<option value="${escape(currentAudio)}" selected>${escape(currentAudio.split('/').pop())} (current)</option>`:''}${audioOptions}</select><button type="button" data-action="preview-audio" ${currentAudio?'':'disabled'}>▶ Preview audio</button>`)}</div>
       <div class="se-field">${field('Speaker',`<select data-prop="speaker">${speakerChoices.map(({value,label})=>`<option value="${escape(value)}" ${(item.speaker||'narrator')===value?'selected':''}>${escape(label)}</option>`).join('')}</select>`)}</div>
       <div class="se-field">${field('Text alignment',`<select data-prop="align">${[['left','Left'],['center','Center'],['right','Right']].map(([value,label])=>`<option value="${value}" ${(item.align||'center')===value?'selected':''}>${label}</option>`).join('')}</select>`)}</div>
       ${field('Position',`<div class="se-grid">${positions.map(([value,label])=>`<button type="button" data-position="${value}" title="${label}" aria-label="${label}" aria-pressed="${position===value}"><svg class="se-position-icon" viewBox="0 0 24 24" aria-hidden="true">${positionIcons[value]}</svg></button>`).join('')}</div>`)}
@@ -357,11 +386,18 @@
     if(prop==='transitionSfx'){
       const act=activeAct();if(!act)return;
       act.transitionSfx=String(value||'');
-      const previewButton=fields.querySelector('[data-action="preview-transition"]');if(previewButton)previewButton.disabled=!act.transitionSfx;
+      const previewButton=audioFields.querySelector('[data-action="preview-transition"]');if(previewButton)previewButton.disabled=!act.transitionSfx;
       setStatus('Chapter transition sound updated. Export the act JSON when ready.');
       return;
     }
-    const line=activeLine(),item=activeItem(); if(!line||!item)return;
+    const line=activeLine();if(!line)return;
+    if(prop==='lineSfx'){
+      line.sfx=String(value||'');delete line.audioSfx;
+      const previewButton=audioFields.querySelector('[data-action="preview-line-sfx"]');if(previewButton)previewButton.disabled=!line.sfx;
+      setStatus('Scene sound updated. Export the act JSON to keep the change.');return;
+    }
+    if(prop==='svg'){line.svg=String(value||'');setStatus('Scene SVG updated. Export the act JSON to keep the change.');return;}
+    const item=activeItem();if(!item)return;
     if(prop==='delay'||prop==='visibleDuration'){
       item[prop]=Math.max(0,Math.min(30000,Number(value)||0));
       const seconds=item[prop]/1000;
@@ -379,7 +415,7 @@
     }
     else if(prop==='bold'||prop==='italic'||prop==='sfx') item[prop]=Boolean(value);
     else item[prop]=value;
-    if(prop==='audioSfx'){const previewButton=fields.querySelector('[data-action="preview-audio"]');if(previewButton)previewButton.disabled=!item.audioSfx;}
+    if(prop==='audioSfx'){const previewButton=audioFields.querySelector('[data-action="preview-audio"]');if(previewButton)previewButton.disabled=!item.audioSfx;}
     if(prop==='sfx'){
       item.type=item.sfx?'sfx':'text';
       if(item.sfx&&!String(item.style||'').startsWith('sfx-'))item.style='sfx-impact';
@@ -401,6 +437,22 @@
     if(item.sfx&&line.items.filter(candidate=>candidate.sfx)[0]===item)line.sfx=item.text;
     previewLine(item,false);
     setStatus('Unsaved edits. Export the act JSON when ready.');
+  }
+  function updateChoice(prop,value){
+    const choice=activeChoice();if(!choice)return;
+    if(prop==='fontSize')choice.fontSize=Math.max(0,Math.min(160,Number(value)||0));
+    else if(prop==='rotation')choice.rotation=Math.max(-180,Math.min(180,Number(value)||0));
+    else if(prop==='zIndex')choice.zIndex=Math.max(1,Math.min(10,Number(value)||1));
+    else if(prop==='delay')choice.delay=Math.max(0,Math.min(30000,(Number(value)||0)*1000));
+    else if(prop==='bold'||prop==='italic')choice[prop]=Boolean(value);
+    else choice[prop]=String(value??'');
+    const selected=choiceFields.querySelector('[data-field="choice"]');
+    if(prop==='label'&&selected)selected.options[currentChoiceIndex].textContent=`Choice ${currentChoiceIndex+1}: ${(choice.label||'New choice').slice(0,22)}`;
+    if(prop==='fontSize'){const input=choiceFields.querySelector('[data-choice-prop="fontSize"]'),slider=choiceFields.querySelector('[data-choice-slider="fontSize"]');if(input)input.value=String(choice.fontSize);if(slider)slider.value=String(choice.fontSize);}
+    if(prop==='rotation'){const output=choiceFields.querySelector('[data-choice-rotation]');if(output)output.value=`${choice.rotation}°`;}
+    if(prop==='zIndex'){const output=choiceFields.querySelector('[data-choice-zindex]');if(output)output.value=String(choice.zIndex);}
+    if(prop==='audioSfx'){const previewButton=choiceFields.querySelector('[data-action="preview-choice-audio"]');if(previewButton)previewButton.disabled=!choice.audioSfx;}
+    previewChoice(choice);setStatus('Unsaved choice edits. Export the act JSON when ready.');
   }
   function sharedAudioPath(file,folder='sfx'){
     const target=new URL(`../shared/audio/${folder}/${encodeURIComponent(file)}`,editorScriptUrl);
@@ -424,7 +476,7 @@
     player.play().catch(release);
   }
   function stopReplayAudio(){replayAudioPlayers.forEach(player=>{player.pause();player.currentTime=0;});replayAudioPlayers.clear();}
-  function close(){ replayToken++; clearReplayElements();stopReplayAudio();panel.classList.remove('open'); restoreStoryText(); }
+  function close(){ replayToken++; clearReplayElements();stopReplayAudio();panel.classList.remove('open'); restoreStoryText();restoreChoiceButtonStyles(); }
   toggle.addEventListener('click',()=>{panel.classList.add('open');if(activeItem())previewLine(activeItem(),true);});
   panel.addEventListener('click',async e=>{
     const target=e.target instanceof Element?e.target:e.target?.parentElement;
@@ -436,23 +488,27 @@
     if(action==='replay'){replayChapter();return;}
     if(action==='preview-audio'){previewAudioSfx(activeItem()?.audioSfx);return;}
     if(action==='preview-transition'){previewAudioSfx(activeAct()?.transitionSfx);return;}
+    if(action==='preview-line-sfx'){previewAudioSfx(activeLine()?.sfx||activeLine()?.audioSfx);return;}
+    if(action==='preview-choice-audio'){previewAudioSfx(activeChoice()?.audioSfx);return;}
     if(action==='next'){nextText();return;}
     if(action==='previous'){previousText();return;}
     if(action==='add-text'){addItem(false);return;}
     if(action==='remove-item'){removeItem();return;}
+    if(action==='add-choice'){addChoice();return;}
+    if(action==='remove-choice'){removeChoice();return;}
     const pos=target?.closest('[data-position]')?.dataset.position;
     if(pos){updateLine('position',pos);renderForm();}
   });
-  panel.addEventListener('input',e=>{const el=e.target;if(el.dataset.sliderProp){const prop=el.dataset.sliderProp;updateLine(prop,['delay','visibleDuration'].includes(prop)?Number(el.value)*1000:Number(el.value));return;}if(el.dataset.prop&&el.type!=='checkbox'){updateLine(el.dataset.prop,['delay','visibleDuration'].includes(el.dataset.prop)?Number(el.value)*1000:el.value);if(el.dataset.prop==='rotation'){const output=panel.querySelector('[data-rotation-value]');if(output)output.value=`${Number(el.value)||0}°`;}}});
-  panel.addEventListener('change',e=>{const el=e.target;if(el.dataset.sliderProp){const prop=el.dataset.sliderProp;updateLine(prop,['delay','visibleDuration'].includes(prop)?Number(el.value)*1000:Number(el.value));return;}if(el.dataset.prop)updateLine(el.dataset.prop,el.type==='checkbox'?el.checked:['delay','visibleDuration'].includes(el.dataset.prop)?Number(el.value)*1000:el.value);});
+  panel.addEventListener('input',e=>{const el=e.target;if(el.dataset.choiceSlider){updateChoice(el.dataset.choiceSlider,Number(el.value));return;}if(el.dataset.choiceProp&&el.type!=='checkbox'&&el.tagName!=='SELECT'){updateChoice(el.dataset.choiceProp,el.value);return;}if(el.dataset.sliderProp){const prop=el.dataset.sliderProp;updateLine(prop,['delay','visibleDuration'].includes(prop)?Number(el.value)*1000:Number(el.value));return;}if(el.dataset.prop&&el.type!=='checkbox'&&el.tagName!=='SELECT'){updateLine(el.dataset.prop,['delay','visibleDuration'].includes(el.dataset.prop)?Number(el.value)*1000:el.value);if(el.dataset.prop==='rotation'){const output=panel.querySelector('[data-rotation-value]');if(output)output.value=`${Number(el.value)||0}°`;}}});
+  panel.addEventListener('change',e=>{const el=e.target;if(el.matches('[data-field="choice"]')){currentChoiceIndex=Number(el.value);renderChoiceEditor();return;}if(el.dataset.choiceSlider){updateChoice(el.dataset.choiceSlider,Number(el.value));return;}if(el.dataset.choiceProp){updateChoice(el.dataset.choiceProp,el.type==='checkbox'?el.checked:el.value);return;}if(el.dataset.lineProp){updateLine(el.dataset.lineProp,el.value);return;}if(el.dataset.sliderProp){const prop=el.dataset.sliderProp;updateLine(prop,['delay','visibleDuration'].includes(prop)?Number(el.value)*1000:Number(el.value));return;}if(el.dataset.prop)updateLine(el.dataset.prop,el.type==='checkbox'?el.checked:['delay','visibleDuration'].includes(el.dataset.prop)?Number(el.value)*1000:el.value);});
   actSelect.addEventListener('change',()=>{
     currentActIndex=Number(actSelect.value);currentLineIndex=0;renderLines();
     const storySelect=document.getElementById('chapterSelect');
     if(storySelect){storySelect.value=String(currentActIndex);storySelect.dispatchEvent(new Event('change',{bubbles:true}));}
     window.setTimeout(()=>previewLine(activeLine(),true),700);
   });
-  lineSelect.addEventListener('change',()=>{currentLineIndex=Number(lineSelect.value);currentItemIndex=0;renderItems();});
-  itemSelect.addEventListener('change',()=>{currentItemIndex=Number(itemSelect.value);renderForm();});
+  lineSelect.addEventListener('change',()=>{currentLineIndex=Number(lineSelect.value);currentItemIndex=0;currentChoiceIndex=0;renderItems();renderSceneSettings();renderAudioSettings();renderChoiceEditor();});
+  itemSelect.addEventListener('change',()=>{currentItemIndex=Number(itemSelect.value);renderForm();renderAudioSettings();});
   fileInput.addEventListener('change',async()=>{
     const file=fileInput.files?.[0]; if(!file)return;
     try{const imported=JSON.parse(await file.text());if(!Array.isArray(imported.lines))throw new Error('The JSON must contain a lines array.');imported.__editorFile=activeAct().__editorFile;acts[currentActIndex]=imported;renderLines();setStatus(`Imported ${file.name}. Export to save a downloadable act file.`);}catch(err){setStatus(`Import failed: ${err.message}`);}finally{fileInput.value='';}
@@ -473,9 +529,15 @@
     out.lines=(out.lines||[]).map((line,sceneIndex)=>{
       const items=getItems(line,sceneIndex).map(item=>({...item,type:item.sfx?'sfx':'text',sfx:Boolean(item.sfx),audioSfx:typeof item.audioSfx==='string'?item.audioSfx:'',position:item.position||defaultPosition(line),margin:marginOffsets[item.margin]?item.margin:'M',padding:paddingFactors[item.padding]?item.padding:'M',rotation:Number(item.rotation)||0,zIndex:Math.max(1,Math.min(10,Number(item.zIndex)||1)),speaker:item.speaker||line.speaker||'narrator',align:item.align||line.align||'center',width:item.width||line.width||'1/2',font:item.font||'default',fontSize:Number(item.fontSize)||0,delay:Number(item.delay)||0,visibleDuration:Number(item.visibleDuration)||0,entryFx:item.entryFx||'fade',exitFx:item.exitFx||'fade',style:item.style||(item.sfx?'sfx-impact':'comic'),bold:Boolean(item.bold),italic:Boolean(item.italic)}));
       const exported={...line};
-      for(const key of ['speaker','fx','delay','align','text','width','valign','sfx','style','bold','italic','position','rotation','font','fontSize','visibleDuration','exitFx','sfxRotation','sfxFontSize','__editorFile'])delete exported[key];
+      for(const key of ['speaker','fx','delay','align','text','width','valign','style','bold','italic','position','rotation','font','fontSize','visibleDuration','exitFx','sfxRotation','sfxFontSize','audioSfx','__editorFile'])delete exported[key];
       exported.items=items;
-      return exported;
+      if(typeof line.sfx==='string'&&line.sfx)exported.sfx=line.sfx;else delete exported.sfx;
+      const choices=getChoices(line).map(choice=>({...choice}));
+      if(choices.length)exported.choices=choices;else delete exported.choices;
+      const ordered={};
+      for(const key of ['id','svg','sfx','choices','items'])if(Object.prototype.hasOwnProperty.call(exported,key))ordered[key]=exported[key];
+      for(const [key,value] of Object.entries(exported))if(!['id','svg','sfx','choices','items'].includes(key))ordered[key]=value;
+      return ordered;
     });
     const blob=new Blob([JSON.stringify(out,null,2)+'\n'],{type:'application/json'});
     const url=URL.createObjectURL(blob);const anchor=document.createElement('a');anchor.href=url;anchor.download=act.__editorFile||`${act.id||'act'}.json`;anchor.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
@@ -512,10 +574,13 @@
     const line=activeLine(),items=getItems(line);if(!items.length)return;
     items.splice(currentItemIndex,1);currentItemIndex=Math.max(0,currentItemIndex-1);renderItems();setStatus('Item removed. Export the act JSON to keep the change.');
   }
+  function addChoice(){const choices=getChoices();choices.push({id:`${activeLine()?.id||'scene'}_choice_${choices.length+1}`,label:'New choice',note:'',style:'comic',position:'',font:'default',fontSize:0,bold:false,italic:false,align:'center',width:'1/2',margin:'M',padding:'M',rotation:0,zIndex:choices.length+1,entryFx:'fade',exitFx:'fade',delay:0,visibleDuration:0,audioSfx:''});currentChoiceIndex=choices.length-1;renderChoiceEditor();setStatus('Choice added. Export the act JSON to keep it.');}
+  function removeChoice(){const choices=getChoices();if(!choices.length)return;choices.splice(currentChoiceIndex,1);currentChoiceIndex=Math.max(0,currentChoiceIndex-1);renderChoiceEditor();setStatus('Choice removed. Export the act JSON to keep it.');}
   async function replayChapter(){
     const token=++replayToken, act=activeAct();if(!act)return;
     clearReplayElements();stopReplayAudio();
     const line=activeLine();if(!line)return;
+    if(line.sfx&&/\.(mp3|wav|ogg|m4a|aac)(?:[?#].*)?$/i.test(line.sfx))playReplayAudio(line.sfx);
     const items=getItems(line);
     const liveAtSceneStart=getLiveText();if(liveAtSceneStart)liveAtSceneStart.text.style.opacity='0';
     const primary=items.find(item=>!item.sfx)||items[0];

@@ -36,7 +36,6 @@
     },
     {
       "id": "gathering_1",
-      "audioSfx": "assets/audio/sfx/animal_march.mp3",
       "interaction": "gathering",
       "items": [
         {
@@ -62,7 +61,8 @@
           "zIndex": 1
         }
       ],
-      "svg": "ch4_animals_arrive"
+      "svg": "ch4_animals_arrive",
+      "sfx": "assets/audio/sfx/animal_march.mp3"
     },
     {
       "id": "gathering_2",

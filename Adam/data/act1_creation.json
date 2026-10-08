@@ -39,7 +39,6 @@
     },
     {
       "id": "creation_1",
-      "audioSfx": "assets/audio/sfx/creation_light.mp3",
       "items": [
         {
           "id": "creation_1_text",
@@ -86,7 +85,8 @@
           "zIndex": 2
         }
       ],
-      "svg": "creation_light"
+      "svg": "creation_light",
+      "sfx": "assets/audio/sfx/creation_light.mp3"
     },
     {
       "id": "creation_2",

@@ -241,7 +241,6 @@
     },
     {
       "id": "carmel_8",
-      "audioSfx": "assets/audio/sfx/altar_fire.mp3",
       "items": [
         {
           "id": "carmel_8_text",
@@ -288,7 +287,8 @@
           "zIndex": 2
         }
       ],
-      "svg": "mount_carmel_fire"
+      "svg": "mount_carmel_fire",
+      "sfx": "assets/audio/sfx/altar_fire.mp3"
     },
     {
       "id": "carmel_9",
@@ -348,7 +348,6 @@
     },
     {
       "id": "carmel_11",
-      "audioSfx": "assets/audio/sfx/rain_thunder.mp3",
       "items": [
         {
           "id": "carmel_11_text",
@@ -373,7 +372,8 @@
           "zIndex": 1
         }
       ],
-      "svg": "mount_carmel_fire"
+      "svg": "mount_carmel_fire",
+      "sfx": "assets/audio/sfx/rain_thunder.mp3"
     }
   ],
   "assetFolder": "act_03_carmel",

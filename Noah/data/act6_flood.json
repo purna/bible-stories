@@ -7,7 +7,6 @@
   "lines": [
     {
       "id": "flood_0",
-      "audioSfx": "assets/audio/sfx/flood_water.mp3",
       "cite": "Genesis 7:17",
       "items": [
         {
@@ -33,7 +32,8 @@
           "zIndex": 1
         }
       ],
-      "svg": "ch6_water_rising"
+      "svg": "ch6_water_rising",
+      "sfx": "assets/audio/sfx/flood_water.mp3"
     },
     {
       "id": "flood_1",

@@ -174,7 +174,6 @@
     },
     {
       "id": "furnace_5",
-      "audioSfx": "assets/audio/sfx/furnace_roar.mp3",
       "items": [
         {
           "id": "furnace_5_text",
@@ -221,7 +220,8 @@
           "zIndex": 2
         }
       ],
-      "svg": "furnace_lit"
+      "svg": "furnace_lit",
+      "sfx": "assets/audio/sfx/furnace_roar.mp3"
     },
     {
       "id": "furnace_6",

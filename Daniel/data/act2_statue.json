@@ -119,7 +119,6 @@
     },
     {
       "id": "statue_3",
-      "audioSfx": "assets/audio/sfx/vision_reveal.mp3",
       "items": [
         {
           "id": "statue_3_text",
@@ -144,7 +143,8 @@
           "zIndex": 1
         }
       ],
-      "svg": "daniel_prays"
+      "svg": "daniel_prays",
+      "sfx": "assets/audio/sfx/vision_reveal.mp3"
     },
     {
       "id": "statue_4",
