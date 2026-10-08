@@ -1,0 +1,34 @@
+{
+  "story": "Abraham",
+  "act": {
+    "id": "act5_covenant_stars",
+    "name": "Ch.5 · Covenant Stars",
+    "source": "../art/act5_covenant_stars.md"
+  },
+  "beats": [
+    {
+      "id": "a_establish",
+      "type": "visual",
+      "name": "establishing",
+      "description": "wide framing of the setting: Abram alone outside his tent at midnight, wrapped in a cloak, staring into a sky crowded with stars"
+    },
+    {
+      "id": "b_core_action",
+      "type": "visual",
+      "name": "core action",
+      "description": "the scene's central movement and characters"
+    },
+    {
+      "id": "c_resolve",
+      "type": "visual",
+      "name": "resolution",
+      "description": "the beat's outcome, holding the emotional note"
+    },
+    {
+      "id": "interactive-game",
+      "type": "game",
+      "description": "Trace the promised constellation.",
+      "mechanic": "match-it-up"
+    }
+  ]
+}

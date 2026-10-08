@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Establish Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Joshua act 2 Ch.2 · Rahab and the Spies foreground">
+  <metadata>{&quot;story&quot;:&quot;Joshua&quot;,&quot;act&quot;:2,&quot;chapter&quot;:&quot;Ch.2 · Rahab and the Spies&quot;,&quot;scene&quot;:&quot;A&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;city&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#655748" stroke="#1f1b1a" stroke-width="12" opacity=".93"><rect x="0" y="540" width="150" height="560"/><rect x="1770" y="540" width="150" height="560"/><rect x="0" y="510" width="205" height="55"/><rect x="1715" y="510" width="205" height="55"/></g><g opacity=".96"><path d="M1450 1045l26.358861248055472 -63.504367305524646 70.29029666148126 -24.696142841037364 61.5040095787961 88.20051014656201Z" fill="#8f7f6d" stroke="#1f1b1a" stroke-width="9"/><path d="M1565 1045l26.45766768255271 -41.19690526993945 70.55378048680723 -16.021018716087568 61.734557925956324 57.21792398602702Z" fill="#8f7f6d" stroke="#1f1b1a" stroke-width="9"/><path d="M1680 1045l21.539770590886473 -95.94346712864935 57.439388242363925 -37.31134832780808 50.259464712068436 133.25481545645744Z" fill="#8f7f6d" stroke="#1f1b1a" stroke-width="9"/></g><g fill="none" stroke="#634832" stroke-width="30" stroke-linecap="round" opacity=".92"><path d="M75 1080V650L350 455"/><path d="M1845 1080V720L1640 565"/><path d="M40 905H310M1650 925H1900"/></g>
+  </svg>

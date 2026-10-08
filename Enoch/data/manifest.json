@@ -10,7 +10,28 @@
       "assetFolder": "act_01_a_family_record",
       "assetStem": "enoch_act1",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_a_family_record/a_establish/enoch_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_a_family_record/a_establish/enoch_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_a_family_record/a_establish/enoch_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_a_family_record/b_core_action/enoch_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_a_family_record/b_core_action/enoch_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_a_family_record/b_core_action/enoch_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_a_family_record/c_resolve/enoch_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_a_family_record/c_resolve/enoch_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_a_family_record/c_resolve/enoch_act1_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/fabric_weave-basket.svg"
+      ]
     },
     {
       "id": "the_first_walk",
@@ -21,7 +42,29 @@
       "assetFolder": "act_02_the_first_walk",
       "assetStem": "enoch_act2",
       "particle": "dusk",
-      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_the_first_walk/a_establish/enoch_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_the_first_walk/a_establish/enoch_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_first_walk/a_establish/enoch_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_the_first_walk/b_core_action/enoch_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_the_first_walk/b_core_action/enoch_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_first_walk/b_core_action/enoch_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_the_first_walk/c_resolve/enoch_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_the_first_walk/c_resolve/enoch_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_first_walk/c_resolve/enoch_act2_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/leaves-canopy.svg"
+      ]
     },
     {
       "id": "a_son_named_methuselah",
@@ -32,7 +75,28 @@
       "assetFolder": "act_03_a_son_named_methuselah",
       "assetStem": "enoch_act3",
       "particle": "ember",
-      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_a_son_named_methuselah/a_establish/enoch_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_a_son_named_methuselah/a_establish/enoch_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_a_son_named_methuselah/a_establish/enoch_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_a_son_named_methuselah/b_core_action/enoch_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_a_son_named_methuselah/b_core_action/enoch_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_a_son_named_methuselah/b_core_action/enoch_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/fabric_weave-basket.svg"
+      ]
     },
     {
       "id": "years_of_faithfulness",
@@ -43,7 +107,30 @@
       "assetFolder": "act_04_years_of_faithfulness",
       "assetStem": "enoch_act4",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_years_of_faithfulness/a_establish/enoch_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_years_of_faithfulness/a_establish/enoch_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_years_of_faithfulness/a_establish/enoch_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_years_of_faithfulness/b_core_action/enoch_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_years_of_faithfulness/b_core_action/enoch_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_years_of_faithfulness/b_core_action/enoch_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_years_of_faithfulness/c_resolve/enoch_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_years_of_faithfulness/c_resolve/enoch_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_years_of_faithfulness/c_resolve/enoch_act4_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/leaves-canopy.svg"
+      ]
     },
     {
       "id": "a_warning",
@@ -54,7 +141,27 @@
       "assetFolder": "act_05_a_warning",
       "assetStem": "enoch_act5",
       "particle": "dusk",
-      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_a_warning/a_establish/enoch_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_a_warning/a_establish/enoch_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_a_warning/a_establish/enoch_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_a_warning/b_core_action/enoch_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_a_warning/b_core_action/enoch_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_a_warning/b_core_action/enoch_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_a_warning/c_resolve/enoch_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_a_warning/c_resolve/enoch_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_a_warning/c_resolve/enoch_act5_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg"
+      ]
     },
     {
       "id": "walking_with_god",
@@ -65,7 +172,29 @@
       "assetFolder": "act_06_walking_with_god",
       "assetStem": "enoch_act6",
       "particle": "ember",
-      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_walking_with_god/a_establish/enoch_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_walking_with_god/a_establish/enoch_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_walking_with_god/a_establish/enoch_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_walking_with_god/b_core_action/enoch_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_walking_with_god/b_core_action/enoch_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_walking_with_god/b_core_action/enoch_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_walking_with_god/c_resolve/enoch_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_walking_with_god/c_resolve/enoch_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_walking_with_god/c_resolve/enoch_act6_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/leaves-canopy.svg"
+      ]
     },
     {
       "id": "taken",
@@ -76,7 +205,29 @@
       "assetFolder": "act_07_taken",
       "assetStem": "enoch_act7",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_taken/a_establish/enoch_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_taken/a_establish/enoch_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_taken/a_establish/enoch_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_taken/b_core_action/enoch_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_taken/b_core_action/enoch_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_taken/b_core_action/enoch_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_taken/c_resolve/enoch_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_taken/c_resolve/enoch_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_taken/c_resolve/enoch_act7_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/leaves-canopy.svg"
+      ]
     }
   ]
 }

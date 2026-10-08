@@ -4,74 +4,158 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "david-anointed",
+      "name": "Ch.1 · Anointed",
+      "file": "david-anointed.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "david-anointed_hd",
+      "name": "Ch.1 · Anointed (HD)",
+      "file": "david-anointed_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "david-goliath",
+      "name": "Ch.2 · Goliath",
+      "file": "david-goliath.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "david-goliath_hd",
+      "name": "Ch.2 · Goliath (HD)",
+      "file": "david-goliath_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "david-court",
+      "name": "Ch.3 · Saul's Court",
+      "file": "david-court.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "david-court_hd",
+      "name": "Ch.3 · Saul's Court (HD)",
+      "file": "david-court_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "david-friends",
+      "name": "Ch.4 · Covenant Friends",
+      "file": "david-friends.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "david-friends_hd",
+      "name": "Ch.4 · Covenant Friends (HD)",
+      "file": "david-friends_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "david-wilderness",
+      "name": "Ch.5 · The Wilderness",
+      "file": "david-wilderness.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "david-wilderness_hd",
+      "name": "Ch.5 · The Wilderness (HD)",
+      "file": "david-wilderness_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "david-abigail",
+      "name": "Ch.6 · Abigail",
+      "file": "david-abigail.js",
+      "type": "module"
+    },
+    {
+      "id": "david-abigail_hd",
+      "name": "Ch.6 · Abigail (HD)",
+      "file": "david-abigail_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "david-throne",
+      "name": "Ch.7 · The Throne",
+      "file": "david-throne.js",
+      "type": "module"
+    },
+    {
+      "id": "david-throne_hd",
+      "name": "Ch.7 · The Throne (HD)",
+      "file": "david-throne_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "david-bathsheba",
+      "name": "Ch.8 · Bathsheba and Uriah",
+      "file": "david-bathsheba.js",
+      "type": "module"
+    },
+    {
+      "id": "david-bathsheba_hd",
+      "name": "Ch.8 · Bathsheba and Uriah (HD)",
+      "file": "david-bathsheba_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "david-nathan",
+      "name": "Ch.9 · Nathan's Parable",
+      "file": "david-nathan.js",
+      "type": "module"
+    },
+    {
+      "id": "david-nathan_hd",
+      "name": "Ch.9 · Nathan's Parable (HD)",
+      "file": "david-nathan_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "david-absalom",
+      "name": "Ch.10 · Absalom",
+      "file": "david-absalom.js",
+      "type": "module"
+    },
+    {
+      "id": "david-absalom_hd",
+      "name": "Ch.10 · Absalom (HD)",
+      "file": "david-absalom_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "david-census",
+      "name": "Ch.11 · The Census",
+      "file": "david-census.js",
+      "type": "module"
+    },
+    {
+      "id": "david-census_hd",
+      "name": "Ch.11 · The Census (HD)",
+      "file": "david-census_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "david-solomon",
+      "name": "Ch.12 · Solomon",
+      "file": "david-solomon.js",
+      "type": "module"
+    },
+    {
+      "id": "david-solomon_hd",
+      "name": "Ch.12 · Solomon (HD)",
+      "file": "david-solomon_hd.js",
       "type": "module"
     }
   ]

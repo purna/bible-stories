@@ -78,6 +78,21 @@
             transform: rotate(0deg) scale(1.05);
         }
 
+        .comic-cover.can-scroll-down {
+            animation: coverWobble 6s ease-in-out infinite;
+        }
+
+        @keyframes coverWobble {
+            0%, 100% { transform: rotate(-2deg) translateX(0); }
+            25% { transform: rotate(-1.7deg) translateX(2px); }
+            50% { transform: rotate(-2.2deg) translateX(-1px); }
+            75% { transform: rotate(-1.9deg) translateX(1px); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .comic-cover.can-scroll-down { animation: none; }
+        }
+
         .comic-cover h1 {
             font-family: 'Bangers', cursive;
             font-size: 5.5rem;
@@ -308,7 +323,7 @@
         <ul class="comic-list">
             <li><a href="./Adam/">The Story of Adam & Eve</a></li>
             <li><a href="./Daniel/">The Story of Daniel</a></li>
-            <li><a href="./Eiljah/">The Story of Elijah</a></li>
+            <li><a href="./Elijah/">The Story of Elijah</a></li>
             <li><a href="./Jonah/">The Story of Jonah</a></li>
             <li><a href="./Moses/">The Story of Moses</a></li>
             <li><a href="./Noah/">The Story of Noah</a></li>

@@ -1,0 +1,29 @@
+{
+  "story": "Adam",
+  "act": 4,
+  "chapter": "The Temptation",
+  "artSource": "art/act4_temptation.md",
+  "artFolder": "assets/svg/act_04_temptation",
+  "sceneId": "serpent_tree",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "gourd-vine-leaves.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "stone_texture.svg",
+    "temple-flagstone.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg",
+    "wood_texture.svg"
+  ],
+  "layers": {
+    "background": "adam_act4_b_background.svg",
+    "middleGround": "adam_act4_b_middle_ground.svg",
+    "foreground": "adam_act4_b_foreground.svg"
+  }
+}

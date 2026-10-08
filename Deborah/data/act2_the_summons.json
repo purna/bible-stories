@@ -8,62 +8,151 @@
   "lines": [
     {
       "id": "the_summons_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Deborah sent for Barak and gave him God\u2019s command: gather ten thousand and march to Mount Tabor.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_summons_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Deborah sent for Barak and gave him God’s command: gather ten thousand and march to Mount Tabor.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_summons_1",
-      "speaker": "barak",
-      "fx": "type",
-      "delay": 800,
-      "align": "center",
-      "text": "If you go with me, I will go; but if you do not go with me, I will not go.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_summons_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "If you go with me, I will go; but if you do not go with me, I will not go.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "barak",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_summons_2",
-      "speaker": "deborah",
-      "fx": "type",
-      "delay": 800,
-      "align": "center",
-      "text": "Certainly I will go with you.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_summons_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Certainly I will go with you.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "deborah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_summons_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Deborah rose to share the road, while making clear that the victory would not become Barak\u2019s glory.",
-      "cite": "Judges 4:6\u201310",
-      "width": "1/2",
-      "valign": "middle"
+      "cite": "Judges 4:6–10",
+      "items": [
+        {
+          "id": "the_summons_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Deborah rose to share the road, while making clear that the victory would not become Barak’s glory.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "gameSteps": [
     [
       "listen",
-      "1 \u00b7 Listen to the summons"
+      "1 · Listen to the summons"
     ],
     [
       "gather",
-      "2 \u00b7 Gather the people"
+      "2 · Gather the people"
     ],
     [
       "go",
-      "3 \u00b7 Go to Mount Tabor"
+      "3 · Go to Mount Tabor"
     ]
   ],
   "gameSuccess": "The message reaches Barak, and courage begins with a shared road.",
-  "name": "Ch.2 \u00b7 The Summons",
+  "name": "Ch.2 · The Summons",
   "assetFolder": "act_02_the_summons",
-  "assetStem": "deborah_act2"
+  "assetStem": "deborah_act2",
+  "artFolder": "assets/svg/act_02_the_summons",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_02_the_summons/a_establish/deborah_act2_a_background.svg",
+      "middleGround": "assets/svg/act_02_the_summons/a_establish/deborah_act2_a_middle_ground.svg",
+      "foreground": "assets/svg/act_02_the_summons/a_establish/deborah_act2_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_02_the_summons/b_core_action/deborah_act2_b_background.svg",
+      "middleGround": "assets/svg/act_02_the_summons/b_core_action/deborah_act2_b_middle_ground.svg",
+      "foreground": "assets/svg/act_02_the_summons/b_core_action/deborah_act2_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_background.svg",
+      "middleGround": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_middle_ground.svg",
+      "foreground": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/grass-tufts.svg"
+  ]
 }

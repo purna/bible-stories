@@ -1,0 +1,21 @@
+{
+  "story": "Jacob",
+  "act": 9,
+  "chapter": "Ch.9 · Meeting Esau",
+  "artSource": "art/act9_meeting_esau.md",
+  "artFolder": "assets/svg/act_09_meeting_esau",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "fabric_weave-basket.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "jacob_act9_c_background.svg",
+    "middleGround": "jacob_act9_c_middle_ground.svg",
+    "foreground": "jacob_act9_c_foreground.svg"
+  }
+}

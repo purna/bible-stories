@@ -1,0 +1,22 @@
+{
+  "story": "Abraham",
+  "act": 5,
+  "chapter": "Covenant Stars",
+  "artSource": "art/act5_covenant_stars.md",
+  "artFolder": "assets/svg/act_05_covenant_stars",
+  "sceneId": "",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "abraham_act5_b_background.svg",
+    "middleGround": "abraham_act5_b_middle_ground.svg",
+    "foreground": "abraham_act5_b_foreground.svg"
+  }
+}

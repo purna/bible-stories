@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Resolve Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Isaiah act 6 Ch.6 · Hezekiah’s Crisis foreground">
+  <metadata>{&quot;story&quot;:&quot;Isaiah&quot;,&quot;act&quot;:6,&quot;chapter&quot;:&quot;Ch.6 · Hezekiah’s Crisis&quot;,&quot;scene&quot;:&quot;C&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#ac8e63" stroke="#201a17" stroke-width="12" opacity=".93"><rect x="0" y="546.4" width="138" height="553.6"/><rect x="1782" y="546.4" width="138" height="553.6"/><rect x="0" y="516.4" width="193" height="55"/><rect x="1727" y="516.4" width="193" height="55"/></g><g opacity=".96"><path d="M1450 1045l16.058007868409156 -88.52238731988518 42.821354315757745 -34.425372846622025 37.46868502628803 122.94776016650721Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1565 1045l16.655430211845783 -67.10296586050093 44.41448056492209 -26.095597834639253 38.862670494306826 93.19856369514018Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1680 1045l22.4921812778078 -66.2226019840613 59.979150074154134 -25.753234104912732 52.48175631488487 91.97583608897403Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/></g><g fill="#a68f6b" stroke="#201a17" stroke-width="10" opacity=".9"><path d="M0 1080V760h245v320zM1675 1080V760h245v320z"/><path d="M0 760h310v70H0zM1610 760h310v70h-310z"/></g><g transform="translate(1450 875) rotate(-7)" opacity="0.72"><rect x="-135" y="-55" width="270" height="110" rx="12" fill="#d8c49a"/><path d="M-100 -20H95M-100 8H70M-100 36H105" stroke="#201a17" stroke-width="8" opacity=".35"/></g>
+  </svg>

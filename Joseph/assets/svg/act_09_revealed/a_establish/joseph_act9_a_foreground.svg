@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Establish Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Joseph act 9 Ch.9 · Revealed foreground">
+  <metadata>{&quot;story&quot;:&quot;Joseph&quot;,&quot;act&quot;:9,&quot;chapter&quot;:&quot;Ch.9 · Revealed&quot;,&quot;scene&quot;:&quot;A&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#ac8e63" stroke="#201a17" stroke-width="12" opacity=".93"><rect x="0" y="540" width="150" height="560"/><rect x="1770" y="540" width="150" height="560"/><rect x="0" y="510" width="205" height="55"/><rect x="1715" y="510" width="205" height="55"/></g>
+  </svg>

@@ -1,0 +1,27 @@
+{
+  "story": "Adam",
+  "act": 6,
+  "chapter": "West of the Divide",
+  "artSource": "art/act6_west.md",
+  "artFolder": "assets/svg/act_06_west",
+  "sceneId": "exile_dawn",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "dry-hillside-grass.svg",
+    "gourd-vine-leaves.svg",
+    "grass-tufts.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg",
+    "wood_texture.svg"
+  ],
+  "layers": {
+    "background": "adam_act6_a_background.svg",
+    "middleGround": "adam_act6_a_middle_ground.svg",
+    "foreground": "adam_act6_a_foreground.svg"
+  }
+}

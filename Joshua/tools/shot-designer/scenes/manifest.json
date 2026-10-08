@@ -4,74 +4,134 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "joshua-be-strong",
+      "name": "Ch.1 · Be Strong",
+      "file": "joshua-be-strong.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "joshua-be-strong_hd",
+      "name": "Ch.1 · Be Strong (HD)",
+      "file": "joshua-be-strong_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "joshua-rahab-and-the-spies",
+      "name": "Ch.2 · Rahab and the Spies",
+      "file": "joshua-rahab-and-the-spies.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "joshua-rahab-and-the-spies_hd",
+      "name": "Ch.2 · Rahab and the Spies (HD)",
+      "file": "joshua-rahab-and-the-spies_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "joshua-crossing-jordan",
+      "name": "Ch.3 · Crossing Jordan",
+      "file": "joshua-crossing-jordan.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "joshua-crossing-jordan_hd",
+      "name": "Ch.3 · Crossing Jordan (HD)",
+      "file": "joshua-crossing-jordan_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "joshua-jericho",
+      "name": "Ch.4 · Jericho",
+      "file": "joshua-jericho.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "joshua-jericho_hd",
+      "name": "Ch.4 · Jericho (HD)",
+      "file": "joshua-jericho_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "joshua-achan-s-hidden-goods",
+      "name": "Ch.5 · Achan’s Hidden Goods",
+      "file": "joshua-achan-s-hidden-goods.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "joshua-achan-s-hidden-goods_hd",
+      "name": "Ch.5 · Achan’s Hidden Goods (HD)",
+      "file": "joshua-achan-s-hidden-goods_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "joshua-ai",
+      "name": "Ch.6 · Ai",
+      "file": "joshua-ai.js",
+      "type": "module"
+    },
+    {
+      "id": "joshua-ai_hd",
+      "name": "Ch.6 · Ai (HD)",
+      "file": "joshua-ai_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "joshua-the-gibeonites",
+      "name": "Ch.7 · The Gibeonites",
+      "file": "joshua-the-gibeonites.js",
+      "type": "module"
+    },
+    {
+      "id": "joshua-the-gibeonites_hd",
+      "name": "Ch.7 · The Gibeonites (HD)",
+      "file": "joshua-the-gibeonites_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "joshua-the-long-campaign",
+      "name": "Ch.8 · The Long Campaign",
+      "file": "joshua-the-long-campaign.js",
+      "type": "module"
+    },
+    {
+      "id": "joshua-the-long-campaign_hd",
+      "name": "Ch.8 · The Long Campaign (HD)",
+      "file": "joshua-the-long-campaign_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "joshua-allot-the-land",
+      "name": "Ch.9 · Allot the Land",
+      "file": "joshua-allot-the-land.js",
+      "type": "module"
+    },
+    {
+      "id": "joshua-allot-the-land_hd",
+      "name": "Ch.9 · Allot the Land (HD)",
+      "file": "joshua-allot-the-land_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "joshua-choose-this-day",
+      "name": "Ch.10 · Choose This Day",
+      "file": "joshua-choose-this-day.js",
+      "type": "module"
+    },
+    {
+      "id": "joshua-choose-this-day_hd",
+      "name": "Ch.10 · Choose This Day (HD)",
+      "file": "joshua-choose-this-day_hd.js",
       "type": "module"
     }
   ]

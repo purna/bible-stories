@@ -207,7 +207,9 @@ function sceneBeat(act) {
 }
 function sceneAssetPath(act, layer) {
   const beat = sceneBeat(act);
-  return `assets/svg/${act.assetFolder}/${beat.folder}/${act.assetStem}_${beat.id}_${layer}.svg`;
+  const layerKey = layer === 'middle_ground' ? 'middleGround' : layer;
+  const linked = act.sceneLayers && act.sceneLayers[beat.folder] && act.sceneLayers[beat.folder][layerKey];
+  return linked || `assets/svg/${act.assetFolder}/${beat.folder}/${act.assetStem}_${beat.id}_${layer}.svg`;
 }
 
 /* ── Dot progress bar ───────────────────────── */
@@ -310,6 +312,16 @@ async function renderLine() {
   const act = currentAct();
   const sceneKey = act.scene || act.id;
   const data = act.lines[lineIdx];
+    if (Array.isArray(data.items) && data.items.length) {
+        const primary = data.items.find(item => !item.sfx) || data.items[0];
+        const firstSfx = data.items.find(item => item.sfx);
+        data.speaker = primary.speaker || 'narrator'; data.text = primary.sfx ? '' : (primary.text || '');
+        data.sfx = firstSfx ? firstSfx.text : '';
+        data.fx = primary.entryFx || 'fade';
+        data.delay = Math.min(...data.items.map(item => Number(item.delay) || 0));
+        data.align = primary.align || 'center'; data.width = primary.width || '1/2'
+    }
+
   audio.playLineSfx(data);
   audio.playAct(act);
 
@@ -335,7 +347,15 @@ async function renderLine() {
     initParallax(svgEl, svgLayer);
   }
 
-  // Layer 2: 3D midground (Three.js)
+  // Layer 2: SVG middle ground; optional character staging sits between the setting and 3D.
+  const middleLayer = document.createElement('div');
+  middleLayer.id = 'midLayer';
+  middleLayer.classList.add('svg-middle');
+  middleLayer.innerHTML = await loadSvg(sceneAssetPath(act, 'middle_ground'));
+  graphicContainer.appendChild(middleLayer);
+
+  // Layer 3: 3D scene objects
+  // Layer 3: 3D scene (Three.js)
   if (use3D && renderer && threeCanvas && window.SCENE_FACTORIES && window.SCENE_FACTORIES[sceneKey]) {
     graphicContainer.classList.add('canvas-mode');
     if (threeCanvas.parentNode) threeCanvas.parentNode.removeChild(threeCanvas);
@@ -389,21 +409,19 @@ async function renderLine() {
     }
     if (effText) {
       const width = data.width || '1/2';
-      const valign = data.valign || 'middle';
       const widthStyle = `--bubble-width: ${width};`;
-      const valignStyle = `--bubble-valign: ${valign};`;
 
       if (effSpeaker === 'narrator' || effSpeaker === 'god') {
         const cap = document.createElement('div');
         cap.className = `caption fx-${effFx} caption-${effAlign}`;
-        cap.style.cssText = widthStyle + valignStyle;
+        cap.style.cssText = widthStyle;
         cap.innerHTML = buildLineHTML(effText, effFx);
         overlay.appendChild(cap);
       } else {
         const align = effAlign;
         const wrap = document.createElement('div');
         wrap.className = `bubble-wrap align-${align}`;
-        wrap.style.cssText = widthStyle + valignStyle;
+        wrap.style.cssText = widthStyle;
         const bub = document.createElement('div');
         bub.className = `bubble ${effSpeaker} fx-${effFx} bubble-${align}`;
         bub.innerHTML = buildLineHTML(effText, effFx);
@@ -549,7 +567,6 @@ window.addEventListener('keydown', e => {
   if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
   if (e.code === 'ArrowRight' || e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); goLine(1); }
   if (e.code === 'ArrowLeft') goLine(-1);
-  if (e.code === 'ArrowDown') goNextChapter();
 });
 
 /* ── Start button ─────────────────────────────── */

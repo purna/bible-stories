@@ -1,0 +1,243 @@
+{
+  "story": "Noah",
+  "act": {
+    "id": "waiting",
+    "name": "Ch.7 · The Long Wait",
+    "source": "../data/act7_waiting.json",
+    "svg": "ch7_ark_on_ararat",
+    "bg": "radial-gradient(circle at 50% 40%, #0c1428, #060a18 65%, #020408)",
+    "particle": "flood"
+  },
+  "beats": [
+    {
+      "id": "waiting_0",
+      "cite": "Genesis 8:4",
+      "items": [
+        {
+          "id": "waiting_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The ark came to rest on the mountains of Ararat. Still no land in sight.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch7_ark_on_ararat"
+    },
+    {
+      "id": "waiting_1",
+      "items": [
+        {
+          "id": "waiting_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "He opened the window and sent out the raven. It flew back and forth, never returning.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "noah",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch7_raven_sent"
+    },
+    {
+      "id": "waiting_2",
+      "items": [
+        {
+          "id": "waiting_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "No news. No land. Just the raven, circling.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch7_raven_sent"
+    },
+    {
+      "id": "waiting_3",
+      "items": [
+        {
+          "id": "waiting_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Seven days later: the dove. Please come back with something.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "noah",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch7_dove_sent"
+    },
+    {
+      "id": "waiting_4",
+      "cite": "Genesis 8:11",
+      "items": [
+        {
+          "id": "waiting_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The dove came back with a fresh olive leaf in its beak.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "wave",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch7_dove_returns"
+    },
+    {
+      "id": "waiting_5",
+      "items": [
+        {
+          "id": "waiting_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Somewhere beneath the water — trees. Living trees. The earth was coming back.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "waiting_5_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "OLIVE LEAF!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "ch7_dove_returns"
+    },
+    {
+      "id": "waiting_6",
+      "choices": [
+        {
+          "label": "Open the hatch and look 👀",
+          "note": "Blue sky. Mud. The outline of mountains. Real."
+        },
+        {
+          "label": "Wait for God's word before moving 🙏",
+          "note": "Noah waits. It's the right call. The word comes."
+        }
+      ],
+      "items": [
+        {
+          "id": "waiting_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Seven more days. The dove went out — and did not come back. Dry land was waiting.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch7_dove_not_return"
+    }
+  ]
+}

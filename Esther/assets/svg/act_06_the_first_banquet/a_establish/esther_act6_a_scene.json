@@ -1,0 +1,23 @@
+{
+  "story": "Esther",
+  "act": 6,
+  "chapter": "Ch.6 · The First Banquet",
+  "artSource": "art/act6_the_first_banquet.md",
+  "artFolder": "assets/svg/act_06_the_first_banquet",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "fabric_dots-grid.svg",
+    "fabric_dots-scatterMix.svg",
+    "fabric_weave-basket.svg",
+    "hammered_gold-hammered.svg",
+    "mosaic-chips.svg",
+    "mosaic-grid.svg"
+  ],
+  "layers": {
+    "background": "esther_act6_a_background.svg",
+    "middleGround": "esther_act6_a_middle_ground.svg",
+    "foreground": "esther_act6_a_foreground.svg"
+  }
+}

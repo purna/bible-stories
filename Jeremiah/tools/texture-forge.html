@@ -36,6 +36,8 @@
     white-space:nowrap; cursor:pointer;
   }
   .pill.active{ background:var(--brass); border-color:var(--brass); color:#1c1815; font-weight:600; }
+  .act-filter{display:grid;gap:6px;padding:10px 6px;color:var(--ink-dim);font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+  .act-filter select{width:100%;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:6px;color:var(--ink);padding:9px;font:inherit;text-transform:none;letter-spacing:normal}
 
   /* texture chip strip */
   #rail{ display:flex; gap:8px; padding:12px 16px; overflow-x:auto; scrollbar-width:none; }
@@ -177,6 +179,7 @@
     <div class="grp">
       <label>Export</label>
       <button class="action primary" id="downloadSvgBtn">⬇ Download .svg</button>
+      <button class="action" id="exportActMaterialsBtn">Export this act’s materials (.zip)</button>
       <button class="action" id="copyPatternBtn">Copy &lt;pattern&gt; markup</button>
       <button class="action" id="copyCssBtn">Copy CSS class (data URI)</button>
       <div class="filesize" id="fileSize"></div>
@@ -291,7 +294,7 @@ function diamondPath(r){
 /* ============================================================
    Texture Library
 ============================================================ */
-const STORY_TEXTURE_CONFIG = {"story":"Jeremiah","keys":["wall_brick","stone","wood_dark","fabric_weave","desert_sand","water_still"]};
+const STORY_TEXTURE_CONFIG = {"story":"Jeremiah","keys":["wall_brick","stone","wood_dark","fabric_weave","desert_sand","water_still"],"acts":[{"act":1,"title":"Ch.1 · The Call","assetFolder":"assets/svg/act_01_the_call","keys":["stone","wood_dark"]},{"act":2,"title":"Ch.2 · The Almond Branch","assetFolder":"assets/svg/act_02_the_almond_branch","keys":["wall_brick","stone","wood_dark","fabric_weave","desert_sand","water_still"]},{"act":3,"title":"Ch.3 · At the Temple Gate","assetFolder":"assets/svg/act_03_at_the_temple_gate","keys":["stone"]},{"act":4,"title":"Ch.4 · The Scroll","assetFolder":"assets/svg/act_04_the_scroll","keys":["wall_brick","stone","wood_dark","fabric_weave","desert_sand","water_still"]},{"act":5,"title":"Ch.5 · The Potter","assetFolder":"assets/svg/act_05_the_potter","keys":["wall_brick","stone","wood_dark","fabric_weave","desert_sand","water_still"]},{"act":6,"title":"Ch.6 · The Yoke","assetFolder":"assets/svg/act_06_the_yoke","keys":["wood_dark"]},{"act":7,"title":"Ch.7 · The Cistern","assetFolder":"assets/svg/act_07_the_cistern","keys":["stone","wood_dark","fabric_weave","water_still"]},{"act":8,"title":"Ch.8 · Buy the Field","assetFolder":"assets/svg/act_08_buy_the_field","keys":["wall_brick","stone","water_still"]},{"act":9,"title":"Ch.9 · The Fall of Jerusalem","assetFolder":"assets/svg/act_09_the_fall_of_jerusalem","keys":["wall_brick","stone","desert_sand"]},{"act":10,"title":"Ch.10 · Lament and Hope","assetFolder":"assets/svg/act_10_lament_and_hope","keys":["wood_dark","fabric_weave"]}]};
 const FULL_LIB = {
 
   water_still: {
@@ -930,11 +933,14 @@ Object.entries(LIB).forEach(([key, t])=>{
   groups[t.group].push({key, ...t});
 });
 const groupNames = Object.keys(groups);
+function selectedAct(){return (STORY_TEXTURE_CONFIG.acts||[]).find(a=>String(a.act)===String(state.activeAct));}
+function visibleKeys(){const act=selectedAct();return new Set(act&&act.keys&&act.keys.length?act.keys:Object.keys(LIB));}
+function visibleGroups(){const keys=visibleKeys();return groupNames.filter(name=>(groups[name]||[]).some(item=>keys.has(item.key)));}
 
 function buildGroupRow(){
   const row = document.getElementById('groupRow');
   row.innerHTML = '';
-  groupNames.forEach(name=>{
+  visibleGroups().forEach(name=>{
     const p = document.createElement('button');
     p.className = 'pill' + (name===state.activeGroup? ' active':'');
     p.textContent = name;
@@ -946,18 +952,24 @@ function buildGroupRow(){
 function buildRail(){
   const railEl = document.getElementById('rail');
   railEl.innerHTML = '';
+  const filter=document.createElement('label');filter.className='act-filter';filter.textContent='Act materials';
+  const select=document.createElement('select');select.id='actSelect';select.setAttribute('aria-label','Filter materials by story act');
+  (STORY_TEXTURE_CONFIG.acts||[]).forEach(act=>{const option=document.createElement('option');option.value=String(act.act);option.textContent=`Act ${act.act}: ${act.title}`;select.appendChild(option)});
+  if(!(STORY_TEXTURE_CONFIG.acts||[]).length){const option=document.createElement('option');option.value='all';option.textContent='All materials';select.appendChild(option)}
+  select.value=String(state.activeAct);select.onchange=()=>{state.activeAct=select.value;const visible=visibleGroups();if(!visible.includes(state.activeGroup))state.activeGroup=visible[0]||groupNames[0];buildGroupRow();buildRail()};filter.appendChild(select);railEl.appendChild(filter);
+  const allowed=visibleKeys(), visible=visibleGroups();
   // Desktop: show every group with headers. Mobile: only active group (row hidden shows via CSS media query anyway,
   // but we keep DOM identical and let CSS decide visibility via layout; simplest is to always render grouped list,
   // and rely on groupRow for mobile filtering is unnecessary once all groups render — so filter for mobile only.
   const isDesktop = window.matchMedia('(min-width: 860px)').matches;
-  const toRender = isDesktop ? groupNames : [state.activeGroup];
+  const toRender = isDesktop ? visible : [state.activeGroup];
   toRender.forEach(name=>{
     if(isDesktop){
       const cat = document.createElement('div');
       cat.className='cat'; cat.textContent = name;
       railEl.appendChild(cat);
     }
-    groups[name].forEach(t=>{
+    groups[name].filter(t=>allowed.has(t.key)).forEach(t=>{
       const btn = document.createElement('button');
       btn.className = 'tex-btn' + (t.key===state.texKey ? ' active':'');
       btn.dataset.key = t.key;
@@ -1110,6 +1122,31 @@ document.getElementById('downloadSvgBtn').onclick = ()=>{
   showToast('Downloaded .svg');
 };
 
+function exportActMaterials(){
+  const selected=selectedAct();
+  const actKeys=selected&&selected.keys&&selected.keys.length?selected.keys:STORY_TEXTURE_CONFIG.keys;
+  const saved={texKey:state.texKey,shapeKey:state.shapeKey,seed:state.seed,colors:state.colors.slice(),params:{...state.params},activeGroup:state.activeGroup};
+  const files=[],index={story:STORY_TEXTURE_CONFIG.story,act:selected?selected.act:null,title:selected?selected.title:'All story materials',materials:[]};
+  actKeys.forEach(key=>{
+    if(!LIB[key])return;
+    initStateForTexture(key);
+    currentTex().shapes.forEach(shape=>{
+      state.shapeKey=shape.key;
+      const gen=buildPatternMarkup(),patId='p_'+state.texKey+'_'+state.shapeKey;
+      const size=Math.max(gen.w,gen.h),name=`${state.texKey}-${shape.key}.svg`;
+      files.push({name:`assets/materials/${name}`,text:standaloneSvgString(gen,patId,size)});
+      index.materials.push({key:state.texKey,shape:shape.key,file:name});
+    });
+  });
+  files.push({name:'assets/materials/material-index.json',text:JSON.stringify(index,null,2)});
+  state.texKey=saved.texKey;state.shapeKey=saved.shapeKey;state.seed=saved.seed;state.colors=saved.colors;state.params=saved.params;state.activeGroup=saved.activeGroup;
+  buildGroupRow();buildRail();render();
+  if(window.TextureForgeZip)TextureForgeZip.download(files,`${STORY_TEXTURE_CONFIG.story.toLowerCase()}-${selected?`act-${selected.act}-materials`:'materials'}.zip`);
+  showToast(`Prepared ${index.materials.length} material SVGs`);
+}
+
+document.getElementById('exportActMaterialsBtn').onclick=exportActMaterials;
+
 document.getElementById('copyPatternBtn').onclick = ()=>{
   const gen = lastGenerated;
   const patId = 'p_' + state.texKey + '_' + state.shapeKey;
@@ -1132,10 +1169,11 @@ document.getElementById('codeToggleBtn').onclick = (e)=>{
 /* ============================================================
    Init
 ============================================================ */
-initStateForTexture('water_still');
+initStateForTexture(STORY_TEXTURE_CONFIG.keys[0]);
 buildGroupRow();
 buildRail();
 render();
 </script>
+<script src="../../shared-tools/texture-forge-zip.js"></script>
 </body>
 </html>

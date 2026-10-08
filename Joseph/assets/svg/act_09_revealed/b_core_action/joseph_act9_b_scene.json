@@ -1,0 +1,19 @@
+{
+  "story": "Joseph",
+  "act": 9,
+  "chapter": "Ch.9 · Revealed",
+  "artSource": "art/act9_revealed.md",
+  "artFolder": "assets/svg/act_09_revealed",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "mosaic-chips.svg",
+    "mosaic-grid.svg"
+  ],
+  "layers": {
+    "background": "joseph_act9_b_background.svg",
+    "middleGround": "joseph_act9_b_middle_ground.svg",
+    "foreground": "joseph_act9_b_foreground.svg"
+  }
+}

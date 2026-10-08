@@ -1,0 +1,23 @@
+{
+  "story": "David",
+  "act": 4,
+  "chapter": "Ch.4 · Covenant Friends",
+  "artSource": "art/act4_friends.md",
+  "artFolder": "assets/svg/act_04_friends",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "fabric_dots-grid.svg",
+    "fabric_herringbone-weave..svg",
+    "fabric_houndstooth-classic.svg",
+    "fabric_tartan-sett.svg",
+    "fabric_weave-basket.svg",
+    "grass-tufts.svg"
+  ],
+  "layers": {
+    "background": "david_act4_a_background.svg",
+    "middleGround": "david_act4_a_middle_ground.svg",
+    "foreground": "david_act4_a_foreground.svg"
+  }
+}

@@ -7,6 +7,7 @@
   const root = document.documentElement;
   const MODES = new Set(['reading', 'choice', 'game', 'modal', 'transition', 'paused']);
   let mode = 'reading';
+  const editorConfig = window.STORY_EDITOR_CONFIG || {};
   function isInputLocked() { return Boolean(root.dataset.storyInputLock); }
   function blockWhenLocked(event) {
     if (!isInputLocked()) return;
@@ -44,7 +45,11 @@
   window.addEventListener('touchend', blockWhenLocked, { capture: true, passive: false });
   window.StoryRuntime = {
     MODES: [...MODES], setMode, getMode: () => mode,
-    allowsNavigation(event) { return mode === 'reading' && !isInputLocked() && !isInteractiveTarget(event && event.target); },
+    allowsNavigation(event) {
+      const navigationConfig = window.STORY_EDITOR_CONFIG || editorConfig;
+      const navigationEnabled = navigationConfig.navigationEnabled !== false;
+      return navigationEnabled && mode === 'reading' && !isInputLocked() && !isInteractiveTarget(event && event.target);
+    },
     isInteractiveTarget, lock(reason = 'overlay') { root.dataset.storyInputLock = reason; if (reason === 'info-modal') setMode('modal', { lock: reason }); },
     unlock(reason) { if (!reason || root.dataset.storyInputLock === reason) { delete root.dataset.storyInputLock; if (mode === 'modal' || mode === 'paused') setMode('reading'); } },
     isLocked: isInputLocked

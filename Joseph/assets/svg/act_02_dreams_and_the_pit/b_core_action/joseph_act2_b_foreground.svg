@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Core Action Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Joseph act 2 Ch.2 · Dreams and the Pit foreground">
+  <metadata>{&quot;story&quot;:&quot;Joseph&quot;,&quot;act&quot;:2,&quot;chapter&quot;:&quot;Ch.2 · Dreams and the Pit&quot;,&quot;scene&quot;:&quot;B&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#ac8e63" stroke="#201a17" stroke-width="12" opacity=".93"><rect x="0" y="530.4" width="168.00000000000003" height="569.6"/><rect x="1752" y="530.4" width="168.00000000000003" height="569.6"/><rect x="0" y="500.4" width="223.00000000000003" height="55"/><rect x="1697" y="500.4" width="223.00000000000003" height="55"/></g><g opacity=".96"><path d="M1450 1045l32.287817869495605 -62.178570461980996 86.10084765198827 -24.18055517965928 75.33824169548974 86.35912564164028Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1565 1045l32.62174494570494 -52.119473757505425 86.99131985521316 -20.268684239029888 76.11740487331153 72.38815799653531Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1680 1045l22.444774083210156 -67.50943308995292 59.852730888560416 -26.253668423870582 52.371139527490364 93.7631015138235Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/></g><g opacity=".9"><path d="M0 1080V560L315 725 430 1080Z" fill="#c3985e" stroke="#201a17" stroke-width="12"/><path d="M0 560L315 725" stroke="#684b32" stroke-width="20"/></g><g transform="translate(1510 875)" opacity="0.92"><path d="M-70 70 Q-105 -20 -50 -85 H50 Q105 -20 70 70Z" fill="#d7ae65" stroke="#201a17" stroke-width="12"/><ellipse cy="-85" rx="50" ry="18" fill="#b09181"/></g>
+  </svg>

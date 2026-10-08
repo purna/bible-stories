@@ -1,32 +1,19 @@
 {
   "story": "Deborah",
   "act": 1,
-  "chapter": "Under the Palm",
-  "brief": "Hear disputes and restore a fair path.",
-  "scene": {
-    "id": "A",
-    "name": "Establish"
-  },
-  "canvas": {
-    "width": 1920,
-    "height": 1080
-  },
-  "environment": "garden",
-  "time": "day",
-  "seed": 1,
-  "background": "deborah_act1_a_background.svg",
-  "foreground": "deborah_act1_a_foreground.svg",
-  "foregroundBackgroundIncluded": false,
-  "foregroundDetails": {
-    "plants": true,
-    "rocks": true,
-    "structures": true,
-    "props": true,
-    "framing": true
-  },
-  "layering": [
-    "background",
-    "optional middle-ground/characters",
-    "foreground"
-  ]
+  "chapter": "Ch.1 · Under the Palm",
+  "artSource": "art/act1_under_the_palm.md",
+  "artFolder": "assets/svg/act_01_under_the_palm",
+  "sceneId": "",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg"
+  ],
+  "layers": {
+    "background": "deborah_act1_a_background.svg",
+    "middleGround": "deborah_act1_a_middle_ground.svg",
+    "foreground": "deborah_act1_a_foreground.svg"
+  }
 }

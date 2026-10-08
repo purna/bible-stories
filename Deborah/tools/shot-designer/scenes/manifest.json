@@ -4,74 +4,98 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "deborah-under-the-palm",
+      "name": "Ch.1 · Under the Palm",
+      "file": "deborah-under-the-palm.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "deborah-under-the-palm_hd",
+      "name": "Ch.1 · Under the Palm (HD)",
+      "file": "deborah-under-the-palm_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "deborah-the-summons",
+      "name": "Ch.2 · The Summons",
+      "file": "deborah-the-summons.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "deborah-the-summons_hd",
+      "name": "Ch.2 · The Summons (HD)",
+      "file": "deborah-the-summons_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "deborah-gather-at-tabor",
+      "name": "Ch.3 · Gather at Tabor",
+      "file": "deborah-gather-at-tabor.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "deborah-gather-at-tabor_hd",
+      "name": "Ch.3 · Gather at Tabor (HD)",
+      "file": "deborah-gather-at-tabor_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "deborah-the-storm",
+      "name": "Ch.4 · The Storm",
+      "file": "deborah-the-storm.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "deborah-the-storm_hd",
+      "name": "Ch.4 · The Storm (HD)",
+      "file": "deborah-the-storm_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "deborah-sisera-flees",
+      "name": "Ch.5 · Sisera Flees",
+      "file": "deborah-sisera-flees.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "deborah-sisera-flees_hd",
+      "name": "Ch.5 · Sisera Flees (HD)",
+      "file": "deborah-sisera-flees_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "deborah-jaels-choice",
+      "name": "Ch.6 · Jael’s Choice",
+      "file": "deborah-jaels-choice.js",
+      "type": "module"
+    },
+    {
+      "id": "deborah-jaels-choice_hd",
+      "name": "Ch.6 · Jael’s Choice (HD)",
+      "file": "deborah-jaels-choice_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "deborah-the-song",
+      "name": "Ch.7 · The Song",
+      "file": "deborah-the-song.js",
+      "type": "module"
+    },
+    {
+      "id": "deborah-the-song_hd",
+      "name": "Ch.7 · The Song (HD)",
+      "file": "deborah-the-song_hd.js",
       "type": "module"
     }
   ]

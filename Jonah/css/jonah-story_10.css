@@ -633,10 +633,39 @@
       filter: drop-shadow(6px 6px 0px var(--ink));
     }
 
+    /* Layered scene art follows the shared story-player stack. */
+    #svgLayer.svg-behind,
+    #midLayer.svg-middle,
+    #fgLayer.svg-front {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    #svgLayer.svg-behind { z-index: 1; }
+    #midLayer.svg-middle { z-index: 2; }
+    #fgLayer.svg-front { z-index: 5; }
+
+    #svgLayer.svg-behind svg,
+    #midLayer.svg-middle svg,
+    #fgLayer.svg-front svg {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      filter: none;
+    }
+
     #whale3d {
       position: absolute;
       inset: 0;
-      z-index: 2;
+      z-index: 3;
       opacity: 0;
       pointer-events: none;
       transition: opacity 1s ease;

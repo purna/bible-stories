@@ -27,61 +27,295 @@
         "number": 1,
         "title": "The Call",
         "game": "Follow the road markers out of Haran.",
-        "engine": "find-path"
+        "engine": "find-path",
+        "sceneLayers": {
+          "a_establish": {
+            "background": "assets/svg/act_01_the_call/a_establish/abraham_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_the_call/a_establish/abraham_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_call/a_establish/abraham_act1_a_foreground.svg"
+          },
+          "b_core_action": {
+            "background": "assets/svg/act_01_the_call/b_core_action/abraham_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_the_call/b_core_action/abraham_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_call/b_core_action/abraham_act1_b_foreground.svg"
+          },
+          "c_resolve": {
+            "background": "assets/svg/act_01_the_call/c_resolve/abraham_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_the_call/c_resolve/abraham_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_call/c_resolve/abraham_act1_c_foreground.svg"
+          }
+        },
+        "assetFolder": "act_01_the_call",
+        "assetStem": "abraham_act1",
+        "materials": [
+          "assets/materials/desert_sand-dunes.svg",
+          "assets/materials/wood_oak-planks3.svg",
+          "assets/materials/leaves-canopy.svg"
+        ]
       },
       {
         "number": 2,
         "title": "Egypt and Return",
         "game": "Choose honest repairs after a fearful mistake.",
-        "engine": "fit-pieces"
+        "engine": "fit-pieces",
+        "sceneLayers": {
+          "a_establish": {
+            "background": "assets/svg/act_02_egypt_and_return/a_establish/abraham_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_egypt_and_return/a_establish/abraham_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_egypt_and_return/a_establish/abraham_act2_a_foreground.svg"
+          },
+          "b_core_action": {
+            "background": "assets/svg/act_02_egypt_and_return/b_core_action/abraham_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_egypt_and_return/b_core_action/abraham_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_egypt_and_return/b_core_action/abraham_act2_b_foreground.svg"
+          },
+          "c_resolve": {
+            "background": "assets/svg/act_02_egypt_and_return/c_resolve/abraham_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_egypt_and_return/c_resolve/abraham_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_egypt_and_return/c_resolve/abraham_act2_c_foreground.svg"
+          }
+        },
+        "assetFolder": "act_02_egypt_and_return",
+        "assetStem": "abraham_act2",
+        "materials": [
+          "assets/materials/desert_sand-dunes.svg",
+          "assets/materials/stone-flagstone.svg",
+          "assets/materials/fabric_weave-basket.svg"
+        ]
       },
       {
         "number": 3,
         "title": "Lot Chooses",
         "game": "Survey the land and give Lot first choice.",
-        "engine": "watch-and-move"
+        "engine": "watch-and-move",
+        "sceneLayers": {
+          "a_establish": {
+            "background": "assets/svg/act_03_lot_chooses/a_establish/abraham_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_lot_chooses/a_establish/abraham_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_lot_chooses/a_establish/abraham_act3_a_foreground.svg"
+          },
+          "b_core_action": {
+            "background": "assets/svg/act_03_lot_chooses/b_core_action/abraham_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_lot_chooses/b_core_action/abraham_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_lot_chooses/b_core_action/abraham_act3_b_foreground.svg"
+          },
+          "c_resolve": {
+            "background": "assets/svg/act_03_lot_chooses/c_resolve/abraham_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_lot_chooses/c_resolve/abraham_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_lot_chooses/c_resolve/abraham_act3_c_foreground.svg"
+          }
+        },
+        "assetFolder": "act_03_lot_chooses",
+        "assetStem": "abraham_act3",
+        "materials": [
+          "assets/materials/water_still-eddies.svg"
+        ]
       },
       {
         "number": 4,
         "title": "Rescue of Lot",
         "game": "Plan a fast night rescue without taking spoil.",
-        "engine": "watch-and-move"
+        "engine": "watch-and-move",
+        "sceneLayers": {
+          "a_establish": {
+            "background": "assets/svg/act_04_rescue_of_lot/a_establish/abraham_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_rescue_of_lot/a_establish/abraham_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_rescue_of_lot/a_establish/abraham_act4_a_foreground.svg"
+          },
+          "b_core_action": {
+            "background": "assets/svg/act_04_rescue_of_lot/b_core_action/abraham_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_rescue_of_lot/b_core_action/abraham_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_rescue_of_lot/b_core_action/abraham_act4_b_foreground.svg"
+          },
+          "c_resolve": {
+            "background": "assets/svg/act_04_rescue_of_lot/c_resolve/abraham_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_rescue_of_lot/c_resolve/abraham_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_rescue_of_lot/c_resolve/abraham_act4_c_foreground.svg"
+          }
+        },
+        "assetFolder": "act_04_rescue_of_lot",
+        "assetStem": "abraham_act4",
+        "materials": [
+          "assets/materials/desert_sand-dunes.svg",
+          "assets/materials/water_still-eddies.svg"
+        ]
       },
       {
         "number": 5,
         "title": "Covenant Stars",
         "game": "Trace the promised constellation.",
-        "engine": "match-it-up"
+        "engine": "match-it-up",
+        "sceneLayers": {
+          "a_establish": {
+            "background": "assets/svg/act_05_covenant_stars/a_establish/abraham_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_covenant_stars/a_establish/abraham_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_covenant_stars/a_establish/abraham_act5_a_foreground.svg"
+          },
+          "b_core_action": {
+            "background": "assets/svg/act_05_covenant_stars/b_core_action/abraham_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_covenant_stars/b_core_action/abraham_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_covenant_stars/b_core_action/abraham_act5_b_foreground.svg"
+          },
+          "c_resolve": {
+            "background": "assets/svg/act_05_covenant_stars/c_resolve/abraham_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_covenant_stars/c_resolve/abraham_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_covenant_stars/c_resolve/abraham_act5_c_foreground.svg"
+          }
+        },
+        "assetFolder": "act_05_covenant_stars",
+        "assetStem": "abraham_act5",
+        "materials": [
+          "assets/materials/fabric_weave-basket.svg",
+          "assets/materials/wood_oak-planks3.svg",
+          "assets/materials/water_still-eddies.svg"
+        ]
       },
       {
         "number": 6,
         "title": "Hagar in the Wilderness",
         "game": "Find water and listen before acting.",
-        "engine": "gather-with-care"
+        "engine": "gather-with-care",
+        "sceneLayers": {
+          "a_establish": {
+            "background": "assets/svg/act_06_hagar_in_the_wilderness/a_establish/abraham_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_hagar_in_the_wilderness/a_establish/abraham_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_hagar_in_the_wilderness/a_establish/abraham_act6_a_foreground.svg"
+          },
+          "b_core_action": {
+            "background": "assets/svg/act_06_hagar_in_the_wilderness/b_core_action/abraham_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_hagar_in_the_wilderness/b_core_action/abraham_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_hagar_in_the_wilderness/b_core_action/abraham_act6_b_foreground.svg"
+          },
+          "c_resolve": {
+            "background": "assets/svg/act_06_hagar_in_the_wilderness/c_resolve/abraham_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_hagar_in_the_wilderness/c_resolve/abraham_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_hagar_in_the_wilderness/c_resolve/abraham_act6_c_foreground.svg"
+          }
+        },
+        "assetFolder": "act_06_hagar_in_the_wilderness",
+        "assetStem": "abraham_act6",
+        "materials": [
+          "assets/materials/desert_sand-dunes.svg",
+          "assets/materials/water_still-eddies.svg",
+          "assets/materials/leaves-canopy.svg"
+        ]
       },
       {
         "number": 7,
         "title": "The Visitors",
         "game": "Prepare hospitality before the guests depart.",
-        "engine": "gather-with-care"
+        "engine": "gather-with-care",
+        "sceneLayers": {
+          "a_establish": {
+            "background": "assets/svg/act_07_the_visitors/a_establish/abraham_act7_a_background.svg",
+            "middleGround": "assets/svg/act_07_the_visitors/a_establish/abraham_act7_a_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_visitors/a_establish/abraham_act7_a_foreground.svg"
+          },
+          "b_core_action": {
+            "background": "assets/svg/act_07_the_visitors/b_core_action/abraham_act7_b_background.svg",
+            "middleGround": "assets/svg/act_07_the_visitors/b_core_action/abraham_act7_b_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_visitors/b_core_action/abraham_act7_b_foreground.svg"
+          },
+          "c_resolve": {
+            "background": "assets/svg/act_07_the_visitors/c_resolve/abraham_act7_c_background.svg",
+            "middleGround": "assets/svg/act_07_the_visitors/c_resolve/abraham_act7_c_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_visitors/c_resolve/abraham_act7_c_foreground.svg"
+          }
+        },
+        "assetFolder": "act_07_the_visitors",
+        "assetStem": "abraham_act7",
+        "materials": [
+          "assets/materials/fabric_weave-basket.svg",
+          "assets/materials/wood_oak-planks3.svg",
+          "assets/materials/water_still-eddies.svg",
+          "assets/materials/leaves-canopy.svg"
+        ]
       },
       {
         "number": 8,
         "title": "Sodom and Gomorrah",
         "game": "Guide Lot’s household away without looking back.",
-        "engine": "find-path"
+        "engine": "find-path",
+        "sceneLayers": {
+          "a_establish": {
+            "background": "assets/svg/act_08_sodom_and_gomorrah/a_establish/abraham_act8_a_background.svg",
+            "middleGround": "assets/svg/act_08_sodom_and_gomorrah/a_establish/abraham_act8_a_middle_ground.svg",
+            "foreground": "assets/svg/act_08_sodom_and_gomorrah/a_establish/abraham_act8_a_foreground.svg"
+          },
+          "b_core_action": {
+            "background": "assets/svg/act_08_sodom_and_gomorrah/b_core_action/abraham_act8_b_background.svg",
+            "middleGround": "assets/svg/act_08_sodom_and_gomorrah/b_core_action/abraham_act8_b_middle_ground.svg",
+            "foreground": "assets/svg/act_08_sodom_and_gomorrah/b_core_action/abraham_act8_b_foreground.svg"
+          },
+          "c_resolve": {
+            "background": "assets/svg/act_08_sodom_and_gomorrah/c_resolve/abraham_act8_c_background.svg",
+            "middleGround": "assets/svg/act_08_sodom_and_gomorrah/c_resolve/abraham_act8_c_middle_ground.svg",
+            "foreground": "assets/svg/act_08_sodom_and_gomorrah/c_resolve/abraham_act8_c_foreground.svg"
+          }
+        },
+        "assetFolder": "act_08_sodom_and_gomorrah",
+        "assetStem": "abraham_act8",
+        "materials": [
+          "assets/materials/stone-flagstone.svg"
+        ]
       },
       {
         "number": 9,
         "title": "Isaac Is Born",
         "game": "Assemble a celebration tent.",
-        "engine": "fit-pieces"
+        "engine": "fit-pieces",
+        "sceneLayers": {
+          "a_establish": {
+            "background": "assets/svg/act_09_isaac_is_born/a_establish/abraham_act9_a_background.svg",
+            "middleGround": "assets/svg/act_09_isaac_is_born/a_establish/abraham_act9_a_middle_ground.svg",
+            "foreground": "assets/svg/act_09_isaac_is_born/a_establish/abraham_act9_a_foreground.svg"
+          },
+          "b_core_action": {
+            "background": "assets/svg/act_09_isaac_is_born/b_core_action/abraham_act9_b_background.svg",
+            "middleGround": "assets/svg/act_09_isaac_is_born/b_core_action/abraham_act9_b_middle_ground.svg",
+            "foreground": "assets/svg/act_09_isaac_is_born/b_core_action/abraham_act9_b_foreground.svg"
+          },
+          "c_resolve": {
+            "background": "assets/svg/act_09_isaac_is_born/c_resolve/abraham_act9_c_background.svg",
+            "middleGround": "assets/svg/act_09_isaac_is_born/c_resolve/abraham_act9_c_middle_ground.svg",
+            "foreground": "assets/svg/act_09_isaac_is_born/c_resolve/abraham_act9_c_foreground.svg"
+          }
+        },
+        "assetFolder": "act_09_isaac_is_born",
+        "assetStem": "abraham_act9",
+        "materials": [
+          "assets/materials/fabric_weave-basket.svg",
+          "assets/materials/wood_oak-planks3.svg"
+        ]
       },
       {
         "number": 10,
         "title": "Moriah",
         "game": "Climb, gather wood, and respond to the provided ram.",
-        "engine": "find-path"
+        "engine": "find-path",
+        "sceneLayers": {
+          "a_establish": {
+            "background": "assets/svg/act_10_moriah/a_establish/abraham_act10_a_background.svg",
+            "middleGround": "assets/svg/act_10_moriah/a_establish/abraham_act10_a_middle_ground.svg",
+            "foreground": "assets/svg/act_10_moriah/a_establish/abraham_act10_a_foreground.svg"
+          },
+          "b_core_action": {
+            "background": "assets/svg/act_10_moriah/b_core_action/abraham_act10_b_background.svg",
+            "middleGround": "assets/svg/act_10_moriah/b_core_action/abraham_act10_b_middle_ground.svg",
+            "foreground": "assets/svg/act_10_moriah/b_core_action/abraham_act10_b_foreground.svg"
+          },
+          "c_resolve": {
+            "background": "assets/svg/act_10_moriah/c_resolve/abraham_act10_c_background.svg",
+            "middleGround": "assets/svg/act_10_moriah/c_resolve/abraham_act10_c_middle_ground.svg",
+            "foreground": "assets/svg/act_10_moriah/c_resolve/abraham_act10_c_foreground.svg"
+          }
+        },
+        "assetFolder": "act_10_moriah",
+        "assetStem": "abraham_act10",
+        "materials": [
+          "assets/materials/stone-flagstone.svg",
+          "assets/materials/wood_oak-planks3.svg"
+        ]
       }
     ]
   }

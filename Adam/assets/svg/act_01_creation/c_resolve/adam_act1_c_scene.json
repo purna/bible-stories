@@ -1,0 +1,23 @@
+{
+  "story": "Adam",
+  "act": 1,
+  "chapter": "Let There Be Light",
+  "artSource": "art/act1_creation.md",
+  "artFolder": "assets/svg/act_01_creation",
+  "sceneId": "creation_cosmos",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "gourd-vine-leaves.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg",
+    "wood_texture.svg"
+  ],
+  "layers": {
+    "background": "adam_act1_c_background.svg",
+    "middleGround": "adam_act1_c_middle_ground.svg",
+    "foreground": "adam_act1_c_foreground.svg"
+  }
+}

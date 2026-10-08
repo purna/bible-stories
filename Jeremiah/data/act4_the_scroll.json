@@ -7,43 +7,110 @@
   "lines": [
     {
       "id": "the_scroll_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Dictate to Baruch and rebuild the burned scroll.",
       "cite": "Jeremiah 1–52; Lamentations",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_scroll_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Dictate to Baruch and rebuild the burned scroll.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_scroll_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Can truth be spoken and hope planted while a city collapses? — The Scroll is the next step in that question.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_scroll_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Can truth be spoken and hope planted while a city collapses? — The Scroll is the next step in that question.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_scroll_2",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE WORD STANDS",
-      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_scroll_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_scroll_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE WORD STANDS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_scroll_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
       "choices": [
         {
           "label": "Walk on with the lesson",
@@ -54,11 +121,61 @@
           "note": "A pause does not change the outcome. It only lets the player breathe."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_scroll_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "the_scroll",
   "foreground": "fg_the_scroll",
-  "index": 3
+  "index": 3,
+  "assetFolder": "act_04_the_scroll",
+  "artFolder": "assets/svg/act_04_the_scroll",
+  "assetStem": "jeremiah_act4",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_04_the_scroll/a_establish/jeremiah_act4_a_background.svg",
+      "middleGround": "assets/svg/act_04_the_scroll/a_establish/jeremiah_act4_a_middle_ground.svg",
+      "foreground": "assets/svg/act_04_the_scroll/a_establish/jeremiah_act4_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_04_the_scroll/b_core_action/jeremiah_act4_b_background.svg",
+      "middleGround": "assets/svg/act_04_the_scroll/b_core_action/jeremiah_act4_b_middle_ground.svg",
+      "foreground": "assets/svg/act_04_the_scroll/b_core_action/jeremiah_act4_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_04_the_scroll/c_resolve/jeremiah_act4_c_background.svg",
+      "middleGround": "assets/svg/act_04_the_scroll/c_resolve/jeremiah_act4_c_middle_ground.svg",
+      "foreground": "assets/svg/act_04_the_scroll/c_resolve/jeremiah_act4_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_dark-plank.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/water_still-eddies.svg"
+  ]
 }

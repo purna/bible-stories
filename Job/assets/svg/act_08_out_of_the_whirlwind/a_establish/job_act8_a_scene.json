@@ -1,0 +1,21 @@
+{
+  "story": "Job",
+  "act": 8,
+  "chapter": "Ch.8 · Out of the Whirlwind",
+  "artSource": "art/act8_out_of_the_whirlwind.md",
+  "artFolder": "assets/svg/act_08_out_of_the_whirlwind",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "job_act8_a_background.svg",
+    "middleGround": "job_act8_a_middle_ground.svg",
+    "foreground": "job_act8_a_foreground.svg"
+  }
+}

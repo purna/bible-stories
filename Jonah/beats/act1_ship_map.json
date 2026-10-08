@@ -1,0 +1,34 @@
+{
+  "story": "Jonah",
+  "act": {
+    "id": "act1_ship_map",
+    "name": "The Ship at Sea",
+    "source": "../art/act1_ship_map.md"
+  },
+  "beats": [
+    {
+      "id": "a_establish",
+      "type": "visual",
+      "name": "establishing",
+      "description": "wide framing of the setting: a busy port at dawn, a man hurrying down the gangplank with a bag, the sea opening wide, a ship's prow pointed west"
+    },
+    {
+      "id": "b_core_action",
+      "type": "visual",
+      "name": "core action",
+      "description": "the scene's central movement and characters"
+    },
+    {
+      "id": "c_resolve",
+      "type": "visual",
+      "name": "resolution",
+      "description": "the beat's outcome, holding the emotional note"
+    },
+    {
+      "id": "interactive-game",
+      "type": "game",
+      "description": "Choose cargo and board the ship going the wrong way.",
+      "mechanic": "observation"
+    }
+  ]
+}

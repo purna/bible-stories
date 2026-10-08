@@ -1,0 +1,153 @@
+{
+  "id": "the_golden_calf",
+  "name": "Ch.8 · The Golden Calf",
+  "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "the_golden_calf_0",
+      "cite": "Exodus; Numbers; Deuteronomy 31–34",
+      "items": [
+        {
+          "id": "the_golden_calf_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Confront the idol and intercede for the people.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_golden_calf_1",
+      "items": [
+        {
+          "id": "the_golden_calf_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Will a rescued people learn to trust the God who leads them through uncertainty? — The Golden Calf is the next step in that question.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_golden_calf_2",
+      "items": [
+        {
+          "id": "the_golden_calf_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_golden_calf_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE WORD STANDS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "the_golden_calf_3",
+      "choices": [
+        {
+          "label": "Walk on with the lesson",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "items": [
+        {
+          "id": "the_golden_calf_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ],
+  "scene": "the_golden_calf",
+  "foreground": "fg_the_golden_calf",
+  "index": 7
+}

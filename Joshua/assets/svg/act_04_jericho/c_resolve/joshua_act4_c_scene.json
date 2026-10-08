@@ -1,0 +1,22 @@
+{
+  "story": "Joshua",
+  "act": 4,
+  "chapter": "Ch.4 · Jericho",
+  "artSource": "art/act4_jericho.md",
+  "artFolder": "assets/svg/act_04_jericho",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg"
+  ],
+  "layers": {
+    "background": "joshua_act4_c_background.svg",
+    "middleGround": "joshua_act4_c_middle_ground.svg",
+    "foreground": "joshua_act4_c_foreground.svg"
+  }
+}

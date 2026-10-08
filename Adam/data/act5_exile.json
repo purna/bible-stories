@@ -11,155 +11,442 @@
   "lines": [
     {
       "id": "exile_0",
-      "sfx": "WHERE ARE YOU?",
-      "speaker": "god",
-      "fx": "shake",
-      "delay": 800,
-      "text": "Adam, where are you?",
-      "align": "center",
-      "svg": "exile_eden",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Adam, where are you?",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "exile_0_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "WHERE ARE YOU?",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "exile_eden"
     },
     {
       "id": "exile_1",
-      "speaker": "adam",
-      "fx": "fade",
-      "delay": 800,
-      "text": "I heard You in the garden, and I was afraid because I was naked. So I hid.",
-      "align": "right",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I heard You in the garden, and I was afraid because I was naked. So I hid.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "adam",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "exile_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "God spoke to the serpent, and pronounced judgment on the curse of the earth.",
-      "align": "left",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "God spoke to the serpent, and pronounced judgment on the curse of the earth.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "exile_3",
-      "speaker": "god",
-      "fx": "fade",
-      "delay": 800,
-      "text": "Because you have listened to your wife and eaten... the ground is cursed.",
-      "align": "center",
-      "svg": "exile_judged",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Because you have listened to your wife and eaten... the ground is cursed.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "exile_judged"
     },
     {
       "id": "exile_4",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "text": "He made garments of skin for them \u2014 covering their nakedness with His own hands.",
-      "align": "center",
-      "svg": "exile_garments",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "He made garments of skin for them — covering their nakedness with His own hands.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "exile_garments"
     },
     {
       "id": "exile_5",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "Then the Lord God said, 'Now the man has become like one of us, knowing good and evil.'",
-      "align": "center",
-      "svg": "exile_dawn",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Then the Lord God said, 'Now the man has become like one of us, knowing good and evil.'",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "exile_dawn"
     },
     {
       "id": "exile_6",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "text": "Behold \u2014 he has become like one of us. Now he might reach out and take also from the tree of life, and live forever.",
-      "align": "center",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Behold — he has become like one of us. Now he might reach out and take also from the tree of life, and live forever.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "exile_7",
-      "speaker": "narrator",
       "audioSfx": "assets/audio/sfx/exile_footsteps.mp3",
-      "fx": "shake",
-      "delay": 800,
-      "text": "So the Lord drove out the man \u2014 to bar the way to the tree of life that he might not eat and live forever.",
-      "align": "center",
-      "svg": "exile_driven",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "So the Lord drove out the man — to bar the way to the tree of life that he might not eat and live forever.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "exile_driven"
     },
     {
       "id": "exile_8",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "And Eden faded behind them. The gates were closed. The way was barred by flaming sword.",
-      "align": "left",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "And Eden faded behind them. The gates were closed. The way was barred by flaming sword.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "exile_9",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "text": "Years passed. Cain and Abel brought offerings. God accepted Abel's \u2014 but looked with favor on Cain's sacrifice.",
-      "align": "right",
-      "svg": "cain_abel",
       "choices": [
         {
-          "label": "Hold your ground in anger \ud83d\ude20",
+          "label": "Hold your ground in anger 😠",
           "note": "Cain's path. The seed of the serpent grows in the heart."
         },
         {
-          "label": "Lay down your pride \u271d\ufe0f",
+          "label": "Lay down your pride ✝️",
           "note": "Cain's path not taken. But grace was still offered, if only he would listen."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Years passed. Cain and Abel brought offerings. God accepted Abel's — but looked with favor on Cain's sacrifice.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "cain_abel"
     },
     {
       "id": "exile_10",
-      "sfx": "THWACK!",
-      "speaker": "narrator",
-      "fx": "shake",
-      "delay": 800,
-      "text": "Cain turned on his brother Abel in the field. And the blood of Abel cried out from the ground.",
-      "align": "center",
-      "svg": "cain_abel",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_10_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Cain turned on his brother Abel in the field. And the blood of Abel cried out from the ground.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "exile_10_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THWACK!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "cain_abel"
     },
     {
       "id": "exile_11",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "The ground was cursed. The serpent was judged. The way to paradise was barred. From dust we came \u2014 and to dust we return.",
-      "align": "center",
-      "svg": "exile_dawn",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_11_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The ground was cursed. The serpent was judged. The way to paradise was barred. From dust we came — and to dust we return.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "exile_dawn"
     },
     {
       "id": "exile_12",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "text": "But even in exile, the promise remained \u2014 the seed of the woman would one day crush the serpent's head.",
-      "align": "center",
-      "svg": "exile_dawn",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "exile_12_text",
+          "type": "text",
+          "sfx": false,
+          "text": "But even in exile, the promise remained — the seed of the woman would one day crush the serpent's head.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "exile_dawn"
     }
+  ],
+  "assetFolder": "act_05_exile",
+  "artFolder": "assets/svg/act_05_exile",
+  "assetStem": "adam_act5",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_05_exile/a_establish/adam_act5_a_background.svg",
+      "middleGround": "assets/svg/act_05_exile/a_establish/adam_act5_a_middle_ground.svg",
+      "foreground": "assets/svg/act_05_exile/a_establish/adam_act5_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_05_exile/b_core_action/adam_act5_b_background.svg",
+      "middleGround": "assets/svg/act_05_exile/b_core_action/adam_act5_b_middle_ground.svg",
+      "foreground": "assets/svg/act_05_exile/b_core_action/adam_act5_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_05_exile/c_resolve/adam_act5_c_background.svg",
+      "middleGround": "assets/svg/act_05_exile/c_resolve/adam_act5_c_middle_ground.svg",
+      "foreground": "assets/svg/act_05_exile/c_resolve/adam_act5_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/leaves-canopy.svg",
+    "assets/materials/wood_oak-planks3.svg"
   ]
 }

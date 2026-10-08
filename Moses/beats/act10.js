@@ -1,37 +1,37 @@
 /**
- * BEATS/ACT10.JS — Mount Nebo
- * Input type: succession / vision
+ * BEATS/ACT10.JS — The Golden Calf
+ * Input type: intercession / justice
  */
 
 const Act10Beats = (function () {
 
-    function appointJoshua(confident) {
-        if (confident) {
-            Compass.nudge('succession', 10);
+    function confrontIdol(zealous) {
+        if (zealous) {
+            Compass.nudge('zeal', 8);
         } else {
-            Compass.nudge('uncertainty', 10);
+            Compass.nudge('tolerance', 8);
         }
-        Compass.recordBeat('act10_joshua');
+        Compass.recordBeat('act10_confront');
     }
 
-    function viewLand(hopeful) {
-        if (hopeful) {
-            Compass.nudge('promise', 8);
+    function intercede(compassionate) {
+        if (compassionate) {
+            Compass.nudge('mercy', 10);
         } else {
-            Compass.nudge('loss', 8);
+            Compass.nudge('wrath', 10);
         }
-        Compass.recordBeat('act10_view');
+        Compass.recordBeat('act10_intercede');
     }
 
-    function blessPeople(generous) {
-        if (generous) {
-            Compass.nudge('blessing', 10);
+    function renewCovenant(faithful) {
+        if (faithful) {
+            Compass.nudge('restoration', 8);
         } else {
-            Compass.nudge('resentment', 10);
+            Compass.nudge('abandonment', 8);
         }
-        Compass.recordBeat('act10_bless');
+        Compass.recordBeat('act10_renew');
     }
 
-    return { appointJoshua, viewLand, blessPeople };
+    return { confrontIdol, intercede, renewCovenant };
 })();
 window.Act10Beats = Act10Beats;

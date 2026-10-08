@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.4)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fgGrad)"/>
-  <text x="400" y="550" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle" dominant-baseline="middle">Ruth Act 02 — A Establish Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Ruth act 2 Ch.2 · Your People foreground">
+  <metadata>{&quot;story&quot;:&quot;Ruth&quot;,&quot;act&quot;:2,&quot;chapter&quot;:&quot;Ch.2 · Your People&quot;,&quot;scene&quot;:&quot;A&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;city&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#655748" stroke="#1f1b1a" stroke-width="12" opacity=".93"><rect x="0" y="540" width="150" height="560"/><rect x="1770" y="540" width="150" height="560"/><rect x="0" y="510" width="205" height="55"/><rect x="1715" y="510" width="205" height="55"/></g><g opacity=".9"><path d="M45 1080v-135.2021756884642" stroke="#af8048" stroke-width="9"/><path d="M45 992.1185858024983l34 -28m-34 60l30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/><path d="M107 1080v-223.346885740757" stroke="#af8048" stroke-width="9"/><path d="M107 934.824524268508l34 -28m-34 60l30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/><path d="M169 1080v-188.49967910908163" stroke="#af8048" stroke-width="9"/><path d="M169 957.4752085790969l34 -28m-34 60l30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/><path d="M1690 1080v-107.88802321068943" stroke="#af8048" stroke-width="9"/><path d="M1690 1009.8727849130519l-34 -28m--34 60l-30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/><path d="M1752 1080v-130.81617701682262" stroke="#af8048" stroke-width="9"/><path d="M1752 994.9694849390653l-34 -28m--34 60l-30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/><path d="M1814 1080v-139.64188238955103" stroke="#af8048" stroke-width="9"/><path d="M1814 989.2327764467918l-34 -28m--34 60l-30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/></g><g fill="#97866d" stroke="#1f1b1a" stroke-width="10" opacity=".9"><path d="M0 1080V760h245v320zM1675 1080V760h245v320z"/><path d="M0 760h310v70H0zM1610 760h310v70h-310z"/></g>
+  </svg>

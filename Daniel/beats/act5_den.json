@@ -1,0 +1,460 @@
+{
+  "story": "Daniel",
+  "act": {
+    "id": "den",
+    "name": "The Den",
+    "source": "../data/act5_den.json",
+    "svg": "persian_court",
+    "bg": "radial-gradient(circle at 50% 20%, #0d1b2a, #061224 65%, #030b18)",
+    "particle": "stars"
+  },
+  "beats": [
+    {
+      "id": "den_0",
+      "items": [
+        {
+          "id": "den_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Under King Darius the Mede, Daniel rose again to the highest rank. And the satraps hated him for it.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "persian_court"
+    },
+    {
+      "id": "den_1",
+      "items": [
+        {
+          "id": "den_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "They searched for something — anything — to accuse him of. But they found no fault. Not one.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "satraps_plotting"
+    },
+    {
+      "id": "den_2",
+      "items": [
+        {
+          "id": "den_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "So they built a trap from the one thing they could not take from him.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "satraps_plotting"
+    },
+    {
+      "id": "den_3",
+      "choices": [
+        {
+          "label": "Daniel closes his window 🪟",
+          "note": "He didn't. They couldn't find fault in him by catching him pray — so the window was always open.",
+          "decisionId": "den_window",
+          "tags": [
+            "loyalty:diplomatic",
+            "cost:private",
+            "risk:legal"
+          ]
+        },
+        {
+          "label": "Daniel prays as usual ✅",
+          "note": "Three times a day. Window open. Facing Jerusalem. Exactly as he always had. Because that's what faithfulness looks like.",
+          "decisionId": "den_pray",
+          "tags": [
+            "loyalty:god",
+            "cost:public",
+            "risk:self"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "den_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A new law: for thirty days, anyone who prays to anyone but the king is thrown to the lions.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "satraps_plotting"
+    },
+    {
+      "id": "den_4",
+      "items": [
+        {
+          "id": "den_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Daniel went home. He opened the window facing Jerusalem. He got down on his knees. And he prayed.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_praying_window"
+    },
+    {
+      "id": "den_5",
+      "items": [
+        {
+          "id": "den_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Three times a day. Just like always. Not as a protest. Not to make a point. Simply because it was time to pray.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_praying_window"
+    },
+    {
+      "id": "den_6",
+      "items": [
+        {
+          "id": "den_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I cannot reverse my own law. I'm so sorry, Daniel.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "darius",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "darius_distressed"
+    },
+    {
+      "id": "den_7",
+      "audioSfx": "assets/audio/sfx/stone_footsteps.mp3",
+      "items": [
+        {
+          "id": "den_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Daniel was thrown in. The stone was sealed. And Darius paced his palace all through the long night.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "den_7_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "ROAR!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "lions_den_sealed"
+    },
+    {
+      "id": "den_8",
+      "items": [
+        {
+          "id": "den_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At dawn, the king ran.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "darius_running"
+    },
+    {
+      "id": "den_9",
+      "items": [
+        {
+          "id": "den_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "DANIEL! Servant of the living God — has your God been able to save you?!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "darius",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "darius_running"
+    },
+    {
+      "id": "den_10",
+      "items": [
+        {
+          "id": "den_10_text",
+          "type": "text",
+          "sfx": false,
+          "text": "O king, live forever. My God sent his angel, and the lions' mouths were shut. Because I was found innocent before him.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "daniel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "lions_den_open"
+    },
+    {
+      "id": "den_11",
+      "items": [
+        {
+          "id": "den_11_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Daniel was lifted out. Not a scratch on him. Because he had trusted in his God.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "lions_den_open"
+    },
+    {
+      "id": "den_12",
+      "consequence": {
+        "god_only": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires — seventy years of exile — he held the line, unbent and unbroken.",
+        "mixed": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires — seventy years of exile — he held the line, faithful despite the compromises.",
+        "compromised": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires — seventy years of exile — he held the line, a pragmatic path but a faithful one."
+      },
+      "items": [
+        {
+          "id": "den_12_text",
+          "type": "text",
+          "sfx": false,
+          "text": "And Daniel prospered. Under Darius. Under Cyrus. Through four kings and two empires — seventy years of exile — he held the line.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_old_man"
+    },
+    {
+      "id": "den_13",
+      "consequence": {
+        "god_only": "THE END — Conviction sustained across seven decades, unbroken.",
+        "mixed": "THE END — Faithfulness threaded through with compromise, but the line held.",
+        "compromised": "THE END — A different kind of faithfulness, but faithful nonetheless."
+      },
+      "items": [
+        {
+          "id": "den_13_text",
+          "type": "text",
+          "sfx": false,
+          "text": "THE END",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_old_man"
+    }
+  ]
+}

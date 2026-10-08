@@ -4,74 +4,62 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "jonah-ship-map",
+      "name": "The Ship at Sea",
+      "file": "jonah-ship-map.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "jonah-ship-map_hd",
+      "name": "The Ship at Sea (HD)",
+      "file": "jonah-ship-map_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "jonah-whale-map",
+      "name": "The Great Fish",
+      "file": "jonah-whale-map.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "jonah-whale-map_hd",
+      "name": "The Great Fish (HD)",
+      "file": "jonah-whale-map_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "jonah-nineveh-map",
+      "name": "The City of Nineveh",
+      "file": "jonah-nineveh-map.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "jonah-nineveh-map_hd",
+      "name": "The City of Nineveh (HD)",
+      "file": "jonah-nineveh-map_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "jonah-figtree-map",
+      "name": "The Plant and the Lesson",
+      "file": "jonah-figtree-map.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
-      "type": "module"
-    },
-    {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
-      "type": "module"
-    },
-    {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "jonah-figtree-map_hd",
+      "name": "The Plant and the Lesson (HD)",
+      "file": "jonah-figtree-map_hd.js",
       "type": "module"
     }
   ]

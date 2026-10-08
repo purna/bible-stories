@@ -1,0 +1,423 @@
+{
+  "id": "tablets",
+  "name": "Ch.11 · Second Tablets and the Tabernacle",
+  "bg": "radial-gradient(circle at 50% 40%, #1a1408, #2c200c 65%, #0a0804)",
+  "particle": "ember",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "tablets_0",
+      "cite": "Exodus 34:4",
+      "items": [
+        {
+          "id": "tablets_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Moses chiseled out two stone tablets like the first ones. Early in the morning he went up Mount Sinai, carrying them, as the LORD had commanded.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_1",
+      "items": [
+        {
+          "id": "tablets_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The LORD came down in the cloud and stood there with him, and proclaimed his name.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_2",
+      "cite": "Exodus 34:6–7",
+      "items": [
+        {
+          "id": "tablets_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The LORD, the LORD, the compassionate and gracious God, slow to anger, abounding in love and faithfulness, forgiving wickedness, rebellion and sin.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_3",
+      "cite": "Exodus 34:9",
+      "items": [
+        {
+          "id": "tablets_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "If I have found favour in your eyes, Lord, then let the Lord go with us. Although this is a stiff-necked people, forgive our wickedness and our sin, and take us as your inheritance.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "moses",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_4",
+      "items": [
+        {
+          "id": "tablets_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Moses was there with the LORD forty days and forty nights. He wrote on the tablets the words of the covenant — the Ten Commandments.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_5",
+      "cite": "Exodus 34:29–30",
+      "items": [
+        {
+          "id": "tablets_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "When he came down, his face was radiant because he had spoken with the LORD. Aaron and the Israelites were afraid to come near him.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_6",
+      "items": [
+        {
+          "id": "tablets_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "So Moses put a veil over his face when he finished speaking to them, and took it off whenever he went in before the LORD.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_7",
+      "cite": "Exodus 35:5–8",
+      "items": [
+        {
+          "id": "tablets_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "From what you have, take an offering for the LORD. Everyone who is willing is to bring an offering of gold, silver and bronze, of yarn and fine linen, of acacia wood and oil.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "moses",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_8",
+      "choices": [
+        {
+          "label": "Bring what your heart gives 🎁",
+          "note": "Gold, yarn, acacia wood, oil — each gift small, together more than enough."
+        },
+        {
+          "label": "Wait to see what others bring ⏳",
+          "note": "The Tabernacle needs every willing hand. The call stays open."
+        }
+      ],
+      "items": [
+        {
+          "id": "tablets_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Everyone who was willing and whose heart moved them came to bring an offering for building the Tabernacle.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_9",
+      "cite": "Exodus 36:5–7",
+      "items": [
+        {
+          "id": "tablets_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The people brought so much that Moses had to tell them to stop.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_10",
+      "items": [
+        {
+          "id": "tablets_10_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Bezalel and Oholiab, filled with the Spirit of God with skill and knowledge in every craft, built the tent, the ark, the table, the lampstand and the altar — just as the LORD had commanded.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_11",
+      "cite": "Exodus 40:17–20",
+      "items": [
+        {
+          "id": "tablets_11_text",
+          "type": "text",
+          "sfx": false,
+          "text": "On the first day of the first month of the second year, the Tabernacle was set up. Moses placed the tablets in the ark.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_12",
+      "cite": "Exodus 40:34–35",
+      "items": [
+        {
+          "id": "tablets_12_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Then the cloud covered the tent of meeting, and the glory of the LORD filled the Tabernacle. Moses could not enter.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "tablets_13",
+      "cite": "Exodus 40:36–38",
+      "items": [
+        {
+          "id": "tablets_13_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Whenever the cloud lifted, the Israelites set out. If it did not, they stayed. By day the cloud was over the Tabernacle, and by night there was fire in it, in the sight of all Israel.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    }
+  ],
+  "scene": "tablets",
+  "foreground": "fg_tablets",
+  "index": 10
+}

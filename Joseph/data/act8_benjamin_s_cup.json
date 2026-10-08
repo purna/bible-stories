@@ -7,43 +7,110 @@
   "lines": [
     {
       "id": "benjamin_s_cup_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Trace the hidden cup and Judah’s offer.",
       "cite": "Genesis 37–50",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "benjamin_s_cup_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Trace the hidden cup and Judah’s offer.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "benjamin_s_cup_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Can betrayal be transformed into wise service and reconciliation? — Benjamin’s Cup is the next step in that question.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "benjamin_s_cup_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Can betrayal be transformed into wise service and reconciliation? — Benjamin’s Cup is the next step in that question.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "benjamin_s_cup_2",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE WORD STANDS",
-      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "benjamin_s_cup_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "benjamin_s_cup_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE WORD STANDS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "benjamin_s_cup_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
       "choices": [
         {
           "label": "Walk on with the lesson",
@@ -54,11 +121,61 @@
           "note": "A pause does not change the outcome. It only lets the player breathe."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "benjamin_s_cup_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "benjamin_s_cup",
   "foreground": "fg_benjamin_s_cup",
-  "index": 7
+  "index": 7,
+  "assetFolder": "act_08_benjamin_s_cup",
+  "artFolder": "assets/svg/act_08_benjamin_s_cup",
+  "assetStem": "joseph_act8",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_08_benjamin_s_cup/a_establish/joseph_act8_a_background.svg",
+      "middleGround": "assets/svg/act_08_benjamin_s_cup/a_establish/joseph_act8_a_middle_ground.svg",
+      "foreground": "assets/svg/act_08_benjamin_s_cup/a_establish/joseph_act8_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_08_benjamin_s_cup/b_core_action/joseph_act8_b_background.svg",
+      "middleGround": "assets/svg/act_08_benjamin_s_cup/b_core_action/joseph_act8_b_middle_ground.svg",
+      "foreground": "assets/svg/act_08_benjamin_s_cup/b_core_action/joseph_act8_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_08_benjamin_s_cup/c_resolve/joseph_act8_c_background.svg",
+      "middleGround": "assets/svg/act_08_benjamin_s_cup/c_resolve/joseph_act8_c_middle_ground.svg",
+      "foreground": "assets/svg/act_08_benjamin_s_cup/c_resolve/joseph_act8_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/fabric_dots-scatterMix.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/mosaic-chips.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/egypt_mud_brick-stretcher.svg"
+  ]
 }

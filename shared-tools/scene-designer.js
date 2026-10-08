@@ -13,7 +13,9 @@ const root = document.getElementById("scene-designer-app");
 if (!root) return;
 let storyKey = root.dataset.story || document.body.dataset.story || "";
 storyKey = STORY_ALIASES[storyKey] || storyKey;
-const chapters = STORIES[storyKey];
+let configuredScenes = null;
+try { configuredScenes = root.dataset.scenes ? JSON.parse(root.dataset.scenes) : null; } catch (_) {}
+const chapters = configuredScenes && configuredScenes.length ? configuredScenes : STORIES[storyKey];
 if (!chapters) {
   root.innerHTML = `<main style="font-family:system-ui;padding:2rem;color:#eee;background:#111;min-height:100vh"><h1>Scene Designer</h1><p>Unknown story: <strong>${escapeHtml(storyKey)}</strong>.</p></main>`;
   return;
@@ -63,8 +65,8 @@ root.innerHTML = `
         <label><input id="fgFraming" type="checkbox" checked> Edge framing</label>
       </div>
       <p class="hint">Details adapt to the selected chapter: reeds, crops, timber, masonry, tents, vessels, tools and other relevant props.</p>
-      <label class="export-option"><input id="includeBgInFg" type="checkbox"> Include background in foreground export</label>
-      <p class="hint">Leave this off for a transparent foreground SVG.</p>
+      <label class="export-option"><input id="midCharacters" type="checkbox"> Place character silhouettes in middle ground</label>
+      <p class="hint">Silhouettes are staging guides; replace them with the story’s character artwork for final figures.</p>
     </section>
     <section class="group">
       <h3>Palette</h3>
@@ -81,20 +83,23 @@ root.innerHTML = `
     <div class="actions">
       <button class="btn" id="generate">Generate Scene</button>
       <button class="btn ok" id="downloadBg">Background SVG</button>
+      <button class="btn ok" id="downloadMid">Middle Ground SVG</button>
       <button class="btn ok" id="downloadFg">Foreground SVG</button>
       <button class="btn secondary" id="downloadManifest">Scene JSON</button>
       <button class="btn secondary" id="randomise">Randomise Seed</button>
+      <button class="btn ok bulk" id="downloadAct">Export This Act · 3 Stages (.zip)</button>
       <button class="btn ok bulk" id="downloadAll">Export All Scenes (.zip)</button>
       <p class="export-status" id="exportStatus" role="status" aria-live="polite"></p>
     </div>
   </aside>
   <main class="stage">
     <header class="topbar"><div><div class="scene-name" id="sceneName"></div><div class="scene-meta" id="sceneMeta"></div></div><div class="scene-meta">1920 × 1080 · transparent FG</div></header>
-    <div class="preview-wrap"><div class="preview"><div id="bgLayer"></div><div id="fgLayer" class="fg"></div></div></div>
+    <div class="preview-wrap"><div class="preview"><div id="bgLayer"></div><div id="midLayer"></div><div id="fgLayer" class="fg"></div></div></div>
     <footer class="layerbar">
       <label><input type="checkbox" id="showBg" checked> Background</label>
+      <label><input type="checkbox" id="showMid" checked> Middle ground</label>
       <label><input type="checkbox" id="showFg" checked> Foreground</label>
-      <span>Centre remains deliberately clear for characters/gameplay.</span>
+      <span>Art direction and material choices follow the selected act.</span>
       <span class="filename" id="filename"></span>
     </footer>
   </main>
@@ -102,7 +107,7 @@ root.innerHTML = `
 
 const $ = id => document.getElementById(id);
 chapters.forEach((c,i)=> $("chapter").insertAdjacentHTML("beforeend", `<option value="${i}">Act ${i+1} · ${escapeHtml(c.title)}</option>`));
-let last = {bg:"",fg:"",base:""};
+let last = {bg:"",mid:"",fg:"",base:""};
 
 const paletteDefaults = {
  garden:["#6d91a3","#e7c98f","#81935e","#42563b","#d4a95a","#192219"],
@@ -118,7 +123,10 @@ const paletteDefaults = {
 
 function currentChapter(){return chapters[Number($("chapter").value)||0]}
 function currentBeat(){return beats.find(b=>b.id===$("beat").value)||beats[0]}
-function sceneText(){const c=currentChapter(); return `${c.title} ${c.brief}`.toLowerCase()}
+function chapterArtPrompt(c=currentChapter(),b=currentBeat()){
+  return `${c.title} ${c.brief||""} ${c.director||""} ${c.panelNotes?.[b.id]||""}`.toLowerCase();
+}
+function sceneText(){return chapterArtPrompt()}
 function detectEnvironment(){
   const s=sceneText();
   if(/sea|ship|storm|deep|flood|\bark\b|water opened|through the sea/.test(s)) return "sea";
@@ -140,6 +148,11 @@ function detectTime(env){
   return env==="night"?"night":"day";
 }
 function resetPalette(){
+  const chapter=currentChapter();
+  if(chapter && chapter.palette && chapter.palette.length>=6){
+    ["skyTop","skyBottom","far","near","accent","ink"].forEach((id,i)=>$(id).value=chapter.palette[i]);
+    return;
+  }
   const env=$("environment").value==="auto"?detectEnvironment():$("environment").value;
   const p=paletteDefaults[env]||paletteDefaults.desert;
   ["skyTop","skyBottom","far","near","accent","ink"].forEach((id,i)=>$(id).value=p[i]);
@@ -153,33 +166,61 @@ function settings(){
 }
 function render(){
   const c=currentChapter(), b=currentBeat(), s=settings(), act=(Number($("chapter").value)||0)+1;
-  const base=`${slug(displayStory(storyKey))}_act${act}_${b.id.toLowerCase()}`;
+  const stem=c.assetStem||`${slug(displayStory(storyKey))}_act${act}`;
+  const base=`${stem}_${b.id.toLowerCase()}`;
   const bg=buildBackgroundSVG(c,b,s,act);
+  const mid=buildMiddleSVG(c,b,s,act);
   const fg=buildForegroundSVG(c,b,s,act);
-  $("bgLayer").innerHTML=bg; $("fgLayer").innerHTML=fg;
-  $("brief").innerHTML=`<strong>${escapeHtml(c.title)}</strong><br>${escapeHtml(c.brief)}<br><small>${b.note}</small>`;
+  $("bgLayer").innerHTML=bg; $("midLayer").innerHTML=mid; $("fgLayer").innerHTML=fg;
+  $("brief").innerHTML=`<strong>${escapeHtml(c.title)}</strong><br>${escapeHtml(c.director||c.brief||"")}<br><small>${escapeHtml(c.panelNotes?.[b.id]||b.note)}</small>${c.materials?.length?`<br><small>Materials: ${escapeHtml(c.materials.join(", "))}</small>`:""}`;
   $("sceneName").textContent=`Act ${act} · ${c.title} · ${b.id} ${b.name}`;
   $("sceneMeta").textContent=`${displayStory(storyKey)} · ${s.env} · ${s.tod} · seed ${s.seed}`;
-  $("filename").textContent=`${base}_background.svg + ${base}_foreground.svg`;
-  last={bg,fg,base,chapter:c,beat:b,settings:s,act};
+  $("filename").textContent=`${base}_background.svg + ${base}_middle_ground.svg + ${base}_foreground.svg`;
+  last={bg,mid,fg,base,chapter:c,beat:b,settings:s,act};
 }
 function buildBackgroundSVG(c,b,s,act){
   const rand=mulberry32(hash(`${storyKey}|${act}|${b.id}|${s.seed}`));
   const H=1080, W=1920, hy=H*s.horizon/100;
+  const materialKey=(c.materials||[])[0]||"stone";
+  const texture=sceneMaterialPattern(materialKey,s);
+  const groundPath=`M0 ${hy+80} Q480 ${hy-15} 960 ${hy+45} T1920 ${hy+25} V1080 H0 Z`;
   let details="";
   details += distantLayer(s,rand,hy);
-  details += midLayer(s,rand,hy);
   if(s.detail>=4) details += atmosphere(s,rand,hy);
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${xml(`${displayStory(storyKey)} act ${act} ${c.title} background`)}">
-  <metadata>${xml(JSON.stringify({story:displayStory(storyKey),act,chapter:c.title,scene:b.id,layer:"background",environment:s.env,seed:s.seed}))}</metadata>
+  <metadata>${xml(JSON.stringify({story:displayStory(storyKey),act,chapter:c.title,scene:b.id,layer:"background",materials:c.materialFiles||c.materials||[],environment:s.env,seed:s.seed}))}</metadata>
   <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="${s.skyTop}"/><stop offset="1" stop-color="${s.skyBottom}"/></linearGradient>
-  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="${s.far}"/><stop offset="1" stop-color="${s.near}"/></linearGradient></defs>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="${s.far}"/><stop offset="1" stop-color="${s.near}"/></linearGradient>${texture}</defs>
   <rect width="${W}" height="${H}" fill="url(#sky)"/>
   ${celestial(s,rand)}
   ${details}
-  <path d="M0 ${hy+80} Q480 ${hy-15} 960 ${hy+45} T1920 ${hy+25} V1080 H0 Z" fill="url(#ground)"/>
-  ${backgroundFeature(s,rand,hy)}
+  <path d="${groundPath}" fill="url(#ground)"/><path d="${groundPath}" fill="url(#act-material)" opacity=".16"/>
   </svg>`;
+}
+function sceneMaterialPattern(key,s){
+  const k=String(key).toLowerCase();let body="";
+  if(/water|sea|river|ripple|wave/.test(k))body=`<path d="M-8 16 Q10 7 28 16 T64 16 M-8 40 Q10 31 28 40 T64 40 M-8 64 Q10 55 28 64 T64 64" fill="none" stroke="${mix(s.accent,"#d7f1ee",.52)}" stroke-width="2" opacity=".55"/>`;
+  else if(/leaf|leaves|grass|wheat|reed/.test(k))body=`<path d="M8 56Q12 36 27 17Q29 37 8 56M29 64Q32 42 50 25Q50 46 29 64" fill="${mix(s.near,"#92a75a",.42)}" opacity=".6"/>`;
+  else if(/wood|plank|timber|oak/.test(k))body=`<path d="M0 13Q18 8 36 13T72 13M0 37Q18 32 36 37T72 37M0 61Q18 56 36 61T72 61" fill="none" stroke="${mix(s.ink,s.accent,.48)}" stroke-width="2" opacity=".58"/><ellipse cx="38" cy="37" rx="8" ry="4" fill="none" stroke="${mix(s.ink,s.accent,.48)}" opacity=".5"/>`;
+  else if(/fabric|cloth|wool|weave|robe|basket/.test(k))body=`<path d="M0 12H72M0 36H72M0 60H72M12 0V72M36 0V72M60 0V72" stroke="${mix(s.accent,"#ead8ac",.48)}" stroke-width="2" opacity=".48"/>`;
+  else if(/brick|mosaic|tile/.test(k))body=`<path d="M0 0H72V72H0Z M0 24H72M0 48H72M24 0V24M50 24V48M24 48V72" fill="none" stroke="${mix(s.ink,s.accent,.45)}" stroke-width="2" opacity=".52"/>`;
+  else if(/sand|desert|clay/.test(k))body=`<path d="M-5 20Q15 13 35 20T75 20M-5 50Q15 43 35 50T75 50" fill="none" stroke="${mix(s.accent,"#f1d092",.45)}" stroke-width="2" opacity=".45"/><circle cx="16" cy="35" r="1.4" fill="${s.accent}"/><circle cx="55" cy="8" r="1.2" fill="${s.accent}"/>`;
+  else body=`<path d="M12 12L30 8 42 20 34 36 14 34Z M50 43L64 40 70 57 54 65 43 54Z" fill="none" stroke="${mix(s.ink,s.accent,.48)}" stroke-width="2" opacity=".5"/>`;
+  return `<pattern id="act-material" width="72" height="72" patternUnits="userSpaceOnUse">${body}</pattern>`;
+}
+function buildMiddleSVG(c,b,s,act){
+  const rand=mulberry32(hash(`mid|${storyKey}|${act}|${b.id}|${s.seed}`));
+  const hy=1080*s.horizon/100;
+  const feature=midLayer(s,rand,hy)+backgroundFeature(s,rand,hy);
+  const people=$("midCharacters").checked?middleCharacters(s,b):"";
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="${xml(`${displayStory(storyKey)} act ${act} ${c.title} middle ground`)}">
+  <metadata>${xml(JSON.stringify({story:displayStory(storyKey),act,chapter:c.title,scene:b.id,layer:"middle-ground",materials:c.materialFiles||c.materials||[],environment:s.env,seed:s.seed,characters:!!people}))}</metadata>
+  ${feature}${people}</svg>`;
+}
+function middleCharacters(s,b){
+  const positions=b.id==="A"?[640,960,1280]:b.id==="B"?[760,1080]:[850,1070];
+  const scale=b.id==="B"?1.12:b.id==="C"?.9:1;
+  return `<g data-character-staging="replace-with-story-character-art" fill="${mix(s.ink,s.near,.28)}" stroke="${s.ink}" stroke-width="8" opacity=".88">${positions.map((x,i)=>{const y=700+(i%2)*42,r=34*scale;return `<g transform="translate(${x} ${y}) scale(${scale})"><circle cy="-78" r="${r}"/><path d="M-52 110 Q-62 20 -34 -25 H34 Q62 20 52 110Z"/><path d="M-25 110 0 5 25 110Z" fill="${s.accent}" stroke="none" opacity=".7"/></g>`}).join("")}</g>`;
 }
 function buildForegroundSVG(c,b,s,act){
   const rand=mulberry32(hash(`fg|${storyKey}|${act}|${b.id}|${s.seed}`));
@@ -231,6 +272,9 @@ function atmosphere(s,rand,hy){
 }
 function backgroundFeature(s,rand,hy){
   const text=sceneText();
+  if(/ship|boat|port|sail|harbor|harbour/.test(text)) return `<g opacity=".78" fill="${mix(s.near,s.ink,.38)}" stroke="${s.ink}" stroke-width="10"><path d="M1160 ${hy+165}h390l-58 85h-250z"/><path d="M1340 ${hy+158}V${hy-145}m8 10 170 242h-170m-15-170-123 157h123" fill="${mix(s.accent,s.far,.42)}"/><path d="M1305 ${hy+258}q95 22 190 0" fill="none" stroke="${mix(s.skyTop,'#c9e7ed',.45)}" stroke-width="14"/></g>`;
+  if(/valley|opposing armies|battlefield|armies|camp/.test(text)) return `<g opacity=".36" fill="${s.ink}"><path d="M0 ${hy+150}Q380 ${hy-45} 780 ${hy+150}T1500 ${hy+140}T2200 ${hy+160}V${hy+245}H0Z"/><path d="M0 ${hy+260}h1920v16H0z"/>${[210,350,610,1300,1510,1730].map((x,i)=>`<path d="M${x} ${hy+138+(i%2)*30}l24 -38 24 38z"/>`).join('')}</g>`;
+  if(/road|journey|procession|caravan|return/.test(text)) return `<path d="M790 1080Q905 ${hy+150} 900 ${hy+90}L1020 ${hy+90}Q1015 ${hy+150} 1140 1080Z" fill="${mix(s.far,s.accent,.22)}" opacity=".56"/>`;
   if(/tower/.test(text)) return `<path d="M760 ${hy+130} L825 ${hy-280} H1095 L1160 ${hy+130}Z" fill="${mix(s.far,"#5b4435",.45)}"/><rect x="850" y="${hy-210}" width="220" height="45" fill="${s.accent}" opacity=".65"/>`;
   if(/ark|blueprint|door shuts|forty days|long wait/.test(text)&&storyKey==="Noah") return `<path d="M520 ${hy+155} Q960 ${hy-10} 1400 ${hy+155} L1325 ${hy+240} H595Z" fill="${mix(s.near,"#5f3b26",.55)}"/><path d="M650 ${hy+110} H1270 L1180 ${hy-20} H740Z" fill="${mix(s.accent,"#6b4027",.55)}" opacity=".85"/>`;
   if(/furnace|burning bush|golden calf|carmel/.test(text)) return `<g opacity=".9"><path d="M890 ${hy+120} Q820 ${hy-40} 940 ${hy-95} Q900 ${hy+25} 1030 ${hy+105}Z" fill="${s.accent}"/><path d="M945 ${hy+100} Q900 ${hy+5} 980 ${hy-35} Q970 ${hy+35} 1020 ${hy+105}Z" fill="#f1cf75"/></g>`;
@@ -247,7 +291,7 @@ function foregroundEdges(s,rand,beat){
   return s.fgRocks?rocks(rand,s,scale):"";
 }
 function foregroundDetails(c,s,rand,beat){
-  const t=(c.title+" "+c.brief).toLowerCase(), scale=beat==="B"?1.08:beat==="C"?.88:1;
+  const t=chapterArtPrompt(c,currentBeat()), scale=beat==="B"?1.08:beat==="C"?.88:1;
   let out="";
   if(s.detail>=2&&s.fgPlants){
     if(/river|jordan|brook|reeds|water|sea|flood/.test(t))out+=reeds(rand,s,scale);
@@ -262,7 +306,17 @@ function foregroundDetails(c,s,rand,beat){
     else if(/well/.test(t))out+=wellEdge(s,scale);
   }
   if(s.detail>=4&&s.fgProps)out+=secondaryProps(t,s,rand,scale);
+  if(s.fgProps)out+=artDirectedForeground(t,s,beat);
   return out;
+}
+function artDirectedForeground(t,s,beat){
+  const y=beat==="C"?920:1000, ink=s.ink,wood=mix(s.near,"#704624",.52),stone=mix(s.far,"#a39478",.42),accent=s.accent;
+  if(/ship|boat|port|sail|harbor|harbour|gangplank/.test(t)) return `<g transform="translate(1240 ${y})" stroke="${ink}" stroke-width="12" stroke-linejoin="round"><path d="M-215 0H215L150 90H-155Z" fill="${wood}"/><path d="M-80 -5V-285M82 -5V-225" stroke="${wood}" stroke-width="18"/><path d="M-65 -260L-65 -35H70Z" fill="${mix(accent,"#e7d8b5",.42)}"/><path d="M98 -205V-42H190Z" fill="${mix(accent,"#e7d8b5",.3)}"/></g>`;
+  if(/basket|cradle|baby|child in the river/.test(t)) return `<g transform="translate(1450 ${y})" stroke="${ink}" stroke-width="12"><path d="M-125 -55Q0 -110 125 -55L95 65Q0 115 -95 65Z" fill="${wood}"/><path d="M-100 -38Q0 10 100 -38M-78 -5Q0 40 78 -5" fill="none" stroke="${accent}" stroke-width="13"/></g>`;
+  if(/sling|spear|sword|shield|armor|weapon/.test(t)) return `<g transform="translate(1510 ${y})" stroke="${ink}" stroke-width="13" stroke-linejoin="round"><path d="M-55 62Q0 -120 65 -275" fill="none" stroke="${wood}" stroke-width="22" stroke-linecap="round"/><path d="M68 -290L38 -235 92 -244Z" fill="${stone}"/><path d="M-195 10Q-95 -55 -45 10L-85 125Q-165 128 -195 10Z" fill="${accent}"/><path d="M-160 14Q-120 38 -80 14" fill="none"/></g>`;
+  if(/tree|bush|vine|palm|orchard|fig/.test(t)) return `<g transform="translate(250 ${y+75})" stroke="${ink}" stroke-width="12" stroke-linejoin="round"><path d="M-22 0Q-8 -165 18 -295L65 -275Q34 -150 52 0Z" fill="${wood}"/><path d="M18 -270Q-125 -335 -135 -425Q-38 -415 24 -335Q-6 -468 50 -520Q101 -433 58 -330Q132 -430 217 -410Q196 -317 63 -282Q152 -323 182 -242Q95 -225 34 -278Z" fill="${mix(s.near,"#42643b",.42)}"/></g>`;
+  if(/altar|offering|sacrifice/.test(t)) return `<g transform="translate(1430 ${y})" stroke="${ink}" stroke-width="12" stroke-linejoin="round"><path d="M-155 20L-115 -72H115L155 20Z" fill="${stone}"/><path d="M-125 20H125L100 115H-100Z" fill="${mix(stone,s.near,.2)}"/><path d="M0 -85Q-60 -150 0 -225Q58 -150 0 -85Z" fill="${accent}" stroke="none"/></g>`;
+  return "";
 }
 function reeds(rand,s,scale){let o='<g opacity=".9">';for(let i=0;i<8;i++){const side=i<4?1:-1,x=i<4?70+i*48:1850-(i-4)*48,h=(110+rand()*170)*scale;o+=`<path d="M${x} 1080q${side*25} -${h*.55} ${side*(8+rand()*24)} -${h}" fill="none" stroke="${mix(s.near,"#657342",.55)}" stroke-width="12" stroke-linecap="round"/>`}return o+"</g>"}
 function cropSprigs(rand,s,scale){let o='<g opacity=".9">';for(const side of [0,1])for(let i=0;i<3;i++){const x=side?1690+i*62:45+i*62,h=(105+rand()*135)*scale;o+=`<path d="M${x} 1080v-${h}" stroke="${mix(s.accent,"#8b6c35",.48)}" stroke-width="9"/><path d="M${x} ${1080-h*.65}l${side?-34:34} -28m-${side?-34:34} 60l${side?-30:30} -24" stroke="${mix(s.accent,"#b5944f",.35)}" stroke-width="13" stroke-linecap="round"/>`}return o+"</g>"}
@@ -280,7 +334,7 @@ function secondaryProps(t,s,rand,scale){
   return "";
 }
 function foregroundProp(c,s,rand,beat){
-  const t=(c.title+" "+c.brief).toLowerCase();
+  const t=chapterArtPrompt(c,currentBeat());
   const y=875, op=beat==="C"?.72:.92;
   if(/scroll|book|decree|message|letter|record/.test(t)) return `<g transform="translate(1450 ${y}) rotate(-7)" opacity="${op}"><rect x="-135" y="-55" width="270" height="110" rx="12" fill="#d8c49a"/><path d="M-100 -20H95M-100 8H70M-100 36H105" stroke="${s.ink}" stroke-width="8" opacity=".35"/></g>`;
   if(/stone|altar|tablet|ebenezer|pillar/.test(t)) return `<g transform="translate(1510 ${y})" opacity="${op}"><path d="M-120 80 L-90 -75 -20 -120 72 -78 110 80Z" fill="${mix(s.far,"#b4a58b",.45)}" stroke="${s.ink}" stroke-width="12"/></g>`;
@@ -299,7 +353,7 @@ function citySilhouette(rand,y,color,palace){let o=`<g fill="${color}" opacity="
 function treeLine(rand,y,color,n){let o=`<g fill="${color}" opacity=".67">`;for(let i=0;i<n;i++){const x=(i+.25)*1920/n+rand()*80,h=90+rand()*180;o+=`<rect x="${x-9}" y="${y-h*.45}" width="18" height="${h*.75}"/><circle cx="${x}" cy="${y-h*.7}" r="${55+rand()*55}"/></g><g fill="${color}" opacity=".67">`}return o+"</g>"}
 function mountainPath(rand,base,amp,n){let d=`M0 ${base}`;for(let i=0;i<n;i++){const x=(i+1)*1920/n,peak=base-amp*(.6+rand()*1.5);d+=` L${x-1920/n*.48} ${peak} L${x} ${base+rand()*35}`}return d+" V1080 H0Z"}
 function download(text,name,type="image/svg+xml"){const blob=new Blob([text],{type});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
-function manifest(){return JSON.stringify({story:displayStory(storyKey),act:last.act,chapter:last.chapter.title,brief:last.chapter.brief,scene:{id:last.beat.id,name:last.beat.name},canvas:{width:1920,height:1080},environment:last.settings.env,time:last.settings.tod,seed:last.settings.seed,background:`${last.base}_background.svg`,foreground:`${last.base}_foreground.svg`,foregroundBackgroundIncluded:$("includeBgInFg").checked,foregroundDetails:{plants:last.settings.fgPlants,rocks:last.settings.fgRocks,structures:last.settings.fgStructures,props:last.settings.fgProps,framing:last.settings.fgFraming},layering:["background","optional middle-ground/characters","foreground"]},null,2)}
+function manifest(){return JSON.stringify({story:displayStory(storyKey),act:last.act,chapter:last.chapter.title,brief:last.chapter.director||last.chapter.brief,scene:{id:last.beat.id,name:last.beat.name},canvas:{width:1920,height:1080},environment:last.settings.env,time:last.settings.tod,seed:last.settings.seed,materials:last.chapter.materialFiles||last.chapter.materials||[],artBoard:last.chapter.artFolder||null,layers:{background:`${last.base}_background.svg`,middleGround:`${last.base}_middle_ground.svg`,foreground:`${last.base}_foreground.svg`},foregroundDetails:{plants:last.settings.fgPlants,rocks:last.settings.fgRocks,structures:last.settings.fgStructures,props:last.settings.fgProps,framing:last.settings.fgFraming},layering:["background","middle-ground/optional character staging","foreground"]},null,2)}
 function crc32(bytes){let crc=0xffffffff;for(const byte of bytes){crc^=byte;for(let i=0;i<8;i++)crc=(crc>>>1)^((crc&1)?0xedb88320:0)}return(crc^0xffffffff)>>>0}
 function u16(n){return Uint8Array.of(n&255,n>>>8&255)}
 function u32(n){return Uint8Array.of(n&255,n>>>8&255,n>>>16&255,n>>>24&255)}
@@ -325,20 +379,43 @@ async function downloadAllScenes(){
       $("chapter").value=chapter;resetPalette();
       for(const beat of beats){
         $("beat").value=beat.id;render();
-        const folder=`act_${String(last.act).padStart(2,"0")}_${slug(last.chapter.title)}/${last.beat.id.toLowerCase()}_${slug(last.beat.name)}`;
+        const folder=`assets/svg/${last.chapter.assetFolder||`act_${String(last.act).padStart(2,"0")}_${slug(last.chapter.title)}`}/${last.beat.id.toLowerCase()}_${slug(last.beat.name)}`;
         files.push({name:`${folder}/${last.base}_background.svg`,text:last.bg});
-        files.push({name:`${folder}/${last.base}_foreground.svg`,text:foregroundExport()});
+        files.push({name:`${folder}/${last.base}_middle_ground.svg`,text:last.mid});
+        files.push({name:`${folder}/${last.base}_foreground.svg`,text:last.fg});
         files.push({name:`${folder}/${last.base}_scene.json`,text:manifest()});
       }
       status.textContent=`Prepared act ${chapter+1} of ${chapters.length}…`;
       await new Promise(resolve=>setTimeout(resolve,0));
     }
-    const index={story:displayStory(storyKey),exportedAt:new Date().toISOString(),acts:chapters.length,beatsPerAct:beats.length,sceneCount:chapters.length*beats.length,fileCount:files.length,canvas:{width:1920,height:1080},foregroundBackgroundIncluded:$("includeBgInFg").checked};
+    const index={story:displayStory(storyKey),exportedAt:new Date().toISOString(),acts:chapters.length,beatsPerAct:beats.length,sceneCount:chapters.length*beats.length,fileCount:files.length,canvas:{width:1920,height:1080},layers:["background","middle-ground","foreground"],assetsRoot:"assets/svg/"};
     files.unshift({name:"scene-export.json",text:JSON.stringify(index,null,2)});
     const blob=makeZip(files),name=`${slug(displayStory(storyKey))}_all_scenes.zip`,a=document.createElement("a");
     a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
     status.textContent=`Exported ${index.sceneCount} scenes (${files.length} files).`;
   }catch(error){console.error(error);status.textContent="Bulk export failed. Please try again."}
+  finally{$("chapter").value=chapterValue;$("beat").value=beatValue;resetPalette();render();button.disabled=false}
+}
+async function downloadCurrentActScenes(){
+  const button=$("downloadAct"),status=$("exportStatus"),chapterValue=$("chapter").value,beatValue=$("beat").value;
+  const chapter=Number(chapterValue)||0,act=chapters[chapter];
+  button.disabled=true;status.textContent="Preparing this act’s three stages…";
+  try{
+    const files=[],folderRoot=`assets/svg/${act.assetFolder||`act_${String(chapter+1).padStart(2,"0")}_${slug(act.title)}`}`;
+    for(const beat of beats){
+      $("beat").value=beat.id;render();
+      const folder=`${folderRoot}/${beat.id.toLowerCase()}_${slug(beat.name)}`;
+      files.push({name:`${folder}/${last.base}_background.svg`,text:last.bg});
+      files.push({name:`${folder}/${last.base}_middle_ground.svg`,text:last.mid});
+      files.push({name:`${folder}/${last.base}_foreground.svg`,text:last.fg});
+      files.push({name:`${folder}/${last.base}_scene.json`,text:manifest()});
+    }
+    const index={story:displayStory(storyKey),act:chapter+1,title:act.title,exportedAt:new Date().toISOString(),stages:beats.map(b=>b.name),canvas:{width:1920,height:1080},layers:["background","middle-ground","foreground"],assetsRoot:"assets/svg/"};
+    files.unshift({name:`${folderRoot}/scene-export.json`,text:JSON.stringify(index,null,2)});
+    const blob=makeZip(files),name=`${slug(displayStory(storyKey))}_act${chapter+1}_scenes.zip`,a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+    status.textContent=`Exported all three stages for Act ${chapter+1} (${files.length} files).`;
+  }catch(error){console.error(error);status.textContent="Act export failed. Please try again."}
   finally{$("chapter").value=chapterValue;$("beat").value=beatValue;resetPalette();render();button.disabled=false}
 }
 function colorField(id,label,value){return `<label class="color">${label}<input id="${id}" type="color" value="${value}"></label>`}
@@ -353,15 +430,19 @@ function mix(a,b,t){const ah=parseInt(a.slice(1),16),bh=parseInt(b.slice(1),16),
 ["chapter","beat","environment","time"].forEach(id=>$(id).addEventListener("change",()=>{if(id==="chapter"||id==="environment"){resetPalette()}render()}));
 ["horizon","detail"].forEach(id=>$(id).addEventListener("input",()=>{$(id+"Val").textContent=id==="horizon"?$(id).value+"%":$(id).value;render()}));
 ["seed","skyTop","skyBottom","far","near","accent","ink"].forEach(id=>$(id).addEventListener("input",render));
-["fgPlants","fgRocks","fgStructures","fgProps","fgFraming"].forEach(id=>$(id).addEventListener("change",render));
+["fgPlants","fgRocks","fgStructures","fgProps","fgFraming","midCharacters"].forEach(id=>$(id).addEventListener("change",render));
 $("generate").onclick=render;
 $("autoPalette").onclick=()=>{resetPalette();render()};
 $("randomise").onclick=()=>{$("seed").value=1+Math.floor(Math.random()*9999);render()};
 $("downloadBg").onclick=()=>download(last.bg,`${last.base}_background.svg`);
-$("downloadFg").onclick=()=>download(foregroundExport(),`${last.base}_foreground.svg`);
+$("downloadMid").onclick=()=>download(last.mid,`${last.base}_middle_ground.svg`);
+$("downloadFg").onclick=()=>download(last.fg,`${last.base}_foreground.svg`);
 $("downloadManifest").onclick=()=>download(manifest(),`${last.base}_scene.json`,"application/json");
 $("downloadAll").onclick=downloadAllScenes;
+$("downloadAct").onclick=downloadCurrentActScenes;
 $("showBg").onchange=()=>$("bgLayer").style.display=$("showBg").checked?"":"none";
+$("showMid").onchange=()=>$("midLayer").style.display=$("showMid").checked?"":"none";
 $("showFg").onchange=()=>$("fgLayer").style.display=$("showFg").checked?"":"none";
 resetPalette(); render();
+if(window.__SCENE_FORGE_CAPTURE__) window.__SCENE_FORGE_CAPTURE__.api={chapters,beats,exportCurrent(chapter,beat){$("chapter").value=String(chapter);$("beat").value=beat;resetPalette();render();return {...last}}};
 })();

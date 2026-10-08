@@ -1,0 +1,23 @@
+{
+  "story": "Enoch",
+  "act": 6,
+  "chapter": "Ch.6 · Walking with God",
+  "artSource": "art/act6_walking_with_god.md",
+  "artFolder": "assets/svg/act_06_walking_with_god",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "enoch_act6_a_background.svg",
+    "middleGround": "enoch_act6_a_middle_ground.svg",
+    "foreground": "enoch_act6_a_foreground.svg"
+  }
+}

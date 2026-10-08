@@ -1,0 +1,340 @@
+{
+  "id": "mountain",
+  "name": "Ch.9 · Thunder on Sinai",
+  "bg": "radial-gradient(circle at 50% 0%, #1a1440, #0a0818 65%, #020208)",
+  "particle": "storm",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "mountain_0",
+      "items": [
+        {
+          "id": "mountain_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "In the third month after the Israelites left Egypt, they came to the desert of Sinai. They camped at the foot of the mountain.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "mountain_1",
+      "cite": "Exodus 19:5",
+      "items": [
+        {
+          "id": "mountain_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "If you will obey me fully and keep my covenant, then out of all nations you will be my treasured possession.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "mountain_2",
+      "items": [
+        {
+          "id": "mountain_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "All the people answered together: \"We will do everything the LORD has said.\"",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "mountain_3",
+      "audioSfx": "assets/audio/sfx/sinai_thunder.mp3",
+      "items": [
+        {
+          "id": "mountain_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "On the morning of the third day there was thunder and lightning, with a thick cloud over the mountain, and a very loud trumpet blast.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "mountain_3_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "BOOM!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "mountain_4",
+      "cite": "Exodus 19:18",
+      "items": [
+        {
+          "id": "mountain_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The whole mountain trembled violently. Smoke went up like a furnace. The LORD descended on it in fire.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "mountain_5",
+      "items": [
+        {
+          "id": "mountain_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I am the LORD your God, who brought you out of Egypt, out of the land of slavery. You shall have no other gods before me.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "mountain_6",
+      "items": [
+        {
+          "id": "mountain_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Do not misuse the name of the LORD your God. Remember the Sabbath day by keeping it holy. Honour your father and your mother.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "mountain_7",
+      "items": [
+        {
+          "id": "mountain_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Do not murder. Do not commit adultery. Do not steal. Do not give false testimony. Do not covet.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "mountain_8",
+      "items": [
+        {
+          "id": "mountain_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "All that the LORD says, we will do. All that the LORD says, we will obey.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "mountain_9",
+      "audioSfx": "assets/audio/sfx/sinai_thunder.mp3",
+      "items": [
+        {
+          "id": "mountain_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The sound of the trumpet grew louder and louder. Then Moses spoke and the voice of God answered him.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "mountain_9_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "TRUMPET!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "placeholder"
+    }
+  ],
+  "scene": "mountain",
+  "foreground": "fg_mountain",
+  "index": 8
+}

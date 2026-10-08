@@ -1,0 +1,236 @@
+{
+  "story": "David",
+  "act": {
+    "id": "friends",
+    "name": "Ch.4 · Covenant Friends",
+    "source": "../data/act4_friends.json",
+    "svg": "placeholder",
+    "bg": "radial-gradient(circle at 50% 40%, #1a1024, #0a0610 65%, #040208)",
+    "particle": "dusk"
+  },
+  "beats": [
+    {
+      "id": "friends_0",
+      "cite": "1 Samuel 22:2",
+      "items": [
+        {
+          "id": "friends_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David fled to the wilderness, first to Gath and then into the caves of Adullam. Men came to him — the dispossessed, the in debt, the discontented — and he became their leader.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "friends_1",
+      "items": [
+        {
+          "id": "friends_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Saul's son Jonathan, heir to the throne, knew David from the palace. A friendship grew between them that neither could name.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "friends_2",
+      "items": [
+        {
+          "id": "friends_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "My father's spear is in your hand and his robe is on your back. There is nothing between us but silence.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "jonathan",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "friends_3",
+      "items": [
+        {
+          "id": "friends_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I am a man under the shadow of your father's wrath. Your friendship is the only roof I have.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "friends_4",
+      "cite": "1 Samuel 20:42",
+      "items": [
+        {
+          "id": "friends_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "They met in secret at the stone of the threshing floor, and Jonathan gave David his robe, his armour, and his sword.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "friends_5",
+      "items": [
+        {
+          "id": "friends_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jonathan chose David over his father and his throne. The covenant between them outlived the palace.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "friends_5_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "LOVE IS STRONGER THAN FEAR",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "friends_6",
+      "choices": [
+        {
+          "label": "Remember this when the throne comes 🤝",
+          "note": "Jonathan's gift is a promise to be kept long after David wears a crown."
+        },
+        {
+          "label": "Put the memory away for now 🌑",
+          "note": "The wilderness is no place for sentiment. Survival comes first."
+        }
+      ],
+      "items": [
+        {
+          "id": "friends_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The two parted in the dark, each carrying the other's life in his keeping. A spear could not cut what they had bound together.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

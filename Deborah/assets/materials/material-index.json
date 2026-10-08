@@ -1,0 +1,168 @@
+{
+  "story": "Deborah",
+  "sourceTool": "Deborah/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "grass",
+      "shape": "tufts",
+      "file": "grass-tufts.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "plank",
+      "file": "wood_oak-plank.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "planks3",
+      "file": "wood_oak-planks3.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "running",
+      "file": "wall_brick-running.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "stacked",
+      "file": "wall_brick-stacked.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "herringbone",
+      "file": "wall_brick-herringbone.svg"
+    },
+    {
+      "key": "water_fast",
+      "shape": "rapids",
+      "file": "water_fast-rapids.svg"
+    },
+    {
+      "key": "water_fast",
+      "shape": "churn",
+      "file": "water_fast-churn.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · Under the Palm",
+      "assetFolder": "act_01_under_the_palm",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Summons",
+      "assetFolder": "act_02_the_summons",
+      "materials": [
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · Gather at Tabor",
+      "assetFolder": "act_03_gather_at_tabor",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · The Storm",
+      "assetFolder": "act_04_the_storm",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Sisera Flees",
+      "assetFolder": "act_05_sisera_flees",
+      "materials": [
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · Jael’s Choice",
+      "assetFolder": "act_06_jael_s_choice",
+      "materials": [
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · The Song",
+      "assetFolder": "act_07_the_song",
+      "materials": [
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "story": "Samuel",
+  "act": 6,
+  "chapter": "Ch.6 · A King Demanded",
+  "artSource": "art/act6_a_king_demanded.md",
+  "artFolder": "assets/svg/act_06_a_king_demanded",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg"
+  ],
+  "layers": {
+    "background": "samuel_act6_a_background.svg",
+    "middleGround": "samuel_act6_a_middle_ground.svg",
+    "foreground": "samuel_act6_a_foreground.svg"
+  }
+}

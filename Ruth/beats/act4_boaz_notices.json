@@ -1,0 +1,189 @@
+{
+  "story": "Ruth",
+  "act": {
+    "id": "boaz_notices",
+    "name": "Ch.4 · Boaz Notices",
+    "source": "../data/act4_boaz_notices.json",
+    "svg": "boaz_notices",
+    "bg": "radial-gradient(circle at 50% 25%, #4a6888, #1a2838 70%)",
+    "particle": "dawn"
+  },
+  "beats": [
+    {
+      "id": "boaz_notices_0",
+      "cite": "Ruth 2:4-5",
+      "items": [
+        {
+          "id": "boaz_notices_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Boaz arrived from Bethlehem and greeted the harvesters. His eyes fell upon the woman gleaning among the sheaves.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "boaz_notices_1",
+      "items": [
+        {
+          "id": "boaz_notices_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Whose young woman is that?",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "boaz",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "boaz_notices_2",
+      "items": [
+        {
+          "id": "boaz_notices_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "She is the Moabite who came back with Naomi. She asked to glean and has been working steadily since morning.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "field_overseer",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "boaz_notices_3",
+      "cite": "Ruth 2:8-9",
+      "choices": [
+        {
+          "label": "Receive water for the workers",
+          "note": "Ruth helps provide refreshment to those in the field."
+        },
+        {
+          "label": "Listen to Boaz's protection",
+          "note": "Boaz ensures Ruth's safety among the harvesters."
+        }
+      ],
+      "items": [
+        {
+          "id": "boaz_notices_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Listen, my daughter. Don't go glean in another field. Stay here with my servant girls. Watch the field where the men are harvesting, and follow along after the girls. I have told the men not to touch you. And whenever you are thirsty, go and drink from the water jars.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "boaz",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "boaz_notices_4",
+      "cite": "Ruth 2:10",
+      "items": [
+        {
+          "id": "boaz_notices_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Why have I found favor in your eyes that you notice me—a foreigner?",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "ruth",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "boaz_notices_5",
+      "cite": "Ruth 2:11-12",
+      "items": [
+        {
+          "id": "boaz_notices_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I have been told all about what you have done for your mother-in-law since the death of your husband. May the LORD repay you for what you have done.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "boaz",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

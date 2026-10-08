@@ -7,113 +7,324 @@
   "lines": [
     {
       "id": "the_sign_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Gideon asks for a sign: let me know that You will save Israel by my hand.",
       "cite": "Judges 6:17",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_sign_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Gideon asks for a sign: let me know that You will save Israel by my hand.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_sign_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "He prepares a young goat, unleavened cakes, and broth, and places them on the rock.",
       "cite": "Judges 6:19",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_sign_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "He prepares a young goat, unleavened cakes, and broth, and places them on the rock.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_sign_2",
-      "speaker": "angel",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE STAFF",
-      "text": "Take the meat and the cakes, place them on the rock, and pour out the broth.",
       "cite": "Judges 6:19",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_sign_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Take the meat and the cakes, place them on the rock, and pour out the broth.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "angel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_sign_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE STAFF",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "angel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_sign_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The Angel touches the offering with the tip of the staff. Fire rises from the rock and consumes it.",
       "cite": "Judges 6:21",
-      "sfx": "FIRE ON THE ROCK",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_sign_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The Angel touches the offering with the tip of the staff. Fire rises from the rock and consumes it.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_sign_3_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "FIRE ON THE ROCK",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_sign_4",
-      "speaker": "gideon",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Alas, O Lord God! I have seen the Angel of the Lord face to face.",
       "cite": "Judges 6:22",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_sign_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Alas, O Lord God! I have seen the Angel of the Lord face to face.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "gideon",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_sign_5",
-      "speaker": "angel",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "PEACE",
-      "text": "Peace to you. Do not fear; you shall not die.",
       "cite": "Judges 6:23",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_sign_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Peace to you. Do not fear; you shall not die.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "angel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_sign_5_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "PEACE",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "angel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_sign_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Gideon builds an altar there, and calls it The Lord Is Peace. It stands to this day in Ophrah.",
       "cite": "Judges 6:24",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_sign_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Gideon builds an altar there, and calls it The Lord Is Peace. It stands to this day in Ophrah.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_sign_7",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "That same night, Gideon tears down the altar of Baal. His father Joash defies the town: let Baal contend for himself. They name Gideon Jerubbaal.",
       "cite": "Judges 6:25–32",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_sign_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "That same night, Gideon tears down the altar of Baal. His father Joash defies the town: let Baal contend for himself. They name Gideon Jerubbaal.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_sign_8",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The Spirit clothes Gideon. He sounds the trumpet, and the Abiezrites gather to him.",
       "cite": "Judges 6:34–35",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_sign_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The Spirit clothes Gideon. He sounds the trumpet, and the Abiezrites gather to him.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_sign_9",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The sign settles. The fire was not Gideon's doing. What remains is trust, not a rewrite.",
       "choices": [
         {
           "label": "Rise and go",
@@ -124,11 +335,59 @@
           "note": "A pause does not change the outcome. It only lets the player breathe."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_sign_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The sign settles. The fire was not Gideon's doing. What remains is trust, not a rewrite.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "the_sign",
   "foreground": "fg_the_sign",
-  "index": 1
+  "index": 1,
+  "assetFolder": "act_02_the_sign",
+  "artFolder": "assets/svg/act_02_the_sign",
+  "assetStem": "gideon_act2",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_background.svg",
+      "middleGround": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_middle_ground.svg",
+      "foreground": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_background.svg",
+      "middleGround": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_middle_ground.svg",
+      "foreground": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_background.svg",
+      "middleGround": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_middle_ground.svg",
+      "foreground": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wheat_stalks-field.svg",
+    "assets/materials/rock_surface-hewn.svg",
+    "assets/materials/clay_jar-stretcher.svg",
+    "assets/materials/torch_flame-flames.svg"
+  ]
 }

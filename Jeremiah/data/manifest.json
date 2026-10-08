@@ -10,7 +10,28 @@
       "assetFolder": "act_01_the_call",
       "assetStem": "jeremiah_act1",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_the_call/a_establish/jeremiah_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_the_call/a_establish/jeremiah_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_call/a_establish/jeremiah_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_the_call/b_core_action/jeremiah_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_the_call/b_core_action/jeremiah_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_call/b_core_action/jeremiah_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_the_call/c_resolve/jeremiah_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_the_call/c_resolve/jeremiah_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_call/c_resolve/jeremiah_act1_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ]
     },
     {
       "id": "the_almond_branch",
@@ -21,7 +42,32 @@
       "assetFolder": "act_02_the_almond_branch",
       "assetStem": "jeremiah_act2",
       "particle": "dusk",
-      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_the_almond_branch/a_establish/jeremiah_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_the_almond_branch/a_establish/jeremiah_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_almond_branch/a_establish/jeremiah_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_the_almond_branch/b_core_action/jeremiah_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_the_almond_branch/b_core_action/jeremiah_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_almond_branch/b_core_action/jeremiah_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_the_almond_branch/c_resolve/jeremiah_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_the_almond_branch/c_resolve/jeremiah_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_almond_branch/c_resolve/jeremiah_act2_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/water_still-eddies.svg"
+      ]
     },
     {
       "id": "at_the_temple_gate",
@@ -32,7 +78,27 @@
       "assetFolder": "act_03_at_the_temple_gate",
       "assetStem": "jeremiah_act3",
       "particle": "ember",
-      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_at_the_temple_gate/a_establish/jeremiah_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_at_the_temple_gate/a_establish/jeremiah_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_at_the_temple_gate/a_establish/jeremiah_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_at_the_temple_gate/b_core_action/jeremiah_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_at_the_temple_gate/b_core_action/jeremiah_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_at_the_temple_gate/b_core_action/jeremiah_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_at_the_temple_gate/c_resolve/jeremiah_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_at_the_temple_gate/c_resolve/jeremiah_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_at_the_temple_gate/c_resolve/jeremiah_act3_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/stone-flagstone.svg"
+      ]
     },
     {
       "id": "the_scroll",
@@ -43,7 +109,32 @@
       "assetFolder": "act_04_the_scroll",
       "assetStem": "jeremiah_act4",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_the_scroll/a_establish/jeremiah_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_the_scroll/a_establish/jeremiah_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_scroll/a_establish/jeremiah_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_the_scroll/b_core_action/jeremiah_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_the_scroll/b_core_action/jeremiah_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_scroll/b_core_action/jeremiah_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_the_scroll/c_resolve/jeremiah_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_the_scroll/c_resolve/jeremiah_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_scroll/c_resolve/jeremiah_act4_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/water_still-eddies.svg"
+      ]
     },
     {
       "id": "the_potter",
@@ -54,7 +145,32 @@
       "assetFolder": "act_05_the_potter",
       "assetStem": "jeremiah_act5",
       "particle": "dusk",
-      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_the_potter/a_establish/jeremiah_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_the_potter/a_establish/jeremiah_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_the_potter/a_establish/jeremiah_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_the_potter/b_core_action/jeremiah_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_the_potter/b_core_action/jeremiah_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_the_potter/b_core_action/jeremiah_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_the_potter/c_resolve/jeremiah_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_the_potter/c_resolve/jeremiah_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_the_potter/c_resolve/jeremiah_act5_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/water_still-eddies.svg"
+      ]
     },
     {
       "id": "the_yoke",
@@ -65,7 +181,27 @@
       "assetFolder": "act_06_the_yoke",
       "assetStem": "jeremiah_act6",
       "particle": "ember",
-      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_the_yoke/a_establish/jeremiah_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_the_yoke/a_establish/jeremiah_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_yoke/a_establish/jeremiah_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_the_yoke/b_core_action/jeremiah_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_the_yoke/b_core_action/jeremiah_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_yoke/b_core_action/jeremiah_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_the_yoke/c_resolve/jeremiah_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_the_yoke/c_resolve/jeremiah_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_yoke/c_resolve/jeremiah_act6_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_dark-plank.svg"
+      ]
     },
     {
       "id": "the_cistern",
@@ -76,7 +212,30 @@
       "assetFolder": "act_07_the_cistern",
       "assetStem": "jeremiah_act7",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_the_cistern/a_establish/jeremiah_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_the_cistern/a_establish/jeremiah_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_cistern/a_establish/jeremiah_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_the_cistern/b_core_action/jeremiah_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_the_cistern/b_core_action/jeremiah_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_cistern/b_core_action/jeremiah_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_the_cistern/c_resolve/jeremiah_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_the_cistern/c_resolve/jeremiah_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_cistern/c_resolve/jeremiah_act7_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/water_still-eddies.svg"
+      ]
     },
     {
       "id": "buy_the_field",
@@ -87,7 +246,29 @@
       "assetFolder": "act_08_buy_the_field",
       "assetStem": "jeremiah_act8",
       "particle": "dusk",
-      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_buy_the_field/a_establish/jeremiah_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_buy_the_field/a_establish/jeremiah_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_buy_the_field/a_establish/jeremiah_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_buy_the_field/b_core_action/jeremiah_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_buy_the_field/b_core_action/jeremiah_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_buy_the_field/b_core_action/jeremiah_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_buy_the_field/c_resolve/jeremiah_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_buy_the_field/c_resolve/jeremiah_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_buy_the_field/c_resolve/jeremiah_act8_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/water_still-eddies.svg"
+      ]
     },
     {
       "id": "the_fall_of_jerusalem",
@@ -98,7 +279,29 @@
       "assetFolder": "act_09_the_fall_of_jerusalem",
       "assetStem": "jeremiah_act9",
       "particle": "ember",
-      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_09_the_fall_of_jerusalem/a_establish/jeremiah_act9_a_background.svg",
+          "middleGround": "assets/svg/act_09_the_fall_of_jerusalem/a_establish/jeremiah_act9_a_middle_ground.svg",
+          "foreground": "assets/svg/act_09_the_fall_of_jerusalem/a_establish/jeremiah_act9_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_09_the_fall_of_jerusalem/b_core_action/jeremiah_act9_b_background.svg",
+          "middleGround": "assets/svg/act_09_the_fall_of_jerusalem/b_core_action/jeremiah_act9_b_middle_ground.svg",
+          "foreground": "assets/svg/act_09_the_fall_of_jerusalem/b_core_action/jeremiah_act9_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_09_the_fall_of_jerusalem/c_resolve/jeremiah_act9_c_background.svg",
+          "middleGround": "assets/svg/act_09_the_fall_of_jerusalem/c_resolve/jeremiah_act9_c_middle_ground.svg",
+          "foreground": "assets/svg/act_09_the_fall_of_jerusalem/c_resolve/jeremiah_act9_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/desert_sand-dunes.svg"
+      ]
     },
     {
       "id": "lament_and_hope",
@@ -109,7 +312,28 @@
       "assetFolder": "act_10_lament_and_hope",
       "assetStem": "jeremiah_act10",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_10_lament_and_hope/a_establish/jeremiah_act10_a_background.svg",
+          "middleGround": "assets/svg/act_10_lament_and_hope/a_establish/jeremiah_act10_a_middle_ground.svg",
+          "foreground": "assets/svg/act_10_lament_and_hope/a_establish/jeremiah_act10_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_10_lament_and_hope/b_core_action/jeremiah_act10_b_background.svg",
+          "middleGround": "assets/svg/act_10_lament_and_hope/b_core_action/jeremiah_act10_b_middle_ground.svg",
+          "foreground": "assets/svg/act_10_lament_and_hope/b_core_action/jeremiah_act10_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_10_lament_and_hope/c_resolve/jeremiah_act10_c_background.svg",
+          "middleGround": "assets/svg/act_10_lament_and_hope/c_resolve/jeremiah_act10_c_middle_ground.svg",
+          "foreground": "assets/svg/act_10_lament_and_hope/c_resolve/jeremiah_act10_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/fabric_weave-basket.svg"
+      ]
     }
   ]
 }

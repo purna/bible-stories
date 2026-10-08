@@ -1,0 +1,434 @@
+{
+  "story": "Adam",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Let There Be Light",
+      "sceneId": "creation_cosmos",
+      "artSource": "art/act1_creation.md",
+      "assetFolder": "act_01_creation",
+      "artFolder": "assets/svg/act_01_creation",
+      "assetStem": "adam_act1",
+      "materials": [
+        "assets/materials/leaves-canopy.svg",
+        "assets/materials/wood_oak-planks3.svg"
+      ],
+      "materialKeys": [
+        "leaves",
+        "wood_oak"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_creation/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_creation/a_establish/adam_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_creation/a_establish/adam_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_creation/a_establish/adam_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_creation/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_creation/b_core_action/adam_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_creation/b_core_action/adam_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_creation/b_core_action/adam_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_creation/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_creation/c_resolve/adam_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_creation/c_resolve/adam_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_creation/c_resolve/adam_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_creation/a_establish/adam_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_creation/a_establish/adam_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_creation/a_establish/adam_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_creation/b_core_action/adam_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_creation/b_core_action/adam_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_creation/b_core_action/adam_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_creation/c_resolve/adam_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_creation/c_resolve/adam_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_creation/c_resolve/adam_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "The Garden",
+      "sceneId": "garden_eden",
+      "artSource": "art/act2_garden.md",
+      "assetFolder": "act_02_garden",
+      "artFolder": "assets/svg/act_02_garden",
+      "assetStem": "adam_act2",
+      "materials": [
+        "assets/materials/leaves-canopy.svg",
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/wood_oak-planks3.svg"
+      ],
+      "materialKeys": [
+        "leaves",
+        "water_still",
+        "wood_oak"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_garden/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_garden/a_establish/adam_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_garden/a_establish/adam_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_garden/a_establish/adam_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_garden/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_garden/b_core_action/adam_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_garden/b_core_action/adam_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_garden/b_core_action/adam_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_garden/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_garden/c_resolve/adam_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_garden/c_resolve/adam_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_garden/c_resolve/adam_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_garden/a_establish/adam_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_garden/a_establish/adam_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_garden/a_establish/adam_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_garden/b_core_action/adam_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_garden/b_core_action/adam_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_garden/b_core_action/adam_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_garden/c_resolve/adam_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_garden/c_resolve/adam_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_garden/c_resolve/adam_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "Helper Suitable",
+      "sceneId": "forming_eve",
+      "artSource": "art/act3_helper.md",
+      "assetFolder": "act_03_helper",
+      "artFolder": "assets/svg/act_03_helper",
+      "assetStem": "adam_act3",
+      "materials": [
+        "assets/materials/leaves-canopy.svg",
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/fabric_weave-basket.svg"
+      ],
+      "materialKeys": [
+        "leaves",
+        "grass",
+        "water_still",
+        "stone",
+        "wood_oak",
+        "fabric_weave"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_helper/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_helper/a_establish/adam_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_helper/a_establish/adam_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_helper/a_establish/adam_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_helper/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_helper/b_core_action/adam_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_helper/b_core_action/adam_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_helper/b_core_action/adam_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_helper/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_helper/c_resolve/adam_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_helper/c_resolve/adam_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_helper/c_resolve/adam_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_helper/a_establish/adam_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_helper/a_establish/adam_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_helper/a_establish/adam_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_helper/b_core_action/adam_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_helper/b_core_action/adam_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_helper/b_core_action/adam_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_helper/c_resolve/adam_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_helper/c_resolve/adam_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_helper/c_resolve/adam_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "The Temptation",
+      "sceneId": "serpent_tree",
+      "artSource": "art/act4_temptation.md",
+      "assetFolder": "act_04_temptation",
+      "artFolder": "assets/svg/act_04_temptation",
+      "assetStem": "adam_act4",
+      "materials": [
+        "assets/materials/leaves-canopy.svg",
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg"
+      ],
+      "materialKeys": [
+        "leaves",
+        "water_still",
+        "stone",
+        "wood_oak"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_temptation/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_temptation/a_establish/adam_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_temptation/a_establish/adam_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_temptation/a_establish/adam_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_temptation/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_temptation/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_temptation/a_establish/adam_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_temptation/a_establish/adam_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_temptation/a_establish/adam_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "Exile",
+      "sceneId": "exile_eden",
+      "artSource": "art/act5_exile.md",
+      "assetFolder": "act_05_exile",
+      "artFolder": "assets/svg/act_05_exile",
+      "assetStem": "adam_act5",
+      "materials": [
+        "assets/materials/leaves-canopy.svg",
+        "assets/materials/wood_oak-planks3.svg"
+      ],
+      "materialKeys": [
+        "leaves",
+        "wood_oak"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_exile/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_exile/a_establish/adam_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_exile/a_establish/adam_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_exile/a_establish/adam_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_exile/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_exile/b_core_action/adam_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_exile/b_core_action/adam_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_exile/b_core_action/adam_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_exile/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_exile/c_resolve/adam_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_exile/c_resolve/adam_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_exile/c_resolve/adam_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_exile/a_establish/adam_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_exile/a_establish/adam_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_exile/a_establish/adam_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_exile/b_core_action/adam_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_exile/b_core_action/adam_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_exile/b_core_action/adam_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_exile/c_resolve/adam_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_exile/c_resolve/adam_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_exile/c_resolve/adam_act5_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 6,
+      "title": "West of the Divide",
+      "sceneId": "exile_dawn",
+      "artSource": "art/act6_west.md",
+      "assetFolder": "act_06_west",
+      "artFolder": "assets/svg/act_06_west",
+      "assetStem": "adam_act6",
+      "materials": [
+        "assets/materials/leaves-canopy.svg",
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/wood_oak-planks3.svg"
+      ],
+      "materialKeys": [
+        "leaves",
+        "grass",
+        "water_still",
+        "wood_oak"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_06_west/a_establish",
+          "layers": {
+            "background": "assets/svg/act_06_west/a_establish/adam_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_west/a_establish/adam_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_west/a_establish/adam_act6_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_06_west/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_06_west/b_core_action/adam_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_west/b_core_action/adam_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_west/b_core_action/adam_act6_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_06_west/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_06_west/c_resolve/adam_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_west/c_resolve/adam_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_west/c_resolve/adam_act6_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_west/a_establish/adam_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_west/a_establish/adam_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_west/a_establish/adam_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_west/b_core_action/adam_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_west/b_core_action/adam_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_west/b_core_action/adam_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_west/c_resolve/adam_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_west/c_resolve/adam_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_west/c_resolve/adam_act6_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

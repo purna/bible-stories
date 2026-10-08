@@ -1,0 +1,188 @@
+{
+  "story": "Ruth",
+  "act": {
+    "id": "obed",
+    "name": "Ch.8 · Obed",
+    "source": "../data/act8_obed.json",
+    "svg": "obed",
+    "bg": "radial-gradient(circle at 50% 25%, #d8b888, #2a1e10 70%)",
+    "particle": "dawn"
+  },
+  "beats": [
+    {
+      "id": "obed_0",
+      "cite": "Ruth 4:16-17",
+      "items": [
+        {
+          "id": "obed_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The women of the town blessed Naomi and blessed the child. They named him Obed.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "obed_1",
+      "items": [
+        {
+          "id": "obed_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Naomi has a son! He will renew your life and sustain you in your old age. Your daughter-in-law who loves you, who is better to you than seven sons, has given him birth.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "bethlehem_woman",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "obed_2",
+      "items": [
+        {
+          "id": "obed_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "They laid the child in her arms and cared for him. What bitter days are behind me. What kindness has carried me forward.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "naomi",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "obed_3",
+      "cite": "Ruth 4:17",
+      "choices": [
+        {
+          "label": "Follow the family line",
+          "note": "David, Solomon, and onward to the lineage of Christ."
+        },
+        {
+          "label": "Reflect on loyal kindness",
+          "note": "Ruth's faithfulness became part of God's greater story."
+        }
+      ],
+      "items": [
+        {
+          "id": "obed_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The family line continued: Obed was the father of Jesse, the father of David.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "obed_4",
+      "cite": "Ruth 4:18-22",
+      "items": [
+        {
+          "id": "obed_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "This is the genealogy of Perez: Perez was the father of Hezron, Hezron the father of Ram, Ram the father of Amminadab, Amminadab the father of Nahshon, Nahshon the father of Salmon, Salmon the father of Boaz, Boaz the father of Obed, Obed the father of Jesse, and Jesse the father of David.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "obed_5",
+      "items": [
+        {
+          "id": "obed_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "From Moab to Bethlehem. From loss to belonging. From a foreign woman to the great-grandmother of a king. Loyal kindness created a place where there was none.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

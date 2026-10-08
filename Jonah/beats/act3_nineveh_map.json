@@ -1,0 +1,34 @@
+{
+  "story": "Jonah",
+  "act": {
+    "id": "act3_nineveh_map",
+    "name": "The City of Nineveh",
+    "source": "../art/act3_nineveh_map.md"
+  },
+  "beats": [
+    {
+      "id": "a_establish",
+      "type": "visual",
+      "name": "establishing",
+      "description": "wide framing of the setting: a shoreline at dawn, a man walking out of the sea, a long road to the east"
+    },
+    {
+      "id": "b_core_action",
+      "type": "visual",
+      "name": "core action",
+      "description": "the scene's central movement and characters"
+    },
+    {
+      "id": "c_resolve",
+      "type": "visual",
+      "name": "resolution",
+      "description": "the beat's outcome, holding the emotional note"
+    },
+    {
+      "id": "interactive-game",
+      "type": "game",
+      "description": "Walk the road to Nineveh.",
+      "mechanic": "pathfinding"
+    }
+  ]
+}

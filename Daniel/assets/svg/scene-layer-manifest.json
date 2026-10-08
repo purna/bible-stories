@@ -1,0 +1,370 @@
+{
+  "story": "Daniel",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "The King's Table",
+      "sceneId": "babylon_court",
+      "artSource": "art/act1_table.md",
+      "assetFolder": "act_01_table",
+      "artFolder": "assets/svg/act_01_table",
+      "assetStem": "daniel_act1",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "stone",
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_table/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_table/a_establish/daniel_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_table/a_establish/daniel_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_table/a_establish/daniel_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_table/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_table/b_core_action/daniel_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_table/b_core_action/daniel_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_table/b_core_action/daniel_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_table/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_table/c_resolve/daniel_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_table/c_resolve/daniel_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_table/c_resolve/daniel_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_table/a_establish/daniel_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_table/a_establish/daniel_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_table/a_establish/daniel_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_table/b_core_action/daniel_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_table/b_core_action/daniel_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_table/b_core_action/daniel_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_table/c_resolve/daniel_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_table/c_resolve/daniel_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_table/c_resolve/daniel_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "The Dream",
+      "sceneId": "throne_room",
+      "artSource": "art/act2_statue.md",
+      "assetFolder": "act_02_statue",
+      "artFolder": "assets/svg/act_02_statue",
+      "assetStem": "daniel_act2",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "hammered_gold",
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_statue/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_statue/a_establish/daniel_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_statue/a_establish/daniel_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_statue/a_establish/daniel_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_statue/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_statue/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_statue/a_establish/daniel_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_statue/a_establish/daniel_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_statue/a_establish/daniel_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "The Furnace",
+      "sceneId": "plain_of_dura",
+      "artSource": "art/act3_furnace.md",
+      "assetFolder": "act_03_furnace",
+      "artFolder": "assets/svg/act_03_furnace",
+      "assetStem": "daniel_act3",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "mosaic",
+        "hammered_gold",
+        "stone",
+        "fabric_weave",
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_furnace/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_furnace/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_furnace/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "The Writing on the Wall",
+      "sceneId": "belshazzar_feast",
+      "artSource": "art/act4_writing.md",
+      "assetFolder": "act_04_writing",
+      "artFolder": "assets/svg/act_04_writing",
+      "assetStem": "daniel_act4",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "mosaic",
+        "hammered_gold",
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_writing/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_writing/a_establish/daniel_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_writing/a_establish/daniel_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_writing/a_establish/daniel_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_writing/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_writing/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_writing/a_establish/daniel_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_writing/a_establish/daniel_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_writing/a_establish/daniel_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "The Den",
+      "sceneId": "persian_court",
+      "artSource": "art/act5_den.md",
+      "assetFolder": "act_05_den",
+      "artFolder": "assets/svg/act_05_den",
+      "assetStem": "daniel_act5",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "mosaic",
+        "hammered_gold",
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_den/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_den/a_establish/daniel_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_den/a_establish/daniel_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_den/a_establish/daniel_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_den/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_den/b_core_action/daniel_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_den/b_core_action/daniel_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_den/b_core_action/daniel_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_den/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_den/c_resolve/daniel_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_den/c_resolve/daniel_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_den/c_resolve/daniel_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_den/a_establish/daniel_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_den/a_establish/daniel_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_den/a_establish/daniel_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_den/b_core_action/daniel_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_den/b_core_action/daniel_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_den/b_core_action/daniel_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_den/c_resolve/daniel_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_den/c_resolve/daniel_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_den/c_resolve/daniel_act5_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

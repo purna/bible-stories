@@ -1,0 +1,18 @@
+{
+  "story": "Isaiah",
+  "act": 8,
+  "chapter": "Ch.8 · The Servant",
+  "artSource": "art/act8_the_servant.md",
+  "artFolder": "assets/svg/act_08_the_servant",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "desert_sand-dunes.svg"
+  ],
+  "layers": {
+    "background": "isaiah_act8_c_background.svg",
+    "middleGround": "isaiah_act8_c_middle_ground.svg",
+    "foreground": "isaiah_act8_c_foreground.svg"
+  }
+}

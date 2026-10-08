@@ -7,90 +7,246 @@
   "lines": [
     {
       "id": "the_winepress_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Seven years the Midianites ruled. Each harvest, raiders swept the land like locusts.",
       "cite": "Judges 6:1–6",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_winepress_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Seven years the Midianites ruled. Each harvest, raiders swept the land like locusts.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_winepress_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Gideon beat wheat in a winepress, hidden from the raiders. A man of the least family, in the smallest clan.",
       "cite": "Judges 6:11, 15",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_winepress_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Gideon beat wheat in a winepress, hidden from the raiders. A man of the least family, in the smallest clan.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_winepress_2",
-      "speaker": "angel",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE CALL",
-      "text": "The Lord is with you, mighty warrior.",
       "cite": "Judges 6:12",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_winepress_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The Lord is with you, mighty warrior.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "angel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_winepress_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE CALL",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "angel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_winepress_3",
-      "speaker": "gideon",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "If the Lord is with us, why has all this happened? Where are His wonders?",
       "cite": "Judges 6:13",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_winepress_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "If the Lord is with us, why has all this happened? Where are His wonders?",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "gideon",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_winepress_4",
-      "speaker": "angel",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "text": "Go in the strength you have. I am sending you to break Midian's yoke.",
       "cite": "Judges 6:14",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_winepress_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Go in the strength you have. I am sending you to break Midian's yoke.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "angel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_winepress_5",
-      "speaker": "gideon",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "How can I save Israel? My clan is the weakest, and I am the least in my father's house.",
       "cite": "Judges 6:15",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_winepress_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "How can I save Israel? My clan is the weakest, and I am the least in my father's house.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "gideon",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_winepress_6",
-      "speaker": "angel",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE PROMISE",
-      "text": "I will be with you, and you shall strike the Midianites as one man.",
       "cite": "Judges 6:16",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_winepress_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I will be with you, and you shall strike the Midianites as one man.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "angel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_winepress_6_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE PROMISE",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "angel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_winepress_7",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The call does not turn on a hero's strength. It turns on the presence of the Lord with the unlikely.",
       "choices": [
         {
           "label": "Answer the call",
@@ -101,11 +257,56 @@
           "note": "A pause does not change the outcome. It only lets the player breathe."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_winepress_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The call does not turn on a hero's strength. It turns on the presence of the Lord with the unlikely.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "the_winepress",
   "foreground": "fg_the_winepress",
-  "index": 0
+  "index": 0,
+  "assetFolder": "act_01_the_winepress",
+  "artFolder": "assets/svg/act_01_the_winepress",
+  "assetStem": "gideon_act1",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_background.svg",
+      "middleGround": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_middle_ground.svg",
+      "foreground": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_background.svg",
+      "middleGround": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_middle_ground.svg",
+      "foreground": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_background.svg",
+      "middleGround": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_middle_ground.svg",
+      "foreground": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wheat_stalks-field.svg"
+  ]
 }

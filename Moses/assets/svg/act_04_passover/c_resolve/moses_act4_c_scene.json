@@ -1,0 +1,20 @@
+{
+  "story": "Moses",
+  "act": 4,
+  "chapter": "Ch.4 · Passover Night",
+  "artSource": "art/act4_passover.md",
+  "artFolder": "assets/svg/act_04_passover",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "egypt_mud_brick-stretcher.svg",
+    "stone-rough.svg",
+    "stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act4_c_background.svg",
+    "middleGround": "moses_act4_c_middle_ground.svg",
+    "foreground": "moses_act4_c_foreground.svg"
+  }
+}

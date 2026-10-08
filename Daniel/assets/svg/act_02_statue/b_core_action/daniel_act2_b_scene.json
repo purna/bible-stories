@@ -1,0 +1,25 @@
+{
+  "story": "Daniel",
+  "act": 2,
+  "chapter": "The Dream",
+  "artSource": "art/act2_statue.md",
+  "artFolder": "assets/svg/act_02_statue",
+  "sceneId": "throne_room",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "stone_texture.svg",
+    "temple-flagstone.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg"
+  ],
+  "layers": {
+    "background": "daniel_act2_b_background.svg",
+    "middleGround": "daniel_act2_b_middle_ground.svg",
+    "foreground": "daniel_act2_b_foreground.svg"
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="David act 7 Ch.7 · The Throne background">
+  <metadata>{&quot;story&quot;:&quot;David&quot;,&quot;act&quot;:7,&quot;chapter&quot;:&quot;Ch.7 · The Throne&quot;,&quot;scene&quot;:&quot;A&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;materials&quot;:[&quot;en_gedi_cave-limestone.svg&quot;,&quot;fabric_dots-grid.svg&quot;,&quot;fabric_herringbone-weave..svg&quot;,&quot;fabric_houndstooth-classic.svg&quot;,&quot;fabric_tartan-sett.svg&quot;,&quot;fabric_weave-basket.svg&quot;,&quot;stone-flagstone.svg&quot;,&quot;stone-rough.svg&quot;,&quot;valley_stones-brook.svg&quot;,&quot;water_still-calm.svg&quot;,&quot;water_still-eddies.svg&quot;],&quot;environment&quot;:&quot;river&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#2a1a10"/><stop offset="1" stop-color="#120a04"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#060402"/><stop offset="1" stop-color="#120a04"/></linearGradient><pattern id="act-material" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M12 12L30 8 42 20 34 36 14 34Z M50 43L64 40 70 57 54 65 43 54Z" fill="none" stroke="#201816" stroke-width="2" opacity=".5"/></pattern></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1500" cy="180" r="64" fill="#f2ddb0" opacity=".82"/>
+  <path d="M0 661.4 Q500 616.4 980 654.4 T1920 636.4 V806.4 H0Z" fill="#2a3f40" opacity=".65"/>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/><path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#act-material)" opacity=".16"/>
+  </svg>

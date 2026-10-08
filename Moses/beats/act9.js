@@ -1,37 +1,37 @@
 /**
- * BEATS/ACT9.JS — Forty Years
- * Input type: endurance / trust
+ * BEATS/ACT9.JS — Sinai: The Covenant Given
+ * Input type: covenant / reverence
  */
 
 const Act9Beats = (function () {
 
-    function followCloud(led) {
-        if (led) {
-            Compass.nudge('guidance', 5);
+    function approachMountain(reverent) {
+        if (reverent) {
+            Compass.nudge('awe', 10);
         } else {
-            Compass.nudge('wandering', 5);
+            Compass.nudge('casual', 10);
         }
-        Compass.recordBeat('act9_cloud');
+        Compass.recordBeat('act9_mountain');
     }
 
-    function strikeRock(obedient) {
-        if (obedient) {
-            Compass.nudge('provision', 5);
+    function receiveTablets(attentive) {
+        if (attentive) {
+            Compass.nudge('revelation', 8);
         } else {
-            Compass.nudge('presumption', 5);
+            Compass.nudge('distraction', 8);
         }
-        Compass.recordBeat('act9_rock');
+        Compass.recordBeat('act9_tablets');
     }
 
-    function bronzeSerpent(lookUp) {
-        if (lookUp) {
-            Compass.nudge('healing', 10);
+    function covenantPromise(solemn) {
+        if (solemn) {
+            Compass.nudge('commitment', 10);
         } else {
-            Compass.nudge('death', 10);
+            Compass.nudge('lip-service', 10);
         }
-        Compass.recordBeat('act9_serpent');
+        Compass.recordBeat('act9_covenant');
     }
 
-    return { followCloud, strikeRock, bronzeSerpent };
+    return { approachMountain, receiveTablets, covenantPromise };
 })();
 window.Act9Beats = Act9Beats;

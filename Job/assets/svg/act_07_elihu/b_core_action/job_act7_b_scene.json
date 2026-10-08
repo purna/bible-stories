@@ -1,0 +1,18 @@
+{
+  "story": "Job",
+  "act": 7,
+  "chapter": "Ch.7 · Elihu",
+  "artSource": "art/act7_elihu.md",
+  "artFolder": "assets/svg/act_07_elihu",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "fabric_weave-basket.svg"
+  ],
+  "layers": {
+    "background": "job_act7_b_background.svg",
+    "middleGround": "job_act7_b_middle_ground.svg",
+    "foreground": "job_act7_b_foreground.svg"
+  }
+}

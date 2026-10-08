@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Establish Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Joshua act 4 Ch.4 · Jericho foreground">
+  <metadata>{&quot;story&quot;:&quot;Joshua&quot;,&quot;act&quot;:4,&quot;chapter&quot;:&quot;Ch.4 · Jericho&quot;,&quot;scene&quot;:&quot;A&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;city&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#655748" stroke="#1f1b1a" stroke-width="12" opacity=".93"><rect x="0" y="540" width="150" height="560"/><rect x="1770" y="540" width="150" height="560"/><rect x="0" y="510" width="205" height="55"/><rect x="1715" y="510" width="205" height="55"/></g><g opacity=".96"><path d="M1450 1045l15.81114898896776 -96.3918352366425 42.163063970580694 -37.48571370313876 36.892680974258106 133.87754893978126Z" fill="#8f7f6d" stroke="#1f1b1a" stroke-width="9"/><path d="M1565 1045l25.876416840869933 -100.05998932868242 69.00377824231983 -38.91221807226539 60.37830596202984 138.9722074009478Z" fill="#8f7f6d" stroke="#1f1b1a" stroke-width="9"/><path d="M1680 1045l25.75622136276215 -97.74191252952441 68.68325696736574 -38.01074376148172 60.09784984644502 135.75265629100613Z" fill="#8f7f6d" stroke="#1f1b1a" stroke-width="9"/></g><g fill="#97866d" stroke="#1f1b1a" stroke-width="10" opacity=".9"><path d="M0 1080V760h245v320zM1675 1080V760h245v320z"/><path d="M0 760h310v70H0zM1610 760h310v70h-310z"/></g>
+  </svg>

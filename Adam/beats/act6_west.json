@@ -1,0 +1,41 @@
+{
+  "story": "Adam",
+  "act": {
+    "id": "west",
+    "name": "West of the Divide",
+    "source": "../data/act6_west.json",
+    "svg": "exile_dawn",
+    "bg": "radial-gradient(circle at 50% 50%, #0d1b2a, #061224 65%, #030b18)",
+    "particle": "stars"
+  },
+  "beats": [
+    {
+      "id": "west_0",
+      "items": [
+        {
+          "id": "west_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story continues west of the divide — where the seed of the woman journeys through promise and peril, toward the dawn of redemption.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "exile_dawn"
+    }
+  ]
+}

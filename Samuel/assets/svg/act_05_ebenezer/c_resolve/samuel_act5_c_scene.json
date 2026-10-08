@@ -1,0 +1,22 @@
+{
+  "story": "Samuel",
+  "act": 5,
+  "chapter": "Ch.5 · Ebenezer",
+  "artSource": "art/act5_ebenezer.md",
+  "artFolder": "assets/svg/act_05_ebenezer",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "grass-tufts.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "samuel_act5_c_background.svg",
+    "middleGround": "samuel_act5_c_middle_ground.svg",
+    "foreground": "samuel_act5_c_foreground.svg"
+  }
+}

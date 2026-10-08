@@ -7,104 +7,252 @@
   "lines": [
     {
       "id": "court_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "The giant's head was carried to Jerusalem and David's fame spread through every tribe. Saul summoned the young man to live at his side.",
       "cite": "1 Samuel 18:2",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "court_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The giant's head was carried to Jerusalem and David's fame spread through every tribe. Saul summoned the young man to live at his side.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "court_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The people sang in the streets. Saul's own spear lay across his knees while David's hand was near the king's.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "court_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The people sang in the streets. Saul's own spear lay across his knees while David's hand was near the king's.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "court_2",
-      "speaker": "saul",
-      "fx": "fade",
-      "delay": 800,
-      "align": "right",
-      "text": "They have given him ten thousands, and me only thousands. What more can he want but the kingdom?",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "court_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "They have given him ten thousands, and me only thousands. What more can he want but the kingdom?",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "saul",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "court_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "An evil spirit troubled Saul. When the music of a lyre rose from the palace, the shadow on his face lifted for a moment.",
       "cite": "1 Samuel 16:23",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "court_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "An evil spirit troubled Saul. When the music of a lyre rose from the palace, the shadow on his face lifted for a moment.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "court_4",
-      "speaker": "saul",
-      "fx": "fade",
-      "delay": 800,
-      "align": "right",
-      "text": "Play for me, David. The noise in my head is louder tonight.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "court_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Play for me, David. The noise in my head is louder tonight.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "saul",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "court_5",
-      "speaker": "david",
-      "fx": "type",
-      "delay": 800,
-      "align": "left",
-      "text": "I will play, my king. But the music is not the cure. It only holds the dark at bay.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "court_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I will play, my king. But the music is not the cure. It only holds the dark at bay.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "court_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "David played, and Saul's hand steadied. But the king watched the musician with a look that was not gratitude.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "court_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David played, and Saul's hand steadied. But the king watched the musician with a look that was not gratitude.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "court_7",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Saul's jealousy grew with David's honour. The spear that once defended the king became the thing he lifted against the lyre-player.",
       "cite": "1 Samuel 18:11",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "court_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Saul's jealousy grew with David's honour. The spear that once defended the king became the thing he lifted against the lyre-player.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "court_8",
-      "speaker": "david",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "What have I done? Is there not a cause for this spear?",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "court_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "What have I done? Is there not a cause for this spear?",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "court_9",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "David fled the palace that night. The anointed shepherd left the king's house with nothing but the echo of a song.",
       "choices": [
         {
           "label": "Run before the spear finds me 🏃",
@@ -115,11 +263,56 @@
           "note": "A servant's trust does not leave when the master is afraid."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "court_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David fled the palace that night. The anointed shepherd left the king's house with nothing but the echo of a song.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "court",
   "foreground": "fg_court",
-  "index": 2
+  "index": 2,
+  "assetFolder": "act_03_court",
+  "artFolder": "assets/svg/act_03_court",
+  "assetStem": "david_act3",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_03_court/a_establish/david_act3_a_background.svg",
+      "middleGround": "assets/svg/act_03_court/a_establish/david_act3_a_middle_ground.svg",
+      "foreground": "assets/svg/act_03_court/a_establish/david_act3_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_03_court/b_core_action/david_act3_b_background.svg",
+      "middleGround": "assets/svg/act_03_court/b_core_action/david_act3_b_middle_ground.svg",
+      "foreground": "assets/svg/act_03_court/b_core_action/david_act3_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_03_court/c_resolve/david_act3_c_background.svg",
+      "middleGround": "assets/svg/act_03_court/c_resolve/david_act3_c_middle_ground.svg",
+      "foreground": "assets/svg/act_03_court/c_resolve/david_act3_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/stone-flagstone.svg"
+  ]
 }

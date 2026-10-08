@@ -91,7 +91,7 @@ const svgCache = {};
 async function loadSvg(key) {
   if (svgCache[key]) return svgCache[key];
   try {
-    const res = await fetch(`assets/svg/${key}.svg`);
+    const res = await fetch(key.startsWith('assets/svg/') ? key : `assets/svg/${key}.svg`);
     if (!res.ok) throw new Error();
     svgCache[key] = await res.text();
   } catch {
@@ -101,6 +101,15 @@ async function loadSvg(key) {
 }
 
 function currentAct() { return STORY[actIdx]; }
+function sceneBeat(act) {
+  if (lineIdx === 0) return {id:'a',folder:'a_establish'};
+  if (lineIdx === act.lines.length - 1) return {id:'c',folder:'c_resolve'};
+  return {id:'b',folder:'b_core_action'};
+}
+function sceneAssetPath(act, layer) {
+  const beat=sceneBeat(act),key=layer==='middle_ground'?'middleGround':layer;
+  return (act.sceneLayers&&act.sceneLayers[beat.folder]&&act.sceneLayers[beat.folder][key]) || `assets/svg/${act.assetFolder}/${beat.folder}/${act.assetStem}_${beat.id}_${layer}.svg`;
+}
 window.__comic = { currentAct };
 
 /* ── Dot progress bar ─────────────────────────── */
@@ -190,6 +199,16 @@ async function renderLine() {
 
   const act  = currentAct();
   const data = act.lines[lineIdx];
+    if (Array.isArray(data.items) && data.items.length) {
+        const primary = data.items.find(item => !item.sfx) || data.items[0];
+        const firstSfx = data.items.find(item => item.sfx);
+        data.speaker = primary.speaker || 'narrator'; data.text = primary.sfx ? '' : (primary.text || '');
+        data.sfx = firstSfx ? firstSfx.text : '';
+        data.fx = primary.entryFx || 'fade';
+        data.delay = Math.min(...data.items.map(item => Number(item.delay) || 0));
+        data.align = primary.align || 'center'; data.width = primary.width || '1/2'
+    }
+
   audio.playLineSfx(data);
   audio.playAct(act);
 
@@ -210,8 +229,13 @@ async function renderLine() {
   graphicContainer.id = 'graphicContainer';
   const svgLayer = document.createElement('div');
   svgLayer.id = 'svgLayer';
-  svgLayer.innerHTML = await loadSvg(data.svg || act.svg);
+  svgLayer.classList.add('svg-behind');
+  svgLayer.innerHTML = await loadSvg(sceneAssetPath(act, 'background'));
   graphicContainer.appendChild(svgLayer);
+  const middleLayer=document.createElement('div');middleLayer.id='midLayer';middleLayer.classList.add('svg-middle');
+  middleLayer.innerHTML=await loadSvg(sceneAssetPath(act,'middle_ground'));graphicContainer.appendChild(middleLayer);
+  const fgLayer=document.createElement('div');fgLayer.id='fgLayer';fgLayer.classList.add('svg-front');
+  fgLayer.innerHTML=await loadSvg(sceneAssetPath(act,'foreground'));graphicContainer.appendChild(fgLayer);
   frame.appendChild(graphicContainer);
 
   const overlay = document.createElement('div');
@@ -240,21 +264,19 @@ async function renderLine() {
 
     if (data.text) {
       const width = data.width || '1/2';
-      const valign = data.valign || 'middle';
       const widthStyle = `--bubble-width: ${width};`;
-      const valignStyle = `--bubble-valign: ${valign};`;
       
       if (data.speaker === 'narrator') {
         const cap = document.createElement('div');
         cap.className = `caption fx-${data.fx} caption-${data.align || 'center'}`;
-        cap.style.cssText = widthStyle + valignStyle;
+        cap.style.cssText = widthStyle;
         cap.innerHTML = buildLineHTML(data.text, data.fx);
         overlay.appendChild(cap);
       } else {
         const align = data.align || 'center';
         const wrap = document.createElement('div');
         wrap.className = `bubble-wrap align-${align}`;
-        wrap.style.cssText = widthStyle + valignStyle;
+        wrap.style.cssText = widthStyle;
         const bub = document.createElement('div');
         bub.className = `bubble ${data.speaker} fx-${data.fx} bubble-${align}`;
         bub.innerHTML = buildLineHTML(data.text, data.fx);
@@ -471,8 +493,6 @@ function startGatheringInteraction(container, deck) {
   function keyHandler(event) {
     if (event.key === 'ArrowRight') { event.preventDefault(); moveFocus(1); }
     else if (event.key === 'ArrowLeft') { event.preventDefault(); moveFocus(-1); }
-    else if (event.key === 'ArrowDown') { event.preventDefault(); moveRow(1); }
-    else if (event.key === 'ArrowUp') { event.preventDefault(); moveRow(-1); }
     else if (event.key === 'Home') { event.preventDefault(); updateFocus(0); }
     else if (event.key === 'End') { event.preventDefault(); updateFocus(cards.length - 1); }
   }
@@ -617,7 +637,6 @@ window.addEventListener('keydown', e => {
   if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
   if (e.code === 'ArrowRight' || e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); goLine(1); }
   if (e.code === 'ArrowLeft') goLine(-1);
-  if (e.code === 'ArrowDown') goNextChapter();
 });
 
 /* ── Start button ─────────────────────────────── */

@@ -1,0 +1,19 @@
+{
+  "story": "Gideon",
+  "act": 4,
+  "chapter": "Ch.4 · The Army Reduced",
+  "artSource": "art/act4_the_army_reduced.md",
+  "artFolder": "assets/svg/act_04_the_army_reduced",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "sword_iron-blade.svg",
+    "water_ripple-ripples.svg"
+  ],
+  "layers": {
+    "background": "gideon_act4_b_background.svg",
+    "middleGround": "gideon_act4_b_middle_ground.svg",
+    "foreground": "gideon_act4_b_foreground.svg"
+  }
+}

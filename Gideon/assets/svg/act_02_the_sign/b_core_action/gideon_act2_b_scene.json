@@ -1,0 +1,21 @@
+{
+  "story": "Gideon",
+  "act": 2,
+  "chapter": "Ch.2 · The Sign",
+  "artSource": "art/act2_the_sign.md",
+  "artFolder": "assets/svg/act_02_the_sign",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "clay_jar-stretcher.svg",
+    "rock_surface-hewn.svg",
+    "torch_flame-flames.svg",
+    "wheat_stalks-field.svg"
+  ],
+  "layers": {
+    "background": "gideon_act2_b_background.svg",
+    "middleGround": "gideon_act2_b_middle_ground.svg",
+    "foreground": "gideon_act2_b_foreground.svg"
+  }
+}

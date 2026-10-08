@@ -1,68 +1,148 @@
 {
   "id": "at_the_gate",
-  "name": "Ch.6 \u00b7 At the Gate",
+  "name": "Ch.6 · At the Gate",
   "bg": "radial-gradient(circle at 50% 25%, #b89870, #4a3820 70%)",
   "particle": "dawn",
   "lines": [
     {
       "id": "at_the_gate_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Boaz went up to the town gate and sat down there. The guardian-redeemer whom Boaz had mentioned came along. Boaz called him to sit.",
       "cite": "Ruth 4:1",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "at_the_gate_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Boaz went up to the town gate and sat down there. The guardian-redeemer whom Boaz had mentioned came along. Boaz called him to sit.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "at_the_gate_1",
-      "speaker": "boaz",
-      "fx": "type",
-      "delay": 800,
-      "align": "left",
-      "text": "Naomi, who has come back from Moab, is selling the piece of land that belonged to our relative Elimelek. I thought I should speak to you about it in the presence of the elders of my people.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "at_the_gate_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Naomi, who has come back from Moab, is selling the piece of land that belonged to our relative Elimelek. I thought I should speak to you about it in the presence of the elders of my people.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "boaz",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "at_the_gate_2",
-      "speaker": "kinsman_redeemer",
-      "fx": "fade",
-      "delay": 800,
-      "align": "right",
-      "text": "I will redeem it.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "at_the_gate_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I will redeem it.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "kinsman_redeemer",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "at_the_gate_3",
-      "speaker": "boaz",
-      "fx": "type",
-      "delay": 800,
-      "align": "left",
-      "text": "On the day you buy the land from Naomi, you also acquire Ruth the Moabite, the dead man's widow, in order to maintain the name of the dead with his property.",
       "cite": "Ruth 4:5",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "at_the_gate_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "On the day you buy the land from Naomi, you also acquire Ruth the Moabite, the dead man's widow, in order to maintain the name of the dead with his property.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "boaz",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "at_the_gate_4",
-      "speaker": "kinsman_redeemer",
-      "fx": "fade",
-      "delay": 800,
-      "align": "right",
-      "text": "I cannot redeem it because I might endanger my own estate. You redeem it yourself. I cannot do it.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "at_the_gate_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I cannot redeem it because I might endanger my own estate. You redeem it yourself. I cannot do it.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "kinsman_redeemer",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "at_the_gate_5",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The witnesses were assembled. The transaction was made before the town elders. Boaz presented the redemption choice clearly and without pressure.",
       "cite": "Ruth 4:9-10",
       "choices": [
         {
@@ -74,12 +154,57 @@
           "note": "Boaz takes responsibility for Ruth and Naomi's inheritance."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "at_the_gate_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The witnesses were assembled. The transaction was made before the town elders. Boaz presented the redemption choice clearly and without pressure.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "svg": "at_the_gate",
   "scene": "at_the_gate",
   "foreground": "fg_at_the_gate",
-  "index": 5
+  "index": 5,
+  "assetFolder": "act_06_at_the_gate",
+  "artFolder": "assets/svg/act_06_at_the_gate",
+  "assetStem": "ruth_act6",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_06_at_the_gate/a_establish/ruth_act6_a_background.svg",
+      "middleGround": "assets/svg/act_06_at_the_gate/a_establish/ruth_act6_a_middle_ground.svg",
+      "foreground": "assets/svg/act_06_at_the_gate/a_establish/ruth_act6_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_06_at_the_gate/b_core_action/ruth_act6_b_background.svg",
+      "middleGround": "assets/svg/act_06_at_the_gate/b_core_action/ruth_act6_b_middle_ground.svg",
+      "foreground": "assets/svg/act_06_at_the_gate/b_core_action/ruth_act6_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_06_at_the_gate/c_resolve/ruth_act6_c_background.svg",
+      "middleGround": "assets/svg/act_06_at_the_gate/c_resolve/ruth_act6_c_middle_ground.svg",
+      "foreground": "assets/svg/act_06_at_the_gate/c_resolve/ruth_act6_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/stone-flagstone.svg"
+  ]
 }

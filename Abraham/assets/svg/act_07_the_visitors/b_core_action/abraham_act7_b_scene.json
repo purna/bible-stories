@@ -1,0 +1,24 @@
+{
+  "story": "Abraham",
+  "act": 7,
+  "chapter": "The Visitors",
+  "artSource": "art/act7_the_visitors.md",
+  "artFolder": "assets/svg/act_07_the_visitors",
+  "sceneId": "",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "abraham_act7_b_background.svg",
+    "middleGround": "abraham_act7_b_middle_ground.svg",
+    "foreground": "abraham_act7_b_foreground.svg"
+  }
+}

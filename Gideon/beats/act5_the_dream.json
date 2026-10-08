@@ -1,0 +1,267 @@
+{
+  "story": "Gideon",
+  "act": {
+    "id": "the_dream",
+    "name": "Ch.5 · The Dream",
+    "source": "../data/act5_the_dream.json",
+    "svg": "placeholder",
+    "bg": "radial-gradient(circle at 50% 30%, #100a1a, #0a0502 65%)",
+    "particle": "night"
+  },
+  "beats": [
+    {
+      "id": "the_dream_0",
+      "cite": "Judges 7:9",
+      "items": [
+        {
+          "id": "the_dream_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "That night, the Lord says: arise, go down to the camp. I have given it into your hand.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_dream_1",
+      "cite": "Judges 6:37",
+      "items": [
+        {
+          "id": "the_dream_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "If you will save Israel by my hand, let this be the sign: a fleece of dew, a bowl of water.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "gideon",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_dream_2",
+      "cite": "Judges 7:10–12",
+      "items": [
+        {
+          "id": "the_dream_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Gideon goes down with Purah, his servant, to the edge of the armed camp. The Midianites are countless, their camels like sand.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_dream_3",
+      "cite": "Judges 7:13",
+      "items": [
+        {
+          "id": "the_dream_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "In a tent, a soldier tells his friend a dream: a barley cake tumbled into the camp, struck the tent, and it lay flat.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_dream_3_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "The dream",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "the_dream_4",
+      "cite": "Judges 7:14",
+      "items": [
+        {
+          "id": "the_dream_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "This is nothing but the sword of Gideon. God has given the Midianites and their camp into his hand.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "midianite_soldier",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_dream_5",
+      "cite": "Judges 7:15",
+      "items": [
+        {
+          "id": "the_dream_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Gideon hears the dream and its meaning. He worships, then returns to his camp and gives the order: arise, the Lord has given them into your hand.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_dream_6",
+      "items": [
+        {
+          "id": "the_dream_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The dream is not Gideon's, and the falling tent is not a real attack. It is a whisper the enemy spoke against itself.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_dream_7",
+      "choices": [
+        {
+          "label": "Return to the three hundred",
+          "note": "The story keeps its shape; Gideon carries the assurance forward."
+        },
+        {
+          "label": "Rest at the camp's edge",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "items": [
+        {
+          "id": "the_dream_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The overheard assurance settles. The route was an adaptation — it cannot change the outcome. What remains is trust.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

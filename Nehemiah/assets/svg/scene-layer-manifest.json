@@ -1,0 +1,696 @@
+{
+  "story": "Nehemiah",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · Bad News",
+      "sceneId": "placeholder",
+      "artSource": "art/act1_bad_news.md",
+      "assetFolder": "act_01_bad_news",
+      "artFolder": "assets/svg/act_01_bad_news",
+      "assetStem": "nehemiah_act1",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_bad_news/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_bad_news/a_establish/nehemiah_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_bad_news/a_establish/nehemiah_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_bad_news/a_establish/nehemiah_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_bad_news/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_bad_news/b_core_action/nehemiah_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_bad_news/b_core_action/nehemiah_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_bad_news/b_core_action/nehemiah_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_bad_news/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_bad_news/c_resolve/nehemiah_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_bad_news/c_resolve/nehemiah_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_bad_news/c_resolve/nehemiah_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_bad_news/a_establish/nehemiah_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_bad_news/a_establish/nehemiah_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_bad_news/a_establish/nehemiah_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_bad_news/b_core_action/nehemiah_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_bad_news/b_core_action/nehemiah_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_bad_news/b_core_action/nehemiah_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_bad_news/c_resolve/nehemiah_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_bad_news/c_resolve/nehemiah_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_bad_news/c_resolve/nehemiah_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · Before the King",
+      "sceneId": "placeholder",
+      "artSource": "art/act2_before_the_king.md",
+      "assetFolder": "act_02_before_the_king",
+      "artFolder": "assets/svg/act_02_before_the_king",
+      "assetStem": "nehemiah_act2",
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/desert_sand-dunes.svg"
+      ],
+      "materialKeys": [
+        "wood_oak",
+        "hammered_gold",
+        "desert_sand"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_before_the_king/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_before_the_king/a_establish/nehemiah_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_before_the_king/a_establish/nehemiah_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_before_the_king/a_establish/nehemiah_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_before_the_king/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_before_the_king/b_core_action/nehemiah_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_before_the_king/b_core_action/nehemiah_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_before_the_king/b_core_action/nehemiah_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_before_the_king/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_before_the_king/c_resolve/nehemiah_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_before_the_king/c_resolve/nehemiah_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_before_the_king/c_resolve/nehemiah_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_before_the_king/a_establish/nehemiah_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_before_the_king/a_establish/nehemiah_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_before_the_king/a_establish/nehemiah_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_before_the_king/b_core_action/nehemiah_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_before_the_king/b_core_action/nehemiah_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_before_the_king/b_core_action/nehemiah_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_before_the_king/c_resolve/nehemiah_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_before_the_king/c_resolve/nehemiah_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_before_the_king/c_resolve/nehemiah_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · Night Inspection",
+      "sceneId": "placeholder",
+      "artSource": "art/act3_night_inspection.md",
+      "assetFolder": "act_03_night_inspection",
+      "artFolder": "assets/svg/act_03_night_inspection",
+      "assetStem": "nehemiah_act3",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "stone",
+        "wood_oak"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_night_inspection/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_night_inspection/a_establish/nehemiah_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_night_inspection/a_establish/nehemiah_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_night_inspection/a_establish/nehemiah_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_night_inspection/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_night_inspection/b_core_action/nehemiah_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_night_inspection/b_core_action/nehemiah_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_night_inspection/b_core_action/nehemiah_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_night_inspection/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_night_inspection/c_resolve/nehemiah_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_night_inspection/c_resolve/nehemiah_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_night_inspection/c_resolve/nehemiah_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_night_inspection/a_establish/nehemiah_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_night_inspection/a_establish/nehemiah_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_night_inspection/a_establish/nehemiah_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_night_inspection/b_core_action/nehemiah_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_night_inspection/b_core_action/nehemiah_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_night_inspection/b_core_action/nehemiah_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_night_inspection/c_resolve/nehemiah_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_night_inspection/c_resolve/nehemiah_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_night_inspection/c_resolve/nehemiah_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Rise and Build",
+      "sceneId": "placeholder",
+      "artSource": "art/act4_rise_and_build.md",
+      "assetFolder": "act_04_rise_and_build",
+      "artFolder": "assets/svg/act_04_rise_and_build",
+      "assetStem": "nehemiah_act4",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "stone",
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_rise_and_build/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_rise_and_build/a_establish/nehemiah_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_rise_and_build/a_establish/nehemiah_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_rise_and_build/a_establish/nehemiah_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_rise_and_build/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_rise_and_build/b_core_action/nehemiah_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_rise_and_build/b_core_action/nehemiah_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_rise_and_build/b_core_action/nehemiah_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_rise_and_build/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_rise_and_build/c_resolve/nehemiah_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_rise_and_build/c_resolve/nehemiah_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_rise_and_build/c_resolve/nehemiah_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_rise_and_build/a_establish/nehemiah_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_rise_and_build/a_establish/nehemiah_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_rise_and_build/a_establish/nehemiah_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_rise_and_build/b_core_action/nehemiah_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_rise_and_build/b_core_action/nehemiah_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_rise_and_build/b_core_action/nehemiah_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_rise_and_build/c_resolve/nehemiah_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_rise_and_build/c_resolve/nehemiah_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_rise_and_build/c_resolve/nehemiah_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Sword and Trowel",
+      "sceneId": "placeholder",
+      "artSource": "art/act5_sword_and_trowel.md",
+      "assetFolder": "act_05_sword_and_trowel",
+      "artFolder": "assets/svg/act_05_sword_and_trowel",
+      "assetStem": "nehemiah_act5",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_sword_and_trowel/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_sword_and_trowel/a_establish/nehemiah_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_sword_and_trowel/a_establish/nehemiah_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_sword_and_trowel/a_establish/nehemiah_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_sword_and_trowel/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_sword_and_trowel/b_core_action/nehemiah_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_sword_and_trowel/b_core_action/nehemiah_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_sword_and_trowel/b_core_action/nehemiah_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_sword_and_trowel/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_sword_and_trowel/c_resolve/nehemiah_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_sword_and_trowel/c_resolve/nehemiah_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_sword_and_trowel/c_resolve/nehemiah_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_sword_and_trowel/a_establish/nehemiah_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_sword_and_trowel/a_establish/nehemiah_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_sword_and_trowel/a_establish/nehemiah_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_sword_and_trowel/b_core_action/nehemiah_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_sword_and_trowel/b_core_action/nehemiah_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_sword_and_trowel/b_core_action/nehemiah_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_sword_and_trowel/c_resolve/nehemiah_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_sword_and_trowel/c_resolve/nehemiah_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_sword_and_trowel/c_resolve/nehemiah_act5_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · The Outcry",
+      "sceneId": "placeholder",
+      "artSource": "art/act6_the_outcry.md",
+      "assetFolder": "act_06_the_outcry",
+      "artFolder": "assets/svg/act_06_the_outcry",
+      "assetStem": "nehemiah_act6",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/desert_sand-dunes.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "stone",
+        "wood_oak",
+        "fabric_weave",
+        "hammered_gold",
+        "desert_sand"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_06_the_outcry/a_establish",
+          "layers": {
+            "background": "assets/svg/act_06_the_outcry/a_establish/nehemiah_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_the_outcry/a_establish/nehemiah_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_outcry/a_establish/nehemiah_act6_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_06_the_outcry/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_06_the_outcry/b_core_action/nehemiah_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_the_outcry/b_core_action/nehemiah_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_outcry/b_core_action/nehemiah_act6_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_06_the_outcry/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_06_the_outcry/c_resolve/nehemiah_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_the_outcry/c_resolve/nehemiah_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_outcry/c_resolve/nehemiah_act6_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_the_outcry/a_establish/nehemiah_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_the_outcry/a_establish/nehemiah_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_outcry/a_establish/nehemiah_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_the_outcry/b_core_action/nehemiah_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_the_outcry/b_core_action/nehemiah_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_outcry/b_core_action/nehemiah_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_the_outcry/c_resolve/nehemiah_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_the_outcry/c_resolve/nehemiah_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_outcry/c_resolve/nehemiah_act6_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · Plots and Rumours",
+      "sceneId": "placeholder",
+      "artSource": "art/act7_plots_and_rumours.md",
+      "assetFolder": "act_07_plots_and_rumours",
+      "artFolder": "assets/svg/act_07_plots_and_rumours",
+      "assetStem": "nehemiah_act7",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_07_plots_and_rumours/a_establish",
+          "layers": {
+            "background": "assets/svg/act_07_plots_and_rumours/a_establish/nehemiah_act7_a_background.svg",
+            "middleGround": "assets/svg/act_07_plots_and_rumours/a_establish/nehemiah_act7_a_middle_ground.svg",
+            "foreground": "assets/svg/act_07_plots_and_rumours/a_establish/nehemiah_act7_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_07_plots_and_rumours/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_07_plots_and_rumours/b_core_action/nehemiah_act7_b_background.svg",
+            "middleGround": "assets/svg/act_07_plots_and_rumours/b_core_action/nehemiah_act7_b_middle_ground.svg",
+            "foreground": "assets/svg/act_07_plots_and_rumours/b_core_action/nehemiah_act7_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_07_plots_and_rumours/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_07_plots_and_rumours/c_resolve/nehemiah_act7_c_background.svg",
+            "middleGround": "assets/svg/act_07_plots_and_rumours/c_resolve/nehemiah_act7_c_middle_ground.svg",
+            "foreground": "assets/svg/act_07_plots_and_rumours/c_resolve/nehemiah_act7_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_plots_and_rumours/a_establish/nehemiah_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_plots_and_rumours/a_establish/nehemiah_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_plots_and_rumours/a_establish/nehemiah_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_plots_and_rumours/b_core_action/nehemiah_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_plots_and_rumours/b_core_action/nehemiah_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_plots_and_rumours/b_core_action/nehemiah_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_plots_and_rumours/c_resolve/nehemiah_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_plots_and_rumours/c_resolve/nehemiah_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_plots_and_rumours/c_resolve/nehemiah_act7_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · The Wall Completed",
+      "sceneId": "placeholder",
+      "artSource": "art/act8_the_wall_completed.md",
+      "assetFolder": "act_08_the_wall_completed",
+      "artFolder": "assets/svg/act_08_the_wall_completed",
+      "assetStem": "nehemiah_act8",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_08_the_wall_completed/a_establish",
+          "layers": {
+            "background": "assets/svg/act_08_the_wall_completed/a_establish/nehemiah_act8_a_background.svg",
+            "middleGround": "assets/svg/act_08_the_wall_completed/a_establish/nehemiah_act8_a_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_wall_completed/a_establish/nehemiah_act8_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_08_the_wall_completed/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_08_the_wall_completed/b_core_action/nehemiah_act8_b_background.svg",
+            "middleGround": "assets/svg/act_08_the_wall_completed/b_core_action/nehemiah_act8_b_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_wall_completed/b_core_action/nehemiah_act8_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_08_the_wall_completed/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_08_the_wall_completed/c_resolve/nehemiah_act8_c_background.svg",
+            "middleGround": "assets/svg/act_08_the_wall_completed/c_resolve/nehemiah_act8_c_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_wall_completed/c_resolve/nehemiah_act8_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_the_wall_completed/a_establish/nehemiah_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_the_wall_completed/a_establish/nehemiah_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_wall_completed/a_establish/nehemiah_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_the_wall_completed/b_core_action/nehemiah_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_the_wall_completed/b_core_action/nehemiah_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_wall_completed/b_core_action/nehemiah_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_the_wall_completed/c_resolve/nehemiah_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_the_wall_completed/c_resolve/nehemiah_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_wall_completed/c_resolve/nehemiah_act8_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · The Book Read",
+      "sceneId": "placeholder",
+      "artSource": "art/act9_the_book_read.md",
+      "assetFolder": "act_09_the_book_read",
+      "artFolder": "assets/svg/act_09_the_book_read",
+      "assetStem": "nehemiah_act9",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "stone",
+        "wood_oak"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_09_the_book_read/a_establish",
+          "layers": {
+            "background": "assets/svg/act_09_the_book_read/a_establish/nehemiah_act9_a_background.svg",
+            "middleGround": "assets/svg/act_09_the_book_read/a_establish/nehemiah_act9_a_middle_ground.svg",
+            "foreground": "assets/svg/act_09_the_book_read/a_establish/nehemiah_act9_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_09_the_book_read/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_09_the_book_read/b_core_action/nehemiah_act9_b_background.svg",
+            "middleGround": "assets/svg/act_09_the_book_read/b_core_action/nehemiah_act9_b_middle_ground.svg",
+            "foreground": "assets/svg/act_09_the_book_read/b_core_action/nehemiah_act9_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_09_the_book_read/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_09_the_book_read/c_resolve/nehemiah_act9_c_background.svg",
+            "middleGround": "assets/svg/act_09_the_book_read/c_resolve/nehemiah_act9_c_middle_ground.svg",
+            "foreground": "assets/svg/act_09_the_book_read/c_resolve/nehemiah_act9_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_09_the_book_read/a_establish/nehemiah_act9_a_background.svg",
+          "middleGround": "assets/svg/act_09_the_book_read/a_establish/nehemiah_act9_a_middle_ground.svg",
+          "foreground": "assets/svg/act_09_the_book_read/a_establish/nehemiah_act9_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_09_the_book_read/b_core_action/nehemiah_act9_b_background.svg",
+          "middleGround": "assets/svg/act_09_the_book_read/b_core_action/nehemiah_act9_b_middle_ground.svg",
+          "foreground": "assets/svg/act_09_the_book_read/b_core_action/nehemiah_act9_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_09_the_book_read/c_resolve/nehemiah_act9_c_background.svg",
+          "middleGround": "assets/svg/act_09_the_book_read/c_resolve/nehemiah_act9_c_middle_ground.svg",
+          "foreground": "assets/svg/act_09_the_book_read/c_resolve/nehemiah_act9_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · Reform",
+      "sceneId": "placeholder",
+      "artSource": "art/act10_reform.md",
+      "assetFolder": "act_10_reform",
+      "artFolder": "assets/svg/act_10_reform",
+      "assetStem": "nehemiah_act10",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "wall_brick",
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_10_reform/a_establish",
+          "layers": {
+            "background": "assets/svg/act_10_reform/a_establish/nehemiah_act10_a_background.svg",
+            "middleGround": "assets/svg/act_10_reform/a_establish/nehemiah_act10_a_middle_ground.svg",
+            "foreground": "assets/svg/act_10_reform/a_establish/nehemiah_act10_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_10_reform/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_10_reform/b_core_action/nehemiah_act10_b_background.svg",
+            "middleGround": "assets/svg/act_10_reform/b_core_action/nehemiah_act10_b_middle_ground.svg",
+            "foreground": "assets/svg/act_10_reform/b_core_action/nehemiah_act10_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_10_reform/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_10_reform/c_resolve/nehemiah_act10_c_background.svg",
+            "middleGround": "assets/svg/act_10_reform/c_resolve/nehemiah_act10_c_middle_ground.svg",
+            "foreground": "assets/svg/act_10_reform/c_resolve/nehemiah_act10_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_10_reform/a_establish/nehemiah_act10_a_background.svg",
+          "middleGround": "assets/svg/act_10_reform/a_establish/nehemiah_act10_a_middle_ground.svg",
+          "foreground": "assets/svg/act_10_reform/a_establish/nehemiah_act10_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_10_reform/b_core_action/nehemiah_act10_b_background.svg",
+          "middleGround": "assets/svg/act_10_reform/b_core_action/nehemiah_act10_b_middle_ground.svg",
+          "foreground": "assets/svg/act_10_reform/b_core_action/nehemiah_act10_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_10_reform/c_resolve/nehemiah_act10_c_background.svg",
+          "middleGround": "assets/svg/act_10_reform/c_resolve/nehemiah_act10_c_middle_ground.svg",
+          "foreground": "assets/svg/act_10_reform/c_resolve/nehemiah_act10_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

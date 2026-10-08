@@ -1,0 +1,690 @@
+{
+  "story": "Joshua",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · Be Strong",
+      "sceneId": "placeholder",
+      "artSource": "art/act1_be_strong.md",
+      "assetFolder": "act_01_be_strong",
+      "artFolder": "assets/svg/act_01_be_strong",
+      "assetStem": "joshua_act1",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/water_fast-churn.svg"
+      ],
+      "materialKeys": [
+        "desert_sand",
+        "water_fast"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_be_strong/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_be_strong/a_establish/joshua_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_be_strong/a_establish/joshua_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_be_strong/a_establish/joshua_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_be_strong/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_be_strong/b_core_action/joshua_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_be_strong/b_core_action/joshua_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_be_strong/b_core_action/joshua_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_be_strong/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_be_strong/c_resolve/joshua_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_be_strong/c_resolve/joshua_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_be_strong/c_resolve/joshua_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_be_strong/a_establish/joshua_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_be_strong/a_establish/joshua_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_be_strong/a_establish/joshua_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_be_strong/b_core_action/joshua_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_be_strong/b_core_action/joshua_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_be_strong/b_core_action/joshua_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_be_strong/c_resolve/joshua_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_be_strong/c_resolve/joshua_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_be_strong/c_resolve/joshua_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · Rahab and the Spies",
+      "sceneId": "placeholder",
+      "artSource": "art/act2_rahab_and_the_spies.md",
+      "assetFolder": "act_02_rahab_and_the_spies",
+      "artFolder": "assets/svg/act_02_rahab_and_the_spies",
+      "assetStem": "joshua_act2",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "wall_brick",
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_rahab_and_the_spies/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_rahab_and_the_spies/a_establish/joshua_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_rahab_and_the_spies/a_establish/joshua_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_rahab_and_the_spies/a_establish/joshua_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_rahab_and_the_spies/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_rahab_and_the_spies/b_core_action/joshua_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_rahab_and_the_spies/b_core_action/joshua_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_rahab_and_the_spies/b_core_action/joshua_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_rahab_and_the_spies/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_rahab_and_the_spies/c_resolve/joshua_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_rahab_and_the_spies/c_resolve/joshua_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_rahab_and_the_spies/c_resolve/joshua_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_rahab_and_the_spies/a_establish/joshua_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_rahab_and_the_spies/a_establish/joshua_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_rahab_and_the_spies/a_establish/joshua_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_rahab_and_the_spies/b_core_action/joshua_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_rahab_and_the_spies/b_core_action/joshua_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_rahab_and_the_spies/b_core_action/joshua_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_rahab_and_the_spies/c_resolve/joshua_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_rahab_and_the_spies/c_resolve/joshua_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_rahab_and_the_spies/c_resolve/joshua_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · Crossing Jordan",
+      "sceneId": "placeholder",
+      "artSource": "art/act3_crossing_jordan.md",
+      "assetFolder": "act_03_crossing_jordan",
+      "artFolder": "assets/svg/act_03_crossing_jordan",
+      "assetStem": "joshua_act3",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "water_fast",
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_crossing_jordan/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_crossing_jordan/a_establish/joshua_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_crossing_jordan/a_establish/joshua_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_crossing_jordan/a_establish/joshua_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_crossing_jordan/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_crossing_jordan/b_core_action/joshua_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_crossing_jordan/b_core_action/joshua_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_crossing_jordan/b_core_action/joshua_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_crossing_jordan/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_crossing_jordan/c_resolve/joshua_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_crossing_jordan/c_resolve/joshua_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_crossing_jordan/c_resolve/joshua_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_crossing_jordan/a_establish/joshua_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_crossing_jordan/a_establish/joshua_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_crossing_jordan/a_establish/joshua_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_crossing_jordan/b_core_action/joshua_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_crossing_jordan/b_core_action/joshua_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_crossing_jordan/b_core_action/joshua_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_crossing_jordan/c_resolve/joshua_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_crossing_jordan/c_resolve/joshua_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_crossing_jordan/c_resolve/joshua_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Jericho",
+      "sceneId": "placeholder",
+      "artSource": "art/act4_jericho.md",
+      "assetFolder": "act_04_jericho",
+      "artFolder": "assets/svg/act_04_jericho",
+      "assetStem": "joshua_act4",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wall_brick-herringbone.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "wall_brick"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_jericho/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_jericho/a_establish/joshua_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_jericho/a_establish/joshua_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_jericho/a_establish/joshua_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_jericho/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_jericho/b_core_action/joshua_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_jericho/b_core_action/joshua_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_jericho/b_core_action/joshua_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_jericho/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_jericho/c_resolve/joshua_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_jericho/c_resolve/joshua_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_jericho/c_resolve/joshua_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_jericho/a_establish/joshua_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_jericho/a_establish/joshua_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_jericho/a_establish/joshua_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_jericho/b_core_action/joshua_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_jericho/b_core_action/joshua_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_jericho/b_core_action/joshua_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_jericho/c_resolve/joshua_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_jericho/c_resolve/joshua_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_jericho/c_resolve/joshua_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Achan’s Hidden Goods",
+      "sceneId": "placeholder",
+      "artSource": "art/act5_achan_s_hidden_goods.md",
+      "assetFolder": "act_05_achan_s_hidden_goods",
+      "artFolder": "assets/svg/act_05_achan_s_hidden_goods",
+      "assetStem": "joshua_act5",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "desert_sand",
+        "water_fast",
+        "fabric_weave",
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_achan_s_hidden_goods/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_achan_s_hidden_goods/a_establish/joshua_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_achan_s_hidden_goods/a_establish/joshua_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_achan_s_hidden_goods/a_establish/joshua_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_achan_s_hidden_goods/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_achan_s_hidden_goods/b_core_action/joshua_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_achan_s_hidden_goods/b_core_action/joshua_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_achan_s_hidden_goods/b_core_action/joshua_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_achan_s_hidden_goods/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_achan_s_hidden_goods/c_resolve/joshua_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_achan_s_hidden_goods/c_resolve/joshua_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_achan_s_hidden_goods/c_resolve/joshua_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_achan_s_hidden_goods/a_establish/joshua_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_achan_s_hidden_goods/a_establish/joshua_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_achan_s_hidden_goods/a_establish/joshua_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_achan_s_hidden_goods/b_core_action/joshua_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_achan_s_hidden_goods/b_core_action/joshua_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_achan_s_hidden_goods/b_core_action/joshua_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_achan_s_hidden_goods/c_resolve/joshua_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_achan_s_hidden_goods/c_resolve/joshua_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_achan_s_hidden_goods/c_resolve/joshua_act5_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · Ai",
+      "sceneId": "placeholder",
+      "artSource": "art/act6_ai.md",
+      "assetFolder": "act_06_ai",
+      "artFolder": "assets/svg/act_06_ai",
+      "assetStem": "joshua_act6",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wall_brick-herringbone.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "wall_brick"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_06_ai/a_establish",
+          "layers": {
+            "background": "assets/svg/act_06_ai/a_establish/joshua_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_ai/a_establish/joshua_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_ai/a_establish/joshua_act6_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_06_ai/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_06_ai/b_core_action/joshua_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_ai/b_core_action/joshua_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_ai/b_core_action/joshua_act6_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_06_ai/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_06_ai/c_resolve/joshua_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_ai/c_resolve/joshua_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_ai/c_resolve/joshua_act6_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_ai/a_establish/joshua_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_ai/a_establish/joshua_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_ai/a_establish/joshua_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_ai/b_core_action/joshua_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_ai/b_core_action/joshua_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_ai/b_core_action/joshua_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_ai/c_resolve/joshua_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_ai/c_resolve/joshua_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_ai/c_resolve/joshua_act6_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · The Gibeonites",
+      "sceneId": "placeholder",
+      "artSource": "art/act7_the_gibeonites.md",
+      "assetFolder": "act_07_the_gibeonites",
+      "artFolder": "assets/svg/act_07_the_gibeonites",
+      "assetStem": "joshua_act7",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/fabric_weave-basket.svg"
+      ],
+      "materialKeys": [
+        "desert_sand",
+        "water_fast",
+        "fabric_weave"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_07_the_gibeonites/a_establish",
+          "layers": {
+            "background": "assets/svg/act_07_the_gibeonites/a_establish/joshua_act7_a_background.svg",
+            "middleGround": "assets/svg/act_07_the_gibeonites/a_establish/joshua_act7_a_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_gibeonites/a_establish/joshua_act7_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_07_the_gibeonites/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_07_the_gibeonites/b_core_action/joshua_act7_b_background.svg",
+            "middleGround": "assets/svg/act_07_the_gibeonites/b_core_action/joshua_act7_b_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_gibeonites/b_core_action/joshua_act7_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_07_the_gibeonites/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_07_the_gibeonites/c_resolve/joshua_act7_c_background.svg",
+            "middleGround": "assets/svg/act_07_the_gibeonites/c_resolve/joshua_act7_c_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_gibeonites/c_resolve/joshua_act7_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_the_gibeonites/a_establish/joshua_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_the_gibeonites/a_establish/joshua_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_gibeonites/a_establish/joshua_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_the_gibeonites/b_core_action/joshua_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_the_gibeonites/b_core_action/joshua_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_gibeonites/b_core_action/joshua_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_the_gibeonites/c_resolve/joshua_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_the_gibeonites/c_resolve/joshua_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_gibeonites/c_resolve/joshua_act7_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · The Long Campaign",
+      "sceneId": "placeholder",
+      "artSource": "art/act8_the_long_campaign.md",
+      "assetFolder": "act_08_the_long_campaign",
+      "artFolder": "assets/svg/act_08_the_long_campaign",
+      "assetStem": "joshua_act8",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/water_fast-churn.svg"
+      ],
+      "materialKeys": [
+        "desert_sand",
+        "water_fast"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_08_the_long_campaign/a_establish",
+          "layers": {
+            "background": "assets/svg/act_08_the_long_campaign/a_establish/joshua_act8_a_background.svg",
+            "middleGround": "assets/svg/act_08_the_long_campaign/a_establish/joshua_act8_a_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_long_campaign/a_establish/joshua_act8_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_08_the_long_campaign/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_08_the_long_campaign/b_core_action/joshua_act8_b_background.svg",
+            "middleGround": "assets/svg/act_08_the_long_campaign/b_core_action/joshua_act8_b_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_long_campaign/b_core_action/joshua_act8_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_08_the_long_campaign/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_08_the_long_campaign/c_resolve/joshua_act8_c_background.svg",
+            "middleGround": "assets/svg/act_08_the_long_campaign/c_resolve/joshua_act8_c_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_long_campaign/c_resolve/joshua_act8_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_the_long_campaign/a_establish/joshua_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_the_long_campaign/a_establish/joshua_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_long_campaign/a_establish/joshua_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_the_long_campaign/b_core_action/joshua_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_the_long_campaign/b_core_action/joshua_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_long_campaign/b_core_action/joshua_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_the_long_campaign/c_resolve/joshua_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_the_long_campaign/c_resolve/joshua_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_long_campaign/c_resolve/joshua_act8_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · Allot the Land",
+      "sceneId": "placeholder",
+      "artSource": "art/act9_allot_the_land.md",
+      "assetFolder": "act_09_allot_the_land",
+      "artFolder": "assets/svg/act_09_allot_the_land",
+      "assetStem": "joshua_act9",
+      "materials": [
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "fabric_weave",
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_09_allot_the_land/a_establish",
+          "layers": {
+            "background": "assets/svg/act_09_allot_the_land/a_establish/joshua_act9_a_background.svg",
+            "middleGround": "assets/svg/act_09_allot_the_land/a_establish/joshua_act9_a_middle_ground.svg",
+            "foreground": "assets/svg/act_09_allot_the_land/a_establish/joshua_act9_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_09_allot_the_land/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_09_allot_the_land/b_core_action/joshua_act9_b_background.svg",
+            "middleGround": "assets/svg/act_09_allot_the_land/b_core_action/joshua_act9_b_middle_ground.svg",
+            "foreground": "assets/svg/act_09_allot_the_land/b_core_action/joshua_act9_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_09_allot_the_land/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_09_allot_the_land/c_resolve/joshua_act9_c_background.svg",
+            "middleGround": "assets/svg/act_09_allot_the_land/c_resolve/joshua_act9_c_middle_ground.svg",
+            "foreground": "assets/svg/act_09_allot_the_land/c_resolve/joshua_act9_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_09_allot_the_land/a_establish/joshua_act9_a_background.svg",
+          "middleGround": "assets/svg/act_09_allot_the_land/a_establish/joshua_act9_a_middle_ground.svg",
+          "foreground": "assets/svg/act_09_allot_the_land/a_establish/joshua_act9_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_09_allot_the_land/b_core_action/joshua_act9_b_background.svg",
+          "middleGround": "assets/svg/act_09_allot_the_land/b_core_action/joshua_act9_b_middle_ground.svg",
+          "foreground": "assets/svg/act_09_allot_the_land/b_core_action/joshua_act9_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_09_allot_the_land/c_resolve/joshua_act9_c_background.svg",
+          "middleGround": "assets/svg/act_09_allot_the_land/c_resolve/joshua_act9_c_middle_ground.svg",
+          "foreground": "assets/svg/act_09_allot_the_land/c_resolve/joshua_act9_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · Choose This Day",
+      "sceneId": "placeholder",
+      "artSource": "art/act10_choose_this_day.md",
+      "assetFolder": "act_10_choose_this_day",
+      "artFolder": "assets/svg/act_10_choose_this_day",
+      "assetStem": "joshua_act10",
+      "materials": [
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_10_choose_this_day/a_establish",
+          "layers": {
+            "background": "assets/svg/act_10_choose_this_day/a_establish/joshua_act10_a_background.svg",
+            "middleGround": "assets/svg/act_10_choose_this_day/a_establish/joshua_act10_a_middle_ground.svg",
+            "foreground": "assets/svg/act_10_choose_this_day/a_establish/joshua_act10_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_10_choose_this_day/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_10_choose_this_day/b_core_action/joshua_act10_b_background.svg",
+            "middleGround": "assets/svg/act_10_choose_this_day/b_core_action/joshua_act10_b_middle_ground.svg",
+            "foreground": "assets/svg/act_10_choose_this_day/b_core_action/joshua_act10_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_10_choose_this_day/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_10_choose_this_day/c_resolve/joshua_act10_c_background.svg",
+            "middleGround": "assets/svg/act_10_choose_this_day/c_resolve/joshua_act10_c_middle_ground.svg",
+            "foreground": "assets/svg/act_10_choose_this_day/c_resolve/joshua_act10_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_10_choose_this_day/a_establish/joshua_act10_a_background.svg",
+          "middleGround": "assets/svg/act_10_choose_this_day/a_establish/joshua_act10_a_middle_ground.svg",
+          "foreground": "assets/svg/act_10_choose_this_day/a_establish/joshua_act10_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_10_choose_this_day/b_core_action/joshua_act10_b_background.svg",
+          "middleGround": "assets/svg/act_10_choose_this_day/b_core_action/joshua_act10_b_middle_ground.svg",
+          "foreground": "assets/svg/act_10_choose_this_day/b_core_action/joshua_act10_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_10_choose_this_day/c_resolve/joshua_act10_c_background.svg",
+          "middleGround": "assets/svg/act_10_choose_this_day/c_resolve/joshua_act10_c_middle_ground.svg",
+          "foreground": "assets/svg/act_10_choose_this_day/c_resolve/joshua_act10_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

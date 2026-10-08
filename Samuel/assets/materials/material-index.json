@@ -1,0 +1,211 @@
+{
+  "story": "Samuel",
+  "sourceTool": "Samuel/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "plank",
+      "file": "wood_oak-plank.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "planks3",
+      "file": "wood_oak-planks3.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    },
+    {
+      "key": "hammered_gold",
+      "shape": "hammered",
+      "file": "hammered_gold-hammered.svg"
+    },
+    {
+      "key": "grass",
+      "shape": "tufts",
+      "file": "grass-tufts.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "calm",
+      "file": "water_still-calm.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "eddies",
+      "file": "water_still-eddies.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Boy at Shiloh",
+      "assetFolder": "act_01_the_boy_at_shiloh",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Voice at Night",
+      "assetFolder": "act_02_the_voice_at_night",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · A Hard Message",
+      "assetFolder": "act_03_a_hard_message",
+      "materials": [
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · The Ark Captured",
+      "assetFolder": "act_04_the_ark_captured",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Ebenezer",
+      "assetFolder": "act_05_ebenezer",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · A King Demanded",
+      "assetFolder": "act_06_a_king_demanded",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · Saul Chosen",
+      "assetFolder": "act_07_saul_chosen",
+      "materials": [
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · Saul’s First Victory",
+      "assetFolder": "act_08_saul_s_first_victory",
+      "materials": [
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        }
+      ]
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · The Rejected King",
+      "assetFolder": "act_09_the_rejected_king",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        }
+      ]
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · David Anointed",
+      "assetFolder": "act_10_david_anointed",
+      "materials": [
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    }
+  ]
+}

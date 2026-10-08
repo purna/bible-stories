@@ -4,74 +4,134 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "nehemiah-bad-news",
+      "name": "Ch.1 · Bad News",
+      "file": "nehemiah-bad-news.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "nehemiah-bad-news_hd",
+      "name": "Ch.1 · Bad News (HD)",
+      "file": "nehemiah-bad-news_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "nehemiah-before-the-king",
+      "name": "Ch.2 · Before the King",
+      "file": "nehemiah-before-the-king.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "nehemiah-before-the-king_hd",
+      "name": "Ch.2 · Before the King (HD)",
+      "file": "nehemiah-before-the-king_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "nehemiah-night-inspection",
+      "name": "Ch.3 · Night Inspection",
+      "file": "nehemiah-night-inspection.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "nehemiah-night-inspection_hd",
+      "name": "Ch.3 · Night Inspection (HD)",
+      "file": "nehemiah-night-inspection_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "nehemiah-rise-and-build",
+      "name": "Ch.4 · Rise and Build",
+      "file": "nehemiah-rise-and-build.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "nehemiah-rise-and-build_hd",
+      "name": "Ch.4 · Rise and Build (HD)",
+      "file": "nehemiah-rise-and-build_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "nehemiah-sword-and-trowel",
+      "name": "Ch.5 · Sword and Trowel",
+      "file": "nehemiah-sword-and-trowel.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "nehemiah-sword-and-trowel_hd",
+      "name": "Ch.5 · Sword and Trowel (HD)",
+      "file": "nehemiah-sword-and-trowel_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "nehemiah-the-outcry",
+      "name": "Ch.6 · The Outcry",
+      "file": "nehemiah-the-outcry.js",
+      "type": "module"
+    },
+    {
+      "id": "nehemiah-the-outcry_hd",
+      "name": "Ch.6 · The Outcry (HD)",
+      "file": "nehemiah-the-outcry_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "nehemiah-plots-and-rumours",
+      "name": "Ch.7 · Plots and Rumours",
+      "file": "nehemiah-plots-and-rumours.js",
+      "type": "module"
+    },
+    {
+      "id": "nehemiah-plots-and-rumours_hd",
+      "name": "Ch.7 · Plots and Rumours (HD)",
+      "file": "nehemiah-plots-and-rumours_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "nehemiah-the-wall-completed",
+      "name": "Ch.8 · The Wall Completed",
+      "file": "nehemiah-the-wall-completed.js",
+      "type": "module"
+    },
+    {
+      "id": "nehemiah-the-wall-completed_hd",
+      "name": "Ch.8 · The Wall Completed (HD)",
+      "file": "nehemiah-the-wall-completed_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "nehemiah-the-book-read",
+      "name": "Ch.9 · The Book Read",
+      "file": "nehemiah-the-book-read.js",
+      "type": "module"
+    },
+    {
+      "id": "nehemiah-the-book-read_hd",
+      "name": "Ch.9 · The Book Read (HD)",
+      "file": "nehemiah-the-book-read_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "nehemiah-reform",
+      "name": "Ch.10 · Reform",
+      "file": "nehemiah-reform.js",
+      "type": "module"
+    },
+    {
+      "id": "nehemiah-reform_hd",
+      "name": "Ch.10 · Reform (HD)",
+      "file": "nehemiah-reform_hd.js",
       "type": "module"
     }
   ]

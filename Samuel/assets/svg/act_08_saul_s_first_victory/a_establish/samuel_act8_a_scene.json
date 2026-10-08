@@ -1,0 +1,18 @@
+{
+  "story": "Samuel",
+  "act": 8,
+  "chapter": "Ch.8 · Saul’s First Victory",
+  "artSource": "art/act8_saul_s_first_victory.md",
+  "artFolder": "assets/svg/act_08_saul_s_first_victory",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "grass-tufts.svg"
+  ],
+  "layers": {
+    "background": "samuel_act8_a_background.svg",
+    "middleGround": "samuel_act8_a_middle_ground.svg",
+    "foreground": "samuel_act8_a_foreground.svg"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "story": "Abraham",
+  "act": 10,
+  "chapter": "Moriah",
+  "artSource": "art/act10_moriah.md",
+  "artFolder": "assets/svg/act_10_moriah",
+  "sceneId": "",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "abraham_act10_c_background.svg",
+    "middleGround": "abraham_act10_c_middle_ground.svg",
+    "foreground": "abraham_act10_c_foreground.svg"
+  }
+}

@@ -1,29 +1,63 @@
 {
   "id": "horizon",
-  "name": "Ch.3 \u00b7 Resolution",
+  "name": "Ch.3 · Resolution",
   "bg": "radial-gradient(circle at 50% 25%, #576b45, #111b18 70%)",
   "particle": "dawn",
   "lines": [
     {
       "id": "horizon_0",
-      "speaker": "witness",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "text": "Resolve the chapter action and show its scripture reference.",
       "cite": "Book 1:3",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "horizon_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Resolve the chapter action and show its scripture reference.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "witness",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "horizon_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "End with a concise reflection and a clear next step.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "horizon_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "End with a concise reflection and a clear next step.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "svg": "horizon",

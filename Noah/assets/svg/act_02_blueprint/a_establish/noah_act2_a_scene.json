@@ -1,0 +1,18 @@
+{
+  "story": "Noah",
+  "act": 2,
+  "chapter": "Ch.2 · The Blueprint",
+  "artSource": "art/act2_blueprint.md",
+  "artFolder": "assets/svg/act_02_blueprint",
+  "sceneId": "ch2_blueprint_scroll",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "noah_act2_a_background.svg",
+    "middleGround": "noah_act2_a_middle_ground.svg",
+    "foreground": "noah_act2_a_foreground.svg"
+  }
+}

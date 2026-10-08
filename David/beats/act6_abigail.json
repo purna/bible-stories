@@ -1,0 +1,291 @@
+{
+  "story": "David",
+  "act": {
+    "id": "abigail",
+    "name": "Ch.6 · Abigail",
+    "source": "../data/act6_abigail.json",
+    "svg": "placeholder",
+    "bg": "radial-gradient(circle at 60% 40%, #1a2a14, #0a1408 65%, #040802)",
+    "particle": "dusk"
+  },
+  "beats": [
+    {
+      "id": "abigail_0",
+      "cite": "1 Samuel 25:2",
+      "items": [
+        {
+          "id": "abigail_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Nabal was a wealthy man in Maon, and his servants grazed his sheep in Carmel. David and his men had protected those flocks through the winter.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "abigail_1",
+      "items": [
+        {
+          "id": "abigail_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "When the shearing came, David sent men to ask Nabal for a gift. Nabal answered with insults and a curse.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "abigail_2",
+      "items": [
+        {
+          "id": "abigail_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "By the living God, I will not spare one man of this household. Go and get your swords ready.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "abigail_3",
+      "cite": "1 Samuel 25:18",
+      "items": [
+        {
+          "id": "abigail_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A servant ran ahead and told Nabal's wife. Abigail was beautiful and wise. She loaded two donkeys with bread, wine, figs, and raisins.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "abigail_4",
+      "items": [
+        {
+          "id": "abigail_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "My lord, let your hand be blessed. Take this gift. I have come to speak for the men of the house, for Nabal is a fool.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "abigail",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "abigail_5",
+      "items": [
+        {
+          "id": "abigail_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The LORD has kept me from harming you. Go in peace. Your wisdom has saved your household from death.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "abigail_6",
+      "cite": "1 Samuel 25:38",
+      "items": [
+        {
+          "id": "abigail_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Ten days later the LORD struck Nabal and he died. David took Abigail to be his wife.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "abigail_7",
+      "items": [
+        {
+          "id": "abigail_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A woman's quiet speech turned a band of men away from slaughter. Mercy spoken at the right moment is worth more than a sword.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "abigail_7_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "WISDOM SAVES WHAT ANGER DESTROYS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "abigail_8",
+      "choices": [
+        {
+          "label": "Hold fast to her counsel",
+          "note": "A wise companion keeps a king from the worst of himself."
+        },
+        {
+          "label": "Keep the sword close for next time ⚔️",
+          "note": "The wilderness is wide, and not every insult comes with a gift."
+        }
+      ],
+      "items": [
+        {
+          "id": "abigail_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David's men named her a blessing. The wilderness had taught him restraint, and Abigail taught him that restraint has a voice.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

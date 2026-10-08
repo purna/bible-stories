@@ -6,49 +6,196 @@
       "name": "Ch.1 · Under the Palm",
       "file": "act1_under_the_palm.json",
       "assetFolder": "act_01_under_the_palm",
-      "assetStem": "deborah_act1"
+      "assetStem": "deborah_act1",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_under_the_palm/a_establish/deborah_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_under_the_palm/a_establish/deborah_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_under_the_palm/a_establish/deborah_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_under_the_palm/b_core_action/deborah_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_under_the_palm/b_core_action/deborah_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_under_the_palm/b_core_action/deborah_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/stone-flagstone.svg"
+      ]
     },
     {
       "id": "the_summons",
       "name": "Ch.2 · The Summons",
       "file": "act2_the_summons.json",
       "assetFolder": "act_02_the_summons",
-      "assetStem": "deborah_act2"
+      "assetStem": "deborah_act2",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_the_summons/a_establish/deborah_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_the_summons/a_establish/deborah_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_summons/a_establish/deborah_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_the_summons/b_core_action/deborah_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_the_summons/b_core_action/deborah_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_summons/b_core_action/deborah_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_summons/c_resolve/deborah_act2_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/grass-tufts.svg"
+      ]
     },
     {
       "id": "gather_at_tabor",
       "name": "Ch.3 · Gather at Tabor",
       "file": "act3_gather_at_tabor.json",
       "assetFolder": "act_03_gather_at_tabor",
-      "assetStem": "deborah_act3"
+      "assetStem": "deborah_act3",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_gather_at_tabor/a_establish/deborah_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_gather_at_tabor/a_establish/deborah_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_gather_at_tabor/a_establish/deborah_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_gather_at_tabor/b_core_action/deborah_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_gather_at_tabor/b_core_action/deborah_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_gather_at_tabor/b_core_action/deborah_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_gather_at_tabor/c_resolve/deborah_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_gather_at_tabor/c_resolve/deborah_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_gather_at_tabor/c_resolve/deborah_act3_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg"
+      ]
     },
     {
       "id": "the_storm",
       "name": "Ch.4 · The Storm",
       "file": "act4_the_storm.json",
       "assetFolder": "act_04_the_storm",
-      "assetStem": "deborah_act4"
+      "assetStem": "deborah_act4",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_the_storm/a_establish/deborah_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_the_storm/a_establish/deborah_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_storm/a_establish/deborah_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_the_storm/b_core_action/deborah_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_the_storm/b_core_action/deborah_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_storm/b_core_action/deborah_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/water_fast-churn.svg"
+      ]
     },
     {
       "id": "sisera_flees",
       "name": "Ch.5 · Sisera Flees",
       "file": "act5_sisera_flees.json",
       "assetFolder": "act_05_sisera_flees",
-      "assetStem": "deborah_act5"
+      "assetStem": "deborah_act5",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_sisera_flees/a_establish/deborah_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_sisera_flees/a_establish/deborah_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_sisera_flees/a_establish/deborah_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_sisera_flees/b_core_action/deborah_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_sisera_flees/b_core_action/deborah_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_sisera_flees/b_core_action/deborah_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_sisera_flees/c_resolve/deborah_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_sisera_flees/c_resolve/deborah_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_sisera_flees/c_resolve/deborah_act5_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/water_fast-churn.svg"
+      ]
     },
     {
       "id": "jaels_choice",
       "name": "Ch.6 · Jael’s Choice",
       "file": "act6_jaels_choice.json",
       "assetFolder": "act_06_jael_s_choice",
-      "assetStem": "deborah_act6"
+      "assetStem": "deborah_act6",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_jael_s_choice/a_establish/deborah_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_jael_s_choice/a_establish/deborah_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_jael_s_choice/a_establish/deborah_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_jael_s_choice/b_core_action/deborah_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_jael_s_choice/b_core_action/deborah_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_jael_s_choice/b_core_action/deborah_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/stone-flagstone.svg"
+      ]
     },
     {
       "id": "the_song",
       "name": "Ch.7 · The Song",
       "file": "act7_the_song.json",
       "assetFolder": "act_07_the_song",
-      "assetStem": "deborah_act7"
+      "assetStem": "deborah_act7",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_the_song/a_establish/deborah_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_the_song/a_establish/deborah_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_song/a_establish/deborah_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_the_song/b_core_action/deborah_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_the_song/b_core_action/deborah_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_song/b_core_action/deborah_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_the_song/c_resolve/deborah_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_the_song/c_resolve/deborah_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_song/c_resolve/deborah_act7_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/water_fast-churn.svg"
+      ]
     }
   ]
 }

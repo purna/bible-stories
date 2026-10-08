@@ -1,0 +1,24 @@
+{
+  "story": "Samuel",
+  "act": 4,
+  "chapter": "Ch.4 · The Ark Captured",
+  "artSource": "art/act4_the_ark_captured.md",
+  "artFolder": "assets/svg/act_04_the_ark_captured",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "grass-tufts.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "samuel_act4_a_background.svg",
+    "middleGround": "samuel_act4_a_middle_ground.svg",
+    "foreground": "samuel_act4_a_foreground.svg"
+  }
+}

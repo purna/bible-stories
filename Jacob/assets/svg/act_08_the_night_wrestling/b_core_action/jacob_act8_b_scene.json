@@ -1,0 +1,21 @@
+{
+  "story": "Jacob",
+  "act": 8,
+  "chapter": "Ch.8 · The Night Wrestling",
+  "artSource": "art/act8_the_night_wrestling.md",
+  "artFolder": "assets/svg/act_08_the_night_wrestling",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "jacob_act8_b_background.svg",
+    "middleGround": "jacob_act8_b_middle_ground.svg",
+    "foreground": "jacob_act8_b_foreground.svg"
+  }
+}

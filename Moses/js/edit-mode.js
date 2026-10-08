@@ -157,7 +157,7 @@
     // align / effect classes
     const effAlign = ov.align || (line && line.align) || 'center';
     syncAlignClass(box, boxType, effAlign);
-    const effFx = ov.fx || (line && line.fx) || 'fade';
+    const effFx = ov.fx || (line && line.entryFx) || 'fade';
     if (EDITABLE_BOXES.includes(boxType)) setFxClass(box, boxType, effFx);
 
     // fade / delay animation (text boxes only; chars keep their own animation)
@@ -293,7 +293,7 @@
     const line = sc ? (sc.line || {}) : {};
     $('#editText').value = ov.text != null ? ov.text : (line.text || '');
     $('#editSpeaker').value = ov.speaker != null ? ov.speaker : (line.speaker || '');
-    $('#editFx').value = ov.fx || line.fx || EFFECTS[0];
+    $('#editFx').value = ov.fx || line.entryFx || EFFECTS[0];
     $('#editAlign').value = ov.align || line.align || 'center';
     $('#editValign').value = ov.valign || 'bottom';
     $('#editWidth').value = ov.width || '2/3';

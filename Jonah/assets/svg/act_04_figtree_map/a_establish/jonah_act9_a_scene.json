@@ -1,0 +1,20 @@
+{
+  "story": "Jonah",
+  "act": 9,
+  "chapter": "The Question",
+  "artSource": "art/act4_figtree_map.md",
+  "artFolder": "assets/svg/act_04_figtree_map",
+  "sceneId": "",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg"
+  ],
+  "layers": {
+    "background": "jonah_act9_a_background.svg",
+    "middleGround": "jonah_act9_a_middle_ground.svg",
+    "foreground": "jonah_act9_a_foreground.svg"
+  }
+}

@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Resolve Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Nehemiah act 5 Ch.5 · Sword and Trowel foreground">
+  <metadata>{&quot;story&quot;:&quot;Nehemiah&quot;,&quot;act&quot;:5,&quot;chapter&quot;:&quot;Ch.5 · Sword and Trowel&quot;,&quot;scene&quot;:&quot;C&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;city&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#655748" stroke="#1f1b1a" stroke-width="12" opacity=".93"><rect x="0" y="546.4" width="138" height="553.6"/><rect x="1782" y="546.4" width="138" height="553.6"/><rect x="0" y="516.4" width="193" height="55"/><rect x="1727" y="516.4" width="193" height="55"/></g><g opacity=".96"><path d="M1450 1045l13.50896359045431 -88.15164510952681 36.02390290787816 -34.28119532037154 31.52091504439339 122.43284042989835Z" fill="#8f7f6d" stroke="#1f1b1a" stroke-width="9"/><path d="M1565 1045l15.212135963402687 -65.64556471965462 40.56569590240717 -25.528830724310133 35.49498391460627 91.17439544396476Z" fill="#8f7f6d" stroke="#1f1b1a" stroke-width="9"/><path d="M1680 1045l20.356392463825642 -79.96598508947342 54.28371323686838 -31.097883090350777 47.49824908225983 111.0638681798242Z" fill="#8f7f6d" stroke="#1f1b1a" stroke-width="9"/></g><g fill="none" stroke="#634832" stroke-width="26.4" stroke-linecap="round" opacity=".92"><path d="M75 1080V650L350 455"/><path d="M1845 1080V720L1640 565"/><path d="M40 905H310M1650 925H1900"/></g>
+  </svg>

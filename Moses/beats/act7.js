@@ -1,37 +1,37 @@
 /**
- * BEATS/ACT7.JS — Sinai
- * Input type: covenant / reverence
+ * BEATS/ACT7.JS — Water from Rock and Victory
+ * Input type: provision / dependence
  */
 
 const Act7Beats = (function () {
 
-    function approachMountain(reverent) {
-        if (reverent) {
-            Compass.nudge('awe', 10);
+    function waitForWater(patient) {
+        if (patient) {
+            Compass.nudge('patience', 5);
         } else {
-            Compass.nudge('casual', 10);
+            Compass.nudge('quarreling', 5);
         }
-        Compass.recordBeat('act7_mountain');
+        Compass.recordBeat('act7_wait');
     }
 
-    function receiveTablets(attentive) {
-        if (attentive) {
-            Compass.nudge('revelation', 8);
+    function strikeRock(obedient) {
+        if (obedient) {
+            Compass.nudge('provision', 8);
         } else {
-            Compass.nudge('distraction', 8);
+            Compass.nudge('presumption', 8);
         }
-        Compass.recordBeat('act7_tablets');
+        Compass.recordBeat('act7_rock');
     }
 
-    function covenantPromise(solemn) {
-        if (solemn) {
-            Compass.nudge('commitment', 10);
+    function upholdHands(steadfast) {
+        if (steadfast) {
+            Compass.nudge('perseverance', 10);
         } else {
-            Compass.nudge('lip-service', 10);
+            Compass.nudge('weariness', 10);
         }
-        Compass.recordBeat('act7_covenant');
+        Compass.recordBeat('act7_hands');
     }
 
-    return { approachMountain, receiveTablets, covenantPromise };
+    return { waitForWater, strikeRock, upholdHands };
 })();
 window.Act7Beats = Act7Beats;

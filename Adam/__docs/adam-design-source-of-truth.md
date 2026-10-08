@@ -1271,13 +1271,69 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 ### Act 1: Formed from Dust
 
-**Act summary:** Gather the garden’s elements in creation order.
+**Act summary:** Gather the garden's elements in creation order.
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 01A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to “formed from dust”. MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
-| 01B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story’s real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “gather the garden’s elements in creation order”. BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 01C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 01A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to "formed from dust". MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
+| 01B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story's real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "gather the garden's elements in creation order". BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 01C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01A — ESTABLISH (wide, 28-35mm, high angle, garden dawn)  │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 GRASS & LEAVES (grass, leaves)                 │   │
+│       │  🪨 STONE MARKERS (placeholder)                    │   │
+│       │  🌱 SEEDLINGS in soil (placeholder)                │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 ROLLING FIELD, orchard line, layered sky  │  │   │
+│       │  │  👨 ADAM forming from dust                    │  │   │
+│       │  │  🌿 GARDEN ELEMENTS gathering                 │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Gather the garden's elements..."   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  ✋ HANDS GATHERING ELEMENTS (center, leaves)       │   │
+│       │  🧺 FABRIC BASKET (fabric_weave)                   │   │
+│       │  🌿 LEAF TOOL (placeholder)                        │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 SIMPLIFIED FIELD, reduced saturation       │  │   │
+│       │  │  👨 ADAM placing elements (hero 3D)           │  │   │
+│       │  │  🌱 SEEDLINGS growing                         │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "In creation order..."              │  │   │
+│       │  │  [CHOICE]    ▢ Light  ▢ Water  ▢ Earth       │  │   │
+│       │  │  [CAPTION] "And God saw that it was good..."  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧺 BASKET CORNER (fabric_weave)                   │   │
+│       │  📜 SCROLL CORNER (top-right, grass)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 FIELD & SKY, opened for scripture space    │  │   │
+│       │  │  👨 ADAM standing complete (hero 3D)          │  │   │
+│       │  │  🌿 GARDEN flourishing                        │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "And the LORD God formed man..."    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 2: The Garden
 
@@ -1285,9 +1341,65 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 02A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to “the garden”. MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
-| 02B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story’s real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “name creatures by matching them to habitats”. BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 02C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 02A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to "the garden". MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
+| 02B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story's real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "name creatures by matching them to habitats". BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 02C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02A — ESTABLISH (wide, 28-35mm, high angle, garden)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 GRASS & LEAVES (grass, leaves)                 │   │
+│       │  🌳 TREE OF LIFE (golden, placeholder)             │   │
+│       │  🐑 SHEEP & LION (placeholder)                     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 ROLLING FIELD, orchard line, layered sky  │  │   │
+│       │  │  👨 ADAM in garden                            │  │   │
+│       │  │  🐦 BIRDS flying                              │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Name creatures by matching..."    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  ✋ HAND GESTURING TO ANIMAL (center, leaves)       │   │
+│       │  🏷️ NAME TAG (fabric_weave)                        │   │
+│       │  🐑 SHEEP APPROACHING (placeholder)                │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 SIMPLIFIED FIELD, reduced saturation       │  │   │
+│       │  │  👨 ADAM naming (hero 3D)                     │  │   │
+│       │  │  🦁 LION resting                              │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "What shall we call this one?"      │  │   │
+│       │  │  [CHOICE]    ▢ Sheep  ▢ Lion  ▢ Bird         │  │   │
+│       │  │  [CAPTION] "And whatever the man called..."   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🏷️ NAME TAG CORNER (fabric_weave)                 │   │
+│       │  📜 SCROLL CORNER (top-right, grass)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 FIELD & SKY, opened for scripture space    │  │   │
+│       │  │  👨 ADAM with named animals (hero 3D)         │  │   │
+│       │  │  🐑🦁🐦 CREATURES gathered                    │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "So the man gave names..."         │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 3: Together
 
@@ -1295,9 +1407,65 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 03A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `stone` + `wood_oak` | Wide, three-plane tableau. FG SVG: framing stone, nearby silhouettes, and an edge prop tied to “together”. MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
-| 03B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `wood_oak` + `water_still` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “build a shared shelter and tend one plot together”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 03C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `water_still` + `stone` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 03A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `stone` + `wood_oak` | Wide, three-plane tableau. FG SVG: framing stone, nearby silhouettes, and an edge prop tied to "together". MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
+| 03B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story's real light source. | `wood_oak` + `water_still` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "build a shared shelter and tend one plot together". BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 03C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `water_still` + `stone` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03A — ESTABLISH (wide, 28-35mm, high angle, garden)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🏜️ STONE FOUNDATION (stone)                       │   │
+│       │  🪵 WOOD BEAMS (wood_oak)                           │   │
+│       │  🌿 VINES growing (placeholder)                     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ LAYERED LANDSCAPE, garden horizon         │  │   │
+│       │  │  👨👩 ADAM & EVE working together             │  │   │
+│       │  │  🏕️ SHELTER frame rising                      │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Build a shared shelter..."         │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🔨 HANDS DRIVING PEG (center, wood_oak)           │   │
+│       │  💧 WATER BASIN (water_still)                      │   │
+│       │  🌱 SEEDLINGS PLANTED (placeholder)                │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ SIMPLIFIED LANDSCAPE, reduced saturation   │  │   │
+│       │  │  👨👩 BUILDING & TENDING (hero 3D)             │  │   │
+│       │  │  🏕️ SHELTER completing                        │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Bone of my bones..."               │  │   │
+│       │  │  [CHOICE]    ▢ Beam  ▢ Peg  ▢ Water          │  │   │
+│       │  │  [CAPTION] "This is now bone of my bones..."  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💧 WATER BASIN CORNER (water_still)               │   │
+│       │  📜 SCROLL CORNER (top-right, stone)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ LANDSCAPE, opened for scripture space      │  │   │
+│       │  │  👨👩 ADAM & EVE in shelter (hero 3D)           │  │   │
+│       │  │  🌱 PLOT tended                               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "And they were both naked..."       │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 4: The Boundary
 
@@ -1305,19 +1473,131 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 04A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to “the boundary”. MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
-| 04B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story’s real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “navigate abundance while leaving one tree untouched”. BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 04C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 04A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to "the boundary". MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
+| 04B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story's real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "navigate abundance while leaving one tree untouched". BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 04C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04A — ESTABLISH (wide, 28-35mm, high angle, garden)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 GRASS & LEAVES (grass, leaves)                 │   │
+│       │  🌳 TREE OF LIFE (golden) & TREE OF KNOWLEDGE (red)│   │
+│       │  🍎 FORBIDDEN FRUIT glowing (placeholder)          │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 ROLLING FIELD, orchard line, layered sky  │  │   │
+│       │  │  👨👩 ADAM & EVE walking                      │  │   │
+│       │  │  🌳 TWO TREES central                         │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Navigate abundance..."             │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  ✋ HAND REACHING / PAUSING (center, leaves)        │   │
+│       │  🧺 GATHERING BASKET (fabric_weave)                │   │
+│       │  🌳 TREE BOUNDARY MARKER (placeholder)             │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 SIMPLIFIED FIELD, reduced saturation       │  │   │
+│       │  │  👨👩 GATHERING from permitted trees (hero 3D) │  │   │
+│       │  │  🚫 KNOWLEDGE TREE untouched                  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Freely eat, but not this one..."   │  │   │
+│       │  │  [CHOICE]    ▢ This tree  ▢ That tree  ▢ None │  │   │
+│       │  │  [CAPTION] "Of every tree thou mayest..."      │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧺 BASKET CORNER (fabric_weave)                   │   │
+│       │  📜 SCROLL CORNER (top-right, grass)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 FIELD & TREES, opened for scripture space  │  │   │
+│       │  │  👨👩 ADAM & EVE with harvest (hero 3D)        │  │   │
+│       │  │  🌳 TWO TREES standing                        │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "But of the tree of knowledge..."   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 5: The Choice
 
-**Act summary:** Spot the serpent’s half-truths in a dialogue puzzle.
+**Act summary:** Spot the serpent's half-truths in a dialogue puzzle.
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 05A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `wood_oak` + `fabric_weave` | Wide, three-plane tableau. FG SVG: framing wood oak, nearby silhouettes, and an edge prop tied to “the choice”. MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
-| 05B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `fabric_weave` + `leaves` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “spot the serpent’s half-truths in a dialogue puzzle”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 05C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `leaves` + `wood_oak` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 05A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `wood_oak` + `fabric_weave` | Wide, three-plane tableau. FG SVG: framing wood oak, nearby silhouettes, and an edge prop tied to "the choice". MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
+| 05B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story's real light source. | `fabric_weave` + `leaves` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "spot the serpent's half-truths in a dialogue puzzle". BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 05C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `leaves` + `wood_oak` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05A — ESTABLISH (wide, 28-35mm, high angle, tree)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪵 WOOD OAK TREE TRUNK (wood_oak)                 │   │
+│       │  🧺 FABRIC LOINCLOTH (fabric_weave)                │   │
+│       │  🐍 SERPENT COILED (placeholder)                   │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ LAYERED LANDSCAPE, garden architecture    │  │   │
+│       │  │  👩 EVE at tree                               │  │   │
+│       │  │  🐍 SERPENT speaking                          │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Spot the serpent's half-truths..." │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  👂 EAR LISTENING (center, fabric_weave)           │   │
+│       │  🌿 LEAVES RUSTLING (leaves)                       │   │
+│       │  🍎 FRUIT GLOWING (placeholder)                    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ SIMPLIFIED LANDSCAPE, reduced saturation   │  │   │
+│       │  │  👩 EVE discerning (hero 3D)                  │  │   │
+│       │  │  🐍 SERPENT with dialogue bubbles             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Did God really say...?"            │  │   │
+│       │  │  [CHOICE]    ▢ Truth  ▢ Lie  ▢ Half-truth     │  │   │
+│       │  │  [CAPTION] "You shall not surely die..."       │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 LEAVES CORNER (leaves)                         │   │
+│       │  📜 SCROLL CORNER (top-right, wood_oak)            │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ LANDSCAPE, opened for scripture space      │  │   │
+│       │  │  👩 EVE choosing (hero 3D)                    │  │   │
+│       │  │  🍎 FRUIT taken                               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "She took of the fruit..."          │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 6: Hiding
 
@@ -1325,9 +1605,65 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 06A | Establish | near-black blue, cool slate, lamp amber, muted earth. single motivated shaft or lamp with rapid falloff. | `fabric_weave` + `leaves` | Wide, three-plane tableau. FG SVG: framing fabric weave, nearby silhouettes, and an edge prop tied to “hiding”. MG: character group and optional low-detail 3D landmark. BG SVG: receding rock or masonry silhouettes with minimal detail. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow inward dolly; pull back only when safety or release arrives. | SVG: dust motes and thin light rays drift slowly. 3D: chains, stone, door, or lamp carries subtle weight and contact motion. Characters begin in readable held poses before any movement. |
-| 06B | Interact | Increase local contrast around the action while retaining near-black blue, cool slate, lamp amber, muted earth. Key light follows the story’s real light source. | `leaves` + `grass` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “follow footprints and admit what happened”. BG SVG: simplified receding rock or masonry silhouettes with minimal detail with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 06C | Resolve / reflect | Let the accent move toward a quieter near-black blue, cool slate, lamp amber, muted earth; lower saturation behind captions and preserve warm skin tones. | `grass` + `fabric_weave` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: receding rock or masonry silhouettes with minimal detail, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 06A | Establish | near-black blue, cool slate, lamp amber, muted earth. single motivated shaft or lamp with rapid falloff. | `fabric_weave` + `leaves` | Wide, three-plane tableau. FG SVG: framing fabric weave, nearby silhouettes, and an edge prop tied to "hiding". MG: character group and optional low-detail 3D landmark. BG SVG: receding rock or masonry silhouettes with minimal detail. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow inward dolly; pull back only when safety or release arrives. | SVG: dust motes and thin light rays drift slowly. 3D: chains, stone, door, or lamp carries subtle weight and contact motion. Characters begin in readable held poses before any movement. |
+| 06B | Interact | Increase local contrast around the action while retaining near-black blue, cool slate, lamp amber, muted earth. Key light follows the story's real light source. | `leaves` + `grass` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "follow footprints and admit what happened". BG SVG: simplified receding rock or masonry silhouettes with minimal detail with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 06C | Resolve / reflect | Let the accent move toward a quieter near-black blue, cool slate, lamp amber, muted earth; lower saturation behind captions and preserve warm skin tones. | `grass` + `fabric_weave` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: receding rock or masonry silhouettes with minimal detail, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06A — ESTABLISH (wide, 28-35mm, dusk, garden trees)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧺 FIG LEAVES LOINCLOTH (fabric_weave)            │   │
+│       │  🌿 LEAVES & BRANCHES (leaves)                     │   │
+│       │  👣 FOOTPRINTS IN DIRT (placeholder)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ RECEDING ROCK, garden silhouettes         │  │   │
+│       │  │  👨👩 ADAM & EVE hiding behind tree           │  │   │
+│       │  │  🌳 TREE OF KNOWLEDGE                         │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Follow footprints and admit..."    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  👣 HAND TOUCHING FOOTPRINT (center, leaves)       │   │
+│       │  🌿 GRASS PARTING (grass)                          │   │
+│       │  🗣️ MOUTH OPEN CONFESSING (placeholder)            │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ SIMPLIFIED GARDEN, reduced saturation      │  │   │
+│       │  │  👨👩 EMERGING from hiding (hero 3D)           │  │   │
+│       │  │  🌳 GOD'S PRESENCE as light                    │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Where art thou?"                    │  │   │
+│       │  │  [CHOICE]    ▢ Hide  ▢ Run  ▢ Confess         │  │   │
+│       │  │  [CAPTION] "I heard thy voice... I was afraid" │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 GRASS CORNER (grass)                           │   │
+│       │  📜 SCROLL CORNER (top-right, fabric_weave)        │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ GARDEN, opened for scripture space         │  │   │
+│       │  │  👨👩 STANDING EXPOSED (hero 3D)               │  │   │
+│       │  │  🌳 TREE behind                               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The woman whom thou gavest..."     │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 7: East of Eden
 
@@ -1335,19 +1671,131 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 07A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to “east of eden”. MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
-| 07B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story’s real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “pack seeds and begin cultivation outside the garden”. BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 07C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 07A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to "east of eden". MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
+| 07B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story's real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "pack seeds and begin cultivation outside the garden". BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 07C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07A — ESTABLISH (wide, 28-35mm, dawn, wilderness)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 GRASS & LEAVES (grass, leaves)                 │   │
+│       │  🗡️ FLAMING SWORD (placeholder)                   │   │
+│       │  🌱 SEED POUCHES (placeholder)                     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 ROLLING FIELD, orchard line, layered sky  │  │   │
+│       │  │  🚪 EDEN GATE barred                         │  │   │
+│       │  │  👨👩 ADAM & EVE departing                   │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Pack seeds and begin..."           │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌱 HANDS PLANTING SEEDS (center, leaves)          │   │
+│       │  🧺 SEED POUCH OPEN (fabric_weave)                 │   │
+│       │  🪵 WOODEN HOE (placeholder)                       │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 SIMPLIFIED FIELD, reduced saturation       │  │   │
+│       │  │  👨👩 CULTIVATING (hero 3D)                   │  │   │
+│       │  │  🌱 FURROWS being cut                         │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "In the sweat of thy face..."        │  │   │
+│       │  │  [CHOICE]    ▢ Wheat  ▢ Barley  ▢ Lentils     │  │   │
+│       │  │  [CAPTION] "Cursed is the ground..."           │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧺 SEED POUCH CORNER (fabric_weave)               │   │
+│       │  📜 SCROLL CORNER (top-right, grass)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 FIELD & SKY, opened for scripture space    │  │   │
+│       │  │  👨👩 WORKING LAND (hero 3D)                  │  │   │
+│       │  │  🌱 SPROUTS emerging                          │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "East of Eden..."                   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 8: Cain and Abel
 
-**Act summary:** Prepare offerings with care, then cool Cain’s anger.
+**Act summary:** Prepare offerings with care, then cool Cain's anger.
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 08A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `grass` + `water_still` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to “cain and abel”. MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
-| 08B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `water_still` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “prepare offerings with care, then cool cain’s anger”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 08C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 08A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `grass` + `water_still` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to "cain and abel". MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
+| 08B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story's real light source. | `water_still` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "prepare offerings with care, then cool cain's anger". BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 08C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08A — ESTABLISH (wide, 28-35mm, dusk, fields)             │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 GRASS & FIELD (grass)                          │   │
+│       │  💧 WATER REFLECTION (water_still)                 │   │
+│       │  🐑 LAMB & 🌾 GRAIN (placeholder)                  │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ LAYERED LANDSCAPE, field horizon          │  │   │
+│       │  │  👨 CAIN (tiller) & 👨 ABEL (keeper)          │  │   │
+│       │  │  🏛️ TWO ALTARS                                │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Prepare offerings with care..."    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS ON ALTAR (center, water_still)           │   │
+│       │  🏜️ STONE ALTAR (stone)                           │   │
+│       │  😠 CAIN'S FIST CLENCHING (placeholder)            │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ SIMPLIFIED FIELDS, reduced saturation      │  │   │
+│       │  │  👨 CAIN angry, 👨 ABEL peaceful (hero 3D)     │  │   │
+│       │  │  🔥 FIRE on Abel's altar                       │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Why art thou wroth?"               │  │   │
+│       │  │  [CHOICE]    ▢ Cool down  ▢ Strike  ▢ Pray    │  │   │
+│       │  │  [CAPTION] "The LORD had respect unto Abel..." │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🏜️ STONE ALTAR CORNER (stone)                    │   │
+│       │  📜 SCROLL CORNER (top-right, grass)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ LANDSCAPE, opened for scripture space      │  │   │
+│       │  │  👨 CAIN departing (hero 3D)                  │  │   │
+│       │  │  👨 ABEL fallen                              │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "And Cain rose up..."               │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 9: The Field
 
@@ -1355,9 +1803,65 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 09A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to “the field”. MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
-| 09B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story’s real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “witness consequence and mark a refuge path”. BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 09C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 09A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to "the field". MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
+| 09B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story's real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "witness consequence and mark a refuge path". BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 09C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09A — ESTABLISH (wide, 28-35mm, day, field)               │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 GRASS & LEAVES (grass, leaves)                 │   │
+│       │  🩸 BLOOD ON GROUND (placeholder)                  │   │
+│       │  🚶 PATH MARKER (placeholder)                      │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 ROLLING FIELD, orchard line, layered sky  │  │   │
+│       │  │  👨 CAIN marked, 👨 ABEL's body             │  │   │
+│       │  │  🛤️ REFUGE PATH leading away                 │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Witness consequence..."            │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪨 HAND PLACING MARKER (center, leaves)           │   │
+│       │  🧥 GARMENT TORN (fabric_weave)                    │   │
+│       │  🛤️ PATH STONE (placeholder)                       │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 SIMPLIFIED FIELD, reduced saturation       │  │   │
+│       │  │  👨 CAIN marked (hero 3D)                    │  │   │
+│       │  │  🛤️ PATH forming                             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "My punishment is greater..."        │  │   │
+│       │  │  [CHOICE]    ▢ Mark  ▢ Flee  ▢ Accept        │  │   │
+│       │  │  [CAPTION] "The LORD set a mark upon Cain..."  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧥 GARMENT CORNER (fabric_weave)                  │   │
+│       │  📜 SCROLL CORNER (top-right, grass)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 FIELD, opened for scripture space           │  │   │
+│       │  │  👨 CAIN walking path (hero 3D)               │  │   │
+│       │  │  🛤️ REFUGE PATH stretching                   │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "And Cain went out from presence..."│  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 10: A New Line
 
@@ -1365,9 +1869,65 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 10A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to “a new line”. MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
-| 10B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story’s real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “plant a family tree from seth onward”. BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 10C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 10A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `leaves` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to "a new line". MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
+| 10B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story's real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "plant a family tree from seth onward". BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 10C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10A — ESTABLISH (wide, 28-35mm, dawn, new land)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 GRASS & LEAVES (grass, leaves)                 │   │
+│       │  🌱 SAPLING (placeholder)                          │   │
+│       │  👶 INFANT SETH (placeholder)                      │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 ROLLING FIELD, orchard line, layered sky  │  │   │
+│       │  │  👨👩 ADAM & EVE with SETH                    │  │   │
+│       │  │  🌳 TREE OF LIFE silhouette                   │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Plant a family tree..."            │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌱 HANDS PLANTING SAPLING (center, leaves)        │   │
+│       │  🧺 FAMILY RECORD (fabric_weave)                   │   │
+│       │  🌳 TREE BRANCHES (placeholder)                    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 SIMPLIFIED FIELD, reduced saturation       │  │   │
+│       │  │  👨👩👦 FAMILY planting (hero 3D)              │  │   │
+│       │  │  🌳 FAMILY TREE growing                       │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Appointed another seed..."          │  │   │
+│       │  │  [CHOICE]    ▢ Name  ▢ Bless  ▢ Record        │  │   │
+│       │  │  [CAPTION] "Then began men to call..."         │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧺 RECORD CORNER (fabric_weave)                   │   │
+│       │  📜 SCROLL CORNER (top-right, grass)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌄 LAND, opened for scripture space            │  │   │
+│       │  │  👨👩👦👦 GENERATIONS continuing (hero 3D)       │  │   │
+│       │  │  🌳 TREE OF LIFE on horizon                    │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "For God hath appointed..."         │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Panel acceptance checklist
 

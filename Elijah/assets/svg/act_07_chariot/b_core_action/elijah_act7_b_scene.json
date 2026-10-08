@@ -1,0 +1,24 @@
+{
+  "story": "Elijah",
+  "act": 7,
+  "chapter": "The Chariot of Fire",
+  "artSource": "art/act7_chariot.md",
+  "artFolder": "assets/svg/act_07_chariot",
+  "sceneId": "jordan_river",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "stone_texture.svg",
+    "temple-flagstone.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg",
+    "wood_texture.svg"
+  ],
+  "layers": {
+    "background": "elijah_act7_b_background.svg",
+    "middleGround": "elijah_act7_b_middle_ground.svg",
+    "foreground": "elijah_act7_b_foreground.svg"
+  }
+}

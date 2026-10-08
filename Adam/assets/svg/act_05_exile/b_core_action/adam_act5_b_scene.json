@@ -1,0 +1,23 @@
+{
+  "story": "Adam",
+  "act": 5,
+  "chapter": "Exile",
+  "artSource": "art/act5_exile.md",
+  "artFolder": "assets/svg/act_05_exile",
+  "sceneId": "exile_eden",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "gourd-vine-leaves.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg",
+    "wood_texture.svg"
+  ],
+  "layers": {
+    "background": "adam_act5_b_background.svg",
+    "middleGround": "adam_act5_b_middle_ground.svg",
+    "foreground": "adam_act5_b_foreground.svg"
+  }
+}

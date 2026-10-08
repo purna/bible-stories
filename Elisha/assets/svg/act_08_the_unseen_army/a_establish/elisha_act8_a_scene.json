@@ -1,0 +1,19 @@
+{
+  "story": "Elisha",
+  "act": 8,
+  "chapter": "Ch.8 · The Unseen Army",
+  "artSource": "art/act8_the_unseen_army.md",
+  "artFolder": "assets/svg/act_08_the_unseen_army",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg"
+  ],
+  "layers": {
+    "background": "elisha_act8_a_background.svg",
+    "middleGround": "elisha_act8_a_middle_ground.svg",
+    "foreground": "elisha_act8_a_foreground.svg"
+  }
+}

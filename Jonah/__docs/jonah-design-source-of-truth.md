@@ -90,6 +90,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 01B | Interact | Increase local contrast around the action while retaining deep indigo, river teal, foam blue, wet silver. Key light follows the story’s real light source. | `water_still` + `wood_dark` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “choose cargo and board the ship going the wrong way”. BG SVG: simplified waterline, cloud bank, and distant shore with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 01C | Resolve / reflect | Let the accent move toward a quieter deep indigo, river teal, foam blue, wet silver; lower saturation behind captions and preserve warm skin tones. | `wood_dark` + `water_fast` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: waterline, cloud bank, and distant shore, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01A — ESTABLISH (28–35mm, Joppa dock, fleeing)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💨 WATER FAST waves (water_fast)                  │   │
+│       │  💧 WATER STILL harbor (water_still)               │   │
+│       │  📦 CARGO at edge (placeholder)                    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  WATERLINE, cloud bank, distant shore    │  │   │
+│       │  │  👤  JONAH boarding (hero 3D)                │  │   │
+│       │  │  🚢  SHIP to Tarshish (hero 3D)              │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Jonah rose up to flee..."        │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01B — INTERACT (40–55mm, chest height, choosing cargo)    │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS LOADING center (water+wood)              │   │
+│       │  💧 WATER STILL tide (water_still)                 │   │
+│       │  🪵 WOOD DARK ship timber (wood_dark)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  SIMPLIFIED HARBOR, reduced saturation   │  │   │
+│       │  │  👤  JONAH paying fare (hero 3D)             │  │   │
+│       │  │  👥  SAILORS loading (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "He paid the fare..."              │  │   │
+│       │  │  [CHOICE]    ▢ Board  ▢ Hesitate  ▢ Pray     │  │   │
+│       │  │  [CAPTION] "From the presence of the Lord..."│  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01C — RESOLVE (50mm, eye level, ship departing)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪵 WOOD DARK corner (wood_dark)                   │   │
+│       │  💨 WATER FAST corner (water_fast)                 │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  HARBOR opened for scripture space       │  │   │
+│       │  │  👤  JONAH below deck (hero 3D)              │  │   │
+│       │  │  🚢  SHIP sailing away (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The Lord sent out a great..."    │  │   │
+│       │  │  [SCRIPTURE] "Jonah 1:3-4"                   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 2: The Storm
 
 **Act summary:** Secure the deck and uncover Jonah’s flight.
@@ -99,6 +157,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 02A | Establish | deep indigo, river teal, foam blue, wet silver. low raking light with broken water reflections. | `water_fast` + `water_still` | Wide, three-plane tableau. FG SVG: framing water fast, nearby silhouettes, and an edge prop tied to “the storm”. MG: character group and optional low-detail 3D landmark. BG SVG: waterline, cloud bank, and distant shore. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow lateral drift with a restrained rise on the reveal. | SVG: ripple paths, reeds, cloud bands, and spray loop at different parallax speeds. 3D: hero vessel or crossing prop rocks gently; water-adjacent props react with small secondary motion. Characters begin in readable held poses before any movement. |
 | 02B | Interact | Increase local contrast around the action while retaining deep indigo, river teal, foam blue, wet silver. Key light follows the story’s real light source. | `water_still` + `wood_dark` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “secure the deck and uncover jonah’s flight”. BG SVG: simplified waterline, cloud bank, and distant shore with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 02C | Resolve / reflect | Let the accent move toward a quieter deep indigo, river teal, foam blue, wet silver; lower saturation behind captions and preserve warm skin tones. | `wood_dark` + `water_fast` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: waterline, cloud bank, and distant shore, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02A — ESTABLISH (28–35mm, deck, great storm)              │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💨 WATER FAST waves (water_fast)                  │   │
+│       │  💧 WATER STILL lightning (water_still)            │   │
+│       │  ⛓️  ROPES at edge (placeholder)                  │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  WATERLINE, cloud bank, distant shore    │  │   │
+│       │  │  👤  SAILORS securing (hero 3D)              │  │   │
+│       │  │  👤  JONAH sleeping (hero 3D)                │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The Lord sent out a great..."    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02B — INTERACT (40–55mm, chest height, uncovering Jonah)  │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS CASTING LOTS center (water+wood)         │   │
+│       │  💧 WATER STILL deck (water_still)                 │   │
+│       │  🪵 WOOD DARK lots (wood_dark)                     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  SIMPLIFIED DECK, reduced saturation     │  │   │
+│       │  │  👤  SAILORS casting (hero 3D)               │  │   │
+│       │  │  👤  JONAH exposed (hero 3D)                 │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "For whose cause this evil..."     │  │   │
+│       │  │  [CHOICE]    ▢ Cast  ▢ Confess  ▢ Sleep      │  │   │
+│       │  │  [CAPTION] "The lot fell upon Jonah..."      │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02C — RESOLVE (50mm, eye level, Jonah revealed)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪵 WOOD DARK corner (wood_dark)                   │   │
+│       │  💨 WATER FAST corner (water_fast)                 │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  DECK opened for scripture space         │  │   │
+│       │  │  👤  JONAH confessing (hero 3D)              │  │   │
+│       │  │  👥  SAILORS fearing (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "I am an Hebrew..."               │  │   │
+│       │  │  [SCRIPTURE] "Jonah 1:9-10"                  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Act 3: Into the Deep
 
@@ -110,6 +226,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 03B | Interact | Increase local contrast around the action while retaining deep indigo, river teal, foam blue, wet silver. Key light follows the story’s real light source. | `water_still` + `wood_dark` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “navigate sinking currents toward the great fish”. BG SVG: simplified waterline, cloud bank, and distant shore with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 03C | Resolve / reflect | Let the accent move toward a quieter deep indigo, river teal, foam blue, wet silver; lower saturation behind captions and preserve warm skin tones. | `wood_dark` + `water_fast` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: waterline, cloud bank, and distant shore, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03A — ESTABLISH (28–35mm, sinking, great fish)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💨 WATER FAST currents (water_fast)               │   │
+│       │  💧 WATER STILL descent (water_still)              │   │
+│       │  🐋 FISH mouth at edge (placeholder)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  WATERLINE, cloud bank, distant shore    │  │   │
+│       │  │  👤  JONAH sinking (hero 3D)                 │  │   │
+│       │  │  🐋  GREAT FISH approaching (hero 3D)        │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The Lord prepared a great fish"  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03B — INTERACT (40–55mm, chest height, navigating deep)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS PRAYING center (water+wood)              │   │
+│       │  💧 WATER STILL belly (water_still)                │   │
+│       │  🪵 WOOD DARK ribs (wood_dark)                     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  SIMPLIFIED BELLY, reduced saturation    │  │   │
+│       │  │  👤  JONAH praying (hero 3D)                 │  │   │
+│       │  │  🐋  FISH swimming (hero 3D)                 │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Out of the belly of hell..."      │  │   │
+│       │  │  [CHOICE]    ▢ Pray  ▢ Sink  ▢ Trust        │  │   │
+│       │  │  [CAPTION] "I cried by reason of..."         │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03C — RESOLVE (50mm, eye level, swallowed)                │
+├─────────────────────────────────────────────────────────────────┘
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪵 WOOD DARK corner (wood_dark)                   │   │
+│       │  💨 WATER FAST corner (water_fast)                 │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  BELLY opened for scripture space        │  │   │
+│       │  │  👤  JONAH inside (hero 3D)                  │  │   │
+│       │  │  🐋  FISH appointed (hero 3D)                │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Jonah was in the belly..."       │  │   │
+│       │  │  [SCRIPTURE] "Jonah 1:17"                    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 4: Prayer Below
 
 **Act summary:** Reassemble Jonah’s prayer from psalm fragments.
@@ -119,6 +293,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 04A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `desert_sand` + `leaves` | Wide, three-plane tableau. FG SVG: framing desert sand, nearby silhouettes, and an edge prop tied to “prayer below”. MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
 | 04B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `leaves` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “reassemble jonah’s prayer from psalm fragments”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 04C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `desert_sand` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04A — ESTABLISH (28–35mm, fish belly, psalm fragments)    │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🏜️  DESERT SAND floor (desert_sand)              │   │
+│       │  🌿 LEAVES ribs (leaves)                           │   │
+│       │  📜 PSALM FRAGMENTS at edge (placeholder)          │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  LAYERED LANDSCAPE, scripture setting    │  │   │
+│       │  │  👤  JONAH praying (hero 3D)                 │  │   │
+│       │  │  📜  FRAGMENTS floating (hero 3D)            │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "I cried unto the Lord..."        │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04B — INTERACT (40–55mm, chest height, reassembling)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS ASSEMBLING center (leaves+fabric)        │   │
+│       │  🌿 LEAVES verses (leaves)                         │   │
+│       │  🧵 FABRIC WEAVE prayer (fabric_weave)             │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  SIMPLIFIED BELLY, reduced saturation    │  │   │
+│       │  │  👤  JONAH assembling (hero 3D)              │  │   │
+│       │  │  📜  PRAYER forming (hero 3D)                │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Salvation is of the Lord..."      │  │   │
+│       │  │  [CHOICE]    ▢ Assemble  ▢ Cry  ▢ Wait       │  │   │
+│       │  │  [CAPTION] "When my soul fainted..."         │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04C — RESOLVE (50mm, eye level, prayer complete)          │
+├─────────────────────────────────────────────────────────────────┘
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧵 FABRIC WEAVE corner (fabric_weave)             │   │
+│       │  🏜️  DESERT SAND corner (desert_sand)             │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌊  BELLY opened for scripture space        │  │   │
+│       │  │  👤  JONAH heard (hero 3D)                   │  │   │
+│       │  │  📜  PRAYER complete (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The Lord spake unto the fish..." │  │   │
+│       │  │  [SCRIPTURE] "Jonah 2:10"                    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Act 5: Second Call
 
@@ -130,6 +362,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 05B | Interact | Increase local contrast around the action while retaining sandstone, ochre, dry umber, faded turquoise. Key light follows the story’s real light source. | `fabric_weave` + `leaves` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “walk the road to nineveh”. BG SVG: simplified layered ridges, heat haze, and an open horizon with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 05C | Resolve / reflect | Let the accent move toward a quieter sandstone, ochre, dry umber, faded turquoise; lower saturation behind captions and preserve warm skin tones. | `leaves` + `desert_sand` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered ridges, heat haze, and an open horizon, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05A — ESTABLISH (28–35mm, road to Nineveh)                │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🏜️  DESERT SAND road (desert_sand)               │   │
+│       │  🧵 FABRIC WEAVE staff (fabric_weave)              │   │
+│       │  🎒 PACK at edge (placeholder)                     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LAYERED RIDGES, heat haze, open horizon │  │   │
+│       │  │  👤  JONAH walking (hero 3D)                 │  │   │
+│       │  │  🏙️  NINEVEH distant (hero 3D)              │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The word of the Lord came..."    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05B — INTERACT (40–55mm, chest height, walking)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS GRIPPING STAFF center (fabric+leaves)    │   │
+│       │  🧵 FABRIC WEAVE garment (fabric_weave)            │   │
+│       │  🌿 LEAVES shade (leaves)                          │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  SIMPLIFIED ROAD, reduced saturation     │  │   │
+│       │  │  👤  JONAH walking (hero 3D)                 │  │   │
+│       │  │  🏙️  NINEVEH approaching (hero 3D)          │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Arise, go unto Nineveh..."        │  │   │
+│       │  │  [CHOICE]    ▢ Walk  ▢ Pause  ▢ Proclaim     │  │   │
+│       │  │  [CAPTION] "Jonah arose and went..."         │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05C — RESOLVE (50mm, eye level, at Nineveh gates)         │
+├─────────────────────────────────────────────────────────────────┘
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 LEAVES corner (leaves)                         │   │
+│       │  🏜️  DESERT SAND corner (desert_sand)             │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏙️  GATES opened for scripture space        │  │   │
+│       │  │  👤  JONAH at gates (hero 3D)                │  │   │
+│       │  │  🏙️  NINEVEH walls (hero 3D)                │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Nineveh was an exceeding..."     │  │   │
+│       │  │  [SCRIPTURE] "Jonah 3:2-3"                   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 6: The Warning
 
 **Act summary:** Deliver the short message through the great city.
@@ -139,6 +429,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 06A | Establish | sun-baked clay, limestone, slate shadow, muted bronze. directional late-afternoon light defining masonry relief. | `wood_dark` + `fabric_weave` | Wide, three-plane tableau. FG SVG: framing wood dark, nearby silhouettes, and an edge prop tied to “the warning”. MG: character group and optional low-detail 3D landmark. BG SVG: city silhouette, towers, and atmospheric street depth. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. controlled pan along the structure followed by a short push to the objective. | SVG: dust, pennants, distant figures, and shadow bands provide depth. 3D: wall section, gate, brick, or tool animates only for the construction or collapse beat. Characters begin in readable held poses before any movement. |
 | 06B | Interact | Increase local contrast around the action while retaining sun-baked clay, limestone, slate shadow, muted bronze. Key light follows the story’s real light source. | `fabric_weave` + `water_fast` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “deliver the short message through the great city”. BG SVG: simplified city silhouette, towers, and atmospheric street depth with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 06C | Resolve / reflect | Let the accent move toward a quieter sun-baked clay, limestone, slate shadow, muted bronze; lower saturation behind captions and preserve warm skin tones. | `water_fast` + `wood_dark` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: city silhouette, towers, and atmospheric street depth, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06A — ESTABLISH (28–35mm, Nineveh streets, warning)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪵 WOOD DARK gate (wood_dark)                     │   │
+│       │  🧵 FABRIC WEAVE banner (fabric_weave)             │   │
+│       │  💨 WATER FAST dust (water_fast)                   │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏙️  CITY SILHOUETTE, towers, street depth   │  │   │
+│       │  │  👤  JONAH proclaiming (hero 3D)             │  │   │
+│       │  │  👥  PEOPLE hearing (hero 3D)                │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Yet forty days..."               │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06B — INTERACT (40–55mm, chest height, delivering)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS PROCLAIMING center (fabric+water)        │   │
+│       │  🧵 FABRIC WEAVE words (fabric_weave)              │   │
+│       │  💨 WATER FAST voice (water_fast)                  │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏙️  SIMPLIFIED STREET, reduced saturation   │  │   │
+│       │  │  👤  JONAH warning (hero 3D)                 │  │   │
+│       │  │  👥  PEOPLE responding (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Yet forty days..."                │  │   │
+│       │  │  [CHOICE]    ▢ Proclaim  ▢ Weep  ▢ Hope      │  │   │
+│       │  │  [CAPTION] "The people of Nineveh..."        │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06C — RESOLVE (50mm, eye level, warning given)            │
+├─────────────────────────────────────────────────────────────────┘
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💨 WATER FAST corner (water_fast)                 │   │
+│       │  🪵 WOOD DARK corner (wood_dark)                   │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏙️  CITY opened for scripture space        │  │   │
+│       │  │  👤  JONAH watching (hero 3D)                │  │   │
+│       │  │  👥  PEOPLE believing (hero 3D)              │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The people believed God..."      │  │   │
+│       │  │  [SCRIPTURE] "Jonah 3:5"                     │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Act 7: Nineveh Repents
 
@@ -150,6 +498,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 07B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `water_fast` + `water_still` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “coordinate fasting from palace to livestock”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 07C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `water_still` + `fabric_weave` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07A — ESTABLISH (28–35mm, palace to livestock, fasting)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧵 FABRIC WEAVE sackcloth (fabric_weave)          │   │
+│       │  💨 WATER FAST ashes (water_fast)                  │   │
+│       │  👑 CROWN at edge (placeholder)                    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  COLUMNS, patterned wall, court         │  │   │
+│       │  │  👤  KING fasting (hero 3D)                  │  │   │
+│       │  │  🐑  LIVESTOCK fasting (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Let man and beast be covered..." │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07B — INTERACT (40–55mm, chest height, coordinating)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS DECLARING center (water+water)           │   │
+│       │  💨 WATER FAST decree (water_fast)                 │   │
+│       │  💧 WATER STILL tears (water_still)                │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  SIMPLIFIED COURT, reduced saturation    │  │   │
+│       │  │  👤  KING decreeing (hero 3D)                │  │   │
+│       │  │  👥  PEOPLE fasting (hero 3D)                │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Who can tell if God will..."      │  │   │
+│       │  │  [CHOICE]    ▢ Decree  ▢ Fast  ▢ Hope        │  │   │
+│       │  │  [CAPTION] "God saw their works..."          │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07C — RESOLVE (50mm, eye level, city repents)             │
+├─────────────────────────────────────────────────────────────────┘
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💧 WATER STILL corner (water_still)               │   │
+│       │  🧵 FABRIC WEAVE corner (fabric_weave)             │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️  COURT opened for scripture space       │  │   │
+│       │  │  👤  KING humbled (hero 3D)                  │  │   │
+│       │  │  🐑  LIVESTOCK covered (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "God repented of the evil..."     │  │   │
+│       │  │  [SCRIPTURE] "Jonah 3:10"                    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 8: The Plant
 
 **Act summary:** Manage shade, worm, and hot wind.
@@ -160,6 +566,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 08B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story’s real light source. | `fabric_weave` + `water_still` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “manage shade, worm, and hot wind”. BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 08C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `water_still` + `leaves` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08A — ESTABLISH (28–35mm, east of city, plant shade)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 LEAVES plant (leaves)                          │   │
+│       │  🧵 FABRIC WEAVE booth (fabric_weave)              │   │
+│       │  🌞 SUN at edge (placeholder)                      │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌾  ROLLING FIELD, orchard, layered sky     │  │   │
+│       │  │  👤  JONAH sheltered (hero 3D)               │  │   │
+│       │  │  🌿  PLANT growing (hero 3D)                 │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The Lord God prepared a..."      │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08B — INTERACT (40–55mm, chest height, managing shade)    │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS TOUCHING PLANT center (fabric+water)     │   │
+│       │  🧵 FABRIC WEAVE leaves (fabric_weave)             │   │
+│       │  💧 WATER STILL worm (water_still)                 │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌾  SIMPLIFIED FIELD, reduced saturation    │  │   │
+│       │  │  👤  JONAH angry (hero 3D)                   │  │   │
+│       │  │  🐛  WORM smiting (hero 3D)                  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "It is better for me to die..."    │  │   │
+│       │  │  [CHOICE]    ▢ Shelter  ▢ Anger  ▢ Question  │  │   │
+│       │  │  [CAPTION] "The worm smote the plant..."     │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08C — RESOLVE (50mm, eye level, plant withered)           │
+├─────────────────────────────────────────────────────────────────┘
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💧 WATER STILL corner (water_still)               │   │
+│       │  🌿 LEAVES corner (leaves)                         │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌾  FIELD opened for scripture space        │  │   │
+│       │  │  👤  JONAH faint (hero 3D)                   │  │   │
+│       │  │  🌿  PLANT withered (hero 3D)                │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The sun beat upon..."            │  │   │
+│       │  │  [SCRIPTURE] "Jonah 4:7-8"                   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 9: The Question
 
 **Act summary:** Compare Jonah’s pity for a plant with God’s pity for a city.
@@ -169,6 +633,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 09A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `leaves` + `fabric_weave` | Wide, three-plane tableau. FG SVG: framing leaves, nearby silhouettes, and an edge prop tied to “the question”. MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
 | 09B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story’s real light source. | `fabric_weave` + `water_still` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “compare jonah’s pity for a plant with god’s pity for a city”. BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 09C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `water_still` + `leaves` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09A — ESTABLISH (28–35mm, hillside, pity for plant)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 LEAVES withered plant (leaves)                 │   │
+│       │  🧵 FABRIC WEAVE booth (fabric_weave)              │   │
+│       │  🏙️  NINEVEH distant (placeholder)                │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌾  ROLLING FIELD, orchard, layered sky     │  │   │
+│       │  │  👤  JONAH mourning (hero 3D)                │  │   │
+│       │  │  🏙️  NINEVEH great city (hero 3D)           │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Thou hast had pity on the..."    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09B — INTERACT (40–55mm, chest height, comparing)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS COMPARING center (fabric+water)          │   │
+│       │  🧵 FABRIC WEAVE plant (fabric_weave)              │   │
+│       │  💧 WATER STILL city (water_still)                 │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌾  SIMPLIFIED HILL, reduced saturation     │  │   │
+│       │  │  👤  JONAH questioning (hero 3D)             │  │   │
+│       │  │  🏙️  NINEVEH compassion (hero 3D)           │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Should not I spare Nineveh..."    │  │   │
+│       │  │  [CHOICE]    ▢ Compare  ▢ Pity  ▢ Accept     │  │   │
+│       │  │  [CAPTION] "Should not I spare..."           │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09C — RESOLVE (50mm, eye level, question left open)       │
+├─────────────────────────────────────────────────────────────────┘
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💧 WATER STILL corner (water_still)               │   │
+│       │  🌿 LEAVES corner (leaves)                         │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌾  HILL opened for scripture space         │  │   │
+│       │  │  👤  JONAH listening (hero 3D)               │  │   │
+│       │  │  🏙️  NINEVEH spared (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "And should not I spare..."       │  │   │
+│       │  │  [SCRIPTURE] "Jonah 4:11"                    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Panel acceptance checklist
 

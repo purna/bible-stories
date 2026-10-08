@@ -1,0 +1,21 @@
+{
+  "story": "Ruth",
+  "act": 5,
+  "chapter": "Ch.5 · Threshing Floor",
+  "artSource": "art/act5_threshing_floor.md",
+  "artFolder": "assets/svg/act_05_threshing_floor",
+  "sceneId": "threshing_floor",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "grass-tufts.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg"
+  ],
+  "layers": {
+    "background": "ruth_act5_c_background.svg",
+    "middleGround": "ruth_act5_c_middle_ground.svg",
+    "foreground": "ruth_act5_c_foreground.svg"
+  }
+}

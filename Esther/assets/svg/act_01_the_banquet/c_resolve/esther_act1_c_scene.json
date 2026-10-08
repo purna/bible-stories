@@ -1,0 +1,23 @@
+{
+  "story": "Esther",
+  "act": 1,
+  "chapter": "Ch.1 · The Banquet",
+  "artSource": "art/act1_the_banquet.md",
+  "artFolder": "assets/svg/act_01_the_banquet",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "mosaic-chips.svg",
+    "mosaic-grid.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "esther_act1_c_background.svg",
+    "middleGround": "esther_act1_c_middle_ground.svg",
+    "foreground": "esther_act1_c_foreground.svg"
+  }
+}

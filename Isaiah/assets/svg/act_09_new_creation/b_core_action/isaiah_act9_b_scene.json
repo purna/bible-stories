@@ -1,0 +1,23 @@
+{
+  "story": "Isaiah",
+  "act": 9,
+  "chapter": "Ch.9 · New Creation",
+  "artSource": "art/act9_new_creation.md",
+  "artFolder": "assets/svg/act_09_new_creation",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg"
+  ],
+  "layers": {
+    "background": "isaiah_act9_b_background.svg",
+    "middleGround": "isaiah_act9_b_middle_ground.svg",
+    "foreground": "isaiah_act9_b_foreground.svg"
+  }
+}

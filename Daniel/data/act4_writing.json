@@ -13,70 +13,172 @@
   "lines": [
     {
       "id": "writing_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "Decades later. Babylon was falling. And Belshazzar, its last king, held a feast \u2014 using the sacred cups stolen from Jerusalem's temple.",
-      "align": "left",
-      "svg": "belshazzar_feast",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "writing_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Decades later. Babylon was falling. And Belshazzar, its last king, held a feast — using the sacred cups stolen from Jerusalem's temple.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "belshazzar_feast"
     },
     {
       "id": "writing_1",
-      "speaker": "belshazzar",
-      "fx": "bounce",
-      "delay": 800,
-      "text": "BRING the gold and silver cups from the temple! Tonight we drink from the vessels of Judah's God!",
-      "align": "center",
-      "svg": "belshazzar_feast",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "writing_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "BRING the gold and silver cups from the temple! Tonight we drink from the vessels of Judah's God!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "belshazzar",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "belshazzar_feast"
     },
     {
       "id": "writing_2",
-      "sfx": "MENE...",
-      "speaker": "narrator",
-      "fx": "shake",
-      "delay": 800,
-      "text": "Suddenly, a human hand appeared and wrote on the wall.",
-      "svg": "hand_writing",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "writing_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Suddenly, a human hand appeared and wrote on the wall.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "writing_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "MENE...",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "hand_writing"
     },
     {
       "id": "writing_3",
-      "speaker": "belshazzar",
-      "fx": "shake",
-      "delay": 800,
-      "text": "My legs... they've turned to water. BRING ME A WISE MAN \u2014 anyone who can read this gets gold and the third rank in my kingdom!",
-      "svg": "hand_writing",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "writing_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "My legs... they've turned to water. BRING ME A WISE MAN — anyone who can read this gets gold and the third rank in my kingdom!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "belshazzar",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "hand_writing"
     },
     {
       "id": "writing_4",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "No one could read it. The queen remembered Daniel. And Daniel, now an old man, was brought in.",
-      "align": "right",
-      "svg": "daniel_reads",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "writing_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "No one could read it. The queen remembered Daniel. And Daniel, now an old man, was brought in.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_reads"
     },
     {
       "id": "writing_5",
-      "speaker": "daniel",
-      "fx": "type",
-      "delay": 800,
-      "text": "Keep your gold, O King. I'll tell you what it means anyway.",
-      "align": "left",
-      "svg": "daniel_reads",
       "vision": true,
       "choices": [
         {
-          "label": "Daniel asks for the reward \ud83d\udcb0",
+          "label": "Daniel asks for the reward 💰",
           "note": "He doesn't. When there's nothing left to gain, the truth still costs something to tell.",
           "decisionId": "writing_reward",
           "tags": [
@@ -85,7 +187,7 @@
           ]
         },
         {
-          "label": "Daniel refuses the reward \u2705",
+          "label": "Daniel refuses the reward ✅",
           "note": "Integrity in a moment with no long game left to protect. That's the point.",
           "decisionId": "writing_refuse",
           "tags": [
@@ -95,33 +197,118 @@
           ]
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "writing_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Keep your gold, O King. I'll tell you what it means anyway.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "daniel",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_reads"
     },
     {
       "id": "writing_6",
-      "speaker": "daniel",
-      "fx": "fade",
-      "delay": 800,
-      "text": "MENE: God has numbered your kingdom and brought it to an end. TEKEL: You have been weighed and found wanting. PERES: Your kingdom is divided and given to the Medes and Persians.",
-      "svg": "daniel_reads",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "writing_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "MENE: God has numbered your kingdom and brought it to an end. TEKEL: You have been weighed and found wanting. PERES: Your kingdom is divided and given to the Medes and Persians.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "daniel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_reads"
     },
     {
       "id": "writing_7",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "text": "That very night, Belshazzar was killed. And Babylon fell to the Persians.",
-      "svg": "babylon_falls",
       "consequence": {
-        "god_only": "That very night, Belshazzar was killed. Babylon fell \u2014 and the court recalled how Daniel's words had always cut true, never softened for safety.",
-        "mixed": "That very night, Belshazzar was killed. Babylon fell \u2014 and those who remembered Daniel's earlier compromises wondered if this last, unflinching reading had been worth the risk.",
-        "compromised": "That very night, Belshazzar was killed. Babylon fell \u2014 and for a moment Daniel wondered if a different path might have spared more than he could save."
+        "god_only": "That very night, Belshazzar was killed. Babylon fell — and the court recalled how Daniel's words had always cut true, never softened for safety.",
+        "mixed": "That very night, Belshazzar was killed. Babylon fell — and those who remembered Daniel's earlier compromises wondered if this last, unflinching reading had been worth the risk.",
+        "compromised": "That very night, Belshazzar was killed. Babylon fell — and for a moment Daniel wondered if a different path might have spared more than he could save."
       },
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "writing_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "That very night, Belshazzar was killed. And Babylon fell to the Persians.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "babylon_falls"
     }
+  ],
+  "assetFolder": "act_04_writing",
+  "artFolder": "assets/svg/act_04_writing",
+  "assetStem": "daniel_act4",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_04_writing/a_establish/daniel_act4_a_background.svg",
+      "middleGround": "assets/svg/act_04_writing/a_establish/daniel_act4_a_middle_ground.svg",
+      "foreground": "assets/svg/act_04_writing/a_establish/daniel_act4_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_background.svg",
+      "middleGround": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_middle_ground.svg",
+      "foreground": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_background.svg",
+      "middleGround": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_middle_ground.svg",
+      "foreground": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/mosaic-chips.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/stone-flagstone.svg"
   ]
 }

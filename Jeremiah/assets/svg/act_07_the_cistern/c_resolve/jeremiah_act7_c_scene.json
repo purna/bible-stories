@@ -1,0 +1,23 @@
+{
+  "story": "Jeremiah",
+  "act": 7,
+  "chapter": "Ch.7 · The Cistern",
+  "artSource": "art/act7_the_cistern.md",
+  "artFolder": "assets/svg/act_07_the_cistern",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "jeremiah_act7_c_background.svg",
+    "middleGround": "jeremiah_act7_c_middle_ground.svg",
+    "foreground": "jeremiah_act7_c_foreground.svg"
+  }
+}

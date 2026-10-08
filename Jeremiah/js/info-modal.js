@@ -43,7 +43,7 @@
           <p><strong>Music and sound:</strong> Original instrumental story music and interface sound design.</p>
 
           <h3>Built with</h3>
-          <ul class="story-info-libraries">${libraries.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+          <ul class="story-info-libraries">${libraries.map(item => `<li>${escapeHtml(item)}</li>`).join('')}<li><a href="https://blambot.com/" target="_blank" rel="noopener noreferrer" title="Comic lettering fonts and resources">Blambot.com</a></li></ul>
 
           ${toolLinks.length ? `<h3>Create story assets</h3><div class="story-info-links">${toolLinks.map(link => `<a href="${escapeAttribute(link.href)}">${escapeHtml(link.label)}</a>`).join('')}</div>` : ''}
 

@@ -4,74 +4,134 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "joseph-the-coloured-robe",
+      "name": "Ch.1 · The Coloured Robe",
+      "file": "joseph-the-coloured-robe.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "joseph-the-coloured-robe_hd",
+      "name": "Ch.1 · The Coloured Robe (HD)",
+      "file": "joseph-the-coloured-robe_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "joseph-dreams-and-the-pit",
+      "name": "Ch.2 · Dreams and the Pit",
+      "file": "joseph-dreams-and-the-pit.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "joseph-dreams-and-the-pit_hd",
+      "name": "Ch.2 · Dreams and the Pit (HD)",
+      "file": "joseph-dreams-and-the-pit_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "joseph-potiphar-s-house",
+      "name": "Ch.3 · Potiphar’s House",
+      "file": "joseph-potiphar-s-house.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "joseph-potiphar-s-house_hd",
+      "name": "Ch.3 · Potiphar’s House (HD)",
+      "file": "joseph-potiphar-s-house_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "joseph-the-prison",
+      "name": "Ch.4 · The Prison",
+      "file": "joseph-the-prison.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "joseph-the-prison_hd",
+      "name": "Ch.4 · The Prison (HD)",
+      "file": "joseph-the-prison_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "joseph-pharaoh-s-dreams",
+      "name": "Ch.5 · Pharaoh’s Dreams",
+      "file": "joseph-pharaoh-s-dreams.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "joseph-pharaoh-s-dreams_hd",
+      "name": "Ch.5 · Pharaoh’s Dreams (HD)",
+      "file": "joseph-pharaoh-s-dreams_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "joseph-storehouses",
+      "name": "Ch.6 · Storehouses",
+      "file": "joseph-storehouses.js",
+      "type": "module"
+    },
+    {
+      "id": "joseph-storehouses_hd",
+      "name": "Ch.6 · Storehouses (HD)",
+      "file": "joseph-storehouses_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "joseph-the-brothers-arrive",
+      "name": "Ch.7 · The Brothers Arrive",
+      "file": "joseph-the-brothers-arrive.js",
+      "type": "module"
+    },
+    {
+      "id": "joseph-the-brothers-arrive_hd",
+      "name": "Ch.7 · The Brothers Arrive (HD)",
+      "file": "joseph-the-brothers-arrive_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "joseph-benjamin-s-cup",
+      "name": "Ch.8 · Benjamin’s Cup",
+      "file": "joseph-benjamin-s-cup.js",
+      "type": "module"
+    },
+    {
+      "id": "joseph-benjamin-s-cup_hd",
+      "name": "Ch.8 · Benjamin’s Cup (HD)",
+      "file": "joseph-benjamin-s-cup_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "joseph-revealed",
+      "name": "Ch.9 · Revealed",
+      "file": "joseph-revealed.js",
+      "type": "module"
+    },
+    {
+      "id": "joseph-revealed_hd",
+      "name": "Ch.9 · Revealed (HD)",
+      "file": "joseph-revealed_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "joseph-goshen",
+      "name": "Ch.10 · Goshen",
+      "file": "joseph-goshen.js",
+      "type": "module"
+    },
+    {
+      "id": "joseph-goshen_hd",
+      "name": "Ch.10 · Goshen (HD)",
+      "file": "joseph-goshen_hd.js",
       "type": "module"
     }
   ]

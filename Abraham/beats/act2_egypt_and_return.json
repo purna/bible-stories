@@ -1,0 +1,34 @@
+{
+  "story": "Abraham",
+  "act": {
+    "id": "act2_egypt_and_return",
+    "name": "Ch.2 · Egypt and Return",
+    "source": "../art/act2_egypt_and_return.md"
+  },
+  "beats": [
+    {
+      "id": "a_establish",
+      "type": "visual",
+      "name": "establishing",
+      "description": "wide framing of the setting: Nile-side palace gates, Egyptian banners and linen, gold light"
+    },
+    {
+      "id": "b_core_action",
+      "type": "visual",
+      "name": "core action",
+      "description": "the scene's central movement and characters"
+    },
+    {
+      "id": "c_resolve",
+      "type": "visual",
+      "name": "resolution",
+      "description": "the beat's outcome, holding the emotional note"
+    },
+    {
+      "id": "interactive-game",
+      "type": "game",
+      "description": "Choose honest repairs after a fearful mistake.",
+      "mechanic": "assembly"
+    }
+  ]
+}

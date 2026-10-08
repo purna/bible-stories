@@ -1,0 +1,18 @@
+{
+  "story": "Noah",
+  "act": 4,
+  "chapter": "Ch.4 · The Gathering",
+  "artSource": "art/act4_gathering.md",
+  "artFolder": "assets/svg/act_04_gathering",
+  "sceneId": "ch4_animals_arrive",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "noah_act4_c_background.svg",
+    "middleGround": "noah_act4_c_middle_ground.svg",
+    "foreground": "noah_act4_c_foreground.svg"
+  }
+}

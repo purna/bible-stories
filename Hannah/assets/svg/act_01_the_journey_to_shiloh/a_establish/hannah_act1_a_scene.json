@@ -1,0 +1,21 @@
+{
+  "story": "Hannah",
+  "act": 1,
+  "chapter": "Ch.1 · The Journey to Shiloh",
+  "artSource": "art/act1_the_journey_to_shiloh.md",
+  "artFolder": "assets/svg/act_01_the_journey_to_shiloh",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "hannah_act1_a_background.svg",
+    "middleGround": "hannah_act1_a_middle_ground.svg",
+    "foreground": "hannah_act1_a_foreground.svg"
+  }
+}

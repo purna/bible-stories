@@ -1,0 +1,259 @@
+{
+  "story": "Esther",
+  "sourceTool": "Esther/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "mosaic",
+      "shape": "grid",
+      "file": "mosaic-grid.svg"
+    },
+    {
+      "key": "mosaic",
+      "shape": "chips",
+      "file": "mosaic-chips.svg"
+    },
+    {
+      "key": "hammered_gold",
+      "shape": "hammered",
+      "file": "hammered_gold-hammered.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "wood_dark",
+      "shape": "plank",
+      "file": "wood_dark-plank.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    },
+    {
+      "key": "fabric_dots",
+      "shape": "grid",
+      "file": "fabric_dots-grid.svg"
+    },
+    {
+      "key": "fabric_dots",
+      "shape": "scatterMix",
+      "file": "fabric_dots-scatterMix.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Banquet",
+      "assetFolder": "act_01_the_banquet",
+      "materials": [
+        {
+          "key": "mosaic",
+          "file": "mosaic-chips.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · A New Queen",
+      "assetFolder": "act_02_a_new_queen",
+      "materials": [
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · The Gate Plot",
+      "assetFolder": "act_03_the_gate_plot",
+      "materials": [
+        {
+          "key": "mosaic",
+          "file": "mosaic-chips.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Haman’s Decree",
+      "assetFolder": "act_04_haman_s_decree",
+      "materials": [
+        {
+          "key": "mosaic",
+          "file": "mosaic-chips.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "fabric_dots",
+          "file": "fabric_dots-scatterMix.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · For Such a Time",
+      "assetFolder": "act_05_for_such_a_time",
+      "materials": [
+        {
+          "key": "mosaic",
+          "file": "mosaic-chips.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "fabric_dots",
+          "file": "fabric_dots-scatterMix.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · The First Banquet",
+      "assetFolder": "act_06_the_first_banquet",
+      "materials": [
+        {
+          "key": "mosaic",
+          "file": "mosaic-chips.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "fabric_dots",
+          "file": "fabric_dots-scatterMix.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · The Sleepless Night",
+      "assetFolder": "act_07_the_sleepless_night",
+      "materials": [
+        {
+          "key": "mosaic",
+          "file": "mosaic-chips.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · The Second Banquet",
+      "assetFolder": "act_08_the_second_banquet",
+      "materials": [
+        {
+          "key": "mosaic",
+          "file": "mosaic-chips.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · A New Decree",
+      "assetFolder": "act_09_a_new_decree",
+      "materials": [
+        {
+          "key": "mosaic",
+          "file": "mosaic-chips.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · Purim",
+      "assetFolder": "act_10_purim",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    }
+  ]
+}

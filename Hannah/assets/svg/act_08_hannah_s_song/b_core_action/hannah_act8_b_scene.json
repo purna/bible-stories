@@ -1,0 +1,22 @@
+{
+  "story": "Hannah",
+  "act": 8,
+  "chapter": "Ch.8 · Hannah’s Song",
+  "artSource": "art/act8_hannah_s_song.md",
+  "artFolder": "assets/svg/act_08_hannah_s_song",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "hannah_act8_b_background.svg",
+    "middleGround": "hannah_act8_b_middle_ground.svg",
+    "foreground": "hannah_act8_b_foreground.svg"
+  }
+}

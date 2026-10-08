@@ -1,0 +1,20 @@
+{
+  "story": "Jonah",
+  "act": 8,
+  "chapter": "The Plant",
+  "artSource": "art/act4_figtree_map.md",
+  "artFolder": "assets/svg/act_04_figtree_map",
+  "sceneId": "",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg"
+  ],
+  "layers": {
+    "background": "jonah_act8_b_background.svg",
+    "middleGround": "jonah_act8_b_middle_ground.svg",
+    "foreground": "jonah_act8_b_foreground.svg"
+  }
+}

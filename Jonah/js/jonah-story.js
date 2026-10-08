@@ -17,7 +17,7 @@
     /* =========================================================================
        STORY DATA
        ========================================================================= */
-    const STORY = [
+    let STORY = [
       {
         id: "escaping", name: "Dialogue: Escaping",
         bg: "radial-gradient(circle at 30% 20%, #1c3a63, #0d2238 65%, #071220)",
@@ -137,6 +137,32 @@
     audio.preloadStory({ acts: STORY });
 
     function currentAct() { return STORY[actIdx]; }
+    const SCENE_CANON_CHAPTERS = [1, 2, 5, 9];
+    function sceneBeat(act) {
+      if (lineIdx === 0) return { id: 'a', folder: 'a_establish' };
+      if (lineIdx === act.lines.length - 1) return { id: 'c', folder: 'c_resolve' };
+      return { id: 'b', folder: 'b_core_action' };
+    }
+    function sceneAssetPath(act, layer) {
+      const beat = sceneBeat(act);
+      const key = layer === 'middle_ground' ? 'middleGround' : layer;
+      return act.sceneLayers?.[beat.folder]?.[key]
+        || `assets/svg/${act.assetFolder}/${beat.folder}/${act.assetStem}_${beat.id}_${layer}.svg`;
+    }
+    async function loadSceneMetadata() {
+      try {
+        const response = await fetch('data/canon.json');
+        if (!response.ok) return;
+        const canon = await response.json();
+        const chapters = canon.Jonah?.chapters || [];
+        STORY = STORY.map((act, index) => {
+          const chapter = chapters.find(item => item.number === SCENE_CANON_CHAPTERS[index]);
+          return chapter ? { ...act, ...chapter } : act;
+        });
+      } catch (error) {
+        console.warn('Jonah scene metadata unavailable; using standard scene asset paths.', error);
+      }
+    }
     window.__comic = { currentAct, audio };
 
     function buildDots() {
@@ -185,6 +211,17 @@
         nextLineTimeout = null;
       }
       const data = currentAct().lines[lineIdx];
+    if (Array.isArray(data.items) && data.items.length) {
+        const primary = data.items.find(item => !item.sfx) || data.items[0];
+        const firstSfx = data.items.find(item => item.sfx);
+        data.speaker = primary.speaker || 'narrator';
+        data.text = primary.sfx ? '' : (primary.text || '');
+        data.sfx = firstSfx ? firstSfx.text : '';
+        data.fx = primary.entryFx || 'fade';
+        data.delay = Math.min(...data.items.map(item => Number(item.delay) || 0));
+        data.align = primary.align || 'center'; data.width = primary.width || '1/2'
+    }
+
       audio.playLineSfx(data);
 
       // Dynamic Framework Component Assembly
@@ -197,11 +234,15 @@
 
       const svgLayer = document.createElement('div');
       svgLayer.id = 'svgLayer';
-
-      // Choose correct illustration index asset mapping
-      const targetSvgKey = data.svg || currentAct().svg;
-      svgLayer.innerHTML = await loadSvg(targetSvgKey);
+      svgLayer.classList.add('svg-behind');
+      svgLayer.innerHTML = await loadSvg(sceneAssetPath(currentAct(), 'background'));
       graphicContainer.appendChild(svgLayer);
+
+      const middleLayer = document.createElement('div');
+      middleLayer.id = 'midLayer';
+      middleLayer.classList.add('svg-middle');
+      middleLayer.innerHTML = await loadSvg(sceneAssetPath(currentAct(), 'middle_ground'));
+      graphicContainer.appendChild(middleLayer);
 
       if (currentAct().id === 'reflection') {
         const sunContainer = document.createElement('div');
@@ -242,7 +283,7 @@
         // Keeping the interactive silhouette layered over the 3D space
         svgLayer.style.position = 'absolute';
         svgLayer.style.inset = '0';
-        svgLayer.style.zIndex = '3';
+        svgLayer.style.zIndex = '1';
         // Dynamically trigger eerie bioluminescent motes inside the whale
         setParticleMode('whalebelly');
         setTimeout(() => { if (el('#whale3d canvas') === null && renderer) whaleContainer.appendChild(renderer.domElement); }, 20);
@@ -253,6 +294,11 @@
 
         setParticleMode(currentAct().particle || 'dusk');
       }
+      const foregroundLayer = document.createElement('div');
+      foregroundLayer.id = 'fgLayer';
+      foregroundLayer.classList.add('svg-front');
+      foregroundLayer.innerHTML = await loadSvg(sceneAssetPath(currentAct(), 'foreground'));
+      graphicContainer.appendChild(foregroundLayer);
       frame.appendChild(graphicContainer);
 
       const overlay = document.createElement('div');
@@ -281,21 +327,19 @@
 
         if (data.text) {
           const width = data.width || '1/2';
-          const valign = data.valign || 'middle';
-          const widthStyle = `--bubble-width: ${width};`;
-          const valignStyle = `--bubble-valign: ${valign};`;
-          
+            const widthStyle = `--bubble-width: ${width};`;
+
           if (data.speaker === 'narrator') {
             const speechElement = document.createElement('div');
             speechElement.className = `caption fx-${data.fx} caption-${data.align || 'center'}`;
-            speechElement.style.cssText = widthStyle + valignStyle;
+            speechElement.style.cssText = widthStyle;
             speechElement.innerHTML = buildLineHTML(data.text, data.fx);
             overlay.appendChild(speechElement);
           } else {
             const align = data.align || 'center';
             const wrap = document.createElement('div');
             wrap.className = `bubble-wrap align-${align}`;
-            wrap.style.cssText = widthStyle + valignStyle;
+            wrap.style.cssText = widthStyle;
             const speechElement = document.createElement('div');
             speechElement.className = `bubble ${data.speaker} fx-${data.fx} bubble-${align}`;
             speechElement.innerHTML = buildLineHTML(data.text, data.fx);
@@ -496,7 +540,7 @@
       Act2_09_Down_down_something_HUGE_rose_up: 'assets/svg/Act2-09-Down down something HUGE rose up.svg',
       Act2_10_A_colossal_whale_opened_its_enormous_jaws: 'assets/svg/Act2-10-A colossal whale opened its enormous jaws.svg',
       Act2_11_Dark_warm_smells_like_the_sea: 'assets/svg/Act2-11-Dark warm smells like the sea.svg',
-      Act2_12_Three_days_wrapped_in_ribs_like_a_cave: 'assets/svg/Act2-12-Three days wrapped in ribs like a cave.svg',  
+      Act2_12_Three_days_wrapped_in_ribs_like_a_cave: 'assets/svg/Act2-12-Three days wrapped in ribs like a cave.svg',
       Act2_13_I_ran_because_I_was_scared: 'assets/svg/Act2-13-I ran because I was scared.svg',
       Act2_14_Okay_I_hear_you_Ill_go: 'assets/svg/Act2-14-Okay I hear you Ill go.svg',
       Act3_01_Sucked_from_the_deep_spat_onto_the_sand: 'assets/svg/Act3-01-Sucked from the deep, spat onto the sand.svg',
@@ -733,13 +777,15 @@
     };
     const svgCache = {};
     async function loadSvg(key) {
+      const path = String(key).includes('/') ? key : SVG_PATHS[key];
+      const inline = String(key).includes('/') ? null : SVG_INLINE[key];
       if (svgCache[key]) return svgCache[key];
-      if (SVG_INLINE[key]) {
-        svgCache[key] = SVG_INLINE[key];
-        return SVG_INLINE[key];
+      if (inline) {
+        svgCache[key] = inline;
+        return inline;
       }
       try {
-        const res = await fetch(SVG_PATHS[key]);
+        const res = await fetch(path);
         if (!res.ok) throw new Error('Not found');
         const text = await res.text();
         svgCache[key] = text;
@@ -1013,8 +1059,6 @@
       const atEnd = lineIdx === currentAct().lines.length - 1 && !choicePending;
       if (e.key === 'ArrowRight') goLine(1);
       if (e.key === 'ArrowLeft') goLine(-1);
-      if (e.key === 'ArrowDown' && atEnd) advanceChapter();
-      if (e.key === 'ArrowUp' && lineIdx === 0) goPrevChapter();
     });
 
     let touchStartX = 0;
@@ -1037,11 +1081,15 @@
 
     nextBtn.addEventListener('click', advanceChapter);
     nextLineBtn.addEventListener('click', () => goLine(1));
-    el('#startBtn').addEventListener('click', () => {
+    el('#startBtn').addEventListener('click', async () => {
+      await sceneMetadataReady;
       el('#startScreen').classList.add('hide');
       populateChapterSelect();
       loadAct();
     });
 
-    populateChapterSelect();
-    loadAct();
+    const sceneMetadataReady = loadSceneMetadata();
+    sceneMetadataReady.then(() => {
+      populateChapterSelect();
+      loadAct();
+    });

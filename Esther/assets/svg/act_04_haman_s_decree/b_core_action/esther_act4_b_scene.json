@@ -1,0 +1,26 @@
+{
+  "story": "Esther",
+  "act": 4,
+  "chapter": "Ch.4 · Haman’s Decree",
+  "artSource": "art/act4_haman_s_decree.md",
+  "artFolder": "assets/svg/act_04_haman_s_decree",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "fabric_dots-grid.svg",
+    "fabric_dots-scatterMix.svg",
+    "fabric_weave-basket.svg",
+    "hammered_gold-hammered.svg",
+    "mosaic-chips.svg",
+    "mosaic-grid.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "esther_act4_b_background.svg",
+    "middleGround": "esther_act4_b_middle_ground.svg",
+    "foreground": "esther_act4_b_foreground.svg"
+  }
+}

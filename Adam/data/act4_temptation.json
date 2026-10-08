@@ -11,113 +11,334 @@
   "lines": [
     {
       "id": "temptation_0",
-      "speaker": "serpent",
-      "sfx": "SSSSSSSS",
-      "fx": "bounce",
-      "delay": 800,
-      "text": "Did God really say, 'You must not eat from any tree in the garden'?",
-      "align": "left",
-      "svg": "serpent_tree",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "temptation_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Did God really say, 'You must not eat from any tree in the garden'?",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "serpent",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "temptation_0_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "SSSSSSSS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "serpent",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "serpent_tree"
     },
     {
       "id": "temptation_1",
-      "speaker": "eve",
-      "fx": "fade",
-      "delay": 800,
-      "text": "We may eat fruit from the trees in the garden. But as for the fruit of the tree that is in the middle of the garden...",
-      "align": "right",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "temptation_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "We may eat fruit from the trees in the garden. But as for the fruit of the tree that is in the middle of the garden...",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "eve",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "temptation_2",
-      "speaker": "serpent",
-      "fx": "shake",
-      "delay": 800,
-      "text": "You will not certainly die. For God knows that when you eat from it, your eyes will be opened \u2014 and you will be like God, knowing good and evil.",
-      "align": "left",
-      "svg": "serpent_deceive",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "temptation_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "You will not certainly die. For God knows that when you eat from it, your eyes will be opened — and you will be like God, knowing good and evil.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "serpent",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "serpent_deceive"
     },
     {
       "id": "temptation_3",
-      "speaker": "eve",
-      "fx": "type",
-      "delay": 800,
-      "text": "Are you sure? He said we would die if we eat. But you say we will be like God...",
-      "align": "right",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "temptation_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Are you sure? He said we would die if we eat. But you say we will be like God...",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "eve",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "temptation_4",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "text": "The fruit was good for food and pleasing to the eye. It promised wisdom \u2014 the one thing God had withheld.",
-      "align": "center",
-      "svg": "forbidden_fruit",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "temptation_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The fruit was good for food and pleasing to the eye. It promised wisdom — the one thing God had withheld.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "forbidden_fruit"
     },
     {
       "id": "temptation_5",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "She looked at the fruit, longing for what it promised. Then she took some and ate it.",
-      "align": "center",
-      "svg": "forbidden_taken",
       "choices": [
         {
-          "label": "Resist the serpent \ud83d\udee1\ufe0f",
+          "label": "Resist the serpent 🛡️",
           "note": "The moment passes. Temptation without action is just a whisper."
         },
         {
-          "label": "Taste the fruit \ud83c\udf4e",
+          "label": "Taste the fruit 🍎",
           "note": "The first bite changes everything. Knowledge comes at the price of innocence."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "temptation_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "She looked at the fruit, longing for what it promised. Then she took some and ate it.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "forbidden_taken"
     },
     {
       "id": "temptation_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "She gave some to her husband, who was with her. And he ate it.",
-      "align": "left",
-      "svg": "serpent_taken",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "temptation_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "She gave some to her husband, who was with her. And he ate it.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "serpent_taken"
     },
     {
       "id": "temptation_7",
-      "sfx": "CRACK!",
       "audioSfx": "assets/audio/sfx/fall_crack.mp3",
-      "speaker": "narrator",
-      "fx": "shake",
-      "delay": 800,
-      "text": "The moment the fruit touched their lips, something tore. Shame flooded in. Their eyes were opened.",
-      "align": "center",
-      "svg": "the_fall",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "temptation_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The moment the fruit touched their lips, something tore. Shame flooded in. Their eyes were opened.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "temptation_7_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "CRACK!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "the_fall"
     },
     {
       "id": "temptation_8",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "They heard God approaching. And they hid \u2014 from each other, and from Him.",
-      "align": "center",
-      "svg": "the_hiding",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "temptation_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "They heard God approaching. And they hid — from each other, and from Him.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "the_hiding"
     }
+  ],
+  "assetFolder": "act_04_temptation",
+  "artFolder": "assets/svg/act_04_temptation",
+  "assetStem": "adam_act4",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_04_temptation/a_establish/adam_act4_a_background.svg",
+      "middleGround": "assets/svg/act_04_temptation/a_establish/adam_act4_a_middle_ground.svg",
+      "foreground": "assets/svg/act_04_temptation/a_establish/adam_act4_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_background.svg",
+      "middleGround": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_middle_ground.svg",
+      "foreground": "assets/svg/act_04_temptation/b_core_action/adam_act4_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_background.svg",
+      "middleGround": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_middle_ground.svg",
+      "foreground": "assets/svg/act_04_temptation/c_resolve/adam_act4_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/leaves-canopy.svg",
+    "assets/materials/water_still-eddies.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg"
   ]
 }

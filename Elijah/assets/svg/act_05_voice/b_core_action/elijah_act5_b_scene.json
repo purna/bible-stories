@@ -1,0 +1,23 @@
+{
+  "story": "Elijah",
+  "act": 5,
+  "chapter": "The Still, Small Voice",
+  "artSource": "art/act5_voice.md",
+  "artFolder": "assets/svg/act_05_voice",
+  "sceneId": "horeb_cave",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "water_fast-churn.svg",
+    "water_fast-rapids.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg",
+    "wood_texture.svg"
+  ],
+  "layers": {
+    "background": "elijah_act5_b_background.svg",
+    "middleGround": "elijah_act5_b_middle_ground.svg",
+    "foreground": "elijah_act5_b_foreground.svg"
+  }
+}

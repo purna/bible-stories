@@ -7,111 +7,301 @@
   "lines": [
     {
       "id": "the_victory_0",
-      "speaker": "ephraimite",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Why did you not call us to fight the Midianites? We will burn your house over you.",
       "cite": "Judges 8:1–2",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_victory_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Why did you not call us to fight the Midianites? We will burn your house over you.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "ephraimite",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_victory_1",
-      "speaker": "gideon",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "What have I done compared to you? God gave Oreb and Zeeb into Ephraim's hand. Let your anger soften.",
       "cite": "Judges 8:2–3",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_victory_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "What have I done compared to you? God gave Oreb and Zeeb into Ephraim's hand. Let your anger soften.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "gideon",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_victory_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Gideon crosses the Jordan, faint but pursuing. He asks Succoth and Penuel for bread; both refuse him.",
       "cite": "Judges 8:4–8",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_victory_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Gideon crosses the Jordan, faint but pursuing. He asks Succoth and Penuel for bread; both refuse him.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_victory_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "He catches Zebah and Zalmunna, the Midianite kings. He takes revenge for his brothers, then returns.",
       "cite": "Judges 8:9–21",
-      "sfx": "The kings taken",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_victory_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "He catches Zebah and Zalmunna, the Midianite kings. He takes revenge for his brothers, then returns.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_victory_3_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "The kings taken",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_victory_4",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The reprisals and the kings' deaths are a narrated summary — no reward, no execution to play.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_victory_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The reprisals and the kings' deaths are a narrated summary — no reward, no execution to play.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_victory_5",
-      "speaker": "israelite_warrior",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "text": "Rule over us, you and your son and your grandson. You have saved us from Midian.",
       "cite": "Judges 8:22",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_victory_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Rule over us, you and your son and your grandson. You have saved us from Midian.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "israelite_warrior",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_victory_6",
-      "speaker": "gideon",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE REFUSAL",
-      "text": "I will not rule over you, and my son will not rule over you. The Lord will rule over you.",
       "cite": "Judges 8:23",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_victory_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I will not rule over you, and my son will not rule over you. The Lord will rule over you.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "gideon",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_victory_6_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE REFUSAL",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "gideon",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_victory_7",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Gideon asks for the earrings of spoil and makes an ephod. All Israel prostitutes itself with it, and it becomes a snare to Gideon's house.",
       "cite": "Judges 8:24–27",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_victory_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Gideon asks for the earrings of spoil and makes an ephod. All Israel prostitutes itself with it, and it becomes a snare to Gideon's house.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_victory_8",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The land has rest for forty years, in the lifetime of Gideon. But the warning stands: peace is not the same as unbroken faithfulness.",
       "cite": "Judges 8:28",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_victory_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The land has rest for forty years, in the lifetime of Gideon. But the warning stands: peace is not the same as unbroken faithfulness.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_victory_9",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The account settles. Six labelled cards rebuild the story — complaint, pursuit, kings, refusal, ephod, rest. What remains is a reflection, not a rewrite.",
       "choices": [
         {
           "label": "Carry the warning forward",
@@ -122,11 +312,57 @@
           "note": "A calm image may close the act. The warning is not erased."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_victory_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The account settles. Six labelled cards rebuild the story — complaint, pursuit, kings, refusal, ephod, rest. What remains is a reflection, not a rewrite.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "the_victory",
   "foreground": "fg_the_victory",
-  "index": 6
+  "index": 6,
+  "assetFolder": "act_07_the_victory",
+  "artFolder": "assets/svg/act_07_the_victory",
+  "assetStem": "gideon_act7",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_background.svg",
+      "middleGround": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_middle_ground.svg",
+      "foreground": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_background.svg",
+      "middleGround": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_middle_ground.svg",
+      "foreground": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_background.svg",
+      "middleGround": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_middle_ground.svg",
+      "foreground": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/water_ripple-ripples.svg",
+    "assets/materials/sword_iron-blade.svg"
+  ]
 }

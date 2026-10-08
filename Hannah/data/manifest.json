@@ -10,7 +10,28 @@
       "assetFolder": "act_01_the_journey_to_shiloh",
       "assetStem": "hannah_act1",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_the_journey_to_shiloh/a_establish/hannah_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_the_journey_to_shiloh/a_establish/hannah_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_journey_to_shiloh/a_establish/hannah_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_the_journey_to_shiloh/b_core_action/hannah_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_the_journey_to_shiloh/b_core_action/hannah_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_journey_to_shiloh/b_core_action/hannah_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_the_journey_to_shiloh/c_resolve/hannah_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_the_journey_to_shiloh/c_resolve/hannah_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_journey_to_shiloh/c_resolve/hannah_act1_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/water_still-eddies.svg"
+      ]
     },
     {
       "id": "at_the_table",
@@ -21,7 +42,28 @@
       "assetFolder": "act_02_at_the_table",
       "assetStem": "hannah_act2",
       "particle": "dusk",
-      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_at_the_table/a_establish/hannah_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_at_the_table/a_establish/hannah_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_at_the_table/a_establish/hannah_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_at_the_table/b_core_action/hannah_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_at_the_table/b_core_action/hannah_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_at_the_table/b_core_action/hannah_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_at_the_table/c_resolve/hannah_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_at_the_table/c_resolve/hannah_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_at_the_table/c_resolve/hannah_act2_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ]
     },
     {
       "id": "silent_prayer",
@@ -32,7 +74,28 @@
       "assetFolder": "act_03_silent_prayer",
       "assetStem": "hannah_act3",
       "particle": "ember",
-      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_silent_prayer/a_establish/hannah_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_silent_prayer/a_establish/hannah_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_silent_prayer/a_establish/hannah_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_silent_prayer/b_core_action/hannah_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_silent_prayer/b_core_action/hannah_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_silent_prayer/b_core_action/hannah_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_silent_prayer/c_resolve/hannah_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_silent_prayer/c_resolve/hannah_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_silent_prayer/c_resolve/hannah_act3_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ]
     },
     {
       "id": "misunderstood",
@@ -43,7 +106,28 @@
       "assetFolder": "act_04_misunderstood",
       "assetStem": "hannah_act4",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_misunderstood/a_establish/hannah_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_misunderstood/a_establish/hannah_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_misunderstood/a_establish/hannah_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_misunderstood/b_core_action/hannah_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_misunderstood/b_core_action/hannah_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_misunderstood/b_core_action/hannah_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_misunderstood/c_resolve/hannah_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_misunderstood/c_resolve/hannah_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_misunderstood/c_resolve/hannah_act4_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ]
     },
     {
       "id": "remembered",
@@ -54,7 +138,27 @@
       "assetFolder": "act_05_remembered",
       "assetStem": "hannah_act5",
       "particle": "dusk",
-      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_remembered/a_establish/hannah_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_remembered/a_establish/hannah_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_remembered/a_establish/hannah_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_remembered/b_core_action/hannah_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_remembered/b_core_action/hannah_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_remembered/b_core_action/hannah_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_remembered/c_resolve/hannah_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_remembered/c_resolve/hannah_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_remembered/c_resolve/hannah_act5_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg"
+      ]
     },
     {
       "id": "the_little_robe",
@@ -65,7 +169,28 @@
       "assetFolder": "act_06_the_little_robe",
       "assetStem": "hannah_act6",
       "particle": "ember",
-      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_the_little_robe/a_establish/hannah_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_the_little_robe/a_establish/hannah_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_little_robe/a_establish/hannah_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_the_little_robe/b_core_action/hannah_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_the_little_robe/b_core_action/hannah_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_little_robe/b_core_action/hannah_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_the_little_robe/c_resolve/hannah_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_the_little_robe/c_resolve/hannah_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_little_robe/c_resolve/hannah_act6_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/wood_oak-planks3.svg"
+      ]
     },
     {
       "id": "given_back",
@@ -76,7 +201,28 @@
       "assetFolder": "act_07_given_back",
       "assetStem": "hannah_act7",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_given_back/a_establish/hannah_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_given_back/a_establish/hannah_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_given_back/a_establish/hannah_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_given_back/b_core_action/hannah_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_given_back/b_core_action/hannah_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_given_back/b_core_action/hannah_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_given_back/c_resolve/hannah_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_given_back/c_resolve/hannah_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_given_back/c_resolve/hannah_act7_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ]
     },
     {
       "id": "hannah_s_song",
@@ -87,7 +233,29 @@
       "assetFolder": "act_08_hannah_s_song",
       "assetStem": "hannah_act8",
       "particle": "dusk",
-      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_hannah_s_song/a_establish/hannah_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_hannah_s_song/a_establish/hannah_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_hannah_s_song/a_establish/hannah_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_hannah_s_song/b_core_action/hannah_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_hannah_s_song/b_core_action/hannah_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_hannah_s_song/b_core_action/hannah_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_hannah_s_song/c_resolve/hannah_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_hannah_s_song/c_resolve/hannah_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_hannah_s_song/c_resolve/hannah_act8_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ]
     }
   ]
 }

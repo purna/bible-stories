@@ -1,0 +1,20 @@
+{
+  "story": "Hannah",
+  "act": 6,
+  "chapter": "Ch.6 · The Little Robe",
+  "artSource": "art/act6_the_little_robe.md",
+  "artFolder": "assets/svg/act_06_the_little_robe",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "hannah_act6_a_background.svg",
+    "middleGround": "hannah_act6_a_middle_ground.svg",
+    "foreground": "hannah_act6_a_foreground.svg"
+  }
+}

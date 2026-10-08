@@ -1,96 +1,240 @@
 {
   "id": "build",
-  "name": "Ch.3 \u00b7 The Long Build",
+  "name": "Ch.3 · The Long Build",
   "bg": "radial-gradient(circle at 35% 50%, #281808, #120c04 65%, #080402)",
   "particle": "dusk",
   "svg": "ch3_ark_under_construction",
   "lines": [
     {
       "id": "build_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "svg": "ch3_ark_under_construction",
-      "text": "Years passed. Ten. Twenty. The ribs of the ark rose above the treeline.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "build_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Years passed. Ten. Twenty. The ribs of the ark rose above the treeline.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch3_ark_under_construction"
     },
     {
       "id": "build_1",
-      "speaker": "crowd",
-      "fx": "shake",
-      "delay": 800,
-      "align": "right",
-      "svg": "ch3_mockery",
-      "text": "HAHAHA! Noah's still at it! Building his boat in the desert! Send for the doctor!",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "build_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "HAHAHA! Noah's still at it! Building his boat in the desert! Send for the doctor!",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "crowd",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch3_mockery"
     },
     {
       "id": "build_2",
-      "speaker": "noah",
-      "fx": "type",
-      "delay": 800,
-      "align": "left",
-      "svg": "ch3_noah_works",
-      "text": "One plank. Then another. Don't look up. Keep going.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "build_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "One plank. Then another. Don't look up. Keep going.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "noah",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch3_noah_works"
     },
     {
       "id": "build_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch3_decades_pass",
-      "text": "Fifty years. The ark's hull was sealed with pitch. The crowd's laughter got louder.",
       "choices": [
         {
-          "label": "Skip a coat of pitch to save time \u23e9",
+          "label": "Skip a coat of pitch to save time ⏩",
           "note": "One thin section. The wood will probably hold... probably."
         },
         {
-          "label": "Seal every plank twice \ud83d\udd28",
+          "label": "Seal every plank twice 🔨",
           "note": "Slow work. Honest work. Every seam watertight."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "build_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Fifty years. The ark's hull was sealed with pitch. The crowd's laughter got louder.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch3_decades_pass"
     },
     {
       "id": "build_4",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch3_decades_pass",
-      "text": "Nobody believed him. But the ark kept growing, plank by plank, year after year.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "build_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Nobody believed him. But the ark kept growing, plank by plank, year after year.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch3_decades_pass"
     },
     {
       "id": "build_5",
-      "speaker": "son",
-      "fx": "fade",
-      "delay": 800,
-      "align": "right",
-      "svg": "ch3_son_helps",
-      "text": "Father... why keep going when no one understands what you're doing?",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "build_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Father... why keep going when no one understands what you're doing?",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "son",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch3_son_helps"
     },
     {
       "id": "build_6",
-      "speaker": "noah",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "svg": "ch3_son_helps",
-      "text": "Because I was told. And I said yes. That has to be enough.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "build_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Because I was told. And I said yes. That has to be enough.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "noah",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch3_son_helps"
     }
+  ],
+  "assetFolder": "act_03_build",
+  "artFolder": "assets/svg/act_03_build",
+  "assetStem": "noah_act3",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_03_build/a_establish/noah_act3_a_background.svg",
+      "middleGround": "assets/svg/act_03_build/a_establish/noah_act3_a_middle_ground.svg",
+      "foreground": "assets/svg/act_03_build/a_establish/noah_act3_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_03_build/b_core_action/noah_act3_b_background.svg",
+      "middleGround": "assets/svg/act_03_build/b_core_action/noah_act3_b_middle_ground.svg",
+      "foreground": "assets/svg/act_03_build/b_core_action/noah_act3_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_03_build/c_resolve/noah_act3_c_background.svg",
+      "middleGround": "assets/svg/act_03_build/c_resolve/noah_act3_c_middle_ground.svg",
+      "foreground": "assets/svg/act_03_build/c_resolve/noah_act3_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wood_dark-plank.svg",
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/water_still-eddies.svg"
   ]
 }

@@ -8,44 +8,112 @@
   "lines": [
     {
       "id": "under_the_palm_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "For twenty years, King Jabin\u2019s power and Sisera\u2019s iron chariots pressed hard upon Israel.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "under_the_palm_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "For twenty years, King Jabin’s power and Sisera’s iron chariots pressed hard upon Israel.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "under_the_palm_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Under a palm between Ramah and Bethel sat Deborah\u2014a prophet, a judge, and a listener.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "under_the_palm_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Under a palm between Ramah and Bethel sat Deborah—a prophet, a judge, and a listener.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "under_the_palm_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "People brought their disputes to her, and she made room for truth, fairness, and peace.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "under_the_palm_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "People brought their disputes to her, and she made room for truth, fairness, and peace.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "under_the_palm_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The Israelites went up to her to have their disputes decided.",
-      "cite": "Judges 4:4\u20135",
-      "width": "1/2",
-      "valign": "middle"
+      "cite": "Judges 4:4–5",
+      "items": [
+        {
+          "id": "under_the_palm_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The Israelites went up to her to have their disputes decided.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "gameChoices": [
@@ -64,7 +132,28 @@
   ],
   "gameSuccess": "Wise judgment makes room for truth and peace.",
   "gameRetry": "Not quite. Wisdom begins by hearing both sides before deciding.",
-  "name": "Ch.1 \u00b7 Under the Palm",
+  "name": "Ch.1 · Under the Palm",
   "assetFolder": "act_01_under_the_palm",
-  "assetStem": "deborah_act1"
+  "assetStem": "deborah_act1",
+  "artFolder": "assets/svg/act_01_under_the_palm",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_01_under_the_palm/a_establish/deborah_act1_a_background.svg",
+      "middleGround": "assets/svg/act_01_under_the_palm/a_establish/deborah_act1_a_middle_ground.svg",
+      "foreground": "assets/svg/act_01_under_the_palm/a_establish/deborah_act1_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_01_under_the_palm/b_core_action/deborah_act1_b_background.svg",
+      "middleGround": "assets/svg/act_01_under_the_palm/b_core_action/deborah_act1_b_middle_ground.svg",
+      "foreground": "assets/svg/act_01_under_the_palm/b_core_action/deborah_act1_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_background.svg",
+      "middleGround": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_middle_ground.svg",
+      "foreground": "assets/svg/act_01_under_the_palm/c_resolve/deborah_act1_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/stone-flagstone.svg"
+  ]
 }

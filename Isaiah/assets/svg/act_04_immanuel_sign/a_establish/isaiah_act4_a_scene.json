@@ -1,0 +1,18 @@
+{
+  "story": "Isaiah",
+  "act": 4,
+  "chapter": "Ch.4 · Immanuel Sign",
+  "artSource": "art/act4_immanuel_sign.md",
+  "artFolder": "assets/svg/act_04_immanuel_sign",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "desert_sand-dunes.svg"
+  ],
+  "layers": {
+    "background": "isaiah_act4_a_background.svg",
+    "middleGround": "isaiah_act4_a_middle_ground.svg",
+    "foreground": "isaiah_act4_a_foreground.svg"
+  }
+}

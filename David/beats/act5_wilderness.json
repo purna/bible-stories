@@ -1,0 +1,265 @@
+{
+  "story": "David",
+  "act": {
+    "id": "wilderness",
+    "name": "Ch.5 · The Wilderness",
+    "source": "../data/act5_wilderness.json",
+    "svg": "placeholder",
+    "bg": "radial-gradient(circle at 40% 50%, #241810, #100a04 65%, #060402)",
+    "particle": "storm"
+  },
+  "beats": [
+    {
+      "id": "wilderness_0",
+      "cite": "1 Samuel 23:25",
+      "items": [
+        {
+          "id": "wilderness_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Saul pursued David through the hills with ten thousand men. The fugitive band moved at night and hid by day, always one step ahead of the king's spear.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "wilderness_1",
+      "items": [
+        {
+          "id": "wilderness_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "One moonless night Saul's army surrounded the cave of En Gedi. The king stepped inside alone, his spear in hand, and found David crouched in the dark.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "wilderness_2",
+      "audioSfx": "assets/audio/sfx/army_crowd.mp3",
+      "items": [
+        {
+          "id": "wilderness_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Here I am, the man who has hunted you across the hills. Cut off this corner of my robe — that is all you need.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "saul",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "wilderness_3",
+      "cite": "Psalm 23",
+      "items": [
+        {
+          "id": "wilderness_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The LORD is my shepherd. I shall not want. He leads me beside still waters — even here, even now.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "wilderness_4",
+      "cite": "1 Samuel 24:16",
+      "items": [
+        {
+          "id": "wilderness_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David reached out with his knife and cut the corner of Saul's robe. No more. He let the king walk out unharmed, and the cave echoed with the king's own weeping.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "wilderness_5",
+      "items": [
+        {
+          "id": "wilderness_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "You are a better man than I am. You have shown kindness to me, and I have chased you to your ruin.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "saul",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "wilderness_6",
+      "items": [
+        {
+          "id": "wilderness_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The throne was offered in the dark of a cave, and the man who could have taken it chose not to. That restraint is the shape of the king to come.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "wilderness_6_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "REstraint IS KINGSHIP",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "wilderness_7",
+      "choices": [
+        {
+          "label": "Sing the mercy of the LORD 🎵",
+          "note": "The men hear hope, and the band holds together."
+        },
+        {
+          "label": "Keep silence and wait 🤫",
+          "note": "There is safety in stillness, and the night is long."
+        }
+      ],
+      "items": [
+        {
+          "id": "wilderness_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David lifted his voice and sang to the men in the cave. The song rose over the cliffs and Saul's army heard it and went home.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

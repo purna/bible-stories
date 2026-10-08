@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Resolve Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Elisha act 8 Ch.8 · The Unseen Army foreground">
+  <metadata>{&quot;story&quot;:&quot;Elisha&quot;,&quot;act&quot;:8,&quot;chapter&quot;:&quot;Ch.8 · The Unseen Army&quot;,&quot;scene&quot;:&quot;C&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#ac8e63" stroke="#201a17" stroke-width="12" opacity=".93"><rect x="0" y="546.4" width="138" height="553.6"/><rect x="1782" y="546.4" width="138" height="553.6"/><rect x="0" y="516.4" width="193" height="55"/><rect x="1727" y="516.4" width="193" height="55"/></g><g opacity=".96"><path d="M1450 1045l25.633824020415545 -52.90693391060829 68.35686405444146 -20.574918743014337 59.812256047636275 73.48185265362262Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1565 1045l26.79849200735986 -59.29331089418381 71.46264535295963 -23.058509792182598 62.529814683839675 82.35182068636641Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1680 1045l22.15565160255879 -65.6976740629077 59.081737606823445 -25.54909546890855 51.69652040597051 91.24676953181624Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/></g><g fill="#a68f6b" stroke="#201a17" stroke-width="10" opacity=".9"><path d="M0 1080V760h245v320zM1675 1080V760h245v320z"/><path d="M0 760h310v70H0zM1610 760h310v70h-310z"/></g>
+  </svg>

@@ -12,60 +12,122 @@
   "lines": [
     {
       "id": "table_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "Babylon, 605 BCE. The young men of Judah had been taken far from home.",
-      "align": "left",
-      "svg": "babylon_city",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "table_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Babylon, 605 BCE. The young men of Judah had been taken far from home.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "babylon_city"
     },
     {
       "id": "table_1",
-      "speaker": "narrator",
       "audioSfx": "assets/audio/sfx/babylon_crowd.mp3",
-      "fx": "type",
-      "delay": 800,
-      "text": "King Nebuchadnezzar ordered his best captives trained for royal service. Among them: Daniel, Hananiah, Mishael, and Azariah.",
-      "align": "center",
-      "svg": "training_house",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "table_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "King Nebuchadnezzar ordered his best captives trained for royal service. Among them: Daniel, Hananiah, Mishael, and Azariah.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "training_house"
     },
     {
       "id": "table_2",
-      "speaker": "nebuchadnezzar",
-      "fx": "bounce",
-      "delay": 800,
-      "text": "You will eat from MY royal table \u2014 the finest food and wine in all Babylon!",
-      "align": "right",
-      "svg": "royal_table",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "table_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "You will eat from MY royal table — the finest food and wine in all Babylon!",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "nebuchadnezzar",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "royal_table"
     },
     {
       "id": "table_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "The food was rich. The wine was powerful. And accepting it would have been the easy thing to do.",
-      "align": "left",
-      "svg": "royal_table",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "table_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The food was rich. The wine was powerful. And accepting it would have been the easy thing to do.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "royal_table"
     },
     {
       "id": "table_4",
-      "speaker": "daniel",
-      "fx": "type",
-      "delay": 800,
-      "text": "I cannot eat the king's food. Not because I'm ungrateful. But because there's one thing I won't give up.",
-      "align": "center",
-      "svg": "daniel_decides",
       "choices": [
         {
-          "label": "Tell the guard directly \ud83d\udde3\ufe0f",
+          "label": "Tell the guard directly 🗣️",
           "note": "Daniel speaks plainly. The guard is surprised but hears him out.",
           "decisionId": "table_direct",
           "tags": [
@@ -75,7 +137,7 @@
           ]
         },
         {
-          "label": "Request a test instead \ud83c\udf3f",
+          "label": "Request a test instead 🌿",
           "note": "Daniel proposes ten days of simple food. The guard nervously agrees.",
           "decisionId": "table_test",
           "tags": [
@@ -84,48 +146,168 @@
           ]
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "table_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I cannot eat the king's food. Not because I'm ungrateful. But because there's one thing I won't give up.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "daniel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_decides"
     },
     {
       "id": "table_5",
-      "speaker": "daniel",
-      "fx": "fade",
-      "delay": 800,
-      "text": "Give us vegetables and water for ten days. Then judge us against the others.",
-      "svg": "daniel_vegetable_test",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "table_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Give us vegetables and water for ten days. Then judge us against the others.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "daniel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_vegetable_test"
     },
     {
       "id": "table_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "At the end of ten days, Daniel and his friends looked healthier than all the young men who ate the king's food.",
-      "svg": "daniel_healthier",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "table_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At the end of ten days, Daniel and his friends looked healthier than all the young men who ate the king's food.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_healthier"
     },
     {
       "id": "table_7",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "text": "They didn't make a speech about it. They didn't demand to be noticed. They just held the line.",
-      "svg": "daniel_serve",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "table_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "They didn't make a speech about it. They didn't demand to be noticed. They just held the line.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_serve"
     },
     {
       "id": "table_8",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "And God gave them knowledge, wisdom, and understanding \u2014 more than all the wise men of Babylon.",
-      "svg": "babylon_city",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "table_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "And God gave them knowledge, wisdom, and understanding — more than all the wise men of Babylon.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "babylon_city"
     }
+  ],
+  "assetFolder": "act_01_table",
+  "artFolder": "assets/svg/act_01_table",
+  "assetStem": "daniel_act1",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_01_table/a_establish/daniel_act1_a_background.svg",
+      "middleGround": "assets/svg/act_01_table/a_establish/daniel_act1_a_middle_ground.svg",
+      "foreground": "assets/svg/act_01_table/a_establish/daniel_act1_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_01_table/b_core_action/daniel_act1_b_background.svg",
+      "middleGround": "assets/svg/act_01_table/b_core_action/daniel_act1_b_middle_ground.svg",
+      "foreground": "assets/svg/act_01_table/b_core_action/daniel_act1_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_01_table/c_resolve/daniel_act1_c_background.svg",
+      "middleGround": "assets/svg/act_01_table/c_resolve/daniel_act1_c_middle_ground.svg",
+      "foreground": "assets/svg/act_01_table/c_resolve/daniel_act1_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/water_still-eddies.svg"
   ]
 }

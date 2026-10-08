@@ -1,0 +1,24 @@
+{
+  "story": "Enoch",
+  "act": 4,
+  "chapter": "Ch.4 · Years of Faithfulness",
+  "artSource": "art/act4_years_of_faithfulness.md",
+  "artFolder": "assets/svg/act_04_years_of_faithfulness",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "grass-tufts.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "enoch_act4_b_background.svg",
+    "middleGround": "enoch_act4_b_middle_ground.svg",
+    "foreground": "enoch_act4_b_foreground.svg"
+  }
+}

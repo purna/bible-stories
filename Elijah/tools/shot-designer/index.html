@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Shot Designer — Eiljah</title>
+<!--
+  SCENE DIRECTOR NOTES — Eiljah (1 Kings 17–19, 21; 2 Kings 2)
+  9 scenes. Descriptions follow the biblical account and give
+  staging direction for the scene designer: setting, characters, key props,
+  light and mood. Reference board for iconic biblical compositions: the
+  "famous bible scenes" ideas board on Pinterest.
+
+  1. The Drought
+     Elijah the Tishbite proclaims a drought and is sent to the brook Cherith, where ravens bring him bread and meat. Stage: a cracked brook bed in a limestone wadi, a lone prophet in patched cloth, ravens landing with crusts; dust, heat shimmer, a dry riverbed.
+
+  2. The Widow's Jar
+     At Zarephath a widow shares her last flour and oil, and Elijah keeps her jar and bowl from emptying through the drought. Stage: a tiny Phoenician kitchen, a handful of flour, a cruse of oil, a boy gathering sticks; a miracle of measure in a windowless room, one lamp.
+
+  3. The Child Restored
+     The widow's son falls ill and dies; Elijah carries him upstairs, stretches himself on the boy three times, and prays until life returns. Stage: a rooftop chamber at night, the prophet on the bed, the boy still, then stirring; a single oil lamp, deep shadow, held breath.
+
+  4. Mount Carmel
+     Elijah repairs the altar with twelve stones, drenches it with water, and calls down fire while the prophets of Baal cry out in vain. Stage: a ruined altar on a bare mountain headland, twelve stones, water running, a pillar of fire at dusk; the sea below, a crowd of prophets in panic.
+
+  5. The Rain Returns
+     Elijah prays seven times, a cloud no bigger than a man's hand rises over the sea, and he runs before Ahab's chariot to Jezreel. Stage: a headland at sunset, a small cloud, the sky darkening, the prophet running with his cloak flying; rain sweeping in, black clouds and gold rifts.
+
+  6. Under the Broom Tree
+     Fleeing Jezebel, Elijah collapses under a broom tree and asks to die; an angel wakes him with bread and water. Stage: a scorched wilderness, a lone broom bush, a sleeping figure, a shining messenger kneeling beside him; harsh noon light turning gentle.
+
+  7. The Quiet Voice
+     At Horeb the Lord passes in wind, earthquake and fire — and speaks in a sound of sheer silence; Elijah wraps his face in his mantle. Stage: a cave mouth on the mountain, the prophet listening in the dark, the wind outside bending the scrub; an enormous stillness in the frame.
+
+  8. Naboth's Vineyard
+     Ahab and Jezebel seize Naboth's ancestral vineyard by false witness, and Elijah confronts the king in the field. Stage: a vineyard on a terraced slope at harvest, a dead man's land being measured, the prophet appearing at the gate; ripe purple grapes, cold shadow.
+
+  9. Chariots of Fire
+     Elijah and Elisha cross the Jordan, and a chariot of fire with horses of fire separates them as Elijah goes up in a whirlwind. Stage: the river at dawn, a flaming chariot in a vortex, the mantle falling to the younger prophet; fire reflected on the water, the storm of glory.
+  -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Lets the js/ ES modules import three; js/three.js prefers the UMD
+         global when present so only one three.js instance is ever created. -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <aside id="side">
+            <div class="hd"><b>Shots</b><button id="add" class="pr">+ Add shot</button></div>
+            <div class="scn">
+                <label for="scn">Scene</label>
+                <select id="scn"></select>
+                <button id="scnload" class="pr" disabled>Load</button>
+                <small id="scne"></small>
+            </div>
+            <div id="shots"></div>
+            <div class="exp"><button id="xo" class="pr">Import / Export…</button></div>
+        </aside>
+        <main id="vp">
+            <div id="frm"><span id="pl"></span></div>
+            <div id="fc">
+                <div id="fg">
+                    <div class="g">
+                        <b>Move</b><button data-k="mL">◀</button><button data-k="mU">▲</button><button
+                            data-k="mD">▼</button><button data-k="mR">▶</button>
+                    </div>
+                    <div class="g">
+                        <b>Rotate</b><button data-k="rL">◀</button><button data-k="rU">▲</button><button
+                            data-k="rD">▼</button><button data-k="rR">▶</button>
+                    </div>
+                    <div class="g"><b>Zoom</b><button data-k="zI">＋</button><button data-k="zO">－</button></div>
+                </div>
+                <button id="al" class="pr" hidden>Align frame to this view</button>
+            </div>
+        </main>
+        <footer id="tl">
+            <div class="tr">
+                <button id="stp" title="Stop and return to edit view">⏹</button><button id="pp"
+                    class="pr">▶</button><button id="pc">Play shot</button><button id="pa">Play all</button><span
+                    id="tcd">0:00.0</span><span>/ <span id="tt"></span></span><label><input type="checkbox" id="lp"
+                        checked /> Loop</label><label><input type="checkbox" id="shp" /> Show path</label>
+            </div>
+            <div id="tk">
+                <div id="rl"></div>
+                <div id="bl"></div>
+                <div id="ph"></div>
+            </div>
+        </footer>
+    </div>
+    <div id="xm" hidden>
+        <div class="mb">
+            <div class="hd" style="padding: 0 0 8px"><b>Import / Export</b><button id="xc">✕ Close</button></div>
+            <h4>Export scene</h4>
+            <div class="xl">
+                <button data-x="sj"><b>Scene 3D JSON</b><small>3D scene only (three.js format)</small></button><button
+                    data-x="sJ"><b>3D JS file</b><small>initScene1(group) function, Pixel3D style</small></button>
+                <button data-x="tj"><b>Scene + timeline JSON</b><small>3D scene, shots, transitions,
+                        curves</small></button><button data-x="tJ"><b>Scene + timeline JS</b><small>Same data as a .js
+                        file</small></button>
+            </div>
+            <h4>Render</h4>
+            <div class="xl">
+                <button data-x="png"><b>Stills (PNG .zip)</b><small>Frames at the current viewport
+                        size</small></button>
+                <button data-x="mp4"><b>Video (MP4)</b><small>H.264 via WebCodecs +
+                        mp4-muxer</small></button>
+                <label class="f">Stills rate<select id="sf">
+                        <option value="1">Every 1 second</option>
+                        <option value="12">12 per second</option>
+                    </select></label><label class="f">Video fps<select id="vf">
+                        <option>24</option>
+                        <option selected>30</option>
+                    </select></label>
+            </div>
+            <h4>Timeline only</h4>
+            <div class="ed"><button id="ex">Timeline JSON</button>
+                <button id="es">Each shot (separate files)</button>
+            </div>
+            <h4>Import</h4>
+            <div class="ed">
+                <button id="ld">Load JSON…</button><button id="ld2">Load 3D JS…</button><button id="pj">Paste
+                    JSON</button>
+            </div>
+            <div id="xp"></div>
+            <input type="file" id="fi" accept=".json" multiple hidden /><input type="file" id="fj" accept=".js" multiple
+                hidden />
+        </div>
+    </div>
+    <div id="jm" hidden>
+        <textarea id="jt"></textarea>
+        <div class="ed"><button id="jl" class="pr">Load this JSON</button><button id="jx">Close</button></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mp4-muxer@5/build/mp4-muxer.js"></script>
+
+    <!-- three.js also arrives as a UMD global for js/three.js to reuse. -->
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

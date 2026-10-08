@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Core Action Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Jeremiah act 1 Ch.1 · The Call foreground">
+  <metadata>{&quot;story&quot;:&quot;Jeremiah&quot;,&quot;act&quot;:1,&quot;chapter&quot;:&quot;Ch.1 · The Call&quot;,&quot;scene&quot;:&quot;B&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;city&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#655748" stroke="#1f1b1a" stroke-width="12" opacity=".93"><rect x="0" y="530.4" width="168.00000000000003" height="569.6"/><rect x="1752" y="530.4" width="168.00000000000003" height="569.6"/><rect x="0" y="500.4" width="223.00000000000003" height="55"/><rect x="1697" y="500.4" width="223.00000000000003" height="55"/></g><g opacity=".9"><path d="M45 1080v-155.2080213036854" stroke="#af8048" stroke-width="9"/><path d="M45 979.1147861526044l34 -28m-34 60l30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/><path d="M107 1080v-213.47798822186888" stroke="#af8048" stroke-width="9"/><path d="M107 941.2393076557852l34 -28m-34 60l30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/><path d="M169 1080v-172.39230275577867" stroke="#af8048" stroke-width="9"/><path d="M169 967.9450032087439l34 -28m-34 60l30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/><path d="M1690 1080v-190.59083359111102" stroke="#af8048" stroke-width="9"/><path d="M1690 956.1159581657778l-34 -28m--34 60l-30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/><path d="M1752 1080v-168.79083789456638" stroke="#af8048" stroke-width="9"/><path d="M1752 970.2859553685319l-34 -28m--34 60l-30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/><path d="M1814 1080v-119.49788026213646" stroke="#af8048" stroke-width="9"/><path d="M1814 1002.3263778296113l-34 -28m--34 60l-30 -24" stroke="#c79356" stroke-width="13" stroke-linecap="round"/></g><g fill="none" stroke="#634832" stroke-width="32.400000000000006" stroke-linecap="round" opacity=".92"><path d="M75 1080V650L350 455"/><path d="M1845 1080V720L1640 565"/><path d="M40 905H310M1650 925H1900"/></g>
+  </svg>

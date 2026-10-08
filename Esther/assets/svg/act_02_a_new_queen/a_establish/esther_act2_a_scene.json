@@ -1,0 +1,18 @@
+{
+  "story": "Esther",
+  "act": 2,
+  "chapter": "Ch.2 · A New Queen",
+  "artSource": "art/act2_a_new_queen.md",
+  "artFolder": "assets/svg/act_02_a_new_queen",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "hammered_gold-hammered.svg"
+  ],
+  "layers": {
+    "background": "esther_act2_a_background.svg",
+    "middleGround": "esther_act2_a_middle_ground.svg",
+    "foreground": "esther_act2_a_foreground.svg"
+  }
+}

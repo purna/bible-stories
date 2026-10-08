@@ -11,130 +11,362 @@
   "lines": [
     {
       "id": "creation_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "In the beginning, God created the heavens and the earth. The earth was formless and empty \u2014 and darkness was over the surface of the deep.",
-      "align": "left",
-      "svg": "creation_cosmos",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "creation_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "In the beginning, God created the heavens and the earth. The earth was formless and empty — and darkness was over the surface of the deep.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "creation_cosmos"
     },
     {
       "id": "creation_1",
-      "sfx": "LET THERE BE LIGHT!",
       "audioSfx": "assets/audio/sfx/creation_light.mp3",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "text": "Let there be light.",
-      "align": "center",
-      "svg": "creation_light",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "creation_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Let there be light.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "creation_1_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "LET THERE BE LIGHT!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "creation_light"
     },
     {
       "id": "creation_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "And God saw that the light was good. He separated the light from the darkness \u2014 calling the light 'Day' and the darkness 'Night.'",
-      "align": "center",
-      "svg": "creation_separation",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "creation_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "And God saw that the light was good. He separated the light from the darkness — calling the light 'Day' and the darkness 'Night.'",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "creation_separation"
     },
     {
       "id": "creation_3",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
       "interaction": "ordering",
-      "text": "Now watch the days unfold. Place each part of the world in the order God spoke it.",
-      "align": "center",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "creation_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Now watch the days unfold. Place each part of the world in the order God spoke it.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "creation_4",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "On the second day, God formed the sky \u2014 a vault between the waters above and the waters below. And it was so.",
-      "align": "right",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "creation_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "On the second day, God formed the sky — a vault between the waters above and the waters below. And it was so.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "creation_5",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "On the third day, the waters gathered. Dry ground appeared. And every seed-bearing plant and tree with fruit burst forth across the earth.",
-      "align": "left",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "creation_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "On the third day, the waters gathered. Dry ground appeared. And every seed-bearing plant and tree with fruit burst forth across the earth.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "creation_6",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "text": "On the fourth day, God set the sun, moon, and stars in the vault to govern day and night.",
-      "align": "center",
       "choices": [
         {
-          "label": "Admire the vastness \u2728",
-          "note": "The cosmos stretches beyond counting \u2014 each star named by Him."
+          "label": "Admire the vastness ✨",
+          "note": "The cosmos stretches beyond counting — each star named by Him."
         },
         {
-          "label": "Wonder at their purpose \ud83d\udd2d",
+          "label": "Wonder at their purpose 🔭",
           "note": "Lights to mark seasons, days, and years. Order from chaos."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "creation_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "On the fourth day, God set the sun, moon, and stars in the vault to govern day and night.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "creation_7",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "On the fifth day, the waters teemed with living creatures, and birds filled the sky. On the sixth, the land animals.",
-      "align": "right",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "creation_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "On the fifth day, the waters teemed with living creatures, and birds filled the sky. On the sixth, the land animals.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "creation_8",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "text": "Then God said, 'Let us make mankind in our image, to rule over every living creature.' And it was so.",
-      "svg": "creation_days",
-      "align": "center",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "creation_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Then God said, 'Let us make mankind in our image, to rule over every living creature.' And it was so.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "creation_days"
     },
     {
       "id": "creation_9",
-      "speaker": "god",
-      "fx": "fade",
-      "delay": 800,
-      "text": "Let us make mankind in our image, to have dominion \u2014",
-      "align": "center",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "creation_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Let us make mankind in our image, to have dominion —",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "creation_10",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "text": "Male and female, in our image, we create them.",
-      "align": "center",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "creation_10_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Male and female, in our image, we create them.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
+  ],
+  "assetFolder": "act_01_creation",
+  "artFolder": "assets/svg/act_01_creation",
+  "assetStem": "adam_act1",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_01_creation/a_establish/adam_act1_a_background.svg",
+      "middleGround": "assets/svg/act_01_creation/a_establish/adam_act1_a_middle_ground.svg",
+      "foreground": "assets/svg/act_01_creation/a_establish/adam_act1_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_01_creation/b_core_action/adam_act1_b_background.svg",
+      "middleGround": "assets/svg/act_01_creation/b_core_action/adam_act1_b_middle_ground.svg",
+      "foreground": "assets/svg/act_01_creation/b_core_action/adam_act1_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_01_creation/c_resolve/adam_act1_c_background.svg",
+      "middleGround": "assets/svg/act_01_creation/c_resolve/adam_act1_c_middle_ground.svg",
+      "foreground": "assets/svg/act_01_creation/c_resolve/adam_act1_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/leaves-canopy.svg",
+    "assets/materials/wood_oak-planks3.svg"
   ]
 }

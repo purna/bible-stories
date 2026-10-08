@@ -1,57 +1,9 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#2a1a10"/>
-      <stop offset="100%" style="stop-color:#060402"/>
-    </linearGradient>
-    <linearGradient id="grass" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#3a5a2a"/>
-      <stop offset="100%" style="stop-color:#1a2a14"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#bg)"/>
-  <g>
-    <path d="M30 600 Q24 560 34 520 Q40 560 30 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M62 600 Q56 541.5 66 483 Q72 541.5 62 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M94 600 Q88 523 98 446 Q104 523 94 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M126 600 Q120 504.5 130 409 Q136 504.5 126 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M158 600 Q152 546 162 492 Q168 546 158 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M190 600 Q184 527.5 194 455 Q200 527.5 190 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M222 600 Q216 509 226 418 Q232 509 222 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M254 600 Q248 550.5 258 501 Q264 550.5 254 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M286 600 Q280 532 290 464 Q296 532 286 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M318 600 Q312 513.5 322 427 Q328 513.5 318 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M350 600 Q344 555 354 510 Q360 555 350 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M382 600 Q376 536.5 386 473 Q392 536.5 382 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M414 600 Q408 518 418 436 Q424 518 414 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M446 600 Q440 559.5 450 519 Q456 559.5 446 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M478 600 Q472 541 482 482 Q488 541 478 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M510 600 Q504 522.5 514 445 Q520 522.5 510 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M542 600 Q536 504 546 408 Q552 504 542 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M574 600 Q568 545.5 578 491 Q584 545.5 574 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M606 600 Q600 527 610 454 Q616 527 606 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M638 600 Q632 508.5 642 417 Q648 508.5 638 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M670 600 Q664 550 674 500 Q680 550 670 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M702 600 Q696 531.5 706 463 Q712 531.5 702 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M734 600 Q728 513 738 426 Q744 513 734 600" fill="url(#grass)" opacity="0.85"/>
-    <path d="M766 600 Q760 554.5 770 509 Q776 554.5 766 600" fill="url(#grass)" opacity="0.85"/>
-    <circle cx="60" cy="560" r="5" fill="#f2c14e" opacity="0.9"/><circle cx="68" cy="554" r="3" fill="#f2c14e" opacity="0.7"/><circle cx="53" cy="555" r="3" fill="#f2c14e" opacity="0.7"/>
-    <circle cx="130" cy="537" r="5" fill="#e05a47" opacity="0.9"/><circle cx="138" cy="531" r="3" fill="#e05a47" opacity="0.7"/><circle cx="123" cy="532" r="3" fill="#e05a47" opacity="0.7"/>
-    <circle cx="200" cy="514" r="5" fill="#ffd342" opacity="0.9"/><circle cx="208" cy="508" r="3" fill="#ffd342" opacity="0.7"/><circle cx="193" cy="509" r="3" fill="#ffd342" opacity="0.7"/>
-    <circle cx="270" cy="551" r="5" fill="#f6a0c0" opacity="0.9"/><circle cx="278" cy="545" r="3" fill="#f6a0c0" opacity="0.7"/><circle cx="263" cy="546" r="3" fill="#f6a0c0" opacity="0.7"/>
-    <circle cx="340" cy="528" r="5" fill="#f2c14e" opacity="0.9"/><circle cx="348" cy="522" r="3" fill="#f2c14e" opacity="0.7"/><circle cx="333" cy="523" r="3" fill="#f2c14e" opacity="0.7"/>
-    <circle cx="410" cy="505" r="5" fill="#e05a47" opacity="0.9"/><circle cx="418" cy="499" r="3" fill="#e05a47" opacity="0.7"/><circle cx="403" cy="500" r="3" fill="#e05a47" opacity="0.7"/>
-    <circle cx="480" cy="542" r="5" fill="#ffd342" opacity="0.9"/><circle cx="488" cy="536" r="3" fill="#ffd342" opacity="0.7"/><circle cx="473" cy="537" r="3" fill="#ffd342" opacity="0.7"/>
-    <circle cx="550" cy="519" r="5" fill="#f6a0c0" opacity="0.9"/><circle cx="558" cy="513" r="3" fill="#f6a0c0" opacity="0.7"/><circle cx="543" cy="514" r="3" fill="#f6a0c0" opacity="0.7"/>
-    <circle cx="620" cy="556" r="5" fill="#f2c14e" opacity="0.9"/><circle cx="628" cy="550" r="3" fill="#f2c14e" opacity="0.7"/><circle cx="613" cy="551" r="3" fill="#f2c14e" opacity="0.7"/>
-    <circle cx="690" cy="533" r="5" fill="#e05a47" opacity="0.9"/><circle cx="698" cy="527" r="3" fill="#e05a47" opacity="0.7"/><circle cx="683" cy="528" r="3" fill="#e05a47" opacity="0.7"/>
-    <path d="M120 600 Q110 530 126 460 Q136 530 120 600" fill="#5a7a3a" opacity="0.7"/>
-    <path d="M230 600 Q220 503.5 236 407 Q246 503.5 230 600" fill="#5a7a3a" opacity="0.7"/>
-    <path d="M340 600 Q330 517 346 434 Q356 517 340 600" fill="#5a7a3a" opacity="0.7"/>
-    <path d="M450 600 Q440 490.5 456 381 Q466 490.5 450 600" fill="#5a7a3a" opacity="0.7"/>
-    <path d="M560 600 Q550 504 566 408 Q576 504 560 600" fill="#5a7a3a" opacity="0.7"/>
-    <path d="M670 600 Q660 517.5 676 435 Q686 517.5 670 600" fill="#5a7a3a" opacity="0.7"/>
-  </g>
-  <text x="400" y="540" font-family="system-ui" font-size="13" fill="rgba(255,255,255,0.25)" text-anchor="middle">Core Action Background Background</text>
-  <text x="400" y="560" font-family="system-ui" font-size="11" fill="rgba(255,255,255,0.15)" text-anchor="middle">Replace with production SVG</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Nehemiah act 3 Ch.3 · Night Inspection background">
+  <metadata>{&quot;story&quot;:&quot;Nehemiah&quot;,&quot;act&quot;:3,&quot;chapter&quot;:&quot;Ch.3 · Night Inspection&quot;,&quot;scene&quot;:&quot;B&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;materials&quot;:[&quot;stone-flagstone.svg&quot;,&quot;stone-rough.svg&quot;,&quot;wall_brick-herringbone.svg&quot;,&quot;wall_brick-running.svg&quot;,&quot;wall_brick-stacked.svg&quot;,&quot;wood_oak-plank.svg&quot;,&quot;wood_oak-planks3.svg&quot;],&quot;environment&quot;:&quot;city&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#455b72"/><stop offset="1" stop-color="#d1af7d"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8e7b65"/><stop offset="1" stop-color="#554a41"/></linearGradient><pattern id="act-material" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M0 0H72V72H0Z M0 24H72M0 48H72M24 0V24M50 24V48M24 48V72" fill="none" stroke="#6f5137" stroke-width="2" opacity=".52"/></pattern></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1536.3931429712102" cy="230.71521734818816" r="56" fill="#efe4bd" opacity=".92"/><circle cx="894.4" cy="266.1" r="2.8" fill="#fff" opacity="0.87"/><circle cx="1000.8" cy="91.6" r="3.4" fill="#fff" opacity="0.88"/><circle cx="1546.2" cy="288.3" r="3.3" fill="#fff" opacity="0.58"/><circle cx="734.3" cy="361.6" r="3.0" fill="#fff" opacity="0.56"/><circle cx="682.9" cy="369.0" r="1.0" fill="#fff" opacity="0.75"/><circle cx="1788.8" cy="404.0" r="2.8" fill="#fff" opacity="0.60"/><circle cx="1398.1" cy="248.8" r="1.4" fill="#fff" opacity="0.74"/><circle cx="1768.7" cy="430.5" r="1.9" fill="#fff" opacity="0.88"/><circle cx="578.3" cy="184.0" r="1.4" fill="#fff" opacity="0.71"/><circle cx="680.5" cy="457.1" r="3.1" fill="#fff" opacity="0.80"/><circle cx="1237.4" cy="459.0" r="1.1" fill="#fff" opacity="0.43"/><circle cx="1557.2" cy="332.1" r="1.4" fill="#fff" opacity="0.66"/><circle cx="363.6" cy="162.6" r="3.1" fill="#fff" opacity="0.80"/><circle cx="1713.1" cy="299.2" r="1.7" fill="#fff" opacity="0.70"/><circle cx="470.0" cy="270.3" r="1.6" fill="#fff" opacity="0.81"/><circle cx="1315.6" cy="426.9" r="1.6" fill="#fff" opacity="0.85"/><circle cx="1229.9" cy="237.5" r="3.7" fill="#fff" opacity="0.45"/><circle cx="696.7" cy="313.5" r="3.4" fill="#fff" opacity="0.71"/><circle cx="1265.6" cy="451.1" r="2.2" fill="#fff" opacity="0.40"/><circle cx="1663.7" cy="142.0" r="3.8" fill="#fff" opacity="0.86"/><circle cx="544.2" cy="402.7" r="3.7" fill="#fff" opacity="0.70"/><circle cx="1055.2" cy="459.3" r="4.0" fill="#fff" opacity="0.61"/><circle cx="991.8" cy="289.0" r="1.1" fill="#fff" opacity="0.39"/><circle cx="1646.8" cy="268.2" r="2.7" fill="#fff" opacity="0.40"/><circle cx="1728.5" cy="189.7" r="2.9" fill="#fff" opacity="0.53"/><circle cx="585.7" cy="108.7" r="3.1" fill="#fff" opacity="0.58"/><circle cx="961.7" cy="204.9" r="2.2" fill="#fff" opacity="0.88"/><circle cx="1176.0" cy="109.3" r="2.0" fill="#fff" opacity="0.45"/><circle cx="815.8" cy="243.1" r="1.5" fill="#fff" opacity="0.88"/><circle cx="888.2" cy="397.3" r="1.2" fill="#fff" opacity="0.36"/><circle cx="1719.3" cy="442.4" r="3.6" fill="#fff" opacity="0.52"/><circle cx="606.1" cy="277.3" r="2.7" fill="#fff" opacity="0.66"/><circle cx="1460.8" cy="42.9" r="3.8" fill="#fff" opacity="0.80"/><circle cx="1529.6" cy="102.4" r="3.1" fill="#fff" opacity="0.48"/>
+  <g fill="#8e7b65" opacity=".72"><rect x="0" y="584.4816074460745" width="157.49256674433127" height="221.91839255392551"/><rect x="190.3547663288191" y="458.1996762692928" width="191.44359817029908" height="348.20032373070717"/><rect x="406.90621921792626" y="603.8803977832198" width="149.92842944338918" height="202.51960221678019"/><rect x="607.8778257640079" y="518.6485994175076" width="112.0084693073295" height="287.75140058249235"/><rect x="743.0231978790835" y="546.1803274914622" width="169.30082697188482" height="260.21967250853777"/><rect x="931.1204318259843" y="609.7917734026909" width="152.67776649212465" height="196.6082265973091"/><rect x="1099.2531772772782" y="519.8439320117235" width="157.46860412182286" height="286.5560679882765"/><rect x="1274.1316358023323" y="489.0027965545654" width="117.19937931513414" height="317.39720344543457"/><rect x="1413.1258448190056" y="561.1051930055022" width="261.24033922329545" height="245.29480699449778"/><rect x="1709.5139281312004" y="477.40427493453024" width="250.09240966057405" height="328.99572506546974"/></g>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/><path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#act-material)" opacity=".16"/>
+  </svg>

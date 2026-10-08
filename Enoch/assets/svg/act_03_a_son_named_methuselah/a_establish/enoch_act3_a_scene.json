@@ -1,0 +1,20 @@
+{
+  "story": "Enoch",
+  "act": 3,
+  "chapter": "Ch.3 · A Son Named Methuselah",
+  "artSource": "art/act3_a_son_named_methuselah.md",
+  "artFolder": "assets/svg/act_03_a_son_named_methuselah",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "enoch_act3_a_background.svg",
+    "middleGround": "enoch_act3_a_middle_ground.svg",
+    "foreground": "enoch_act3_a_foreground.svg"
+  }
+}

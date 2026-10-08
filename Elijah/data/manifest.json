@@ -1,0 +1,225 @@
+{
+  "version": "2.0.0",
+  "acts": [
+    {
+      "id": "drought",
+      "name": "The Drought",
+      "file": "act1_drought.json",
+      "svg": "samaria_court",
+      "particle": "dust",
+      "bg": "radial-gradient(circle at 50% 10%, #f2a65a, #774f38 80%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_drought/a_establish/elijah_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_drought/a_establish/elijah_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_drought/a_establish/elijah_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_drought/b_core_action/elijah_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_drought/b_core_action/elijah_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_drought/b_core_action/elijah_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_drought/c_resolve/elijah_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_drought/c_resolve/elijah_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_drought/c_resolve/elijah_act1_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_01_drought",
+      "assetStem": "elijah_act1",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/fabric_weave-basket.svg"
+      ]
+    },
+    {
+      "id": "widow",
+      "name": "The Widow of Zarephath",
+      "file": "act2_widow.json",
+      "svg": "zarephath_town",
+      "particle": "dream",
+      "bg": "radial-gradient(circle at 50% 20%, #c6a776, #8c6c4f 70%, #594236)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_widow/a_establish/elijah_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_widow/a_establish/elijah_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_widow/a_establish/elijah_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_widow/b_core_action/elijah_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_widow/b_core_action/elijah_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_widow/b_core_action/elijah_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_widow/c_resolve/elijah_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_widow/c_resolve/elijah_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_widow/c_resolve/elijah_act2_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_02_widow",
+      "assetStem": "elijah_act2",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg"
+      ]
+    },
+    {
+      "id": "carmel",
+      "name": "Mount Carmel",
+      "file": "act3_carmel.json",
+      "svg": "mount_carmel_altars",
+      "particle": "wind_carmel",
+      "bg": "radial-gradient(circle at 50% 80%, #8b2500, #3d1200 60%, #1a0700)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_carmel/a_establish/elijah_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_carmel/a_establish/elijah_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_carmel/a_establish/elijah_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_carmel/b_core_action/elijah_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_carmel/b_core_action/elijah_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_carmel/b_core_action/elijah_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_carmel/c_resolve/elijah_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_carmel/c_resolve/elijah_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_carmel/c_resolve/elijah_act3_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_03_carmel",
+      "assetStem": "elijah_act3",
+      "materials": [
+        "assets/materials/stone-flagstone.svg"
+      ]
+    },
+    {
+      "id": "flight",
+      "name": "The Flight to Horeb",
+      "file": "act4_flight.json",
+      "svg": "wilderness_tree",
+      "particle": "dust",
+      "bg": "radial-gradient(circle at 50% 50%, #5a3e2b, #3b2a1a 80%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_flight/a_establish/elijah_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_flight/a_establish/elijah_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_flight/a_establish/elijah_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_flight/b_core_action/elijah_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_flight/b_core_action/elijah_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_flight/b_core_action/elijah_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_flight/c_resolve/elijah_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_flight/c_resolve/elijah_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_flight/c_resolve/elijah_act4_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_04_flight",
+      "assetStem": "elijah_act4",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/water_fast-churn.svg"
+      ]
+    },
+    {
+      "id": "voice",
+      "name": "The Still, Small Voice",
+      "file": "act5_voice.json",
+      "svg": "horeb_cave",
+      "particle": "constellation",
+      "bg": "radial-gradient(circle at 50% 20%, #0d1b2a, #061224 65%, #030b18)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_voice/a_establish/elijah_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_voice/a_establish/elijah_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_voice/a_establish/elijah_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_voice/b_core_action/elijah_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_voice/b_core_action/elijah_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_voice/b_core_action/elijah_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_voice/c_resolve/elijah_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_voice/c_resolve/elijah_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_voice/c_resolve/elijah_act5_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_05_voice",
+      "assetStem": "elijah_act5",
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/fabric_weave-basket.svg"
+      ]
+    },
+    {
+      "id": "vineyard",
+      "name": "Naboth's Vineyard",
+      "file": "act6_vineyard.json",
+      "svg": "naboths_vineyard",
+      "particle": "dream",
+      "bg": "radial-gradient(circle at 20% 80%, #4a6b3c, #2d4a2c 70%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_vineyard/a_establish/elijah_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_vineyard/a_establish/elijah_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_vineyard/a_establish/elijah_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_vineyard/b_core_action/elijah_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_vineyard/b_core_action/elijah_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_vineyard/b_core_action/elijah_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_vineyard/c_resolve/elijah_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_vineyard/c_resolve/elijah_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_vineyard/c_resolve/elijah_act6_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_06_vineyard",
+      "assetStem": "elijah_act6",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/leaves-canopy.svg"
+      ]
+    },
+    {
+      "id": "chariot",
+      "name": "The Chariot of Fire",
+      "file": "act7_chariot.json",
+      "svg": "jordan_river",
+      "particle": "wind_chariot",
+      "bg": "radial-gradient(circle at 50% 50%, #ffde7d, #ff914d 80%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_chariot/a_establish/elijah_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_chariot/a_establish/elijah_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_chariot/a_establish/elijah_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_chariot/b_core_action/elijah_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_chariot/b_core_action/elijah_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_chariot/b_core_action/elijah_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_07_chariot",
+      "assetStem": "elijah_act7",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg"
+      ]
+    }
+  ]
+}

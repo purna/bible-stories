@@ -1,0 +1,34 @@
+{
+  "story": "Abraham",
+  "act": {
+    "id": "act6_hagar_in_the_wilderness",
+    "name": "Ch.6 · Hagar in the Wilderness",
+    "source": "../art/act6_hagar_in_the_wilderness.md"
+  },
+  "beats": [
+    {
+      "id": "a_establish",
+      "type": "visual",
+      "name": "establishing",
+      "description": "wide framing of the setting: a lone palm and hot spring in bleached sand"
+    },
+    {
+      "id": "b_core_action",
+      "type": "visual",
+      "name": "core action",
+      "description": "the scene's central movement and characters"
+    },
+    {
+      "id": "c_resolve",
+      "type": "visual",
+      "name": "resolution",
+      "description": "the beat's outcome, holding the emotional note"
+    },
+    {
+      "id": "interactive-game",
+      "type": "game",
+      "description": "Find water and listen before acting.",
+      "mechanic": "gather-with-care"
+    }
+  ]
+}

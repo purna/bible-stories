@@ -1,79 +1,227 @@
 {
   "id": "door",
-  "name": "Ch.5 \u00b7 The Door Shuts",
+  "name": "Ch.5 · The Door Shuts",
   "bg": "radial-gradient(circle at 50% 20%, #101828, #060c18 65%, #020408)",
   "particle": "storm",
   "svg": "ch5_dark_clouds",
   "lines": [
     {
       "id": "door_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "svg": "ch5_dark_clouds",
-      "text": "On the seventh day, the sky changed. The horizon turned the colour of a bruise.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "door_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "On the seventh day, the sky changed. The horizon turned the colour of a bruise.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch5_dark_clouds"
     },
     {
       "id": "door_1",
-      "speaker": "narrator",
       "audioSfx": "assets/audio/sfx/flood_thunder.mp3",
-      "fx": "shake",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch5_first_rain",
-      "sfx": "RUMBLE...",
-      "text": "The first drops fell. Then more. Then the sky opened.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "door_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The first drops fell. Then more. Then the sky opened.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "door_1_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "RUMBLE...",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "ch5_first_rain"
     },
     {
       "id": "door_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch5_first_rain",
-      "text": "Great springs burst from the deep. Floodgates of heaven broke open.",
       "cite": "Genesis 7:11",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "door_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Great springs burst from the deep. Floodgates of heaven broke open.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch5_first_rain"
     },
     {
       "id": "door_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "right",
-      "svg": "ch5_door_closes",
-      "text": "And then \u2014 from the outside \u2014 the LORD shut the door.",
       "cite": "Genesis 7:16",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "door_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "And then — from the outside — the LORD shut the door.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch5_door_closes"
     },
     {
       "id": "door_4",
-      "speaker": "noah",
-      "fx": "type",
-      "delay": 800,
-      "align": "left",
-      "svg": "ch5_door_closes",
-      "text": "That sound. The latch. From the outside.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "door_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "That sound. The latch. From the outside.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "noah",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch5_door_closes"
     },
     {
       "id": "door_5",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch5_door_closes",
-      "text": "No more choices. No more preparation. No more anything to do but endure.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "door_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "No more choices. No more preparation. No more anything to do but endure.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch5_door_closes"
     }
+  ],
+  "assetFolder": "act_05_door",
+  "artFolder": "assets/svg/act_05_door",
+  "assetStem": "noah_act5",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_05_door/a_establish/noah_act5_a_background.svg",
+      "middleGround": "assets/svg/act_05_door/a_establish/noah_act5_a_middle_ground.svg",
+      "foreground": "assets/svg/act_05_door/a_establish/noah_act5_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_05_door/b_core_action/noah_act5_b_background.svg",
+      "middleGround": "assets/svg/act_05_door/b_core_action/noah_act5_b_middle_ground.svg",
+      "foreground": "assets/svg/act_05_door/b_core_action/noah_act5_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_05_door/c_resolve/noah_act5_c_background.svg",
+      "middleGround": "assets/svg/act_05_door/c_resolve/noah_act5_c_middle_ground.svg",
+      "foreground": "assets/svg/act_05_door/c_resolve/noah_act5_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wood_dark-plank.svg",
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/water_still-eddies.svg"
   ]
 }

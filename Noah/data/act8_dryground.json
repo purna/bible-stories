@@ -1,78 +1,227 @@
 {
   "id": "dryground",
-  "name": "Ch.8 \u00b7 Dry Ground",
+  "name": "Ch.8 · Dry Ground",
   "bg": "radial-gradient(circle at 50% 40%, #1a3010, #0c1a08 65%, #050a04)",
   "particle": "dawn",
   "svg": "ch8_ramp_down",
   "lines": [
     {
       "id": "dryground_0",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch8_command_leave",
-      "text": "Come out of the ark \u2014 you and your wife, your sons and their wives.",
       "cite": "Genesis 8:16",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "dryground_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Come out of the ark — you and your wife, your sons and their wives.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch8_command_leave"
     },
     {
       "id": "dryground_1",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch8_command_leave",
-      "text": "Bring out every kind of living creature \u2014 so they can multiply on the earth.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "dryground_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Bring out every kind of living creature — so they can multiply on the earth.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch8_command_leave"
     },
     {
       "id": "dryground_2",
-      "speaker": "narrator",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch8_ramp_down",
-      "sfx": "FRESH AIR!",
-      "text": "The ramp came down. For the first time in over a year, Noah stepped onto solid ground.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "dryground_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The ramp came down. For the first time in over a year, Noah stepped onto solid ground.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "dryground_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "FRESH AIR!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "ch8_ramp_down"
     },
     {
       "id": "dryground_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "svg": "ch8_animals_released",
-      "text": "The animals poured out \u2014 running, flying, leaping. The world filling back up with life.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "dryground_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The animals poured out — running, flying, leaping. The world filling back up with life.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch8_animals_released"
     },
     {
       "id": "dryground_4",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch8_animals_released",
-      "text": "The whole long year \u2014 the building, the waiting, the enduring \u2014 this was what it was for.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "dryground_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The whole long year — the building, the waiting, the enduring — this was what it was for.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch8_animals_released"
     },
     {
       "id": "dryground_5",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch8_noah_stands",
-      "text": "A year and seventeen days after the door was shut \u2014 Noah stood on dry land.",
       "cite": "Genesis 8:14",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "dryground_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A year and seventeen days after the door was shut — Noah stood on dry land.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch8_noah_stands"
     }
+  ],
+  "assetFolder": "act_08_dryground",
+  "artFolder": "assets/svg/act_08_dryground",
+  "assetStem": "noah_act8",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_08_dryground/a_establish/noah_act8_a_background.svg",
+      "middleGround": "assets/svg/act_08_dryground/a_establish/noah_act8_a_middle_ground.svg",
+      "foreground": "assets/svg/act_08_dryground/a_establish/noah_act8_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_background.svg",
+      "middleGround": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_middle_ground.svg",
+      "foreground": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_background.svg",
+      "middleGround": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_middle_ground.svg",
+      "foreground": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wood_dark-plank.svg",
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/water_still-eddies.svg",
+    "assets/materials/stone-flagstone.svg"
   ]
 }

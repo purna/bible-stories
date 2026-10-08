@@ -1,0 +1,339 @@
+{
+  "id": "reviews",
+  "name": "Ch.14 · Moses' Final Words",
+  "bg": "radial-gradient(circle at 50% 45%, #14120a, #221e12 65%, #080704)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "reviews_0",
+      "cite": "Deuteronomy 1:1–5",
+      "items": [
+        {
+          "id": "reviews_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Forty years had passed. On the plains of Moab, across the Jordan from Jericho, a new generation stood — the children of those who had left Egypt. Moses began to speak.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "reviews_1",
+      "cite": "Deuteronomy 5:2–3",
+      "items": [
+        {
+          "id": "reviews_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The LORD our God made a covenant with us at Horeb. It was not with our ancestors that he made it, but with us, with all of us who are alive here today.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "moses",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "reviews_2",
+      "cite": "Deuteronomy 8:2–3",
+      "items": [
+        {
+          "id": "reviews_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Remember how the LORD led you all the way in the wilderness these forty years. He fed you with manna to teach you that man does not live on bread alone, but on every word that comes from the mouth of the LORD.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "moses",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "reviews_3",
+      "cite": "Deuteronomy 6:4–5",
+      "items": [
+        {
+          "id": "reviews_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Hear, O Israel: The LORD our God, the LORD is one. Love the LORD your God with all your heart and with all your soul and with all your strength.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "moses",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "reviews_4",
+      "cite": "Deuteronomy 6:6–7",
+      "items": [
+        {
+          "id": "reviews_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "These commandments are to be on your hearts. Impress them on your children. Talk about them when you sit at home and when you walk along the road, when you lie down and when you get up.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "moses",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "reviews_5",
+      "choices": [
+        {
+          "label": "Choose life 🌱",
+          "note": "Love the LORD, obey him, hold fast to him — he is your life."
+        },
+        {
+          "label": "Drift along the old paths 🍂",
+          "note": "The old paths lead back toward the gods of the nations around them. Moses has already warned what that costs."
+        }
+      ],
+      "items": [
+        {
+          "id": "reviews_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "He set before them blessings for obedience and warnings for turning away — and then he asked for a decision. He was speaking to a people about to cross a river he would never cross himself.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "reviews_6",
+      "cite": "Deuteronomy 30:19",
+      "items": [
+        {
+          "id": "reviews_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I call the heavens and the earth as witnesses against you today: I have set before you life and death, blessings and curses. Now choose life, so that you and your children may live.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "moses",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "reviews_7",
+      "items": [
+        {
+          "id": "reviews_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Then he taught them a song, so that it would remain a witness among them for generations.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "reviews_8",
+      "cite": "Deuteronomy 32:4",
+      "items": [
+        {
+          "id": "reviews_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "He is the Rock, his works are perfect, and all his ways are just.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "moses",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "reviews_9",
+      "cite": "Deuteronomy 27:15–26",
+      "items": [
+        {
+          "id": "reviews_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Moses told the people to answer each warning with a single word — Amen. It was how a people sealed a covenant.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "reviews_10",
+      "cite": "Deuteronomy 31:1–2",
+      "items": [
+        {
+          "id": "reviews_10_text",
+          "type": "text",
+          "sfx": false,
+          "text": "When Moses finished speaking all these words to all Israel, he said to them: \"I am now a hundred and twenty years old.\"",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    }
+  ],
+  "scene": "reviews",
+  "foreground": "fg_reviews",
+  "index": 13
+}

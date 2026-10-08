@@ -1,0 +1,122 @@
+{
+  "story": "Deborah",
+  "act": {
+    "id": "under_the_palm",
+    "name": "Ch.1 · Under the Palm",
+    "source": "../data/act1_under_the_palm.json",
+    "svg": null,
+    "bg": "radial-gradient(circle at 50% 25%, #6db86a, #2d5f2d 70%)",
+    "particle": "dawn"
+  },
+  "beats": [
+    {
+      "id": "under_the_palm_0",
+      "items": [
+        {
+          "id": "under_the_palm_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "For twenty years, King Jabin’s power and Sisera’s iron chariots pressed hard upon Israel.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "under_the_palm_1",
+      "items": [
+        {
+          "id": "under_the_palm_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Under a palm between Ramah and Bethel sat Deborah—a prophet, a judge, and a listener.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "under_the_palm_2",
+      "items": [
+        {
+          "id": "under_the_palm_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "People brought their disputes to her, and she made room for truth, fairness, and peace.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "under_the_palm_3",
+      "cite": "Judges 4:4–5",
+      "items": [
+        {
+          "id": "under_the_palm_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The Israelites went up to her to have their disputes decided.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

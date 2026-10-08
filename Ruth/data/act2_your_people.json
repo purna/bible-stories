@@ -1,47 +1,93 @@
 {
   "id": "your_people",
-  "name": "Ch.2 \u00b7 Your People",
+  "name": "Ch.2 · Your People",
   "bg": "radial-gradient(circle at 50% 25%, #c89860, #5a4028 70%)",
   "particle": "dawn",
   "lines": [
     {
       "id": "your_people_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Naomi and Ruth walked the long road from Moab toward Bethlehem\u2014dusty, weary, but together. The hills rose and fell like waves of stone and dry grass.",
       "cite": "Ruth 1:19",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "your_people_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Naomi and Ruth walked the long road from Moab toward Bethlehem—dusty, weary, but together. The hills rose and fell like waves of stone and dry grass.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "your_people_1",
-      "speaker": "ruth",
-      "fx": "type",
-      "delay": 800,
-      "align": "right",
-      "text": "We will follow the road. Step by step. I am with you, Naomi.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "your_people_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "We will follow the road. Step by step. I am with you, Naomi.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "ruth",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "your_people_2",
-      "speaker": "naomi",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "You should not have come. There is nothing for you here. The Almighty has made my life very bitter.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "your_people_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "You should not have come. There is nothing for you here. The Almighty has made my life very bitter.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "naomi",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "your_people_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "They passed through the rocky valleys, keeping to the paths that travelers knew\u2014avoiding the dangerous shortcuts.",
       "choices": [
         {
           "label": "Stay on the safe path",
@@ -52,22 +98,85 @@
           "note": "Ruth supports her mother-in-law as the road steepens."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "your_people_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "They passed through the rocky valleys, keeping to the paths that travelers knew—avoiding the dangerous shortcuts.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "your_people_4",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "At last, the walls of Bethlehem appeared on the horizon. The whole town was stirred by their arrival.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "your_people_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At last, the walls of Bethlehem appeared on the horizon. The whole town was stirred by their arrival.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "svg": "your_people",
   "scene": "your_people",
   "foreground": "fg_your_people",
-  "index": 1
+  "index": 1,
+  "assetFolder": "act_02_your_people",
+  "artFolder": "assets/svg/act_02_your_people",
+  "assetStem": "ruth_act2",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_02_your_people/a_establish/ruth_act2_a_background.svg",
+      "middleGround": "assets/svg/act_02_your_people/a_establish/ruth_act2_a_middle_ground.svg",
+      "foreground": "assets/svg/act_02_your_people/a_establish/ruth_act2_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_02_your_people/b_core_action/ruth_act2_b_background.svg",
+      "middleGround": "assets/svg/act_02_your_people/b_core_action/ruth_act2_b_middle_ground.svg",
+      "foreground": "assets/svg/act_02_your_people/b_core_action/ruth_act2_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_02_your_people/c_resolve/ruth_act2_c_background.svg",
+      "middleGround": "assets/svg/act_02_your_people/c_resolve/ruth_act2_c_middle_ground.svg",
+      "foreground": "assets/svg/act_02_your_people/c_resolve/ruth_act2_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/grass-tufts.svg",
+    "assets/materials/stone-flagstone.svg"
+  ]
 }

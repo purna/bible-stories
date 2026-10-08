@@ -1,0 +1,34 @@
+{
+  "story": "Abraham",
+  "act": {
+    "id": "act10_moriah",
+    "name": "Ch.10 · Moriah",
+    "source": "../art/act10_moriah.md"
+  },
+  "beats": [
+    {
+      "id": "a_establish",
+      "type": "visual",
+      "name": "establishing",
+      "description": "wide framing of the setting: a bare stone mountain at dawn, wood stacked on Isaac's back, the altar of unhewn stone, the angel's hand staying the knife"
+    },
+    {
+      "id": "b_core_action",
+      "type": "visual",
+      "name": "core action",
+      "description": "the scene's central movement and characters"
+    },
+    {
+      "id": "c_resolve",
+      "type": "visual",
+      "name": "resolution",
+      "description": "the beat's outcome, holding the emotional note"
+    },
+    {
+      "id": "interactive-game",
+      "type": "game",
+      "description": "Climb, gather wood, and respond to the provided ram.",
+      "mechanic": "pathfinding"
+    }
+  ]
+}

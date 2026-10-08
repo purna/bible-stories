@@ -7,95 +7,247 @@
   "lines": [
     {
       "id": "abigail_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Nabal was a wealthy man in Maon, and his servants grazed his sheep in Carmel. David and his men had protected those flocks through the winter.",
       "cite": "1 Samuel 25:2",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "abigail_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Nabal was a wealthy man in Maon, and his servants grazed his sheep in Carmel. David and his men had protected those flocks through the winter.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "abigail_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "When the shearing came, David sent men to ask Nabal for a gift. Nabal answered with insults and a curse.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "abigail_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "When the shearing came, David sent men to ask Nabal for a gift. Nabal answered with insults and a curse.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "abigail_2",
-      "speaker": "david",
-      "fx": "type",
-      "delay": 800,
-      "align": "left",
-      "text": "By the living God, I will not spare one man of this household. Go and get your swords ready.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "abigail_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "By the living God, I will not spare one man of this household. Go and get your swords ready.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "abigail_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "A servant ran ahead and told Nabal's wife. Abigail was beautiful and wise. She loaded two donkeys with bread, wine, figs, and raisins.",
       "cite": "1 Samuel 25:18",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "abigail_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A servant ran ahead and told Nabal's wife. Abigail was beautiful and wise. She loaded two donkeys with bread, wine, figs, and raisins.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "abigail_4",
-      "speaker": "abigail",
-      "fx": "fade",
-      "delay": 800,
-      "align": "right",
-      "text": "My lord, let your hand be blessed. Take this gift. I have come to speak for the men of the house, for Nabal is a fool.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "abigail_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "My lord, let your hand be blessed. Take this gift. I have come to speak for the men of the house, for Nabal is a fool.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "abigail",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "abigail_5",
-      "speaker": "david",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "The LORD has kept me from harming you. Go in peace. Your wisdom has saved your household from death.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "abigail_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The LORD has kept me from harming you. Go in peace. Your wisdom has saved your household from death.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "abigail_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Ten days later the LORD struck Nabal and he died. David took Abigail to be his wife.",
       "cite": "1 Samuel 25:38",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "abigail_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Ten days later the LORD struck Nabal and he died. David took Abigail to be his wife.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "abigail_7",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "WISDOM SAVES WHAT ANGER DESTROYS",
-      "text": "A woman's quiet speech turned a band of men away from slaughter. Mercy spoken at the right moment is worth more than a sword.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "abigail_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A woman's quiet speech turned a band of men away from slaughter. Mercy spoken at the right moment is worth more than a sword.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "abigail_7_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "WISDOM SAVES WHAT ANGER DESTROYS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "abigail_8",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "David's men named her a blessing. The wilderness had taught him restraint, and Abigail taught him that restraint has a voice.",
       "choices": [
         {
           "label": "Hold fast to her counsel",
@@ -106,11 +258,56 @@
           "note": "The wilderness is wide, and not every insult comes with a gift."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "abigail_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David's men named her a blessing. The wilderness had taught him restraint, and Abigail taught him that restraint has a voice.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "abigail",
   "foreground": "fg_abigail",
-  "index": 5
+  "index": 5,
+  "assetFolder": "act_06_abigail",
+  "artFolder": "assets/svg/act_06_abigail",
+  "assetStem": "david_act6",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_06_abigail/a_establish/david_act6_a_background.svg",
+      "middleGround": "assets/svg/act_06_abigail/a_establish/david_act6_a_middle_ground.svg",
+      "foreground": "assets/svg/act_06_abigail/a_establish/david_act6_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_06_abigail/b_core_action/david_act6_b_background.svg",
+      "middleGround": "assets/svg/act_06_abigail/b_core_action/david_act6_b_middle_ground.svg",
+      "foreground": "assets/svg/act_06_abigail/b_core_action/david_act6_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_06_abigail/c_resolve/david_act6_c_background.svg",
+      "middleGround": "assets/svg/act_06_abigail/c_resolve/david_act6_c_middle_ground.svg",
+      "foreground": "assets/svg/act_06_abigail/c_resolve/david_act6_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/water_still-eddies.svg"
+  ]
 }

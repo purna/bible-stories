@@ -8,48 +8,139 @@
   "lines": [
     {
       "id": "the_storm_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Sisera brought his nine hundred iron chariots to the Kishon River, certain that strength would decide the day.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_storm_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Sisera brought his nine hundred iron chariots to the Kishon River, certain that strength would decide the day.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_storm_1",
-      "speaker": "deborah",
-      "fx": "type",
-      "delay": 800,
-      "align": "center",
-      "text": "Go! This is the day the Lord has given Sisera into your hands.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_storm_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Go! This is the day the Lord has given Sisera into your hands.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "deborah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_storm_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Barak swept down from Tabor. The storm broke, the river rose, and the heavy chariots foundered in mud.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_storm_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Barak swept down from Tabor. The storm broke, the river rose, and the heavy chariots foundered in mud.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_storm_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The river Kishon swept them away\u2014the age-old river, the river Kishon.",
-      "cite": "Judges 4:12\u201316; 5:20\u201321",
-      "width": "1/2",
-      "valign": "middle"
+      "cite": "Judges 4:12–16; 5:20–21",
+      "items": [
+        {
+          "id": "the_storm_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The river Kishon swept them away—the age-old river, the river Kishon.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
-  "gameSuccess": "The chariots are caught in the flooded ground\u2014the advantage is broken.",
-  "name": "Ch.4 \u00b7 The Storm",
+  "gameSuccess": "The chariots are caught in the flooded ground—the advantage is broken.",
+  "name": "Ch.4 · The Storm",
   "assetFolder": "act_04_the_storm",
-  "assetStem": "deborah_act4"
+  "assetStem": "deborah_act4",
+  "artFolder": "assets/svg/act_04_the_storm",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_04_the_storm/a_establish/deborah_act4_a_background.svg",
+      "middleGround": "assets/svg/act_04_the_storm/a_establish/deborah_act4_a_middle_ground.svg",
+      "foreground": "assets/svg/act_04_the_storm/a_establish/deborah_act4_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_04_the_storm/b_core_action/deborah_act4_b_background.svg",
+      "middleGround": "assets/svg/act_04_the_storm/b_core_action/deborah_act4_b_middle_ground.svg",
+      "foreground": "assets/svg/act_04_the_storm/b_core_action/deborah_act4_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_background.svg",
+      "middleGround": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_middle_ground.svg",
+      "foreground": "assets/svg/act_04_the_storm/c_resolve/deborah_act4_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/water_fast-churn.svg"
+  ]
 }

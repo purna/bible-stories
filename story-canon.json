@@ -1332,52 +1332,77 @@
       {
         "number": 1,
         "title": "The Child in the River",
-        "game": "Guide the basket through reeds while Miriam keeps watch."
+        "game": "Guide the basket through reeds while Miriam keeps watch.",
       },
       {
         "number": 2,
         "title": "The Burning Bush",
-        "game": "Herd sheep, approach the fire, and answer the call."
+        "game": "Herd sheep, approach the fire, and answer the call.",
       },
       {
         "number": 3,
         "title": "Before the Throne",
-        "game": "Match signs and warnings to each audience."
+        "game": "Match signs and warnings to each audience.",
       },
       {
         "number": 4,
         "title": "Passover Night",
-        "game": "Prepare the meal and mark the doorway before departure."
+        "game": "Prepare the meal and mark the doorway before departure.",
       },
       {
         "number": 5,
         "title": "Through the Sea",
-        "game": "Keep the people moving along the opened path."
+        "game": "Keep the people moving along the opened path.",
       },
       {
         "number": 6,
         "title": "Bread in the Wilderness",
-        "game": "Gather only enough manna for the day."
+        "game": "Gather only enough manna for the day.",
       },
       {
         "number": 7,
-        "title": "Sinai",
-        "game": "Arrange the camp and carry the covenant words."
+        "title": "Water from Rock and Victory",
+        "game": "Find water in the desert and prevail over attackers.",
       },
       {
         "number": 8,
-        "title": "The Golden Calf",
-        "game": "Confront the idol and intercede for the people."
+        "title": "Jethro's Advice and Sinai Arrival",
+        "game": "Receive wisdom from Midian and reach the holy mountain.",
       },
       {
         "number": 9,
-        "title": "Forty Years",
-        "game": "Navigate a provision-and-trust journey map."
+        "title": "Sinai: The Covenant Given",
+        "game": "Navigate a provision-and-trust journey map.",
       },
       {
         "number": 10,
-        "title": "Mount Nebo",
-        "game": "Appoint Joshua and identify the land from afar."
+        "title": "The Golden Calf",
+        "game": "Appoint Joshua and identify the land from afar.",
+      },
+      {
+        "number": 11,
+        "title": "Second Tablets and Tabernacle",
+        "game": "Renew the covenant and begin building God's dwelling.",
+      },
+      {
+        "number": 12,
+        "title": "The Spies and Rebellion",
+        "game": "Explore Canaan and face the consequences of unbelief.",
+      },
+      {
+        "number": 13,
+        "title": "Wilderness Trials: Water, Serpents, and Balak",
+        "game": "Journey through hardship and see God's provision.",
+      },
+      {
+        "number": 14,
+        "title": "Moses' Final Reviews and Instructions",
+        "game": "Prepare the next generation for the promised land.",
+      },
+      {
+        "number": 15,
+        "title": "Mount Nebo: Viewing the Promised Land",
+        "game": "See the fulfillment of God's promise from afar."
       }
     ]
   },

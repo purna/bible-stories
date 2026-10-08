@@ -1,0 +1,188 @@
+{
+  "story": "Ruth",
+  "act": {
+    "id": "gleaning",
+    "name": "Ch.3 · Gleaning",
+    "source": "../data/act3_gleaning.json",
+    "svg": "gleaning",
+    "bg": "radial-gradient(circle at 50% 25%, #8a9a48, #2a3818 70%)",
+    "particle": "dawn"
+  },
+  "beats": [
+    {
+      "id": "gleaning_0",
+      "cite": "Ruth 2:2",
+      "items": [
+        {
+          "id": "gleaning_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "When they arrived in Bethlehem, the barley harvest had just begun. Ruth spoke to Naomi with a plan.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "gleaning_1",
+      "items": [
+        {
+          "id": "gleaning_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Let me go to the fields and pick up the grain left behind by anyone in whose eyes I find favor.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "ruth",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "gleaning_2",
+      "items": [
+        {
+          "id": "gleaning_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Go ahead, my daughter.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "naomi",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "gleaning_3",
+      "cite": "Ruth 2:3",
+      "items": [
+        {
+          "id": "gleaning_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Ruth went out and gleaned in the field behind the harvesters. She happened to be working in a field belonging to Boaz, from the clan of Elimelek.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "gleaning_4",
+      "cite": "Leviticus 19:9-10",
+      "choices": [
+        {
+          "label": "Gather the fallen grain",
+          "note": "Ruth works with care, taking only what is left for gleaners."
+        },
+        {
+          "label": "Rest briefly in the shade",
+          "note": "Even gleaners need a moment's rest under the harvest sun."
+        }
+      ],
+      "items": [
+        {
+          "id": "gleaning_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "She gathered only what the law allowed—the grain left for the poor and the foreigner. Patiently, stalk by stalk, she filled her apron.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "gleaning_5",
+      "items": [
+        {
+          "id": "gleaning_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The sun rose higher. Ruth kept her head down and her hands steady. The field was generous to those who came last.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

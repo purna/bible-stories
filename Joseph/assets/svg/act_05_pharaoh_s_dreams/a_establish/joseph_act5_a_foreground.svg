@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Establish Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Joseph act 5 Ch.5 · Pharaoh’s Dreams foreground">
+  <metadata>{&quot;story&quot;:&quot;Joseph&quot;,&quot;act&quot;:5,&quot;chapter&quot;:&quot;Ch.5 · Pharaoh’s Dreams&quot;,&quot;scene&quot;:&quot;A&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#ac8e63" stroke="#201a17" stroke-width="12" opacity=".93"><rect x="0" y="540" width="150" height="560"/><rect x="1770" y="540" width="150" height="560"/><rect x="0" y="510" width="205" height="55"/><rect x="1715" y="510" width="205" height="55"/></g><g opacity=".9"><path d="M45 1080v-112.32202369021252" stroke="#b38e4e" stroke-width="9"/><path d="M45 1006.9906846013619l34 -28m-34 60l30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M107 1080v-175.5101513012778" stroke="#b38e4e" stroke-width="9"/><path d="M107 965.9184016541694l34 -28m-34 60l30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M169 1080v-106.91841524443589" stroke="#b38e4e" stroke-width="9"/><path d="M169 1010.5030300911167l34 -28m-34 60l30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M1690 1080v-113.56341915205121" stroke="#b38e4e" stroke-width="9"/><path d="M1690 1006.1837775511667l-34 -28m--34 60l-30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M1752 1080v-173.42724115471356" stroke="#b38e4e" stroke-width="9"/><path d="M1752 967.2722932494362l-34 -28m--34 60l-30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M1814 1080v-138.83598301908933" stroke="#b38e4e" stroke-width="9"/><path d="M1814 989.7566110375919l-34 -28m--34 60l-30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/></g><g fill="#a68f6b" stroke="#201a17" stroke-width="10" opacity=".9"><path d="M0 1080V760h245v320zM1675 1080V760h245v320z"/><path d="M0 760h310v70H0zM1610 760h310v70h-310z"/></g><g transform="translate(1510 875)" opacity="0.92"><path d="M-70 70 Q-105 -20 -50 -85 H50 Q105 -20 70 70Z" fill="#d7ae65" stroke="#201a17" stroke-width="12"/><ellipse cy="-85" rx="50" ry="18" fill="#b09181"/></g>
+  </svg>

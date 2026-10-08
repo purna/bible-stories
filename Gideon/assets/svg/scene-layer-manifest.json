@@ -1,0 +1,492 @@
+{
+  "story": "Gideon",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Winepress",
+      "sceneId": "placeholder",
+      "artSource": "art/act1_the_winepress.md",
+      "assetFolder": "act_01_the_winepress",
+      "artFolder": "assets/svg/act_01_the_winepress",
+      "assetStem": "gideon_act1",
+      "materials": [
+        "assets/materials/wheat_stalks-field.svg"
+      ],
+      "materialKeys": [
+        "wheat_stalks"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_the_winepress/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_the_winepress/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_the_winepress/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_winepress/a_establish/gideon_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_winepress/b_core_action/gideon_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_winepress/c_resolve/gideon_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Sign",
+      "sceneId": "placeholder",
+      "artSource": "art/act2_the_sign.md",
+      "assetFolder": "act_02_the_sign",
+      "artFolder": "assets/svg/act_02_the_sign",
+      "assetStem": "gideon_act2",
+      "materials": [
+        "assets/materials/wheat_stalks-field.svg",
+        "assets/materials/rock_surface-hewn.svg",
+        "assets/materials/clay_jar-stretcher.svg",
+        "assets/materials/torch_flame-flames.svg"
+      ],
+      "materialKeys": [
+        "wheat_stalks",
+        "rock_surface",
+        "clay_jar",
+        "torch_flame"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_the_sign/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_the_sign/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_the_sign/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_sign/a_establish/gideon_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_sign/b_core_action/gideon_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_sign/c_resolve/gideon_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · The Fleece",
+      "sceneId": "placeholder",
+      "artSource": "art/act3_the_fleece.md",
+      "assetFolder": "act_03_the_fleece",
+      "artFolder": "assets/svg/act_03_the_fleece",
+      "assetStem": "gideon_act3",
+      "materials": [
+        "assets/materials/wool_fleece-fleece.svg",
+        "assets/materials/torch_flame-flames.svg",
+        "assets/materials/tent_fabric-basket.svg"
+      ],
+      "materialKeys": [
+        "wool_fleece",
+        "torch_flame",
+        "tent_fabric"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_the_fleece/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_the_fleece/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_the_fleece/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · The Army Reduced",
+      "sceneId": "placeholder",
+      "artSource": "art/act4_the_army_reduced.md",
+      "assetFolder": "act_04_the_army_reduced",
+      "artFolder": "assets/svg/act_04_the_army_reduced",
+      "assetStem": "gideon_act4",
+      "materials": [
+        "assets/materials/water_ripple-ripples.svg",
+        "assets/materials/sword_iron-blade.svg"
+      ],
+      "materialKeys": [
+        "water_ripple",
+        "sword_iron"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_the_army_reduced/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_the_army_reduced/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_the_army_reduced/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · The Dream",
+      "sceneId": "placeholder",
+      "artSource": "art/act5_the_dream.md",
+      "assetFolder": "act_05_the_dream",
+      "artFolder": "assets/svg/act_05_the_dream",
+      "assetStem": "gideon_act5",
+      "materials": [
+        "assets/materials/torch_flame-flames.svg",
+        "assets/materials/tent_fabric-basket.svg",
+        "assets/materials/sword_iron-blade.svg"
+      ],
+      "materialKeys": [
+        "torch_flame",
+        "tent_fabric",
+        "sword_iron"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_the_dream/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_the_dream/a_establish/gideon_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_the_dream/a_establish/gideon_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_the_dream/a_establish/gideon_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_the_dream/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_the_dream/b_core_action/gideon_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_the_dream/b_core_action/gideon_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_the_dream/b_core_action/gideon_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_the_dream/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_the_dream/a_establish/gideon_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_the_dream/a_establish/gideon_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_the_dream/a_establish/gideon_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_the_dream/b_core_action/gideon_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_the_dream/b_core_action/gideon_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_the_dream/b_core_action/gideon_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_the_dream/c_resolve/gideon_act5_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · The Battle",
+      "sceneId": "placeholder",
+      "artSource": "art/act6_the_battle.md",
+      "assetFolder": "act_06_the_battle",
+      "artFolder": "assets/svg/act_06_the_battle",
+      "assetStem": "gideon_act6",
+      "materials": [
+        "assets/materials/wheat_stalks-field.svg",
+        "assets/materials/torch_flame-flames.svg",
+        "assets/materials/tent_fabric-basket.svg",
+        "assets/materials/sword_iron-blade.svg"
+      ],
+      "materialKeys": [
+        "wheat_stalks",
+        "torch_flame",
+        "tent_fabric",
+        "sword_iron"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_06_the_battle/a_establish",
+          "layers": {
+            "background": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_06_the_battle/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_06_the_battle/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · The Victory",
+      "sceneId": "placeholder",
+      "artSource": "art/act7_the_victory.md",
+      "assetFolder": "act_07_the_victory",
+      "artFolder": "assets/svg/act_07_the_victory",
+      "assetStem": "gideon_act7",
+      "materials": [
+        "assets/materials/water_ripple-ripples.svg",
+        "assets/materials/sword_iron-blade.svg"
+      ],
+      "materialKeys": [
+        "water_ripple",
+        "sword_iron"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_07_the_victory/a_establish",
+          "layers": {
+            "background": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_background.svg",
+            "middleGround": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_07_the_victory/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_background.svg",
+            "middleGround": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_07_the_victory/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_background.svg",
+            "middleGround": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_victory/a_establish/gideon_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_victory/b_core_action/gideon_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_victory/c_resolve/gideon_act7_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

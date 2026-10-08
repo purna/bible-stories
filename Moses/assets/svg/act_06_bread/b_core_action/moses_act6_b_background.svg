@@ -1,11 +1,9 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" data-parallax>
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a2d1a"/>
-      <stop offset="100%" style="stop-color:#0d1a0d"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#bgGrad)"/>
-  <text x="400" y="300" font-family="system-ui" font-size="20" fill="rgba(255,255,255,0.3)" text-anchor="middle" dominant-baseline="middle">Moses Act 06 — B Core Action Background</text>
-  <text x="400" y="330" font-family="system-ui" font-size="12" fill="rgba(255,255,255,0.2)" text-anchor="middle">Replace with story-specific artwork</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Moses act 6 Ch.6 · Bread in the Wilderness background">
+  <metadata>{&quot;story&quot;:&quot;Moses&quot;,&quot;act&quot;:6,&quot;chapter&quot;:&quot;Ch.6 · Bread in the Wilderness&quot;,&quot;scene&quot;:&quot;B&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;materials&quot;:[&quot;desert_sand-dunes.svg&quot;],&quot;environment&quot;:&quot;desert&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#48657d"/><stop offset="1" stop-color="#e8bd7e"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b9905c"/><stop offset="1" stop-color="#75583d"/></linearGradient><pattern id="act-material" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M-5 20Q15 13 35 20T75 20M-5 50Q15 43 35 50T75 50" fill="none" stroke="#e2b372" stroke-width="2" opacity=".45"/><circle cx="16" cy="35" r="1.4" fill="#d59b58"/><circle cx="55" cy="8" r="1.2" fill="#d59b58"/></pattern></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="330" cy="360" r="70" fill="#d59b58" opacity=".72"/>
+  <path d="M0 656.4 L142.62857142857143 570.8150047630537 L274.2857142857143 687.6796052417252 L416.9142857142857 568.908782973513 L548.5714285714286 679.9223121778108 L691.2 474.6750737140886 L822.8571428571429 666.1415665059816 L965.4857142857143 552.0513913893141 L1097.142857142857 673.0475359047763 L1239.7714285714285 562.3170808594208 L1371.4285714285713 660.831422034977 L1514.057142857143 532.4265730319079 L1645.7142857142858 677.8250523748342 L1788.3428571428572 455.49147678385486 L1920 670.9719772530719 V1080 H0Z" fill="#9a784c" opacity=".72"/>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/><path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#act-material)" opacity=".16"/>
+  </svg>

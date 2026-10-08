@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Daniel act 3 The Furnace foreground">
+  <metadata>{&quot;story&quot;:&quot;Daniel&quot;,&quot;act&quot;:3,&quot;chapter&quot;:&quot;The Furnace&quot;,&quot;scene&quot;:&quot;B&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#624930" stroke="#17171c" stroke-width="12" opacity=".93"><rect x="0" y="530.4" width="168.00000000000003" height="569.6"/><rect x="1752" y="530.4" width="168.00000000000003" height="569.6"/><rect x="0" y="500.4" width="223.00000000000003" height="55"/><rect x="1697" y="500.4" width="223.00000000000003" height="55"/></g><g fill="#544232" stroke="#17171c" stroke-width="10" opacity=".9"><path d="M0 1080V760h245v320zM1675 1080V760h245v320z"/><path d="M0 760h310v70H0zM1610 760h310v70h-310z"/></g>
+  </svg>

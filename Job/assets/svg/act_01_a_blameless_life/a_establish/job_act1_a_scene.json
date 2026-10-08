@@ -1,0 +1,21 @@
+{
+  "story": "Job",
+  "act": 1,
+  "chapter": "Ch.1 · A Blameless Life",
+  "artSource": "art/act1_a_blameless_life.md",
+  "artFolder": "assets/svg/act_01_a_blameless_life",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "grass-tufts.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "job_act1_a_background.svg",
+    "middleGround": "job_act1_a_middle_ground.svg",
+    "foreground": "job_act1_a_foreground.svg"
+  }
+}

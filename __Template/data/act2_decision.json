@@ -1,16 +1,11 @@
 {
   "id": "decision",
-  "name": "Ch.2 \u00b7 Decision",
+  "name": "Ch.2 · Decision",
   "bg": "radial-gradient(circle at 50% 25%, #633f2a, #17100d 70%)",
   "particle": "dusk",
   "lines": [
     {
       "id": "decision_0",
-      "speaker": "traveller",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Use choices for participation and reflection, not a false alternate scripture outcome.",
       "choices": [
         {
           "label": "Act with courage",
@@ -21,8 +16,30 @@
           "note": "The canonical event continues after a reflective beat."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "decision_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Use choices for participation and reflection, not a false alternate scripture outcome.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "traveller",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "svg": "decision",

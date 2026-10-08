@@ -1,0 +1,153 @@
+{
+  "story": "Elijah",
+  "act": {
+    "id": "vineyard",
+    "name": "Naboth's Vineyard",
+    "source": "../data/act6_vineyard.json",
+    "svg": "naboths_vineyard",
+    "bg": "radial-gradient(circle at 20% 80%, #4a6b3c, #2d4a2c 70%)",
+    "particle": "dream"
+  },
+  "beats": [
+    {
+      "id": "vineyard_0",
+      "items": [
+        {
+          "id": "vineyard_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Later, Ahab wanted Naboth's vineyard because it was beside the king's palace. Naboth refused to sell the inheritance that belonged to his family.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "naboths_vineyard"
+    },
+    {
+      "id": "vineyard_1",
+      "items": [
+        {
+          "id": "vineyard_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jezebel arranged false accusations against Naboth. He was condemned and killed, and Ahab took possession of the vineyard.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "naboths_vineyard"
+    },
+    {
+      "id": "vineyard_2",
+      "items": [
+        {
+          "id": "vineyard_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Go down to meet Ahab in Naboth's vineyard. He has gone there to take possession of it.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "naboths_vineyard"
+    },
+    {
+      "id": "vineyard_3",
+      "items": [
+        {
+          "id": "vineyard_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "This is what the LORD says: You have murdered Naboth and taken his land. Because you have given yourself to evil, judgment is coming upon your house.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elijah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "naboths_vineyard"
+    },
+    {
+      "id": "vineyard_4",
+      "items": [
+        {
+          "id": "vineyard_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Elijah's ministry was not only about miracles. He also confronted kings when power was used to crush the innocent.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "naboths_vineyard"
+    }
+  ]
+}

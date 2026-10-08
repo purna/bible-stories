@@ -1,0 +1,22 @@
+{
+  "story": "Abraham",
+  "act": 6,
+  "chapter": "Hagar in the Wilderness",
+  "artSource": "art/act6_hagar_in_the_wilderness.md",
+  "artFolder": "assets/svg/act_06_hagar_in_the_wilderness",
+  "sceneId": "",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg"
+  ],
+  "layers": {
+    "background": "abraham_act6_b_background.svg",
+    "middleGround": "abraham_act6_b_middle_ground.svg",
+    "foreground": "abraham_act6_b_foreground.svg"
+  }
+}

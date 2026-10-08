@@ -1,0 +1,21 @@
+{
+  "story": "David",
+  "act": 3,
+  "chapter": "Ch.3 · Saul&#x27;s Court",
+  "artSource": "art/act3_court.md",
+  "artFolder": "assets/svg/act_03_court",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "en_gedi_cave-limestone.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "valley_stones-brook.svg"
+  ],
+  "layers": {
+    "background": "david_act3_b_background.svg",
+    "middleGround": "david_act3_b_middle_ground.svg",
+    "foreground": "david_act3_b_foreground.svg"
+  }
+}

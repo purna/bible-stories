@@ -4,74 +4,134 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "jeremiah-the-call",
+      "name": "Ch.1 · The Call",
+      "file": "jeremiah-the-call.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "jeremiah-the-call_hd",
+      "name": "Ch.1 · The Call (HD)",
+      "file": "jeremiah-the-call_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "jeremiah-the-almond-branch",
+      "name": "Ch.2 · The Almond Branch",
+      "file": "jeremiah-the-almond-branch.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "jeremiah-the-almond-branch_hd",
+      "name": "Ch.2 · The Almond Branch (HD)",
+      "file": "jeremiah-the-almond-branch_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "jeremiah-at-the-temple-gate",
+      "name": "Ch.3 · At the Temple Gate",
+      "file": "jeremiah-at-the-temple-gate.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "jeremiah-at-the-temple-gate_hd",
+      "name": "Ch.3 · At the Temple Gate (HD)",
+      "file": "jeremiah-at-the-temple-gate_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "jeremiah-the-scroll",
+      "name": "Ch.4 · The Scroll",
+      "file": "jeremiah-the-scroll.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "jeremiah-the-scroll_hd",
+      "name": "Ch.4 · The Scroll (HD)",
+      "file": "jeremiah-the-scroll_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "jeremiah-the-potter",
+      "name": "Ch.5 · The Potter",
+      "file": "jeremiah-the-potter.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "jeremiah-the-potter_hd",
+      "name": "Ch.5 · The Potter (HD)",
+      "file": "jeremiah-the-potter_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "jeremiah-the-yoke",
+      "name": "Ch.6 · The Yoke",
+      "file": "jeremiah-the-yoke.js",
+      "type": "module"
+    },
+    {
+      "id": "jeremiah-the-yoke_hd",
+      "name": "Ch.6 · The Yoke (HD)",
+      "file": "jeremiah-the-yoke_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "jeremiah-the-cistern",
+      "name": "Ch.7 · The Cistern",
+      "file": "jeremiah-the-cistern.js",
+      "type": "module"
+    },
+    {
+      "id": "jeremiah-the-cistern_hd",
+      "name": "Ch.7 · The Cistern (HD)",
+      "file": "jeremiah-the-cistern_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "jeremiah-buy-the-field",
+      "name": "Ch.8 · Buy the Field",
+      "file": "jeremiah-buy-the-field.js",
+      "type": "module"
+    },
+    {
+      "id": "jeremiah-buy-the-field_hd",
+      "name": "Ch.8 · Buy the Field (HD)",
+      "file": "jeremiah-buy-the-field_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "jeremiah-the-fall-of-jerusalem",
+      "name": "Ch.9 · The Fall of Jerusalem",
+      "file": "jeremiah-the-fall-of-jerusalem.js",
+      "type": "module"
+    },
+    {
+      "id": "jeremiah-the-fall-of-jerusalem_hd",
+      "name": "Ch.9 · The Fall of Jerusalem (HD)",
+      "file": "jeremiah-the-fall-of-jerusalem_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "jeremiah-lament-and-hope",
+      "name": "Ch.10 · Lament and Hope",
+      "file": "jeremiah-lament-and-hope.js",
+      "type": "module"
+    },
+    {
+      "id": "jeremiah-lament-and-hope_hd",
+      "name": "Ch.10 · Lament and Hope (HD)",
+      "file": "jeremiah-lament-and-hope_hd.js",
       "type": "module"
     }
   ]

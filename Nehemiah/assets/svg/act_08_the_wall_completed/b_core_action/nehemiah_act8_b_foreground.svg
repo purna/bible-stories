@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Core Action Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Nehemiah act 8 Ch.8 · The Wall Completed foreground">
+  <metadata>{&quot;story&quot;:&quot;Nehemiah&quot;,&quot;act&quot;:8,&quot;chapter&quot;:&quot;Ch.8 · The Wall Completed&quot;,&quot;scene&quot;:&quot;B&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#ac8e63" stroke="#201a17" stroke-width="12" opacity=".93"><rect x="0" y="530.4" width="168.00000000000003" height="569.6"/><rect x="1752" y="530.4" width="168.00000000000003" height="569.6"/><rect x="0" y="500.4" width="223.00000000000003" height="55"/><rect x="1697" y="500.4" width="223.00000000000003" height="55"/></g><g opacity=".96"><path d="M1450 1045l30.69412034647353 -94.2230078314282 81.85098759059608 -36.642280823333195 71.61961414177156 130.8652886547614Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1565 1045l24.599157200982795 -59.85946905901283 65.59775253595411 -23.278682411838325 57.39803346895986 83.13815147085116Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1680 1045l17.22923521746509 -108.4348181528896 45.944627246573575 -42.16909594834596 40.201548840751876 150.60391410123557Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/></g><g fill="#a68f6b" stroke="#201a17" stroke-width="10" opacity=".9"><path d="M0 1080V760h245v320zM1675 1080V760h245v320z"/><path d="M0 760h310v70H0zM1610 760h310v70h-310z"/></g>
+  </svg>

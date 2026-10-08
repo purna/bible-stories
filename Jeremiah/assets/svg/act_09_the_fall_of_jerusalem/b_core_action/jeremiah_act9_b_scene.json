@@ -1,0 +1,23 @@
+{
+  "story": "Jeremiah",
+  "act": 9,
+  "chapter": "Ch.9 · The Fall of Jerusalem",
+  "artSource": "art/act9_the_fall_of_jerusalem.md",
+  "artFolder": "assets/svg/act_09_the_fall_of_jerusalem",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg"
+  ],
+  "layers": {
+    "background": "jeremiah_act9_b_background.svg",
+    "middleGround": "jeremiah_act9_b_middle_ground.svg",
+    "foreground": "jeremiah_act9_b_foreground.svg"
+  }
+}

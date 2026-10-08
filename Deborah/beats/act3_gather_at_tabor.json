@@ -1,0 +1,122 @@
+{
+  "story": "Deborah",
+  "act": {
+    "id": "gather_at_tabor",
+    "name": "Ch.3 · Gather at Tabor",
+    "source": "../data/act3_gather_at_tabor.json",
+    "svg": null,
+    "bg": "radial-gradient(circle at 50% 22%, #9b815d, #344632 72%)",
+    "particle": "dusk"
+  },
+  "beats": [
+    {
+      "id": "gather_at_tabor_0",
+      "items": [
+        {
+          "id": "gather_at_tabor_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Barak called Zebulun and Naphtali, and the people began climbing toward Mount Tabor.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "gather_at_tabor_1",
+      "items": [
+        {
+          "id": "gather_at_tabor_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The tribes are gathering. Sisera must not see our movement too soon.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "israelite_scout",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "gather_at_tabor_2",
+      "items": [
+        {
+          "id": "gather_at_tabor_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Some answered readily while others held back, but ten thousand followed Barak and Deborah.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "gather_at_tabor_3",
+      "cite": "Judges 4:10; 5:15–18",
+      "items": [
+        {
+          "id": "gather_at_tabor_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Ten thousand men went up under his command, and Deborah also went up with him.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

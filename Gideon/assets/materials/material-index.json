@@ -1,0 +1,173 @@
+{
+  "story": "Gideon",
+  "sourceTool": "Gideon/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "wheat_stalks",
+      "shape": "field",
+      "file": "wheat_stalks-field.svg"
+    },
+    {
+      "key": "rock_surface",
+      "shape": "hewn",
+      "file": "rock_surface-hewn.svg"
+    },
+    {
+      "key": "clay_jar",
+      "shape": "stretcher",
+      "file": "clay_jar-stretcher.svg"
+    },
+    {
+      "key": "torch_flame",
+      "shape": "flames",
+      "file": "torch_flame-flames.svg"
+    },
+    {
+      "key": "wool_fleece",
+      "shape": "fleece",
+      "file": "wool_fleece-fleece.svg"
+    },
+    {
+      "key": "tent_fabric",
+      "shape": "basket",
+      "file": "tent_fabric-basket.svg"
+    },
+    {
+      "key": "water_ripple",
+      "shape": "ripples",
+      "file": "water_ripple-ripples.svg"
+    },
+    {
+      "key": "sword_iron",
+      "shape": "blade",
+      "file": "sword_iron-blade.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Winepress",
+      "assetFolder": "act_01_the_winepress",
+      "materials": [
+        {
+          "key": "wheat_stalks",
+          "file": "wheat_stalks-field.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Sign",
+      "assetFolder": "act_02_the_sign",
+      "materials": [
+        {
+          "key": "wheat_stalks",
+          "file": "wheat_stalks-field.svg"
+        },
+        {
+          "key": "rock_surface",
+          "file": "rock_surface-hewn.svg"
+        },
+        {
+          "key": "clay_jar",
+          "file": "clay_jar-stretcher.svg"
+        },
+        {
+          "key": "torch_flame",
+          "file": "torch_flame-flames.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · The Fleece",
+      "assetFolder": "act_03_the_fleece",
+      "materials": [
+        {
+          "key": "wool_fleece",
+          "file": "wool_fleece-fleece.svg"
+        },
+        {
+          "key": "torch_flame",
+          "file": "torch_flame-flames.svg"
+        },
+        {
+          "key": "tent_fabric",
+          "file": "tent_fabric-basket.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · The Army Reduced",
+      "assetFolder": "act_04_the_army_reduced",
+      "materials": [
+        {
+          "key": "water_ripple",
+          "file": "water_ripple-ripples.svg"
+        },
+        {
+          "key": "sword_iron",
+          "file": "sword_iron-blade.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · The Dream",
+      "assetFolder": "act_05_the_dream",
+      "materials": [
+        {
+          "key": "torch_flame",
+          "file": "torch_flame-flames.svg"
+        },
+        {
+          "key": "tent_fabric",
+          "file": "tent_fabric-basket.svg"
+        },
+        {
+          "key": "sword_iron",
+          "file": "sword_iron-blade.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · The Battle",
+      "assetFolder": "act_06_the_battle",
+      "materials": [
+        {
+          "key": "wheat_stalks",
+          "file": "wheat_stalks-field.svg"
+        },
+        {
+          "key": "torch_flame",
+          "file": "torch_flame-flames.svg"
+        },
+        {
+          "key": "tent_fabric",
+          "file": "tent_fabric-basket.svg"
+        },
+        {
+          "key": "sword_iron",
+          "file": "sword_iron-blade.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · The Victory",
+      "assetFolder": "act_07_the_victory",
+      "materials": [
+        {
+          "key": "water_ripple",
+          "file": "water_ripple-ripples.svg"
+        },
+        {
+          "key": "sword_iron",
+          "file": "sword_iron-blade.svg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Resolve Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Esther act 8 Ch.8 · The Second Banquet foreground">
+  <metadata>{&quot;story&quot;:&quot;Esther&quot;,&quot;act&quot;:8,&quot;chapter&quot;:&quot;Ch.8 · The Second Banquet&quot;,&quot;scene&quot;:&quot;C&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#ac8e63" stroke="#201a17" stroke-width="12" opacity=".93"><rect x="0" y="546.4" width="138" height="553.6"/><rect x="1782" y="546.4" width="138" height="553.6"/><rect x="0" y="516.4" width="193" height="55"/><rect x="1727" y="516.4" width="193" height="55"/></g><g opacity=".9"><path d="M45 1080v-194.3796727521345" stroke="#b38e4e" stroke-width="9"/><path d="M45 953.6532127111126l34 -28m-34 60l30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M107 1080v-184.82436759760603" stroke="#b38e4e" stroke-width="9"/><path d="M107 959.864161061556l34 -28m-34 60l30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M169 1080v-200.81683050664142" stroke="#b38e4e" stroke-width="9"/><path d="M169 949.4690601706831l34 -28m-34 60l30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M1690 1080v-162.95837142420933" stroke="#b38e4e" stroke-width="9"/><path d="M1690 974.0770585742639l-34 -28m--34 60l-30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M1752 1080v-174.96480596875773" stroke="#b38e4e" stroke-width="9"/><path d="M1752 966.2728761203075l-34 -28m--34 60l-30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M1814 1080v-105.83560419911518" stroke="#b38e4e" stroke-width="9"/><path d="M1814 1011.2068572705751l-34 -28m--34 60l-30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/></g><g fill="none" stroke="#694b30" stroke-width="26.4" stroke-linecap="round" opacity=".92"><path d="M75 1080V650L350 455"/><path d="M1845 1080V720L1640 565"/><path d="M40 905H310M1650 925H1900"/></g>
+  </svg>

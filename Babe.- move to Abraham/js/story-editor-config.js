@@ -1,0 +1,1 @@
+window.STORY_EDITOR_CONFIG = Object.assign({ enabled: true, navigationEnabled: false, speakers: [{"value": "narrator", "label": "Narrator"}, {"value": "builder", "label": "Builder"}, {"value": "god", "label": "God"}, {"value": "nimrod", "label": "Nimrod"}, {"value": "noah", "label": "Noah"}] }, window.STORY_EDITOR_CONFIG || {});

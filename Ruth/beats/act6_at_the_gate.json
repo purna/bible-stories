@@ -1,0 +1,188 @@
+{
+  "story": "Ruth",
+  "act": {
+    "id": "at_the_gate",
+    "name": "Ch.6 · At the Gate",
+    "source": "../data/act6_at_the_gate.json",
+    "svg": "at_the_gate",
+    "bg": "radial-gradient(circle at 50% 25%, #b89870, #4a3820 70%)",
+    "particle": "dawn"
+  },
+  "beats": [
+    {
+      "id": "at_the_gate_0",
+      "cite": "Ruth 4:1",
+      "items": [
+        {
+          "id": "at_the_gate_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Boaz went up to the town gate and sat down there. The guardian-redeemer whom Boaz had mentioned came along. Boaz called him to sit.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "at_the_gate_1",
+      "items": [
+        {
+          "id": "at_the_gate_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Naomi, who has come back from Moab, is selling the piece of land that belonged to our relative Elimelek. I thought I should speak to you about it in the presence of the elders of my people.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "boaz",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "at_the_gate_2",
+      "items": [
+        {
+          "id": "at_the_gate_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I will redeem it.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "kinsman_redeemer",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "at_the_gate_3",
+      "cite": "Ruth 4:5",
+      "items": [
+        {
+          "id": "at_the_gate_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "On the day you buy the land from Naomi, you also acquire Ruth the Moabite, the dead man's widow, in order to maintain the name of the dead with his property.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "boaz",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "at_the_gate_4",
+      "items": [
+        {
+          "id": "at_the_gate_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I cannot redeem it because I might endanger my own estate. You redeem it yourself. I cannot do it.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "kinsman_redeemer",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "at_the_gate_5",
+      "cite": "Ruth 4:9-10",
+      "choices": [
+        {
+          "label": "Present the witnesses",
+          "note": "The elders confirm the matter before the community."
+        },
+        {
+          "label": "Accept the redemption",
+          "note": "Boaz takes responsibility for Ruth and Naomi's inheritance."
+        }
+      ],
+      "items": [
+        {
+          "id": "at_the_gate_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The witnesses were assembled. The transaction was made before the town elders. Boaz presented the redemption choice clearly and without pressure.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

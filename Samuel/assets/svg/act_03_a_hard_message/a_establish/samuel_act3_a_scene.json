@@ -1,0 +1,18 @@
+{
+  "story": "Samuel",
+  "act": 3,
+  "chapter": "Ch.3 · A Hard Message",
+  "artSource": "art/act3_a_hard_message.md",
+  "artFolder": "assets/svg/act_03_a_hard_message",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "hammered_gold-hammered.svg"
+  ],
+  "layers": {
+    "background": "samuel_act3_a_background.svg",
+    "middleGround": "samuel_act3_a_middle_ground.svg",
+    "foreground": "samuel_act3_a_foreground.svg"
+  }
+}

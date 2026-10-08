@@ -7,86 +7,221 @@
   "lines": [
     {
       "id": "solomon_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "David was old and full of days. The kingdom was at peace on every side, and the king gathered the leaders of Israel to his bedside.",
       "cite": "1 Kings 1:39",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "solomon_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David was old and full of days. The kingdom was at peace on every side, and the king gathered the leaders of Israel to his bedside.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "solomon_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "He had not built a house for the name of the LORD with his own hands. The temple had waited through a lifetime of battles and grief.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "solomon_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "He had not built a house for the name of the LORD with his own hands. The temple had waited through a lifetime of battles and grief.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "solomon_2",
-      "speaker": "david",
-      "fx": "type",
-      "delay": 800,
-      "align": "left",
-      "text": "My son, I have it in my heart to build a house for the name of the LORD my God. Take these plans and build it well.",
       "cite": "1 Chronicles 28:12",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "solomon_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "My son, I have it in my heart to build a house for the name of the LORD my God. Take these plans and build it well.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "solomon_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "David gave his son the pattern of the temple, the gold and the silver, the cedar and the bronze. The old king had one last work to hand on.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "solomon_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David gave his son the pattern of the temple, the gold and the silver, the cedar and the bronze. The old king had one last work to hand on.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "solomon_4",
-      "speaker": "solomon",
-      "fx": "fade",
-      "delay": 800,
-      "align": "right",
-      "text": "Father, I am young and do not know how to go out or come in. Give me a wise and understanding heart to judge Thy people.",
       "cite": "1 Kings 3:7",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "solomon_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Father, I am young and do not know how to go out or come in. Give me a wise and understanding heart to judge Thy people.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "solomon",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "solomon_5",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "WISDOM IS THE ONLY CROWN THAT STAYS",
-      "text": "You have not asked for riches or long life. You asked for wisdom to rule My people. That is the request of a king after My own heart.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "solomon_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "You have not asked for riches or long life. You asked for wisdom to rule My people. That is the request of a king after My own heart.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "solomon_5_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "WISDOM IS THE ONLY CROWN THAT STAYS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "solomon_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "David slept with his fathers and was buried in the city of David. Solomon sat on his throne, and the kingdom was established in his hand.",
       "cite": "1 Kings 2:12",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "solomon_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David slept with his fathers and was buried in the city of David. Solomon sat on his throne, and the kingdom was established in his hand.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "solomon_7",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The shepherd boy had come through caves and courts, through failure and repentance, to the end of his days. The last thing he gave away was not gold but the plan for a house where the people could meet their God.",
       "choices": [
         {
           "label": "Build the temple and let the name of the LORD be great 🕍",
@@ -97,11 +232,57 @@
           "note": "Power kept is power, but it dies with the man who holds it."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "solomon_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The shepherd boy had come through caves and courts, through failure and repentance, to the end of his days. The last thing he gave away was not gold but the plan for a house where the people could meet their God.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "solomon",
   "foreground": "fg_solomon",
-  "index": 11
+  "index": 11,
+  "assetFolder": "act_12_solomon",
+  "artFolder": "assets/svg/act_12_solomon",
+  "assetStem": "david_act12",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_12_solomon/a_establish/david_act12_a_background.svg",
+      "middleGround": "assets/svg/act_12_solomon/a_establish/david_act12_a_middle_ground.svg",
+      "foreground": "assets/svg/act_12_solomon/a_establish/david_act12_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_12_solomon/b_core_action/david_act12_b_background.svg",
+      "middleGround": "assets/svg/act_12_solomon/b_core_action/david_act12_b_middle_ground.svg",
+      "foreground": "assets/svg/act_12_solomon/b_core_action/david_act12_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_12_solomon/c_resolve/david_act12_c_background.svg",
+      "middleGround": "assets/svg/act_12_solomon/c_resolve/david_act12_c_middle_ground.svg",
+      "foreground": "assets/svg/act_12_solomon/c_resolve/david_act12_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg"
+  ]
 }

@@ -1,0 +1,20 @@
+{
+  "story": "Abraham",
+  "act": 9,
+  "chapter": "Isaac Is Born",
+  "artSource": "art/act9_isaac_is_born.md",
+  "artFolder": "assets/svg/act_09_isaac_is_born",
+  "sceneId": "",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "abraham_act9_b_background.svg",
+    "middleGround": "abraham_act9_b_middle_ground.svg",
+    "foreground": "abraham_act9_b_foreground.svg"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "story": "Enoch",
+  "act": 2,
+  "chapter": "Ch.2 · The First Walk",
+  "artSource": "art/act2_the_first_walk.md",
+  "artFolder": "assets/svg/act_02_the_first_walk",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "grass-tufts.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg"
+  ],
+  "layers": {
+    "background": "enoch_act2_a_background.svg",
+    "middleGround": "enoch_act2_a_middle_ground.svg",
+    "foreground": "enoch_act2_a_foreground.svg"
+  }
+}

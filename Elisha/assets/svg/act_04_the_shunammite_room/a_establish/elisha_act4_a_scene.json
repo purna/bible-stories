@@ -1,0 +1,19 @@
+{
+  "story": "Elisha",
+  "act": 4,
+  "chapter": "Ch.4 · The Shunammite Room",
+  "artSource": "art/act4_the_shunammite_room.md",
+  "artFolder": "assets/svg/act_04_the_shunammite_room",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg"
+  ],
+  "layers": {
+    "background": "elisha_act4_a_background.svg",
+    "middleGround": "elisha_act4_a_middle_ground.svg",
+    "foreground": "elisha_act4_a_foreground.svg"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "story": "Joseph",
+  "act": 7,
+  "chapter": "Ch.7 · The Brothers Arrive",
+  "artSource": "art/act7_the_brothers_arrive.md",
+  "artFolder": "assets/svg/act_07_the_brothers_arrive",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "fabric_dots-grid.svg",
+    "fabric_dots-scatterMix.svg"
+  ],
+  "layers": {
+    "background": "joseph_act7_b_background.svg",
+    "middleGround": "joseph_act7_b_middle_ground.svg",
+    "foreground": "joseph_act7_b_foreground.svg"
+  }
+}

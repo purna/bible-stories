@@ -4,74 +4,134 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "noah-warning",
+      "name": "Ch.1 · The Warning",
+      "file": "noah-warning.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "noah-warning_hd",
+      "name": "Ch.1 · The Warning (HD)",
+      "file": "noah-warning_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "noah-blueprint",
+      "name": "Ch.2 · The Blueprint",
+      "file": "noah-blueprint.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "noah-blueprint_hd",
+      "name": "Ch.2 · The Blueprint (HD)",
+      "file": "noah-blueprint_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "noah-build",
+      "name": "Ch.3 · The Long Build",
+      "file": "noah-build.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "noah-build_hd",
+      "name": "Ch.3 · The Long Build (HD)",
+      "file": "noah-build_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "noah-gathering",
+      "name": "Ch.4 · The Gathering",
+      "file": "noah-gathering.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "noah-gathering_hd",
+      "name": "Ch.4 · The Gathering (HD)",
+      "file": "noah-gathering_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "noah-door",
+      "name": "Ch.5 · The Door Shuts",
+      "file": "noah-door.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "noah-door_hd",
+      "name": "Ch.5 · The Door Shuts (HD)",
+      "file": "noah-door_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "noah-flood",
+      "name": "Ch.6 · Forty Days",
+      "file": "noah-flood.js",
+      "type": "module"
+    },
+    {
+      "id": "noah-flood_hd",
+      "name": "Ch.6 · Forty Days (HD)",
+      "file": "noah-flood_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "noah-waiting",
+      "name": "Ch.7 · The Long Wait",
+      "file": "noah-waiting.js",
+      "type": "module"
+    },
+    {
+      "id": "noah-waiting_hd",
+      "name": "Ch.7 · The Long Wait (HD)",
+      "file": "noah-waiting_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "noah-dryground",
+      "name": "Ch.8 · Dry Ground",
+      "file": "noah-dryground.js",
+      "type": "module"
+    },
+    {
+      "id": "noah-dryground_hd",
+      "name": "Ch.8 · Dry Ground (HD)",
+      "file": "noah-dryground_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "noah-covenant",
+      "name": "Ch.9 · The Altar & the Covenant",
+      "file": "noah-covenant.js",
+      "type": "module"
+    },
+    {
+      "id": "noah-covenant_hd",
+      "name": "Ch.9 · The Altar & the Covenant (HD)",
+      "file": "noah-covenant_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "noah-vineyard",
+      "name": "Ch.10 · The Vineyard",
+      "file": "noah-vineyard.js",
+      "type": "module"
+    },
+    {
+      "id": "noah-vineyard_hd",
+      "name": "Ch.10 · The Vineyard (HD)",
+      "file": "noah-vineyard_hd.js",
       "type": "module"
     }
   ]

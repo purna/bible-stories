@@ -1,29 +1,63 @@
 {
   "id": "opening",
-  "name": "Ch.1 \u00b7 Opening",
+  "name": "Ch.1 · Opening",
   "bg": "radial-gradient(circle at 50% 25%, #24445a, #101927 70%)",
   "particle": "dawn",
   "lines": [
     {
       "id": "opening_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Introduce the setting, need, and central character here.",
       "cite": "Book 1:1",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "opening_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Introduce the setting, need, and central character here.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "opening_1",
-      "speaker": "guide",
-      "fx": "type",
-      "delay": 800,
-      "align": "right",
-      "text": "Give the player one clear objective.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "opening_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Give the player one clear objective.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "guide",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "svg": "opening",

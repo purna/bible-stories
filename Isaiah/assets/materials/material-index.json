@@ -1,0 +1,213 @@
+{
+  "story": "Isaiah",
+  "sourceTool": "Isaiah/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "running",
+      "file": "wall_brick-running.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "stacked",
+      "file": "wall_brick-stacked.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "herringbone",
+      "file": "wall_brick-herringbone.svg"
+    },
+    {
+      "key": "hammered_gold",
+      "shape": "hammered",
+      "file": "hammered_gold-hammered.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "calm",
+      "file": "water_still-calm.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "eddies",
+      "file": "water_still-eddies.svg"
+    },
+    {
+      "key": "desert_sand",
+      "shape": "dunes",
+      "file": "desert_sand-dunes.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · A City in Need",
+      "assetFolder": "act_01_a_city_in_need",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Holy Throne",
+      "assetFolder": "act_02_the_holy_throne",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · The Vineyard Song",
+      "assetFolder": "act_03_the_vineyard_song",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Immanuel Sign",
+      "assetFolder": "act_04_immanuel_sign",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · The Assyrian Shadow",
+      "assetFolder": "act_05_the_assyrian_shadow",
+      "materials": [
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · Hezekiah’s Crisis",
+      "assetFolder": "act_06_hezekiah_s_crisis",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · Comfort My People",
+      "assetFolder": "act_07_comfort_my_people",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        }
+      ]
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · The Servant",
+      "assetFolder": "act_08_the_servant",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        }
+      ]
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · New Creation",
+      "assetFolder": "act_09_new_creation",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    }
+  ]
+}

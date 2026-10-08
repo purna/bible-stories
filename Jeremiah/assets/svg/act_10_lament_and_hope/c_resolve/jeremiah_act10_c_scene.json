@@ -1,0 +1,19 @@
+{
+  "story": "Jeremiah",
+  "act": 10,
+  "chapter": "Ch.10 · Lament and Hope",
+  "artSource": "art/act10_lament_and_hope.md",
+  "artFolder": "assets/svg/act_10_lament_and_hope",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "jeremiah_act10_c_background.svg",
+    "middleGround": "jeremiah_act10_c_middle_ground.svg",
+    "foreground": "jeremiah_act10_c_foreground.svg"
+  }
+}

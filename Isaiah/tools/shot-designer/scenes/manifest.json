@@ -4,74 +4,122 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "isaiah-a-city-in-need",
+      "name": "Ch.1 · A City in Need",
+      "file": "isaiah-a-city-in-need.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "isaiah-a-city-in-need_hd",
+      "name": "Ch.1 · A City in Need (HD)",
+      "file": "isaiah-a-city-in-need_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "isaiah-the-holy-throne",
+      "name": "Ch.2 · The Holy Throne",
+      "file": "isaiah-the-holy-throne.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "isaiah-the-holy-throne_hd",
+      "name": "Ch.2 · The Holy Throne (HD)",
+      "file": "isaiah-the-holy-throne_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "isaiah-the-vineyard-song",
+      "name": "Ch.3 · The Vineyard Song",
+      "file": "isaiah-the-vineyard-song.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "isaiah-the-vineyard-song_hd",
+      "name": "Ch.3 · The Vineyard Song (HD)",
+      "file": "isaiah-the-vineyard-song_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "isaiah-immanuel-sign",
+      "name": "Ch.4 · Immanuel Sign",
+      "file": "isaiah-immanuel-sign.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "isaiah-immanuel-sign_hd",
+      "name": "Ch.4 · Immanuel Sign (HD)",
+      "file": "isaiah-immanuel-sign_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "isaiah-the-assyrian-shadow",
+      "name": "Ch.5 · The Assyrian Shadow",
+      "file": "isaiah-the-assyrian-shadow.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "isaiah-the-assyrian-shadow_hd",
+      "name": "Ch.5 · The Assyrian Shadow (HD)",
+      "file": "isaiah-the-assyrian-shadow_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "isaiah-hezekiah-s-crisis",
+      "name": "Ch.6 · Hezekiah’s Crisis",
+      "file": "isaiah-hezekiah-s-crisis.js",
+      "type": "module"
+    },
+    {
+      "id": "isaiah-hezekiah-s-crisis_hd",
+      "name": "Ch.6 · Hezekiah’s Crisis (HD)",
+      "file": "isaiah-hezekiah-s-crisis_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "isaiah-comfort-my-people",
+      "name": "Ch.7 · Comfort My People",
+      "file": "isaiah-comfort-my-people.js",
+      "type": "module"
+    },
+    {
+      "id": "isaiah-comfort-my-people_hd",
+      "name": "Ch.7 · Comfort My People (HD)",
+      "file": "isaiah-comfort-my-people_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "isaiah-the-servant",
+      "name": "Ch.8 · The Servant",
+      "file": "isaiah-the-servant.js",
+      "type": "module"
+    },
+    {
+      "id": "isaiah-the-servant_hd",
+      "name": "Ch.8 · The Servant (HD)",
+      "file": "isaiah-the-servant_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "isaiah-new-creation",
+      "name": "Ch.9 · New Creation",
+      "file": "isaiah-new-creation.js",
+      "type": "module"
+    },
+    {
+      "id": "isaiah-new-creation_hd",
+      "name": "Ch.9 · New Creation (HD)",
+      "file": "isaiah-new-creation_hd.js",
       "type": "module"
     }
   ]

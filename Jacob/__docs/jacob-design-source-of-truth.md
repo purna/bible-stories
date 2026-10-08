@@ -95,6 +95,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 01B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `desert_sand` + `wood_oak` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “weigh hunger against a lasting inheritance”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 01C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `wood_oak` + `stone` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01A — ESTABLISH (28–35mm, tent, stew and birthright)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪨 STONE hearth (stone)                           │   │
+│       │  🏜️  DESERT SAND floor (desert_sand)              │   │
+│       │  🍲 STEW POT at edge (placeholder)                 │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LAYERED LANDSCAPE, scripture setting    │  │   │
+│       │  │  👤  ESAU famished (hero 3D)                 │  │   │
+│       │  │  👤  JACOB cooking (hero 3D)                 │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Sell me this day thy birthright" │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01B — INTERACT (40–55mm, chest height, oath taken)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS SWEARING OATH center (sand+wood)         │   │
+│       │  🪵 WOOD OAK staff (wood_oak)                      │   │
+│       │  📜 BIRTHRIGHT DOCUMENT (placeholder)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  SIMPLIFIED TENT, reduced saturation     │  │   │
+│       │  │  👤  ESAU swearing (hero 3D)                 │  │   │
+│       │  │  👤  JACOB receiving (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Swear to me this day..."          │  │   │
+│       │  │  [CHOICE]    ▢ Swear  ▢ Eat  ▢ Refuse        │  │   │
+│       │  │  [CAPTION] "He sold his birthright..."       │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01C — RESOLVE (50mm, eye level, stew eaten)               │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪵 WOOD OAK corner (wood_oak)                     │   │
+│       │  🪨 STONE corner (stone)                           │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LANDSCAPE opened for scripture space    │  │   │
+│       │  │  👤  ESAU eating (hero 3D)                   │  │   │
+│       │  │  📜  BIRTHRIGHT transferred (hero 3D)        │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Then Jacob gave Esau bread..."   │  │   │
+│       │  │  [SCRIPTURE] "Genesis 25:33-34"              │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 2: The Stolen Blessing
 
 **Act summary:** Assemble the disguise, then witness its cost.
@@ -104,6 +162,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 02A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `desert_sand` + `wood_oak` | Wide, three-plane tableau. FG SVG: framing desert sand, nearby silhouettes, and an edge prop tied to “the stolen blessing”. MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
 | 02B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `wood_oak` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “assemble the disguise, then witness its cost”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 02C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `desert_sand` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02A — ESTABLISH (28–35mm, tent, disguise preparation)     │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🏜️  DESERT SAND tent floor (desert_sand)         │   │
+│       │  🪵 WOOD OAK frame (wood_oak)                      │   │
+│       │  🐑 GOAT SKINS at edge (placeholder)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LAYERED LANDSCAPE, scripture setting    │  │   │
+│       │  │  👤  REBEKAH preparing (hero 3D)             │  │   │
+│       │  │  👤  JACOB disguised (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Put them upon thy son..."        │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02B — INTERACT (40–55mm, chest height, receiving blessing)│
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS RECEIVING BLESSING center (wood+fabric)  │   │
+│       │  🪵 WOOD OAK staff (wood_oak)                      │   │
+│       │  🧵 FABRIC WEAVE goat skin (fabric_weave)          │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  SIMPLIFIED TENT, reduced saturation     │  │   │
+│       │  │  👤  ISAAC blessing (hero 3D)                │  │   │
+│       │  │  👤  JACOB deceiving (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "The voice is Jacob's voice..."    │  │   │
+│       │  │  [CHOICE]    ▢ Deceive  ▢ Hesitate  ▢ Flee   │  │   │
+│       │  │  [CAPTION] "Let people serve thee..."        │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02C — RESOLVE (50mm, eye level, Esau's anguish)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧵 FABRIC WEAVE corner (fabric_weave)             │   │
+│       │  🏜️  DESERT SAND corner (desert_sand)             │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LANDSCAPE opened for scripture space    │  │   │
+│       │  │  👤  ESAU weeping (hero 3D)                  │  │   │
+│       │  │  👤  ISAAC trembling (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Bless me, even me also..."       │  │   │
+│       │  │  [SCRIPTURE] "Genesis 27:34-35"              │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Act 3: Bethel
 
@@ -115,6 +231,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 03B | Interact | Increase local contrast around the action while retaining midnight violet, ultramarine, pale cyan, star gold. Key light follows the story’s real light source. | `wood_oak` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “build the stone pillar after the ladder dream”. BG SVG: simplified abstract horizon, layered cloud, and symbolic light field with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 03C | Resolve / reflect | Let the accent move toward a quieter midnight violet, ultramarine, pale cyan, star gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `stone` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: abstract horizon, layered cloud, and symbolic light field, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03A — ESTABLISH (28–35mm, Bethel, stone pillar)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪨 STONE pillar (stone)                           │   │
+│       │  🪵 WOOD OAK altar wood (wood_oak)                 │   │
+│       │  🌌 LADDER base at edge (placeholder)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌌  ABSTRACT HORIZON, cloud, light field    │  │   │
+│       │  │  👤  JACOB sleeping (hero 3D)                │  │   │
+│       │  │  👼  ANGELS ascending/descending (hero 3D)   │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "A ladder set up on the earth..." │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03B — INTERACT (40–55mm, chest height, anointing pillar)  │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS POURING OIL center (wood+fabric)         │   │
+│       │  🪵 WOOD OAK oil vessel (wood_oak)                 │   │
+│       │  🧵 FABRIC WEAVE garment (fabric_weave)            │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌌  SIMPLIFIED HORIZON, reduced saturation  │  │   │
+│       │  │  👤  JACOB anointing (hero 3D)               │  │   │
+│       │  │  🪨  PILLAR receiving oil (hero 3D)          │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "This stone...shall be God's..."   │  │   │
+│       │  │  [CHOICE]    ▢ Anoint  ▢ Vow  ▢ Worship      │  │   │
+│       │  │  [CAPTION] "He poured oil upon the top..."   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03C — RESOLVE (50mm, eye level, Bethel established)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧵 FABRIC WEAVE corner (fabric_weave)             │   │
+│       │  🪨 STONE corner (stone)                           │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌌  HORIZON opened for scripture space      │  │   │
+│       │  │  👤  JACOB worshipping (hero 3D)             │  │   │
+│       │  │  🪨  PILLAR anointed (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "This...is God's house..."        │  │   │
+│       │  │  [SCRIPTURE] "Genesis 28:18-19"              │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 4: Rachel at the Well
 
 **Act summary:** Move the stone and water the flock.
@@ -124,6 +298,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 04A | Establish | deep indigo, river teal, foam blue, wet silver. low raking light with broken water reflections. | `water_still` + `wood_oak` | Wide, three-plane tableau. FG SVG: framing water still, nearby silhouettes, and an edge prop tied to “rachel at the well”. MG: character group and optional low-detail 3D landmark. BG SVG: waterline, cloud bank, and distant shore. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow lateral drift with a restrained rise on the reveal. | SVG: ripple paths, reeds, cloud bands, and spray loop at different parallax speeds. 3D: hero vessel or crossing prop rocks gently; water-adjacent props react with small secondary motion. Characters begin in readable held poses before any movement. |
 | 04B | Interact | Increase local contrast around the action while retaining deep indigo, river teal, foam blue, wet silver. Key light follows the story’s real light source. | `wood_oak` + `grass` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “move the stone and water the flock”. BG SVG: simplified waterline, cloud bank, and distant shore with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 04C | Resolve / reflect | Let the accent move toward a quieter deep indigo, river teal, foam blue, wet silver; lower saturation behind captions and preserve warm skin tones. | `grass` + `water_still` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: waterline, cloud bank, and distant shore, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04A — ESTABLISH (28–35mm, well, stone and flock)          │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💧 WATER STILL well (water_still)                 │   │
+│       │  🪵 WOOD OAK well frame (wood_oak)                 │   │
+│       │  🐑 FLOCK at edge (placeholder)                    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  💧  WATERLINE, cloud bank, distant shore    │  │   │
+│       │  │  👤  JACOB arriving (hero 3D)                │  │   │
+│       │  │  👤  RACHEL with flock (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "And Jacob kissed Rachel..."      │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04B — INTERACT (40–55mm, chest height, rolling stone)     │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS ROLLING STONE center (wood+grass)        │   │
+│       │  🪵 WOOD OAK lever (wood_oak)                      │   │
+│       │  🌿 GRASS by well (grass)                          │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  💧  SIMPLIFIED WELL, reduced saturation     │  │   │
+│       │  │  👤  JACOB rolling (hero 3D)                 │  │   │
+│       │  │  🐑  FLOCK watered (hero 3D)                 │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "All the flocks were gathered..."  │  │   │
+│       │  │  [CHOICE]    ▢ Roll  ▢ Water  ▢ Greet        │  │   │
+│       │  │  [CAPTION] "He watered the flock..."         │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04C — RESOLVE (50mm, eye level, Jacob welcomed)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 GRASS corner (grass)                           │   │
+│       │  💧 WATER STILL corner (water_still)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  💧  WELL opened for scripture space         │  │   │
+│       │  │  👤  JACOB welcomed (hero 3D)                │  │   │
+│       │  │  👤  LABAN embracing (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Surely thou art my bone..."      │  │   │
+│       │  │  [SCRIPTURE] "Genesis 29:10-14"              │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Act 5: Laban’s Bargain
 
@@ -135,6 +367,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 05B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `grass` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “track changing wages and wedding promises”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 05C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `water_still` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05A — ESTABLISH (28–35mm, tent, wages negotiation)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💧 WATER STILL basin (water_still)                │   │
+│       │  🌿 GRASS tent floor (grass)                       │   │
+│       │  📜 CONTRACT at edge (placeholder)                 │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LAYERED LANDSCAPE, scripture setting    │  │   │
+│       │  │  👤  LABAN proposing (hero 3D)               │  │   │
+│       │  │  👤  JACOB considering (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "What shall thy wages be?"        │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05B — INTERACT (40–55mm, chest height, terms changing)    │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS SHAKING ON TERMS center (grass+stone)    │   │
+│       │  🌿 GRASS palm (grass)                             │   │
+│       │  🪨 STONE witness (stone)                          │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  SIMPLIFIED TENT, reduced saturation     │  │   │
+│       │  │  👤  LABAN changing terms (hero 3D)          │  │   │
+│       │  │  👤  JACOB accepting (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Thy wages shall be..."            │  │   │
+│       │  │  [CHOICE]    ▢ Accept  ▢ Negotiate  ▢ Leave  │  │   │
+│       │  │  [CAPTION] "Changed my wages ten times..."   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05C — RESOLVE (50mm, eye level, covenant made)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪨 STONE corner (stone)                           │   │
+│       │  💧 WATER STILL corner (water_still)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LANDSCAPE opened for scripture space    │  │   │
+│       │  │  👤  JACOB & LABAN covenanting (hero 3D)     │  │   │
+│       │  │  📜  TERMS settled (hero 3D)                 │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "God hath not suffered..."        │  │   │
+│       │  │  [SCRIPTURE] "Genesis 31:7"                  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 6: The Flocks
 
 **Act summary:** Sort speckled and spotted animals fairly.
@@ -144,6 +434,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 06A | Establish | leaf green, earth brown, barley gold, clear sky blue. soft morning light with leaf-patterned highlights. | `grass` + `fabric_weave` | Wide, three-plane tableau. FG SVG: framing grass, nearby silhouettes, and an edge prop tied to “the flocks”. MG: character group and optional low-detail 3D landmark. BG SVG: rolling field, orchard line, and layered sky. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. gentle crane or arc revealing the working space. | SVG: leaves, grasses, grain heads, and birds use staggered wind cycles. 3D: plants, baskets, animals, or tools respond to touch with small physical motion. Characters begin in readable held poses before any movement. |
 | 06B | Interact | Increase local contrast around the action while retaining leaf green, earth brown, barley gold, clear sky blue. Key light follows the story’s real light source. | `fabric_weave` + `wood_oak` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “sort speckled and spotted animals fairly”. BG SVG: simplified rolling field, orchard line, and layered sky with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 06C | Resolve / reflect | Let the accent move toward a quieter leaf green, earth brown, barley gold, clear sky blue; lower saturation behind captions and preserve warm skin tones. | `wood_oak` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: rolling field, orchard line, and layered sky, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06A — ESTABLISH (28–35mm, pasture, sorting flocks)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🌿 GRASS pasture (grass)                          │   │
+│       │  🧵 FABRIC WEAVE sorting cloth (fabric_weave)      │   │
+│       │  🐑 SPECKLED LAMB at edge (placeholder)            │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌾  ROLLING FIELD, orchard, layered sky     │  │   │
+│       │  │  👤  JACOB sorting (hero 3D)                 │  │   │
+│       │  │  🐑  FLOCKS separating (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "I will pass through all thy..."  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06B — INTERACT (40–55mm, chest height, rods in watering)  │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS PLACING RODS center (fabric+wood)        │   │
+│       │  🧵 FABRIC WEAVE rods (fabric_weave)               │   │
+│       │  🪵 WOOD OAK peeled rods (wood_oak)                │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌾  SIMPLIFIED FIELD, reduced saturation    │  │   │
+│       │  │  👤  JACOB setting rods (hero 3D)            │  │   │
+│       │  │  🐑  FLOCKS conceiving (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "The flocks conceived before..."   │  │   │
+│       │  │  [CHOICE]    ▢ Place  ▢ Observe  ▢ Trust     │  │   │
+│       │  │  [CAPTION] "The stronger were Jacob's..."    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06C — RESOLVE (50mm, eye level, flocks divided)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪵 WOOD OAK corner (wood_oak)                     │   │
+│       │  🌿 GRASS corner (grass)                           │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌾  FIELD opened for scripture space        │  │   │
+│       │  │  👤  JACOB watching (hero 3D)                │  │   │
+│       │  │  🐑  SPECKLED & SPOTTED separated (hero 3D)  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The man increased exceedingly..."│  │   │
+│       │  │  [SCRIPTURE] "Genesis 30:43"                 │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Act 7: Leaving Haran
 
@@ -155,6 +503,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 07B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `desert_sand` + `wood_oak` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “pack the camp before laban catches up”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 07C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `wood_oak` + `stone` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07A — ESTABLISH (28–35mm, camp, packing secretly)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪨 STONE camp edge (stone)                        │   │
+│       │  🏜️  DESERT SAND ground (desert_sand)             │   │
+│       │  🎒 PACKS at edge (placeholder)                    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LAYERED LANDSCAPE, scripture setting    │  │   │
+│       │  │  👤  JACOB packing (hero 3D)                 │  │   │
+│       │  │  👥  FAMILY loading (hero 3D)                │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Jacob stole away unawares..."    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07B — INTERACT (40–55mm, chest height, crossing river)    │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS LIFTING CHILDREN center (sand+wood)      │   │
+│       │  🏜️  DESERT SAND riverbank (desert_sand)          │   │
+│       │  🪵 WOOD OAK crossing poles (wood_oak)             │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  SIMPLIFIED CAMP, reduced saturation     │  │   │
+│       │  │  👤  JACOB crossing (hero 3D)                │  │   │
+│       │  │  👥  FAMILY following (hero 3D)              │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "He rose up, and set his sons..."  │  │   │
+│       │  │  [CHOICE]    ▢ Cross  ▢ Wait  ▢ Pray         │  │   │
+│       │  │  [CAPTION] "He passed over the ford..."      │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07C — RESOLVE (50mm, eye level, Laban pursues)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪵 WOOD OAK corner (wood_oak)                     │   │
+│       │  🪨 STONE corner (stone)                           │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LANDSCAPE opened for scripture space    │  │   │
+│       │  │  👤  JACOB on other side (hero 3D)           │  │   │
+│       │  │  👤  LABAN approaching (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Laban overtook him..."           │  │   │
+│       │  │  [SCRIPTURE] "Genesis 31:23-24"              │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 8: The Night Wrestling
 
 **Act summary:** Hold on through the night and receive a new name.
@@ -164,6 +570,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 08A | Establish | near-black blue, cool slate, lamp amber, muted earth. single motivated shaft or lamp with rapid falloff. | `desert_sand` + `wood_oak` | Wide, three-plane tableau. FG SVG: framing desert sand, nearby silhouettes, and an edge prop tied to “the night wrestling”. MG: character group and optional low-detail 3D landmark. BG SVG: receding rock or masonry silhouettes with minimal detail. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow inward dolly; pull back only when safety or release arrives. | SVG: dust motes and thin light rays drift slowly. 3D: chains, stone, door, or lamp carries subtle weight and contact motion. Characters begin in readable held poses before any movement. |
 | 08B | Interact | Increase local contrast around the action while retaining near-black blue, cool slate, lamp amber, muted earth. Key light follows the story’s real light source. | `wood_oak` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “hold on through the night and receive a new name”. BG SVG: simplified receding rock or masonry silhouettes with minimal detail with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 08C | Resolve / reflect | Let the accent move toward a quieter near-black blue, cool slate, lamp amber, muted earth; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `desert_sand` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: receding rock or masonry silhouettes with minimal detail, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08A — ESTABLISH (28–35mm, Jabbok ford, night wrestling)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🏜️  DESERT SAND riverbank (desert_sand)          │   │
+│       │  🪵 WOOD OAK staff (wood_oak)                      │   │
+│       │  🌑 DARKNESS at edge (placeholder)                 │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌑  RECEEDING ROCK SILHOUETTES, minimal    │  │   │
+│       │  │  👤  JACOB alone (hero 3D)                   │  │   │
+│       │  │  👼  MAN wrestling (hero 3D)                 │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "There wrestled a man with him..."│  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08B — INTERACT (40–55mm, chest height, holding on)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS CLINGING center (wood+fabric)            │   │
+│       │  🪵 WOOD OAK hip touched (wood_oak)                │   │
+│       │  🧵 FABRIC WEAVE garment torn (fabric_weave)       │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌑  SIMPLIFIED FORD, reduced saturation     │  │   │
+│       │  │  👤  JACOB prevailing (hero 3D)              │  │   │
+│       │  │  👼  MAN blessing (hero 3D)                  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "I will not let thee go..."        │  │   │
+│       │  │  [CHOICE]    ▢ Hold  ▢ Release  ▢ Bless      │  │   │
+│       │  │  [CAPTION] "Thy name shall be called Israel" │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08C — RESOLVE (50mm, eye level, Peniel named)             │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧵 FABRIC WEAVE corner (fabric_weave)             │   │
+│       │  🏜️  DESERT SAND corner (desert_sand)             │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌑  FORD opened for scripture space         │  │   │
+│       │  │  👤  JACOB limping (hero 3D)                 │  │   │
+│       │  │  🌅  SUN RISING (hero 3D)                    │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "I have seen God face to face..." │  │   │
+│       │  │  [SCRIPTURE] "Genesis 32:30"                 │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Act 9: Meeting Esau
 
@@ -175,6 +639,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 09B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `fabric_weave` + `water_still` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “arrange gifts, then step forward unarmed”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 09C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `water_still` + `wood_oak` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09A — ESTABLISH (28–35mm, gifts arranged, Esau approaching)│
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪵 WOOD OAK gift piles (wood_oak)                 │   │
+│       │  🧵 FABRIC WEAVE bundles (fabric_weave)            │   │
+│       │  👥 FAMILY behind at edge (placeholder)            │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LAYERED LANDSCAPE, scripture setting    │  │   │
+│       │  │  👤  JACOB arranging (hero 3D)               │  │   │
+│       │  │  👥  SERVANTS with gifts (hero 3D)           │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "A present to Esau..."            │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09B — INTERACT (40–55mm, chest height, bowing forward)    │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS BOWING center (fabric+water)             │   │
+│       │  🧵 FABRIC WEAVE garment (fabric_weave)            │   │
+│       │  💧 WATER STILL reflection (water_still)           │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  SIMPLIFIED LANDSCAPE, reduced sat.      │  │   │
+│       │  │  👤  JACOB bowing (hero 3D)                  │  │   │
+│       │  │  👤  ESAU running (hero 3D)                  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Esau ran to meet him..."          │  │   │
+│       │  │  [CHOICE]    ▢ Bow  ▢ Embrace  ▢ Weep        │  │   │
+│       │  │  [CAPTION] "He fell on his neck..."          │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09C — RESOLVE (50mm, eye level, reconciliation)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💧 WATER STILL corner (water_still)               │   │
+│       │  🪵 WOOD OAK corner (wood_oak)                     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LANDSCAPE opened for scripture space    │  │   │
+│       │  │  👤  ESAU & JACOB weeping (hero 3D)          │  │   │
+│       │  │  🎁  GIFTS accepted (hero 3D)                │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "I have seen thy face..."         │  │   │
+│       │  │  [SCRIPTURE] "Genesis 33:10"                 │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 10: Joseph’s Coats
 
 **Act summary:** Recognise favouritism forming in the household.
@@ -184,6 +706,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 10A | Establish | parchment cream, earth umber, muted teal, restrained gold. clear directional key with soft fill and readable silhouettes. | `stone` + `wood_oak` | Wide, three-plane tableau. FG SVG: framing stone, nearby silhouettes, and an edge prop tied to “joseph’s coats”. MG: character group and optional low-detail 3D landmark. BG SVG: layered landscape or architecture specific to the scripture setting. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. subtle parallax drift with a short eased push at the narrative turn. | SVG: atmosphere and cloth use slow staggered loops. 3D: one tactile hero prop carries the interaction; all secondary motion remains quiet. Characters begin in readable held poses before any movement. |
 | 10B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `wood_oak` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “recognise favouritism forming in the household”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 10C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `stone` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10A — ESTABLISH (28–35mm, household, Joseph's coat)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪨 STONE threshold (stone)                        │   │
+│       │  🪵 WOOD OAK loom (wood_oak)                       │   │
+│       │  🧥 COAT OF MANY COLORS at edge (placeholder)      │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  LAYERED LANDSCAPE, scripture setting    │  │   │
+│       │  │  👤  JACOB giving coat (hero 3D)             │  │   │
+│       │  │  👤  JOSEPH receiving (hero 3D)              │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "He made him a coat of..."        │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10B — INTERACT (40–55mm, chest height, brothers watching) │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS HOLDING COAT center (wood+fabric)        │   │
+│       │  🪵 WOOD OAK coat fabric (wood_oak)                │   │
+│       │  🧵 FABRIC WEAVE colors (fabric_weave)             │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  SIMPLIFIED HOUSEHOLD, reduced sat.     │  │   │
+│       │  │  👤  JACOB favoring (hero 3D)                │  │   │
+│       │  │  👥  BROTHERS hating (hero 3D)               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "They hated him..."                │  │   │
+│       │  │  [CHOICE]    ▢ Give  ▢ Observe  ▢ Intervene  │  │   │
+│       │  │  [CAPTION] "His brethren envied him..."      │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10C — RESOLVE (50mm, eye level, pattern set)              │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧵 FABRIC WEAVE corner (fabric_weave)             │   │
+│       │  🪨 STONE corner (stone)                           │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏜️  HOUSEHOLD opened for scripture space   │  │   │
+│       │  │  👤  JACOB watching (hero 3D)                │  │   │
+│       │  │  👥  BROTHERS plotting (hero 3D)             │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "They could not speak peaceably"  │  │   │
+│       │  │  [SCRIPTURE] "Genesis 37:3-4"                │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Panel acceptance checklist
 

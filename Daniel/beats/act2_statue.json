@@ -1,0 +1,310 @@
+{
+  "story": "Daniel",
+  "act": {
+    "id": "statue",
+    "name": "The Dream",
+    "source": "../data/act2_statue.json",
+    "svg": "throne_room",
+    "bg": "radial-gradient(circle at 50% 20%, #3d1c08, #1e0f0a 65%, #0d0705)",
+    "particle": "dream"
+  },
+  "beats": [
+    {
+      "id": "statue_0",
+      "items": [
+        {
+          "id": "statue_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The king had a dream that terrified him. He demanded his wise men tell him not just what it meant — but what it was.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "throne_room"
+    },
+    {
+      "id": "statue_1",
+      "items": [
+        {
+          "id": "statue_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Interpret my dream — or ALL the wise men of Babylon die. Including you, Daniel.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "nebuchadnezzar",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "statue_1_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "TELL ME!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "nebuchadnezzar",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "throne_room"
+    },
+    {
+      "id": "statue_2",
+      "items": [
+        {
+          "id": "statue_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "No human could answer. But Daniel didn't guess. He prayed first.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_prays"
+    },
+    {
+      "id": "statue_3",
+      "audioSfx": "assets/audio/sfx/vision_reveal.mp3",
+      "items": [
+        {
+          "id": "statue_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "There is a God in heaven who reveals mysteries.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "daniel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_prays"
+    },
+    {
+      "id": "statue_4",
+      "items": [
+        {
+          "id": "statue_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Your dream: a statue of terrifying brightness. Gold head. Silver chest. Bronze belly. Iron legs. Feet of clay.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "daniel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "statue_dream"
+    },
+    {
+      "id": "statue_5",
+      "items": [
+        {
+          "id": "statue_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "You are the gold head, O King. But after you will come other kingdoms — and in the end, God's kingdom will crush them all and stand forever.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "daniel",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "statue_dream"
+    },
+    {
+      "id": "statue_6",
+      "vision": true,
+      "choices": [
+        {
+          "label": "Daniel softens the message 😬",
+          "note": "A flattering reading protects favor with the king now — but dents Discernment.",
+          "decisionId": "statue_softened",
+          "tags": [
+            "loyalty:diplomatic",
+            "cost:private"
+          ]
+        },
+        {
+          "label": "Daniel delivers it plainly ✅",
+          "note": "The true reading, even the uncomfortable parts. That's what earns the king's respect.",
+          "decisionId": "statue_plain",
+          "tags": [
+            "loyalty:god",
+            "cost:public",
+            "risk:self"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "statue_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The king could have been angry at the news. Instead, he did something no one expected.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "nebuchadnezzar_bows"
+    },
+    {
+      "id": "statue_7",
+      "items": [
+        {
+          "id": "statue_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Your God is the God of gods and Lord of kings — a revealer of mysteries!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "nebuchadnezzar",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "nebuchadnezzar_bows"
+    },
+    {
+      "id": "statue_8",
+      "items": [
+        {
+          "id": "statue_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Daniel used his promotion not to protect himself, but to save the other wise men who had no power to answer.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "daniel_serve"
+    }
+  ]
+}

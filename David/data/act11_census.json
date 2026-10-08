@@ -7,97 +7,270 @@
   "lines": [
     {
       "id": "census_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Again the anger of the LORD was kindled against Israel, and He stirred up David to say, 'Go, count the people.' Joab the commander went out through all Israel and came back to David.",
       "cite": "2 Samuel 24:1",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "census_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Again the anger of the LORD was kindled against Israel, and He stirred up David to say, 'Go, count the people.' Joab the commander went out through all Israel and came back to David.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "census_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The number came in: eight hundred thousand men able to draw the sword in Judah alone. David felt the weight of every name on his own shoulders.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "census_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The number came in: eight hundred thousand men able to draw the sword in Judah alone. David felt the weight of every name on his own shoulders.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "census_2",
-      "speaker": "david",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "I have sinned greatly, for I have walked in folly. Now, I pray Thee, take away the iniquity of Thy servant, for I have done very foolishly.",
       "cite": "2 Samuel 24:10",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "census_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I have sinned greatly, for I have walked in folly. Now, I pray Thee, take away the iniquity of Thy servant, for I have done very foolishly.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "census_3",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE KING'S HAND BRINGS THE PLAGUE",
-      "text": "The king's own hand had numbered the people. The king's own hand must now choose the punishment, and the king's own hand must build the altar.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "census_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The king's own hand had numbered the people. The king's own hand must now choose the punishment, and the king's own hand must build the altar.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "census_3_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE KING'S HAND BRINGS THE PLAGUE",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "census_4",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "David chose the plague. Seventy days of death fell on the land, and the angel of the LORD reached out his hand to destroy Jerusalem.",
       "cite": "2 Samuel 24:16",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "census_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David chose the plague. Seventy days of death fell on the land, and the angel of the LORD reached out his hand to destroy Jerusalem.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "census_5",
-      "speaker": "david",
-      "fx": "type",
-      "delay": 800,
-      "align": "left",
-      "text": "I am the one who has sinned. These sheep have done nothing. Let Thine hand fall on me and my father's house, not on the people.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "census_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I am the one who has sinned. These sheep have done nothing. Let Thine hand fall on me and my father's house, not on the people.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "census_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The angel stayed his hand at the threshing floor of Araunah the Jebusite. David bought that ground for sixty shekels of silver and built an altar upon it.",
       "cite": "2 Samuel 24:25",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "census_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The angel stayed his hand at the threshing floor of Araunah the Jebusite. David bought that ground for sixty shekels of silver and built an altar upon it.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "census_7",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "RESPONSIBILITY IS THE ALTAR'S STONE",
-      "text": "The king took the plague on his own name and the land was spared. That hill became the place where the temple would one day rise, on the ground a king bought with his own repentance.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "census_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The king took the plague on his own name and the land was spared. That hill became the place where the temple would one day rise, on the ground a king bought with his own repentance.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "census_7_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "RESPONSIBILITY IS THE ALTAR'S STONE",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "census_8",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "David lay on the ground before the altar, and the plague ceased. The king had learned that a crown cannot count the people without counting the cost.",
       "choices": [
         {
           "label": "Carry the cost of every name 📜",
@@ -108,11 +281,58 @@
           "note": "Delegation keeps a throne safe. It does not keep it honest."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "census_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David lay on the ground before the altar, and the plague ceased. The king had learned that a crown cannot count the people without counting the cost.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "census",
   "foreground": "fg_census",
-  "index": 10
+  "index": 10,
+  "assetFolder": "act_11_census",
+  "artFolder": "assets/svg/act_11_census",
+  "assetStem": "david_act11",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_11_census/a_establish/david_act11_a_background.svg",
+      "middleGround": "assets/svg/act_11_census/a_establish/david_act11_a_middle_ground.svg",
+      "foreground": "assets/svg/act_11_census/a_establish/david_act11_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_11_census/b_core_action/david_act11_b_background.svg",
+      "middleGround": "assets/svg/act_11_census/b_core_action/david_act11_b_middle_ground.svg",
+      "foreground": "assets/svg/act_11_census/b_core_action/david_act11_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_11_census/c_resolve/david_act11_c_background.svg",
+      "middleGround": "assets/svg/act_11_census/c_resolve/david_act11_c_middle_ground.svg",
+      "foreground": "assets/svg/act_11_census/c_resolve/david_act11_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/fabric_weave-basket.svg"
+  ]
 }

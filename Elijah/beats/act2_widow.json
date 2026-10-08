@@ -1,0 +1,303 @@
+{
+  "story": "Elijah",
+  "act": {
+    "id": "widow",
+    "name": "The Widow of Zarephath",
+    "source": "../data/act2_widow.json",
+    "svg": "zarephath_town",
+    "bg": "radial-gradient(circle at 50% 20%, #c6a776, #8c6c4f 70%, #594236)",
+    "particle": "dream"
+  },
+  "beats": [
+    {
+      "id": "widow_0",
+      "items": [
+        {
+          "id": "widow_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Go at once to Zarephath in Sidon. I have directed a widow there to provide for you.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "zarephath_town"
+    },
+    {
+      "id": "widow_1",
+      "items": [
+        {
+          "id": "widow_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At the town gate Elijah found a widow gathering sticks. She was preparing what she believed would be the last meal for herself and her son.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "zarephath_town"
+    },
+    {
+      "id": "widow_2",
+      "choices": [
+        {
+          "label": "Trust God's promise",
+          "note": "The widow is asked to trust before she can see the provision."
+        },
+        {
+          "label": "Hold on to what little remains",
+          "note": "Her fear is understandable. She has almost nothing left, yet God's provision is about to become visible."
+        }
+      ],
+      "items": [
+        {
+          "id": "widow_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Please bring me a little water—and while you are going, bring me a small piece of bread.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elijah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "zarephath_town"
+    },
+    {
+      "id": "widow_3",
+      "items": [
+        {
+          "id": "widow_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I have no bread. Only a handful of flour and a little oil. I was gathering sticks to prepare one final meal for my son and me.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "widow",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "zarephath_town"
+    },
+    {
+      "id": "widow_4",
+      "items": [
+        {
+          "id": "widow_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Do not be afraid. The LORD says the flour will not run out and the oil will not fail until rain returns to the land.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elijah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "zarephath_town"
+    },
+    {
+      "id": "widow_5",
+      "items": [
+        {
+          "id": "widow_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "She trusted the word of the LORD. Day after day there was enough flour and oil for Elijah, the widow, and her household.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "zarephath_town"
+    },
+    {
+      "id": "widow_6",
+      "items": [
+        {
+          "id": "widow_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Then tragedy struck: the widow's son became ill and died. Elijah carried the boy upstairs, prayed to the LORD, and pleaded for his life.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "zarephath_town"
+    },
+    {
+      "id": "widow_7",
+      "items": [
+        {
+          "id": "widow_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "LORD my God, let this child's life return to him.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elijah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "zarephath_town"
+    },
+    {
+      "id": "widow_8",
+      "items": [
+        {
+          "id": "widow_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The LORD heard Elijah's prayer. The child's life returned, and Elijah brought him back to his mother.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "zarephath_town"
+    },
+    {
+      "id": "widow_9",
+      "items": [
+        {
+          "id": "widow_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Now I know that you are a man of God and that the word of the LORD from your mouth is true.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "widow",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "zarephath_town"
+    }
+  ]
+}

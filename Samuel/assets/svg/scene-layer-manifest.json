@@ -1,0 +1,684 @@
+{
+  "story": "Samuel",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Boy at Shiloh",
+      "sceneId": "placeholder",
+      "artSource": "art/act1_the_boy_at_shiloh.md",
+      "assetFolder": "act_01_the_boy_at_shiloh",
+      "artFolder": "assets/svg/act_01_the_boy_at_shiloh",
+      "assetStem": "samuel_act1",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "wood_oak",
+        "fabric_weave",
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_the_boy_at_shiloh/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_the_boy_at_shiloh/a_establish/samuel_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_the_boy_at_shiloh/a_establish/samuel_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_boy_at_shiloh/a_establish/samuel_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_the_boy_at_shiloh/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_the_boy_at_shiloh/b_core_action/samuel_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_the_boy_at_shiloh/b_core_action/samuel_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_boy_at_shiloh/b_core_action/samuel_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_the_boy_at_shiloh/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_the_boy_at_shiloh/c_resolve/samuel_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_the_boy_at_shiloh/c_resolve/samuel_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_boy_at_shiloh/c_resolve/samuel_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_the_boy_at_shiloh/a_establish/samuel_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_the_boy_at_shiloh/a_establish/samuel_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_boy_at_shiloh/a_establish/samuel_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_the_boy_at_shiloh/b_core_action/samuel_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_the_boy_at_shiloh/b_core_action/samuel_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_boy_at_shiloh/b_core_action/samuel_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_the_boy_at_shiloh/c_resolve/samuel_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_the_boy_at_shiloh/c_resolve/samuel_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_boy_at_shiloh/c_resolve/samuel_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Voice at Night",
+      "sceneId": "placeholder",
+      "artSource": "art/act2_the_voice_at_night.md",
+      "assetFolder": "act_02_the_voice_at_night",
+      "artFolder": "assets/svg/act_02_the_voice_at_night",
+      "assetStem": "samuel_act2",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "wood_oak",
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_the_voice_at_night/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_the_voice_at_night/a_establish/samuel_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_the_voice_at_night/a_establish/samuel_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_voice_at_night/a_establish/samuel_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_the_voice_at_night/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_the_voice_at_night/b_core_action/samuel_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_the_voice_at_night/b_core_action/samuel_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_voice_at_night/b_core_action/samuel_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_the_voice_at_night/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_the_voice_at_night/c_resolve/samuel_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_the_voice_at_night/c_resolve/samuel_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_voice_at_night/c_resolve/samuel_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_the_voice_at_night/a_establish/samuel_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_the_voice_at_night/a_establish/samuel_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_voice_at_night/a_establish/samuel_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_the_voice_at_night/b_core_action/samuel_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_the_voice_at_night/b_core_action/samuel_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_voice_at_night/b_core_action/samuel_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_the_voice_at_night/c_resolve/samuel_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_the_voice_at_night/c_resolve/samuel_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_voice_at_night/c_resolve/samuel_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · A Hard Message",
+      "sceneId": "placeholder",
+      "artSource": "art/act3_a_hard_message.md",
+      "assetFolder": "act_03_a_hard_message",
+      "artFolder": "assets/svg/act_03_a_hard_message",
+      "assetStem": "samuel_act3",
+      "materials": [
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_a_hard_message/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_a_hard_message/a_establish/samuel_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_a_hard_message/a_establish/samuel_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_a_hard_message/a_establish/samuel_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_a_hard_message/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_a_hard_message/b_core_action/samuel_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_a_hard_message/b_core_action/samuel_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_a_hard_message/b_core_action/samuel_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_a_hard_message/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_a_hard_message/c_resolve/samuel_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_a_hard_message/c_resolve/samuel_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_a_hard_message/c_resolve/samuel_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_a_hard_message/a_establish/samuel_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_a_hard_message/a_establish/samuel_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_a_hard_message/a_establish/samuel_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_a_hard_message/b_core_action/samuel_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_a_hard_message/b_core_action/samuel_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_a_hard_message/b_core_action/samuel_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_a_hard_message/c_resolve/samuel_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_a_hard_message/c_resolve/samuel_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_a_hard_message/c_resolve/samuel_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · The Ark Captured",
+      "sceneId": "placeholder",
+      "artSource": "art/act4_the_ark_captured.md",
+      "assetFolder": "act_04_the_ark_captured",
+      "artFolder": "assets/svg/act_04_the_ark_captured",
+      "assetStem": "samuel_act4",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "wood_oak",
+        "grass",
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_the_ark_captured/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_the_ark_captured/a_establish/samuel_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_the_ark_captured/a_establish/samuel_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_the_ark_captured/a_establish/samuel_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_the_ark_captured/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_the_ark_captured/b_core_action/samuel_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_the_ark_captured/b_core_action/samuel_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_the_ark_captured/b_core_action/samuel_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_the_ark_captured/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_the_ark_captured/c_resolve/samuel_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_the_ark_captured/c_resolve/samuel_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_the_ark_captured/c_resolve/samuel_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_the_ark_captured/a_establish/samuel_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_the_ark_captured/a_establish/samuel_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_ark_captured/a_establish/samuel_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_the_ark_captured/b_core_action/samuel_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_the_ark_captured/b_core_action/samuel_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_ark_captured/b_core_action/samuel_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_the_ark_captured/c_resolve/samuel_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_the_ark_captured/c_resolve/samuel_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_ark_captured/c_resolve/samuel_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Ebenezer",
+      "sceneId": "placeholder",
+      "artSource": "art/act5_ebenezer.md",
+      "assetFolder": "act_05_ebenezer",
+      "artFolder": "assets/svg/act_05_ebenezer",
+      "assetStem": "samuel_act5",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/grass-tufts.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "wood_oak",
+        "grass"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_ebenezer/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_ebenezer/a_establish/samuel_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_ebenezer/a_establish/samuel_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_ebenezer/a_establish/samuel_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_ebenezer/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_ebenezer/b_core_action/samuel_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_ebenezer/b_core_action/samuel_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_ebenezer/b_core_action/samuel_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_ebenezer/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_ebenezer/c_resolve/samuel_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_ebenezer/c_resolve/samuel_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_ebenezer/c_resolve/samuel_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_ebenezer/a_establish/samuel_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_ebenezer/a_establish/samuel_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_ebenezer/a_establish/samuel_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_ebenezer/b_core_action/samuel_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_ebenezer/b_core_action/samuel_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_ebenezer/b_core_action/samuel_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_ebenezer/c_resolve/samuel_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_ebenezer/c_resolve/samuel_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_ebenezer/c_resolve/samuel_act5_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · A King Demanded",
+      "sceneId": "placeholder",
+      "artSource": "art/act6_a_king_demanded.md",
+      "assetFolder": "act_06_a_king_demanded",
+      "artFolder": "assets/svg/act_06_a_king_demanded",
+      "assetStem": "samuel_act6",
+      "materials": [
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_06_a_king_demanded/a_establish",
+          "layers": {
+            "background": "assets/svg/act_06_a_king_demanded/a_establish/samuel_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_a_king_demanded/a_establish/samuel_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_a_king_demanded/a_establish/samuel_act6_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_06_a_king_demanded/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_06_a_king_demanded/b_core_action/samuel_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_a_king_demanded/b_core_action/samuel_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_a_king_demanded/b_core_action/samuel_act6_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_06_a_king_demanded/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_06_a_king_demanded/c_resolve/samuel_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_a_king_demanded/c_resolve/samuel_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_a_king_demanded/c_resolve/samuel_act6_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_a_king_demanded/a_establish/samuel_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_a_king_demanded/a_establish/samuel_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_a_king_demanded/a_establish/samuel_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_a_king_demanded/b_core_action/samuel_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_a_king_demanded/b_core_action/samuel_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_a_king_demanded/b_core_action/samuel_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_a_king_demanded/c_resolve/samuel_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_a_king_demanded/c_resolve/samuel_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_a_king_demanded/c_resolve/samuel_act6_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · Saul Chosen",
+      "sceneId": "placeholder",
+      "artSource": "art/act7_saul_chosen.md",
+      "assetFolder": "act_07_saul_chosen",
+      "artFolder": "assets/svg/act_07_saul_chosen",
+      "assetStem": "samuel_act7",
+      "materials": [
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_07_saul_chosen/a_establish",
+          "layers": {
+            "background": "assets/svg/act_07_saul_chosen/a_establish/samuel_act7_a_background.svg",
+            "middleGround": "assets/svg/act_07_saul_chosen/a_establish/samuel_act7_a_middle_ground.svg",
+            "foreground": "assets/svg/act_07_saul_chosen/a_establish/samuel_act7_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_07_saul_chosen/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_07_saul_chosen/b_core_action/samuel_act7_b_background.svg",
+            "middleGround": "assets/svg/act_07_saul_chosen/b_core_action/samuel_act7_b_middle_ground.svg",
+            "foreground": "assets/svg/act_07_saul_chosen/b_core_action/samuel_act7_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_07_saul_chosen/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_07_saul_chosen/c_resolve/samuel_act7_c_background.svg",
+            "middleGround": "assets/svg/act_07_saul_chosen/c_resolve/samuel_act7_c_middle_ground.svg",
+            "foreground": "assets/svg/act_07_saul_chosen/c_resolve/samuel_act7_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_saul_chosen/a_establish/samuel_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_saul_chosen/a_establish/samuel_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_saul_chosen/a_establish/samuel_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_saul_chosen/b_core_action/samuel_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_saul_chosen/b_core_action/samuel_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_saul_chosen/b_core_action/samuel_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_saul_chosen/c_resolve/samuel_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_saul_chosen/c_resolve/samuel_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_saul_chosen/c_resolve/samuel_act7_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · Saul’s First Victory",
+      "sceneId": "placeholder",
+      "artSource": "art/act8_saul_s_first_victory.md",
+      "assetFolder": "act_08_saul_s_first_victory",
+      "artFolder": "assets/svg/act_08_saul_s_first_victory",
+      "assetStem": "samuel_act8",
+      "materials": [
+        "assets/materials/grass-tufts.svg"
+      ],
+      "materialKeys": [
+        "grass"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_08_saul_s_first_victory/a_establish",
+          "layers": {
+            "background": "assets/svg/act_08_saul_s_first_victory/a_establish/samuel_act8_a_background.svg",
+            "middleGround": "assets/svg/act_08_saul_s_first_victory/a_establish/samuel_act8_a_middle_ground.svg",
+            "foreground": "assets/svg/act_08_saul_s_first_victory/a_establish/samuel_act8_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_08_saul_s_first_victory/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_08_saul_s_first_victory/b_core_action/samuel_act8_b_background.svg",
+            "middleGround": "assets/svg/act_08_saul_s_first_victory/b_core_action/samuel_act8_b_middle_ground.svg",
+            "foreground": "assets/svg/act_08_saul_s_first_victory/b_core_action/samuel_act8_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_08_saul_s_first_victory/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_08_saul_s_first_victory/c_resolve/samuel_act8_c_background.svg",
+            "middleGround": "assets/svg/act_08_saul_s_first_victory/c_resolve/samuel_act8_c_middle_ground.svg",
+            "foreground": "assets/svg/act_08_saul_s_first_victory/c_resolve/samuel_act8_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_saul_s_first_victory/a_establish/samuel_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_saul_s_first_victory/a_establish/samuel_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_saul_s_first_victory/a_establish/samuel_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_saul_s_first_victory/b_core_action/samuel_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_saul_s_first_victory/b_core_action/samuel_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_saul_s_first_victory/b_core_action/samuel_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_saul_s_first_victory/c_resolve/samuel_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_saul_s_first_victory/c_resolve/samuel_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_saul_s_first_victory/c_resolve/samuel_act8_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · The Rejected King",
+      "sceneId": "placeholder",
+      "artSource": "art/act9_the_rejected_king.md",
+      "assetFolder": "act_09_the_rejected_king",
+      "artFolder": "assets/svg/act_09_the_rejected_king",
+      "assetStem": "samuel_act9",
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/grass-tufts.svg"
+      ],
+      "materialKeys": [
+        "wood_oak",
+        "fabric_weave",
+        "grass"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_09_the_rejected_king/a_establish",
+          "layers": {
+            "background": "assets/svg/act_09_the_rejected_king/a_establish/samuel_act9_a_background.svg",
+            "middleGround": "assets/svg/act_09_the_rejected_king/a_establish/samuel_act9_a_middle_ground.svg",
+            "foreground": "assets/svg/act_09_the_rejected_king/a_establish/samuel_act9_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_09_the_rejected_king/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_09_the_rejected_king/b_core_action/samuel_act9_b_background.svg",
+            "middleGround": "assets/svg/act_09_the_rejected_king/b_core_action/samuel_act9_b_middle_ground.svg",
+            "foreground": "assets/svg/act_09_the_rejected_king/b_core_action/samuel_act9_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_09_the_rejected_king/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_09_the_rejected_king/c_resolve/samuel_act9_c_background.svg",
+            "middleGround": "assets/svg/act_09_the_rejected_king/c_resolve/samuel_act9_c_middle_ground.svg",
+            "foreground": "assets/svg/act_09_the_rejected_king/c_resolve/samuel_act9_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_09_the_rejected_king/a_establish/samuel_act9_a_background.svg",
+          "middleGround": "assets/svg/act_09_the_rejected_king/a_establish/samuel_act9_a_middle_ground.svg",
+          "foreground": "assets/svg/act_09_the_rejected_king/a_establish/samuel_act9_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_09_the_rejected_king/b_core_action/samuel_act9_b_background.svg",
+          "middleGround": "assets/svg/act_09_the_rejected_king/b_core_action/samuel_act9_b_middle_ground.svg",
+          "foreground": "assets/svg/act_09_the_rejected_king/b_core_action/samuel_act9_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_09_the_rejected_king/c_resolve/samuel_act9_c_background.svg",
+          "middleGround": "assets/svg/act_09_the_rejected_king/c_resolve/samuel_act9_c_middle_ground.svg",
+          "foreground": "assets/svg/act_09_the_rejected_king/c_resolve/samuel_act9_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · David Anointed",
+      "sceneId": "placeholder",
+      "artSource": "art/act10_david_anointed.md",
+      "assetFolder": "act_10_david_anointed",
+      "artFolder": "assets/svg/act_10_david_anointed",
+      "assetStem": "samuel_act10",
+      "materials": [
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_10_david_anointed/a_establish",
+          "layers": {
+            "background": "assets/svg/act_10_david_anointed/a_establish/samuel_act10_a_background.svg",
+            "middleGround": "assets/svg/act_10_david_anointed/a_establish/samuel_act10_a_middle_ground.svg",
+            "foreground": "assets/svg/act_10_david_anointed/a_establish/samuel_act10_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_10_david_anointed/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_10_david_anointed/b_core_action/samuel_act10_b_background.svg",
+            "middleGround": "assets/svg/act_10_david_anointed/b_core_action/samuel_act10_b_middle_ground.svg",
+            "foreground": "assets/svg/act_10_david_anointed/b_core_action/samuel_act10_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_10_david_anointed/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_10_david_anointed/c_resolve/samuel_act10_c_background.svg",
+            "middleGround": "assets/svg/act_10_david_anointed/c_resolve/samuel_act10_c_middle_ground.svg",
+            "foreground": "assets/svg/act_10_david_anointed/c_resolve/samuel_act10_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_10_david_anointed/a_establish/samuel_act10_a_background.svg",
+          "middleGround": "assets/svg/act_10_david_anointed/a_establish/samuel_act10_a_middle_ground.svg",
+          "foreground": "assets/svg/act_10_david_anointed/a_establish/samuel_act10_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_10_david_anointed/b_core_action/samuel_act10_b_background.svg",
+          "middleGround": "assets/svg/act_10_david_anointed/b_core_action/samuel_act10_b_middle_ground.svg",
+          "foreground": "assets/svg/act_10_david_anointed/b_core_action/samuel_act10_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_10_david_anointed/c_resolve/samuel_act10_c_background.svg",
+          "middleGround": "assets/svg/act_10_david_anointed/c_resolve/samuel_act10_c_middle_ground.svg",
+          "foreground": "assets/svg/act_10_david_anointed/c_resolve/samuel_act10_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

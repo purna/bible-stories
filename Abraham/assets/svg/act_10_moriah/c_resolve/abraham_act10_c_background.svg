@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Abraham act 10 Moriah background">
+  <metadata>{&quot;story&quot;:&quot;Abraham&quot;,&quot;act&quot;:10,&quot;chapter&quot;:&quot;Moriah&quot;,&quot;scene&quot;:&quot;C&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;materials&quot;:[&quot;stone-flagstone.svg&quot;,&quot;stone-rough.svg&quot;,&quot;wood_oak-plank.svg&quot;,&quot;wood_oak-planks3.svg&quot;],&quot;environment&quot;:&quot;mountain&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4a617b"/><stop offset="1" stop-color="#cab58e"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#706d65"/><stop offset="1" stop-color="#3d3b3b"/></linearGradient><pattern id="act-material" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M12 12L30 8 42 20 34 36 14 34Z M50 43L64 40 70 57 54 65 43 54Z" fill="none" stroke="#6b563f" stroke-width="2" opacity=".5"/></pattern></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="330" cy="360" r="70" fill="#c79a65" opacity=".72"/>
+  <path d="M0 656.4 L142.62857142857143 492.2384682177566 L274.2857142857143 686.2631635820493 L416.9142857142857 503.66403069659134 L548.5714285714286 670.3885203086305 L691.2 520.1316513955593 L822.8571428571429 678.8757087021135 L965.4857142857143 540.3413501482922 L1097.142857142857 667.8197762019466 L1239.7714285714285 509.98847376401534 L1371.4285714285713 674.0858405361417 L1514.057142857143 486.78356190989723 L1645.7142857142858 674.1451908751391 L1788.3428571428572 505.92287484635597 L1920 677.7749374041799 V1080 H0Z" fill="#5d5a54" opacity=".72"/>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/><path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#act-material)" opacity=".16"/>
+  </svg>

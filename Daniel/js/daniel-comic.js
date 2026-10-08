@@ -62,6 +62,16 @@ const meterLabel = el('#meterLabel');
 const audio = new AudioManager();
 
 function currentAct() { return STORY[actIdx]; }
+function sceneBeat(act) {
+    if (lineIdx === 0) return {id:'a',folder:'a_establish'};
+    if (lineIdx === act.lines.length - 1) return {id:'c',folder:'c_resolve'};
+    return {id:'b',folder:'b_core_action'};
+}
+function sceneAssetPath(act, layer) {
+    const beat=sceneBeat(act), key=layer==='middle_ground'?'middleGround':layer;
+    const linked=act.sceneLayers && act.sceneLayers[beat.folder] && act.sceneLayers[beat.folder][key];
+    return linked || `assets/svg/${act.assetFolder}/${beat.folder}/${act.assetStem}_${beat.id}_${layer}.svg`;
+}
 window.__comic = { currentAct };
 
 function buildDots() {
@@ -99,6 +109,15 @@ function buildLineHTML(text, fx) {
 function escapeHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 
 function resolveLine(data) {
+    if (Array.isArray(data.items) && data.items.length) {
+        const primary = data.items.find(item => !item.sfx) || data.items[0];
+        const firstSfx = data.items.find(item => item.sfx);
+        data.speaker = primary.speaker || 'narrator'; data.text = primary.sfx ? '' : (primary.text || '');
+        data.sfx = firstSfx ? firstSfx.text : '';
+        data.fx = primary.entryFx || 'fade';
+        data.delay = Math.min(...data.items.map(item => Number(item.delay) || 0));
+        data.align = primary.align || 'center'; data.width = primary.width || '1/2'
+    }
     if (!data.consequence) return data;
     const god = DecisionLog.hasTag("loyalty:god");
     const diplomatic = DecisionLog.hasTag("loyalty:diplomatic");
@@ -140,8 +159,12 @@ async function renderLine() {
     const svgLayer = document.createElement('div');
     svgLayer.id = 'svgLayer';
     svgLayer.classList.add('svg-behind');
-    svgLayer.innerHTML = await getAsset(`assets/svg/act${actIdx + 1}_scene_${targetSvgKey}.svg`);
+    svgLayer.innerHTML = await getAsset(sceneAssetPath(currentAct(), 'background'));
     graphicContainer.appendChild(svgLayer);
+    const middleLayer = document.createElement('div');
+    middleLayer.id = 'midLayer'; middleLayer.classList.add('svg-middle');
+    middleLayer.innerHTML = await getAsset(sceneAssetPath(currentAct(), 'middle_ground'));
+    graphicContainer.appendChild(middleLayer);
 
     // 3D scene path (toon shader) on top of SVG with transparent background
     if (use3D && threeCanvas && window.SCENE_FACTORIES && SCENE_FACTORIES[targetSvgKey]) {
@@ -155,6 +178,11 @@ async function renderLine() {
         // Attach SVG parallax to layers with data-depth when no 3D
         if (typeof Parallax !== 'undefined') Parallax.attach(svgLayer);
     }
+    const fgLayer = document.createElement('div');
+    fgLayer.id = 'fgLayer'; fgLayer.classList.add('svg-front');
+    fgLayer.innerHTML = await getAsset(sceneAssetPath(currentAct(), 'foreground'));
+    graphicContainer.appendChild(fgLayer);
+
     frame.appendChild(graphicContainer);
 
     // Set particle mode per act
@@ -185,21 +213,19 @@ async function renderLine() {
 
         if (data.text) {
             const width = data.width || '1/2';
-            const valign = data.valign || 'middle';
-            const widthStyle = `--bubble-width: ${width};`;
-            const valignStyle = `--bubble-valign: ${valign};`;
-            
+                const widthStyle = `--bubble-width: ${width};`;
+
             if (data.speaker === 'narrator') {
                 const speechElement = document.createElement('div');
                 speechElement.className = `caption fx-${data.fx} caption-${data.align || 'center'}`;
-                speechElement.style.cssText = widthStyle + valignStyle;
+                speechElement.style.cssText = widthStyle;
                 speechElement.innerHTML = buildLineHTML(data.text, data.fx);
                 overlay.appendChild(speechElement);
             } else {
                 const align = data.align || 'center';
                 const wrap = document.createElement('div');
                 wrap.className = `bubble-wrap align-${align}`;
-                wrap.style.cssText = widthStyle + valignStyle;
+                wrap.style.cssText = widthStyle;
                 const speechElement = document.createElement('div');
                 speechElement.className = `bubble ${data.speaker} fx-${data.fx} bubble-${align}`;
                 speechElement.innerHTML = buildLineHTML(data.text, data.fx);
@@ -452,6 +478,17 @@ function showDeliveryChoices() {
     delayNote.classList.remove('show');
     delayNote.textContent = '';
     const data = currentAct().lines[lineIdx];
+    if (Array.isArray(data.items) && data.items.length) {
+        const primary = data.items.find(item => !item.sfx) || data.items[0];
+        const firstSfx = data.items.find(item => item.sfx);
+        data.speaker = primary.speaker || 'narrator';
+        data.text = primary.sfx ? '' : (primary.text || '');
+        data.sfx = firstSfx ? firstSfx.text : '';
+        data.fx = primary.entryFx || 'fade';
+        data.delay = Math.min(...data.items.map(item => Number(item.delay) || 0));
+        data.align = primary.align || 'center'; data.width = primary.width || '1/2'
+    }
+
     if (!data.choices) {
         choicePending = false;
         updateNextBtn();
@@ -899,8 +936,8 @@ window.addEventListener('resize', () => {
    ========================================================================= */
 document.addEventListener('keydown', e => {
     if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goLine(1);
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') goLine(-1);
+    if (e.key === 'ArrowRight') goLine(1);
+    if (e.key === 'ArrowLeft') goLine(-1);
 });
 
 /* =========================================================================
@@ -926,7 +963,6 @@ document.addEventListener('touchend', e => {
     ========================================================================= */
 let wheelCooldown = false;
 document.addEventListener('wheel', e => {
-    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     if (wheelCooldown) return;
 
     if (use3D && currentSceneKey) {
@@ -939,6 +975,7 @@ document.addEventListener('wheel', e => {
         return;
     }
 
+    if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
     wheelCooldown = true;
     setTimeout(() => { wheelCooldown = false; }, 600);
     if (e.deltaY > 0) {

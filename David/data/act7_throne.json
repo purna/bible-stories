@@ -7,84 +7,219 @@
   "lines": [
     {
       "id": "throne_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "After the death of Saul and Jonathan on Mount Gilboa, David was anointed king over the house of Judah at Hebron. Years later the tribes gathered and made him king over all Israel.",
       "cite": "2 Samuel 5:3",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "throne_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "After the death of Saul and Jonathan on Mount Gilboa, David was anointed king over the house of Judah at Hebron. Years later the tribes gathered and made him king over all Israel.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "throne_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The city of Jerusalem was taken from the Jebusites and made David's stronghold. From that hill he ruled a kingdom that stretched from the river to the sea.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "throne_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The city of Jerusalem was taken from the Jebusites and made David's stronghold. From that hill he ruled a kingdom that stretched from the river to the sea.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "throne_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The people came with petitions: a boundary dispute, a marriage question, a complaint about a neighbour's flock. The king sat on his throne and the decisions fell to him.",
       "cite": "2 Samuel 8:15",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "throne_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The people came with petitions: a boundary dispute, a marriage question, a complaint about a neighbour's flock. The king sat on his throne and the decisions fell to him.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "throne_3",
-      "speaker": "michal",
-      "fx": "fade",
-      "delay": 800,
-      "align": "right",
-      "text": "You rule from morning until night. There is no rest for you, and no one to share the burden.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "throne_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "You rule from morning until night. There is no rest for you, and no one to share the burden.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "michal",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "throne_4",
-      "speaker": "david",
-      "fx": "type",
-      "delay": 800,
-      "align": "left",
-      "text": "A king who cannot hear his people is a king who cannot rule. The weight is mine to carry.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "throne_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A king who cannot hear his people is a king who cannot rule. The weight is mine to carry.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "throne_5",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "David judged without favouritism. A rich man's son received no more than a poor man's, and the weak found a voice in the palace that had once been a cave.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "throne_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David judged without favouritism. A rich man's son received no more than a poor man's, and the weak found a voice in the palace that had once been a cave.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "throne_6",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "JUSTICE IS THE THRONE'S FOUNDATION",
-      "text": "A kingdom built on partiality falls quickly. The king who hears the small and the weak builds on rock.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "throne_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A kingdom built on partiality falls quickly. The king who hears the small and the weak builds on rock.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "throne_6_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "JUSTICE IS THE THRONE'S FOUNDATION",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "throne_7",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The people left the palace quieter than they had entered. They carried home the sense that their king had listened.",
       "choices": [
         {
           "label": "Keep the throne open to the small 🏛️",
@@ -95,11 +230,58 @@
           "note": "Protocol keeps order, but it also builds distance."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "throne_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The people left the palace quieter than they had entered. They carried home the sense that their king had listened.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "throne",
   "foreground": "fg_throne",
-  "index": 6
+  "index": 6,
+  "assetFolder": "act_07_throne",
+  "artFolder": "assets/svg/act_07_throne",
+  "assetStem": "david_act7",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_07_throne/a_establish/david_act7_a_background.svg",
+      "middleGround": "assets/svg/act_07_throne/a_establish/david_act7_a_middle_ground.svg",
+      "foreground": "assets/svg/act_07_throne/a_establish/david_act7_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_07_throne/b_core_action/david_act7_b_background.svg",
+      "middleGround": "assets/svg/act_07_throne/b_core_action/david_act7_b_middle_ground.svg",
+      "foreground": "assets/svg/act_07_throne/b_core_action/david_act7_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_07_throne/c_resolve/david_act7_c_background.svg",
+      "middleGround": "assets/svg/act_07_throne/c_resolve/david_act7_c_middle_ground.svg",
+      "foreground": "assets/svg/act_07_throne/c_resolve/david_act7_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/water_still-eddies.svg"
+  ]
 }

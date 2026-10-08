@@ -1,11 +1,9 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" data-parallax>
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a2d1a"/>
-      <stop offset="100%" style="stop-color:#0d1a0d"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#bgGrad)"/>
-  <text x="400" y="300" font-family="system-ui" font-size="20" fill="rgba(255,255,255,0.3)" text-anchor="middle" dominant-baseline="middle">Ruth Act 04 — B Core Action Background</text>
-  <text x="400" y="330" font-family="system-ui" font-size="12" fill="rgba(255,255,255,0.2)" text-anchor="middle">Replace with story-specific artwork</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Ruth act 4 Ch.4 · Boaz Notices background">
+  <metadata>{&quot;story&quot;:&quot;Ruth&quot;,&quot;act&quot;:4,&quot;chapter&quot;:&quot;Ch.4 · Boaz Notices&quot;,&quot;scene&quot;:&quot;B&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;materials&quot;:[&quot;grass-tufts.svg&quot;,&quot;stone-flagstone.svg&quot;,&quot;stone-rough.svg&quot;,&quot;water_still-calm.svg&quot;,&quot;water_still-eddies.svg&quot;],&quot;environment&quot;:&quot;river&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#315d77"/><stop offset="1" stop-color="#d6b77e"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#608188"/><stop offset="1" stop-color="#3f594e"/></linearGradient><pattern id="act-material" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M8 56Q12 36 27 17Q29 37 8 56M29 64Q32 42 50 25Q50 46 29 64" fill="#627a53" opacity=".6"/></pattern></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1500" cy="180" r="64" fill="#f2ddb0" opacity=".82"/>
+  <path d="M0 661.4 Q500 616.4 980 654.4 T1920 636.4 V806.4 H0Z" fill="#2e6479" opacity=".65"/>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/><path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#act-material)" opacity=".16"/>
+  </svg>

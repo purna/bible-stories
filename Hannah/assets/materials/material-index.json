@@ -1,0 +1,168 @@
+{
+  "story": "Hannah",
+  "sourceTool": "Hannah/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "wood_oak",
+      "shape": "plank",
+      "file": "wood_oak-plank.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "planks3",
+      "file": "wood_oak-planks3.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "calm",
+      "file": "water_still-calm.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "eddies",
+      "file": "water_still-eddies.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "hammered_gold",
+      "shape": "hammered",
+      "file": "hammered_gold-hammered.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Journey to Shiloh",
+      "assetFolder": "act_01_the_journey_to_shiloh",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · At the Table",
+      "assetFolder": "act_02_at_the_table",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · Silent Prayer",
+      "assetFolder": "act_03_silent_prayer",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Misunderstood",
+      "assetFolder": "act_04_misunderstood",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Remembered",
+      "assetFolder": "act_05_remembered",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · The Little Robe",
+      "assetFolder": "act_06_the_little_robe",
+      "materials": [
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · Given Back",
+      "assetFolder": "act_07_given_back",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · Hannah’s Song",
+      "assetFolder": "act_08_hannah_s_song",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    }
+  ]
+}

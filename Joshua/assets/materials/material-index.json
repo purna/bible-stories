@@ -1,0 +1,228 @@
+{
+  "story": "Joshua",
+  "sourceTool": "Joshua/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "desert_sand",
+      "shape": "dunes",
+      "file": "desert_sand-dunes.svg"
+    },
+    {
+      "key": "water_fast",
+      "shape": "rapids",
+      "file": "water_fast-rapids.svg"
+    },
+    {
+      "key": "water_fast",
+      "shape": "churn",
+      "file": "water_fast-churn.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "running",
+      "file": "wall_brick-running.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "stacked",
+      "file": "wall_brick-stacked.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "herringbone",
+      "file": "wall_brick-herringbone.svg"
+    },
+    {
+      "key": "wood_dark",
+      "shape": "plank",
+      "file": "wood_dark-plank.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · Be Strong",
+      "assetFolder": "act_01_be_strong",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · Rahab and the Spies",
+      "assetFolder": "act_02_rahab_and_the_spies",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · Crossing Jordan",
+      "assetFolder": "act_03_crossing_jordan",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Jericho",
+      "assetFolder": "act_04_jericho",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Achan’s Hidden Goods",
+      "assetFolder": "act_05_achan_s_hidden_goods",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · Ai",
+      "assetFolder": "act_06_ai",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · The Gibeonites",
+      "assetFolder": "act_07_the_gibeonites",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        }
+      ]
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · The Long Campaign",
+      "assetFolder": "act_08_the_long_campaign",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        }
+      ]
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · Allot the Land",
+      "assetFolder": "act_09_allot_the_land",
+      "materials": [
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · Choose This Day",
+      "assetFolder": "act_10_choose_this_day",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    }
+  ]
+}

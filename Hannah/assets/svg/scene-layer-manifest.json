@@ -1,0 +1,548 @@
+{
+  "story": "Hannah",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Journey to Shiloh",
+      "sceneId": "placeholder",
+      "artSource": "art/act1_the_journey_to_shiloh.md",
+      "assetFolder": "act_01_the_journey_to_shiloh",
+      "artFolder": "assets/svg/act_01_the_journey_to_shiloh",
+      "assetStem": "hannah_act1",
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "wood_oak",
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_the_journey_to_shiloh/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_the_journey_to_shiloh/a_establish/hannah_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_the_journey_to_shiloh/a_establish/hannah_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_journey_to_shiloh/a_establish/hannah_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_the_journey_to_shiloh/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_the_journey_to_shiloh/b_core_action/hannah_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_the_journey_to_shiloh/b_core_action/hannah_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_journey_to_shiloh/b_core_action/hannah_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_the_journey_to_shiloh/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_the_journey_to_shiloh/c_resolve/hannah_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_the_journey_to_shiloh/c_resolve/hannah_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_journey_to_shiloh/c_resolve/hannah_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_the_journey_to_shiloh/a_establish/hannah_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_the_journey_to_shiloh/a_establish/hannah_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_journey_to_shiloh/a_establish/hannah_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_the_journey_to_shiloh/b_core_action/hannah_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_the_journey_to_shiloh/b_core_action/hannah_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_journey_to_shiloh/b_core_action/hannah_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_the_journey_to_shiloh/c_resolve/hannah_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_the_journey_to_shiloh/c_resolve/hannah_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_journey_to_shiloh/c_resolve/hannah_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · At the Table",
+      "sceneId": "placeholder",
+      "artSource": "art/act2_at_the_table.md",
+      "assetFolder": "act_02_at_the_table",
+      "artFolder": "assets/svg/act_02_at_the_table",
+      "assetStem": "hannah_act2",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_at_the_table/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_at_the_table/a_establish/hannah_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_at_the_table/a_establish/hannah_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_at_the_table/a_establish/hannah_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_at_the_table/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_at_the_table/b_core_action/hannah_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_at_the_table/b_core_action/hannah_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_at_the_table/b_core_action/hannah_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_at_the_table/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_at_the_table/c_resolve/hannah_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_at_the_table/c_resolve/hannah_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_at_the_table/c_resolve/hannah_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_at_the_table/a_establish/hannah_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_at_the_table/a_establish/hannah_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_at_the_table/a_establish/hannah_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_at_the_table/b_core_action/hannah_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_at_the_table/b_core_action/hannah_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_at_the_table/b_core_action/hannah_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_at_the_table/c_resolve/hannah_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_at_the_table/c_resolve/hannah_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_at_the_table/c_resolve/hannah_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · Silent Prayer",
+      "sceneId": "placeholder",
+      "artSource": "art/act3_silent_prayer.md",
+      "assetFolder": "act_03_silent_prayer",
+      "artFolder": "assets/svg/act_03_silent_prayer",
+      "assetStem": "hannah_act3",
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "wood_oak",
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_silent_prayer/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_silent_prayer/a_establish/hannah_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_silent_prayer/a_establish/hannah_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_silent_prayer/a_establish/hannah_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_silent_prayer/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_silent_prayer/b_core_action/hannah_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_silent_prayer/b_core_action/hannah_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_silent_prayer/b_core_action/hannah_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_silent_prayer/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_silent_prayer/c_resolve/hannah_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_silent_prayer/c_resolve/hannah_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_silent_prayer/c_resolve/hannah_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_silent_prayer/a_establish/hannah_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_silent_prayer/a_establish/hannah_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_silent_prayer/a_establish/hannah_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_silent_prayer/b_core_action/hannah_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_silent_prayer/b_core_action/hannah_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_silent_prayer/b_core_action/hannah_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_silent_prayer/c_resolve/hannah_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_silent_prayer/c_resolve/hannah_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_silent_prayer/c_resolve/hannah_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Misunderstood",
+      "sceneId": "placeholder",
+      "artSource": "art/act4_misunderstood.md",
+      "assetFolder": "act_04_misunderstood",
+      "artFolder": "assets/svg/act_04_misunderstood",
+      "assetStem": "hannah_act4",
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "wood_oak",
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_misunderstood/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_misunderstood/a_establish/hannah_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_misunderstood/a_establish/hannah_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_misunderstood/a_establish/hannah_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_misunderstood/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_misunderstood/b_core_action/hannah_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_misunderstood/b_core_action/hannah_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_misunderstood/b_core_action/hannah_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_misunderstood/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_misunderstood/c_resolve/hannah_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_misunderstood/c_resolve/hannah_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_misunderstood/c_resolve/hannah_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_misunderstood/a_establish/hannah_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_misunderstood/a_establish/hannah_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_misunderstood/a_establish/hannah_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_misunderstood/b_core_action/hannah_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_misunderstood/b_core_action/hannah_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_misunderstood/b_core_action/hannah_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_misunderstood/c_resolve/hannah_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_misunderstood/c_resolve/hannah_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_misunderstood/c_resolve/hannah_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Remembered",
+      "sceneId": "placeholder",
+      "artSource": "art/act5_remembered.md",
+      "assetFolder": "act_05_remembered",
+      "artFolder": "assets/svg/act_05_remembered",
+      "assetStem": "hannah_act5",
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg"
+      ],
+      "materialKeys": [
+        "wood_oak"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_remembered/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_remembered/a_establish/hannah_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_remembered/a_establish/hannah_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_remembered/a_establish/hannah_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_remembered/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_remembered/b_core_action/hannah_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_remembered/b_core_action/hannah_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_remembered/b_core_action/hannah_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_remembered/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_remembered/c_resolve/hannah_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_remembered/c_resolve/hannah_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_remembered/c_resolve/hannah_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_remembered/a_establish/hannah_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_remembered/a_establish/hannah_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_remembered/a_establish/hannah_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_remembered/b_core_action/hannah_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_remembered/b_core_action/hannah_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_remembered/b_core_action/hannah_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_remembered/c_resolve/hannah_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_remembered/c_resolve/hannah_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_remembered/c_resolve/hannah_act5_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · The Little Robe",
+      "sceneId": "placeholder",
+      "artSource": "art/act6_the_little_robe.md",
+      "assetFolder": "act_06_the_little_robe",
+      "artFolder": "assets/svg/act_06_the_little_robe",
+      "assetStem": "hannah_act6",
+      "materials": [
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/wood_oak-planks3.svg"
+      ],
+      "materialKeys": [
+        "fabric_weave",
+        "wood_oak"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_06_the_little_robe/a_establish",
+          "layers": {
+            "background": "assets/svg/act_06_the_little_robe/a_establish/hannah_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_the_little_robe/a_establish/hannah_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_little_robe/a_establish/hannah_act6_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_06_the_little_robe/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_06_the_little_robe/b_core_action/hannah_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_the_little_robe/b_core_action/hannah_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_little_robe/b_core_action/hannah_act6_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_06_the_little_robe/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_06_the_little_robe/c_resolve/hannah_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_the_little_robe/c_resolve/hannah_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_little_robe/c_resolve/hannah_act6_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_the_little_robe/a_establish/hannah_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_the_little_robe/a_establish/hannah_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_little_robe/a_establish/hannah_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_the_little_robe/b_core_action/hannah_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_the_little_robe/b_core_action/hannah_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_little_robe/b_core_action/hannah_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_the_little_robe/c_resolve/hannah_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_the_little_robe/c_resolve/hannah_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_little_robe/c_resolve/hannah_act6_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · Given Back",
+      "sceneId": "placeholder",
+      "artSource": "art/act7_given_back.md",
+      "assetFolder": "act_07_given_back",
+      "artFolder": "assets/svg/act_07_given_back",
+      "assetStem": "hannah_act7",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_07_given_back/a_establish",
+          "layers": {
+            "background": "assets/svg/act_07_given_back/a_establish/hannah_act7_a_background.svg",
+            "middleGround": "assets/svg/act_07_given_back/a_establish/hannah_act7_a_middle_ground.svg",
+            "foreground": "assets/svg/act_07_given_back/a_establish/hannah_act7_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_07_given_back/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_07_given_back/b_core_action/hannah_act7_b_background.svg",
+            "middleGround": "assets/svg/act_07_given_back/b_core_action/hannah_act7_b_middle_ground.svg",
+            "foreground": "assets/svg/act_07_given_back/b_core_action/hannah_act7_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_07_given_back/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_07_given_back/c_resolve/hannah_act7_c_background.svg",
+            "middleGround": "assets/svg/act_07_given_back/c_resolve/hannah_act7_c_middle_ground.svg",
+            "foreground": "assets/svg/act_07_given_back/c_resolve/hannah_act7_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_given_back/a_establish/hannah_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_given_back/a_establish/hannah_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_given_back/a_establish/hannah_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_given_back/b_core_action/hannah_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_given_back/b_core_action/hannah_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_given_back/b_core_action/hannah_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_given_back/c_resolve/hannah_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_given_back/c_resolve/hannah_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_given_back/c_resolve/hannah_act7_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · Hannah’s Song",
+      "sceneId": "placeholder",
+      "artSource": "art/act8_hannah_s_song.md",
+      "assetFolder": "act_08_hannah_s_song",
+      "artFolder": "assets/svg/act_08_hannah_s_song",
+      "assetStem": "hannah_act8",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "wood_oak",
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_08_hannah_s_song/a_establish",
+          "layers": {
+            "background": "assets/svg/act_08_hannah_s_song/a_establish/hannah_act8_a_background.svg",
+            "middleGround": "assets/svg/act_08_hannah_s_song/a_establish/hannah_act8_a_middle_ground.svg",
+            "foreground": "assets/svg/act_08_hannah_s_song/a_establish/hannah_act8_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_08_hannah_s_song/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_08_hannah_s_song/b_core_action/hannah_act8_b_background.svg",
+            "middleGround": "assets/svg/act_08_hannah_s_song/b_core_action/hannah_act8_b_middle_ground.svg",
+            "foreground": "assets/svg/act_08_hannah_s_song/b_core_action/hannah_act8_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_08_hannah_s_song/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_08_hannah_s_song/c_resolve/hannah_act8_c_background.svg",
+            "middleGround": "assets/svg/act_08_hannah_s_song/c_resolve/hannah_act8_c_middle_ground.svg",
+            "foreground": "assets/svg/act_08_hannah_s_song/c_resolve/hannah_act8_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_hannah_s_song/a_establish/hannah_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_hannah_s_song/a_establish/hannah_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_hannah_s_song/a_establish/hannah_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_hannah_s_song/b_core_action/hannah_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_hannah_s_song/b_core_action/hannah_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_hannah_s_song/b_core_action/hannah_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_hannah_s_song/c_resolve/hannah_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_hannah_s_song/c_resolve/hannah_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_hannah_s_song/c_resolve/hannah_act8_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

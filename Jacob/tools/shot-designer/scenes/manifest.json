@@ -4,74 +4,134 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "jacob-the-birthright",
+      "name": "Ch.1 · The Birthright",
+      "file": "jacob-the-birthright.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "jacob-the-birthright_hd",
+      "name": "Ch.1 · The Birthright (HD)",
+      "file": "jacob-the-birthright_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "jacob-the-stolen-blessing",
+      "name": "Ch.2 · The Stolen Blessing",
+      "file": "jacob-the-stolen-blessing.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "jacob-the-stolen-blessing_hd",
+      "name": "Ch.2 · The Stolen Blessing (HD)",
+      "file": "jacob-the-stolen-blessing_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "jacob-bethel",
+      "name": "Ch.3 · Bethel",
+      "file": "jacob-bethel.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "jacob-bethel_hd",
+      "name": "Ch.3 · Bethel (HD)",
+      "file": "jacob-bethel_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "jacob-rachel-at-the-well",
+      "name": "Ch.4 · Rachel at the Well",
+      "file": "jacob-rachel-at-the-well.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "jacob-rachel-at-the-well_hd",
+      "name": "Ch.4 · Rachel at the Well (HD)",
+      "file": "jacob-rachel-at-the-well_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "jacob-laban-s-bargain",
+      "name": "Ch.5 · Laban’s Bargain",
+      "file": "jacob-laban-s-bargain.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "jacob-laban-s-bargain_hd",
+      "name": "Ch.5 · Laban’s Bargain (HD)",
+      "file": "jacob-laban-s-bargain_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "jacob-the-flocks",
+      "name": "Ch.6 · The Flocks",
+      "file": "jacob-the-flocks.js",
+      "type": "module"
+    },
+    {
+      "id": "jacob-the-flocks_hd",
+      "name": "Ch.6 · The Flocks (HD)",
+      "file": "jacob-the-flocks_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "jacob-leaving-haran",
+      "name": "Ch.7 · Leaving Haran",
+      "file": "jacob-leaving-haran.js",
+      "type": "module"
+    },
+    {
+      "id": "jacob-leaving-haran_hd",
+      "name": "Ch.7 · Leaving Haran (HD)",
+      "file": "jacob-leaving-haran_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "jacob-the-night-wrestling",
+      "name": "Ch.8 · The Night Wrestling",
+      "file": "jacob-the-night-wrestling.js",
+      "type": "module"
+    },
+    {
+      "id": "jacob-the-night-wrestling_hd",
+      "name": "Ch.8 · The Night Wrestling (HD)",
+      "file": "jacob-the-night-wrestling_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "jacob-meeting-esau",
+      "name": "Ch.9 · Meeting Esau",
+      "file": "jacob-meeting-esau.js",
+      "type": "module"
+    },
+    {
+      "id": "jacob-meeting-esau_hd",
+      "name": "Ch.9 · Meeting Esau (HD)",
+      "file": "jacob-meeting-esau_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "jacob-joseph-s-coats",
+      "name": "Ch.10 · Joseph’s Coats",
+      "file": "jacob-joseph-s-coats.js",
+      "type": "module"
+    },
+    {
+      "id": "jacob-joseph-s-coats_hd",
+      "name": "Ch.10 · Joseph’s Coats (HD)",
+      "file": "jacob-joseph-s-coats_hd.js",
       "type": "module"
     }
   ]

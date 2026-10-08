@@ -1,32 +1,24 @@
 {
   "story": "Deborah",
   "act": 4,
-  "chapter": "The Storm",
-  "brief": "Use the flooded ground to break the chariot advantage.",
-  "scene": {
-    "id": "B",
-    "name": "Core Action"
-  },
-  "canvas": {
-    "width": 1920,
-    "height": 1080
-  },
-  "environment": "sea",
-  "time": "sunset",
-  "seed": 1,
-  "background": "deborah_act4_b_background.svg",
-  "foreground": "deborah_act4_b_foreground.svg",
-  "foregroundBackgroundIncluded": false,
-  "foregroundDetails": {
-    "plants": true,
-    "rocks": true,
-    "structures": true,
-    "props": true,
-    "framing": true
-  },
-  "layering": [
-    "background",
-    "optional middle-ground/characters",
-    "foreground"
-  ]
+  "chapter": "Ch.4 · The Storm",
+  "artSource": "art/act4_the_storm.md",
+  "artFolder": "assets/svg/act_04_the_storm",
+  "sceneId": "",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg",
+    "water_fast-churn.svg",
+    "water_fast-rapids.svg"
+  ],
+  "layers": {
+    "background": "deborah_act4_b_background.svg",
+    "middleGround": "deborah_act4_b_middle_ground.svg",
+    "foreground": "deborah_act4_b_foreground.svg"
+  }
 }

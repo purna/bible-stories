@@ -1,0 +1,19 @@
+{
+  "story": "Job",
+  "act": 6,
+  "chapter": "Ch.6 · The Friends",
+  "artSource": "art/act6_the_friends.md",
+  "artFolder": "assets/svg/act_06_the_friends",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "fabric_weave-basket.svg"
+  ],
+  "layers": {
+    "background": "job_act6_b_background.svg",
+    "middleGround": "job_act6_b_middle_ground.svg",
+    "foreground": "job_act6_b_foreground.svg"
+  }
+}

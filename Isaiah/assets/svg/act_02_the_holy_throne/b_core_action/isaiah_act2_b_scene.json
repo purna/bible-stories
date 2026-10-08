@@ -1,0 +1,22 @@
+{
+  "story": "Isaiah",
+  "act": 2,
+  "chapter": "Ch.2 · The Holy Throne",
+  "artSource": "art/act2_the_holy_throne.md",
+  "artFolder": "assets/svg/act_02_the_holy_throne",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg"
+  ],
+  "layers": {
+    "background": "isaiah_act2_b_background.svg",
+    "middleGround": "isaiah_act2_b_middle_ground.svg",
+    "foreground": "isaiah_act2_b_foreground.svg"
+  }
+}

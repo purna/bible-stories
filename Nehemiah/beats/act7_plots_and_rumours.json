@@ -1,0 +1,154 @@
+{
+  "story": "Nehemiah",
+  "act": {
+    "id": "plots_and_rumours",
+    "name": "Ch.7 · Plots and Rumours",
+    "source": "../data/act7_plots_and_rumours.json",
+    "svg": "placeholder",
+    "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)",
+    "particle": "dawn"
+  },
+  "beats": [
+    {
+      "id": "plots_and_rumours_0",
+      "cite": "Nehemiah 1–13",
+      "items": [
+        {
+          "id": "plots_and_rumours_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Recognise distractions designed to stop the work.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "plots_and_rumours_1",
+      "items": [
+        {
+          "id": "plots_and_rumours_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Can prayerful planning rebuild both walls and communal justice? — Plots and Rumours is the next step in that question.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "plots_and_rumours_2",
+      "items": [
+        {
+          "id": "plots_and_rumours_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "plots_and_rumours_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE WORD STANDS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "plots_and_rumours_3",
+      "choices": [
+        {
+          "label": "Walk on with the lesson",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "items": [
+        {
+          "id": "plots_and_rumours_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

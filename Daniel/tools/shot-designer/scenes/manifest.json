@@ -4,74 +4,74 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "daniel-table",
+      "name": "The King's Table",
+      "file": "daniel-table.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "daniel-table_hd",
+      "name": "The King's Table (HD)",
+      "file": "daniel-table_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "daniel-statue",
+      "name": "The Dream",
+      "file": "daniel-statue.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "daniel-statue_hd",
+      "name": "The Dream (HD)",
+      "file": "daniel-statue_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "daniel-furnace",
+      "name": "The Furnace",
+      "file": "daniel-furnace.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "daniel-furnace_hd",
+      "name": "The Furnace (HD)",
+      "file": "daniel-furnace_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "daniel-writing",
+      "name": "The Writing on the Wall",
+      "file": "daniel-writing.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "daniel-writing_hd",
+      "name": "The Writing on the Wall (HD)",
+      "file": "daniel-writing_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "daniel-den",
+      "name": "The Den",
+      "file": "daniel-den.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "daniel-den_hd",
+      "name": "The Den (HD)",
+      "file": "daniel-den_hd.js",
       "type": "module"
     }
   ]

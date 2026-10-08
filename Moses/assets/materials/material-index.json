@@ -1,0 +1,323 @@
+{
+  "story": "Moses",
+  "sourceTool": "Moses/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "nile_reeds",
+      "shape": "riverbank",
+      "file": "nile_reeds-riverbank.svg"
+    },
+    {
+      "key": "desert_sand",
+      "shape": "dunes",
+      "file": "desert_sand-dunes.svg"
+    },
+    {
+      "key": "egypt_mud_brick",
+      "shape": "stretcher",
+      "file": "egypt_mud_brick-stretcher.svg"
+    },
+    {
+      "key": "hammered_gold",
+      "shape": "hammered",
+      "file": "hammered_gold-hammered.svg"
+    },
+    {
+      "key": "stone_tablets",
+      "shape": "hewn",
+      "file": "stone_tablets-hewn.svg"
+    },
+    {
+      "key": "bulrush_basket",
+      "shape": "woven",
+      "file": "bulrush_basket-woven.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Child in the River",
+      "assetFolder": "act_01_basket",
+      "materials": [
+        {
+          "key": "nile_reeds",
+          "file": "nile_reeds-riverbank.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Burning Bush",
+      "assetFolder": "act_02_exile",
+      "materials": [
+        {
+          "key": "nile_reeds",
+          "file": "nile_reeds-riverbank.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · Before the Throne",
+      "assetFolder": "act_03_throne",
+      "materials": [
+        {
+          "key": "egypt_mud_brick",
+          "file": "egypt_mud_brick-stretcher.svg"
+        },
+        {
+          "key": "nile_reeds",
+          "file": "nile_reeds-riverbank.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Passover Night",
+      "assetFolder": "act_04_passover",
+      "materials": [
+        {
+          "key": "egypt_mud_brick",
+          "file": "egypt_mud_brick-stretcher.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Through the Sea",
+      "assetFolder": "act_05_sea",
+      "materials": [
+        {
+          "key": "egypt_mud_brick",
+          "file": "egypt_mud_brick-stretcher.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · Bread in the Wilderness",
+      "assetFolder": "act_06_bread",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · Water from the Rock",
+      "assetFolder": "act_07_rock",
+      "materials": [
+        {
+          "key": "nile_reeds",
+          "file": "nile_reeds-riverbank.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · Jethro's Counsel",
+      "assetFolder": "act_08_jethro",
+      "materials": [
+        {
+          "key": "nile_reeds",
+          "file": "nile_reeds-riverbank.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "bulrush_basket",
+          "file": "bulrush_basket-woven.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · Thunder on Sinai",
+      "assetFolder": "act_09_mountain",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · The Golden Calf",
+      "assetFolder": "act_10_calf",
+      "materials": [
+        {
+          "key": "nile_reeds",
+          "file": "nile_reeds-riverbank.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    },
+    {
+      "act": 11,
+      "title": "Ch.11 · The Second Tablets",
+      "assetFolder": "act_11_tablets",
+      "materials": [
+        {
+          "key": "egypt_mud_brick",
+          "file": "egypt_mud_brick-stretcher.svg"
+        },
+        {
+          "key": "nile_reeds",
+          "file": "nile_reeds-riverbank.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "bulrush_basket",
+          "file": "bulrush_basket-woven.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    },
+    {
+      "act": 12,
+      "title": "Ch.12 · The Spies and Rebellion",
+      "assetFolder": "act_12_spies",
+      "materials": [
+        {
+          "key": "egypt_mud_brick",
+          "file": "egypt_mud_brick-stretcher.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "bulrush_basket",
+          "file": "bulrush_basket-woven.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    },
+    {
+      "act": 13,
+      "title": "Ch.13 · The Long Wilderness",
+      "assetFolder": "act_13_wilderness",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "bulrush_basket",
+          "file": "bulrush_basket-woven.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    },
+    {
+      "act": 14,
+      "title": "Ch.14 · Moses' Final Words",
+      "assetFolder": "act_14_reviews",
+      "materials": [
+        {
+          "key": "nile_reeds",
+          "file": "nile_reeds-riverbank.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "bulrush_basket",
+          "file": "bulrush_basket-woven.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    },
+    {
+      "act": 15,
+      "title": "Ch.15 · Mount Nebo",
+      "assetFolder": "act_15_nebo",
+      "materials": [
+        {
+          "key": "nile_reeds",
+          "file": "nile_reeds-riverbank.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "stone_tablets",
+          "file": "stone_tablets-hewn.svg"
+        }
+      ]
+    }
+  ]
+}

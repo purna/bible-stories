@@ -1,0 +1,20 @@
+{
+  "story": "Abraham",
+  "act": 4,
+  "chapter": "Rescue of Lot",
+  "artSource": "art/act4_rescue_of_lot.md",
+  "artFolder": "assets/svg/act_04_rescue_of_lot",
+  "sceneId": "",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg"
+  ],
+  "layers": {
+    "background": "abraham_act4_a_background.svg",
+    "middleGround": "abraham_act4_a_middle_ground.svg",
+    "foreground": "abraham_act4_a_foreground.svg"
+  }
+}

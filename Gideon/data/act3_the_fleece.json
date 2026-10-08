@@ -7,78 +7,217 @@
   "lines": [
     {
       "id": "the_fleece_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Before the battle, Gideon asks God for one more sign. He lays a fleece of wool on the threshing floor.",
       "cite": "Judges 6:36–37",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_fleece_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Before the battle, Gideon asks God for one more sign. He lays a fleece of wool on the threshing floor.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_fleece_1",
-      "speaker": "gideon",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "If dew is on the fleece only, and the ground is dry, then I will know You will save Israel by my hand.",
       "cite": "Judges 6:37",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_fleece_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "If dew is on the fleece only, and the ground is dry, then I will know You will save Israel by my hand.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "gideon",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_fleece_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "At dawn, Gideon wrings the fleece — a bowl of water from the wool. The ground is dry.",
       "cite": "Judges 6:38",
-      "sfx": "Dew on wool",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_fleece_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At dawn, Gideon wrings the fleece — a bowl of water from the wool. The ground is dry.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_fleece_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "Dew on wool",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_fleece_3",
-      "speaker": "gideon",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Let not Your anger burn against me. One more sign: let the fleece be dry, and dew be on the ground.",
       "cite": "Judges 6:39",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_fleece_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Let not Your anger burn against me. One more sign: let the fleece be dry, and dew be on the ground.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "gideon",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_fleece_4",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "That night God does so. The fleece is dry; dew is on all the ground.",
       "cite": "Judges 6:40",
-      "sfx": "Ground wet",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_fleece_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "That night God does so. The fleece is dry; dew is on all the ground.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_fleece_4_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "Ground wet",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_fleece_5",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "God condescends to the weakness of one man. The fleece is not a command — it is a gift of reassurance.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_fleece_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "God condescends to the weakness of one man. The fleece is not a command — it is a gift of reassurance.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_fleece_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The test settles. The confirmation was given, not earned. What remains is trust, not timing skill.",
       "choices": [
         {
           "label": "March at dawn",
@@ -89,11 +228,58 @@
           "note": "A pause does not change the outcome. It only lets the player breathe."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_fleece_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The test settles. The confirmation was given, not earned. What remains is trust, not timing skill.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "the_fleece",
   "foreground": "fg_the_fleece",
-  "index": 2
+  "index": 2,
+  "assetFolder": "act_03_the_fleece",
+  "artFolder": "assets/svg/act_03_the_fleece",
+  "assetStem": "gideon_act3",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_background.svg",
+      "middleGround": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_middle_ground.svg",
+      "foreground": "assets/svg/act_03_the_fleece/a_establish/gideon_act3_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_background.svg",
+      "middleGround": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_middle_ground.svg",
+      "foreground": "assets/svg/act_03_the_fleece/b_core_action/gideon_act3_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_background.svg",
+      "middleGround": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_middle_ground.svg",
+      "foreground": "assets/svg/act_03_the_fleece/c_resolve/gideon_act3_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wool_fleece-fleece.svg",
+    "assets/materials/torch_flame-flames.svg",
+    "assets/materials/tent_fabric-basket.svg"
+  ]
 }

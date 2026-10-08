@@ -1,0 +1,19 @@
+{
+  "story": "Joseph",
+  "act": 3,
+  "chapter": "Ch.3 · Potiphar’s House",
+  "artSource": "art/act3_potiphar_s_house.md",
+  "artFolder": "assets/svg/act_03_potiphar_s_house",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "fabric_dots-grid.svg",
+    "fabric_dots-scatterMix.svg"
+  ],
+  "layers": {
+    "background": "joseph_act3_c_background.svg",
+    "middleGround": "joseph_act3_c_middle_ground.svg",
+    "foreground": "joseph_act3_c_foreground.svg"
+  }
+}

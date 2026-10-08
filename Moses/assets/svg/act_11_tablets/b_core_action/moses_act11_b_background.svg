@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Moses act 11 Ch.11 · The Second Tablets background">
+  <metadata>{&quot;story&quot;:&quot;Moses&quot;,&quot;act&quot;:11,&quot;chapter&quot;:&quot;Ch.11 · The Second Tablets&quot;,&quot;scene&quot;:&quot;B&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;materials&quot;:[&quot;bulrush_basket-woven.svg&quot;,&quot;desert_sand-dunes.svg&quot;,&quot;egypt_mud_brick-stretcher.svg&quot;,&quot;hammered_gold-hammered.svg&quot;,&quot;nile_reeds-riverbank.svg&quot;,&quot;stone-rough.svg&quot;,&quot;stone_tablets-hewn.svg&quot;],&quot;environment&quot;:&quot;river&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#315d77"/><stop offset="1" stop-color="#d6b77e"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#608188"/><stop offset="1" stop-color="#3f594e"/></linearGradient><pattern id="act-material" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M0 0H72V72H0Z M0 24H72M0 48H72M24 0V24M50 24V48M24 48V72" fill="none" stroke="#695f47" stroke-width="2" opacity=".52"/></pattern></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="330" cy="360" r="70" fill="#d3a567" opacity=".72"/>
+  <path d="M0 661.4 Q500 616.4 980 654.4 T1920 636.4 V806.4 H0Z" fill="#2e6479" opacity=".65"/>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/><path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#act-material)" opacity=".16"/>
+  </svg>

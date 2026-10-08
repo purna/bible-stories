@@ -1,0 +1,240 @@
+{
+  "story": "Nehemiah",
+  "sourceTool": "Nehemiah/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "wall_brick",
+      "shape": "running",
+      "file": "wall_brick-running.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "stacked",
+      "file": "wall_brick-stacked.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "herringbone",
+      "file": "wall_brick-herringbone.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "plank",
+      "file": "wood_oak-plank.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "planks3",
+      "file": "wood_oak-planks3.svg"
+    },
+    {
+      "key": "hammered_gold",
+      "shape": "hammered",
+      "file": "hammered_gold-hammered.svg"
+    },
+    {
+      "key": "desert_sand",
+      "shape": "dunes",
+      "file": "desert_sand-dunes.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · Bad News",
+      "assetFolder": "act_01_bad_news",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · Before the King",
+      "assetFolder": "act_02_before_the_king",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · Night Inspection",
+      "assetFolder": "act_03_night_inspection",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Rise and Build",
+      "assetFolder": "act_04_rise_and_build",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Sword and Trowel",
+      "assetFolder": "act_05_sword_and_trowel",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · The Outcry",
+      "assetFolder": "act_06_the_outcry",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · Plots and Rumours",
+      "assetFolder": "act_07_plots_and_rumours",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · The Wall Completed",
+      "assetFolder": "act_08_the_wall_completed",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · The Book Read",
+      "assetFolder": "act_09_the_book_read",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · Reform",
+      "assetFolder": "act_10_reform",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    }
+  ]
+}

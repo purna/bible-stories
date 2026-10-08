@@ -1,0 +1,21 @@
+{
+  "story": "Gideon",
+  "act": 6,
+  "chapter": "Ch.6 · The Battle",
+  "artSource": "art/act6_the_battle.md",
+  "artFolder": "assets/svg/act_06_the_battle",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "sword_iron-blade.svg",
+    "tent_fabric-basket.svg",
+    "torch_flame-flames.svg",
+    "wheat_stalks-field.svg"
+  ],
+  "layers": {
+    "background": "gideon_act6_a_background.svg",
+    "middleGround": "gideon_act6_a_middle_ground.svg",
+    "foreground": "gideon_act6_a_foreground.svg"
+  }
+}

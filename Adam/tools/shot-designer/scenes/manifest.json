@@ -4,74 +4,86 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "adam-creation",
+      "name": "Let There Be Light",
+      "file": "adam-creation.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "adam-creation_hd",
+      "name": "Let There Be Light (HD)",
+      "file": "adam-creation_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "adam-garden",
+      "name": "The Garden",
+      "file": "adam-garden.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "adam-garden_hd",
+      "name": "The Garden (HD)",
+      "file": "adam-garden_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "adam-helper",
+      "name": "Helper Suitable",
+      "file": "adam-helper.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "adam-helper_hd",
+      "name": "Helper Suitable (HD)",
+      "file": "adam-helper_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "adam-temptation",
+      "name": "The Temptation",
+      "file": "adam-temptation.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "adam-temptation_hd",
+      "name": "The Temptation (HD)",
+      "file": "adam-temptation_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "adam-exile",
+      "name": "Exile",
+      "file": "adam-exile.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "adam-exile_hd",
+      "name": "Exile (HD)",
+      "file": "adam-exile_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "adam-west",
+      "name": "West of the Divide",
+      "file": "adam-west.js",
+      "type": "module"
+    },
+    {
+      "id": "adam-west_hd",
+      "name": "West of the Divide (HD)",
+      "file": "adam-west_hd.js",
       "type": "module"
     }
   ]

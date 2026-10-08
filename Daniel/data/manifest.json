@@ -11,6 +11,30 @@
       "audio": [
         "assets/audio/music/Act1_Blue_Shadows_at_Noon.ogg",
         "assets/audio/music/Act1_Blue_Shadows_at_Noon.mp3"
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_table/a_establish/daniel_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_table/a_establish/daniel_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_table/a_establish/daniel_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_table/b_core_action/daniel_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_table/b_core_action/daniel_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_table/b_core_action/daniel_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_table/c_resolve/daniel_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_table/c_resolve/daniel_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_table/c_resolve/daniel_act1_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_01_table",
+      "assetStem": "daniel_act1",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/water_still-eddies.svg"
       ]
     },
     {
@@ -23,6 +47,30 @@
       "audio": [
         "assets/audio/music/Act2_Where_the_Kings_Kneel.ogg",
         "assets/audio/music/Act2_Where_the_Kings_Kneel.mp3"
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_statue/a_establish/daniel_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_statue/a_establish/daniel_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_statue/a_establish/daniel_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_statue/b_core_action/daniel_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_statue/c_resolve/daniel_act2_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_02_statue",
+      "assetStem": "daniel_act2",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg"
       ]
     },
     {
@@ -35,6 +83,33 @@
       "audio": [
         "assets/audio/music/Act3_Seven_Times_Heated.ogg",
         "assets/audio/music/Act3_Seven_Times_Heated.mp3"
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_03_furnace",
+      "assetStem": "daniel_act3",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/water_still-eddies.svg"
       ]
     },
     {
@@ -47,6 +122,31 @@
       "audio": [
         "assets/audio/music/Act4_Seven_Lamps_Burning.ogg",
         "assets/audio/music/Act4_Seven_Lamps_Burning.mp3"
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_writing/a_establish/daniel_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_writing/a_establish/daniel_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_writing/a_establish/daniel_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_writing/b_core_action/daniel_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_writing/c_resolve/daniel_act4_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_04_writing",
+      "assetStem": "daniel_act4",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg"
       ]
     },
     {
@@ -59,6 +159,31 @@
       "audio": [
         "assets/audio/music/Act5_Shadows_on_the_Ridge.ogg",
         "assets/audio/music/Act5_Shadows_on_the_Ridge.mp3"
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_den/a_establish/daniel_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_den/a_establish/daniel_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_den/a_establish/daniel_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_den/b_core_action/daniel_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_den/b_core_action/daniel_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_den/b_core_action/daniel_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_den/c_resolve/daniel_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_den/c_resolve/daniel_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_den/c_resolve/daniel_act5_c_foreground.svg"
+        }
+      },
+      "assetFolder": "act_05_den",
+      "assetStem": "daniel_act5",
+      "materials": [
+        "assets/materials/wall_brick-herringbone.svg",
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg"
       ]
     }
   ]

@@ -1,0 +1,29 @@
+{
+  "story": "Daniel",
+  "act": 4,
+  "chapter": "The Writing on the Wall",
+  "artSource": "art/act4_writing.md",
+  "artFolder": "assets/svg/act_04_writing",
+  "sceneId": "belshazzar_feast",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "broken-tile-mosaic.svg",
+    "hammered_gold-hammered.svg",
+    "mosaic-chips.svg",
+    "mosaic-grid.svg",
+    "palace-mosaic-floor.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "stone_texture.svg",
+    "temple-flagstone.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg"
+  ],
+  "layers": {
+    "background": "daniel_act4_c_background.svg",
+    "middleGround": "daniel_act4_c_middle_ground.svg",
+    "foreground": "daniel_act4_c_foreground.svg"
+  }
+}

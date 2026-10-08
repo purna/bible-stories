@@ -1,0 +1,21 @@
+{
+  "story": "Moses",
+  "act": 13,
+  "chapter": "Ch.13 · The Long Wilderness",
+  "artSource": "art/act13_wilderness.md",
+  "artFolder": "assets/svg/act_13_wilderness",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "bulrush_basket-woven.svg",
+    "desert_sand-dunes.svg",
+    "stone-rough.svg",
+    "stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act13_a_background.svg",
+    "middleGround": "moses_act13_a_middle_ground.svg",
+    "foreground": "moses_act13_a_foreground.svg"
+  }
+}

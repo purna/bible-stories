@@ -482,13 +482,70 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 ### Act 1: Anointed
 
-**Act summary:** Identify the overlooked shepherd among Jesse’s sons.
+**Act summary:** Identify the overlooked shepherd among Jesse's sons.
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 01A | Establish | near-black blue, cool slate, lamp amber, muted earth. single motivated shaft or lamp with rapid falloff. | `wall_brick` + `stone` | Wide, three-plane tableau. FG SVG: framing wall brick, nearby silhouettes, and an edge prop tied to “anointed”. MG: character group and optional low-detail 3D landmark. BG SVG: receding rock or masonry silhouettes with minimal detail. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow inward dolly; pull back only when safety or release arrives. | SVG: dust motes and thin light rays drift slowly. 3D: chains, stone, door, or lamp carries subtle weight and contact motion. Characters begin in readable held poses before any movement. |
-| 01B | Interact | Increase local contrast around the action while retaining near-black blue, cool slate, lamp amber, muted earth. Key light follows the story’s real light source. | `stone` + `wood_dark` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “identify the overlooked shepherd among jesse’s sons”. BG SVG: simplified receding rock or masonry silhouettes with minimal detail with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 01C | Resolve / reflect | Let the accent move toward a quieter near-black blue, cool slate, lamp amber, muted earth; lower saturation behind captions and preserve warm skin tones. | `wood_dark` + `wall_brick` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: receding rock or masonry silhouettes with minimal detail, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 01A | Establish | near-black blue, cool slate, lamp amber, muted earth. single motivated shaft or lamp with rapid falloff. | `wall_brick` + `stone` | Wide, three-plane tableau. FG SVG: framing wall brick, nearby silhouettes, and an edge prop tied to "anointed". MG: character group and optional low-detail 3D landmark. BG SVG: receding rock or masonry silhouettes with minimal detail. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow inward dolly; pull back only when safety or release arrives. | SVG: dust motes and thin light rays drift slowly. 3D: chains, stone, door, or lamp carries subtle weight and contact motion. Characters begin in readable held poses before any movement. |
+| 01B | Interact | Increase local contrast around the action while retaining near-black blue, cool slate, lamp amber, muted earth. Key light follows the story's real light source. | `stone` + `wood_dark` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "identify the overlooked shepherd among jesse's sons". BG SVG: simplified receding rock or masonry silhouettes with minimal detail with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 01C | Resolve / reflect | Let the accent move toward a quieter near-black blue, cool slate, lamp amber, muted earth; lower saturation behind captions and preserve warm skin tones. | `wood_dark` + `wall_brick` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: receding rock or masonry silhouettes with minimal detail, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01A — ESTABLISH (35mm, high angle, Jesse's house)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  WALL BRICK framing (wall_brick)                    |  │
+│       |  STONE SILHOUETTES (stone)                          |  │
+│       |  OIL HORN at edge (placeholder)                     |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  RECEDING MASONRY, minimal detail               |    |  │
+│       |  |  JESSE'S SONS lined up (hero 3D)               |    |  │
+│       |  |  SAMUEL entering (hero 3D)                      |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "The Lord has not chosen these..."   |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01B — INTERACT (50mm, chest height, anointing)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS HOLDING OIL HORN center (stone)              |  │
+│       |  DARK WOOD STAFF (wood_dark)                        |  │
+│       |  SHEPHERD'S CLOAK (placeholder)                     |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED MASONRY, reduced saturation         |    |  │
+│       |  |  DAVID kneeling (hero 3D)                       |    |  │
+│       |  |  SAMUEL anointing (hero 3D)                     |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Arise, anoint him..."                |    |  │
+│       |  |  [CHOICE]    ▢ Accept  ▢ Hesitate  ▢ Question   │    │   │
+│       |  |  [CAPTION] "This is he."                        |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01C — RESOLVE (50mm, eye level, spirit comes)             │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  DARK WOOD STAFF corner (wood_dark)                 |  │
+│       |  WALL BRICK corner (wall_brick)                     |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  MASONRY opened for scripture space             |    |  │
+│       |  |  DAVID with oil on head (hero 3D)               |    |  │
+│       |  |  SPIRIT OF THE LORD descending                  |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "The Spirit of the Lord came..."     |    |  │
+│       |  |  [SCRIPTURE] "1 Samuel 16:13"                  |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 2: Goliath
 
@@ -500,6 +557,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 02B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `fabric_weave` + `wood_oak` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “time a sling throw after refusing heavy armour”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 02C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `wood_oak` + `grass` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02A — ESTABLISH (35mm, high angle, Valley of Elah)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  GRASS field framing (grass)                        |  │
+│       |  FABRIC WEAVE tent edges (fabric_weave)             |  │
+│       |  FIVE SMOOTH STONES at edge (placeholder)           |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  LAYERED VALLEY, armies on ridges               |    |  │
+│       |  |  DAVID approaching (hero 3D)                    |    |  │
+│       |  |  GOLIATH towering in distance                   |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Who is this uncircumcised..."        |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02B — INTERACT (50mm, chest height, sling release)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS RELEASING SLING center (fabric_weave)        |  │
+│       |  OAK STAFF at side (wood_oak)                       |  │
+│       |  STONE IN POUCH (placeholder)                       |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED VALLEY, reduced saturation          |    |  │
+│       |  |  DAVID in motion (hero 3D)                      |    |  │
+│       |  |  GOLIATH falling (hero 3D)                      |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "The battle is the Lord's..."         |    |  │
+│       |  |  [CHOICE]    ▢ Release  ▢ Aim high  ▢ Aim low   │    │   │
+│       |  |  [CAPTION] "David put his hand..."              |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02C — RESOLVE (50mm, eye level, giant falls)              │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  OAK STAFF corner (wood_oak)                        |  │
+│       |  GRASS corner (grass)                               |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  VALLEY opened for scripture space              |    |  │
+│       |  |  DAVID standing over Goliath (hero 3D)          |    |  │
+│       |  |  SLING at rest                                 |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "So David prevailed..."             |    |  │
+│       |  |  [SCRIPTURE] "1 Samuel 17:50"                 |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 3: Saul’s Court
 
 **Act summary:** Play a calming melody while watching Saul’s mood.
@@ -509,6 +624,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 03A | Establish | lapis blue, royal plum, limestone, hammered gold. high clerestory or lamp light with sharp architectural shadow. | `fabric_weave` + `wall_brick` | Wide, three-plane tableau. FG SVG: framing fabric weave, nearby silhouettes, and an edge prop tied to “saul’s court”. MG: character group and optional low-detail 3D landmark. BG SVG: columns, patterned wall, and distant court silhouettes. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. formal dolly-in with a slight off-axis shift when power is challenged. | SVG: banners, curtain edges, and lamp glow breathe subtly. 3D: throne, table, seal, or architectural hero object moves only when handled. Characters begin in readable held poses before any movement. |
 | 03B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `wall_brick` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “play a calming melody while watching saul’s mood”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 03C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `fabric_weave` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03A — ESTABLISH (35mm, high angle, royal court)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  FABRIC WEAVE banners (fabric_weave)                |  │
+│       |  WALL BRICK columns (wall_brick)                    |  │
+│       |  HARP at edge (placeholder)                         |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  COLUMNS, patterned wall, court silhouettes     |    |  │
+│       |  |  DAVID playing lyre (hero 3D)                   |    |  │
+│       |  |  SAUL on throne (hero 3D)                       |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "David played with his hand..."      |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03B — INTERACT (50mm, chest height, soothing music)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS ON LYRE STRINGS center (fabric_weave)        |  │
+│       |  SPEAR at Saul's side (wall_brick + stone)          |  │
+│       |  ROBE FRINGE at bottom (placeholder)                |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED COURT, reduced saturation           |    |  │
+│       |  |  DAVID playing (hero 3D)                        |    |  │
+│       |  |  SAUL'S mood shifting (hero 3D)                 |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "The spirit of God departed..."       |    |  │
+│       |  |  [CHOICE]    ▢ Play gently  ▢ Bold melody  ▢ Stop │  │   │
+│       |  |  [CAPTION] "Saul was refreshed..."              |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03C — RESOLVE (50mm, eye level, temporary peace)          │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  STONE corner (stone)                               |  │
+│       |  FABRIC WEAVE corner (fabric_weave)                 |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  COURT opened for scripture space               |    |  │
+│       |  |  DAVID & SAUL separated (hero 3D)               |    |  │
+│       |  |  LYRE at rest                                  |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "David returned to feed his father's sheep"││
+│       |  |  [SCRIPTURE] "1 Samuel 16:23"                 |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Act 4: Covenant Friends
 
@@ -520,6 +693,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 04B | Interact | Increase local contrast around the action while retaining midnight violet, ultramarine, pale cyan, star gold. Key light follows the story’s real light source. | `wood_dark` + `wood_oak` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “exchange signals with jonathan unseen”. BG SVG: simplified abstract horizon, layered cloud, and symbolic light field with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 04C | Resolve / reflect | Let the accent move toward a quieter midnight violet, ultramarine, pale cyan, star gold; lower saturation behind captions and preserve warm skin tones. | `wood_oak` + `stone` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: abstract horizon, layered cloud, and symbolic light field, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04A — ESTABLISH (35mm, high angle, star-lit field)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  STONE altar (stone)                                |  │
+│       |  DARK WOOD staff (wood_dark)                        |  │
+│       |  STAR GLYPHS at corners (placeholder)               |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  ABSTRACT HORIZON, layered cloud, light field   |    |  │
+│       |  |  JONATHAN & DAVID at center (hero 3D)           |    |  │
+│       |  |  ARROW SIGNAL on string (hero 3D)                |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "The soul of Jonathan was knit..."   |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04B — INTERACT (50mm, chest height, arrow signal)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS RELEASING ARROW center (wood_dark + wood_oak)│  │
+│       |  TARGET MARK on ground (placeholder)                |  │
+│       |  COVENANT ROBE fringe (placeholder)                 |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED HORIZON, reduced saturation         |    |  │
+│       |  |  JONATHAN signaling (hero 3D)                   |    |  │
+│       |  |  DAVID watching (hero 3D)                       |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "If I say to the lad..."              |    |  │
+│       |  |  [CHOICE]    ▢ Shoot far  ▢ Shoot near  ▢ Wait  │    │   │
+│       |  |  [CAPTION] "Jonathan caused the lad..."         |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04C — RESOLVE (50mm, eye level, covenant sealed)          │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  OAK ARROW corner (wood_oak)                        |  │
+│       |  STONE corner (stone)                               |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  HORIZON opened for scripture space             |    |  │
+│       |  |  JONATHAN & DAVID embracing (hero 3D)           |    |  │
+│       |  |  ARROW & BOW at rest                           |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "They kissed one another..."         |    |  │
+│       |  |  [SCRIPTURE] "1 Samuel 20:42"                 |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 5: The Wilderness
 
 **Act summary:** Escape Saul and spare him in the cave.
@@ -529,6 +760,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 05A | Establish | sandstone, ochre, dry umber, faded turquoise. broad hard sun or long amber dusk with strong silhouette edges. | `stone` + `fabric_weave` | Wide, three-plane tableau. FG SVG: framing stone, nearby silhouettes, and an edge prop tied to “the wilderness”. MG: character group and optional low-detail 3D landmark. BG SVG: layered ridges, heat haze, and an open horizon. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. patient side-track or shallow forward drift that emphasizes distance. | SVG: dust, cloth edges, distant birds, and heat bands move sparingly. 3D: staff, pack, tent, or terrain marker sways or settles with weight. Characters begin in readable held poses before any movement. |
 | 05B | Interact | Increase local contrast around the action while retaining sandstone, ochre, dry umber, faded turquoise. Key light follows the story’s real light source. | `fabric_weave` + `wood_oak` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “escape saul and spare him in the cave”. BG SVG: simplified layered ridges, heat haze, and an open horizon with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 05C | Resolve / reflect | Let the accent move toward a quieter sandstone, ochre, dry umber, faded turquoise; lower saturation behind captions and preserve warm skin tones. | `wood_oak` + `stone` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered ridges, heat haze, and an open horizon, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05A — ESTABLISH (35mm, high angle, En Gedi cave)          │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  STONE cave mouth (stone)                           |  │
+│       |  FABRIC WEAVE packs (fabric_weave)                  |  │
+│       |  HEAT HAZE bands (placeholder)                      |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  LAYERED RIDGES, heat haze, open horizon        |    |  │
+│       |  |  SAUL entering cave (hero 3D)                   |    |  │
+│       |  |  DAVID hidden in depths (hero 3D)               |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Saul went in to cover his feet..."  |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05B — INTERACT (50mm, chest height, cutting robe)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS CUTTING ROBE CORNER center (fabric_weave)    |  │
+│       |  OAK DAGGER at hand (wood_oak)                      |  │
+│       |  SAUL'S ROBE hem (placeholder)                      |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED CAVE, reduced saturation            |    |  │
+│       |  |  DAVID cutting (hero 3D)                        |    |  │
+│       |  |  SAUL unaware (hero 3D)                         |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "I will not put forth my hand..."     |    |  │
+│       |  |  [CHOICE]    ▢ Cut corner  ▢ Spare fully  ▢ Kill │  │   │
+│       |  |  [CAPTION] "David's heart smote him..."         |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05C — RESOLVE (50mm, eye level, mercy shown)              │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  OAK DAGGER corner (wood_oak)                       |  │
+│       |  STONE corner (stone)                               |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  RIDGES opened for scripture space              |    |  │
+│       |  |  DAVID showing cut piece (hero 3D)              |    |  │
+│       |  |  SAUL weeping (hero 3D)                         |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "You are more righteous than I..."   |    |  │
+│       |  |  [SCRIPTURE] "1 Samuel 24:17"                 |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Act 6: Abigail
 
@@ -540,6 +829,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 06B | Interact | Increase local contrast around the action while retaining midnight violet, ultramarine, pale cyan, star gold. Key light follows the story’s real light source. | `water_fast` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “deliver provisions before anger becomes violence”. BG SVG: simplified abstract horizon, layered cloud, and symbolic light field with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 06C | Resolve / reflect | Let the accent move toward a quieter midnight violet, ultramarine, pale cyan, star gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `wall_brick` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: abstract horizon, layered cloud, and symbolic light field, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06A — ESTABLISH (35mm, high angle, Nabal's feast)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  WALL BRICK courtyard (wall_brick)                  |  │
+│       |  WATER FAST stream (water_fast)                     |  │
+│       |  PROVISIONS donkey loads (placeholder)              |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  ABSTRACT HORIZON, layered cloud, light field   |    |  │
+│       |  |  ABIGAIL approaching (hero 3D)                  |    |  │
+│       |  |  DAVID'S men waiting (hero 3D)                 |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Abigail made haste..."              |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06B — INTERACT (50mm, chest height, peace offering)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS OFFERING FOOD center (water_fast + stone)    |  │
+│       |  WINE SKIN at side (placeholder)                    |  │
+│       |  ABIGAIL'S VEIL fringe (placeholder)                |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED HORIZON, reduced saturation         |    |  │
+│       |  |  ABIGAIL kneeling (hero 3D)                     |    |  │
+│       |  |  DAVID receiving (hero 3D)                      |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Upon me let this iniquity be..."     |    |  │
+│       |  |  [CHOICE]    ▢ Accept  ▢ Decline  ▢ Question    │    │   │
+│       |  |  [CAPTION] "David said, Blessed be thy advice"  |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06C — RESOLVE (50mm, eye level, bloodguilt avoided)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  STONE corner (stone)                               |  │
+│       |  WALL BRICK corner (wall_brick)                     |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  HORIZON opened for scripture space             |    |  │
+│       |  |  ABIGAIL returning home (hero 3D)               |    |  │
+│       |  |  PROVISIONS accepted (hero 3D)                 |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "The Lord hath returned the wickedness"││
+│       |  |  [SCRIPTURE] "1 Samuel 25:39"                 |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 7: The Throne
 
 **Act summary:** Resolve petitions without favouritism.
@@ -549,6 +896,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 07A | Establish | lapis blue, royal plum, limestone, hammered gold. high clerestory or lamp light with sharp architectural shadow. | `fabric_weave` + `wall_brick` | Wide, three-plane tableau. FG SVG: framing fabric weave, nearby silhouettes, and an edge prop tied to “the throne”. MG: character group and optional low-detail 3D landmark. BG SVG: columns, patterned wall, and distant court silhouettes. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. formal dolly-in with a slight off-axis shift when power is challenged. | SVG: banners, curtain edges, and lamp glow breathe subtly. 3D: throne, table, seal, or architectural hero object moves only when handled. Characters begin in readable held poses before any movement. |
 | 07B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `wall_brick` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “resolve petitions without favouritism”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 07C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `fabric_weave` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07A — ESTABLISH (35mm, high angle, royal court)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  FABRIC WEAVE curtains (fabric_weave)               |  │
+│       |  WALL BRICK columns (wall_brick)                    |  │
+│       |  THRONE steps at edge (placeholder)                 |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  COLUMNS, patterned wall, petitioners          |    |  │
+│       |  |  DAVID on throne (hero 3D)                     |    |  │
+│       |  |  PETITIONERS approaching (hero 3D)             |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "David executed judgment..."         |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07B — INTERACT (50mm, chest height, hearing case)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS ON SCROLL center (wall_brick + stone)        |  │
+│       |  SEAL RING on finger (placeholder)                  |  │
+│       |  PETITIONER'S ROBE (placeholder)                    |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED COURT, reduced saturation           |    |  │
+│       |  |  DAVID judging (hero 3D)                        |    |  │
+│       |  |  TWO PETITIONERS (hero 3D)                      |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Hear the cause between..."           |    |  │
+│       |  |  [CHOICE]    ▢ Favor first  ▢ Favor neither  ▢ Delay││
+│       |  |  [CAPTION] "David did that which was right..."  |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07C — RESOLVE (50mm, eye level, justice served)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  STONE corner (stone)                               |  │
+│       |  FABRIC WEAVE corner (fabric_weave)                 |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  COURT opened for scripture space               |    |  │
+│       |  |  DAVID & petitioners separated (hero 3D)        |    |  │
+│       |  |  SCROLL at rest                                |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "David reigned over all Israel..."   |    |  │
+│       |  |  [SCRIPTURE] "2 Samuel 8:15"                  |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Act 8: Bathsheba and Uriah
 
@@ -560,6 +965,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 08B | Interact | Increase local contrast around the action while retaining near-black blue, cool slate, lamp amber, muted earth. Key light follows the story’s real light source. | `grass` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “confront the irreversible harm rather than hiding it”. BG SVG: simplified receding rock or masonry silhouettes with minimal detail with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 08C | Resolve / reflect | Let the accent move toward a quieter near-black blue, cool slate, lamp amber, muted earth; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `stone` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: receding rock or masonry silhouettes with minimal detail, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08A — ESTABLISH (35mm, high angle, palace roof)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  STONE parapet (stone)                              |  │
+│       |  GRASS roof garden (grass)                          |  │
+│       |  LAMP in corner (placeholder)                       |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  RECEDING MASONRY, minimal detail               |    |  │
+│       |  |  DAVID on roof (hero 3D)                        |    |  │
+│       |  |  BATHSHEBA bathing (hero 3D)                   |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "David walked on the roof..."        |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08B — INTERACT (50mm, chest height, sending for Uriah)    │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS WRITING LETTER center (grass + fabric_weave) │  │
+│       |  SEAL & RING (placeholder)                          |  │
+│       |  MESSENGER'S STAFF (placeholder)                    |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED ROOF, reduced saturation            |    |  │
+│       |  |  DAVID dictating (hero 3D)                      |    |  │
+│       |  |  MESSENGER waiting (hero 3D)                   |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Send me Uriah the Hittite..."        |    |  │
+│       |  |  [CHOICE]    ▢ Send letter  ▢ Recall him  ▢ Hide │  │   │
+│       |  |  [CAPTION] "David wrote a letter to Joab..."    |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08C — RESOLVE (50mm, eye level, irreversible harm)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  FABRIC WEAVE corner (fabric_weave)                 |  │
+│       |  STONE corner (stone)                               |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  MASONRY opened for scripture space             |    |  │
+│       |  |  DAVID receiving news (hero 3D)                |    |  │
+│       |  |  URIAH'S armor at feet (hero 3D)               |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "The thing that David had done..."  |    |  │
+│       |  |  [SCRIPTURE] "2 Samuel 11:27"                 |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 9: Nathan’s Parable
 
 **Act summary:** Recognise the king inside the story and repent.
@@ -569,6 +1032,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 09A | Establish | lapis blue, royal plum, limestone, hammered gold. high clerestory or lamp light with sharp architectural shadow. | `fabric_weave` + `wall_brick` | Wide, three-plane tableau. FG SVG: framing fabric weave, nearby silhouettes, and an edge prop tied to “nathan’s parable”. MG: character group and optional low-detail 3D landmark. BG SVG: columns, patterned wall, and distant court silhouettes. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. formal dolly-in with a slight off-axis shift when power is challenged. | SVG: banners, curtain edges, and lamp glow breathe subtly. 3D: throne, table, seal, or architectural hero object moves only when handled. Characters begin in readable held poses before any movement. |
 | 09B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `wall_brick` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “recognise the king inside the story and repent”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 09C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `fabric_weave` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09A — ESTABLISH (35mm, high angle, court chamber)         │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  FABRIC WEAVE curtains (fabric_weave)               |  │
+│       |  WALL BRICK walls (wall_brick)                      |  │
+│       |  PARABLE SCROLL on table (placeholder)              |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  COLUMNS, patterned wall, court                |    |  │
+│       |  |  NATHAN speaking (hero 3D)                     |    |  │
+│       |  |  DAVID listening (hero 3D)                     |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "There were two men in one city..." |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09B — INTERACT (50mm, chest height, recognition)          │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS GRIPPING THRONE center (wall_brick + stone)  |  │
+│       |  CROWN at edge (placeholder)                        |  │
+│       |  NATHAN'S FINGER pointing (placeholder)             |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED COURT, reduced saturation           |    |  │
+│       |  |  DAVID realizing (hero 3D)                      |    |  │
+│       |  |  NATHAN declaring (hero 3D)                    |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Thou art the man..."                |    |  │
+│       |  |  [CHOICE]    ▢ Deny  ▢ Confess  ▢ Flee         |    │   │
+│       |  |  [CAPTION] "David said, I have sinned..."       |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09C — RESOLVE (50mm, eye level, repentance)               │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  STONE corner (stone)                               |  │
+│       |  FABRIC WEAVE corner (fabric_weave)                 |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  COURT opened for scripture space               |    |  │
+│       |  |  DAVID prostrate (hero 3D)                     |    |  │
+│       |  |  PSALM 51 SCROLL open (hero 3D)                |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Create in me a clean heart..."      |    |  │
+│       |  |  [SCRIPTURE] "2 Samuel 12:13; Psalm 51"        |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Act 10: Absalom
 
@@ -580,6 +1101,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 10B | Interact | Increase local contrast around the action while retaining sun-baked clay, limestone, slate shadow, muted bronze. Key light follows the story’s real light source. | `stone` + `wood_dark` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “navigate divided loyalties without celebrating loss”. BG SVG: simplified city silhouette, towers, and atmospheric street depth with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 10C | Resolve / reflect | Let the accent move toward a quieter sun-baked clay, limestone, slate shadow, muted bronze; lower saturation behind captions and preserve warm skin tones. | `wood_dark` + `wall_brick` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: city silhouette, towers, and atmospheric street depth, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10A — ESTABLISH (35mm, high angle, Jerusalem walls)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  WALL BRICK ramparts (wall_brick)                   |  │
+│       |  STONE city streets (stone)                         |  │
+│       |  ABALOM'S BANNER at gate (placeholder)              |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  CITY SILHOUETTE, towers, atmospheric depth     |    |  │
+│       |  |  DAVID on wall (hero 3D)                        |    |  │
+│       |  |  ABSALOM'S forces approaching (hero 3D)        |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Absalom stole the hearts..."        |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10B — INTERACT (50mm, chest height, divided loyalty)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS ON SWORD HILT center (stone + wood_dark)     |  │
+│       |  CROWN at feet (placeholder)                        |  │
+│       |  MESSENGER'S SCROLL (placeholder)                   |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED STREETS, reduced saturation         |    |  │
+│       |  |  DAVID fleeing (hero 3D)                        |    |  │
+│       |  |  ITTAI pledging loyalty (hero 3D)              |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Deal gently with Absalom..."         |    |  │
+│       |  |  [CHOICE]    ▢ Fight  ▢ Flee  ▢ Negotiate      |    │   │
+│       |  |  [CAPTION] "The king said, Beware..."           |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10C — RESOLVE (50mm, eye level, grief without celebration)│
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  DARK WOOD spear corner (wood_dark)                 |  │
+│       |  WALL BRICK corner (wall_brick)                     |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  CITY opened for scripture space               |    |  │
+│       |  |  DAVID mourning (hero 3D)                      |    |  │
+│       |  |  ABSALOM'S body covered (hero 3D)             |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "O my son Absalom..."               |    |  │
+│       |  |  [SCRIPTURE] "2 Samuel 18:33"                 |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 11: The Census
 
 **Act summary:** Choose responsibility during the plague.
@@ -590,6 +1169,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 11B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `wood_dark` + `wall_brick` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “choose responsibility during the plague”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 11C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `wall_brick` + `wood_oak` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 11A — ESTABLISH (35mm, high angle, threshing floor)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  WOOD OAK threshing sled (wood_oak)                 |  │
+│       |  DARK WOOD altar (wood_dark)                        |  │
+│       |  PLAGUE ANGEL silhouette (placeholder)              |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  LAYERED LANDSCAPE, Araunah's floor            |    |  │
+│       |  |  DAVID purchasing (hero 3D)                    |    |  │
+│       |  |  ANGEL staying hand (hero 3D)                 |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "David said, I have sinned..."      |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 11B — INTERACT (50mm, chest height, building altar)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS LAYING STONES center (wood_dark + wall_brick)│  │
+│       |  SACRIFICIAL FIRE at edge (placeholder)             |  │
+│       |  CENSUS SCROLL burning (placeholder)                |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED FLOOR, reduced saturation           |    |  │
+│       |  |  DAVID building altar (hero 3D)                |    |  │
+│       |  |  FIRE falling from heaven (hero 3D)            |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "I will not offer burnt offerings..."│    |  │
+│       |  |  [CHOICE]    ▢ Buy floor  ▢ Offer sacrifice ▢ End │  │
+│       |  |  [CAPTION] "The Lord was intreated..."          |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 11C — RESOLVE (50mm, eye level, plague stayed)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  WALL BRICK corner (wall_brick)                     |  │
+│       |  WOOD OAK corner (wood_oak)                         |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  LANDSCAPE opened for scripture space          |    |  │
+│       |  |  DAVID worshipping (hero 3D)                  |    |  │
+│       |  |  ALTAR complete (hero 3D)                     |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "So the Lord was intreated..."      |    |  │
+│       |  |  [SCRIPTURE] "2 Samuel 24:25"                 |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+
 ### Act 12: Solomon
 
 **Act summary:** Pass plans and wisdom to the next king.
@@ -599,6 +1236,64 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 12A | Establish | lapis blue, royal plum, limestone, hammered gold. high clerestory or lamp light with sharp architectural shadow. | `fabric_weave` + `wall_brick` | Wide, three-plane tableau. FG SVG: framing fabric weave, nearby silhouettes, and an edge prop tied to “solomon”. MG: character group and optional low-detail 3D landmark. BG SVG: columns, patterned wall, and distant court silhouettes. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. formal dolly-in with a slight off-axis shift when power is challenged. | SVG: banners, curtain edges, and lamp glow breathe subtly. 3D: throne, table, seal, or architectural hero object moves only when handled. Characters begin in readable held poses before any movement. |
 | 12B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `wall_brick` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “pass plans and wisdom to the next king”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 12C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `fabric_weave` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 12A — ESTABLISH (35mm, high angle, royal court)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  FABRIC WEAVE curtains (fabric_weave)               |  │
+│       |  WALL BRICK columns (wall_brick)                    |  │
+│       |  TEMPLE PLANS on table (placeholder)                |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  COLUMNS, patterned wall, court                |    |  │
+│       |  |  DAVID instructing (hero 3D)                  |    |  │
+│       |  |  SOLOMON listening (hero 3D)                  |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "David gave to Solomon the pattern"│    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 12B — INTERACT (50mm, chest height, passing wisdom)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  HANDS ON PLANS center (wall_brick + stone)         |  │
+│       |  CROWN at Solomon's side (placeholder)              |  │
+│       |  DAVID'S HAND on shoulder (placeholder)             |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  SIMPLIFIED COURT, reduced saturation           |    |  │
+│       |  |  DAVID blessing (hero 3D)                      |    |  │
+│       |  |  SOLOMON receiving (hero 3D)                   |    |  │
+│       |  |                                                |    |  │
+│       |  |  [BUBBLE] "Keep the charge of the Lord..."     |    |  │
+│       |  |  [CHOICE]    ▢ Accept charge  ▢ Ask counsel ▢ Pray│  │
+│       |  |  [CAPTION] "David charged Solomon..."           |    │   │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 12C — RESOLVE (50mm, eye level, legacy secured)           │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  +-----------------------------------------------------+  │
+│       |  STONE corner (stone)                               |  │
+│       |  FABRIC WEAVE corner (fabric_weave)                 |  │
+│       |  +---------------------------------------------+    |  │
+│       |  |  COURT opened for scripture space               |    |  │
+│       |  |  DAVID & SOLOMON united (hero 3D)              |    |  │
+│       |  |  PLANS & CROWN at rest (hero 3D)               |    |  │
+│       |  |                                                |    |  │
+│       |  |  [CAPTION] "Then David slept with his fathers"  │    |  │
+│       |  |  [SCRIPTURE] "1 Kings 2:10-12"                 |    |  │
+│       |  +---------------------------------------------+    |  │
+│       +-----------------------------------------------------+  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 
 ### Panel acceptance checklist
 

@@ -1,0 +1,26 @@
+{
+  "story": "David",
+  "act": 10,
+  "chapter": "Ch.10 · Absalom",
+  "artSource": "art/act10_absalom.md",
+  "artFolder": "assets/svg/act_10_absalom",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "en_gedi_cave-limestone.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "valley_stones-brook.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_dark-plank.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "david_act10_a_background.svg",
+    "middleGround": "david_act10_a_middle_ground.svg",
+    "foreground": "david_act10_a_foreground.svg"
+  }
+}

@@ -4,74 +4,134 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "abraham-the-call",
+      "name": "Ch.1 · The Call",
+      "file": "abraham-the-call.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "abraham-the-call_hd",
+      "name": "Ch.1 · The Call (HD)",
+      "file": "abraham-the-call_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "abraham-egypt-and-return",
+      "name": "Ch.2 · Egypt and Return",
+      "file": "abraham-egypt-and-return.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "abraham-egypt-and-return_hd",
+      "name": "Ch.2 · Egypt and Return (HD)",
+      "file": "abraham-egypt-and-return_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "abraham-lot-chooses",
+      "name": "Ch.3 · Lot Chooses",
+      "file": "abraham-lot-chooses.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "abraham-lot-chooses_hd",
+      "name": "Ch.3 · Lot Chooses (HD)",
+      "file": "abraham-lot-chooses_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "abraham-rescue-of-lot",
+      "name": "Ch.4 · Rescue of Lot",
+      "file": "abraham-rescue-of-lot.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "abraham-rescue-of-lot_hd",
+      "name": "Ch.4 · Rescue of Lot (HD)",
+      "file": "abraham-rescue-of-lot_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "abraham-covenant-stars",
+      "name": "Ch.5 · Covenant Stars",
+      "file": "abraham-covenant-stars.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "abraham-covenant-stars_hd",
+      "name": "Ch.5 · Covenant Stars (HD)",
+      "file": "abraham-covenant-stars_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "abraham-hagar-in-the-wilderness",
+      "name": "Ch.6 · Hagar in the Wilderness",
+      "file": "abraham-hagar-in-the-wilderness.js",
+      "type": "module"
+    },
+    {
+      "id": "abraham-hagar-in-the-wilderness_hd",
+      "name": "Ch.6 · Hagar in the Wilderness (HD)",
+      "file": "abraham-hagar-in-the-wilderness_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "abraham-the-visitors",
+      "name": "Ch.7 · The Visitors",
+      "file": "abraham-the-visitors.js",
+      "type": "module"
+    },
+    {
+      "id": "abraham-the-visitors_hd",
+      "name": "Ch.7 · The Visitors (HD)",
+      "file": "abraham-the-visitors_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "abraham-sodom-and-gomorrah",
+      "name": "Ch.8 · Sodom and Gomorrah",
+      "file": "abraham-sodom-and-gomorrah.js",
+      "type": "module"
+    },
+    {
+      "id": "abraham-sodom-and-gomorrah_hd",
+      "name": "Ch.8 · Sodom and Gomorrah (HD)",
+      "file": "abraham-sodom-and-gomorrah_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "abraham-isaac-is-born",
+      "name": "Ch.9 · Isaac Is Born",
+      "file": "abraham-isaac-is-born.js",
+      "type": "module"
+    },
+    {
+      "id": "abraham-isaac-is-born_hd",
+      "name": "Ch.9 · Isaac Is Born (HD)",
+      "file": "abraham-isaac-is-born_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "abraham-moriah",
+      "name": "Ch.10 · Moriah",
+      "file": "abraham-moriah.js",
+      "type": "module"
+    },
+    {
+      "id": "abraham-moriah_hd",
+      "name": "Ch.10 · Moriah (HD)",
+      "file": "abraham-moriah_hd.js",
       "type": "module"
     }
   ]

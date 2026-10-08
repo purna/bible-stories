@@ -7,43 +7,110 @@
   "lines": [
     {
       "id": "restoration_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Rebuild community without treating new gifts as replacements.",
       "cite": "Job 1–42",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "restoration_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Rebuild community without treating new gifts as replacements.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "restoration_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Can faith remain honest when suffering refuses a simple explanation? — Restoration is the next step in that question.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "restoration_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Can faith remain honest when suffering refuses a simple explanation? — Restoration is the next step in that question.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "restoration_2",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE WORD STANDS",
-      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "restoration_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "restoration_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE WORD STANDS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "restoration_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
       "choices": [
         {
           "label": "Walk on with the lesson",
@@ -54,11 +121,58 @@
           "note": "A pause does not change the outcome. It only lets the player breathe."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "restoration_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "restoration",
   "foreground": "fg_restoration",
-  "index": 9
+  "index": 9,
+  "assetFolder": "act_10_restoration",
+  "artFolder": "assets/svg/act_10_restoration",
+  "assetStem": "job_act10",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_10_restoration/a_establish/job_act10_a_background.svg",
+      "middleGround": "assets/svg/act_10_restoration/a_establish/job_act10_a_middle_ground.svg",
+      "foreground": "assets/svg/act_10_restoration/a_establish/job_act10_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_10_restoration/b_core_action/job_act10_b_background.svg",
+      "middleGround": "assets/svg/act_10_restoration/b_core_action/job_act10_b_middle_ground.svg",
+      "foreground": "assets/svg/act_10_restoration/b_core_action/job_act10_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_10_restoration/c_resolve/job_act10_c_background.svg",
+      "middleGround": "assets/svg/act_10_restoration/c_resolve/job_act10_c_middle_ground.svg",
+      "foreground": "assets/svg/act_10_restoration/c_resolve/job_act10_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/grass-tufts.svg"
+  ]
 }

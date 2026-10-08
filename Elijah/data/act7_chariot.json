@@ -1,0 +1,314 @@
+{
+  "id": "chariot",
+  "name": "The Chariot of Fire",
+  "bg": "radial-gradient(circle at 50% 50%, #ffde7d, #ff914d 80%)",
+  "particle": "wind_chariot",
+  "svg": "jordan_river",
+  "lines": [
+    {
+      "id": "chariot_0",
+      "items": [
+        {
+          "id": "chariot_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The time came for the LORD to take Elijah up to heaven in a whirlwind. Elijah and Elisha travelled together from Gilgal.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "jordan_river"
+    },
+    {
+      "id": "chariot_1",
+      "items": [
+        {
+          "id": "chariot_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At the Jordan, Elijah struck the water with his cloak. The river divided, and they crossed on dry ground.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "jordan_river"
+    },
+    {
+      "id": "chariot_2",
+      "items": [
+        {
+          "id": "chariot_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Tell me what I can do for you before I am taken from you.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elijah",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "jordan_river"
+    },
+    {
+      "id": "chariot_3",
+      "items": [
+        {
+          "id": "chariot_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Please let me inherit a double portion of your spirit.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elisha",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "jordan_river"
+    },
+    {
+      "id": "chariot_4",
+      "items": [
+        {
+          "id": "chariot_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "You have asked for something difficult. Yet if you see me when I am taken from you, it will be granted.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elijah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "jordan_river"
+    },
+    {
+      "id": "chariot_5",
+      "audioSfx": "assets/audio/sfx/heavenly_transition.mp3",
+      "items": [
+        {
+          "id": "chariot_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Suddenly a chariot of fire and horses of fire appeared. They separated Elijah and Elisha, and Elijah was carried up into heaven in a whirlwind.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "chariot_of_fire"
+    },
+    {
+      "id": "chariot_6",
+      "items": [
+        {
+          "id": "chariot_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "My father! My father! The chariots and horsemen of Israel!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fly",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elisha",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "elijah_ascends"
+    },
+    {
+      "id": "chariot_7",
+      "items": [
+        {
+          "id": "chariot_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Elisha picked up Elijah's cloak. The prophetic mission did not end—it passed to the next generation.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "elisha_mantle"
+    },
+    {
+      "id": "chariot_8",
+      "items": [
+        {
+          "id": "chariot_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story of Elijah ends with a prophet taken from the earth, but God's work continues through Elisha.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "elisha_mantle"
+    },
+    {
+      "id": "chariot_9",
+      "items": [
+        {
+          "id": "chariot_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "THE END",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fly",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "elisha_mantle"
+    }
+  ],
+  "assetFolder": "act_07_chariot",
+  "artFolder": "assets/svg/act_07_chariot",
+  "assetStem": "elijah_act7",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_07_chariot/a_establish/elijah_act7_a_background.svg",
+      "middleGround": "assets/svg/act_07_chariot/a_establish/elijah_act7_a_middle_ground.svg",
+      "foreground": "assets/svg/act_07_chariot/a_establish/elijah_act7_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_07_chariot/b_core_action/elijah_act7_b_background.svg",
+      "middleGround": "assets/svg/act_07_chariot/b_core_action/elijah_act7_b_middle_ground.svg",
+      "foreground": "assets/svg/act_07_chariot/b_core_action/elijah_act7_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_background.svg",
+      "middleGround": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_middle_ground.svg",
+      "foreground": "assets/svg/act_07_chariot/c_resolve/elijah_act7_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "story": "Elijah",
+  "act": 6,
+  "chapter": "Naboth&#x27;s Vineyard",
+  "artSource": "art/act6_vineyard.md",
+  "artFolder": "assets/svg/act_06_vineyard",
+  "sceneId": "naboths_vineyard",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "desert-shrub-canopy.svg",
+    "desert_sand-dunes.svg",
+    "gourd-vine-leaves.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "water_fast-churn.svg",
+    "water_fast-rapids.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg",
+    "wood_texture.svg"
+  ],
+  "layers": {
+    "background": "elijah_act6_a_background.svg",
+    "middleGround": "elijah_act6_a_middle_ground.svg",
+    "foreground": "elijah_act6_a_foreground.svg"
+  }
+}

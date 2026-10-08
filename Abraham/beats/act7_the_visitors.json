@@ -1,0 +1,34 @@
+{
+  "story": "Abraham",
+  "act": {
+    "id": "act7_the_visitors",
+    "name": "Ch.7 · The Visitors",
+    "source": "../art/act7_the_visitors.md"
+  },
+  "beats": [
+    {
+      "id": "a_establish",
+      "type": "visual",
+      "name": "establishing",
+      "description": "wide framing of the setting: a great tent door in noon light, Abram hastening with a bowl, Sarah listening from inside"
+    },
+    {
+      "id": "b_core_action",
+      "type": "visual",
+      "name": "core action",
+      "description": "the scene's central movement and characters"
+    },
+    {
+      "id": "c_resolve",
+      "type": "visual",
+      "name": "resolution",
+      "description": "the beat's outcome, holding the emotional note"
+    },
+    {
+      "id": "interactive-game",
+      "type": "game",
+      "description": "Prepare hospitality before the guests depart.",
+      "mechanic": "gather-with-care"
+    }
+  ]
+}

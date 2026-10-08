@@ -1,37 +1,37 @@
 /**
- * BEATS/ACT8.JS — The Golden Calf
- * Input type: intercession / justice
+ * BEATS/ACT8.JS — Jethro's Advice and Sinai Arrival
+ * Input type: counsel / humility
  */
 
 const Act8Beats = (function () {
 
-    function confrontIdol(zealous) {
-        if (zealous) {
-            Compass.nudge('zeal', 8);
+    function welcomeJethro(gracious) {
+        if (gracious) {
+            Compass.nudge('hospitality', 5);
         } else {
-            Compass.nudge('tolerance', 8);
+            Compass.nudge('pride', 5);
         }
-        Compass.recordBeat('act8_confront');
+        Compass.recordBeat('act8_welcome');
     }
 
-    function intercede(compassionate) {
-        if (compassionate) {
-            Compass.nudge('mercy', 10);
+    function delegateJudges(humble) {
+        if (humble) {
+            Compass.nudge('wisdom', 10);
         } else {
-            Compass.nudge('wrath', 10);
+            Compass.nudge('burnout', 10);
         }
-        Compass.recordBeat('act8_intercede');
+        Compass.recordBeat('act8_judges');
     }
 
-    function renewCovenant(faithful) {
-        if (faithful) {
-            Compass.nudge('restoration', 8);
+    function reachSinai(expectant) {
+        if (expectant) {
+            Compass.nudge('anticipation', 5);
         } else {
-            Compass.nudge('abandonment', 8);
+            Compass.nudge('indifference', 5);
         }
-        Compass.recordBeat('act8_renew');
+        Compass.recordBeat('act8_arrive');
     }
 
-    return { confrontIdol, intercede, renewCovenant };
+    return { welcomeJethro, delegateJudges, reachSinai };
 })();
 window.Act8Beats = Act8Beats;

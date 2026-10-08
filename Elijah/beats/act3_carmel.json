@@ -1,0 +1,383 @@
+{
+  "story": "Elijah",
+  "act": {
+    "id": "carmel",
+    "name": "Mount Carmel",
+    "source": "../data/act3_carmel.json",
+    "svg": "mount_carmel_altars",
+    "bg": "radial-gradient(circle at 50% 80%, #8b2500, #3d1200 60%, #1a0700)",
+    "particle": "wind_carmel"
+  },
+  "beats": [
+    {
+      "id": "carmel_0",
+      "items": [
+        {
+          "id": "carmel_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "After a long drought, the LORD told Elijah to show himself to Ahab. The time had come to announce that rain would return.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "samaria_court"
+    },
+    {
+      "id": "carmel_1",
+      "items": [
+        {
+          "id": "carmel_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Ahab's official Obadiah had secretly protected a hundred prophets of the LORD from Jezebel. But now Elijah stood openly before the king.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "samaria_court"
+    },
+    {
+      "id": "carmel_2",
+      "items": [
+        {
+          "id": "carmel_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Gather all Israel on Mount Carmel. Bring the prophets of Baal. Let the people see who truly answers prayer.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elijah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "mount_carmel_altars"
+    },
+    {
+      "id": "carmel_3",
+      "items": [
+        {
+          "id": "carmel_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "How long will you keep wavering? If the LORD is God, follow him. If Baal is God, follow him.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elijah",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "mount_carmel_altars"
+    },
+    {
+      "id": "carmel_4",
+      "items": [
+        {
+          "id": "carmel_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The prophets of Baal cried out from morning until noon. They called, shouted, and performed their rituals—but there was no answer.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "mount_carmel_altars"
+    },
+    {
+      "id": "carmel_5",
+      "items": [
+        {
+          "id": "carmel_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Cry louder! Perhaps your god is busy, travelling, or asleep and needs to be awakened.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elijah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "mount_carmel_altars"
+    },
+    {
+      "id": "carmel_6",
+      "items": [
+        {
+          "id": "carmel_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Then Elijah repaired the LORD's broken-down altar. He used twelve stones, one for each tribe of Israel, and had the sacrifice and wood soaked with water.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "mount_carmel_altars"
+    },
+    {
+      "id": "carmel_7",
+      "choices": [
+        {
+          "label": "Pray with confidence",
+          "note": "Elijah's prayer is not a performance. He asks God to turn the people's hearts back to him."
+        },
+        {
+          "label": "Remember who must receive the glory",
+          "note": "The sign is meant to reveal the LORD—not to make Elijah famous."
+        }
+      ],
+      "items": [
+        {
+          "id": "carmel_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "LORD, God of Abraham, Isaac and Israel, show today that you are God in Israel and that I am your servant. Answer me, LORD!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fly",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elijah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "mount_carmel_altars"
+    },
+    {
+      "id": "carmel_8",
+      "audioSfx": "assets/audio/sfx/altar_fire.mp3",
+      "items": [
+        {
+          "id": "carmel_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Then the fire of the LORD fell. It consumed the sacrifice, the wood, the stones, the soil, and even the water in the trench.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "carmel_8_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "WHOOSH!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "mount_carmel_fire"
+    },
+    {
+      "id": "carmel_9",
+      "items": [
+        {
+          "id": "carmel_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The people fell facedown and cried out: The LORD—he is God! The LORD—he is God!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "mount_carmel_fire"
+    },
+    {
+      "id": "carmel_10",
+      "items": [
+        {
+          "id": "carmel_10_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Go back and look toward the sea. The drought is ending.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "elijah",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "mount_carmel_fire"
+    },
+    {
+      "id": "carmel_11",
+      "audioSfx": "assets/audio/sfx/rain_thunder.mp3",
+      "items": [
+        {
+          "id": "carmel_11_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A small cloud appeared. The sky grew dark, the wind rose, and soon the land was filled with rain.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "mount_carmel_fire"
+    }
+  ]
+}

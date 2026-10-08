@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Establish Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Joseph act 4 Ch.4 · The Prison foreground">
+  <metadata>{&quot;story&quot;:&quot;Joseph&quot;,&quot;act&quot;:4,&quot;chapter&quot;:&quot;Ch.4 · The Prison&quot;,&quot;scene&quot;:&quot;A&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#ac8e63" stroke="#201a17" stroke-width="12" opacity=".93"><rect x="0" y="540" width="150" height="560"/><rect x="1770" y="540" width="150" height="560"/><rect x="0" y="510" width="205" height="55"/><rect x="1715" y="510" width="205" height="55"/></g><g opacity=".96"><path d="M1450 1045l27.604554412141443 -64.48895877823233 73.61214509904384 -25.079039524868133 64.41062696166337 89.56799830310047Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1565 1045l23.359695149213074 -77.05493886116892 62.292520397901534 -29.96580955712125 54.505955348163845 107.02074841829017Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1680 1045l18.803023749869315 -66.4717391562648 50.14139666631818 -25.850120782991873 43.873722083028404 92.32185993925668Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/></g><g fill="#a68f6b" stroke="#201a17" stroke-width="10" opacity=".9"><path d="M0 1080V760h245v320zM1675 1080V760h245v320z"/><path d="M0 760h310v70H0zM1610 760h310v70h-310z"/></g><g transform="translate(1510 875)" opacity="0.92"><path d="M-120 80 L-90 -75 -20 -120 72 -78 110 80Z" fill="#ae9774" stroke="#201a17" stroke-width="12"/></g>
+  </svg>

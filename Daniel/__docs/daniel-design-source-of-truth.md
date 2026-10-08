@@ -1344,9 +1344,65 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 01A | Establish | sandstone, ochre, dry umber, faded turquoise. broad hard sun or long amber dusk with strong silhouette edges. | `fabric_weave` + `water_still` | Wide, three-plane tableau. FG SVG: framing fabric weave, nearby silhouettes, and an edge prop tied to “exile and the table”. MG: character group and optional low-detail 3D landmark. BG SVG: layered ridges, heat haze, and an open horizon. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. patient side-track or shallow forward drift that emphasizes distance. | SVG: dust, cloth edges, distant birds, and heat bands move sparingly. 3D: staff, pack, tent, or terrain marker sways or settles with weight. Characters begin in readable held poses before any movement. |
-| 01B | Interact | Increase local contrast around the action while retaining sandstone, ochre, dry umber, faded turquoise. Key light follows the story’s real light source. | `water_still` + `wall_brick` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “build a respectful ten-day food test”. BG SVG: simplified layered ridges, heat haze, and an open horizon with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 01C | Resolve / reflect | Let the accent move toward a quieter sandstone, ochre, dry umber, faded turquoise; lower saturation behind captions and preserve warm skin tones. | `wall_brick` + `fabric_weave` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered ridges, heat haze, and an open horizon, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 01A | Establish | sandstone, ochre, dry umber, faded turquoise. broad hard sun or long amber dusk with strong silhouette edges. | `fabric_weave` + `water_still` | Wide, three-plane tableau. FG SVG: framing fabric weave, nearby silhouettes, and an edge prop tied to "exile and the table". MG: character group and optional low-detail 3D landmark. BG SVG: layered ridges, heat haze, and an open horizon. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. patient side-track or shallow forward drift that emphasizes distance. | SVG: dust, cloth edges, distant birds, and heat bands move sparingly. 3D: staff, pack, tent, or terrain marker sways or settles with weight. Characters begin in readable held poses before any movement. |
+| 01B | Interact | Increase local contrast around the action while retaining sandstone, ochre, dry umber, faded turquoise. Key light follows the story's real light source. | `water_still` + `wall_brick` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "build a respectful ten-day food test". BG SVG: simplified layered ridges, heat haze, and an open horizon with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 01C | Resolve / reflect | Let the accent move toward a quieter sandstone, ochre, dry umber, faded turquoise; lower saturation behind captions and preserve warm skin tones. | `wall_brick` + `fabric_weave` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered ridges, heat haze, and an open horizon, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01A — ESTABLISH (wide, 28-35mm, high angle, Babylon city) │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧺 FABRIC WEAVE TENT EDGE (fabric_weave)          │   │
+│       │  💧 EUPHRATES RIVER (water_still)                  │   │
+│       │  🏜️ SAND & DUST PATH (placeholder)                │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌃 ZIGGURAT, ISHTAR GATE, CITY WALLS          │  │   │
+│       │  │  👨‍👨‍👦‍👦 YOUNG EXILES arriving                 │  │   │
+│       │  │  🌙 STAR FIELD over Babylon                    │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Build a respectful ten-day..."      │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  👌 HANDS PRESENTING VEGETABLES (center, water_still)│ │
+│       │  🧱 WALL BRICK MARKER (wall_brick)                  │   │
+│       │  📜 SCROLL OF TEST TERMS (placeholder)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ SIMPLIFIED PALACE, reduced saturation      │  │   │
+│       │  │  👨 DANIEL proposing test (hero 3D)           │  │   │
+│       │  │  🥒 VEGETABLES & WATER JUGS                   │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Ten days of vegetables..."         │  │   │
+│       │  │  [CHOICE]    ▢ Accept  ▢ Negotiate  ▢ Refuse  │  │   │
+│       │  │  [CAPTION] "Prove thy servants..."            │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 01C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧱 WALL BRICK CORNER (wall_brick)                 │   │
+│       │  📜 SCROLL CORNER (top-right, fabric_weave)        │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ PALACE COURT, opened for scripture space   │  │   │
+│       │  │  👨‍👨‍👦‍👦 HEALTHIER & STRONGER (hero 3D group)   │  │   │
+│       │  │  🌅 MORNING LIGHT on their faces               │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "At the end of ten days..."         │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 2: The Great Statue
 
@@ -1354,9 +1410,65 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 02A | Establish | midnight violet, ultramarine, pale cyan, star gold. motivated glow emerging from the vision against a subdued world. | `mosaic` + `hammered_gold` | Wide, three-plane tableau. FG SVG: framing mosaic, nearby silhouettes, and an edge prop tied to “the great statue”. MG: character group and optional low-detail 3D landmark. BG SVG: abstract horizon, layered cloud, and symbolic light field. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow orbit or vertical crane that returns to a grounded eye line. | SVG: stars, glyphs, cloud veils, and rays phase in rather than flash. 3D: symbolic objects rotate or assemble slowly with eased starts and stops. Characters begin in readable held poses before any movement. |
-| 02B | Interact | Increase local contrast around the action while retaining midnight violet, ultramarine, pale cyan, star gold. Key light follows the story’s real light source. | `hammered_gold` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “reassemble the dream and its meaning”. BG SVG: simplified abstract horizon, layered cloud, and symbolic light field with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 02C | Resolve / reflect | Let the accent move toward a quieter midnight violet, ultramarine, pale cyan, star gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: abstract horizon, layered cloud, and symbolic light field, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 02A | Establish | midnight violet, ultramarine, pale cyan, star gold. motivated glow emerging from the vision against a subdued world. | `mosaic` + `hammered_gold` | Wide, three-plane tableau. FG SVG: framing mosaic, nearby silhouettes, and an edge prop tied to "the great statue". MG: character group and optional low-detail 3D landmark. BG SVG: abstract horizon, layered cloud, and symbolic light field. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow orbit or vertical crane that returns to a grounded eye line. | SVG: stars, glyphs, cloud veils, and rays phase in rather than flash. 3D: symbolic objects rotate or assemble slowly with eased starts and stops. Characters begin in readable held poses before any movement. |
+| 02B | Interact | Increase local contrast around the action while retaining midnight violet, ultramarine, pale cyan, star gold. Key light follows the story's real light source. | `hammered_gold` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "reassemble the dream and its meaning". BG SVG: simplified abstract horizon, layered cloud, and symbolic light field with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 02C | Resolve / reflect | Let the accent move toward a quieter midnight violet, ultramarine, pale cyan, star gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: abstract horizon, layered cloud, and symbolic light field, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02A — ESTABLISH (wide, 28-35mm, night, throne room)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🎨 MOSAIC FLOOR PATTERN (mosaic)                  │   │
+│       │  👑 HAMMERED GOLD THRONE (hammered_gold)           │   │
+│       │  🌟 STAR FIELD & DREAM CLOUDS (placeholder)        │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ ABSTRACT HORIZON, layered cloud           │  │   │
+│       │  │  👑 NEBUCHADNEZZAR agitated on throne         │  │   │
+│       │  │  🌌 SYMBOLIC LIGHT FIELD                      │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Reassemble the dream..."           │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  ✋ HANDS ASSEMBLING STATUE (center, hammered_gold) │   │
+│       │  🪨 STONE PLATFORM (stone)                         │   │
+│       │  🌟 LIGHT BURST (placeholder)                      │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌌 SIMPLIFIED DREAMSCAPE, reduced saturation  │  │   │
+│       │  │  👨 DANIEL interpreting (hero 3D)             │  │   │
+│       │  │  🗿 5-SECTION STATUE forming                  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Gold head... silver chest..."      │  │   │
+│       │  │  [CHOICE]    ▢ Gold  ▢ Silver  ▢ Bronze      │  │   │
+│       │  │  [CAPTION] "This is the dream..."             │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 02C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪨 STONE CORNER (stone)                           │   │
+│       │  📜 SCROLL CORNER (top-right, mosaic)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌌 DREAMSCAPE, opened for scripture space     │  │   │
+│       │  │  👑 KING BOWING, crown off (hero 3D)          │  │   │
+│       │  │  🗿 STATUE shattered by stone                 │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The God of heaven..."             │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 3: The Furnace
 
@@ -1364,9 +1476,65 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 03A | Establish | charcoal, ember red, burnt orange, covenant gold. hard fire key with warm bounce and deep cool shadows. | `hammered_gold` + `stone` | Wide, three-plane tableau. FG SVG: framing hammered gold, nearby silhouettes, and an edge prop tied to “the furnace”. MG: character group and optional low-detail 3D landmark. BG SVG: smoke layers, dark ridge, and heat-softened horizon. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. measured push-in that stops before the decisive moment. | SVG: embers, smoke curls, and heat shimmer rise asynchronously. 3D: flame-lit hero prop uses restrained emissive pulses; no explosive spectacle. Characters begin in readable held poses before any movement. |
-| 03B | Interact | Increase local contrast around the action while retaining charcoal, ember red, burnt orange, covenant gold. Key light follows the story’s real light source. | `stone` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “keep the three friends together through the fire maze”. BG SVG: simplified smoke layers, dark ridge, and heat-softened horizon with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 03C | Resolve / reflect | Let the accent move toward a quieter charcoal, ember red, burnt orange, covenant gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `hammered_gold` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: smoke layers, dark ridge, and heat-softened horizon, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 03A | Establish | charcoal, ember red, burnt orange, covenant gold. hard fire key with warm bounce and deep cool shadows. | `hammered_gold` + `stone` | Wide, three-plane tableau. FG SVG: framing hammered gold, nearby silhouettes, and an edge prop tied to "the furnace". MG: character group and optional low-detail 3D landmark. BG SVG: smoke layers, dark ridge, and heat-softened horizon. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. measured push-in that stops before the decisive moment. | SVG: embers, smoke curls, and heat shimmer rise asynchronously. 3D: flame-lit hero prop uses restrained emissive pulses; no explosive spectacle. Characters begin in readable held poses before any movement. |
+| 03B | Interact | Increase local contrast around the action while retaining charcoal, ember red, burnt orange, covenant gold. Key light follows the story's real light source. | `stone` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "keep the three friends together through the fire maze". BG SVG: simplified smoke layers, dark ridge, and heat-softened horizon with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 03C | Resolve / reflect | Let the accent move toward a quieter charcoal, ember red, burnt orange, covenant gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `hammered_gold` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: smoke layers, dark ridge, and heat-softened horizon, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03A — ESTABLISH (wide, 28-35mm, high angle, Dura plain)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  👑 HAMMERED GOLD STATUE BASE (hammered_gold)      │   │
+│       │  🪨 STONE PLATFORM (stone)                         │   │
+│       │  👥 CROWD OF 60 (placeholder)                      │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌪️ SMOKE LAYERS, dark ridge, horizon         │  │   │
+│       │  │  🗿 COLOSSAL GOLDEN STATUE (60m)              │  │   │
+│       │  │  👨‍👨‍👦 THREE FRIENDS standing apart            │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Keep the three friends..."         │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤝 HANDS LINKED TOGETHER (center, stone)          │   │
+│       │  🧺 FABRIC ROBES (fabric_weave)                    │   │
+│       │  🔥 FURNACE DOOR (placeholder)                     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌪️ SIMPLIFIED SMOKE, reduced saturation       │  │   │
+│       │  │  👨‍👨‍👦 WALKING INTO FIRE (hero 3D)             │  │   │
+│       │  │  🔥 FLAMES & HEAT SHIMMER                     │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Our God is able..."                │  │   │
+│       │  │  [CHOICE]    ▢ Walk  ▢ Pray  ▢ Trust         │  │   │
+│       │  │  [CAPTION] "Bound and cast into..."           │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 03C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧺 FABRIC CORNER (fabric_weave)                   │   │
+│       │  📜 SCROLL CORNER (top-right, hammered_gold)       │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🔥 FURNACE, opened for scripture space        │  │   │
+│       │  │  👨‍👨‍👦 FOUR FIGURES WALKING (hero 3D)          │  │   │
+│       │  │  👑 KING ASTOUNDED                            │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Lo, I see four men loose..."       │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 4: The Proud King
 
@@ -1374,9 +1542,65 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 | Panel | Function | Colour and lighting | Texture Forge keys | Composition and layers | Camera angle and movement | SVG and 3D animation |
 |---|---|---|---|---|---|---|
-| 04A | Establish | lapis blue, royal plum, limestone, hammered gold. high clerestory or lamp light with sharp architectural shadow. | `mosaic` + `hammered_gold` | Wide, three-plane tableau. FG SVG: framing mosaic, nearby silhouettes, and an edge prop tied to “the proud king”. MG: character group and optional low-detail 3D landmark. BG SVG: columns, patterned wall, and distant court silhouettes. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. formal dolly-in with a slight off-axis shift when power is challenged. | SVG: banners, curtain edges, and lamp glow breathe subtly. 3D: throne, table, seal, or architectural hero object moves only when handled. Characters begin in readable held poses before any movement. |
-| 04B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “tend the humbled king until his reason returns”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
-| 04C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+| 04A | Establish | lapis blue, royal plum, limestone, hammered gold. high clerestory or lamp light with sharp architectural shadow. | `mosaic` + `hammered_gold` | Wide, three-plane tableau. FG SVG: framing mosaic, nearby silhouettes, and an edge prop tied to "the proud king". MG: character group and optional low-detail 3D landmark. BG SVG: columns, patterned wall, and distant court silhouettes. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. formal dolly-in with a slight off-axis shift when power is challenged. | SVG: banners, curtain edges, and lamp glow breathe subtly. 3D: throne, table, seal, or architectural hero object moves only when handled. Characters begin in readable held poses before any movement. |
+| 04B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story's real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to "tend the humbled king until his reason returns". BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
+| 04C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter's symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04A — ESTABLISH (wide, 28-35mm, high angle, palace)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🎨 MOSAIC FLOOR (mosaic)                          │   │
+│       │  👑 HAMMERED GOLD THRONE (hammered_gold)           │   │
+│       │  🏛️ COLUMN BASES (placeholder)                    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ COLUMNS, patterned wall, court            │  │   │
+│       │  │  👑 NEBUCHADNEZZAR on throne                  │  │   │
+│       │  │  🌿 GRAZING LIKE OXEN (in fields beyond)      │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Tend the humbled king..."          │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS OFFERING FOOD (center, hammered_gold)    │   │
+│       │  🧺 FABRIC ROBE (fabric_weave)                     │   │
+│       │  🌿 GRASS & HERBS (placeholder)                    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ SIMPLIFIED COURT, reduced saturation       │  │   │
+│       │  │  👨 DANIEL caring (hero 3D)                   │  │   │
+│       │  │  👑 KING eating grass                         │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Seven times shall pass..."         │  │   │
+│       │  │  [CHOICE]    ▢ Feed  ▢ Cover  ▢ Wait         │  │   │
+│       │  │  [CAPTION] "His heart was made like beasts..." │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 04C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧺 FABRIC CORNER (fabric_weave)                   │   │
+│       │  📜 SCROLL CORNER (top-right, mosaic)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ COURT, opened for scripture space          │  │   │
+│       │  │  👑 KING RESTORED, lifting eyes (hero 3D)     │  │   │
+│       │  │  👨 DANIEL standing by                        │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "My reason returned to me..."       │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 5: Writing on the Wall
 
@@ -1388,6 +1612,62 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 05B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `stone` + `hammered_gold` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “match the mysterious words to their warning”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 05C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `hammered_gold` + `wall_brick` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05A — ESTABLISH (wide, 28-35mm, night, banquet hall)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧱 WALL BRICK WORK (wall_brick)                   │   │
+│       │  🪨 STONE PILLAR BASE (stone)                      │   │
+│       │  🍷 SACRED TEMPLE CUPS (placeholder)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ COLUMNS, patterned wall, court            │  │   │
+│       │  │  👑 BELSHAZZAR feasting                       │  │   │
+│       │  │  ✍️ HAND WRITING on wall (placeholder)        │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Match the mysterious words..."     │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  👓 EYES READING WORDS (center, stone)             │   │
+│       │  👑 HAMMERED GOLD CUP (hammered_gold)              │   │
+│       │  📜 SCROLL INTERPRETATION (placeholder)            │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ SIMPLIFIED HALL, reduced saturation        │  │   │
+│       │  │  👨 DANIEL interpreting (hero 3D)             │  │   │
+│       │  │  ✍️ MENE, TEKEL, PERES glowing                │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "MENE — God has numbered..."        │  │   │
+│       │  │  [CHOICE]    ▢ MENE  ▢ TEKEL  ▢ PERES        │  │   │
+│       │  │  [CAPTION] "This is the interpretation..."     │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 05C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  👑 HAMMERED GOLD CORNER (hammered_gold)           │   │
+│       │  📜 SCROLL CORNER (top-right, wall_brick)          │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ HALL, opened for scripture space           │  │   │
+│       │  │  👑 KING SLAIN, kingdom divided (hero 3D)     │  │   │
+│       │  │  🌅 DAWN over fallen Babylon                  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "In that night was Belshazzar..."   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 6: The Lions’ Den
 
 **Act summary:** Maintain Daniel’s prayer rhythm despite the decree.
@@ -1397,6 +1677,62 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 06A | Establish | lapis blue, royal plum, limestone, hammered gold. high clerestory or lamp light with sharp architectural shadow. | `mosaic` + `hammered_gold` | Wide, three-plane tableau. FG SVG: framing mosaic, nearby silhouettes, and an edge prop tied to “the lions’ den”. MG: character group and optional low-detail 3D landmark. BG SVG: columns, patterned wall, and distant court silhouettes. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. formal dolly-in with a slight off-axis shift when power is challenged. | SVG: banners, curtain edges, and lamp glow breathe subtly. 3D: throne, table, seal, or architectural hero object moves only when handled. Characters begin in readable held poses before any movement. |
 | 06B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “maintain daniel’s prayer rhythm despite the decree”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 06C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06A — ESTABLISH (wide, 28-35mm, morning, Persian court)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🎨 MOSAIC FLOOR (mosaic)                          │   │
+│       │  👑 HAMMERED GOLD CROWN (hammered_gold)            │   │
+│       │  🦁 LION STATUE BASE (placeholder)                 │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ COLUMNS, patterned wall, court            │  │   │
+│       │  │  👑 DARIUS on dais                            │  │   │
+│       │  │  👨 DANIEL at window praying                  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Maintain Daniel's prayer..."       │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🙏 HANDS IN PRAYER (center, hammered_gold)        │   │
+│       │  🧺 FABRIC ROBE (fabric_weave)                     │   │
+│       │  🪟 WINDOW FRAME (placeholder)                     │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ SIMPLIFIED COURT, reduced saturation       │  │   │
+│       │  │  👨 DANIEL praying (hero 3D)                  │  │   │
+│       │  │  🦁 LIONS in den below                        │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "As he did aforetime..."            │  │   │
+│       │  │  [CHOICE]    ▢ Pray  ▢ Hide  ▢ Flee          │  │   │
+│       │  │  [CAPTION] "He kneeled upon his knees..."     │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 06C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧺 FABRIC CORNER (fabric_weave)                   │   │
+│       │  📜 SCROLL CORNER (top-right, mosaic)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ COURT, opened for scripture space          │  │   │
+│       │  │  👨 DANIEL safe, 🦁 LIONS peaceful (hero 3D)  │  │   │
+│       │  │  👑 DARIUS rejoicing                          │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "My God hath sent his angel..."     │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 7: Four Beasts
 
@@ -1408,6 +1744,62 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 07B | Interact | Increase local contrast around the action while retaining lapis blue, royal plum, limestone, hammered gold. Key light follows the story’s real light source. | `hammered_gold` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “identify symbols without attacking the vision”. BG SVG: simplified columns, patterned wall, and distant court silhouettes with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 07C | Resolve / reflect | Let the accent move toward a quieter lapis blue, royal plum, limestone, hammered gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: columns, patterned wall, and distant court silhouettes, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07A — ESTABLISH (wide, 28-35mm, night, vision sea)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🎨 MOSAIC VISION FRAME (mosaic)                   │   │
+│       │  👑 HAMMERED GOLD THRONE (hammered_gold)           │   │
+│       │  🌊 GREAT SEA CHURNING (placeholder)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ COLUMNS, patterned wall, court            │  │   │
+│       │  │  👨 DANIEL watching vision                    │  │   │
+│       │  │  🦁🐻🐆🐉 FOUR BEASTS rising                  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Identify symbols..."              │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  👁️ EYE DISCERNING (center, hammered_gold)        │   │
+│       │  🧺 FABRIC SCROLL (fabric_weave)                   │   │
+│       │  🦁 BEAST SILHOUETTES (placeholder)                │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ SIMPLIFIED COURT, reduced saturation       │  │   │
+│       │  │  👨 DANIEL interpreting (hero 3D)             │  │   │
+│       │  │  🦁🐻🐆🐉 BEASTS labeled                      │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "These great beasts..."             │  │   │
+│       │  │  [CHOICE]    ▢ Lion  ▢ Bear  ▢ Leopard      │  │   │
+│       │  │  [CAPTION] "The four beasts are four kings..."│  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 07C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧺 FABRIC CORNER (fabric_weave)                   │   │
+│       │  📜 SCROLL CORNER (top-right, mosaic)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏛️ COURT, opened for scripture space          │  │   │
+│       │  │  👨 DANIEL recording vision (hero 3D)         │  │   │
+│       │  │  👑 ANCIENT OF DAYS enthroned                 │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The saints of the Most High..."   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 8: The Ram and Goat
 
 **Act summary:** Track the vision’s movements on a map.
@@ -1417,6 +1809,62 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 08A | Establish | midnight violet, ultramarine, pale cyan, star gold. motivated glow emerging from the vision against a subdued world. | `mosaic` + `hammered_gold` | Wide, three-plane tableau. FG SVG: framing mosaic, nearby silhouettes, and an edge prop tied to “the ram and goat”. MG: character group and optional low-detail 3D landmark. BG SVG: abstract horizon, layered cloud, and symbolic light field. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow orbit or vertical crane that returns to a grounded eye line. | SVG: stars, glyphs, cloud veils, and rays phase in rather than flash. 3D: symbolic objects rotate or assemble slowly with eased starts and stops. Characters begin in readable held poses before any movement. |
 | 08B | Interact | Increase local contrast around the action while retaining midnight violet, ultramarine, pale cyan, star gold. Key light follows the story’s real light source. | `hammered_gold` + `stone` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “track the vision’s movements on a map”. BG SVG: simplified abstract horizon, layered cloud, and symbolic light field with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 08C | Resolve / reflect | Let the accent move toward a quieter midnight violet, ultramarine, pale cyan, star gold; lower saturation behind captions and preserve warm skin tones. | `stone` + `mosaic` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: abstract horizon, layered cloud, and symbolic light field, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08A — ESTABLISH (wide, 28-35mm, night, vision map)        │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🎨 MOSAIC MAP FRAME (mosaic)                      │   │
+│       │  👑 HAMMERED GOLD COMPASS (hammered_gold)          │   │
+│       │  🗺️ ANCIENT MAP SCROLL (placeholder)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌌 ABSTRACT HORIZON, layered cloud           │  │   │
+│       │  │  👨 DANIEL watching vision                    │  │   │
+│       │  │  🐏🐐 RAM & GOAT moving                     │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Track the vision's movements..."  │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  👉 FINGER TRACING ROUTE (center, hammered_gold)   │   │
+│       │  🪨 STONE MARKER (stone)                           │   │
+│       │  🐏 RAM HORN / 🐐 GOAT HORN (placeholder)          │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌌 SIMPLIFIED MAP, reduced saturation         │  │   │
+│       │  │  👨 DANIEL mapping (hero 3D)                  │  │   │
+│       │  │  🐏🐐 RAM & GOAT clashing                   │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "The ram... the rough goat..."      │  │   │
+│       │  │  [CHOICE]    ▢ North  ▢ South  ▢ East       │  │   │
+│       │  │  [CAPTION] "The ram which thou sawest..."     │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 08C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪨 STONE CORNER (stone)                           │   │
+│       │  📜 SCROLL CORNER (top-right, mosaic)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌌 MAP, opened for scripture space            │  │   │
+│       │  │  👨 DANIEL understanding (hero 3D)            │  │   │
+│       │  │  🐐 NOTABLE HORN broken, four rising          │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "The rough goat is the king..."    │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Act 9: Seventy Weeks
 
@@ -1428,6 +1876,62 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 09B | Interact | Increase local contrast around the action while retaining parchment cream, earth umber, muted teal, restrained gold. Key light follows the story’s real light source. | `stone` + `fabric_weave` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “order prayer, confession, and hope”. BG SVG: simplified layered landscape or architecture specific to the scripture setting with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 09C | Resolve / reflect | Let the accent move toward a quieter parchment cream, earth umber, muted teal, restrained gold; lower saturation behind captions and preserve warm skin tones. | `fabric_weave` + `hammered_gold` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: layered landscape or architecture specific to the scripture setting, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
 
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09A — ESTABLISH (wide, 28-35mm, day, study chamber)       │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  👑 HAMMERED GOLD SCROLL CASE (hammered_gold)      │   │
+│       │  🪨 STONE DESK BASE (stone)                        │   │
+│       │  📜 PROPHECY SCROLLS (placeholder)                 │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ LAYERED LANDSCAPE, scripture setting      │  │   │
+│       │  │  👨 DANIEL studying scrolls                   │  │   │
+│       │  │  🕰️ SEVENTY WEEKS timeline                   │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Order prayer, confession..."      │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🙏 HANDS IN CONFESSION (center, stone)            │   │
+│       │  🧺 FABRIC PRAYER SHAWL (fabric_weave)             │   │
+│       │  🕰️ WEEK MARKER (placeholder)                      │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ SIMPLIFIED LANDSCAPE, reduced saturation   │  │   │
+│       │  │  👨 DANIEL praying (hero 3D)                  │  │   │
+│       │  │  🕰️ SEVENTY WEEKS unfolding                  │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Seventy weeks are determined..."   │  │   │
+│       │  │  [CHOICE]    ▢ Confess  ▢ Intercede  ▢ Hope  │  │   │
+│       │  │  [CAPTION] "To finish the transgression..."   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 09C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🧺 FABRIC CORNER (fabric_weave)                   │   │
+│       │  📜 SCROLL CORNER (top-right, hammered_gold)       │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🏞️ LANDSCAPE, opened for scripture space      │  │   │
+│       │  │  👨 DANIEL at peace (hero 3D)                 │  │   │
+│       │  │  🕊️ MESSIAH PRINCE coming                    │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Messiah the Prince shall come..." │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### Act 10: Final Vision
 
 **Act summary:** Carry the sealed message to the riverbank.
@@ -1437,6 +1941,62 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 | 10A | Establish | midnight violet, ultramarine, pale cyan, star gold. motivated glow emerging from the vision against a subdued world. | `stone` + `fabric_weave` | Wide, three-plane tableau. FG SVG: framing stone, nearby silhouettes, and an edge prop tied to “final vision”. MG: character group and optional low-detail 3D landmark. BG SVG: abstract horizon, layered cloud, and symbolic light field. Keep the objective in the brightest third. | Wide 28–35 mm equivalent, slightly above eye level. slow orbit or vertical crane that returns to a grounded eye line. | SVG: stars, glyphs, cloud veils, and rays phase in rather than flash. 3D: symbolic objects rotate or assemble slowly with eased starts and stops. Characters begin in readable held poses before any movement. |
 | 10B | Interact | Increase local contrast around the action while retaining midnight violet, ultramarine, pale cyan, star gold. Key light follows the story’s real light source. | `fabric_weave` + `water_still` | Medium action composition with a clear left-to-right path. FG SVG: hands, cloth, foliage, masonry, or tool silhouette that frames—but never covers—the target. MG 3D: the single tactile object required to “carry the sealed message to the riverbank”. BG SVG: simplified abstract horizon, layered cloud, and symbolic light field with reduced saturation. | 40–55 mm equivalent at character/chest height; no free orbit during text. Use a small pointer-linked parallax shift, then an 8–12% eased push when the action completes. | SVG target gets a slow 1–2 px invitation pulse until input; atmosphere continues at half speed. 3D interaction uses anticipation, contact, settle, and a clear final pose. Respect reduced-motion by crossfading between start/end states. |
 | 10C | Resolve / reflect | Let the accent move toward a quieter midnight violet, ultramarine, pale cyan, star gold; lower saturation behind captions and preserve warm skin tones. | `water_still` + `stone` | Balanced medium-wide aftermath. FG SVG: the chapter’s symbolic object as a corner frame. MG: characters separated into a clean emotional silhouette; 3D hero prop is at rest. BG SVG: abstract horizon, layered cloud, and symbolic light field, opened to leave negative space for the scripture reference. | 50 mm equivalent near eye level. Hold still for the canonical line, then pull back 5–8% or tilt gently toward the next journey direction. | SVG movement decelerates and settles; one symbolic element may continue looping. 3D elements stop before the scripture reference appears. Transition out with a 350–500 ms layer crossfade, not a hard cut. |
+
+#### Visual layout snapshot
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10A — ESTABLISH (wide, 28-35mm, night, river Tigris)      │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🪨 STONE RIVER BANK (stone)                       │   │
+│       │  🧺 FABRIC MESSAGE CASE (fabric_weave)             │   │
+│       │  ✨ HEAVENLY LIGHT BEAM (placeholder)              │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌌 ABSTRACT HORIZON, layered cloud           │  │   │
+│       │  │  👨 DANIEL by river                           │  │   │
+│       │  │  👼 ANGELIC FIGURES above                     │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Carry the sealed message..."      │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10B — INTERACT (medium, 40-55mm, chest height)            │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  🤲 HANDS HOLDING SEALED CASE (center, fabric_weave)│  │
+│       │  💧 TIGRIS WATER STILL (water_still)               │   │
+│       │  📜 SEALED SCROLL (placeholder)                    │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌌 SIMPLIFIED RIVER, reduced saturation       │  │   │
+│       │  │  👨 DANIEL receiving (hero 3D)                │  │   │
+│       │  │  👼 ANGELS instructing                        │  │   │
+│       │  │                                                │  │   │
+│       │  │  [BUBBLE] "Seal the book until..."            │  │   │
+│       │  │  [CHOICE]    ▢ Receive  ▢ Seal  ▢ Deliver    │  │   │
+│       │  │  [CAPTION] "But thou, O Daniel, shut up..."   │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+                                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│ PANEL 10C — RESOLVE (medium-wide, 50mm, eye level, pull-back)   │
+├─────────────────────────────────────────────────────────────────┤
+│  FG:  ╭────────────────────────────────────────────────────╮   │
+│       │  💧 WATER STILL CORNER (water_still)               │   │
+│       │  📜 SCROLL CORNER (top-right, stone)               │   │
+│       │  ┌──────────────────────────────────────────────┐  │   │
+│       │  │  🌌 RIVER, opened for scripture space          │  │   │
+│       │  │  👨 DANIEL standing (hero 3D)                 │  │   │
+│       │  │  👼 ANGELS ascending                          │  │   │
+│       │  │                                                │  │   │
+│       │  │  [CAPTION] "Go thy way till the end..."       │  │   │
+│       │  └──────────────────────────────────────────────┘  │   │
+│       ╰────────────────────────────────────────────────────╯   │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Panel acceptance checklist
 

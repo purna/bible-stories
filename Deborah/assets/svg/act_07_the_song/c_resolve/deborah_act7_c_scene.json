@@ -1,32 +1,19 @@
 {
   "story": "Deborah",
   "act": 7,
-  "chapter": "The Song",
-  "brief": "Rebuild the victory song in call-and-response.",
-  "scene": {
-    "id": "C",
-    "name": "Resolve"
-  },
-  "canvas": {
-    "width": 1920,
-    "height": 1080
-  },
-  "environment": "desert",
-  "time": "day",
-  "seed": 1,
-  "background": "deborah_act7_c_background.svg",
-  "foreground": "deborah_act7_c_foreground.svg",
-  "foregroundBackgroundIncluded": false,
-  "foregroundDetails": {
-    "plants": true,
-    "rocks": true,
-    "structures": true,
-    "props": true,
-    "framing": true
-  },
-  "layering": [
-    "background",
-    "optional middle-ground/characters",
-    "foreground"
-  ]
+  "chapter": "Ch.7 · The Song",
+  "artSource": "art/act7_the_song.md",
+  "artFolder": "assets/svg/act_07_the_song",
+  "sceneId": "",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "water_fast-churn.svg",
+    "water_fast-rapids.svg"
+  ],
+  "layers": {
+    "background": "deborah_act7_c_background.svg",
+    "middleGround": "deborah_act7_c_middle_ground.svg",
+    "foreground": "deborah_act7_c_foreground.svg"
+  }
 }

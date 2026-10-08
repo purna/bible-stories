@@ -1,0 +1,24 @@
+{
+  "story": "Jeremiah",
+  "act": 8,
+  "chapter": "Ch.8 · Buy the Field",
+  "artSource": "art/act8_buy_the_field.md",
+  "artFolder": "assets/svg/act_08_buy_the_field",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg"
+  ],
+  "layers": {
+    "background": "jeremiah_act8_c_background.svg",
+    "middleGround": "jeremiah_act8_c_middle_ground.svg",
+    "foreground": "jeremiah_act8_c_foreground.svg"
+  }
+}

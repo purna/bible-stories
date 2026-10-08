@@ -1,0 +1,698 @@
+{
+  "story": "Noah",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Warning",
+      "sceneId": "ch1_corrupt_world",
+      "artSource": "art/act1_warning.md",
+      "assetFolder": "act_01_warning",
+      "artFolder": "assets/svg/act_01_warning",
+      "assetStem": "noah_act1",
+      "materials": [
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/leaves-canopy.svg"
+      ],
+      "materialKeys": [
+        "wood_dark",
+        "water_fast",
+        "water_still",
+        "leaves"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_warning/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_warning/a_establish/noah_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_warning/a_establish/noah_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_warning/a_establish/noah_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_warning/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_warning/b_core_action/noah_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_warning/b_core_action/noah_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_warning/b_core_action/noah_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_warning/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_warning/c_resolve/noah_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_warning/c_resolve/noah_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_warning/c_resolve/noah_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_warning/a_establish/noah_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_warning/a_establish/noah_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_warning/a_establish/noah_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_warning/b_core_action/noah_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_warning/b_core_action/noah_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_warning/b_core_action/noah_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_warning/c_resolve/noah_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_warning/c_resolve/noah_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_warning/c_resolve/noah_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Blueprint",
+      "sceneId": "ch2_blueprint_scroll",
+      "artSource": "art/act2_blueprint.md",
+      "assetFolder": "act_02_blueprint",
+      "artFolder": "assets/svg/act_02_blueprint",
+      "assetStem": "noah_act2",
+      "materials": [
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_blueprint/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_blueprint/a_establish/noah_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_blueprint/a_establish/noah_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_blueprint/a_establish/noah_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_blueprint/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_blueprint/b_core_action/noah_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_blueprint/b_core_action/noah_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_blueprint/b_core_action/noah_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_blueprint/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_blueprint/c_resolve/noah_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_blueprint/c_resolve/noah_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_blueprint/c_resolve/noah_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_blueprint/a_establish/noah_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_blueprint/a_establish/noah_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_blueprint/a_establish/noah_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_blueprint/b_core_action/noah_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_blueprint/b_core_action/noah_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_blueprint/b_core_action/noah_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_blueprint/c_resolve/noah_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_blueprint/c_resolve/noah_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_blueprint/c_resolve/noah_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · The Long Build",
+      "sceneId": "ch3_ark_under_construction",
+      "artSource": "art/act3_build.md",
+      "assetFolder": "act_03_build",
+      "artFolder": "assets/svg/act_03_build",
+      "assetStem": "noah_act3",
+      "materials": [
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "wood_dark",
+        "water_fast",
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_build/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_build/a_establish/noah_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_build/a_establish/noah_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_build/a_establish/noah_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_build/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_build/b_core_action/noah_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_build/b_core_action/noah_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_build/b_core_action/noah_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_build/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_build/c_resolve/noah_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_build/c_resolve/noah_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_build/c_resolve/noah_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_build/a_establish/noah_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_build/a_establish/noah_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_build/a_establish/noah_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_build/b_core_action/noah_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_build/b_core_action/noah_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_build/b_core_action/noah_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_build/c_resolve/noah_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_build/c_resolve/noah_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_build/c_resolve/noah_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · The Gathering",
+      "sceneId": "ch4_animals_arrive",
+      "artSource": "art/act4_gathering.md",
+      "assetFolder": "act_04_gathering",
+      "artFolder": "assets/svg/act_04_gathering",
+      "assetStem": "noah_act4",
+      "materials": [
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_gathering/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_gathering/a_establish/noah_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_gathering/a_establish/noah_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_gathering/a_establish/noah_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_gathering/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_gathering/b_core_action/noah_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_gathering/b_core_action/noah_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_gathering/b_core_action/noah_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_gathering/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_gathering/c_resolve/noah_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_gathering/c_resolve/noah_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_gathering/c_resolve/noah_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_gathering/a_establish/noah_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_gathering/a_establish/noah_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_gathering/a_establish/noah_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_gathering/b_core_action/noah_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_gathering/b_core_action/noah_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_gathering/b_core_action/noah_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_gathering/c_resolve/noah_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_gathering/c_resolve/noah_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_gathering/c_resolve/noah_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · The Door Shuts",
+      "sceneId": "ch5_dark_clouds",
+      "artSource": "art/act5_door.md",
+      "assetFolder": "act_05_door",
+      "artFolder": "assets/svg/act_05_door",
+      "assetStem": "noah_act5",
+      "materials": [
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "wood_dark",
+        "water_fast",
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_door/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_door/a_establish/noah_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_door/a_establish/noah_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_door/a_establish/noah_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_door/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_door/b_core_action/noah_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_door/b_core_action/noah_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_door/b_core_action/noah_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_door/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_door/c_resolve/noah_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_door/c_resolve/noah_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_door/c_resolve/noah_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_door/a_establish/noah_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_door/a_establish/noah_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_door/a_establish/noah_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_door/b_core_action/noah_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_door/b_core_action/noah_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_door/b_core_action/noah_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_door/c_resolve/noah_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_door/c_resolve/noah_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_door/c_resolve/noah_act5_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · Forty Days",
+      "sceneId": "ch6_water_rising",
+      "artSource": "art/act6_flood.md",
+      "assetFolder": "act_06_flood",
+      "artFolder": "assets/svg/act_06_flood",
+      "assetStem": "noah_act6",
+      "materials": [
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "wood_dark",
+        "water_fast",
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_06_flood/a_establish",
+          "layers": {
+            "background": "assets/svg/act_06_flood/a_establish/noah_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_flood/a_establish/noah_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_flood/a_establish/noah_act6_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_06_flood/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_06_flood/b_core_action/noah_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_flood/b_core_action/noah_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_flood/b_core_action/noah_act6_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_06_flood/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_06_flood/c_resolve/noah_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_flood/c_resolve/noah_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_flood/c_resolve/noah_act6_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_flood/a_establish/noah_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_flood/a_establish/noah_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_flood/a_establish/noah_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_flood/b_core_action/noah_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_flood/b_core_action/noah_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_flood/b_core_action/noah_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_flood/c_resolve/noah_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_flood/c_resolve/noah_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_flood/c_resolve/noah_act6_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · The Long Wait",
+      "sceneId": "ch7_ark_on_ararat",
+      "artSource": "art/act7_waiting.md",
+      "assetFolder": "act_07_waiting",
+      "artFolder": "assets/svg/act_07_waiting",
+      "assetStem": "noah_act7",
+      "materials": [
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/leaves-canopy.svg"
+      ],
+      "materialKeys": [
+        "wood_dark",
+        "water_fast",
+        "water_still",
+        "leaves"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_07_waiting/a_establish",
+          "layers": {
+            "background": "assets/svg/act_07_waiting/a_establish/noah_act7_a_background.svg",
+            "middleGround": "assets/svg/act_07_waiting/a_establish/noah_act7_a_middle_ground.svg",
+            "foreground": "assets/svg/act_07_waiting/a_establish/noah_act7_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_07_waiting/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_07_waiting/b_core_action/noah_act7_b_background.svg",
+            "middleGround": "assets/svg/act_07_waiting/b_core_action/noah_act7_b_middle_ground.svg",
+            "foreground": "assets/svg/act_07_waiting/b_core_action/noah_act7_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_07_waiting/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_07_waiting/c_resolve/noah_act7_c_background.svg",
+            "middleGround": "assets/svg/act_07_waiting/c_resolve/noah_act7_c_middle_ground.svg",
+            "foreground": "assets/svg/act_07_waiting/c_resolve/noah_act7_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_waiting/a_establish/noah_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_waiting/a_establish/noah_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_waiting/a_establish/noah_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_waiting/b_core_action/noah_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_waiting/b_core_action/noah_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_waiting/b_core_action/noah_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_waiting/c_resolve/noah_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_waiting/c_resolve/noah_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_waiting/c_resolve/noah_act7_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · Dry Ground",
+      "sceneId": "ch8_ramp_down",
+      "artSource": "art/act8_dryground.md",
+      "assetFolder": "act_08_dryground",
+      "artFolder": "assets/svg/act_08_dryground",
+      "assetStem": "noah_act8",
+      "materials": [
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "wood_dark",
+        "water_fast",
+        "water_still",
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_08_dryground/a_establish",
+          "layers": {
+            "background": "assets/svg/act_08_dryground/a_establish/noah_act8_a_background.svg",
+            "middleGround": "assets/svg/act_08_dryground/a_establish/noah_act8_a_middle_ground.svg",
+            "foreground": "assets/svg/act_08_dryground/a_establish/noah_act8_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_08_dryground/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_background.svg",
+            "middleGround": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_middle_ground.svg",
+            "foreground": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_08_dryground/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_background.svg",
+            "middleGround": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_middle_ground.svg",
+            "foreground": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_dryground/a_establish/noah_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_dryground/a_establish/noah_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_dryground/a_establish/noah_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_dryground/b_core_action/noah_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_dryground/c_resolve/noah_act8_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · The Altar & the Covenant",
+      "sceneId": "ch9_altar",
+      "artSource": "art/act9_covenant.md",
+      "assetFolder": "act_09_covenant",
+      "artFolder": "assets/svg/act_09_covenant",
+      "assetStem": "noah_act9",
+      "materials": [
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "water_fast",
+        "water_still",
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_09_covenant/a_establish",
+          "layers": {
+            "background": "assets/svg/act_09_covenant/a_establish/noah_act9_a_background.svg",
+            "middleGround": "assets/svg/act_09_covenant/a_establish/noah_act9_a_middle_ground.svg",
+            "foreground": "assets/svg/act_09_covenant/a_establish/noah_act9_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_09_covenant/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_background.svg",
+            "middleGround": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_middle_ground.svg",
+            "foreground": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_09_covenant/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_background.svg",
+            "middleGround": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_middle_ground.svg",
+            "foreground": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_09_covenant/a_establish/noah_act9_a_background.svg",
+          "middleGround": "assets/svg/act_09_covenant/a_establish/noah_act9_a_middle_ground.svg",
+          "foreground": "assets/svg/act_09_covenant/a_establish/noah_act9_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_background.svg",
+          "middleGround": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_middle_ground.svg",
+          "foreground": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_background.svg",
+          "middleGround": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_middle_ground.svg",
+          "foreground": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · The Vineyard",
+      "sceneId": "ch10_noah_plants",
+      "artSource": "art/act10_vineyard.md",
+      "assetFolder": "act_01_vineyard",
+      "artFolder": "assets/svg/act_01_vineyard",
+      "assetStem": "noah_act10",
+      "materials": [
+        "assets/materials/wood_dark-plank.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/leaves-canopy.svg"
+      ],
+      "materialKeys": [
+        "wood_dark",
+        "fabric_weave",
+        "leaves"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_vineyard/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_vineyard/a_establish/noah_act10_a_background.svg",
+            "middleGround": "assets/svg/act_01_vineyard/a_establish/noah_act10_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_vineyard/a_establish/noah_act10_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_vineyard/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_vineyard/b_core_action/noah_act10_b_background.svg",
+            "middleGround": "assets/svg/act_01_vineyard/b_core_action/noah_act10_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_vineyard/b_core_action/noah_act10_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_vineyard/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_vineyard/c_resolve/noah_act10_c_background.svg",
+            "middleGround": "assets/svg/act_01_vineyard/c_resolve/noah_act10_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_vineyard/c_resolve/noah_act10_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_vineyard/a_establish/noah_act10_a_background.svg",
+          "middleGround": "assets/svg/act_01_vineyard/a_establish/noah_act10_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_vineyard/a_establish/noah_act10_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_vineyard/b_core_action/noah_act10_b_background.svg",
+          "middleGround": "assets/svg/act_01_vineyard/b_core_action/noah_act10_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_vineyard/b_core_action/noah_act10_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_vineyard/c_resolve/noah_act10_c_background.svg",
+          "middleGround": "assets/svg/act_01_vineyard/c_resolve/noah_act10_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_vineyard/c_resolve/noah_act10_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

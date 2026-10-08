@@ -1,0 +1,25 @@
+{
+  "story": "Isaiah",
+  "act": 1,
+  "chapter": "Ch.1 · A City in Need",
+  "artSource": "art/act1_a_city_in_need.md",
+  "artFolder": "assets/svg/act_01_a_city_in_need",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg"
+  ],
+  "layers": {
+    "background": "isaiah_act1_a_background.svg",
+    "middleGround": "isaiah_act1_a_middle_ground.svg",
+    "foreground": "isaiah_act1_a_foreground.svg"
+  }
+}

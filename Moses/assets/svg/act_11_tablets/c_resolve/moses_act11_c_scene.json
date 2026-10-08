@@ -1,0 +1,24 @@
+{
+  "story": "Moses",
+  "act": 11,
+  "chapter": "Ch.11 · The Second Tablets",
+  "artSource": "art/act11_tablets.md",
+  "artFolder": "assets/svg/act_11_tablets",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "bulrush_basket-woven.svg",
+    "desert_sand-dunes.svg",
+    "egypt_mud_brick-stretcher.svg",
+    "hammered_gold-hammered.svg",
+    "nile_reeds-riverbank.svg",
+    "stone-rough.svg",
+    "stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act11_c_background.svg",
+    "middleGround": "moses_act11_c_middle_ground.svg",
+    "foreground": "moses_act11_c_foreground.svg"
+  }
+}

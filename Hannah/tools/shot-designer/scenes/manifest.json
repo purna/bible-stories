@@ -4,74 +4,110 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "hannah-the-journey-to-shiloh",
+      "name": "Ch.1 · The Journey to Shiloh",
+      "file": "hannah-the-journey-to-shiloh.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "hannah-the-journey-to-shiloh_hd",
+      "name": "Ch.1 · The Journey to Shiloh (HD)",
+      "file": "hannah-the-journey-to-shiloh_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "hannah-at-the-table",
+      "name": "Ch.2 · At the Table",
+      "file": "hannah-at-the-table.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "hannah-at-the-table_hd",
+      "name": "Ch.2 · At the Table (HD)",
+      "file": "hannah-at-the-table_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "hannah-silent-prayer",
+      "name": "Ch.3 · Silent Prayer",
+      "file": "hannah-silent-prayer.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "hannah-silent-prayer_hd",
+      "name": "Ch.3 · Silent Prayer (HD)",
+      "file": "hannah-silent-prayer_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "hannah-misunderstood",
+      "name": "Ch.4 · Misunderstood",
+      "file": "hannah-misunderstood.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "hannah-misunderstood_hd",
+      "name": "Ch.4 · Misunderstood (HD)",
+      "file": "hannah-misunderstood_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "hannah-remembered",
+      "name": "Ch.5 · Remembered",
+      "file": "hannah-remembered.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "hannah-remembered_hd",
+      "name": "Ch.5 · Remembered (HD)",
+      "file": "hannah-remembered_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "hannah-the-little-robe",
+      "name": "Ch.6 · The Little Robe",
+      "file": "hannah-the-little-robe.js",
+      "type": "module"
+    },
+    {
+      "id": "hannah-the-little-robe_hd",
+      "name": "Ch.6 · The Little Robe (HD)",
+      "file": "hannah-the-little-robe_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "hannah-given-back",
+      "name": "Ch.7 · Given Back",
+      "file": "hannah-given-back.js",
+      "type": "module"
+    },
+    {
+      "id": "hannah-given-back_hd",
+      "name": "Ch.7 · Given Back (HD)",
+      "file": "hannah-given-back_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "hannah-hannah-s-song",
+      "name": "Ch.8 · Hannah’s Song",
+      "file": "hannah-hannah-s-song.js",
+      "type": "module"
+    },
+    {
+      "id": "hannah-hannah-s-song_hd",
+      "name": "Ch.8 · Hannah’s Song (HD)",
+      "file": "hannah-hannah-s-song_hd.js",
       "type": "module"
     }
   ]

@@ -4,74 +4,134 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "esther-the-banquet",
+      "name": "Ch.1 · The Banquet",
+      "file": "esther-the-banquet.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "esther-the-banquet_hd",
+      "name": "Ch.1 · The Banquet (HD)",
+      "file": "esther-the-banquet_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "esther-a-new-queen",
+      "name": "Ch.2 · A New Queen",
+      "file": "esther-a-new-queen.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "esther-a-new-queen_hd",
+      "name": "Ch.2 · A New Queen (HD)",
+      "file": "esther-a-new-queen_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "esther-the-gate-plot",
+      "name": "Ch.3 · The Gate Plot",
+      "file": "esther-the-gate-plot.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "esther-the-gate-plot_hd",
+      "name": "Ch.3 · The Gate Plot (HD)",
+      "file": "esther-the-gate-plot_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "esther-haman-s-decree",
+      "name": "Ch.4 · Haman’s Decree",
+      "file": "esther-haman-s-decree.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "esther-haman-s-decree_hd",
+      "name": "Ch.4 · Haman’s Decree (HD)",
+      "file": "esther-haman-s-decree_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "esther-for-such-a-time",
+      "name": "Ch.5 · For Such a Time",
+      "file": "esther-for-such-a-time.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "esther-for-such-a-time_hd",
+      "name": "Ch.5 · For Such a Time (HD)",
+      "file": "esther-for-such-a-time_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "esther-the-first-banquet",
+      "name": "Ch.6 · The First Banquet",
+      "file": "esther-the-first-banquet.js",
+      "type": "module"
+    },
+    {
+      "id": "esther-the-first-banquet_hd",
+      "name": "Ch.6 · The First Banquet (HD)",
+      "file": "esther-the-first-banquet_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "esther-the-sleepless-night",
+      "name": "Ch.7 · The Sleepless Night",
+      "file": "esther-the-sleepless-night.js",
+      "type": "module"
+    },
+    {
+      "id": "esther-the-sleepless-night_hd",
+      "name": "Ch.7 · The Sleepless Night (HD)",
+      "file": "esther-the-sleepless-night_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "esther-the-second-banquet",
+      "name": "Ch.8 · The Second Banquet",
+      "file": "esther-the-second-banquet.js",
+      "type": "module"
+    },
+    {
+      "id": "esther-the-second-banquet_hd",
+      "name": "Ch.8 · The Second Banquet (HD)",
+      "file": "esther-the-second-banquet_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "esther-a-new-decree",
+      "name": "Ch.9 · A New Decree",
+      "file": "esther-a-new-decree.js",
+      "type": "module"
+    },
+    {
+      "id": "esther-a-new-decree_hd",
+      "name": "Ch.9 · A New Decree (HD)",
+      "file": "esther-a-new-decree_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "esther-purim",
+      "name": "Ch.10 · Purim",
+      "file": "esther-purim.js",
+      "type": "module"
+    },
+    {
+      "id": "esther-purim_hd",
+      "name": "Ch.10 · Purim (HD)",
+      "file": "esther-purim_hd.js",
       "type": "module"
     }
   ]

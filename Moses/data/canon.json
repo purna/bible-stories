@@ -1,7 +1,7 @@
 {
   "Moses": {
     "title": "Moses",
-    "references": "Exodus; Numbers; Deuteronomy 31–34",
+    "references": "Exodus; Numbers; Deuteronomy 31\u201334",
     "question": "Will a rescued people learn to trust the God who leads them through uncertainty?",
     "characters": [
       "moses_young",
@@ -67,26 +67,56 @@
       },
       {
         "number": 7,
-        "title": "Sinai",
-        "game": "Arrange the camp and carry the covenant words.",
-        "engine": "listen-respond"
+        "title": "Water from Rock and Victory",
+        "game": "Find water in the desert and prevail over attackers.",
+        "engine": "tap-sequence"
       },
       {
         "number": 8,
+        "title": "Jethro's Advice and Sinai Arrival",
+        "game": "Receive wisdom from Midian and reach the holy mountain.",
+        "engine": "match-it-up"
+      },
+      {
+        "number": 9,
+        "title": "Sinai: The Covenant Given",
+        "game": "Experience God's presence and receive the ten words.",
+        "engine": "listen-respond"
+      },
+      {
+        "number": 10,
         "title": "The Golden Calf",
         "game": "Confront the idol and intercede for the people.",
         "engine": "tap-sequence"
       },
       {
-        "number": 9,
-        "title": "Forty Years",
-        "game": "Navigate a provision-and-trust journey map.",
+        "number": 11,
+        "title": "Second Tablets and Tabernacle",
+        "game": "Renew the covenant and begin building God's dwelling.",
+        "engine": "gather-with-care"
+      },
+      {
+        "number": 12,
+        "title": "The Spies and Rebellion",
+        "game": "Explore Canaan and face the consequences of unbelief.",
         "engine": "find-path"
       },
       {
-        "number": 10,
-        "title": "Mount Nebo",
-        "game": "Appoint Joshua and identify the land from afar.",
+        "number": 13,
+        "title": "Wilderness Trials: Water, Serpents, and Balak",
+        "game": "Journey through hardship and see God's provision.",
+        "engine": "find-path"
+      },
+      {
+        "number": 14,
+        "title": "Moses' Final Reviews and Instructions",
+        "game": "Prepare the next generation for the promised land.",
+        "engine": "listen-respond"
+      },
+      {
+        "number": 15,
+        "title": "Mount Nebo: Viewing the Promised Land",
+        "game": "See the fulfillment of God's promise from afar.",
         "engine": "match-it-up"
       }
     ]

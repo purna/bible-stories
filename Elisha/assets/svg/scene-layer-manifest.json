@@ -1,0 +1,648 @@
+{
+  "story": "Elisha",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Mantle",
+      "sceneId": "placeholder",
+      "artSource": "art/act1_the_mantle.md",
+      "assetFolder": "act_01_the_mantle",
+      "artFolder": "assets/svg/act_01_the_mantle",
+      "assetStem": "elisha_act1",
+      "materials": [
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/leaves-canopy.svg"
+      ],
+      "materialKeys": [
+        "water_still",
+        "water_fast",
+        "wood_oak",
+        "stone",
+        "fabric_weave",
+        "leaves"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_the_mantle/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_the_mantle/a_establish/elisha_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_the_mantle/a_establish/elisha_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_mantle/a_establish/elisha_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_the_mantle/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_the_mantle/b_core_action/elisha_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_the_mantle/b_core_action/elisha_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_mantle/b_core_action/elisha_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_the_mantle/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_the_mantle/c_resolve/elisha_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_the_mantle/c_resolve/elisha_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_mantle/c_resolve/elisha_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_the_mantle/a_establish/elisha_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_the_mantle/a_establish/elisha_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_mantle/a_establish/elisha_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_the_mantle/b_core_action/elisha_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_the_mantle/b_core_action/elisha_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_mantle/b_core_action/elisha_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_the_mantle/c_resolve/elisha_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_the_mantle/c_resolve/elisha_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_mantle/c_resolve/elisha_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Jordan",
+      "sceneId": "placeholder",
+      "artSource": "art/act2_the_jordan.md",
+      "assetFolder": "act_02_the_jordan",
+      "artFolder": "assets/svg/act_02_the_jordan",
+      "assetStem": "elisha_act2",
+      "materials": [
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/leaves-canopy.svg"
+      ],
+      "materialKeys": [
+        "water_still",
+        "water_fast",
+        "stone",
+        "leaves"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_the_jordan/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_the_jordan/a_establish/elisha_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_the_jordan/a_establish/elisha_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_jordan/a_establish/elisha_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_the_jordan/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_the_jordan/b_core_action/elisha_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_the_jordan/b_core_action/elisha_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_jordan/b_core_action/elisha_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_the_jordan/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_the_jordan/c_resolve/elisha_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_the_jordan/c_resolve/elisha_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_jordan/c_resolve/elisha_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_the_jordan/a_establish/elisha_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_the_jordan/a_establish/elisha_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_jordan/a_establish/elisha_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_the_jordan/b_core_action/elisha_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_the_jordan/b_core_action/elisha_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_jordan/b_core_action/elisha_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_the_jordan/c_resolve/elisha_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_the_jordan/c_resolve/elisha_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_jordan/c_resolve/elisha_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · The Widow’s Oil",
+      "sceneId": "placeholder",
+      "artSource": "art/act3_the_widow_s_oil.md",
+      "assetFolder": "act_03_the_widow_s_oil",
+      "artFolder": "assets/svg/act_03_the_widow_s_oil",
+      "assetStem": "elisha_act3",
+      "materials": [
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/leaves-canopy.svg"
+      ],
+      "materialKeys": [
+        "water_still",
+        "water_fast",
+        "wood_oak",
+        "stone",
+        "fabric_weave",
+        "leaves"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_the_widow_s_oil/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_the_widow_s_oil/a_establish/elisha_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_the_widow_s_oil/a_establish/elisha_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_the_widow_s_oil/a_establish/elisha_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_the_widow_s_oil/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_the_widow_s_oil/b_core_action/elisha_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_the_widow_s_oil/b_core_action/elisha_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_the_widow_s_oil/b_core_action/elisha_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_the_widow_s_oil/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_the_widow_s_oil/c_resolve/elisha_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_the_widow_s_oil/c_resolve/elisha_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_the_widow_s_oil/c_resolve/elisha_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_the_widow_s_oil/a_establish/elisha_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_the_widow_s_oil/a_establish/elisha_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_widow_s_oil/a_establish/elisha_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_the_widow_s_oil/b_core_action/elisha_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_the_widow_s_oil/b_core_action/elisha_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_widow_s_oil/b_core_action/elisha_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_the_widow_s_oil/c_resolve/elisha_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_the_widow_s_oil/c_resolve/elisha_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_widow_s_oil/c_resolve/elisha_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · The Shunammite Room",
+      "sceneId": "placeholder",
+      "artSource": "art/act4_the_shunammite_room.md",
+      "assetFolder": "act_04_the_shunammite_room",
+      "artFolder": "assets/svg/act_04_the_shunammite_room",
+      "assetStem": "elisha_act4",
+      "materials": [
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_the_shunammite_room/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_the_shunammite_room/a_establish/elisha_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_the_shunammite_room/a_establish/elisha_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_the_shunammite_room/a_establish/elisha_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_the_shunammite_room/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_the_shunammite_room/b_core_action/elisha_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_the_shunammite_room/b_core_action/elisha_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_the_shunammite_room/b_core_action/elisha_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_the_shunammite_room/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_the_shunammite_room/c_resolve/elisha_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_the_shunammite_room/c_resolve/elisha_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_the_shunammite_room/c_resolve/elisha_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_the_shunammite_room/a_establish/elisha_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_the_shunammite_room/a_establish/elisha_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_shunammite_room/a_establish/elisha_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_the_shunammite_room/b_core_action/elisha_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_the_shunammite_room/b_core_action/elisha_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_shunammite_room/b_core_action/elisha_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_the_shunammite_room/c_resolve/elisha_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_the_shunammite_room/c_resolve/elisha_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_the_shunammite_room/c_resolve/elisha_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · The Child",
+      "sceneId": "placeholder",
+      "artSource": "art/act5_the_child.md",
+      "assetFolder": "act_05_the_child",
+      "artFolder": "assets/svg/act_05_the_child",
+      "assetStem": "elisha_act5",
+      "materials": [
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/leaves-canopy.svg"
+      ],
+      "materialKeys": [
+        "water_still",
+        "water_fast",
+        "wood_oak",
+        "stone",
+        "fabric_weave",
+        "leaves"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_the_child/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_the_child/a_establish/elisha_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_the_child/a_establish/elisha_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_the_child/a_establish/elisha_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_the_child/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_the_child/b_core_action/elisha_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_the_child/b_core_action/elisha_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_the_child/b_core_action/elisha_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_the_child/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_the_child/c_resolve/elisha_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_the_child/c_resolve/elisha_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_the_child/c_resolve/elisha_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_the_child/a_establish/elisha_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_the_child/a_establish/elisha_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_the_child/a_establish/elisha_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_the_child/b_core_action/elisha_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_the_child/b_core_action/elisha_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_the_child/b_core_action/elisha_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_the_child/c_resolve/elisha_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_the_child/c_resolve/elisha_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_the_child/c_resolve/elisha_act5_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · Naaman",
+      "sceneId": "placeholder",
+      "artSource": "art/act6_naaman.md",
+      "assetFolder": "act_06_naaman",
+      "artFolder": "assets/svg/act_06_naaman",
+      "assetStem": "elisha_act6",
+      "materials": [
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/water_fast-churn.svg"
+      ],
+      "materialKeys": [
+        "water_still",
+        "water_fast"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_06_naaman/a_establish",
+          "layers": {
+            "background": "assets/svg/act_06_naaman/a_establish/elisha_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_naaman/a_establish/elisha_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_naaman/a_establish/elisha_act6_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_06_naaman/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_06_naaman/b_core_action/elisha_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_naaman/b_core_action/elisha_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_naaman/b_core_action/elisha_act6_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_06_naaman/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_06_naaman/c_resolve/elisha_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_naaman/c_resolve/elisha_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_naaman/c_resolve/elisha_act6_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_naaman/a_establish/elisha_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_naaman/a_establish/elisha_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_naaman/a_establish/elisha_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_naaman/b_core_action/elisha_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_naaman/b_core_action/elisha_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_naaman/b_core_action/elisha_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_naaman/c_resolve/elisha_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_naaman/c_resolve/elisha_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_naaman/c_resolve/elisha_act6_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · The Floating Axe",
+      "sceneId": "placeholder",
+      "artSource": "art/act7_the_floating_axe.md",
+      "assetFolder": "act_07_the_floating_axe",
+      "artFolder": "assets/svg/act_07_the_floating_axe",
+      "assetStem": "elisha_act7",
+      "materials": [
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/wood_oak-planks3.svg"
+      ],
+      "materialKeys": [
+        "water_still",
+        "water_fast",
+        "wood_oak"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_07_the_floating_axe/a_establish",
+          "layers": {
+            "background": "assets/svg/act_07_the_floating_axe/a_establish/elisha_act7_a_background.svg",
+            "middleGround": "assets/svg/act_07_the_floating_axe/a_establish/elisha_act7_a_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_floating_axe/a_establish/elisha_act7_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_07_the_floating_axe/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_07_the_floating_axe/b_core_action/elisha_act7_b_background.svg",
+            "middleGround": "assets/svg/act_07_the_floating_axe/b_core_action/elisha_act7_b_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_floating_axe/b_core_action/elisha_act7_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_07_the_floating_axe/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_07_the_floating_axe/c_resolve/elisha_act7_c_background.svg",
+            "middleGround": "assets/svg/act_07_the_floating_axe/c_resolve/elisha_act7_c_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_floating_axe/c_resolve/elisha_act7_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_the_floating_axe/a_establish/elisha_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_the_floating_axe/a_establish/elisha_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_floating_axe/a_establish/elisha_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_the_floating_axe/b_core_action/elisha_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_the_floating_axe/b_core_action/elisha_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_floating_axe/b_core_action/elisha_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_the_floating_axe/c_resolve/elisha_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_the_floating_axe/c_resolve/elisha_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_floating_axe/c_resolve/elisha_act7_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · The Unseen Army",
+      "sceneId": "placeholder",
+      "artSource": "art/act8_the_unseen_army.md",
+      "assetFolder": "act_08_the_unseen_army",
+      "artFolder": "assets/svg/act_08_the_unseen_army",
+      "assetStem": "elisha_act8",
+      "materials": [
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_08_the_unseen_army/a_establish",
+          "layers": {
+            "background": "assets/svg/act_08_the_unseen_army/a_establish/elisha_act8_a_background.svg",
+            "middleGround": "assets/svg/act_08_the_unseen_army/a_establish/elisha_act8_a_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_unseen_army/a_establish/elisha_act8_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_08_the_unseen_army/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_08_the_unseen_army/b_core_action/elisha_act8_b_background.svg",
+            "middleGround": "assets/svg/act_08_the_unseen_army/b_core_action/elisha_act8_b_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_unseen_army/b_core_action/elisha_act8_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_08_the_unseen_army/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_08_the_unseen_army/c_resolve/elisha_act8_c_background.svg",
+            "middleGround": "assets/svg/act_08_the_unseen_army/c_resolve/elisha_act8_c_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_unseen_army/c_resolve/elisha_act8_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_the_unseen_army/a_establish/elisha_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_the_unseen_army/a_establish/elisha_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_unseen_army/a_establish/elisha_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_the_unseen_army/b_core_action/elisha_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_the_unseen_army/b_core_action/elisha_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_unseen_army/b_core_action/elisha_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_the_unseen_army/c_resolve/elisha_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_the_unseen_army/c_resolve/elisha_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_unseen_army/c_resolve/elisha_act8_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · A Blind Feast",
+      "sceneId": "placeholder",
+      "artSource": "art/act9_a_blind_feast.md",
+      "assetFolder": "act_09_a_blind_feast",
+      "artFolder": "assets/svg/act_09_a_blind_feast",
+      "assetStem": "elisha_act9",
+      "materials": [
+        "assets/materials/water_still-eddies.svg",
+        "assets/materials/water_fast-churn.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/leaves-canopy.svg"
+      ],
+      "materialKeys": [
+        "water_still",
+        "water_fast",
+        "wood_oak",
+        "stone",
+        "fabric_weave",
+        "leaves"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_09_a_blind_feast/a_establish",
+          "layers": {
+            "background": "assets/svg/act_09_a_blind_feast/a_establish/elisha_act9_a_background.svg",
+            "middleGround": "assets/svg/act_09_a_blind_feast/a_establish/elisha_act9_a_middle_ground.svg",
+            "foreground": "assets/svg/act_09_a_blind_feast/a_establish/elisha_act9_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_09_a_blind_feast/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_09_a_blind_feast/b_core_action/elisha_act9_b_background.svg",
+            "middleGround": "assets/svg/act_09_a_blind_feast/b_core_action/elisha_act9_b_middle_ground.svg",
+            "foreground": "assets/svg/act_09_a_blind_feast/b_core_action/elisha_act9_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_09_a_blind_feast/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_09_a_blind_feast/c_resolve/elisha_act9_c_background.svg",
+            "middleGround": "assets/svg/act_09_a_blind_feast/c_resolve/elisha_act9_c_middle_ground.svg",
+            "foreground": "assets/svg/act_09_a_blind_feast/c_resolve/elisha_act9_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_09_a_blind_feast/a_establish/elisha_act9_a_background.svg",
+          "middleGround": "assets/svg/act_09_a_blind_feast/a_establish/elisha_act9_a_middle_ground.svg",
+          "foreground": "assets/svg/act_09_a_blind_feast/a_establish/elisha_act9_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_09_a_blind_feast/b_core_action/elisha_act9_b_background.svg",
+          "middleGround": "assets/svg/act_09_a_blind_feast/b_core_action/elisha_act9_b_middle_ground.svg",
+          "foreground": "assets/svg/act_09_a_blind_feast/b_core_action/elisha_act9_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_09_a_blind_feast/c_resolve/elisha_act9_c_background.svg",
+          "middleGround": "assets/svg/act_09_a_blind_feast/c_resolve/elisha_act9_c_middle_ground.svg",
+          "foreground": "assets/svg/act_09_a_blind_feast/c_resolve/elisha_act9_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

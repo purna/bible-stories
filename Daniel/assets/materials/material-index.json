@@ -1,0 +1,178 @@
+{
+  "story": "Daniel",
+  "sourceTool": "Daniel/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "wall_brick",
+      "shape": "running",
+      "file": "wall_brick-running.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "stacked",
+      "file": "wall_brick-stacked.svg"
+    },
+    {
+      "key": "wall_brick",
+      "shape": "herringbone",
+      "file": "wall_brick-herringbone.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "calm",
+      "file": "water_still-calm.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "eddies",
+      "file": "water_still-eddies.svg"
+    },
+    {
+      "key": "hammered_gold",
+      "shape": "hammered",
+      "file": "hammered_gold-hammered.svg"
+    },
+    {
+      "key": "mosaic",
+      "shape": "grid",
+      "file": "mosaic-grid.svg"
+    },
+    {
+      "key": "mosaic",
+      "shape": "chips",
+      "file": "mosaic-chips.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "The King's Table",
+      "assetFolder": "act_01_table",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "The Dream",
+      "assetFolder": "act_02_statue",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "The Furnace",
+      "assetFolder": "act_03_furnace",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "mosaic",
+          "file": "mosaic-chips.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "The Writing on the Wall",
+      "assetFolder": "act_04_writing",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "mosaic",
+          "file": "mosaic-chips.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "The Den",
+      "assetFolder": "act_05_den",
+      "materials": [
+        {
+          "key": "wall_brick",
+          "file": "wall_brick-herringbone.svg"
+        },
+        {
+          "key": "mosaic",
+          "file": "mosaic-chips.svg"
+        },
+        {
+          "key": "hammered_gold",
+          "file": "hammered_gold-hammered.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    }
+  ]
+}

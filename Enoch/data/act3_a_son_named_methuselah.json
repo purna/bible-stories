@@ -7,43 +7,110 @@
   "lines": [
     {
       "id": "a_son_named_methuselah_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Prepare the home for a new child.",
       "cite": "Genesis 5; Hebrews 11:5; Jude 14–15",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "a_son_named_methuselah_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Prepare the home for a new child.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "a_son_named_methuselah_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "What does it mean to walk faithfully across an ordinary lifetime? — A Son Named Methuselah is the next step in that question.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "a_son_named_methuselah_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "What does it mean to walk faithfully across an ordinary lifetime? — A Son Named Methuselah is the next step in that question.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "a_son_named_methuselah_2",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE WORD STANDS",
-      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "a_son_named_methuselah_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "a_son_named_methuselah_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE WORD STANDS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "a_son_named_methuselah_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
       "choices": [
         {
           "label": "Walk on with the lesson",
@@ -54,11 +121,57 @@
           "note": "A pause does not change the outcome. It only lets the player breathe."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "a_son_named_methuselah_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "a_son_named_methuselah",
   "foreground": "fg_a_son_named_methuselah",
-  "index": 2
+  "index": 2,
+  "assetFolder": "act_03_a_son_named_methuselah",
+  "artFolder": "assets/svg/act_03_a_son_named_methuselah",
+  "assetStem": "enoch_act3",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_03_a_son_named_methuselah/a_establish/enoch_act3_a_background.svg",
+      "middleGround": "assets/svg/act_03_a_son_named_methuselah/a_establish/enoch_act3_a_middle_ground.svg",
+      "foreground": "assets/svg/act_03_a_son_named_methuselah/a_establish/enoch_act3_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_03_a_son_named_methuselah/b_core_action/enoch_act3_b_background.svg",
+      "middleGround": "assets/svg/act_03_a_son_named_methuselah/b_core_action/enoch_act3_b_middle_ground.svg",
+      "foreground": "assets/svg/act_03_a_son_named_methuselah/b_core_action/enoch_act3_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_background.svg",
+      "middleGround": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_middle_ground.svg",
+      "foreground": "assets/svg/act_03_a_son_named_methuselah/c_resolve/enoch_act3_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/fabric_weave-basket.svg"
+  ]
 }

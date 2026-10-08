@@ -1,0 +1,34 @@
+{
+  "story": "Abraham",
+  "act": {
+    "id": "act9_isaac_is_born",
+    "name": "Ch.9 · Isaac Is Born",
+    "source": "../art/act9_isaac_is_born.md"
+  },
+  "beats": [
+    {
+      "id": "a_establish",
+      "type": "visual",
+      "name": "establishing",
+      "description": "wide framing of the setting: a shaded tent interior with woven hangings, a sleeping infant, Sarah's astonished joy"
+    },
+    {
+      "id": "b_core_action",
+      "type": "visual",
+      "name": "core action",
+      "description": "the scene's central movement and characters"
+    },
+    {
+      "id": "c_resolve",
+      "type": "visual",
+      "name": "resolution",
+      "description": "the beat's outcome, holding the emotional note"
+    },
+    {
+      "id": "interactive-game",
+      "type": "game",
+      "description": "Assemble a celebration tent.",
+      "mechanic": "assembly"
+    }
+  ]
+}

@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Establish Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Jeremiah act 9 Ch.9 · The Fall of Jerusalem foreground">
+  <metadata>{&quot;story&quot;:&quot;Jeremiah&quot;,&quot;act&quot;:9,&quot;chapter&quot;:&quot;Ch.9 · The Fall of Jerusalem&quot;,&quot;scene&quot;:&quot;A&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#ac8e63" stroke="#201a17" stroke-width="12" opacity=".93"><rect x="0" y="540" width="150" height="560"/><rect x="1770" y="540" width="150" height="560"/><rect x="0" y="510" width="205" height="55"/><rect x="1715" y="510" width="205" height="55"/></g><g opacity=".96"><path d="M1450 1045l21.185924890218303 -72.47094169640913 56.49579970724881 -28.183143993048 49.433824743842706 100.65408568945713Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1565 1045l30.63019678937271 -43.466652780678125 81.68052477166056 -16.90369830359705 71.47045917520299 60.37035108427517Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1680 1045l16.802056344319134 -65.31714293444529 44.805483584851025 -25.40111114117317 39.20479813674465 90.71825407561846Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/></g><g fill="#a68f6b" stroke="#201a17" stroke-width="10" opacity=".9"><path d="M0 1080V760h245v320zM1675 1080V760h245v320z"/><path d="M0 760h310v70H0zM1610 760h310v70h-310z"/></g>
+  </svg>

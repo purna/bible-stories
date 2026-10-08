@@ -1,0 +1,21 @@
+{
+  "story": "Jacob",
+  "act": 1,
+  "chapter": "Ch.1 · The Birthright",
+  "artSource": "art/act1_the_birthright.md",
+  "artFolder": "assets/svg/act_01_the_birthright",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "grass-tufts.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "jacob_act1_c_background.svg",
+    "middleGround": "jacob_act1_c_middle_ground.svg",
+    "foreground": "jacob_act1_c_foreground.svg"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "story": "Moses",
+  "act": 10,
+  "chapter": "Ch.10 · The Golden Calf",
+  "artSource": "art/act10_calf.md",
+  "artFolder": "assets/svg/act_10_calf",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "hammered_gold-hammered.svg",
+    "nile_reeds-riverbank.svg",
+    "stone-rough.svg",
+    "stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act10_a_background.svg",
+    "middleGround": "moses_act10_a_middle_ground.svg",
+    "foreground": "moses_act10_a_foreground.svg"
+  }
+}

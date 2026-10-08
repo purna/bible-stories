@@ -1,0 +1,18 @@
+{
+  "story": "Isaiah",
+  "act": 7,
+  "chapter": "Ch.7 · Comfort My People",
+  "artSource": "art/act7_comfort_my_people.md",
+  "artFolder": "assets/svg/act_07_comfort_my_people",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "desert_sand-dunes.svg"
+  ],
+  "layers": {
+    "background": "isaiah_act7_c_background.svg",
+    "middleGround": "isaiah_act7_c_middle_ground.svg",
+    "foreground": "isaiah_act7_c_foreground.svg"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "story": "Hannah",
+  "act": 4,
+  "chapter": "Ch.4 · Misunderstood",
+  "artSource": "art/act4_misunderstood.md",
+  "artFolder": "assets/svg/act_04_misunderstood",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "hannah_act4_c_background.svg",
+    "middleGround": "hannah_act4_c_middle_ground.svg",
+    "foreground": "hannah_act4_c_foreground.svg"
+  }
+}

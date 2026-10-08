@@ -1,11 +1,9 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" data-parallax>
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a2d1a"/>
-      <stop offset="100%" style="stop-color:#0d1a0d"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#bgGrad)"/>
-  <text x="400" y="300" font-family="system-ui" font-size="20" fill="rgba(255,255,255,0.3)" text-anchor="middle" dominant-baseline="middle">Moses Act 02 — C Resolve Background</text>
-  <text x="400" y="330" font-family="system-ui" font-size="12" fill="rgba(255,255,255,0.2)" text-anchor="middle">Replace with story-specific artwork</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Moses act 2 Ch.2 · The Burning Bush background">
+  <metadata>{&quot;story&quot;:&quot;Moses&quot;,&quot;act&quot;:2,&quot;chapter&quot;:&quot;Ch.2 · The Burning Bush&quot;,&quot;scene&quot;:&quot;C&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;materials&quot;:[&quot;desert_sand-dunes.svg&quot;,&quot;nile_reeds-riverbank.svg&quot;],&quot;environment&quot;:&quot;garden&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6d91a3"/><stop offset="1" stop-color="#e7c98f"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#81935e"/><stop offset="1" stop-color="#42563b"/></linearGradient><pattern id="act-material" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M8 56Q12 36 27 17Q29 37 8 56M29 64Q32 42 50 25Q50 46 29 64" fill="#647848" opacity=".6"/></pattern></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1510" cy="360" r="86" fill="#d4a95a" opacity=".78"/>
+  <g fill="#66774c" opacity=".67"><rect x="100.48688376074037" y="640.5781154694035" width="18" height="93.03647421766073"/><circle cx="109.48688376074037" cy="609.56595739685" r="109.83685764251277"/></g><g fill="#66774c" opacity=".67"><rect x="293.4588702681164" y="588.0364817041904" width="18" height="180.60586382634938"/><circle cx="302.4588702681164" cy="527.8345270954072" r="87.29483580682427"/></g><g fill="#66774c" opacity=".67"><rect x="537.7444607801735" y="581.7912282560486" width="18" height="191.01461957325228"/><circle cx="546.7444607801735" cy="518.1196883982979" r="88.15450435155071"/></g><g fill="#66774c" opacity=".67"><rect x="755.1628277053436" y="599.490822939761" width="18" height="161.51529510039836"/><circle cx="764.1628277053436" cy="545.6523912396282" r="58.564347113715485"/></g><g fill="#66774c" opacity=".67"><rect x="959.9580547871689" y="644.6980498592369" width="18" height="86.16991690127179"/><circle cx="968.9580547871689" cy="615.9747442254796" r="56.63314988370985"/></g><g fill="#66774c" opacity=".67"><rect x="1139.826373424381" y="650.2443804425187" width="18" height="76.9260325958021"/><circle cx="1148.826373424381" cy="624.6023695772514" r="109.16308956569992"/></g><g fill="#66774c" opacity=".67"><rect x="1353.8414385144908" y="578.3811520029325" width="18" height="196.6980799951125"/><circle cx="1362.8414385144908" cy="512.815125337895" r="81.5706661704462"/></g><g fill="#66774c" opacity=".67"><rect x="1576.1583667534094" y="614.8724117708392" width="18" height="135.87931371526793"/><circle cx="1585.1583667534094" cy="569.5793071990832" r="65.18377603380941"/></g><g fill="#66774c" opacity=".67"><rect x="1783.9787787236273" y="589.3235849936958" width="18" height="178.4606916771736"/><circle cx="1792.9787787236273" cy="529.8366877679713" r="83.37307527777739"/></g><g fill="#66774c" opacity=".67"></g>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/><path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#act-material)" opacity=".16"/>
+  </svg>

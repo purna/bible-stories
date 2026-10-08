@@ -1,0 +1,206 @@
+{
+  "story": "Noah",
+  "act": {
+    "id": "door",
+    "name": "Ch.5 · The Door Shuts",
+    "source": "../data/act5_door.json",
+    "svg": "ch5_dark_clouds",
+    "bg": "radial-gradient(circle at 50% 20%, #101828, #060c18 65%, #020408)",
+    "particle": "storm"
+  },
+  "beats": [
+    {
+      "id": "door_0",
+      "items": [
+        {
+          "id": "door_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "On the seventh day, the sky changed. The horizon turned the colour of a bruise.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch5_dark_clouds"
+    },
+    {
+      "id": "door_1",
+      "audioSfx": "assets/audio/sfx/flood_thunder.mp3",
+      "items": [
+        {
+          "id": "door_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The first drops fell. Then more. Then the sky opened.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "door_1_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "RUMBLE...",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "ch5_first_rain"
+    },
+    {
+      "id": "door_2",
+      "cite": "Genesis 7:11",
+      "items": [
+        {
+          "id": "door_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Great springs burst from the deep. Floodgates of heaven broke open.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch5_first_rain"
+    },
+    {
+      "id": "door_3",
+      "cite": "Genesis 7:16",
+      "items": [
+        {
+          "id": "door_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "And then — from the outside — the LORD shut the door.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch5_door_closes"
+    },
+    {
+      "id": "door_4",
+      "items": [
+        {
+          "id": "door_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "That sound. The latch. From the outside.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "noah",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch5_door_closes"
+    },
+    {
+      "id": "door_5",
+      "items": [
+        {
+          "id": "door_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "No more choices. No more preparation. No more anything to do but endure.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch5_door_closes"
+    }
+  ]
+}

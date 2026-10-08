@@ -1,90 +1,255 @@
 {
   "id": "covenant",
-  "name": "Ch.9 \u00b7 The Altar & the Covenant",
+  "name": "Ch.9 · The Altar & the Covenant",
   "bg": "radial-gradient(circle at 50% 50%, #141e2e, #081018 65%, #020508)",
   "particle": "rainbow",
   "svg": "ch9_altar",
   "lines": [
     {
       "id": "covenant_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "svg": "ch9_altar",
-      "text": "The first thing Noah did on dry land was not rebuild a house. It was build an altar.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "covenant_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The first thing Noah did on dry land was not rebuild a house. It was build an altar.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch9_altar"
     },
     {
       "id": "covenant_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch9_altar",
-      "text": "He took one of every clean animal and offered it as a burnt offering.",
       "cite": "Genesis 8:20",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "covenant_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "He took one of every clean animal and offered it as a burnt offering.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch9_altar"
     },
     {
       "id": "covenant_2",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch9_god_covenant",
-      "text": "Never again will I curse the ground because of humans. Never again will I destroy all life.",
       "cite": "Genesis 8:21",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "covenant_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Never again will I curse the ground because of humans. Never again will I destroy all life.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch9_god_covenant"
     },
     {
       "id": "covenant_3",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch9_rainbow",
-      "text": "I have set my rainbow in the clouds. It is the sign of the covenant between me and the earth.",
       "cite": "Genesis 9:13",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "covenant_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I have set my rainbow in the clouds. It is the sign of the covenant between me and the earth.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch9_rainbow"
     },
     {
       "id": "covenant_4",
-      "speaker": "narrator",
-      "fx": "wave",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch9_rainbow",
-      "sfx": "RAINBOW!",
-      "text": "Colour tore across the sky \u2014 red, gold, green, blue \u2014 a promise written in light.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "covenant_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Colour tore across the sky — red, gold, green, blue — a promise written in light.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "wave",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "covenant_4_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "RAINBOW!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "ch9_rainbow"
     },
     {
       "id": "covenant_5",
-      "speaker": "family",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch9_rainbow",
-      "text": "All eight of them stood in the mud and stared at the sky. Nobody spoke.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "covenant_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "All eight of them stood in the mud and stared at the sky. Nobody spoke.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "family",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch9_rainbow"
     },
     {
       "id": "covenant_6",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "align": "center",
-      "svg": "ch9_rainbow",
-      "text": "The story looked like it was over. It was not over.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "covenant_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story looked like it was over. It was not over.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch9_rainbow"
     }
+  ],
+  "assetFolder": "act_09_covenant",
+  "artFolder": "assets/svg/act_09_covenant",
+  "assetStem": "noah_act9",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_09_covenant/a_establish/noah_act9_a_background.svg",
+      "middleGround": "assets/svg/act_09_covenant/a_establish/noah_act9_a_middle_ground.svg",
+      "foreground": "assets/svg/act_09_covenant/a_establish/noah_act9_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_background.svg",
+      "middleGround": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_middle_ground.svg",
+      "foreground": "assets/svg/act_09_covenant/b_core_action/noah_act9_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_background.svg",
+      "middleGround": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_middle_ground.svg",
+      "foreground": "assets/svg/act_09_covenant/c_resolve/noah_act9_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/water_fast-churn.svg",
+    "assets/materials/water_still-eddies.svg",
+    "assets/materials/stone-flagstone.svg"
   ]
 }

@@ -11,14 +11,57 @@
   "lines": [
     {
       "id": "west_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "The story continues west of the divide \u2014 where the seed of the woman journeys through promise and peril, toward the dawn of redemption.",
-      "align": "center",
-      "svg": "exile_dawn",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "west_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story continues west of the divide — where the seed of the woman journeys through promise and peril, toward the dawn of redemption.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "exile_dawn"
     }
+  ],
+  "assetFolder": "act_06_west",
+  "artFolder": "assets/svg/act_06_west",
+  "assetStem": "adam_act6",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_06_west/a_establish/adam_act6_a_background.svg",
+      "middleGround": "assets/svg/act_06_west/a_establish/adam_act6_a_middle_ground.svg",
+      "foreground": "assets/svg/act_06_west/a_establish/adam_act6_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_06_west/b_core_action/adam_act6_b_background.svg",
+      "middleGround": "assets/svg/act_06_west/b_core_action/adam_act6_b_middle_ground.svg",
+      "foreground": "assets/svg/act_06_west/b_core_action/adam_act6_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_06_west/c_resolve/adam_act6_c_background.svg",
+      "middleGround": "assets/svg/act_06_west/c_resolve/adam_act6_c_middle_ground.svg",
+      "foreground": "assets/svg/act_06_west/c_resolve/adam_act6_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/leaves-canopy.svg",
+    "assets/materials/grass-tufts.svg",
+    "assets/materials/water_still-eddies.svg",
+    "assets/materials/wood_oak-planks3.svg"
   ]
 }

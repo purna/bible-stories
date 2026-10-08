@@ -1,0 +1,159 @@
+{
+  "story": "Ruth",
+  "act": {
+    "id": "your_people",
+    "name": "Ch.2 · Your People",
+    "source": "../data/act2_your_people.json",
+    "svg": "your_people",
+    "bg": "radial-gradient(circle at 50% 25%, #c89860, #5a4028 70%)",
+    "particle": "dawn"
+  },
+  "beats": [
+    {
+      "id": "your_people_0",
+      "cite": "Ruth 1:19",
+      "items": [
+        {
+          "id": "your_people_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Naomi and Ruth walked the long road from Moab toward Bethlehem—dusty, weary, but together. The hills rose and fell like waves of stone and dry grass.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "your_people_1",
+      "items": [
+        {
+          "id": "your_people_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "We will follow the road. Step by step. I am with you, Naomi.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "ruth",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "your_people_2",
+      "items": [
+        {
+          "id": "your_people_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "You should not have come. There is nothing for you here. The Almighty has made my life very bitter.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "naomi",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "your_people_3",
+      "choices": [
+        {
+          "label": "Stay on the safe path",
+          "note": "The faithful path is patient and steady."
+        },
+        {
+          "label": "Offer Naomi your arm",
+          "note": "Ruth supports her mother-in-law as the road steepens."
+        }
+      ],
+      "items": [
+        {
+          "id": "your_people_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "They passed through the rocky valleys, keeping to the paths that travelers knew—avoiding the dangerous shortcuts.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "your_people_4",
+      "items": [
+        {
+          "id": "your_people_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At last, the walls of Bethlehem appeared on the horizon. The whole town was stirred by their arrival.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

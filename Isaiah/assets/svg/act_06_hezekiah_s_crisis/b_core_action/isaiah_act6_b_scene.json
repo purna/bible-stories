@@ -1,0 +1,25 @@
+{
+  "story": "Isaiah",
+  "act": 6,
+  "chapter": "Ch.6 · Hezekiah’s Crisis",
+  "artSource": "art/act6_hezekiah_s_crisis.md",
+  "artFolder": "assets/svg/act_06_hezekiah_s_crisis",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "fabric_weave-basket.svg",
+    "hammered_gold-hammered.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg"
+  ],
+  "layers": {
+    "background": "isaiah_act6_b_background.svg",
+    "middleGround": "isaiah_act6_b_middle_ground.svg",
+    "foreground": "isaiah_act6_b_foreground.svg"
+  }
+}

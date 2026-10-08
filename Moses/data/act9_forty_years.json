@@ -1,0 +1,153 @@
+{
+  "id": "forty_years",
+  "name": "Ch.9 · Forty Years",
+  "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
+  "particle": "ember",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "forty_years_0",
+      "cite": "Exodus; Numbers; Deuteronomy 31–34",
+      "items": [
+        {
+          "id": "forty_years_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Navigate a provision-and-trust journey map.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "forty_years_1",
+      "items": [
+        {
+          "id": "forty_years_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Will a rescued people learn to trust the God who leads them through uncertainty? — Forty Years is the next step in that question.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "forty_years_2",
+      "items": [
+        {
+          "id": "forty_years_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "forty_years_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE WORD STANDS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "forty_years_3",
+      "choices": [
+        {
+          "label": "Walk on with the lesson",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "items": [
+        {
+          "id": "forty_years_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ],
+  "scene": "forty_years",
+  "foreground": "fg_forty_years",
+  "index": 8
+}

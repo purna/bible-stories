@@ -1,0 +1,26 @@
+{
+  "story": "Elijah",
+  "act": 1,
+  "chapter": "The Drought",
+  "artSource": "art/act1_drought.md",
+  "artFolder": "assets/svg/act_01_drought",
+  "sceneId": "samaria_court",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "desert-shrub-canopy.svg",
+    "desert_sand-dunes.svg",
+    "fabric_weave-basket.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "stone_texture.svg",
+    "temple-flagstone.svg",
+    "water_fast-churn.svg",
+    "water_fast-rapids.svg"
+  ],
+  "layers": {
+    "background": "elijah_act1_b_background.svg",
+    "middleGround": "elijah_act1_b_middle_ground.svg",
+    "foreground": "elijah_act1_b_foreground.svg"
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "story": "Noah",
+  "sourceTool": "Noah/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "wood_dark",
+      "shape": "plank",
+      "file": "wood_dark-plank.svg"
+    },
+    {
+      "key": "water_fast",
+      "shape": "rapids",
+      "file": "water_fast-rapids.svg"
+    },
+    {
+      "key": "water_fast",
+      "shape": "churn",
+      "file": "water_fast-churn.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "calm",
+      "file": "water_still-calm.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "eddies",
+      "file": "water_still-eddies.svg"
+    },
+    {
+      "key": "leaves",
+      "shape": "scatter",
+      "file": "leaves-scatter.svg"
+    },
+    {
+      "key": "leaves",
+      "shape": "canopy",
+      "file": "leaves-canopy.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Warning",
+      "assetFolder": "act_01_warning",
+      "materials": [
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Blueprint",
+      "assetFolder": "act_02_blueprint",
+      "materials": [
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · The Long Build",
+      "assetFolder": "act_03_build",
+      "materials": [
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · The Gathering",
+      "assetFolder": "act_04_gathering",
+      "materials": [
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · The Door Shuts",
+      "assetFolder": "act_05_door",
+      "materials": [
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · Forty Days",
+      "assetFolder": "act_06_flood",
+      "materials": [
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · The Long Wait",
+      "assetFolder": "act_07_waiting",
+      "materials": [
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        }
+      ]
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · Dry Ground",
+      "assetFolder": "act_08_dryground",
+      "materials": [
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · The Altar & the Covenant",
+      "assetFolder": "act_09_covenant",
+      "materials": [
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · The Vineyard",
+      "assetFolder": "act_01_vineyard",
+      "materials": [
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        }
+      ]
+    }
+  ]
+}

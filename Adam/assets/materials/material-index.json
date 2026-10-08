@@ -1,0 +1,184 @@
+{
+  "story": "Adam",
+  "sourceTool": "Adam/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "leaves",
+      "shape": "scatter",
+      "file": "leaves-scatter.svg"
+    },
+    {
+      "key": "leaves",
+      "shape": "canopy",
+      "file": "leaves-canopy.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "plank",
+      "file": "wood_oak-plank.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "planks3",
+      "file": "wood_oak-planks3.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "calm",
+      "file": "water_still-calm.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "eddies",
+      "file": "water_still-eddies.svg"
+    },
+    {
+      "key": "grass",
+      "shape": "tufts",
+      "file": "grass-tufts.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Let There Be Light",
+      "assetFolder": "act_01_creation",
+      "materials": [
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "The Garden",
+      "assetFolder": "act_02_garden",
+      "materials": [
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Helper Suitable",
+      "assetFolder": "act_03_helper",
+      "materials": [
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "The Temptation",
+      "assetFolder": "act_04_temptation",
+      "materials": [
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Exile",
+      "assetFolder": "act_05_exile",
+      "materials": [
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "West of the Divide",
+      "assetFolder": "act_06_west",
+      "materials": [
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    }
+  ]
+}

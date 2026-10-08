@@ -8,7 +8,27 @@
       "scene": "leaving_moab",
       "foreground": "fg_leaving_moab",
       "assetFolder": "act_01_leaving_moab",
-      "assetStem": "ruth_act1"
+      "assetStem": "ruth_act1",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_leaving_moab/a_establish/ruth_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_leaving_moab/a_establish/ruth_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_leaving_moab/a_establish/ruth_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_leaving_moab/b_core_action/ruth_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_leaving_moab/b_core_action/ruth_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_leaving_moab/b_core_action/ruth_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_leaving_moab/c_resolve/ruth_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_leaving_moab/c_resolve/ruth_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_leaving_moab/c_resolve/ruth_act1_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/leaves-canopy.svg"
+      ]
     },
     {
       "id": "your_people",
@@ -17,7 +37,28 @@
       "scene": "your_people",
       "foreground": "fg_your_people",
       "assetFolder": "act_02_your_people",
-      "assetStem": "ruth_act2"
+      "assetStem": "ruth_act2",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_your_people/a_establish/ruth_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_your_people/a_establish/ruth_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_your_people/a_establish/ruth_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_your_people/b_core_action/ruth_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_your_people/b_core_action/ruth_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_your_people/b_core_action/ruth_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_your_people/c_resolve/ruth_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_your_people/c_resolve/ruth_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_your_people/c_resolve/ruth_act2_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/stone-flagstone.svg"
+      ]
     },
     {
       "id": "gleaning",
@@ -26,7 +67,28 @@
       "scene": "gleaning",
       "foreground": "fg_gleaning",
       "assetFolder": "act_03_gleaning",
-      "assetStem": "ruth_act3"
+      "assetStem": "ruth_act3",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_gleaning/a_establish/ruth_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_gleaning/a_establish/ruth_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_gleaning/a_establish/ruth_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_gleaning/b_core_action/ruth_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_gleaning/b_core_action/ruth_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_gleaning/b_core_action/ruth_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_gleaning/c_resolve/ruth_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_gleaning/c_resolve/ruth_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_gleaning/c_resolve/ruth_act3_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/water_still-eddies.svg"
+      ]
     },
     {
       "id": "boaz_notices",
@@ -35,7 +97,29 @@
       "scene": "boaz_notices",
       "foreground": "fg_boaz_notices",
       "assetFolder": "act_04_boaz_notices",
-      "assetStem": "ruth_act4"
+      "assetStem": "ruth_act4",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_boaz_notices/a_establish/ruth_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_boaz_notices/a_establish/ruth_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_boaz_notices/a_establish/ruth_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_boaz_notices/b_core_action/ruth_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_boaz_notices/b_core_action/ruth_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_boaz_notices/b_core_action/ruth_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_boaz_notices/c_resolve/ruth_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_boaz_notices/c_resolve/ruth_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_boaz_notices/c_resolve/ruth_act4_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/water_still-eddies.svg"
+      ]
     },
     {
       "id": "threshing_floor",
@@ -44,7 +128,29 @@
       "scene": "threshing_floor",
       "foreground": "fg_threshing_floor",
       "assetFolder": "act_05_threshing_floor",
-      "assetStem": "ruth_act5"
+      "assetStem": "ruth_act5",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_threshing_floor/a_establish/ruth_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_threshing_floor/a_establish/ruth_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_threshing_floor/a_establish/ruth_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_threshing_floor/b_core_action/ruth_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_threshing_floor/b_core_action/ruth_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_threshing_floor/b_core_action/ruth_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_threshing_floor/c_resolve/ruth_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_threshing_floor/c_resolve/ruth_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_threshing_floor/c_resolve/ruth_act5_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/water_still-eddies.svg"
+      ]
     },
     {
       "id": "at_the_gate",
@@ -53,7 +159,27 @@
       "scene": "at_the_gate",
       "foreground": "fg_at_the_gate",
       "assetFolder": "act_06_at_the_gate",
-      "assetStem": "ruth_act6"
+      "assetStem": "ruth_act6",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_at_the_gate/a_establish/ruth_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_at_the_gate/a_establish/ruth_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_at_the_gate/a_establish/ruth_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_at_the_gate/b_core_action/ruth_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_at_the_gate/b_core_action/ruth_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_at_the_gate/b_core_action/ruth_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_at_the_gate/c_resolve/ruth_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_at_the_gate/c_resolve/ruth_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_at_the_gate/c_resolve/ruth_act6_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/stone-flagstone.svg"
+      ]
     },
     {
       "id": "redeemed",
@@ -62,7 +188,27 @@
       "scene": "redeemed",
       "foreground": "fg_redeemed",
       "assetFolder": "act_07_redeemed",
-      "assetStem": "ruth_act7"
+      "assetStem": "ruth_act7",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_redeemed/a_establish/ruth_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_redeemed/a_establish/ruth_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_redeemed/a_establish/ruth_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_redeemed/b_core_action/ruth_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_redeemed/b_core_action/ruth_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_redeemed/b_core_action/ruth_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_redeemed/c_resolve/ruth_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_redeemed/c_resolve/ruth_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_redeemed/c_resolve/ruth_act7_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg"
+      ]
     },
     {
       "id": "obed",
@@ -71,7 +217,27 @@
       "scene": "obed",
       "foreground": "fg_obed",
       "assetFolder": "act_08_obed",
-      "assetStem": "ruth_act8"
+      "assetStem": "ruth_act8",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_obed/a_establish/ruth_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_obed/a_establish/ruth_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_obed/a_establish/ruth_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_obed/b_core_action/ruth_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_obed/b_core_action/ruth_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_obed/b_core_action/ruth_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_obed/c_resolve/ruth_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_obed/c_resolve/ruth_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_obed/c_resolve/ruth_act8_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg"
+      ]
     }
   ]
 }

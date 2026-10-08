@@ -1,0 +1,28 @@
+{
+  "story": "Joseph",
+  "act": 2,
+  "chapter": "Ch.2 · Dreams and the Pit",
+  "artSource": "art/act2_dreams_and_the_pit.md",
+  "artFolder": "assets/svg/act_02_dreams_and_the_pit",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "egypt_mud_brick-stretcher.svg",
+    "fabric_dots-grid.svg",
+    "fabric_dots-scatterMix.svg",
+    "hammered_gold-hammered.svg",
+    "mosaic-chips.svg",
+    "mosaic-grid.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg"
+  ],
+  "layers": {
+    "background": "joseph_act2_c_background.svg",
+    "middleGround": "joseph_act2_c_middle_ground.svg",
+    "foreground": "joseph_act2_c_foreground.svg"
+  }
+}

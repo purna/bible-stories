@@ -1,0 +1,29 @@
+{
+  "story": "David",
+  "act": 11,
+  "chapter": "Ch.11 · The Census",
+  "artSource": "art/act11_census.md",
+  "artFolder": "assets/svg/act_11_census",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "en_gedi_cave-limestone.svg",
+    "fabric_dots-grid.svg",
+    "fabric_herringbone-weave..svg",
+    "fabric_houndstooth-classic.svg",
+    "fabric_tartan-sett.svg",
+    "fabric_weave-basket.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "valley_stones-brook.svg",
+    "wood_dark-plank.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "david_act11_b_background.svg",
+    "middleGround": "david_act11_b_middle_ground.svg",
+    "foreground": "david_act11_b_foreground.svg"
+  }
+}

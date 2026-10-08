@@ -1,0 +1,32 @@
+{
+  "story": "Daniel",
+  "act": 3,
+  "chapter": "The Furnace",
+  "artSource": "art/act3_furnace.md",
+  "artFolder": "assets/svg/act_03_furnace",
+  "sceneId": "plain_of_dura",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "broken-tile-mosaic.svg",
+    "fabric_weave-basket.svg",
+    "hammered_gold-hammered.svg",
+    "mosaic-chips.svg",
+    "mosaic-grid.svg",
+    "palace-mosaic-floor.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "stone_texture.svg",
+    "temple-flagstone.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg"
+  ],
+  "layers": {
+    "background": "daniel_act3_c_background.svg",
+    "middleGround": "daniel_act3_c_middle_ground.svg",
+    "foreground": "daniel_act3_c_foreground.svg"
+  }
+}

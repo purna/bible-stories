@@ -4,74 +4,134 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "samuel-the-boy-at-shiloh",
+      "name": "Ch.1 · The Boy at Shiloh",
+      "file": "samuel-the-boy-at-shiloh.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "samuel-the-boy-at-shiloh_hd",
+      "name": "Ch.1 · The Boy at Shiloh (HD)",
+      "file": "samuel-the-boy-at-shiloh_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "samuel-the-voice-at-night",
+      "name": "Ch.2 · The Voice at Night",
+      "file": "samuel-the-voice-at-night.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "samuel-the-voice-at-night_hd",
+      "name": "Ch.2 · The Voice at Night (HD)",
+      "file": "samuel-the-voice-at-night_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "samuel-a-hard-message",
+      "name": "Ch.3 · A Hard Message",
+      "file": "samuel-a-hard-message.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "samuel-a-hard-message_hd",
+      "name": "Ch.3 · A Hard Message (HD)",
+      "file": "samuel-a-hard-message_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "samuel-the-ark-captured",
+      "name": "Ch.4 · The Ark Captured",
+      "file": "samuel-the-ark-captured.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "samuel-the-ark-captured_hd",
+      "name": "Ch.4 · The Ark Captured (HD)",
+      "file": "samuel-the-ark-captured_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "samuel-ebenezer",
+      "name": "Ch.5 · Ebenezer",
+      "file": "samuel-ebenezer.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "samuel-ebenezer_hd",
+      "name": "Ch.5 · Ebenezer (HD)",
+      "file": "samuel-ebenezer_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "samuel-a-king-demanded",
+      "name": "Ch.6 · A King Demanded",
+      "file": "samuel-a-king-demanded.js",
+      "type": "module"
+    },
+    {
+      "id": "samuel-a-king-demanded_hd",
+      "name": "Ch.6 · A King Demanded (HD)",
+      "file": "samuel-a-king-demanded_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "samuel-saul-chosen",
+      "name": "Ch.7 · Saul Chosen",
+      "file": "samuel-saul-chosen.js",
+      "type": "module"
+    },
+    {
+      "id": "samuel-saul-chosen_hd",
+      "name": "Ch.7 · Saul Chosen (HD)",
+      "file": "samuel-saul-chosen_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "samuel-saul-s-first-victory",
+      "name": "Ch.8 · Saul’s First Victory",
+      "file": "samuel-saul-s-first-victory.js",
+      "type": "module"
+    },
+    {
+      "id": "samuel-saul-s-first-victory_hd",
+      "name": "Ch.8 · Saul’s First Victory (HD)",
+      "file": "samuel-saul-s-first-victory_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "samuel-the-rejected-king",
+      "name": "Ch.9 · The Rejected King",
+      "file": "samuel-the-rejected-king.js",
+      "type": "module"
+    },
+    {
+      "id": "samuel-the-rejected-king_hd",
+      "name": "Ch.9 · The Rejected King (HD)",
+      "file": "samuel-the-rejected-king_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "samuel-david-anointed",
+      "name": "Ch.10 · David Anointed",
+      "file": "samuel-david-anointed.js",
+      "type": "module"
+    },
+    {
+      "id": "samuel-david-anointed_hd",
+      "name": "Ch.10 · David Anointed (HD)",
+      "file": "samuel-david-anointed_hd.js",
       "type": "module"
     }
   ]

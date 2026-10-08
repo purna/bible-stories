@@ -1,11 +1,9 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" data-parallax>
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a2d1a"/>
-      <stop offset="100%" style="stop-color:#0d1a0d"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#bgGrad)"/>
-  <text x="400" y="300" font-family="system-ui" font-size="20" fill="rgba(255,255,255,0.3)" text-anchor="middle" dominant-baseline="middle">Ruth Act 02 — A Establish Background</text>
-  <text x="400" y="330" font-family="system-ui" font-size="12" fill="rgba(255,255,255,0.2)" text-anchor="middle">Replace with story-specific artwork</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Ruth act 2 Ch.2 · Your People background">
+  <metadata>{&quot;story&quot;:&quot;Ruth&quot;,&quot;act&quot;:2,&quot;chapter&quot;:&quot;Ch.2 · Your People&quot;,&quot;scene&quot;:&quot;A&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;materials&quot;:[&quot;grass-tufts.svg&quot;,&quot;stone-flagstone.svg&quot;,&quot;stone-rough.svg&quot;],&quot;environment&quot;:&quot;city&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#455b72"/><stop offset="1" stop-color="#d1af7d"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8e7b65"/><stop offset="1" stop-color="#554a41"/></linearGradient><pattern id="act-material" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M8 56Q12 36 27 17Q29 37 8 56M29 64Q32 42 50 25Q50 46 29 64" fill="#6f714c" opacity=".6"/></pattern></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1500" cy="180" r="64" fill="#f2ddb0" opacity=".82"/>
+  <g fill="#8e7b65" opacity=".72"><rect x="0" y="510.6505699396133" width="232.9351921705529" height="295.74943006038666"/><rect x="273.6810886999592" y="470.58647103011606" width="264.27422744687647" height="335.8135289698839"/><rect x="563.0714618833736" y="578.5624629572034" width="252.98385781701654" height="227.8375370427966"/><rect x="863.9604668552056" y="473.0793073713779" width="193.06398132117465" height="333.32069262862206"/><rect x="1094.3037983798422" y="475.963714787364" width="172.18437186907977" height="330.436285212636"/><rect x="1324.8825957835652" y="517.6281443178653" width="258.80424161208794" height="288.7718556821346"/><rect x="1621.8634368292987" y="574.1620795369148" width="119.20621894765645" height="232.23792046308517"/><rect x="1761.8438874511048" y="459.37958854585884" width="255.30851809540763" height="347.02041145414114"/></g>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/><path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#act-material)" opacity=".16"/>
+  </svg>

@@ -1,0 +1,376 @@
+{
+  "id": "nebo",
+  "name": "Ch.15 · The Land from Afar",
+  "bg": "radial-gradient(circle at 50% 50%, #10140a, #1c2014 65%, #080a04)",
+  "particle": "dawn",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "nebo_0",
+      "items": [
+        {
+          "id": "nebo_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Moses was now a hundred and twenty years old. His eyes were not weak. His legs were not feeble.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_1",
+      "items": [
+        {
+          "id": "nebo_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Go up this mountain in the Abarim Range — Mount Nebo — and look at the land I am giving the Israelites as their own possession.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_2",
+      "items": [
+        {
+          "id": "nebo_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Then Moses commissioned Joshua son of Nun. \"Be strong and courageous, for you must go with this people into the land that the LORD swore to their ancestors to give them.\"",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_3",
+      "items": [
+        {
+          "id": "nebo_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Moses wrote down the law. He gave it to the priests and to all the elders of Israel. He commanded them: read this law aloud every seven years, at the festival of shelters.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_4",
+      "items": [
+        {
+          "id": "nebo_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I am now a hundred and twenty years old and I am no longer able to lead you. The LORD has said to me, \"You will not cross the Jordan.\"",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "moses",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_5",
+      "items": [
+        {
+          "id": "nebo_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Be strong and courageous. Do not be afraid. The LORD your God goes with you. He will never leave you nor forsake you.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "moses",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_6",
+      "items": [
+        {
+          "id": "nebo_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Moses went up from the plains of Moab to Mount Nebo, to the top of Pisgah, across from Jericho.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_7",
+      "items": [
+        {
+          "id": "nebo_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "There the LORD showed him the whole land — Gilead as far as Dan, all of Naphtali, the territory of Ephraim and Manasseh, all the land of Judah as far as the Mediterranean Sea.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_8",
+      "items": [
+        {
+          "id": "nebo_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The Negev, the whole region of the Jordan — the land from Jericho, the city of palms, all the way to Zoar.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_9",
+      "items": [
+        {
+          "id": "nebo_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Then Moses, the servant of the LORD, died there in Moab, as the LORD had said. He buried him in the valley, in Moab — and no one knows where his grave is to this day.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_10",
+      "items": [
+        {
+          "id": "nebo_10_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Moses was a hundred and twenty years old when he died. Yet his eyes were not weak. His legs were not feeble.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_11",
+      "items": [
+        {
+          "id": "nebo_11_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The Israelites grieved for Moses for thirty days. Then Joshua son of Nun was filled with the spirit of wisdom. The people obeyed him — and the story of Moses was over.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "nebo_12",
+      "items": [
+        {
+          "id": "nebo_12_text",
+          "type": "text",
+          "sfx": false,
+          "text": "But the story he carried was not over.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    }
+  ],
+  "scene": "nebo",
+  "foreground": "fg_nebo",
+  "index": 14
+}

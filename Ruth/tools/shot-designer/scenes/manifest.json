@@ -4,74 +4,110 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "ruth-leaving-moab",
+      "name": "Ch.1 · Leaving Moab",
+      "file": "ruth-leaving-moab.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "ruth-leaving-moab_hd",
+      "name": "Ch.1 · Leaving Moab (HD)",
+      "file": "ruth-leaving-moab_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "ruth-your-people",
+      "name": "Ch.2 · Your People",
+      "file": "ruth-your-people.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "ruth-your-people_hd",
+      "name": "Ch.2 · Your People (HD)",
+      "file": "ruth-your-people_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "ruth-gleaning",
+      "name": "Ch.3 · Gleaning",
+      "file": "ruth-gleaning.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "ruth-gleaning_hd",
+      "name": "Ch.3 · Gleaning (HD)",
+      "file": "ruth-gleaning_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "ruth-boaz-notices",
+      "name": "Ch.4 · Boaz Notices",
+      "file": "ruth-boaz-notices.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "ruth-boaz-notices_hd",
+      "name": "Ch.4 · Boaz Notices (HD)",
+      "file": "ruth-boaz-notices_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "ruth-threshing-floor",
+      "name": "Ch.5 · Threshing Floor",
+      "file": "ruth-threshing-floor.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "ruth-threshing-floor_hd",
+      "name": "Ch.5 · Threshing Floor (HD)",
+      "file": "ruth-threshing-floor_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "ruth-at-the-gate",
+      "name": "Ch.6 · At the Gate",
+      "file": "ruth-at-the-gate.js",
+      "type": "module"
+    },
+    {
+      "id": "ruth-at-the-gate_hd",
+      "name": "Ch.6 · At the Gate (HD)",
+      "file": "ruth-at-the-gate_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "ruth-redeemed",
+      "name": "Ch.7 · Redeemed",
+      "file": "ruth-redeemed.js",
+      "type": "module"
+    },
+    {
+      "id": "ruth-redeemed_hd",
+      "name": "Ch.7 · Redeemed (HD)",
+      "file": "ruth-redeemed_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "ruth-obed",
+      "name": "Ch.8 · Obed",
+      "file": "ruth-obed.js",
+      "type": "module"
+    },
+    {
+      "id": "ruth-obed_hd",
+      "name": "Ch.8 · Obed (HD)",
+      "file": "ruth-obed_hd.js",
       "type": "module"
     }
   ]

@@ -1,0 +1,22 @@
+{
+  "story": "Moses",
+  "act": 8,
+  "chapter": "Ch.8 · Jethro&#x27;s Counsel",
+  "artSource": "art/act8_jethro.md",
+  "artFolder": "assets/svg/act_08_jethro",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "bulrush_basket-woven.svg",
+    "desert_sand-dunes.svg",
+    "nile_reeds-riverbank.svg",
+    "stone-rough.svg",
+    "stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act8_c_background.svg",
+    "middleGround": "moses_act8_c_middle_ground.svg",
+    "foreground": "moses_act8_c_foreground.svg"
+  }
+}

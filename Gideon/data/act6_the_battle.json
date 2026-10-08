@@ -7,79 +7,218 @@
   "lines": [
     {
       "id": "the_battle_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Gideon divides the three hundred into three companies. Each man carries a trumpet, an empty jar, and a torch inside.",
       "cite": "Judges 7:16",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_battle_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Gideon divides the three hundred into three companies. Each man carries a trumpet, an empty jar, and a torch inside.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_battle_1",
-      "speaker": "gideon",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "text": "Watch me, and do as I do. When I blow the trumpet, you blow yours and shout: For the Lord and for Gideon!",
       "cite": "Judges 7:17–18",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_battle_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Watch me, and do as I do. When I blow the trumpet, you blow yours and shout: For the Lord and for Gideon!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "gideon",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_battle_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "At the start of the middle watch, the three companies blow their trumpets and break their jars. Torches blaze in left hands, trumpets in right.",
       "cite": "Judges 7:19–20",
-      "sfx": "Trumpet blast",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_battle_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At the start of the middle watch, the three companies blow their trumpets and break their jars. Torches blaze in left hands, trumpets in right.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_battle_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "Trumpet blast",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_battle_3",
-      "speaker": "israelite_warrior",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE CRY",
-      "text": "A sword for the Lord and for Gideon!",
       "cite": "Judges 7:20",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_battle_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A sword for the Lord and for Gideon!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "israelite_warrior",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_battle_3_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE CRY",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "israelite_warrior",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_battle_4",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Every man stands in his place around the camp. The whole army runs, cries out, and flees. The Lord sets the Midianites' swords against one another.",
       "cite": "Judges 7:21–22",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_battle_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Every man stands in his place around the camp. The whole army runs, cries out, and flees. The Lord sets the Midianites' swords against one another.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_battle_5",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The flight is captioned, not shown in injury. Israelites from the hill country join the pursuit. Ephraim captures Oreb and Zeeb — leaders, not kings.",
       "cite": "Judges 7:23–25",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_battle_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The flight is captioned, not shown in injury. Israelites from the hill country join the pursuit. Ephraim captures Oreb and Zeeb — leaders, not kings.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_battle_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The sequence settles. One coordinated action, staged in readable steps. The victory belonged to the Lord, not the three hundred.",
       "choices": [
         {
           "label": "Hold the torch high",
@@ -90,11 +229,59 @@
           "note": "A pause does not change the outcome. It only lets the player breathe."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_battle_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The sequence settles. One coordinated action, staged in readable steps. The victory belonged to the Lord, not the three hundred.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "the_battle",
   "foreground": "fg_the_battle",
-  "index": 5
+  "index": 5,
+  "assetFolder": "act_06_the_battle",
+  "artFolder": "assets/svg/act_06_the_battle",
+  "assetStem": "gideon_act6",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_background.svg",
+      "middleGround": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_middle_ground.svg",
+      "foreground": "assets/svg/act_06_the_battle/a_establish/gideon_act6_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_background.svg",
+      "middleGround": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_middle_ground.svg",
+      "foreground": "assets/svg/act_06_the_battle/b_core_action/gideon_act6_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_background.svg",
+      "middleGround": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_middle_ground.svg",
+      "foreground": "assets/svg/act_06_the_battle/c_resolve/gideon_act6_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wheat_stalks-field.svg",
+    "assets/materials/torch_flame-flames.svg",
+    "assets/materials/tent_fabric-basket.svg",
+    "assets/materials/sword_iron-blade.svg"
+  ]
 }

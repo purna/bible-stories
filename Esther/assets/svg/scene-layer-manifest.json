@@ -1,0 +1,708 @@
+{
+  "story": "Esther",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Banquet",
+      "sceneId": "placeholder",
+      "artSource": "art/act1_the_banquet.md",
+      "assetFolder": "act_01_the_banquet",
+      "artFolder": "assets/svg/act_01_the_banquet",
+      "assetStem": "esther_act1",
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "mosaic",
+        "hammered_gold",
+        "stone",
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_the_banquet/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_the_banquet/a_establish/esther_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_the_banquet/a_establish/esther_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_banquet/a_establish/esther_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_the_banquet/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_the_banquet/b_core_action/esther_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_the_banquet/b_core_action/esther_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_banquet/b_core_action/esther_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_the_banquet/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_the_banquet/c_resolve/esther_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_the_banquet/c_resolve/esther_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_the_banquet/c_resolve/esther_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_the_banquet/a_establish/esther_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_the_banquet/a_establish/esther_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_banquet/a_establish/esther_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_the_banquet/b_core_action/esther_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_the_banquet/b_core_action/esther_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_banquet/b_core_action/esther_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_the_banquet/c_resolve/esther_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_the_banquet/c_resolve/esther_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_banquet/c_resolve/esther_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · A New Queen",
+      "sceneId": "placeholder",
+      "artSource": "art/act2_a_new_queen.md",
+      "assetFolder": "act_02_a_new_queen",
+      "artFolder": "assets/svg/act_02_a_new_queen",
+      "assetStem": "esther_act2",
+      "materials": [
+        "assets/materials/hammered_gold-hammered.svg"
+      ],
+      "materialKeys": [
+        "hammered_gold"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_a_new_queen/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_a_new_queen/a_establish/esther_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_a_new_queen/a_establish/esther_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_a_new_queen/a_establish/esther_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_a_new_queen/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_a_new_queen/b_core_action/esther_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_a_new_queen/b_core_action/esther_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_a_new_queen/b_core_action/esther_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_a_new_queen/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_a_new_queen/c_resolve/esther_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_a_new_queen/c_resolve/esther_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_a_new_queen/c_resolve/esther_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_a_new_queen/a_establish/esther_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_a_new_queen/a_establish/esther_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_a_new_queen/a_establish/esther_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_a_new_queen/b_core_action/esther_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_a_new_queen/b_core_action/esther_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_a_new_queen/b_core_action/esther_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_a_new_queen/c_resolve/esther_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_a_new_queen/c_resolve/esther_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_a_new_queen/c_resolve/esther_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · The Gate Plot",
+      "sceneId": "placeholder",
+      "artSource": "art/act3_the_gate_plot.md",
+      "assetFolder": "act_03_the_gate_plot",
+      "artFolder": "assets/svg/act_03_the_gate_plot",
+      "assetStem": "esther_act3",
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "mosaic",
+        "hammered_gold",
+        "stone",
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_the_gate_plot/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_the_gate_plot/a_establish/esther_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_the_gate_plot/a_establish/esther_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_the_gate_plot/a_establish/esther_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_the_gate_plot/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_the_gate_plot/b_core_action/esther_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_the_gate_plot/b_core_action/esther_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_the_gate_plot/b_core_action/esther_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_the_gate_plot/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_the_gate_plot/c_resolve/esther_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_the_gate_plot/c_resolve/esther_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_the_gate_plot/c_resolve/esther_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_the_gate_plot/a_establish/esther_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_the_gate_plot/a_establish/esther_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_gate_plot/a_establish/esther_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_the_gate_plot/b_core_action/esther_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_the_gate_plot/b_core_action/esther_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_gate_plot/b_core_action/esther_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_the_gate_plot/c_resolve/esther_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_the_gate_plot/c_resolve/esther_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_gate_plot/c_resolve/esther_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Haman’s Decree",
+      "sceneId": "placeholder",
+      "artSource": "art/act4_haman_s_decree.md",
+      "assetFolder": "act_04_haman_s_decree",
+      "artFolder": "assets/svg/act_04_haman_s_decree",
+      "assetStem": "esther_act4",
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/fabric_dots-scatterMix.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "mosaic",
+        "hammered_gold",
+        "fabric_weave",
+        "fabric_dots",
+        "stone",
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_haman_s_decree/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_haman_s_decree/a_establish/esther_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_haman_s_decree/a_establish/esther_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_haman_s_decree/a_establish/esther_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_haman_s_decree/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_haman_s_decree/b_core_action/esther_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_haman_s_decree/b_core_action/esther_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_haman_s_decree/b_core_action/esther_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_haman_s_decree/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_haman_s_decree/c_resolve/esther_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_haman_s_decree/c_resolve/esther_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_haman_s_decree/c_resolve/esther_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_haman_s_decree/a_establish/esther_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_haman_s_decree/a_establish/esther_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_haman_s_decree/a_establish/esther_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_haman_s_decree/b_core_action/esther_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_haman_s_decree/b_core_action/esther_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_haman_s_decree/b_core_action/esther_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_haman_s_decree/c_resolve/esther_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_haman_s_decree/c_resolve/esther_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_haman_s_decree/c_resolve/esther_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · For Such a Time",
+      "sceneId": "placeholder",
+      "artSource": "art/act5_for_such_a_time.md",
+      "assetFolder": "act_05_for_such_a_time",
+      "artFolder": "assets/svg/act_05_for_such_a_time",
+      "assetStem": "esther_act5",
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/fabric_dots-scatterMix.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "mosaic",
+        "fabric_weave",
+        "fabric_dots",
+        "stone",
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_for_such_a_time/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_for_such_a_time/a_establish/esther_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_for_such_a_time/a_establish/esther_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_for_such_a_time/a_establish/esther_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_for_such_a_time/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_for_such_a_time/b_core_action/esther_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_for_such_a_time/b_core_action/esther_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_for_such_a_time/b_core_action/esther_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_for_such_a_time/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_for_such_a_time/c_resolve/esther_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_for_such_a_time/c_resolve/esther_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_for_such_a_time/c_resolve/esther_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_for_such_a_time/a_establish/esther_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_for_such_a_time/a_establish/esther_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_for_such_a_time/a_establish/esther_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_for_such_a_time/b_core_action/esther_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_for_such_a_time/b_core_action/esther_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_for_such_a_time/b_core_action/esther_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_for_such_a_time/c_resolve/esther_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_for_such_a_time/c_resolve/esther_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_for_such_a_time/c_resolve/esther_act5_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · The First Banquet",
+      "sceneId": "placeholder",
+      "artSource": "art/act6_the_first_banquet.md",
+      "assetFolder": "act_06_the_first_banquet",
+      "artFolder": "assets/svg/act_06_the_first_banquet",
+      "assetStem": "esther_act6",
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/fabric_dots-scatterMix.svg"
+      ],
+      "materialKeys": [
+        "mosaic",
+        "hammered_gold",
+        "fabric_weave",
+        "fabric_dots"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_06_the_first_banquet/a_establish",
+          "layers": {
+            "background": "assets/svg/act_06_the_first_banquet/a_establish/esther_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_the_first_banquet/a_establish/esther_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_first_banquet/a_establish/esther_act6_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_06_the_first_banquet/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_06_the_first_banquet/b_core_action/esther_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_the_first_banquet/b_core_action/esther_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_first_banquet/b_core_action/esther_act6_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_06_the_first_banquet/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_06_the_first_banquet/c_resolve/esther_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_the_first_banquet/c_resolve/esther_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_first_banquet/c_resolve/esther_act6_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_the_first_banquet/a_establish/esther_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_the_first_banquet/a_establish/esther_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_first_banquet/a_establish/esther_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_the_first_banquet/b_core_action/esther_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_the_first_banquet/b_core_action/esther_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_first_banquet/b_core_action/esther_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_the_first_banquet/c_resolve/esther_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_the_first_banquet/c_resolve/esther_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_first_banquet/c_resolve/esther_act6_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · The Sleepless Night",
+      "sceneId": "placeholder",
+      "artSource": "art/act7_the_sleepless_night.md",
+      "assetFolder": "act_07_the_sleepless_night",
+      "artFolder": "assets/svg/act_07_the_sleepless_night",
+      "assetStem": "esther_act7",
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "mosaic",
+        "hammered_gold",
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_07_the_sleepless_night/a_establish",
+          "layers": {
+            "background": "assets/svg/act_07_the_sleepless_night/a_establish/esther_act7_a_background.svg",
+            "middleGround": "assets/svg/act_07_the_sleepless_night/a_establish/esther_act7_a_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_sleepless_night/a_establish/esther_act7_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_07_the_sleepless_night/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_07_the_sleepless_night/b_core_action/esther_act7_b_background.svg",
+            "middleGround": "assets/svg/act_07_the_sleepless_night/b_core_action/esther_act7_b_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_sleepless_night/b_core_action/esther_act7_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_07_the_sleepless_night/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_07_the_sleepless_night/c_resolve/esther_act7_c_background.svg",
+            "middleGround": "assets/svg/act_07_the_sleepless_night/c_resolve/esther_act7_c_middle_ground.svg",
+            "foreground": "assets/svg/act_07_the_sleepless_night/c_resolve/esther_act7_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_the_sleepless_night/a_establish/esther_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_the_sleepless_night/a_establish/esther_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_sleepless_night/a_establish/esther_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_the_sleepless_night/b_core_action/esther_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_the_sleepless_night/b_core_action/esther_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_sleepless_night/b_core_action/esther_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_the_sleepless_night/c_resolve/esther_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_the_sleepless_night/c_resolve/esther_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_sleepless_night/c_resolve/esther_act7_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · The Second Banquet",
+      "sceneId": "placeholder",
+      "artSource": "art/act8_the_second_banquet.md",
+      "assetFolder": "act_08_the_second_banquet",
+      "artFolder": "assets/svg/act_08_the_second_banquet",
+      "assetStem": "esther_act8",
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "mosaic",
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_08_the_second_banquet/a_establish",
+          "layers": {
+            "background": "assets/svg/act_08_the_second_banquet/a_establish/esther_act8_a_background.svg",
+            "middleGround": "assets/svg/act_08_the_second_banquet/a_establish/esther_act8_a_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_second_banquet/a_establish/esther_act8_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_08_the_second_banquet/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_08_the_second_banquet/b_core_action/esther_act8_b_background.svg",
+            "middleGround": "assets/svg/act_08_the_second_banquet/b_core_action/esther_act8_b_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_second_banquet/b_core_action/esther_act8_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_08_the_second_banquet/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_08_the_second_banquet/c_resolve/esther_act8_c_background.svg",
+            "middleGround": "assets/svg/act_08_the_second_banquet/c_resolve/esther_act8_c_middle_ground.svg",
+            "foreground": "assets/svg/act_08_the_second_banquet/c_resolve/esther_act8_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_the_second_banquet/a_establish/esther_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_the_second_banquet/a_establish/esther_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_second_banquet/a_establish/esther_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_the_second_banquet/b_core_action/esther_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_the_second_banquet/b_core_action/esther_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_second_banquet/b_core_action/esther_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_the_second_banquet/c_resolve/esther_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_the_second_banquet/c_resolve/esther_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_second_banquet/c_resolve/esther_act8_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · A New Decree",
+      "sceneId": "placeholder",
+      "artSource": "art/act9_a_new_decree.md",
+      "assetFolder": "act_09_a_new_decree",
+      "artFolder": "assets/svg/act_09_a_new_decree",
+      "assetStem": "esther_act9",
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg"
+      ],
+      "materialKeys": [
+        "mosaic",
+        "hammered_gold",
+        "stone"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_09_a_new_decree/a_establish",
+          "layers": {
+            "background": "assets/svg/act_09_a_new_decree/a_establish/esther_act9_a_background.svg",
+            "middleGround": "assets/svg/act_09_a_new_decree/a_establish/esther_act9_a_middle_ground.svg",
+            "foreground": "assets/svg/act_09_a_new_decree/a_establish/esther_act9_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_09_a_new_decree/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_09_a_new_decree/b_core_action/esther_act9_b_background.svg",
+            "middleGround": "assets/svg/act_09_a_new_decree/b_core_action/esther_act9_b_middle_ground.svg",
+            "foreground": "assets/svg/act_09_a_new_decree/b_core_action/esther_act9_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_09_a_new_decree/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_09_a_new_decree/c_resolve/esther_act9_c_background.svg",
+            "middleGround": "assets/svg/act_09_a_new_decree/c_resolve/esther_act9_c_middle_ground.svg",
+            "foreground": "assets/svg/act_09_a_new_decree/c_resolve/esther_act9_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_09_a_new_decree/a_establish/esther_act9_a_background.svg",
+          "middleGround": "assets/svg/act_09_a_new_decree/a_establish/esther_act9_a_middle_ground.svg",
+          "foreground": "assets/svg/act_09_a_new_decree/a_establish/esther_act9_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_09_a_new_decree/b_core_action/esther_act9_b_background.svg",
+          "middleGround": "assets/svg/act_09_a_new_decree/b_core_action/esther_act9_b_middle_ground.svg",
+          "foreground": "assets/svg/act_09_a_new_decree/b_core_action/esther_act9_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_09_a_new_decree/c_resolve/esther_act9_c_background.svg",
+          "middleGround": "assets/svg/act_09_a_new_decree/c_resolve/esther_act9_c_middle_ground.svg",
+          "foreground": "assets/svg/act_09_a_new_decree/c_resolve/esther_act9_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · Purim",
+      "sceneId": "placeholder",
+      "artSource": "art/act10_purim.md",
+      "assetFolder": "act_10_purim",
+      "artFolder": "assets/svg/act_10_purim",
+      "assetStem": "esther_act10",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "wood_dark"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_10_purim/a_establish",
+          "layers": {
+            "background": "assets/svg/act_10_purim/a_establish/esther_act10_a_background.svg",
+            "middleGround": "assets/svg/act_10_purim/a_establish/esther_act10_a_middle_ground.svg",
+            "foreground": "assets/svg/act_10_purim/a_establish/esther_act10_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_10_purim/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_10_purim/b_core_action/esther_act10_b_background.svg",
+            "middleGround": "assets/svg/act_10_purim/b_core_action/esther_act10_b_middle_ground.svg",
+            "foreground": "assets/svg/act_10_purim/b_core_action/esther_act10_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_10_purim/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_10_purim/c_resolve/esther_act10_c_background.svg",
+            "middleGround": "assets/svg/act_10_purim/c_resolve/esther_act10_c_middle_ground.svg",
+            "foreground": "assets/svg/act_10_purim/c_resolve/esther_act10_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_10_purim/a_establish/esther_act10_a_background.svg",
+          "middleGround": "assets/svg/act_10_purim/a_establish/esther_act10_a_middle_ground.svg",
+          "foreground": "assets/svg/act_10_purim/a_establish/esther_act10_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_10_purim/b_core_action/esther_act10_b_background.svg",
+          "middleGround": "assets/svg/act_10_purim/b_core_action/esther_act10_b_middle_ground.svg",
+          "foreground": "assets/svg/act_10_purim/b_core_action/esther_act10_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_10_purim/c_resolve/esther_act10_c_background.svg",
+          "middleGround": "assets/svg/act_10_purim/c_resolve/esther_act10_c_middle_ground.svg",
+          "foreground": "assets/svg/act_10_purim/c_resolve/esther_act10_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

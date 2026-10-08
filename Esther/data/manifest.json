@@ -10,7 +10,30 @@
       "assetFolder": "act_01_the_banquet",
       "assetStem": "esther_act1",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_the_banquet/a_establish/esther_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_the_banquet/a_establish/esther_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_banquet/a_establish/esther_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_the_banquet/b_core_action/esther_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_the_banquet/b_core_action/esther_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_banquet/b_core_action/esther_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_the_banquet/c_resolve/esther_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_the_banquet/c_resolve/esther_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_the_banquet/c_resolve/esther_act1_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ]
     },
     {
       "id": "a_new_queen",
@@ -21,7 +44,27 @@
       "assetFolder": "act_02_a_new_queen",
       "assetStem": "esther_act2",
       "particle": "dusk",
-      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_a_new_queen/a_establish/esther_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_a_new_queen/a_establish/esther_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_a_new_queen/a_establish/esther_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_a_new_queen/b_core_action/esther_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_a_new_queen/b_core_action/esther_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_a_new_queen/b_core_action/esther_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_a_new_queen/c_resolve/esther_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_a_new_queen/c_resolve/esther_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_a_new_queen/c_resolve/esther_act2_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/hammered_gold-hammered.svg"
+      ]
     },
     {
       "id": "the_gate_plot",
@@ -32,7 +75,30 @@
       "assetFolder": "act_03_the_gate_plot",
       "assetStem": "esther_act3",
       "particle": "ember",
-      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #241a10, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_the_gate_plot/a_establish/esther_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_the_gate_plot/a_establish/esther_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_gate_plot/a_establish/esther_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_the_gate_plot/b_core_action/esther_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_the_gate_plot/b_core_action/esther_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_gate_plot/b_core_action/esther_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_the_gate_plot/c_resolve/esther_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_the_gate_plot/c_resolve/esther_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_the_gate_plot/c_resolve/esther_act3_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ]
     },
     {
       "id": "haman_s_decree",
@@ -43,7 +109,32 @@
       "assetFolder": "act_04_haman_s_decree",
       "assetStem": "esther_act4",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #1a1420, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a1420, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_haman_s_decree/a_establish/esther_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_haman_s_decree/a_establish/esther_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_haman_s_decree/a_establish/esther_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_haman_s_decree/b_core_action/esther_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_haman_s_decree/b_core_action/esther_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_haman_s_decree/b_core_action/esther_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_haman_s_decree/c_resolve/esther_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_haman_s_decree/c_resolve/esther_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_haman_s_decree/c_resolve/esther_act4_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/fabric_dots-scatterMix.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ]
     },
     {
       "id": "for_such_a_time",
@@ -54,7 +145,31 @@
       "assetFolder": "act_05_for_such_a_time",
       "assetStem": "esther_act5",
       "particle": "dusk",
-      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a0e08, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_for_such_a_time/a_establish/esther_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_for_such_a_time/a_establish/esther_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_for_such_a_time/a_establish/esther_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_for_such_a_time/b_core_action/esther_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_for_such_a_time/b_core_action/esther_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_for_such_a_time/b_core_action/esther_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_for_such_a_time/c_resolve/esther_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_for_such_a_time/c_resolve/esther_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_for_such_a_time/c_resolve/esther_act5_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/fabric_dots-scatterMix.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ]
     },
     {
       "id": "the_first_banquet",
@@ -65,7 +180,30 @@
       "assetFolder": "act_06_the_first_banquet",
       "assetStem": "esther_act6",
       "particle": "ember",
-      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2a1a10, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_the_first_banquet/a_establish/esther_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_the_first_banquet/a_establish/esther_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_first_banquet/a_establish/esther_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_the_first_banquet/b_core_action/esther_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_the_first_banquet/b_core_action/esther_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_first_banquet/b_core_action/esther_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_the_first_banquet/c_resolve/esther_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_the_first_banquet/c_resolve/esther_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_first_banquet/c_resolve/esther_act6_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/fabric_dots-scatterMix.svg"
+      ]
     },
     {
       "id": "the_sleepless_night",
@@ -76,7 +214,29 @@
       "assetFolder": "act_07_the_sleepless_night",
       "assetStem": "esther_act7",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a1024, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_the_sleepless_night/a_establish/esther_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_the_sleepless_night/a_establish/esther_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_sleepless_night/a_establish/esther_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_the_sleepless_night/b_core_action/esther_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_the_sleepless_night/b_core_action/esther_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_sleepless_night/b_core_action/esther_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_the_sleepless_night/c_resolve/esther_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_the_sleepless_night/c_resolve/esther_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_the_sleepless_night/c_resolve/esther_act7_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ]
     },
     {
       "id": "the_second_banquet",
@@ -87,7 +247,28 @@
       "assetFolder": "act_08_the_second_banquet",
       "assetStem": "esther_act8",
       "particle": "dusk",
-      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #241810, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_the_second_banquet/a_establish/esther_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_the_second_banquet/a_establish/esther_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_second_banquet/a_establish/esther_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_the_second_banquet/b_core_action/esther_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_the_second_banquet/b_core_action/esther_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_second_banquet/b_core_action/esther_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_the_second_banquet/c_resolve/esther_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_the_second_banquet/c_resolve/esther_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_the_second_banquet/c_resolve/esther_act8_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ]
     },
     {
       "id": "a_new_decree",
@@ -98,7 +279,29 @@
       "assetFolder": "act_09_a_new_decree",
       "assetStem": "esther_act9",
       "particle": "ember",
-      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #1a2a14, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_09_a_new_decree/a_establish/esther_act9_a_background.svg",
+          "middleGround": "assets/svg/act_09_a_new_decree/a_establish/esther_act9_a_middle_ground.svg",
+          "foreground": "assets/svg/act_09_a_new_decree/a_establish/esther_act9_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_09_a_new_decree/b_core_action/esther_act9_b_background.svg",
+          "middleGround": "assets/svg/act_09_a_new_decree/b_core_action/esther_act9_b_middle_ground.svg",
+          "foreground": "assets/svg/act_09_a_new_decree/b_core_action/esther_act9_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_09_a_new_decree/c_resolve/esther_act9_c_background.svg",
+          "middleGround": "assets/svg/act_09_a_new_decree/c_resolve/esther_act9_c_middle_ground.svg",
+          "foreground": "assets/svg/act_09_a_new_decree/c_resolve/esther_act9_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/mosaic-chips.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone-flagstone.svg"
+      ]
     },
     {
       "id": "purim",
@@ -109,7 +312,28 @@
       "assetFolder": "act_10_purim",
       "assetStem": "esther_act10",
       "particle": "dawn",
-      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)"
+      "bg": "radial-gradient(circle at 50% 30%, #2d1a0e, #060402 65%)",
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_10_purim/a_establish/esther_act10_a_background.svg",
+          "middleGround": "assets/svg/act_10_purim/a_establish/esther_act10_a_middle_ground.svg",
+          "foreground": "assets/svg/act_10_purim/a_establish/esther_act10_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_10_purim/b_core_action/esther_act10_b_background.svg",
+          "middleGround": "assets/svg/act_10_purim/b_core_action/esther_act10_b_middle_ground.svg",
+          "foreground": "assets/svg/act_10_purim/b_core_action/esther_act10_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_10_purim/c_resolve/esther_act10_c_background.svg",
+          "middleGround": "assets/svg/act_10_purim/c_resolve/esther_act10_c_middle_ground.svg",
+          "foreground": "assets/svg/act_10_purim/c_resolve/esther_act10_c_foreground.svg"
+        }
+      },
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/wood_dark-plank.svg"
+      ]
     }
   ]
 }

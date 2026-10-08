@@ -1,0 +1,122 @@
+{
+  "story": "Deborah",
+  "act": {
+    "id": "the_summons",
+    "name": "Ch.2 · The Summons",
+    "source": "../data/act2_the_summons.json",
+    "svg": null,
+    "bg": "radial-gradient(circle at 50% 25%, #d4a76a, #6b4423 70%)",
+    "particle": "dusk"
+  },
+  "beats": [
+    {
+      "id": "the_summons_0",
+      "items": [
+        {
+          "id": "the_summons_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Deborah sent for Barak and gave him God’s command: gather ten thousand and march to Mount Tabor.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_summons_1",
+      "items": [
+        {
+          "id": "the_summons_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "If you go with me, I will go; but if you do not go with me, I will not go.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "barak",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_summons_2",
+      "items": [
+        {
+          "id": "the_summons_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Certainly I will go with you.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "deborah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_summons_3",
+      "cite": "Judges 4:6–10",
+      "items": [
+        {
+          "id": "the_summons_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Deborah rose to share the road, while making clear that the victory would not become Barak’s glory.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

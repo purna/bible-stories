@@ -1,0 +1,25 @@
+{
+  "story": "Adam",
+  "act": 2,
+  "chapter": "The Garden",
+  "artSource": "art/act2_garden.md",
+  "artFolder": "assets/svg/act_02_garden",
+  "sceneId": "garden_eden",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "gourd-vine-leaves.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg",
+    "wood_texture.svg"
+  ],
+  "layers": {
+    "background": "adam_act2_a_background.svg",
+    "middleGround": "adam_act2_a_middle_ground.svg",
+    "foreground": "adam_act2_a_foreground.svg"
+  }
+}

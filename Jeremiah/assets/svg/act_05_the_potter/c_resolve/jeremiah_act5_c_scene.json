@@ -1,0 +1,27 @@
+{
+  "story": "Jeremiah",
+  "act": 5,
+  "chapter": "Ch.5 · The Potter",
+  "artSource": "art/act5_the_potter.md",
+  "artFolder": "assets/svg/act_05_the_potter",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "fabric_weave-basket.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "jeremiah_act5_c_background.svg",
+    "middleGround": "jeremiah_act5_c_middle_ground.svg",
+    "foreground": "jeremiah_act5_c_foreground.svg"
+  }
+}

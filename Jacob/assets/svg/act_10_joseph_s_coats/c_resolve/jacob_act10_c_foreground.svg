@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Resolve Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Jacob act 10 Ch.10 · Joseph’s Coats foreground">
+  <metadata>{&quot;story&quot;:&quot;Jacob&quot;,&quot;act&quot;:10,&quot;chapter&quot;:&quot;Ch.10 · Joseph’s Coats&quot;,&quot;scene&quot;:&quot;C&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#ac8e63" stroke="#201a17" stroke-width="12" opacity=".93"><rect x="0" y="546.4" width="138" height="553.6"/><rect x="1782" y="546.4" width="138" height="553.6"/><rect x="0" y="516.4" width="193" height="55"/><rect x="1727" y="516.4" width="193" height="55"/></g><g opacity=".9"><path d="M45 1080v-132.07602136731148" stroke="#b38e4e" stroke-width="9"/><path d="M45 994.1505861112475l34 -28m-34 60l30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M107 1080v-210.99113351572305" stroke="#b38e4e" stroke-width="9"/><path d="M107 942.85576321478l34 -28m-34 60l30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M169 1080v-133.16502669062464" stroke="#b38e4e" stroke-width="9"/><path d="M169 993.4427326510939l34 -28m-34 60l30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M1690 1080v-121.46737422952428" stroke="#b38e4e" stroke-width="9"/><path d="M1690 1001.0462067508092l-34 -28m--34 60l-30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M1752 1080v-149.96197425238788" stroke="#b38e4e" stroke-width="9"/><path d="M1752 982.5247167359479l-34 -28m--34 60l-30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/><path d="M1814 1080v-168.4065541894175" stroke="#b38e4e" stroke-width="9"/><path d="M1814 970.5357397768786l-34 -28m--34 60l-30 -24" stroke="#cba55d" stroke-width="13" stroke-linecap="round"/></g><path d="M1420 940 Q1510 745 1600 940Z" fill="#d7ae65" stroke="#201a17" stroke-width="12" opacity="0.72"/>
+  </svg>

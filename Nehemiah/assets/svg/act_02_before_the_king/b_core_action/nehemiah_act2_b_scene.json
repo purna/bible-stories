@@ -1,0 +1,21 @@
+{
+  "story": "Nehemiah",
+  "act": 2,
+  "chapter": "Ch.2 · Before the King",
+  "artSource": "art/act2_before_the_king.md",
+  "artFolder": "assets/svg/act_02_before_the_king",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "hammered_gold-hammered.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "nehemiah_act2_b_background.svg",
+    "middleGround": "nehemiah_act2_b_middle_ground.svg",
+    "foreground": "nehemiah_act2_b_foreground.svg"
+  }
+}

@@ -7,90 +7,267 @@
   "lines": [
     {
       "id": "the_army_reduced_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "The Spirit of the Lord clothes Gideon. He sounds the trumpet. Thirty-two thousand gather at the spring of Harod.",
       "cite": "Judges 7:1",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_army_reduced_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The Spirit of the Lord clothes Gideon. He sounds the trumpet. Thirty-two thousand gather at the spring of Harod.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_army_reduced_1",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE COUNT",
-      "text": "The people are too many. I cannot give Midian into their hands, lest Israel boast against Me.",
       "cite": "Judges 7:2",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_army_reduced_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The people are too many. I cannot give Midian into their hands, lest Israel boast against Me.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_army_reduced_1_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE COUNT",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_army_reduced_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Whosoever is fearful and afraid, let him return. Twenty-two thousand leave. Ten thousand remain.",
       "cite": "Judges 7:3",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_army_reduced_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Whosoever is fearful and afraid, let him return. Twenty-two thousand leave. Ten thousand remain.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_army_reduced_3",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "text": "The people are still too many. Bring them to the water, and I will test them there.",
       "cite": "Judges 7:4",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_army_reduced_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The people are still too many. Bring them to the water, and I will test them there.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_army_reduced_4",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "At the water, three hundred lap with their hands to their mouths. All the rest kneel down to drink.",
       "cite": "Judges 7:5–6",
-      "sfx": "Water ripple",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_army_reduced_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At the water, three hundred lap with their hands to their mouths. All the rest kneel down to drink.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_army_reduced_4_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "Water ripple",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_army_reduced_5",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE THREE HUNDRED",
-      "text": "With the three hundred who lapped I will save you and give the Midianites into your hand.",
       "cite": "Judges 7:7",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_army_reduced_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "With the three hundred who lapped I will save you and give the Midianites into your hand.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_army_reduced_5_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE THREE HUNDRED",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "the_army_reduced_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The point is not alertness or virtue. Israel cannot boast of saving itself — the victory belongs to the Lord.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_army_reduced_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The point is not alertness or virtue. Israel cannot boast of saving itself — the victory belongs to the Lord.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "the_army_reduced_7",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The three hundred take provisions and trumpets. The rest go to their tents. The army is reduced to a handful.",
       "cite": "Judges 7:8",
       "choices": [
         {
@@ -102,11 +279,57 @@
           "note": "A pause does not change the outcome. It only lets the player breathe."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "the_army_reduced_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The three hundred take provisions and trumpets. The rest go to their tents. The army is reduced to a handful.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "the_army_reduced",
   "foreground": "fg_the_army_reduced",
-  "index": 3
+  "index": 3,
+  "assetFolder": "act_04_the_army_reduced",
+  "artFolder": "assets/svg/act_04_the_army_reduced",
+  "assetStem": "gideon_act4",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_background.svg",
+      "middleGround": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_middle_ground.svg",
+      "foreground": "assets/svg/act_04_the_army_reduced/a_establish/gideon_act4_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_background.svg",
+      "middleGround": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_middle_ground.svg",
+      "foreground": "assets/svg/act_04_the_army_reduced/b_core_action/gideon_act4_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_background.svg",
+      "middleGround": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_middle_ground.svg",
+      "foreground": "assets/svg/act_04_the_army_reduced/c_resolve/gideon_act4_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/water_ripple-ripples.svg",
+    "assets/materials/sword_iron-blade.svg"
+  ]
 }

@@ -4,74 +4,98 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "gideon-the-winepress",
+      "name": "Ch.1 · The Winepress",
+      "file": "gideon-the-winepress.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "gideon-the-winepress_hd",
+      "name": "Ch.1 · The Winepress (HD)",
+      "file": "gideon-the-winepress_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "gideon-the-sign",
+      "name": "Ch.2 · The Sign",
+      "file": "gideon-the-sign.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "gideon-the-sign_hd",
+      "name": "Ch.2 · The Sign (HD)",
+      "file": "gideon-the-sign_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "gideon-the-fleece",
+      "name": "Ch.3 · The Fleece",
+      "file": "gideon-the-fleece.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "gideon-the-fleece_hd",
+      "name": "Ch.3 · The Fleece (HD)",
+      "file": "gideon-the-fleece_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "gideon-the-army-reduced",
+      "name": "Ch.4 · The Army Reduced",
+      "file": "gideon-the-army-reduced.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "gideon-the-army-reduced_hd",
+      "name": "Ch.4 · The Army Reduced (HD)",
+      "file": "gideon-the-army-reduced_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "gideon-the-dream",
+      "name": "Ch.5 · The Dream",
+      "file": "gideon-the-dream.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "gideon-the-dream_hd",
+      "name": "Ch.5 · The Dream (HD)",
+      "file": "gideon-the-dream_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "gideon-the-battle",
+      "name": "Ch.6 · The Battle",
+      "file": "gideon-the-battle.js",
+      "type": "module"
+    },
+    {
+      "id": "gideon-the-battle_hd",
+      "name": "Ch.6 · The Battle (HD)",
+      "file": "gideon-the-battle_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "gideon-the-victory",
+      "name": "Ch.7 · The Victory",
+      "file": "gideon-the-victory.js",
+      "type": "module"
+    },
+    {
+      "id": "gideon-the-victory_hd",
+      "name": "Ch.7 · The Victory (HD)",
+      "file": "gideon-the-victory_hd.js",
       "type": "module"
     }
   ]

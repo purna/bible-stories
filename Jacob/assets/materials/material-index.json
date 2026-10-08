@@ -1,0 +1,231 @@
+{
+  "story": "Jacob",
+  "sourceTool": "Jacob/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "desert_sand",
+      "shape": "dunes",
+      "file": "desert_sand-dunes.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "plank",
+      "file": "wood_oak-plank.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "planks3",
+      "file": "wood_oak-planks3.svg"
+    },
+    {
+      "key": "grass",
+      "shape": "tufts",
+      "file": "grass-tufts.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "calm",
+      "file": "water_still-calm.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "eddies",
+      "file": "water_still-eddies.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Birthright",
+      "assetFolder": "act_01_the_birthright",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Stolen Blessing",
+      "assetFolder": "act_02_the_stolen_blessing",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · Bethel",
+      "assetFolder": "act_03_bethel",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Rachel at the Well",
+      "assetFolder": "act_04_rachel_at_the_well",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Laban’s Bargain",
+      "assetFolder": "act_05_laban_s_bargain",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · The Flocks",
+      "assetFolder": "act_06_the_flocks",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · Leaving Haran",
+      "assetFolder": "act_07_leaving_haran",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · The Night Wrestling",
+      "assetFolder": "act_08_the_night_wrestling",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · Meeting Esau",
+      "assetFolder": "act_09_meeting_esau",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        }
+      ]
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · Joseph’s Coats",
+      "assetFolder": "act_10_joseph_s_coats",
+      "materials": [
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "grass",
+          "file": "grass-tufts.svg"
+        }
+      ]
+    }
+  ]
+}

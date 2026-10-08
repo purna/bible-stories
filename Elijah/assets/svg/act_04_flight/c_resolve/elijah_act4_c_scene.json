@@ -1,0 +1,23 @@
+{
+  "story": "Elijah",
+  "act": 4,
+  "chapter": "The Flight to Horeb",
+  "artSource": "art/act4_flight.md",
+  "artFolder": "assets/svg/act_04_flight",
+  "sceneId": "wilderness_tree",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "stone_texture.svg",
+    "temple-flagstone.svg",
+    "water_fast-churn.svg",
+    "water_fast-rapids.svg"
+  ],
+  "layers": {
+    "background": "elijah_act4_c_background.svg",
+    "middleGround": "elijah_act4_c_middle_ground.svg",
+    "foreground": "elijah_act4_c_foreground.svg"
+  }
+}

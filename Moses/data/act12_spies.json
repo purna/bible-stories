@@ -1,0 +1,496 @@
+{
+  "id": "spies",
+  "name": "Ch.12 · The Spies and the Rebellion",
+  "bg": "radial-gradient(circle at 50% 30%, #101408, #1e2412 65%, #060804)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "spies_0",
+      "cite": "Numbers 13:1–2",
+      "items": [
+        {
+          "id": "spies_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Send some men to explore the land of Canaan, which I am giving to the Israelites.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_1",
+      "cite": "Numbers 13:17–19",
+      "items": [
+        {
+          "id": "spies_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Go up and see what the land is like. Are the people strong or weak? Is the land good or bad? Are the towns unwalled or fortified?",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "moses",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_2",
+      "cite": "Numbers 13:23",
+      "items": [
+        {
+          "id": "spies_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Twelve men went — one from each tribe. For forty days they explored the land. They came back carrying a single cluster of grapes so heavy that two men carried it on a pole.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_3",
+      "choices": [
+        {
+          "label": "Report: the land is ours to take 🌿",
+          "note": "Two of the twelve say so. The rest say the opposite."
+        },
+        {
+          "label": "Report: we cannot go up 🛡️",
+          "note": "Ten of the twelve say so, and the fear spreads through the camp."
+        }
+      ],
+      "items": [
+        {
+          "id": "spies_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The twelve stood before the whole assembly. What would they say about what they had seen?",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_4",
+      "items": [
+        {
+          "id": "spies_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The land flows with milk and honey — but the people who live there are powerful, and the cities are fortified and very large!",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "spies_4_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "FEAR!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_5",
+      "items": [
+        {
+          "id": "spies_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "We should go up and take possession of the land, for we can certainly do it.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "caleb",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_6",
+      "cite": "Numbers 13:31–33",
+      "items": [
+        {
+          "id": "spies_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "But the men who had gone with him said, \"We can't attack those people; they are stronger than we are.\" They saw giants, and felt like grasshoppers.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_7",
+      "cite": "Numbers 14:7–9",
+      "items": [
+        {
+          "id": "spies_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The land we explored is exceedingly good. If the LORD is pleased with us, he will lead us into it. Do not rebel against the LORD. Do not be afraid of the people of the land.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "joshua",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_8",
+      "items": [
+        {
+          "id": "spies_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "But the other spies spoke against Caleb. The whole assembly talked about stoning them.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_9",
+      "items": [
+        {
+          "id": "spies_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "That night all the people of the community raised their voices and wept aloud.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "spies_9_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "WEEP!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_10",
+      "cite": "Numbers 14:30, 33",
+      "items": [
+        {
+          "id": "spies_10_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Not one of you will enter the land I swore with uplifted hand to make your home. Your children will be wanderers in the wilderness for forty years.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_11",
+      "cite": "Numbers 14:40–45",
+      "items": [
+        {
+          "id": "spies_11_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The next morning some of the people went up toward the hill country anyway — without Moses, without the ark. The Amalekites and Canaanites drove them back.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_12",
+      "cite": "Numbers 16:3",
+      "items": [
+        {
+          "id": "spies_12_text",
+          "type": "text",
+          "sfx": false,
+          "text": "You have gone too far! The whole community is holy, every one of them, and the LORD is with them. Why do you set yourselves above the LORD's assembly?",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "korah",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_13",
+      "cite": "Numbers 16:4, 31–33",
+      "items": [
+        {
+          "id": "spies_13_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Moses fell facedown. Then the ground split open beneath Korah's followers and swallowed them.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "spies_14",
+      "cite": "Numbers 14:34",
+      "items": [
+        {
+          "id": "spies_14_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A generation would wander until the unbelieving ones were gone — a year for each of the forty days the spies spent in the land.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    }
+  ],
+  "scene": "spies",
+  "foreground": "fg_spies",
+  "index": 11
+}

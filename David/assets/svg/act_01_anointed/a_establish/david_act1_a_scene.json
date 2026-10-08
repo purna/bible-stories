@@ -1,0 +1,18 @@
+{
+  "story": "David",
+  "act": 1,
+  "chapter": "Ch.1 · Anointed",
+  "artSource": "art/act1_anointed.md",
+  "artFolder": "assets/svg/act_01_anointed",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "grass-tufts.svg"
+  ],
+  "layers": {
+    "background": "david_act1_a_background.svg",
+    "middleGround": "david_act1_a_middle_ground.svg",
+    "foreground": "david_act1_a_foreground.svg"
+  }
+}

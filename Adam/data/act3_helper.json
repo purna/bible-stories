@@ -11,89 +11,274 @@
   "lines": [
     {
       "id": "helper_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "The Lord God said, 'It is not good for the man to be alone. I will make a helper suitable for him.'",
-      "align": "center",
-      "svg": "forming_eve",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "helper_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The Lord God said, 'It is not good for the man to be alone. I will make a helper suitable for him.'",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "forming_eve"
     },
     {
       "id": "helper_1",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "text": "God brought every creature to Adam to see what he would name them. But among all the beasts, birds, and fish...",
-      "align": "left",
-      "svg": "forming_names",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "helper_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "God brought every creature to Adam to see what he would name them. But among all the beasts, birds, and fish...",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "forming_names"
     },
     {
       "id": "helper_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "...no suitable helper was found for Adam.",
-      "align": "right",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "helper_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "...no suitable helper was found for Adam.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "helper_3",
-      "sfx": "WHIRR...",
-      "speaker": "narrator",
-      "fx": "shake",
-      "delay": 800,
-      "text": "So the Lord God caused a deep sleep to fall on the man. While he slept, God took one of his ribs.",
-      "align": "center",
-      "svg": "forming_sleep",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "helper_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "So the Lord God caused a deep sleep to fall on the man. While he slept, God took one of his ribs.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "helper_3_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "WHIRR...",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "forming_sleep"
     },
     {
       "id": "helper_4",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "text": "And the Lord built a woman from the rib he had taken out of the man. Then He brought her to the man.",
-      "align": "center",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "helper_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "And the Lord built a woman from the rib he had taken out of the man. Then He brought her to the man.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "helper_5",
-      "speaker": "adam",
-      "fx": "bounce",
-      "delay": 800,
-      "text": "This is now bone of my bones, and flesh of my flesh! She shall be called 'woman' \u2014 for she was taken out of man.",
-      "align": "left",
-      "svg": "forming_united",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "helper_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "This is now bone of my bones, and flesh of my flesh! She shall be called 'woman' — for she was taken out of man.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "adam",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "forming_united"
     },
     {
       "id": "helper_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "A man shall leave his father and mother and be united to his wife. And the two shall become one flesh.",
-      "align": "center",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "helper_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A man shall leave his father and mother and be united to his wife. And the two shall become one flesh.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "helper_7",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "Thus the garden held its first couple \u2014 naked in innocence, walking in peace.",
-      "align": "center",
-      "svg": "garden_paradise",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "helper_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Thus the garden held its first couple — naked in innocence, walking in peace.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "garden_paradise"
     }
+  ],
+  "assetFolder": "act_03_helper",
+  "artFolder": "assets/svg/act_03_helper",
+  "assetStem": "adam_act3",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_03_helper/a_establish/adam_act3_a_background.svg",
+      "middleGround": "assets/svg/act_03_helper/a_establish/adam_act3_a_middle_ground.svg",
+      "foreground": "assets/svg/act_03_helper/a_establish/adam_act3_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_03_helper/b_core_action/adam_act3_b_background.svg",
+      "middleGround": "assets/svg/act_03_helper/b_core_action/adam_act3_b_middle_ground.svg",
+      "foreground": "assets/svg/act_03_helper/b_core_action/adam_act3_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_03_helper/c_resolve/adam_act3_c_background.svg",
+      "middleGround": "assets/svg/act_03_helper/c_resolve/adam_act3_c_middle_ground.svg",
+      "foreground": "assets/svg/act_03_helper/c_resolve/adam_act3_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/leaves-canopy.svg",
+    "assets/materials/grass-tufts.svg",
+    "assets/materials/water_still-eddies.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/fabric_weave-basket.svg"
   ]
 }

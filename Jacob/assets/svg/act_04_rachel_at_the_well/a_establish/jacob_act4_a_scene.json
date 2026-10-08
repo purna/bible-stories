@@ -1,0 +1,22 @@
+{
+  "story": "Jacob",
+  "act": 4,
+  "chapter": "Ch.4 · Rachel at the Well",
+  "artSource": "art/act4_rachel_at_the_well.md",
+  "artFolder": "assets/svg/act_04_rachel_at_the_well",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "grass-tufts.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg"
+  ],
+  "layers": {
+    "background": "jacob_act4_a_background.svg",
+    "middleGround": "jacob_act4_a_middle_ground.svg",
+    "foreground": "jacob_act4_a_foreground.svg"
+  }
+}

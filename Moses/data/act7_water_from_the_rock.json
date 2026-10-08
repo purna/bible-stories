@@ -1,0 +1,178 @@
+{
+  "id": "water_from_the_rock",
+  "name": "Ch.7 · Water from the Rock",
+  "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
+  "particle": "dawn",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "water_from_the_rock_0",
+      "cite": "Exodus; Numbers; Deuteronomy 31–34",
+      "items": [
+        {
+          "id": "water_from_the_rock_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Strike the rock and hold up hands in battle.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "water_from_the_rock_1",
+      "items": [
+        {
+          "id": "water_from_the_rock_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Will a rescued people learn to trust the God who leads them through uncertainty? — Water from the Rock is the next step in that question.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "water_from_the_rock_2",
+      "items": [
+        {
+          "id": "water_from_the_rock_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "water_from_the_rock_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE WORD STANDS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "water_from_the_rock_3",
+      "choices": [
+        {
+          "label": "Walk on with the lesson",
+          "note": "The story keeps its shape and the player carries the reflection forward."
+        },
+        {
+          "label": "Rest here a moment",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "items": [
+        {
+          "id": "water_from_the_rock_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ],
+  "scene": "water_from_the_rock",
+  "foreground": "fg_water_from_the_rock",
+  "index": 6,
+  "assetFolder": "act_07_rock",
+  "artFolder": "assets/svg/act_07_rock",
+  "assetStem": "moses_act7",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_07_rock/a_establish/moses_act7_a_background.svg",
+      "middleGround": "assets/svg/act_07_rock/a_establish/moses_act7_a_middle_ground.svg",
+      "foreground": "assets/svg/act_07_rock/a_establish/moses_act7_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_07_rock/b_core_action/moses_act7_b_background.svg",
+      "middleGround": "assets/svg/act_07_rock/b_core_action/moses_act7_b_middle_ground.svg",
+      "foreground": "assets/svg/act_07_rock/b_core_action/moses_act7_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_07_rock/c_resolve/moses_act7_c_background.svg",
+      "middleGround": "assets/svg/act_07_rock/c_resolve/moses_act7_c_middle_ground.svg",
+      "foreground": "assets/svg/act_07_rock/c_resolve/moses_act7_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/nile_reeds-riverbank.svg",
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/stone_tablets-hewn.svg"
+  ]
+}

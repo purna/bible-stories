@@ -1,0 +1,312 @@
+{
+  "story": "Gideon",
+  "act": {
+    "id": "the_army_reduced",
+    "name": "Ch.4 · The Army Reduced",
+    "source": "../data/act4_the_army_reduced.json",
+    "svg": "placeholder",
+    "bg": "radial-gradient(circle at 50% 30%, #101820, #0a0502 65%)",
+    "particle": "water"
+  },
+  "beats": [
+    {
+      "id": "the_army_reduced_0",
+      "cite": "Judges 7:1",
+      "items": [
+        {
+          "id": "the_army_reduced_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The Spirit of the Lord clothes Gideon. He sounds the trumpet. Thirty-two thousand gather at the spring of Harod.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_army_reduced_1",
+      "cite": "Judges 7:2",
+      "items": [
+        {
+          "id": "the_army_reduced_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The people are too many. I cannot give Midian into their hands, lest Israel boast against Me.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_army_reduced_1_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE COUNT",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "the_army_reduced_2",
+      "cite": "Judges 7:3",
+      "items": [
+        {
+          "id": "the_army_reduced_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Whosoever is fearful and afraid, let him return. Twenty-two thousand leave. Ten thousand remain.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_army_reduced_3",
+      "cite": "Judges 7:4",
+      "items": [
+        {
+          "id": "the_army_reduced_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The people are still too many. Bring them to the water, and I will test them there.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_army_reduced_4",
+      "cite": "Judges 7:5–6",
+      "items": [
+        {
+          "id": "the_army_reduced_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At the water, three hundred lap with their hands to their mouths. All the rest kneel down to drink.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_army_reduced_4_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "Water ripple",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "the_army_reduced_5",
+      "cite": "Judges 7:7",
+      "items": [
+        {
+          "id": "the_army_reduced_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "With the three hundred who lapped I will save you and give the Midianites into your hand.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "the_army_reduced_5_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE THREE HUNDRED",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "the_army_reduced_6",
+      "items": [
+        {
+          "id": "the_army_reduced_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The point is not alertness or virtue. Israel cannot boast of saving itself — the victory belongs to the Lord.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_army_reduced_7",
+      "cite": "Judges 7:8",
+      "choices": [
+        {
+          "label": "Stand with the three hundred",
+          "note": "The story keeps its shape; the reduced band carries the promise forward."
+        },
+        {
+          "label": "Rest at the spring",
+          "note": "A pause does not change the outcome. It only lets the player breathe."
+        }
+      ],
+      "items": [
+        {
+          "id": "the_army_reduced_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The three hundred take provisions and trumpets. The rest go to their tents. The army is reduced to a handful.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "story": "Jeremiah",
+  "act": 6,
+  "chapter": "Ch.6 · The Yoke",
+  "artSource": "art/act6_the_yoke.md",
+  "artFolder": "assets/svg/act_06_the_yoke",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "jeremiah_act6_b_background.svg",
+    "middleGround": "jeremiah_act6_b_middle_ground.svg",
+    "foreground": "jeremiah_act6_b_foreground.svg"
+  }
+}

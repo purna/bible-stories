@@ -1,0 +1,20 @@
+{
+  "story": "Ruth",
+  "act": 2,
+  "chapter": "Ch.2 · Your People",
+  "artSource": "art/act2_your_people.md",
+  "artFolder": "assets/svg/act_02_your_people",
+  "sceneId": "your_people",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "grass-tufts.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg"
+  ],
+  "layers": {
+    "background": "ruth_act2_a_background.svg",
+    "middleGround": "ruth_act2_a_middle_ground.svg",
+    "foreground": "ruth_act2_a_foreground.svg"
+  }
+}

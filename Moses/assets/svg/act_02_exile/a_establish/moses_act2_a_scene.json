@@ -1,0 +1,19 @@
+{
+  "story": "Moses",
+  "act": 2,
+  "chapter": "Ch.2 · The Burning Bush",
+  "artSource": "art/act2_exile.md",
+  "artFolder": "assets/svg/act_02_exile",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "nile_reeds-riverbank.svg"
+  ],
+  "layers": {
+    "background": "moses_act2_a_background.svg",
+    "middleGround": "moses_act2_a_middle_ground.svg",
+    "foreground": "moses_act2_a_foreground.svg"
+  }
+}

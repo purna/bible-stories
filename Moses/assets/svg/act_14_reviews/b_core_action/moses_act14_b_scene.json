@@ -1,0 +1,22 @@
+{
+  "story": "Moses",
+  "act": 14,
+  "chapter": "Ch.14 · Moses&#x27; Final Words",
+  "artSource": "art/act14_reviews.md",
+  "artFolder": "assets/svg/act_14_reviews",
+  "sceneId": "",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "bulrush_basket-woven.svg",
+    "desert_sand-dunes.svg",
+    "nile_reeds-riverbank.svg",
+    "stone-rough.svg",
+    "stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act14_b_background.svg",
+    "middleGround": "moses_act14_b_middle_ground.svg",
+    "foreground": "moses_act14_b_foreground.svg"
+  }
+}

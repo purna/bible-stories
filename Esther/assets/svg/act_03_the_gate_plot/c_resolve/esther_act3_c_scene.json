@@ -1,0 +1,23 @@
+{
+  "story": "Esther",
+  "act": 3,
+  "chapter": "Ch.3 · The Gate Plot",
+  "artSource": "art/act3_the_gate_plot.md",
+  "artFolder": "assets/svg/act_03_the_gate_plot",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "mosaic-chips.svg",
+    "mosaic-grid.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "esther_act3_c_background.svg",
+    "middleGround": "esther_act3_c_middle_ground.svg",
+    "foreground": "esther_act3_c_foreground.svg"
+  }
+}

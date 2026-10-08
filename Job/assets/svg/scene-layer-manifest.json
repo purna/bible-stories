@@ -1,0 +1,694 @@
+{
+  "story": "Job",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · A Blameless Life",
+      "sceneId": "placeholder",
+      "artSource": "art/act1_a_blameless_life.md",
+      "assetFolder": "act_01_a_blameless_life",
+      "artFolder": "assets/svg/act_01_a_blameless_life",
+      "assetStem": "job_act1",
+      "materials": [
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/grass-tufts.svg"
+      ],
+      "materialKeys": [
+        "fabric_weave",
+        "wood_oak",
+        "grass"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_a_blameless_life/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_a_blameless_life/a_establish/job_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_a_blameless_life/a_establish/job_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_a_blameless_life/a_establish/job_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_a_blameless_life/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_a_blameless_life/b_core_action/job_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_a_blameless_life/b_core_action/job_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_a_blameless_life/b_core_action/job_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_a_blameless_life/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_a_blameless_life/c_resolve/job_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_a_blameless_life/c_resolve/job_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_a_blameless_life/c_resolve/job_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_a_blameless_life/a_establish/job_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_a_blameless_life/a_establish/job_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_a_blameless_life/a_establish/job_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_a_blameless_life/b_core_action/job_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_a_blameless_life/b_core_action/job_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_a_blameless_life/b_core_action/job_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_a_blameless_life/c_resolve/job_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_a_blameless_life/c_resolve/job_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_a_blameless_life/c_resolve/job_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Accuser",
+      "sceneId": "placeholder",
+      "artSource": "art/act2_the_accuser.md",
+      "assetFolder": "act_02_the_accuser",
+      "artFolder": "assets/svg/act_02_the_accuser",
+      "assetStem": "job_act2",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "desert_sand",
+        "stone",
+        "fabric_weave",
+        "wood_oak",
+        "grass",
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_the_accuser/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_the_accuser/a_establish/job_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_the_accuser/a_establish/job_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_accuser/a_establish/job_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_the_accuser/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_the_accuser/b_core_action/job_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_the_accuser/b_core_action/job_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_accuser/b_core_action/job_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_the_accuser/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_the_accuser/c_resolve/job_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_the_accuser/c_resolve/job_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_the_accuser/c_resolve/job_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_the_accuser/a_establish/job_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_the_accuser/a_establish/job_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_accuser/a_establish/job_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_the_accuser/b_core_action/job_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_the_accuser/b_core_action/job_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_accuser/b_core_action/job_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_the_accuser/c_resolve/job_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_the_accuser/c_resolve/job_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_the_accuser/c_resolve/job_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · Loss upon Loss",
+      "sceneId": "placeholder",
+      "artSource": "art/act3_loss_upon_loss.md",
+      "assetFolder": "act_03_loss_upon_loss",
+      "artFolder": "assets/svg/act_03_loss_upon_loss",
+      "assetStem": "job_act3",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/grass-tufts.svg",
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "desert_sand",
+        "stone",
+        "fabric_weave",
+        "wood_oak",
+        "grass",
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_loss_upon_loss/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_loss_upon_loss/a_establish/job_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_loss_upon_loss/a_establish/job_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_loss_upon_loss/a_establish/job_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_loss_upon_loss/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_loss_upon_loss/b_core_action/job_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_loss_upon_loss/b_core_action/job_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_loss_upon_loss/b_core_action/job_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_loss_upon_loss/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_loss_upon_loss/c_resolve/job_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_loss_upon_loss/c_resolve/job_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_loss_upon_loss/c_resolve/job_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_loss_upon_loss/a_establish/job_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_loss_upon_loss/a_establish/job_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_loss_upon_loss/a_establish/job_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_loss_upon_loss/b_core_action/job_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_loss_upon_loss/b_core_action/job_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_loss_upon_loss/b_core_action/job_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_loss_upon_loss/c_resolve/job_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_loss_upon_loss/c_resolve/job_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_loss_upon_loss/c_resolve/job_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Seven Days",
+      "sceneId": "placeholder",
+      "artSource": "art/act4_seven_days.md",
+      "assetFolder": "act_04_seven_days",
+      "artFolder": "assets/svg/act_04_seven_days",
+      "assetStem": "job_act4",
+      "materials": [
+        "assets/materials/stone-flagstone.svg",
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "stone",
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_seven_days/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_seven_days/a_establish/job_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_seven_days/a_establish/job_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_seven_days/a_establish/job_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_seven_days/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_seven_days/b_core_action/job_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_seven_days/b_core_action/job_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_seven_days/b_core_action/job_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_seven_days/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_seven_days/c_resolve/job_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_seven_days/c_resolve/job_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_seven_days/c_resolve/job_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_seven_days/a_establish/job_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_seven_days/a_establish/job_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_seven_days/a_establish/job_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_seven_days/b_core_action/job_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_seven_days/b_core_action/job_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_seven_days/b_core_action/job_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_seven_days/c_resolve/job_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_seven_days/c_resolve/job_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_seven_days/c_resolve/job_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Job Speaks",
+      "sceneId": "placeholder",
+      "artSource": "art/act5_job_speaks.md",
+      "assetFolder": "act_05_job_speaks",
+      "artFolder": "assets/svg/act_05_job_speaks",
+      "assetStem": "job_act5",
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg"
+      ],
+      "materialKeys": [
+        "wood_oak"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_job_speaks/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_job_speaks/a_establish/job_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_job_speaks/a_establish/job_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_job_speaks/a_establish/job_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_job_speaks/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_job_speaks/b_core_action/job_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_job_speaks/b_core_action/job_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_job_speaks/b_core_action/job_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_job_speaks/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_job_speaks/c_resolve/job_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_job_speaks/c_resolve/job_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_job_speaks/c_resolve/job_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_job_speaks/a_establish/job_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_job_speaks/a_establish/job_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_job_speaks/a_establish/job_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_job_speaks/b_core_action/job_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_job_speaks/b_core_action/job_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_job_speaks/b_core_action/job_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_job_speaks/c_resolve/job_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_job_speaks/c_resolve/job_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_job_speaks/c_resolve/job_act5_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · The Friends",
+      "sceneId": "placeholder",
+      "artSource": "art/act6_the_friends.md",
+      "assetFolder": "act_06_the_friends",
+      "artFolder": "assets/svg/act_06_the_friends",
+      "assetStem": "job_act6",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/fabric_weave-basket.svg"
+      ],
+      "materialKeys": [
+        "desert_sand",
+        "fabric_weave"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_06_the_friends/a_establish",
+          "layers": {
+            "background": "assets/svg/act_06_the_friends/a_establish/job_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_the_friends/a_establish/job_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_friends/a_establish/job_act6_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_06_the_friends/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_06_the_friends/b_core_action/job_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_the_friends/b_core_action/job_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_friends/b_core_action/job_act6_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_06_the_friends/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_06_the_friends/c_resolve/job_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_the_friends/c_resolve/job_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_the_friends/c_resolve/job_act6_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_the_friends/a_establish/job_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_the_friends/a_establish/job_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_friends/a_establish/job_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_the_friends/b_core_action/job_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_the_friends/b_core_action/job_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_friends/b_core_action/job_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_the_friends/c_resolve/job_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_the_friends/c_resolve/job_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_the_friends/c_resolve/job_act6_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · Elihu",
+      "sceneId": "placeholder",
+      "artSource": "art/act7_elihu.md",
+      "assetFolder": "act_07_elihu",
+      "artFolder": "assets/svg/act_07_elihu",
+      "assetStem": "job_act7",
+      "materials": [
+        "assets/materials/fabric_weave-basket.svg"
+      ],
+      "materialKeys": [
+        "fabric_weave"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_07_elihu/a_establish",
+          "layers": {
+            "background": "assets/svg/act_07_elihu/a_establish/job_act7_a_background.svg",
+            "middleGround": "assets/svg/act_07_elihu/a_establish/job_act7_a_middle_ground.svg",
+            "foreground": "assets/svg/act_07_elihu/a_establish/job_act7_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_07_elihu/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_07_elihu/b_core_action/job_act7_b_background.svg",
+            "middleGround": "assets/svg/act_07_elihu/b_core_action/job_act7_b_middle_ground.svg",
+            "foreground": "assets/svg/act_07_elihu/b_core_action/job_act7_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_07_elihu/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_07_elihu/c_resolve/job_act7_c_background.svg",
+            "middleGround": "assets/svg/act_07_elihu/c_resolve/job_act7_c_middle_ground.svg",
+            "foreground": "assets/svg/act_07_elihu/c_resolve/job_act7_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_elihu/a_establish/job_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_elihu/a_establish/job_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_elihu/a_establish/job_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_elihu/b_core_action/job_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_elihu/b_core_action/job_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_elihu/b_core_action/job_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_elihu/c_resolve/job_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_elihu/c_resolve/job_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_elihu/c_resolve/job_act7_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · Out of the Whirlwind",
+      "sceneId": "placeholder",
+      "artSource": "art/act8_out_of_the_whirlwind.md",
+      "assetFolder": "act_08_out_of_the_whirlwind",
+      "artFolder": "assets/svg/act_08_out_of_the_whirlwind",
+      "assetStem": "job_act8",
+      "materials": [
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "wood_oak",
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_08_out_of_the_whirlwind/a_establish",
+          "layers": {
+            "background": "assets/svg/act_08_out_of_the_whirlwind/a_establish/job_act8_a_background.svg",
+            "middleGround": "assets/svg/act_08_out_of_the_whirlwind/a_establish/job_act8_a_middle_ground.svg",
+            "foreground": "assets/svg/act_08_out_of_the_whirlwind/a_establish/job_act8_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_08_out_of_the_whirlwind/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_08_out_of_the_whirlwind/b_core_action/job_act8_b_background.svg",
+            "middleGround": "assets/svg/act_08_out_of_the_whirlwind/b_core_action/job_act8_b_middle_ground.svg",
+            "foreground": "assets/svg/act_08_out_of_the_whirlwind/b_core_action/job_act8_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_08_out_of_the_whirlwind/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_08_out_of_the_whirlwind/c_resolve/job_act8_c_background.svg",
+            "middleGround": "assets/svg/act_08_out_of_the_whirlwind/c_resolve/job_act8_c_middle_ground.svg",
+            "foreground": "assets/svg/act_08_out_of_the_whirlwind/c_resolve/job_act8_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_out_of_the_whirlwind/a_establish/job_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_out_of_the_whirlwind/a_establish/job_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_out_of_the_whirlwind/a_establish/job_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_out_of_the_whirlwind/b_core_action/job_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_out_of_the_whirlwind/b_core_action/job_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_out_of_the_whirlwind/b_core_action/job_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_out_of_the_whirlwind/c_resolve/job_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_out_of_the_whirlwind/c_resolve/job_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_out_of_the_whirlwind/c_resolve/job_act8_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · Job Responds",
+      "sceneId": "placeholder",
+      "artSource": "art/act9_job_responds.md",
+      "assetFolder": "act_09_job_responds",
+      "artFolder": "assets/svg/act_09_job_responds",
+      "assetStem": "job_act9",
+      "materials": [
+        "assets/materials/water_still-eddies.svg"
+      ],
+      "materialKeys": [
+        "water_still"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_09_job_responds/a_establish",
+          "layers": {
+            "background": "assets/svg/act_09_job_responds/a_establish/job_act9_a_background.svg",
+            "middleGround": "assets/svg/act_09_job_responds/a_establish/job_act9_a_middle_ground.svg",
+            "foreground": "assets/svg/act_09_job_responds/a_establish/job_act9_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_09_job_responds/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_09_job_responds/b_core_action/job_act9_b_background.svg",
+            "middleGround": "assets/svg/act_09_job_responds/b_core_action/job_act9_b_middle_ground.svg",
+            "foreground": "assets/svg/act_09_job_responds/b_core_action/job_act9_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_09_job_responds/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_09_job_responds/c_resolve/job_act9_c_background.svg",
+            "middleGround": "assets/svg/act_09_job_responds/c_resolve/job_act9_c_middle_ground.svg",
+            "foreground": "assets/svg/act_09_job_responds/c_resolve/job_act9_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_09_job_responds/a_establish/job_act9_a_background.svg",
+          "middleGround": "assets/svg/act_09_job_responds/a_establish/job_act9_a_middle_ground.svg",
+          "foreground": "assets/svg/act_09_job_responds/a_establish/job_act9_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_09_job_responds/b_core_action/job_act9_b_background.svg",
+          "middleGround": "assets/svg/act_09_job_responds/b_core_action/job_act9_b_middle_ground.svg",
+          "foreground": "assets/svg/act_09_job_responds/b_core_action/job_act9_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_09_job_responds/c_resolve/job_act9_c_background.svg",
+          "middleGround": "assets/svg/act_09_job_responds/c_resolve/job_act9_c_middle_ground.svg",
+          "foreground": "assets/svg/act_09_job_responds/c_resolve/job_act9_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · Restoration",
+      "sceneId": "placeholder",
+      "artSource": "art/act10_restoration.md",
+      "assetFolder": "act_10_restoration",
+      "artFolder": "assets/svg/act_10_restoration",
+      "assetStem": "job_act10",
+      "materials": [
+        "assets/materials/fabric_weave-basket.svg",
+        "assets/materials/wood_oak-planks3.svg",
+        "assets/materials/grass-tufts.svg"
+      ],
+      "materialKeys": [
+        "fabric_weave",
+        "wood_oak",
+        "grass"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_10_restoration/a_establish",
+          "layers": {
+            "background": "assets/svg/act_10_restoration/a_establish/job_act10_a_background.svg",
+            "middleGround": "assets/svg/act_10_restoration/a_establish/job_act10_a_middle_ground.svg",
+            "foreground": "assets/svg/act_10_restoration/a_establish/job_act10_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_10_restoration/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_10_restoration/b_core_action/job_act10_b_background.svg",
+            "middleGround": "assets/svg/act_10_restoration/b_core_action/job_act10_b_middle_ground.svg",
+            "foreground": "assets/svg/act_10_restoration/b_core_action/job_act10_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_10_restoration/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_10_restoration/c_resolve/job_act10_c_background.svg",
+            "middleGround": "assets/svg/act_10_restoration/c_resolve/job_act10_c_middle_ground.svg",
+            "foreground": "assets/svg/act_10_restoration/c_resolve/job_act10_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_10_restoration/a_establish/job_act10_a_background.svg",
+          "middleGround": "assets/svg/act_10_restoration/a_establish/job_act10_a_middle_ground.svg",
+          "foreground": "assets/svg/act_10_restoration/a_establish/job_act10_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_10_restoration/b_core_action/job_act10_b_background.svg",
+          "middleGround": "assets/svg/act_10_restoration/b_core_action/job_act10_b_middle_ground.svg",
+          "foreground": "assets/svg/act_10_restoration/b_core_action/job_act10_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_10_restoration/c_resolve/job_act10_c_background.svg",
+          "middleGround": "assets/svg/act_10_restoration/c_resolve/job_act10_c_middle_ground.svg",
+          "foreground": "assets/svg/act_10_restoration/c_resolve/job_act10_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

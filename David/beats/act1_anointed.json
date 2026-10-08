@@ -1,0 +1,292 @@
+{
+  "story": "David",
+  "act": {
+    "id": "anointed",
+    "name": "Ch.1 · Anointed",
+    "source": "../data/act1_anointed.json",
+    "svg": "placeholder",
+    "bg": "radial-gradient(circle at 50% 30%, #2a3a1a, #0e1a08 65%, #060804)",
+    "particle": "dawn"
+  },
+  "beats": [
+    {
+      "id": "anointed_0",
+      "cite": "1 Samuel 16:1",
+      "items": [
+        {
+          "id": "anointed_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "In the hill country of Judah, a man named Jesse had eight sons. The eldest were tall and broad-shouldered — the kind of men the people expected a king to be.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "anointed_1",
+      "items": [
+        {
+          "id": "anointed_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jesse, bring your sons. The LORD has chosen one of them to be the next king.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "samuel",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "anointed_2",
+      "items": [
+        {
+          "id": "anointed_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Samuel anointed each eldest son in turn. The LORD said nothing. Seven passed before the prophet's eyes.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "anointed_3",
+      "items": [
+        {
+          "id": "anointed_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Is this all of them? The LORD has not spoken through any of these.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "samuel",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "anointed_4",
+      "cite": "1 Samuel 16:12",
+      "items": [
+        {
+          "id": "anointed_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jesse turned to a shepherd boy keeping the flock. The youngest, ruddy and quiet, sent from the fields.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "anointed_5",
+      "audioSfx": "assets/audio/sfx/shepherd_footsteps.mp3",
+      "items": [
+        {
+          "id": "anointed_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Do not look on his appearance or on his height, because I have rejected him. The LORD looks on the heart.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "anointed_5_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE LORD SEES THE HEART!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "anointed_6",
+      "items": [
+        {
+          "id": "anointed_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Send for him. We will not sit down until he comes.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "samuel",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "anointed_7",
+      "cite": "1 Samuel 16:13",
+      "items": [
+        {
+          "id": "anointed_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The boy was brought in, fresh from the sheepfold. Samuel took the horn of oil and anointed him in the sight of his brothers.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "anointed_8",
+      "choices": [
+        {
+          "label": "Wonder what lies ahead 🌄",
+          "note": "The road is long and the outcome is not his to control."
+        },
+        {
+          "label": "Hold fast to the flock 🐑",
+          "note": "He keeps his hands on the work he knows while the anointing waits."
+        }
+      ],
+      "items": [
+        {
+          "id": "anointed_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "From that day forward, the Spirit of the LORD came upon David. The quiet shepherd carried a calling he could not yet see the shape of.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

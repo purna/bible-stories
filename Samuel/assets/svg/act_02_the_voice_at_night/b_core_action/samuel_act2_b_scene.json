@@ -1,0 +1,22 @@
+{
+  "story": "Samuel",
+  "act": 2,
+  "chapter": "Ch.2 · The Voice at Night",
+  "artSource": "art/act2_the_voice_at_night.md",
+  "artFolder": "assets/svg/act_02_the_voice_at_night",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "samuel_act2_b_background.svg",
+    "middleGround": "samuel_act2_b_middle_ground.svg",
+    "foreground": "samuel_act2_b_foreground.svg"
+  }
+}

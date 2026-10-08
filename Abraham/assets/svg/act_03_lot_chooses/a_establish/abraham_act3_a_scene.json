@@ -1,0 +1,19 @@
+{
+  "story": "Abraham",
+  "act": 3,
+  "chapter": "Lot Chooses",
+  "artSource": "art/act3_lot_chooses.md",
+  "artFolder": "assets/svg/act_03_lot_chooses",
+  "sceneId": "",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "water_still-calm.svg",
+    "water_still-eddies.svg"
+  ],
+  "layers": {
+    "background": "abraham_act3_a_background.svg",
+    "middleGround": "abraham_act3_a_middle_ground.svg",
+    "foreground": "abraham_act3_a_foreground.svg"
+  }
+}

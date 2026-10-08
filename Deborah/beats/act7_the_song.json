@@ -1,0 +1,122 @@
+{
+  "story": "Deborah",
+  "act": {
+    "id": "the_song",
+    "name": "Ch.7 · The Song",
+    "source": "../data/act7_the_song.json",
+    "svg": null,
+    "bg": "radial-gradient(circle at 50% 25%, #f6e05e, #7b5a28 72%)",
+    "particle": "dawn"
+  },
+  "beats": [
+    {
+      "id": "the_song_0",
+      "items": [
+        {
+          "id": "the_song_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Deborah and Barak sang, remembering willing leaders, courageous people, and the God who went before them.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_song_1",
+      "items": [
+        {
+          "id": "the_song_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Wake up, wake up, Deborah! Wake up, wake up, break out in song!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "deborah",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_song_2",
+      "items": [
+        {
+          "id": "the_song_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The song honoured those who answered the call and did not hide the cost borne by the land.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "the_song_3",
+      "cite": "Judges 5:1–31",
+      "items": [
+        {
+          "id": "the_song_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Then the land had peace forty years.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

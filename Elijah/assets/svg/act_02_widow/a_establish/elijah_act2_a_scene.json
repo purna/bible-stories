@@ -1,0 +1,19 @@
+{
+  "story": "Elijah",
+  "act": 2,
+  "chapter": "The Widow of Zarephath",
+  "artSource": "art/act2_widow.md",
+  "artFolder": "assets/svg/act_02_widow",
+  "sceneId": "zarephath_town",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "desert-shrub-canopy.svg",
+    "desert_sand-dunes.svg"
+  ],
+  "layers": {
+    "background": "elijah_act2_a_background.svg",
+    "middleGround": "elijah_act2_a_middle_ground.svg",
+    "foreground": "elijah_act2_a_foreground.svg"
+  }
+}

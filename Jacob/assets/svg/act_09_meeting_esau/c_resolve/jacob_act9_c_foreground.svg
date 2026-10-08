@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Resolve Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Jacob act 9 Ch.9 · Meeting Esau foreground">
+  <metadata>{&quot;story&quot;:&quot;Jacob&quot;,&quot;act&quot;:9,&quot;chapter&quot;:&quot;Ch.9 · Meeting Esau&quot;,&quot;scene&quot;:&quot;C&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;interior&quot;,&quot;seed&quot;:1}</metadata>
+  <path d="M0 1080V430 Q200 520 310 1080Z" fill="#332721"/><path d="M1920 1080V430 Q1720 520 1610 1080Z" fill="#332721"/><path d="M0 0H1920L1720 150H200Z" fill="#151313" opacity=".28"/><g opacity=".9"><path d="M0 1080V560L315 725 430 1080Z" fill="#b78457" stroke="#151313" stroke-width="12"/><path d="M0 560L315 725" stroke="#543a28" stroke-width="20"/></g>
+  </svg>

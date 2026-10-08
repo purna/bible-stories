@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "default": "nile",
+  "scenes": [
+    {
+      "id": "nile",
+      "name": "The Nile (Low Poly)",
+      "file": "nile.js",
+      "type": "module"
+    },
+    {
+      "id": "nile_hd",
+      "name": "The Nile (High Definition)",
+      "file": "nile_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-drought",
+      "name": "The Drought",
+      "file": "eiljah-drought.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-drought_hd",
+      "name": "The Drought (HD)",
+      "file": "eiljah-drought_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-widow",
+      "name": "The Widow of Zarephath",
+      "file": "eiljah-widow.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-widow_hd",
+      "name": "The Widow of Zarephath (HD)",
+      "file": "eiljah-widow_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-carmel",
+      "name": "Mount Carmel",
+      "file": "eiljah-carmel.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-carmel_hd",
+      "name": "Mount Carmel (HD)",
+      "file": "eiljah-carmel_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-flight",
+      "name": "The Flight to Horeb",
+      "file": "eiljah-flight.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-flight_hd",
+      "name": "The Flight to Horeb (HD)",
+      "file": "eiljah-flight_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-voice",
+      "name": "The Still, Small Voice",
+      "file": "eiljah-voice.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-voice_hd",
+      "name": "The Still, Small Voice (HD)",
+      "file": "eiljah-voice_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-vineyard",
+      "name": "Naboth's Vineyard",
+      "file": "eiljah-vineyard.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-vineyard_hd",
+      "name": "Naboth's Vineyard (HD)",
+      "file": "eiljah-vineyard_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-chariot",
+      "name": "The Chariot of Fire",
+      "file": "eiljah-chariot.js",
+      "type": "module"
+    },
+    {
+      "id": "eiljah-chariot_hd",
+      "name": "The Chariot of Fire (HD)",
+      "file": "eiljah-chariot_hd.js",
+      "type": "module"
+    }
+  ]
+}

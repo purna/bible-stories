@@ -1,0 +1,248 @@
+{
+  "story": "Jonah",
+  "sourceTool": "Jonah/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "water_fast",
+      "shape": "rapids",
+      "file": "water_fast-rapids.svg"
+    },
+    {
+      "key": "water_fast",
+      "shape": "churn",
+      "file": "water_fast-churn.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "calm",
+      "file": "water_still-calm.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "eddies",
+      "file": "water_still-eddies.svg"
+    },
+    {
+      "key": "wood_dark",
+      "shape": "plank",
+      "file": "wood_dark-plank.svg"
+    },
+    {
+      "key": "leaves",
+      "shape": "scatter",
+      "file": "leaves-scatter.svg"
+    },
+    {
+      "key": "leaves",
+      "shape": "canopy",
+      "file": "leaves-canopy.svg"
+    },
+    {
+      "key": "desert_sand",
+      "shape": "dunes",
+      "file": "desert_sand-dunes.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Run to the Sea",
+      "assetFolder": "act_01_ship_map",
+      "materials": [
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "The Storm",
+      "assetFolder": "act_02_whale_map",
+      "materials": [
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "wood_dark",
+          "file": "wood_dark-plank.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Into the Deep",
+      "assetFolder": "act_03_nineveh_map",
+      "materials": [
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Prayer Below",
+      "assetFolder": "act_04_figtree_map",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Second Call",
+      "assetFolder": "act_03_nineveh_map",
+      "materials": [
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "The Warning",
+      "assetFolder": "act_03_nineveh_map",
+      "materials": [
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "Nineveh Repents",
+      "assetFolder": "act_03_nineveh_map",
+      "materials": [
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        }
+      ]
+    },
+    {
+      "act": 8,
+      "title": "The Plant",
+      "assetFolder": "act_04_figtree_map",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        }
+      ]
+    },
+    {
+      "act": 9,
+      "title": "The Question",
+      "assetFolder": "act_04_figtree_map",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        }
+      ]
+    }
+  ]
+}

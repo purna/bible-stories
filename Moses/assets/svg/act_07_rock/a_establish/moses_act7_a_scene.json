@@ -1,0 +1,21 @@
+{
+  "story": "Moses",
+  "act": 7,
+  "chapter": "Ch.7 · Water from the Rock",
+  "artSource": "art/act7_rock.md",
+  "artFolder": "assets/svg/act_07_rock",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "nile_reeds-riverbank.svg",
+    "stone-rough.svg",
+    "stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act7_a_background.svg",
+    "middleGround": "moses_act7_a_middle_ground.svg",
+    "foreground": "moses_act7_a_foreground.svg"
+  }
+}

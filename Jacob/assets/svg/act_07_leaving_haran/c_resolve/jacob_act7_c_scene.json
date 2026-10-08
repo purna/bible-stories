@@ -1,0 +1,23 @@
+{
+  "story": "Jacob",
+  "act": 7,
+  "chapter": "Ch.7 · Leaving Haran",
+  "artSource": "art/act7_leaving_haran.md",
+  "artFolder": "assets/svg/act_07_leaving_haran",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "fabric_weave-basket.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "jacob_act7_c_background.svg",
+    "middleGround": "jacob_act7_c_middle_ground.svg",
+    "foreground": "jacob_act7_c_foreground.svg"
+  }
+}

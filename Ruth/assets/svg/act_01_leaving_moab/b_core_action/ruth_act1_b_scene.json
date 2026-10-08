@@ -1,0 +1,19 @@
+{
+  "story": "Ruth",
+  "act": 1,
+  "chapter": "Ch.1 · Leaving Moab",
+  "artSource": "art/act1_leaving_moab.md",
+  "artFolder": "assets/svg/act_01_leaving_moab",
+  "sceneId": "leaving_moab",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "leaves-canopy.svg",
+    "leaves-scatter.svg"
+  ],
+  "layers": {
+    "background": "ruth_act1_b_background.svg",
+    "middleGround": "ruth_act1_b_middle_ground.svg",
+    "foreground": "ruth_act1_b_foreground.svg"
+  }
+}

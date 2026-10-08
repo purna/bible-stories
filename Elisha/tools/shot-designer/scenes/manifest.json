@@ -4,74 +4,122 @@
   "scenes": [
     {
       "id": "nile",
-      "name": "The Nile – Low Poly",
+      "name": "The Nile (Low Poly)",
       "file": "nile.js",
       "type": "module"
     },
     {
       "id": "nile_hd",
-      "name": "The Nile – High Def",
+      "name": "The Nile (High Definition)",
       "file": "nile_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-basket",
-      "name": "Ch.1 · The Child in the River",
-      "file": "moses-basket.js",
+      "id": "elisha-the-mantle",
+      "name": "Ch.1 · The Mantle",
+      "file": "elisha-the-mantle.js",
       "type": "module"
     },
     {
-      "id": "moses-exile",
-      "name": "Ch.2 · Exile and the Burning Bush",
-      "file": "moses-exile.js",
+      "id": "elisha-the-mantle_hd",
+      "name": "Ch.1 · The Mantle (HD)",
+      "file": "elisha-the-mantle_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-throne",
-      "name": "Ch.3 · Before the Throne",
-      "file": "moses-throne.js",
+      "id": "elisha-the-jordan",
+      "name": "Ch.2 · The Jordan",
+      "file": "elisha-the-jordan.js",
       "type": "module"
     },
     {
-      "id": "moses-passover",
-      "name": "Ch.4 · Passover Night",
-      "file": "moses-passover.js",
+      "id": "elisha-the-jordan_hd",
+      "name": "Ch.2 · The Jordan (HD)",
+      "file": "elisha-the-jordan_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-sea",
-      "name": "Ch.5 · A Path Through the Water",
-      "file": "moses-sea.js",
+      "id": "elisha-the-widow-s-oil",
+      "name": "Ch.3 · The Widow’s Oil",
+      "file": "elisha-the-widow-s-oil.js",
       "type": "module"
     },
     {
-      "id": "moses-bread",
-      "name": "Ch.6 · Bread in the Wilderness",
-      "file": "moses-bread.js",
+      "id": "elisha-the-widow-s-oil_hd",
+      "name": "Ch.3 · The Widow’s Oil (HD)",
+      "file": "elisha-the-widow-s-oil_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-mountain",
-      "name": "Ch.7 · Thunder on Sinai",
-      "file": "moses-mountain.js",
+      "id": "elisha-the-shunammite-room",
+      "name": "Ch.4 · The Shunammite Room",
+      "file": "elisha-the-shunammite-room.js",
       "type": "module"
     },
     {
-      "id": "moses-calf",
-      "name": "Ch.8 · The Broken Tablets",
-      "file": "moses-calf.js",
+      "id": "elisha-the-shunammite-room_hd",
+      "name": "Ch.4 · The Shunammite Room (HD)",
+      "file": "elisha-the-shunammite-room_hd.js",
       "type": "module"
     },
     {
-      "id": "moses-wilderness",
-      "name": "Ch.9 · The Long Wilderness",
-      "file": "moses-wilderness.js",
+      "id": "elisha-the-child",
+      "name": "Ch.5 · The Child",
+      "file": "elisha-the-child.js",
       "type": "module"
     },
     {
-      "id": "moses-nebo",
-      "name": "Ch.10 · The Land from Afar",
-      "file": "moses-nebo.js",
+      "id": "elisha-the-child_hd",
+      "name": "Ch.5 · The Child (HD)",
+      "file": "elisha-the-child_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "elisha-naaman",
+      "name": "Ch.6 · Naaman",
+      "file": "elisha-naaman.js",
+      "type": "module"
+    },
+    {
+      "id": "elisha-naaman_hd",
+      "name": "Ch.6 · Naaman (HD)",
+      "file": "elisha-naaman_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "elisha-the-floating-axe",
+      "name": "Ch.7 · The Floating Axe",
+      "file": "elisha-the-floating-axe.js",
+      "type": "module"
+    },
+    {
+      "id": "elisha-the-floating-axe_hd",
+      "name": "Ch.7 · The Floating Axe (HD)",
+      "file": "elisha-the-floating-axe_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "elisha-the-unseen-army",
+      "name": "Ch.8 · The Unseen Army",
+      "file": "elisha-the-unseen-army.js",
+      "type": "module"
+    },
+    {
+      "id": "elisha-the-unseen-army_hd",
+      "name": "Ch.8 · The Unseen Army (HD)",
+      "file": "elisha-the-unseen-army_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "elisha-a-blind-feast",
+      "name": "Ch.9 · A Blind Feast",
+      "file": "elisha-a-blind-feast.js",
+      "type": "module"
+    },
+    {
+      "id": "elisha-a-blind-feast_hd",
+      "name": "Ch.9 · A Blind Feast (HD)",
+      "file": "elisha-a-blind-feast_hd.js",
       "type": "module"
     }
   ]

@@ -1,0 +1,22 @@
+{
+  "story": "Ruth",
+  "act": 4,
+  "chapter": "Ch.4 · Boaz Notices",
+  "artSource": "art/act4_boaz_notices.md",
+  "artFolder": "assets/svg/act_04_boaz_notices",
+  "sceneId": "boaz_notices",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "grass-tufts.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg"
+  ],
+  "layers": {
+    "background": "ruth_act4_c_background.svg",
+    "middleGround": "ruth_act4_c_middle_ground.svg",
+    "foreground": "ruth_act4_c_foreground.svg"
+  }
+}

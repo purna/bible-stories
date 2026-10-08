@@ -1,11 +1,11 @@
 /* =========================================================================
-   MOSES — Interactive Comic Book (Adam-pattern layered renderer)
+   THE BOOK OF MOSES — Interactive Comic Book (layered renderer)
    Stack per frame:
      1. SVG background  (assets/svg/actN_scene_<id>.svg) — parallax via mouse
-     2. Three.js midground (assets/3d/actN_<id>.json + assets/scenes/actN_<id>.js factory)
-     3. SVG foreground  (assets/svg/fg_<id>.svg) — pops in front of midground
-     4. Character SVG + speech/caption overlay (from content-overlay)
-   Story data: loaded from data/manifest.json → data/actN_<id>.json (one per act)
+     2. Three.js midground (assets/scenes/actN_<id>.js factory)
+     3. SVG foreground  (assets/svg/fg_<id>.svg)
+     4. Character SVG + speech/caption overlay
+   Story data: loaded from data/manifest.json → data/actN_<id>.json
    ========================================================================= */
 
 /* ── STATE ───────────────────────────────────── */
@@ -28,14 +28,9 @@ const audio = new AudioManager();
 
 /* ── Character portraits ─────────────────────── */
 const CHARACTER_KEYS = {
-  moses: 'moses', moses_young: 'moses_young', aaron: 'aaron',
-  miriam: 'miriam', pharaoh: 'pharaoh', pharaohs_daughter: 'pharaohs_daughter',
-  zipporah: 'zipporah', jethro: 'jethro',
-  joshua: 'joshua', caleb: 'caleb',
-  israelite_elder: 'israelite_elder', israelite_woman: 'israelite_woman',
-  egyptian_overseer: 'egyptian_overseer',
-  korah: 'korah', balaam: 'balaam',
-  god: null, burning_bush: null, narrator: null
+  moses:'moses', naomi:'naomi', orpah:'orpah', boaz:'boaz',
+  kinsman_redeemer:'kinsman_redeemer', field_overseer:'field_overseer',
+  bethlehem_woman:'bethlehem_woman', obed:'obed', narrator:null, god:null
 };
 const charCache = {};
 async function loadCharacter(key) {
@@ -73,7 +68,7 @@ async function loadSvg(path) {
   return svgCache[path];
 }
 
-/* ── Parallax (Adam-style) ───────────────────── */
+/* ── Parallax ───────────────────────────────── */
 function initParallax(svgEl, container) {
   const layers = Array.from(svgEl.querySelectorAll('[data-depth]'));
   let active = false;
@@ -144,23 +139,7 @@ function tick3D(time) {
 }
 
 function currentAct() { return STORY[actIdx]; }
-
-/* ── Expose state to admin tooling (edit-mode, external hooks) ── */
-window.__comic = {
-  storyId: 'moses',
-  currentAct,
-  getScene: () => ({
-    actId: currentAct() && currentAct().id,
-    lineIdx,
-    lineId: currentAct() && currentAct().lines[lineIdx] && currentAct().lines[lineIdx].id,
-    line: currentAct() && currentAct().lines[lineIdx],
-    reRender: renderLine
-  }),
-  prevLine: () => goLine(-1),
-  nextLine: () => goLine(1),
-  prevChapter: () => { const i = actIdx; if (i > 0) jumpToChapter(i - 1); },
-  nextChapter: () => goNextChapter()
-};
+window.__comic = { currentAct };
 
 /* ── Principal panel asset selection ─────────── */
 function sceneBeat(act) {
@@ -170,7 +149,9 @@ function sceneBeat(act) {
 }
 function sceneAssetPath(act, layer) {
   const beat = sceneBeat(act);
-  return `assets/svg/${act.assetFolder}/${beat.folder}/${act.assetStem}_${beat.id}_${layer}.svg`;
+  const layerKey = layer === 'middle_ground' ? 'middleGround' : layer;
+  const linked = act.sceneLayers && act.sceneLayers[beat.folder] && act.sceneLayers[beat.folder][layerKey];
+  return linked || `assets/svg/${act.assetFolder}/${beat.folder}/${act.assetStem}_${beat.id}_${layer}.svg`;
 }
 
 /* ── Dot progress bar ───────────────────────── */
@@ -252,82 +233,13 @@ function updateNextBtn() {
 function applyAtmosphere(act) {
   const id = act.id;
   const particle = act.particle || 'dusk';
-  el('#rainLayer').classList.toggle('active', id !== 'sea' && particle !== 'flood');
-  el('#seaLayer').classList.toggle('active', id === 'sea' || particle === 'flood');
-  el('#fireLayer').classList.toggle('active', id === 'exile' || id === 'throne');
-  el('#thunderLayer').classList.toggle('active', id === 'mountain' || particle === 'storm');
-  const isDawn = id === 'basket' || id === 'nebo' || particle === 'dawn';
-  const isLand = id === 'nebo';
+  el('#rainLayer').classList.toggle('active', true);
+  el('#seaLayer').classList.toggle('active', false);
+  el('#fireLayer').classList.toggle('active', id === 'threshing_floor');
+  el('#thunderLayer').classList.toggle('active', false);
+  const isDawn = id === 'gleaning' || id === 'boaz_notices' || id === 'at_the_gate' || id === 'redeemed' || id === 'obed';
   el('#ambientLayer').classList.toggle('active', isDawn);
-  el('#ambientLayer').classList.toggle('land', isLand);
-}
-
-/* ── Sea-walk interaction (Ch 5) ────────────── */
-function buildSeaWalkOverlay() {
-  const overlay = document.createElement('section');
-  overlay.className = 'sea-walk-overlay';
-  overlay.setAttribute('role', 'dialog');
-  overlay.setAttribute('aria-modal', 'true');
-  overlay.innerHTML = `
-    <div class="sea-walk-panel">
-      <span class="sea-walk-kicker">CROSSING · A PATH THROUGH THE WATER</span>
-      <h3 class="sea-walk-title">Hold the staff up</h3>
-      <p class="sea-walk-prompt">Moses stretches out his hand. The waters stand like walls on either side. Press and hold the staff until the people have walked through.</p>
-      <p class="sea-walk-status" data-sea-walk-status role="status" aria-live="polite">Hold the staff — the walls of water will not last forever.</p>
-      <div class="sea-walk-stage">
-        <div class="sea-walk-path"></div>
-        <div class="sea-walk-crowd" data-sea-walk-crowd>🚶‍♀️🚶🚶‍♂️</div>
-      </div>
-      <button type="button" class="sea-walk-staff" data-sea-walk-staff aria-label="Hold the staff up">🪄 Hold the staff</button>
-    </div>
-  `;
-  return overlay;
-}
-function startSeaWalk(container) {
-  const staff = container.querySelector('[data-sea-walk-staff]');
-  const crowd = container.querySelector('[data-sea-walk-crowd]');
-  const status = container.querySelector('[data-sea-walk-status]');
-  let progress = 0, holding = false, timer = null;
-  function setStatus(text, done = false) {
-    status.textContent = text;
-    status.classList.toggle('done', done);
-  }
-  function tick() {
-    if (!holding) return;
-    progress = Math.min(100, progress + 1.4);
-    crowd.style.transform = `translate(calc(-50% + ${(progress - 50) * 6}px), -50%)`;
-    setStatus(`The people walk through the sea — ${Math.round(progress)}% across.`);
-    if (progress >= 100) finish();
-  }
-  function startHold(event) {
-    event.preventDefault();
-    holding = true; staff.classList.add('holding'); staff.textContent = '🪄 Holding…';
-    timer = setInterval(tick, 50);
-  }
-  function endHold(event) {
-    event && event.preventDefault();
-    holding = false; staff.classList.remove('holding'); staff.textContent = '🪄 Hold the staff';
-    if (timer) clearInterval(timer); timer = null;
-  }
-  function finish() {
-    endHold();
-    setStatus('The people are safe on the other side. 🌅', true);
-    staff.disabled = true; staff.textContent = '✓ They have crossed';
-    setTimeout(() => { cleanup(); container.remove(); }, 900);
-  }
-  function cleanup() {
-    endHold();
-    document.removeEventListener('keyup', () => {});
-    if (window.StoryRuntime) StoryRuntime.unlock('sea-walk');
-  }
-  staff.addEventListener('mousedown', startHold);
-  staff.addEventListener('mouseup', endHold);
-  staff.addEventListener('mouseleave', endHold);
-  staff.addEventListener('touchstart', startHold, { passive: false });
-  staff.addEventListener('touchend', endHold, { passive: false });
-  if (window.StoryRuntime) StoryRuntime.setMode('game', { lock: 'sea-walk' });
-  setStatus('Hold the staff — the walls of water will not last forever.');
-  staff.focus();
+  el('#ambientLayer').classList.toggle('land', id === 'your_people');
 }
 
 /* ── Main render (layered: SVG bg → 3D → SVG fg → overlay) ──── */
@@ -341,6 +253,16 @@ async function renderLine() {
   const act = currentAct();
   const sceneKey = act.scene || act.id;
   const data = act.lines[lineIdx];
+    if (Array.isArray(data.items) && data.items.length) {
+        const primary = data.items.find(item => !item.sfx) || data.items[0];
+        const firstSfx = data.items.find(item => item.sfx);
+        data.speaker = primary.speaker || 'narrator'; data.text = primary.sfx ? '' : (primary.text || '');
+        data.sfx = firstSfx ? firstSfx.text : '';
+        data.fx = primary.entryFx || 'fade';
+        data.delay = Math.min(...data.items.map(item => Number(item.delay) || 0));
+        data.align = primary.align || 'center'; data.width = primary.width || '1/2'
+    }
+
   audio.playLineSfx(data);
   audio.playAct(act);
 
@@ -366,7 +288,15 @@ async function renderLine() {
     initParallax(svgEl, svgLayer);
   }
 
-  // Layer 2: 3D midground (Three.js)
+  // Layer 2: SVG middle ground; optional character staging sits between the setting and 3D.
+  const middleLayer = document.createElement('div');
+  middleLayer.id = 'midLayer';
+  middleLayer.classList.add('svg-middle');
+  middleLayer.innerHTML = await loadSvg(sceneAssetPath(act, 'middle_ground'));
+  graphicContainer.appendChild(middleLayer);
+
+  // Layer 3: 3D scene objects
+  // Layer 3: 3D scene (Three.js)
   if (use3D && renderer && threeCanvas && window.SCENE_FACTORIES && window.SCENE_FACTORIES[sceneKey]) {
     graphicContainer.classList.add('canvas-mode');
     if (threeCanvas.parentNode) threeCanvas.parentNode.removeChild(threeCanvas);
@@ -393,22 +323,13 @@ async function renderLine() {
   overlay.appendChild(delayNote);
 
   const lineDelay = data.delay || 800;
-  setTimeout(async () => {
-    const boxType = (data.speaker === 'narrator' || data.speaker === 'god' || data.speaker === 'burning_bush') ? 'caption' : 'bubble';
-    const ov = window.EditMode ? EditMode.overridesFor(act.id, data.id, boxType) : {};
-    const effText = ov.text != null ? ov.text : data.text;
-    const effSpeaker = ov.speaker != null ? ov.speaker : data.speaker;
-    const effFx = ov.fx || data.fx;
-    const effAlign = ov.align || data.align || 'center';
-
-    if (effSpeaker && effSpeaker !== 'narrator' && effSpeaker !== 'god' && effSpeaker !== 'burning_bush') {
-      const charSvg = await loadCharacter(effSpeaker);
+    setTimeout(async () => {
+    if (data.speaker && data.speaker !== 'narrator' && data.speaker !== 'god' && CHARACTER_KEYS[data.speaker]) {
+      const charSvg = await loadCharacter(data.speaker);
       if (charSvg) {
         const charBox = document.createElement('div');
-         charBox.className = 'char-container';
-         if (effAlign === 'right') charBox.classList.add('right');
-         charBox.setAttribute('data-line-id', data.id);
-         if (window.EditMode) EditMode.tagBox(charBox, 'char');
+        charBox.className = 'char-container';
+        if (data.align === 'right') charBox.classList.add('right');
         charBox.innerHTML = charSvg;
         overlay.appendChild(charBox);
       }
@@ -417,26 +338,27 @@ async function renderLine() {
       const sfxDiv = document.createElement('div');
       sfxDiv.className = 'sfx fx-bounce';
       sfxDiv.innerHTML = buildLineHTML(data.sfx, 'sfx');
-      sfxDiv.setAttribute('data-line-id', data.id);
-      if (window.EditMode) EditMode.tagBox(sfxDiv, 'sfx');
       overlay.appendChild(sfxDiv);
     }
     if (data.text) {
-      if (effSpeaker === 'narrator' || effSpeaker === 'god' || effSpeaker === 'burning_bush') {
+      if (data.speaker === 'narrator' || data.speaker === 'god') {
+        const width = data.width || '1/2';
+        const widthStyle = `--bubble-width: ${width};`;
         const cap = document.createElement('div');
-        cap.className = 'caption fx-' + effFx + ' caption-' + effAlign;
-        cap.innerHTML = buildLineHTML(effText, effFx);
-        cap.setAttribute('data-line-id', data.id);
-        if (window.EditMode) EditMode.tagBox(cap, 'caption');
+        cap.className = `caption fx-${data.fx} caption-${data.align || 'center'}`;
+        cap.style.cssText = widthStyle;
+        cap.innerHTML = buildLineHTML(data.text, data.fx);
         overlay.appendChild(cap);
       } else {
+        const align = data.align || 'center';
+        const width = data.width || '1/2';
+        const widthStyle = `--bubble-width: ${width};`;
         const wrap = document.createElement('div');
-        wrap.className = 'bubble-wrap align-' + effAlign;
+        wrap.className = `bubble-wrap align-${align}`;
+        wrap.style.cssText = widthStyle;
         const bub = document.createElement('div');
-        bub.className = 'bubble ' + effSpeaker + ' fx-' + effFx + ' bubble-' + effAlign;
-        bub.innerHTML = buildLineHTML(effText, effFx);
-        wrap.setAttribute('data-line-id', data.id);
-        if (window.EditMode) EditMode.tagBox(wrap, 'bubble');
+        bub.className = `bubble ${data.speaker} fx-${data.fx} bubble-${align}`;
+        bub.innerHTML = buildLineHTML(data.text, data.fx);
         wrap.appendChild(bub);
         overlay.appendChild(wrap);
       }
@@ -446,14 +368,6 @@ async function renderLine() {
       cite.style.cssText = 'font-family:"Space Mono",monospace;font-size:10px;color:rgba(255,255,255,.45);text-align:center;position:absolute;bottom:6px;left:0;right:0;z-index:5;';
       cite.textContent = '— ' + data.cite;
       frame.appendChild(cite);
-    }
-    if (data.interaction === 'sea-walk') {
-      nextBtn.classList.remove('show');
-      nextLineBtn.classList.remove('show');
-      const overlayEl = buildSeaWalkOverlay();
-      frame.appendChild(overlayEl);
-      startSeaWalk(overlayEl);
-      return;
     }
     const wordEls = overlay.querySelectorAll('.word');
     const delays = { bounce: 60, sfx: 60, type: 120, wave: 10, fade: 18 };
@@ -575,7 +489,6 @@ window.addEventListener('keydown', e => {
   if (window.StoryRuntime && !StoryRuntime.allowsNavigation(e)) return;
   if (e.code === 'ArrowRight' || e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); goLine(1); }
   if (e.code === 'ArrowLeft') goLine(-1);
-  if (e.code === 'ArrowDown') goNextChapter();
 });
 
 el('#startBtn').addEventListener('click', async () => {
@@ -587,11 +500,13 @@ el('#startBtn').addEventListener('click', async () => {
 /* ── Boot: fetch manifest, load all act JSON, preload ── */
 async function boot() {
   initThree();
-  const res = await fetch('data/manifest.json');
+  const res = await fetch(`data/manifest.json?v=${Date.now()}`, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`data/manifest.json returned ${res.status}`);
   const manifest = await res.json();
   STORY = await Promise.all(manifest.acts.map(async act => {
-    const r = await fetch(`data/${act.file}`);
-    return Object.assign(act, await r.json());
+    const r = await fetch(`data/${act.file}?v=${Date.now()}`, { cache: 'no-store' });
+    if (!r.ok) throw new Error(`data/${act.file} returned ${r.status}`);
+     return Object.assign(act, await r.json());
   }));
   audio.preloadStory(STORY);
   await loadSvg('assets/svg/scene_placeholder.svg');

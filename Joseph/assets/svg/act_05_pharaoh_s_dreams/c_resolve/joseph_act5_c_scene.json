@@ -1,0 +1,20 @@
+{
+  "story": "Joseph",
+  "act": 5,
+  "chapter": "Ch.5 · Pharaoh’s Dreams",
+  "artSource": "art/act5_pharaoh_s_dreams.md",
+  "artFolder": "assets/svg/act_05_pharaoh_s_dreams",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "mosaic-chips.svg",
+    "mosaic-grid.svg"
+  ],
+  "layers": {
+    "background": "joseph_act5_c_background.svg",
+    "middleGround": "joseph_act5_c_middle_ground.svg",
+    "foreground": "joseph_act5_c_foreground.svg"
+  }
+}

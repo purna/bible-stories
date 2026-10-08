@@ -1,0 +1,122 @@
+{
+  "story": "Deborah",
+  "act": {
+    "id": "jaels_choice",
+    "name": "Ch.6 · Jael’s Choice",
+    "source": "../data/act6_jaels_choice.json",
+    "svg": null,
+    "bg": "radial-gradient(circle at 50% 30%, #8a6948, #181821 74%)",
+    "particle": "ember"
+  },
+  "beats": [
+    {
+      "id": "jaels_choice_0",
+      "items": [
+        {
+          "id": "jaels_choice_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jael welcomed Sisera, covered him, and gave him milk when he asked for water.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "jaels_choice_1",
+      "items": [
+        {
+          "id": "jaels_choice_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Stand in the doorway. If anyone asks whether a man is here, say no.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "sisera",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "jaels_choice_2",
+      "items": [
+        {
+          "id": "jaels_choice_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "When he slept, Jael made a grave and decisive choice that ended the commander’s threat.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "jaels_choice_3",
+      "cite": "Judges 4:18–22",
+      "items": [
+        {
+          "id": "jaels_choice_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jael went out to meet Barak and showed him that Sisera’s power was finished.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1040 @@
+{
+  "story": "Moses",
+  "assetsRoot": "assets/svg/",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "layers": [
+    "background",
+    "middle-ground",
+    "foreground"
+  ],
+  "panelFolders": [
+    "a_establish",
+    "b_core_action",
+    "c_resolve"
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "Ch.1 · The Child in the River",
+      "sceneId": "placeholder",
+      "artSource": "art/act1_basket.md",
+      "assetFolder": "act_01_basket",
+      "artFolder": "assets/svg/act_01_basket",
+      "assetStem": "moses_act1",
+      "materials": [
+        "assets/materials/nile_reeds-riverbank.svg"
+      ],
+      "materialKeys": [
+        "nile_reeds"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_01_basket/a_establish",
+          "layers": {
+            "background": "assets/svg/act_01_basket/a_establish/moses_act1_a_background.svg",
+            "middleGround": "assets/svg/act_01_basket/a_establish/moses_act1_a_middle_ground.svg",
+            "foreground": "assets/svg/act_01_basket/a_establish/moses_act1_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_01_basket/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_01_basket/b_core_action/moses_act1_b_background.svg",
+            "middleGround": "assets/svg/act_01_basket/b_core_action/moses_act1_b_middle_ground.svg",
+            "foreground": "assets/svg/act_01_basket/b_core_action/moses_act1_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_01_basket/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_01_basket/c_resolve/moses_act1_c_background.svg",
+            "middleGround": "assets/svg/act_01_basket/c_resolve/moses_act1_c_middle_ground.svg",
+            "foreground": "assets/svg/act_01_basket/c_resolve/moses_act1_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_01_basket/a_establish/moses_act1_a_background.svg",
+          "middleGround": "assets/svg/act_01_basket/a_establish/moses_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act_01_basket/a_establish/moses_act1_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_01_basket/b_core_action/moses_act1_b_background.svg",
+          "middleGround": "assets/svg/act_01_basket/b_core_action/moses_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act_01_basket/b_core_action/moses_act1_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_01_basket/c_resolve/moses_act1_c_background.svg",
+          "middleGround": "assets/svg/act_01_basket/c_resolve/moses_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act_01_basket/c_resolve/moses_act1_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 2,
+      "title": "Ch.2 · The Burning Bush",
+      "sceneId": "placeholder",
+      "artSource": "art/act2_exile.md",
+      "assetFolder": "act_02_exile",
+      "artFolder": "assets/svg/act_02_exile",
+      "assetStem": "moses_act2",
+      "materials": [
+        "assets/materials/nile_reeds-riverbank.svg",
+        "assets/materials/desert_sand-dunes.svg"
+      ],
+      "materialKeys": [
+        "nile_reeds",
+        "desert_sand"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_02_exile/a_establish",
+          "layers": {
+            "background": "assets/svg/act_02_exile/a_establish/moses_act2_a_background.svg",
+            "middleGround": "assets/svg/act_02_exile/a_establish/moses_act2_a_middle_ground.svg",
+            "foreground": "assets/svg/act_02_exile/a_establish/moses_act2_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_02_exile/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_02_exile/b_core_action/moses_act2_b_background.svg",
+            "middleGround": "assets/svg/act_02_exile/b_core_action/moses_act2_b_middle_ground.svg",
+            "foreground": "assets/svg/act_02_exile/b_core_action/moses_act2_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_02_exile/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_02_exile/c_resolve/moses_act2_c_background.svg",
+            "middleGround": "assets/svg/act_02_exile/c_resolve/moses_act2_c_middle_ground.svg",
+            "foreground": "assets/svg/act_02_exile/c_resolve/moses_act2_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_02_exile/a_establish/moses_act2_a_background.svg",
+          "middleGround": "assets/svg/act_02_exile/a_establish/moses_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act_02_exile/a_establish/moses_act2_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_02_exile/b_core_action/moses_act2_b_background.svg",
+          "middleGround": "assets/svg/act_02_exile/b_core_action/moses_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act_02_exile/b_core_action/moses_act2_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_02_exile/c_resolve/moses_act2_c_background.svg",
+          "middleGround": "assets/svg/act_02_exile/c_resolve/moses_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act_02_exile/c_resolve/moses_act2_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 3,
+      "title": "Ch.3 · Before the Throne",
+      "sceneId": "placeholder",
+      "artSource": "art/act3_throne.md",
+      "assetFolder": "act_03_throne",
+      "artFolder": "assets/svg/act_03_throne",
+      "assetStem": "moses_act3",
+      "materials": [
+        "assets/materials/egypt_mud_brick-stretcher.svg",
+        "assets/materials/nile_reeds-riverbank.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "egypt_mud_brick",
+        "nile_reeds",
+        "hammered_gold",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_03_throne/a_establish",
+          "layers": {
+            "background": "assets/svg/act_03_throne/a_establish/moses_act3_a_background.svg",
+            "middleGround": "assets/svg/act_03_throne/a_establish/moses_act3_a_middle_ground.svg",
+            "foreground": "assets/svg/act_03_throne/a_establish/moses_act3_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_03_throne/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_03_throne/b_core_action/moses_act3_b_background.svg",
+            "middleGround": "assets/svg/act_03_throne/b_core_action/moses_act3_b_middle_ground.svg",
+            "foreground": "assets/svg/act_03_throne/b_core_action/moses_act3_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_03_throne/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_03_throne/c_resolve/moses_act3_c_background.svg",
+            "middleGround": "assets/svg/act_03_throne/c_resolve/moses_act3_c_middle_ground.svg",
+            "foreground": "assets/svg/act_03_throne/c_resolve/moses_act3_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_03_throne/a_establish/moses_act3_a_background.svg",
+          "middleGround": "assets/svg/act_03_throne/a_establish/moses_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act_03_throne/a_establish/moses_act3_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_03_throne/b_core_action/moses_act3_b_background.svg",
+          "middleGround": "assets/svg/act_03_throne/b_core_action/moses_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act_03_throne/b_core_action/moses_act3_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_03_throne/c_resolve/moses_act3_c_background.svg",
+          "middleGround": "assets/svg/act_03_throne/c_resolve/moses_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act_03_throne/c_resolve/moses_act3_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 4,
+      "title": "Ch.4 · Passover Night",
+      "sceneId": "placeholder",
+      "artSource": "art/act4_passover.md",
+      "assetFolder": "act_04_passover",
+      "artFolder": "assets/svg/act_04_passover",
+      "assetStem": "moses_act4",
+      "materials": [
+        "assets/materials/egypt_mud_brick-stretcher.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "egypt_mud_brick",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_04_passover/a_establish",
+          "layers": {
+            "background": "assets/svg/act_04_passover/a_establish/moses_act4_a_background.svg",
+            "middleGround": "assets/svg/act_04_passover/a_establish/moses_act4_a_middle_ground.svg",
+            "foreground": "assets/svg/act_04_passover/a_establish/moses_act4_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_04_passover/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_04_passover/b_core_action/moses_act4_b_background.svg",
+            "middleGround": "assets/svg/act_04_passover/b_core_action/moses_act4_b_middle_ground.svg",
+            "foreground": "assets/svg/act_04_passover/b_core_action/moses_act4_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_04_passover/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_04_passover/c_resolve/moses_act4_c_background.svg",
+            "middleGround": "assets/svg/act_04_passover/c_resolve/moses_act4_c_middle_ground.svg",
+            "foreground": "assets/svg/act_04_passover/c_resolve/moses_act4_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_04_passover/a_establish/moses_act4_a_background.svg",
+          "middleGround": "assets/svg/act_04_passover/a_establish/moses_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act_04_passover/a_establish/moses_act4_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_04_passover/b_core_action/moses_act4_b_background.svg",
+          "middleGround": "assets/svg/act_04_passover/b_core_action/moses_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act_04_passover/b_core_action/moses_act4_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_04_passover/c_resolve/moses_act4_c_background.svg",
+          "middleGround": "assets/svg/act_04_passover/c_resolve/moses_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act_04_passover/c_resolve/moses_act4_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 5,
+      "title": "Ch.5 · Through the Sea",
+      "sceneId": "placeholder",
+      "artSource": "art/act5_sea.md",
+      "assetFolder": "act_05_sea",
+      "artFolder": "assets/svg/act_05_sea",
+      "assetStem": "moses_act5",
+      "materials": [
+        "assets/materials/egypt_mud_brick-stretcher.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "egypt_mud_brick",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_05_sea/a_establish",
+          "layers": {
+            "background": "assets/svg/act_05_sea/a_establish/moses_act5_a_background.svg",
+            "middleGround": "assets/svg/act_05_sea/a_establish/moses_act5_a_middle_ground.svg",
+            "foreground": "assets/svg/act_05_sea/a_establish/moses_act5_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_05_sea/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_05_sea/b_core_action/moses_act5_b_background.svg",
+            "middleGround": "assets/svg/act_05_sea/b_core_action/moses_act5_b_middle_ground.svg",
+            "foreground": "assets/svg/act_05_sea/b_core_action/moses_act5_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_05_sea/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_05_sea/c_resolve/moses_act5_c_background.svg",
+            "middleGround": "assets/svg/act_05_sea/c_resolve/moses_act5_c_middle_ground.svg",
+            "foreground": "assets/svg/act_05_sea/c_resolve/moses_act5_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_05_sea/a_establish/moses_act5_a_background.svg",
+          "middleGround": "assets/svg/act_05_sea/a_establish/moses_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act_05_sea/a_establish/moses_act5_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_05_sea/b_core_action/moses_act5_b_background.svg",
+          "middleGround": "assets/svg/act_05_sea/b_core_action/moses_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act_05_sea/b_core_action/moses_act5_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_05_sea/c_resolve/moses_act5_c_background.svg",
+          "middleGround": "assets/svg/act_05_sea/c_resolve/moses_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act_05_sea/c_resolve/moses_act5_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 6,
+      "title": "Ch.6 · Bread in the Wilderness",
+      "sceneId": "placeholder",
+      "artSource": "art/act6_bread.md",
+      "assetFolder": "act_06_bread",
+      "artFolder": "assets/svg/act_06_bread",
+      "assetStem": "moses_act6",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg"
+      ],
+      "materialKeys": [
+        "desert_sand"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_06_bread/a_establish",
+          "layers": {
+            "background": "assets/svg/act_06_bread/a_establish/moses_act6_a_background.svg",
+            "middleGround": "assets/svg/act_06_bread/a_establish/moses_act6_a_middle_ground.svg",
+            "foreground": "assets/svg/act_06_bread/a_establish/moses_act6_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_06_bread/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_06_bread/b_core_action/moses_act6_b_background.svg",
+            "middleGround": "assets/svg/act_06_bread/b_core_action/moses_act6_b_middle_ground.svg",
+            "foreground": "assets/svg/act_06_bread/b_core_action/moses_act6_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_06_bread/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_06_bread/c_resolve/moses_act6_c_background.svg",
+            "middleGround": "assets/svg/act_06_bread/c_resolve/moses_act6_c_middle_ground.svg",
+            "foreground": "assets/svg/act_06_bread/c_resolve/moses_act6_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_06_bread/a_establish/moses_act6_a_background.svg",
+          "middleGround": "assets/svg/act_06_bread/a_establish/moses_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act_06_bread/a_establish/moses_act6_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_06_bread/b_core_action/moses_act6_b_background.svg",
+          "middleGround": "assets/svg/act_06_bread/b_core_action/moses_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act_06_bread/b_core_action/moses_act6_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_06_bread/c_resolve/moses_act6_c_background.svg",
+          "middleGround": "assets/svg/act_06_bread/c_resolve/moses_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act_06_bread/c_resolve/moses_act6_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 7,
+      "title": "Ch.7 · Water from the Rock",
+      "sceneId": "placeholder",
+      "artSource": "art/act7_rock.md",
+      "assetFolder": "act_07_rock",
+      "artFolder": "assets/svg/act_07_rock",
+      "assetStem": "moses_act7",
+      "materials": [
+        "assets/materials/nile_reeds-riverbank.svg",
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "nile_reeds",
+        "desert_sand",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_07_rock/a_establish",
+          "layers": {
+            "background": "assets/svg/act_07_rock/a_establish/moses_act7_a_background.svg",
+            "middleGround": "assets/svg/act_07_rock/a_establish/moses_act7_a_middle_ground.svg",
+            "foreground": "assets/svg/act_07_rock/a_establish/moses_act7_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_07_rock/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_07_rock/b_core_action/moses_act7_b_background.svg",
+            "middleGround": "assets/svg/act_07_rock/b_core_action/moses_act7_b_middle_ground.svg",
+            "foreground": "assets/svg/act_07_rock/b_core_action/moses_act7_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_07_rock/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_07_rock/c_resolve/moses_act7_c_background.svg",
+            "middleGround": "assets/svg/act_07_rock/c_resolve/moses_act7_c_middle_ground.svg",
+            "foreground": "assets/svg/act_07_rock/c_resolve/moses_act7_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_07_rock/a_establish/moses_act7_a_background.svg",
+          "middleGround": "assets/svg/act_07_rock/a_establish/moses_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act_07_rock/a_establish/moses_act7_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_07_rock/b_core_action/moses_act7_b_background.svg",
+          "middleGround": "assets/svg/act_07_rock/b_core_action/moses_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act_07_rock/b_core_action/moses_act7_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_07_rock/c_resolve/moses_act7_c_background.svg",
+          "middleGround": "assets/svg/act_07_rock/c_resolve/moses_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act_07_rock/c_resolve/moses_act7_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 8,
+      "title": "Ch.8 · Jethro's Counsel",
+      "sceneId": "placeholder",
+      "artSource": "art/act8_jethro.md",
+      "assetFolder": "act_08_jethro",
+      "artFolder": "assets/svg/act_08_jethro",
+      "assetStem": "moses_act8",
+      "materials": [
+        "assets/materials/nile_reeds-riverbank.svg",
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/bulrush_basket-woven.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "nile_reeds",
+        "desert_sand",
+        "bulrush_basket",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_08_jethro/a_establish",
+          "layers": {
+            "background": "assets/svg/act_08_jethro/a_establish/moses_act8_a_background.svg",
+            "middleGround": "assets/svg/act_08_jethro/a_establish/moses_act8_a_middle_ground.svg",
+            "foreground": "assets/svg/act_08_jethro/a_establish/moses_act8_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_08_jethro/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_background.svg",
+            "middleGround": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_middle_ground.svg",
+            "foreground": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_08_jethro/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_background.svg",
+            "middleGround": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_middle_ground.svg",
+            "foreground": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_08_jethro/a_establish/moses_act8_a_background.svg",
+          "middleGround": "assets/svg/act_08_jethro/a_establish/moses_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act_08_jethro/a_establish/moses_act8_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_background.svg",
+          "middleGround": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_background.svg",
+          "middleGround": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 9,
+      "title": "Ch.9 · Thunder on Sinai",
+      "sceneId": "placeholder",
+      "artSource": "art/act9_mountain.md",
+      "assetFolder": "act_09_mountain",
+      "artFolder": "assets/svg/act_09_mountain",
+      "assetStem": "moses_act9",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "desert_sand",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_09_mountain/a_establish",
+          "layers": {
+            "background": "assets/svg/act_09_mountain/a_establish/moses_act9_a_background.svg",
+            "middleGround": "assets/svg/act_09_mountain/a_establish/moses_act9_a_middle_ground.svg",
+            "foreground": "assets/svg/act_09_mountain/a_establish/moses_act9_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_09_mountain/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_background.svg",
+            "middleGround": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_middle_ground.svg",
+            "foreground": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_09_mountain/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_background.svg",
+            "middleGround": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_middle_ground.svg",
+            "foreground": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_09_mountain/a_establish/moses_act9_a_background.svg",
+          "middleGround": "assets/svg/act_09_mountain/a_establish/moses_act9_a_middle_ground.svg",
+          "foreground": "assets/svg/act_09_mountain/a_establish/moses_act9_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_background.svg",
+          "middleGround": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_middle_ground.svg",
+          "foreground": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_background.svg",
+          "middleGround": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_middle_ground.svg",
+          "foreground": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 10,
+      "title": "Ch.10 · The Golden Calf",
+      "sceneId": "placeholder",
+      "artSource": "art/act10_calf.md",
+      "assetFolder": "act_10_calf",
+      "artFolder": "assets/svg/act_10_calf",
+      "assetStem": "moses_act10",
+      "materials": [
+        "assets/materials/nile_reeds-riverbank.svg",
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "nile_reeds",
+        "desert_sand",
+        "hammered_gold",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_10_calf/a_establish",
+          "layers": {
+            "background": "assets/svg/act_10_calf/a_establish/moses_act10_a_background.svg",
+            "middleGround": "assets/svg/act_10_calf/a_establish/moses_act10_a_middle_ground.svg",
+            "foreground": "assets/svg/act_10_calf/a_establish/moses_act10_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_10_calf/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_10_calf/b_core_action/moses_act10_b_background.svg",
+            "middleGround": "assets/svg/act_10_calf/b_core_action/moses_act10_b_middle_ground.svg",
+            "foreground": "assets/svg/act_10_calf/b_core_action/moses_act10_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_10_calf/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_10_calf/c_resolve/moses_act10_c_background.svg",
+            "middleGround": "assets/svg/act_10_calf/c_resolve/moses_act10_c_middle_ground.svg",
+            "foreground": "assets/svg/act_10_calf/c_resolve/moses_act10_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_10_calf/a_establish/moses_act10_a_background.svg",
+          "middleGround": "assets/svg/act_10_calf/a_establish/moses_act10_a_middle_ground.svg",
+          "foreground": "assets/svg/act_10_calf/a_establish/moses_act10_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_10_calf/b_core_action/moses_act10_b_background.svg",
+          "middleGround": "assets/svg/act_10_calf/b_core_action/moses_act10_b_middle_ground.svg",
+          "foreground": "assets/svg/act_10_calf/b_core_action/moses_act10_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_10_calf/c_resolve/moses_act10_c_background.svg",
+          "middleGround": "assets/svg/act_10_calf/c_resolve/moses_act10_c_middle_ground.svg",
+          "foreground": "assets/svg/act_10_calf/c_resolve/moses_act10_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 11,
+      "title": "Ch.11 · The Second Tablets",
+      "sceneId": "placeholder",
+      "artSource": "art/act11_tablets.md",
+      "assetFolder": "act_11_tablets",
+      "artFolder": "assets/svg/act_11_tablets",
+      "assetStem": "moses_act11",
+      "materials": [
+        "assets/materials/egypt_mud_brick-stretcher.svg",
+        "assets/materials/nile_reeds-riverbank.svg",
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/bulrush_basket-woven.svg",
+        "assets/materials/hammered_gold-hammered.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "egypt_mud_brick",
+        "nile_reeds",
+        "desert_sand",
+        "bulrush_basket",
+        "hammered_gold",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_11_tablets/a_establish",
+          "layers": {
+            "background": "assets/svg/act_11_tablets/a_establish/moses_act11_a_background.svg",
+            "middleGround": "assets/svg/act_11_tablets/a_establish/moses_act11_a_middle_ground.svg",
+            "foreground": "assets/svg/act_11_tablets/a_establish/moses_act11_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_11_tablets/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_background.svg",
+            "middleGround": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_middle_ground.svg",
+            "foreground": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_11_tablets/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_background.svg",
+            "middleGround": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_middle_ground.svg",
+            "foreground": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_11_tablets/a_establish/moses_act11_a_background.svg",
+          "middleGround": "assets/svg/act_11_tablets/a_establish/moses_act11_a_middle_ground.svg",
+          "foreground": "assets/svg/act_11_tablets/a_establish/moses_act11_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_background.svg",
+          "middleGround": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_middle_ground.svg",
+          "foreground": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_background.svg",
+          "middleGround": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_middle_ground.svg",
+          "foreground": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 12,
+      "title": "Ch.12 · The Spies and Rebellion",
+      "sceneId": "placeholder",
+      "artSource": "art/act12_spies.md",
+      "assetFolder": "act_12_spies",
+      "artFolder": "assets/svg/act_12_spies",
+      "assetStem": "moses_act12",
+      "materials": [
+        "assets/materials/egypt_mud_brick-stretcher.svg",
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/bulrush_basket-woven.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "egypt_mud_brick",
+        "desert_sand",
+        "bulrush_basket",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_12_spies/a_establish",
+          "layers": {
+            "background": "assets/svg/act_12_spies/a_establish/moses_act12_a_background.svg",
+            "middleGround": "assets/svg/act_12_spies/a_establish/moses_act12_a_middle_ground.svg",
+            "foreground": "assets/svg/act_12_spies/a_establish/moses_act12_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_12_spies/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_12_spies/b_core_action/moses_act12_b_background.svg",
+            "middleGround": "assets/svg/act_12_spies/b_core_action/moses_act12_b_middle_ground.svg",
+            "foreground": "assets/svg/act_12_spies/b_core_action/moses_act12_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_12_spies/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_12_spies/c_resolve/moses_act12_c_background.svg",
+            "middleGround": "assets/svg/act_12_spies/c_resolve/moses_act12_c_middle_ground.svg",
+            "foreground": "assets/svg/act_12_spies/c_resolve/moses_act12_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_12_spies/a_establish/moses_act12_a_background.svg",
+          "middleGround": "assets/svg/act_12_spies/a_establish/moses_act12_a_middle_ground.svg",
+          "foreground": "assets/svg/act_12_spies/a_establish/moses_act12_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_12_spies/b_core_action/moses_act12_b_background.svg",
+          "middleGround": "assets/svg/act_12_spies/b_core_action/moses_act12_b_middle_ground.svg",
+          "foreground": "assets/svg/act_12_spies/b_core_action/moses_act12_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_12_spies/c_resolve/moses_act12_c_background.svg",
+          "middleGround": "assets/svg/act_12_spies/c_resolve/moses_act12_c_middle_ground.svg",
+          "foreground": "assets/svg/act_12_spies/c_resolve/moses_act12_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 13,
+      "title": "Ch.13 · The Long Wilderness",
+      "sceneId": "placeholder",
+      "artSource": "art/act13_wilderness.md",
+      "assetFolder": "act_13_wilderness",
+      "artFolder": "assets/svg/act_13_wilderness",
+      "assetStem": "moses_act13",
+      "materials": [
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/bulrush_basket-woven.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "desert_sand",
+        "bulrush_basket",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_13_wilderness/a_establish",
+          "layers": {
+            "background": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_background.svg",
+            "middleGround": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_middle_ground.svg",
+            "foreground": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_13_wilderness/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_background.svg",
+            "middleGround": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_middle_ground.svg",
+            "foreground": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_13_wilderness/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_background.svg",
+            "middleGround": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_middle_ground.svg",
+            "foreground": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_background.svg",
+          "middleGround": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_middle_ground.svg",
+          "foreground": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_background.svg",
+          "middleGround": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_middle_ground.svg",
+          "foreground": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_background.svg",
+          "middleGround": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_middle_ground.svg",
+          "foreground": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 14,
+      "title": "Ch.14 · Moses' Final Words",
+      "sceneId": null,
+      "artSource": "art/act14_reviews.md",
+      "assetFolder": "act_14_reviews",
+      "artFolder": "assets/svg/act_14_reviews",
+      "assetStem": "moses_act14",
+      "materials": [
+        "assets/materials/nile_reeds-riverbank.svg",
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/bulrush_basket-woven.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "nile_reeds",
+        "desert_sand",
+        "bulrush_basket",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_14_reviews/a_establish",
+          "layers": {
+            "background": "assets/svg/act_14_reviews/a_establish/moses_act14_a_background.svg",
+            "middleGround": "assets/svg/act_14_reviews/a_establish/moses_act14_a_middle_ground.svg",
+            "foreground": "assets/svg/act_14_reviews/a_establish/moses_act14_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_14_reviews/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_background.svg",
+            "middleGround": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_middle_ground.svg",
+            "foreground": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_14_reviews/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_background.svg",
+            "middleGround": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_middle_ground.svg",
+            "foreground": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_14_reviews/a_establish/moses_act14_a_background.svg",
+          "middleGround": "assets/svg/act_14_reviews/a_establish/moses_act14_a_middle_ground.svg",
+          "foreground": "assets/svg/act_14_reviews/a_establish/moses_act14_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_background.svg",
+          "middleGround": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_middle_ground.svg",
+          "foreground": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_background.svg",
+          "middleGround": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_middle_ground.svg",
+          "foreground": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_foreground.svg"
+        }
+      }
+    },
+    {
+      "act": 15,
+      "title": "Ch.15 · Mount Nebo",
+      "sceneId": "placeholder",
+      "artSource": "art/act15_nebo.md",
+      "assetFolder": "act_15_nebo",
+      "artFolder": "assets/svg/act_15_nebo",
+      "assetStem": "moses_act15",
+      "materials": [
+        "assets/materials/nile_reeds-riverbank.svg",
+        "assets/materials/desert_sand-dunes.svg",
+        "assets/materials/stone_tablets-hewn.svg"
+      ],
+      "materialKeys": [
+        "nile_reeds",
+        "desert_sand",
+        "stone_tablets"
+      ],
+      "beats": [
+        {
+          "id": "A",
+          "name": "a_establish",
+          "folder": "assets/svg/act_15_nebo/a_establish",
+          "layers": {
+            "background": "assets/svg/act_15_nebo/a_establish/moses_act15_a_background.svg",
+            "middleGround": "assets/svg/act_15_nebo/a_establish/moses_act15_a_middle_ground.svg",
+            "foreground": "assets/svg/act_15_nebo/a_establish/moses_act15_a_foreground.svg"
+          }
+        },
+        {
+          "id": "B",
+          "name": "b_core_action",
+          "folder": "assets/svg/act_15_nebo/b_core_action",
+          "layers": {
+            "background": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_background.svg",
+            "middleGround": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_middle_ground.svg",
+            "foreground": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_foreground.svg"
+          }
+        },
+        {
+          "id": "C",
+          "name": "c_resolve",
+          "folder": "assets/svg/act_15_nebo/c_resolve",
+          "layers": {
+            "background": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_background.svg",
+            "middleGround": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_middle_ground.svg",
+            "foreground": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_foreground.svg"
+          }
+        }
+      ],
+      "sceneLayers": {
+        "a_establish": {
+          "background": "assets/svg/act_15_nebo/a_establish/moses_act15_a_background.svg",
+          "middleGround": "assets/svg/act_15_nebo/a_establish/moses_act15_a_middle_ground.svg",
+          "foreground": "assets/svg/act_15_nebo/a_establish/moses_act15_a_foreground.svg"
+        },
+        "b_core_action": {
+          "background": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_background.svg",
+          "middleGround": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_middle_ground.svg",
+          "foreground": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_foreground.svg"
+        },
+        "c_resolve": {
+          "background": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_background.svg",
+          "middleGround": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_middle_ground.svg",
+          "foreground": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_foreground.svg"
+        }
+      }
+    }
+  ]
+}

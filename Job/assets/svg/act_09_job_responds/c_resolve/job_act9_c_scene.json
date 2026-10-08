@@ -1,0 +1,19 @@
+{
+  "story": "Job",
+  "act": 9,
+  "chapter": "Ch.9 · Job Responds",
+  "artSource": "art/act9_job_responds.md",
+  "artFolder": "assets/svg/act_09_job_responds",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "water_still-calm.svg",
+    "water_still-eddies.svg"
+  ],
+  "layers": {
+    "background": "job_act9_c_background.svg",
+    "middleGround": "job_act9_c_middle_ground.svg",
+    "foreground": "job_act9_c_foreground.svg"
+  }
+}

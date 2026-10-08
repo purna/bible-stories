@@ -1,0 +1,23 @@
+{
+  "story": "Isaiah",
+  "act": 3,
+  "chapter": "Ch.3 · The Vineyard Song",
+  "artSource": "art/act3_the_vineyard_song.md",
+  "artFolder": "assets/svg/act_03_the_vineyard_song",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg"
+  ],
+  "layers": {
+    "background": "isaiah_act3_c_background.svg",
+    "middleGround": "isaiah_act3_c_middle_ground.svg",
+    "foreground": "isaiah_act3_c_foreground.svg"
+  }
+}

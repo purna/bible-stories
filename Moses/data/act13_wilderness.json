@@ -1,0 +1,471 @@
+{
+  "id": "wilderness",
+  "name": "Ch.13 · The Long Wilderness",
+  "bg": "radial-gradient(circle at 50% 40%, #141008, #241c12 65%, #080604)",
+  "particle": "dusk",
+  "svg": "placeholder",
+  "lines": [
+    {
+      "id": "wilderness_0",
+      "items": [
+        {
+          "id": "wilderness_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Years passed. Provision kept coming. Manna every morning. Quail some evenings. Water from the rock. Their clothes did not wear out. Their feet did not swell.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_1",
+      "cite": "Numbers 9:17",
+      "items": [
+        {
+          "id": "wilderness_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Day by day the cloud led them. When it lifted, they moved. When it settled, they camped.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_2",
+      "items": [
+        {
+          "id": "wilderness_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "But one day, at Meribah, there was no water again. The people quarrelled with Moses. Moses struck the rock instead of speaking to it.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_3",
+      "items": [
+        {
+          "id": "wilderness_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Because you did not trust in me enough to honour me as holy in the sight of the Israelites, you will not bring this community into the land I give them.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_4",
+      "cite": "Numbers 21:5",
+      "items": [
+        {
+          "id": "wilderness_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Why have you brought us up out of Egypt to die in the wilderness? There is no bread! There is no water! And we detest this miserable food!",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "israelite_elder",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_5",
+      "items": [
+        {
+          "id": "wilderness_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Then the LORD sent venomous snakes among them. They bit the people, and many Israelites died.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "wilderness_5_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "HISS!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_6",
+      "cite": "Numbers 21:7",
+      "items": [
+        {
+          "id": "wilderness_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "We sinned when we spoke against the LORD and against you. Pray that the LORD will take the snakes away from us.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "israelite_elder",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_7",
+      "cite": "Numbers 21:8",
+      "items": [
+        {
+          "id": "wilderness_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Make a snake and put it up on a pole. Anyone who is bitten can look at it and live.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_8",
+      "choices": [
+        {
+          "label": "Look up and live 👁️",
+          "note": "Healing comes by trusting the way God provided — not by anything the bitten person can do."
+        },
+        {
+          "label": "Look away and try to heal on your own 🤕",
+          "note": "The bite is deadly. The pole only helps those who look."
+        }
+      ],
+      "items": [
+        {
+          "id": "wilderness_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Moses made a bronze snake and set it on a pole at the centre of the camp. All a bitten person had to do was look.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_9",
+      "cite": "Numbers 22:5–6",
+      "items": [
+        {
+          "id": "wilderness_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Balak, king of Moab, was terrified of the Israelites. He sent for the prophet Balaam: \"Come and put a curse on these people.\"",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_10",
+      "cite": "Numbers 22:38",
+      "items": [
+        {
+          "id": "wilderness_10_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I must speak only what God puts in my mouth.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "balaam",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_11",
+      "cite": "Numbers 23:8",
+      "items": [
+        {
+          "id": "wilderness_11_text",
+          "type": "text",
+          "sfx": false,
+          "text": "How can I curse those whom God has not cursed? How can I denounce those whom the LORD has not denounced?",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "balaam",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_12",
+      "items": [
+        {
+          "id": "wilderness_12_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Three times Balak led him to a hilltop to curse Israel. Three times Balaam blessed them instead.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_13",
+      "items": [
+        {
+          "id": "wilderness_13_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Moses — who had brought them out of Egypt — would not bring them in. Joshua would.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    },
+    {
+      "id": "wilderness_14",
+      "items": [
+        {
+          "id": "wilderness_14_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Forty years after the basket on the Nile, the people stood at the edge of the Jordan — and one man would not cross with them.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "placeholder"
+    }
+  ],
+  "scene": "wilderness",
+  "foreground": "fg_wilderness",
+  "index": 12
+}

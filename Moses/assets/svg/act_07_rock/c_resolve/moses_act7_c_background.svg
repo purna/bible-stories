@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Moses act 7 Ch.7 · Water from the Rock background">
+  <metadata>{&quot;story&quot;:&quot;Moses&quot;,&quot;act&quot;:7,&quot;chapter&quot;:&quot;Ch.7 · Water from the Rock&quot;,&quot;scene&quot;:&quot;C&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;materials&quot;:[&quot;desert_sand-dunes.svg&quot;,&quot;nile_reeds-riverbank.svg&quot;,&quot;stone-rough.svg&quot;,&quot;stone_tablets-hewn.svg&quot;],&quot;environment&quot;:&quot;river&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#315d77"/><stop offset="1" stop-color="#d6b77e"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#608188"/><stop offset="1" stop-color="#3f594e"/></linearGradient><pattern id="act-material" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M8 56Q12 36 27 17Q29 37 8 56M29 64Q32 42 50 25Q50 46 29 64" fill="#627a53" opacity=".6"/></pattern></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1500" cy="180" r="64" fill="#f2ddb0" opacity=".82"/>
+  <path d="M0 661.4 Q500 616.4 980 654.4 T1920 636.4 V806.4 H0Z" fill="#2e6479" opacity=".65"/>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/><path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#act-material)" opacity=".16"/>
+  </svg>

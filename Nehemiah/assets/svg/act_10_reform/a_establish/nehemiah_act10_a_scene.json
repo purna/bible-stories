@@ -1,0 +1,22 @@
+{
+  "story": "Nehemiah",
+  "act": 10,
+  "chapter": "Ch.10 · Reform",
+  "artSource": "art/act10_reform.md",
+  "artFolder": "assets/svg/act_10_reform",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wall_brick-herringbone.svg",
+    "wall_brick-running.svg",
+    "wall_brick-stacked.svg"
+  ],
+  "layers": {
+    "background": "nehemiah_act10_a_background.svg",
+    "middleGround": "nehemiah_act10_a_middle_ground.svg",
+    "foreground": "nehemiah_act10_a_foreground.svg"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "story": "Gideon",
+  "act": 5,
+  "chapter": "Ch.5 · The Dream",
+  "artSource": "art/act5_the_dream.md",
+  "artFolder": "assets/svg/act_05_the_dream",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "sword_iron-blade.svg",
+    "tent_fabric-basket.svg",
+    "torch_flame-flames.svg"
+  ],
+  "layers": {
+    "background": "gideon_act5_b_background.svg",
+    "middleGround": "gideon_act5_b_middle_ground.svg",
+    "foreground": "gideon_act5_b_foreground.svg"
+  }
+}

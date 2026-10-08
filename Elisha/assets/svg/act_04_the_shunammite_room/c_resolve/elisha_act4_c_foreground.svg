@@ -1,10 +1,4 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(0,0,0,0)"/>
-      <stop offset="100%" style="stop-color:rgba(0,0,0,0.45)"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#fg)"/>
-  <text x="400" y="560" font-family="system-ui" font-size="14" fill="rgba(255,255,255,0.3)" text-anchor="middle">Resolve Foreground Foreground</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Elisha act 4 Ch.4 · The Shunammite Room foreground">
+  <metadata>{&quot;story&quot;:&quot;Elisha&quot;,&quot;act&quot;:4,&quot;chapter&quot;:&quot;Ch.4 · The Shunammite Room&quot;,&quot;scene&quot;:&quot;C&quot;,&quot;layer&quot;:&quot;foreground&quot;,&quot;environment&quot;:&quot;palace&quot;,&quot;seed&quot;:1}</metadata>
+  <g fill="#ac8e63" stroke="#201a17" stroke-width="12" opacity=".93"><rect x="0" y="546.4" width="138" height="553.6"/><rect x="1782" y="546.4" width="138" height="553.6"/><rect x="0" y="516.4" width="193" height="55"/><rect x="1727" y="516.4" width="193" height="55"/></g><g opacity=".96"><path d="M1450 1045l23.89523000404984 -53.83983671510964 63.7206133441329 -20.9377142780982 55.755536676116286 74.77755099320784Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1565 1045l19.20426195926964 -73.8070718388632 51.211365224719046 -28.70275015955791 44.80994457162917 102.5098219984211Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/><path d="M1680 1045l25.393522463835772 -85.01286531621962 67.71605990356205 -33.06055873408541 59.2515524156168 118.07342405030504Z" fill="#9f896c" stroke="#201a17" stroke-width="9"/></g><g fill="none" stroke="#694b30" stroke-width="26.4" stroke-linecap="round" opacity=".92"><path d="M75 1080V650L350 455"/><path d="M1845 1080V720L1640 565"/><path d="M40 905H310M1650 925H1900"/></g>
+  </svg>

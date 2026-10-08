@@ -1,0 +1,19 @@
+{
+  "story": "Ruth",
+  "act": 7,
+  "chapter": "Ch.7 · Redeemed",
+  "artSource": "art/act7_redeemed.md",
+  "artFolder": "assets/svg/act_07_redeemed",
+  "sceneId": "redeemed",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "ruth_act7_a_background.svg",
+    "middleGround": "ruth_act7_a_middle_ground.svg",
+    "foreground": "ruth_act7_a_foreground.svg"
+  }
+}

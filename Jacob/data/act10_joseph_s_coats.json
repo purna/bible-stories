@@ -7,43 +7,110 @@
   "lines": [
     {
       "id": "joseph_s_coats_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Recognise favouritism forming in the household.",
       "cite": "Genesis 25–50",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "joseph_s_coats_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Recognise favouritism forming in the household.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "joseph_s_coats_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Can a grasping deceiver become someone who receives blessing without stealing it? — Joseph’s Coats is the next step in that question.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "joseph_s_coats_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Can a grasping deceiver become someone who receives blessing without stealing it? — Joseph’s Coats is the next step in that question.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "joseph_s_coats_2",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "THE WORD STANDS",
-      "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "joseph_s_coats_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The story does not turn on a hero's strength. It turns on the choice made in the ordinary moment.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "joseph_s_coats_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THE WORD STANDS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "joseph_s_coats_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
       "choices": [
         {
           "label": "Walk on with the lesson",
@@ -54,11 +121,57 @@
           "note": "A pause does not change the outcome. It only lets the player breathe."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "joseph_s_coats_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The chapter settles. The player has walked the path and seen the outcome. What remains is a reflection, not a rewrite.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "joseph_s_coats",
   "foreground": "fg_joseph_s_coats",
-  "index": 9
+  "index": 9,
+  "assetFolder": "act_10_joseph_s_coats",
+  "artFolder": "assets/svg/act_10_joseph_s_coats",
+  "assetStem": "jacob_act10",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_10_joseph_s_coats/a_establish/jacob_act10_a_background.svg",
+      "middleGround": "assets/svg/act_10_joseph_s_coats/a_establish/jacob_act10_a_middle_ground.svg",
+      "foreground": "assets/svg/act_10_joseph_s_coats/a_establish/jacob_act10_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_10_joseph_s_coats/b_core_action/jacob_act10_b_background.svg",
+      "middleGround": "assets/svg/act_10_joseph_s_coats/b_core_action/jacob_act10_b_middle_ground.svg",
+      "foreground": "assets/svg/act_10_joseph_s_coats/b_core_action/jacob_act10_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_10_joseph_s_coats/c_resolve/jacob_act10_c_background.svg",
+      "middleGround": "assets/svg/act_10_joseph_s_coats/c_resolve/jacob_act10_c_middle_ground.svg",
+      "foreground": "assets/svg/act_10_joseph_s_coats/c_resolve/jacob_act10_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/grass-tufts.svg"
+  ]
 }

@@ -1,0 +1,20 @@
+{
+  "story": "Esther",
+  "act": 8,
+  "chapter": "Ch.8 · The Second Banquet",
+  "artSource": "art/act8_the_second_banquet.md",
+  "artFolder": "assets/svg/act_08_the_second_banquet",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "mosaic-chips.svg",
+    "mosaic-grid.svg",
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "esther_act8_b_background.svg",
+    "middleGround": "esther_act8_b_middle_ground.svg",
+    "foreground": "esther_act8_b_foreground.svg"
+  }
+}

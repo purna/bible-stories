@@ -1,0 +1,19 @@
+{
+  "story": "Gideon",
+  "act": 7,
+  "chapter": "Ch.7 · The Victory",
+  "artSource": "art/act7_the_victory.md",
+  "artFolder": "assets/svg/act_07_the_victory",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "sword_iron-blade.svg",
+    "water_ripple-ripples.svg"
+  ],
+  "layers": {
+    "background": "gideon_act7_b_background.svg",
+    "middleGround": "gideon_act7_b_middle_ground.svg",
+    "foreground": "gideon_act7_b_foreground.svg"
+  }
+}

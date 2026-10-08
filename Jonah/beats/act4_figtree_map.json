@@ -1,0 +1,34 @@
+{
+  "story": "Jonah",
+  "act": {
+    "id": "act4_figtree_map",
+    "name": "The Plant and the Lesson",
+    "source": "../art/act4_figtree_map.md"
+  },
+  "beats": [
+    {
+      "id": "a_establish",
+      "type": "visual",
+      "name": "establishing",
+      "description": "wide framing of the setting: a booth on a hill above the city, a gourd growing in a single night, a man sheltering, a worm in the morning"
+    },
+    {
+      "id": "b_core_action",
+      "type": "visual",
+      "name": "core action",
+      "description": "the scene's central movement and characters"
+    },
+    {
+      "id": "c_resolve",
+      "type": "visual",
+      "name": "resolution",
+      "description": "the beat's outcome, holding the emotional note"
+    },
+    {
+      "id": "interactive-game",
+      "type": "game",
+      "description": "Manage shade, worm, and hot wind.",
+      "mechanic": "balance"
+    }
+  ]
+}

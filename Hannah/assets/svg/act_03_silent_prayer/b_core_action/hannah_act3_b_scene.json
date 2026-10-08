@@ -1,0 +1,20 @@
+{
+  "story": "Hannah",
+  "act": 3,
+  "chapter": "Ch.3 · Silent Prayer",
+  "artSource": "art/act3_silent_prayer.md",
+  "artFolder": "assets/svg/act_03_silent_prayer",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "hammered_gold-hammered.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "hannah_act3_b_background.svg",
+    "middleGround": "hannah_act3_b_middle_ground.svg",
+    "foreground": "hannah_act3_b_foreground.svg"
+  }
+}

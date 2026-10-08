@@ -1,0 +1,22 @@
+{
+  "story": "Moses",
+  "act": 12,
+  "chapter": "Ch.12 · The Spies and Rebellion",
+  "artSource": "art/act12_spies.md",
+  "artFolder": "assets/svg/act_12_spies",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "bulrush_basket-woven.svg",
+    "desert_sand-dunes.svg",
+    "egypt_mud_brick-stretcher.svg",
+    "stone-rough.svg",
+    "stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act12_a_background.svg",
+    "middleGround": "moses_act12_a_middle_ground.svg",
+    "foreground": "moses_act12_a_foreground.svg"
+  }
+}

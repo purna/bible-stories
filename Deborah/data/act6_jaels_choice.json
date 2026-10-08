@@ -8,44 +8,112 @@
   "lines": [
     {
       "id": "jaels_choice_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Jael welcomed Sisera, covered him, and gave him milk when he asked for water.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "jaels_choice_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jael welcomed Sisera, covered him, and gave him milk when he asked for water.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "jaels_choice_1",
-      "speaker": "sisera",
-      "fx": "type",
-      "delay": 800,
-      "align": "center",
-      "text": "Stand in the doorway. If anyone asks whether a man is here, say no.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "jaels_choice_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Stand in the doorway. If anyone asks whether a man is here, say no.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "sisera",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "jaels_choice_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "When he slept, Jael made a grave and decisive choice that ended the commander\u2019s threat.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "jaels_choice_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "When he slept, Jael made a grave and decisive choice that ended the commander’s threat.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "jaels_choice_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Jael went out to meet Barak and showed him that Sisera\u2019s power was finished.",
-      "cite": "Judges 4:18\u201322",
-      "width": "1/2",
-      "valign": "middle"
+      "cite": "Judges 4:18–22",
+      "items": [
+        {
+          "id": "jaels_choice_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jael went out to meet Barak and showed him that Sisera’s power was finished.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "gameChoices": [
@@ -62,9 +130,32 @@
       "Protect those in danger and tell the truth"
     ]
   ],
-  "gameSuccess": "Jael acts decisively, and Sisera\u2019s threat is ended.",
+  "gameSuccess": "Jael acts decisively, and Sisera’s threat is ended.",
   "gameRetry": "Not quite. Choose the response that protects others without seeking glory.",
-  "name": "Ch.6 \u00b7 Jael\u2019s Choice",
+  "name": "Ch.6 · Jael’s Choice",
   "assetFolder": "act_06_jael_s_choice",
-  "assetStem": "deborah_act6"
+  "assetStem": "deborah_act6",
+  "artFolder": "assets/svg/act_06_jael_s_choice",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_06_jael_s_choice/a_establish/deborah_act6_a_background.svg",
+      "middleGround": "assets/svg/act_06_jael_s_choice/a_establish/deborah_act6_a_middle_ground.svg",
+      "foreground": "assets/svg/act_06_jael_s_choice/a_establish/deborah_act6_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_06_jael_s_choice/b_core_action/deborah_act6_b_background.svg",
+      "middleGround": "assets/svg/act_06_jael_s_choice/b_core_action/deborah_act6_b_middle_ground.svg",
+      "foreground": "assets/svg/act_06_jael_s_choice/b_core_action/deborah_act6_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_background.svg",
+      "middleGround": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_middle_ground.svg",
+      "foreground": "assets/svg/act_06_jael_s_choice/c_resolve/deborah_act6_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/wood_oak-planks3.svg",
+    "assets/materials/stone-flagstone.svg"
+  ]
 }

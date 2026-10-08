@@ -1,0 +1,19 @@
+{
+  "story": "Joshua",
+  "act": 10,
+  "chapter": "Ch.10 · Choose This Day",
+  "artSource": "art/act10_choose_this_day.md",
+  "artFolder": "assets/svg/act_10_choose_this_day",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg"
+  ],
+  "layers": {
+    "background": "joshua_act10_b_background.svg",
+    "middleGround": "joshua_act10_b_middle_ground.svg",
+    "foreground": "joshua_act10_b_foreground.svg"
+  }
+}

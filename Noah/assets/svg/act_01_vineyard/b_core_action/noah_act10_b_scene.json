@@ -1,0 +1,21 @@
+{
+  "story": "Noah",
+  "act": 10,
+  "chapter": "Ch.10 · The Vineyard",
+  "artSource": "art/act10_vineyard.md",
+  "artFolder": "assets/svg/act_01_vineyard",
+  "sceneId": "ch10_noah_plants",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "noah_act10_b_background.svg",
+    "middleGround": "noah_act10_b_middle_ground.svg",
+    "foreground": "noah_act10_b_foreground.svg"
+  }
+}

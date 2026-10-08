@@ -1,0 +1,224 @@
+{
+  "story": "Abraham",
+  "sourceTool": "Abraham/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "desert_sand",
+      "shape": "dunes",
+      "file": "desert_sand-dunes.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "plank",
+      "file": "wood_oak-plank.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "planks3",
+      "file": "wood_oak-planks3.svg"
+    },
+    {
+      "key": "leaves",
+      "shape": "scatter",
+      "file": "leaves-scatter.svg"
+    },
+    {
+      "key": "leaves",
+      "shape": "canopy",
+      "file": "leaves-canopy.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "calm",
+      "file": "water_still-calm.svg"
+    },
+    {
+      "key": "water_still",
+      "shape": "eddies",
+      "file": "water_still-eddies.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "The Call",
+      "assetFolder": "act_01_the_call",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "Egypt and Return",
+      "assetFolder": "act_02_egypt_and_return",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Lot Chooses",
+      "assetFolder": "act_03_lot_chooses",
+      "materials": [
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "Rescue of Lot",
+      "assetFolder": "act_04_rescue_of_lot",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "Covenant Stars",
+      "assetFolder": "act_05_covenant_stars",
+      "materials": [
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Hagar in the Wilderness",
+      "assetFolder": "act_06_hagar_in_the_wilderness",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "The Visitors",
+      "assetFolder": "act_07_the_visitors",
+      "materials": [
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "water_still",
+          "file": "water_still-eddies.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        }
+      ]
+    },
+    {
+      "act": 8,
+      "title": "Sodom and Gomorrah",
+      "assetFolder": "act_08_sodom_and_gomorrah",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 9,
+      "title": "Isaac Is Born",
+      "assetFolder": "act_09_isaac_is_born",
+      "materials": [
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    },
+    {
+      "act": 10,
+      "title": "Moriah",
+      "assetFolder": "act_10_moriah",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    }
+  ]
+}

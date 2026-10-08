@@ -1,0 +1,175 @@
+{
+  "story": "Elijah",
+  "sourceTool": "Elijah/tools/texture-forge.html",
+  "materials": [
+    {
+      "key": "desert_sand",
+      "shape": "dunes",
+      "file": "desert_sand-dunes.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "rough",
+      "file": "stone-rough.svg"
+    },
+    {
+      "key": "stone",
+      "shape": "flagstone",
+      "file": "stone-flagstone.svg"
+    },
+    {
+      "key": "water_fast",
+      "shape": "rapids",
+      "file": "water_fast-rapids.svg"
+    },
+    {
+      "key": "water_fast",
+      "shape": "churn",
+      "file": "water_fast-churn.svg"
+    },
+    {
+      "key": "fabric_weave",
+      "shape": "basket",
+      "file": "fabric_weave-basket.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "plank",
+      "file": "wood_oak-plank.svg"
+    },
+    {
+      "key": "wood_oak",
+      "shape": "planks3",
+      "file": "wood_oak-planks3.svg"
+    },
+    {
+      "key": "leaves",
+      "shape": "scatter",
+      "file": "leaves-scatter.svg"
+    },
+    {
+      "key": "leaves",
+      "shape": "canopy",
+      "file": "leaves-canopy.svg"
+    }
+  ],
+  "acts": [
+    {
+      "act": 1,
+      "title": "The Drought",
+      "assetFolder": "act_01_drought",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        }
+      ]
+    },
+    {
+      "act": 2,
+      "title": "The Widow of Zarephath",
+      "assetFolder": "act_02_widow",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        }
+      ]
+    },
+    {
+      "act": 3,
+      "title": "Mount Carmel",
+      "assetFolder": "act_03_carmel",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        }
+      ]
+    },
+    {
+      "act": 4,
+      "title": "The Flight to Horeb",
+      "assetFolder": "act_04_flight",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        }
+      ]
+    },
+    {
+      "act": 5,
+      "title": "The Still, Small Voice",
+      "assetFolder": "act_05_voice",
+      "materials": [
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "fabric_weave",
+          "file": "fabric_weave-basket.svg"
+        }
+      ]
+    },
+    {
+      "act": 6,
+      "title": "Naboth's Vineyard",
+      "assetFolder": "act_06_vineyard",
+      "materials": [
+        {
+          "key": "desert_sand",
+          "file": "desert_sand-dunes.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        },
+        {
+          "key": "water_fast",
+          "file": "water_fast-churn.svg"
+        },
+        {
+          "key": "leaves",
+          "file": "leaves-canopy.svg"
+        }
+      ]
+    },
+    {
+      "act": 7,
+      "title": "The Chariot of Fire",
+      "assetFolder": "act_07_chariot",
+      "materials": [
+        {
+          "key": "stone",
+          "file": "stone-flagstone.svg"
+        },
+        {
+          "key": "wood_oak",
+          "file": "wood_oak-planks3.svg"
+        }
+      ]
+    }
+  ]
+}

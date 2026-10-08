@@ -1,0 +1,21 @@
+{
+  "story": "Jacob",
+  "act": 2,
+  "chapter": "Ch.2 · The Stolen Blessing",
+  "artSource": "art/act2_the_stolen_blessing.md",
+  "artFolder": "assets/svg/act_02_the_stolen_blessing",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "grass-tufts.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "jacob_act2_c_background.svg",
+    "middleGround": "jacob_act2_c_middle_ground.svg",
+    "foreground": "jacob_act2_c_foreground.svg"
+  }
+}

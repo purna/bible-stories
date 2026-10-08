@@ -1,0 +1,21 @@
+{
+  "story": "Moses",
+  "act": 15,
+  "chapter": "Ch.15 · Mount Nebo",
+  "artSource": "art/act15_nebo.md",
+  "artFolder": "assets/svg/act_15_nebo",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "nile_reeds-riverbank.svg",
+    "stone-rough.svg",
+    "stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act15_c_background.svg",
+    "middleGround": "moses_act15_c_middle_ground.svg",
+    "foreground": "moses_act15_c_foreground.svg"
+  }
+}

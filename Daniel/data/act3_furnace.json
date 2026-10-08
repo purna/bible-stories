@@ -12,92 +12,250 @@
   "lines": [
     {
       "id": "furnace_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "Years later, Nebuchadnezzar built a colossal golden statue on the plain of Dura.",
-      "align": "left",
-      "svg": "golden_statue",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "furnace_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Years later, Nebuchadnezzar built a colossal golden statue on the plain of Dura.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "golden_statue"
     },
     {
       "id": "furnace_1",
-      "sfx": "BOW DOWN!",
-      "speaker": "nebuchadnezzar",
-      "fx": "shake",
-      "delay": 800,
-      "text": "When the music plays \u2014 EVERYONE bows to my image. Anyone who doesn't will be thrown into the furnace!",
-      "align": "center",
-      "svg": "golden_statue",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "furnace_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "When the music plays — EVERYONE bows to my image. Anyone who doesn't will be thrown into the furnace!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "nebuchadnezzar",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "furnace_1_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "BOW DOWN!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "nebuchadnezzar",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "golden_statue"
     },
     {
       "id": "furnace_2",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "This test was not designed for Daniel. It was designed for his friends: Shadrach, Meshach, and Abednego.",
-      "align": "right",
-      "svg": "plain_of_dura",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "furnace_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "This test was not designed for Daniel. It was designed for his friends: Shadrach, Meshach, and Abednego.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "plain_of_dura"
     },
     {
       "id": "furnace_3",
-      "speaker": "narrator",
-      "fx": "type",
-      "delay": 800,
-      "text": "Daniel is nowhere in this chapter. Sometimes faithfulness means watching people you love take the risk you didn't have to take.",
-      "align": "center",
-      "svg": "friends_standing",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "furnace_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Daniel is nowhere in this chapter. Sometimes faithfulness means watching people you love take the risk you didn't have to take.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "friends_standing"
     },
     {
       "id": "furnace_4",
-      "speaker": "friends",
-      "fx": "bounce",
-      "delay": 800,
-      "text": "O king \u2014 our God is able to save us. But even if he doesn't \u2014 we will not bow.",
-      "svg": "friends_standing",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "furnace_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "O king — our God is able to save us. But even if he doesn't — we will not bow.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "friends",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "friends_standing"
     },
     {
       "id": "furnace_5",
-      "sfx": "THROW THEM IN!",
       "audioSfx": "assets/audio/sfx/furnace_roar.mp3",
-      "speaker": "nebuchadnezzar",
-      "fx": "shake",
-      "delay": 800,
-      "text": "Heat the furnace SEVEN TIMES HOTTER! Bind them! THROW THEM IN!",
-      "svg": "furnace_lit",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "furnace_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Heat the furnace SEVEN TIMES HOTTER! Bind them! THROW THEM IN!",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "nebuchadnezzar",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "furnace_5_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "THROW THEM IN!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "nebuchadnezzar",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "furnace_lit"
     },
     {
       "id": "furnace_6",
-      "speaker": "narrator",
-      "fx": "shake",
-      "delay": 800,
-      "text": "The furnace was so hot it killed the soldiers who threw them in. But the three men walked in it \u2014 and a fourth figure walked with them.",
-      "svg": "furnace_lit",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "furnace_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The furnace was so hot it killed the soldiers who threw them in. But the three men walked in it — and a fourth figure walked with them.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "furnace_lit"
     },
     {
       "id": "furnace_7",
-      "speaker": "nebuchadnezzar",
-      "fx": "fade",
-      "delay": 800,
-      "text": "...I threw THREE men in. But I see FOUR walking in the fire. And the fourth looks like a son of the gods.",
-      "align": "center",
-      "svg": "four_in_furnace",
       "choices": [
         {
-          "label": "They are rescued before the fire \ud83d\ude4f",
+          "label": "They are rescued before the fire 🙏",
           "note": "No. They walk IN it. The rescue happens inside the thing they refused to avoid.",
           "decisionId": "furnace_rescue_inside",
           "tags": [
@@ -106,7 +264,7 @@
           ]
         },
         {
-          "label": "They walk out unharmed \u2705",
+          "label": "They walk out unharmed ✅",
           "note": "Not a hair singed. No smell of smoke. The fire had no power over them.",
           "decisionId": "furnace_unharmed",
           "tags": [
@@ -115,28 +273,115 @@
           ]
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "furnace_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "...I threw THREE men in. But I see FOUR walking in the fire. And the fourth looks like a son of the gods.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "nebuchadnezzar",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "four_in_furnace"
     },
     {
       "id": "furnace_8",
-      "speaker": "friends",
-      "fx": "bounce",
-      "delay": 800,
-      "text": "We told you. Whether he saves us or not \u2014 we will not bow.",
-      "svg": "friends_standing",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "furnace_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "We told you. Whether he saves us or not — we will not bow.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "friends",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "friends_standing"
     },
     {
       "id": "furnace_9",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "text": "This is the design thesis of the whole story: conviction that doesn't require the rescue to happen.",
-      "svg": "four_in_furnace",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "furnace_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "This is the design thesis of the whole story: conviction that doesn't require the rescue to happen.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "four_in_furnace"
     }
+  ],
+  "assetFolder": "act_03_furnace",
+  "artFolder": "assets/svg/act_03_furnace",
+  "assetStem": "daniel_act3",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_background.svg",
+      "middleGround": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_middle_ground.svg",
+      "foreground": "assets/svg/act_03_furnace/a_establish/daniel_act3_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_background.svg",
+      "middleGround": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_middle_ground.svg",
+      "foreground": "assets/svg/act_03_furnace/b_core_action/daniel_act3_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_background.svg",
+      "middleGround": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_middle_ground.svg",
+      "foreground": "assets/svg/act_03_furnace/c_resolve/daniel_act3_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/wall_brick-herringbone.svg",
+    "assets/materials/mosaic-chips.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/stone-flagstone.svg",
+    "assets/materials/fabric_weave-basket.svg",
+    "assets/materials/water_still-eddies.svg"
   ]
 }

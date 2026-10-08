@@ -1,0 +1,20 @@
+{
+  "story": "Jeremiah",
+  "act": 1,
+  "chapter": "Ch.1 · The Call",
+  "artSource": "art/act1_the_call.md",
+  "artFolder": "assets/svg/act_01_the_call",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wood_dark-plank.svg"
+  ],
+  "layers": {
+    "background": "jeremiah_act1_a_background.svg",
+    "middleGround": "jeremiah_act1_a_middle_ground.svg",
+    "foreground": "jeremiah_act1_a_foreground.svg"
+  }
+}

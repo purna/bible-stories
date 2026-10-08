@@ -1,0 +1,19 @@
+{
+  "story": "Job",
+  "act": 5,
+  "chapter": "Ch.5 · Job Speaks",
+  "artSource": "art/act5_job_speaks.md",
+  "artFolder": "assets/svg/act_05_job_speaks",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "job_act5_b_background.svg",
+    "middleGround": "job_act5_b_middle_ground.svg",
+    "foreground": "job_act5_b_foreground.svg"
+  }
+}

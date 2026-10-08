@@ -1,0 +1,32 @@
+{
+  "story": "Adam",
+  "act": 3,
+  "chapter": "Helper Suitable",
+  "artSource": "art/act3_helper.md",
+  "artFolder": "assets/svg/act_03_helper",
+  "sceneId": "forming_eve",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "dry-hillside-grass.svg",
+    "fabric_weave-basket.svg",
+    "gourd-vine-leaves.svg",
+    "grass-tufts.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "stone_texture.svg",
+    "temple-flagstone.svg",
+    "water_still-calm.svg",
+    "water_still-eddies.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg",
+    "wood_texture.svg"
+  ],
+  "layers": {
+    "background": "adam_act3_a_background.svg",
+    "middleGround": "adam_act3_a_middle_ground.svg",
+    "foreground": "adam_act3_a_foreground.svg"
+  }
+}

@@ -1,32 +1,22 @@
 {
   "story": "Deborah",
   "act": 6,
-  "chapter": "Jael’s Choice",
-  "brief": "Prepare hospitality, then protect the camp.",
-  "scene": {
-    "id": "A",
-    "name": "Establish"
-  },
-  "canvas": {
-    "width": 1920,
-    "height": 1080
-  },
-  "environment": "desert",
-  "time": "day",
-  "seed": 1,
-  "background": "deborah_act6_a_background.svg",
-  "foreground": "deborah_act6_a_foreground.svg",
-  "foregroundBackgroundIncluded": false,
-  "foregroundDetails": {
-    "plants": true,
-    "rocks": true,
-    "structures": true,
-    "props": true,
-    "framing": true
-  },
-  "layering": [
-    "background",
-    "optional middle-ground/characters",
-    "foreground"
-  ]
+  "chapter": "Ch.6 · Jael’s Choice",
+  "artSource": "art/act6_jaels_choice.md",
+  "artFolder": "assets/svg/act_06_jael_s_choice",
+  "sceneId": "",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "fabric_weave-basket.svg",
+    "stone-flagstone.svg",
+    "stone-rough.svg",
+    "wood_oak-plank.svg",
+    "wood_oak-planks3.svg"
+  ],
+  "layers": {
+    "background": "deborah_act6_a_background.svg",
+    "middleGround": "deborah_act6_a_middle_ground.svg",
+    "foreground": "deborah_act6_a_foreground.svg"
+  }
 }

@@ -386,6 +386,7 @@ function walk(d, pre) {
   const out = [];
   if (!fs.existsSync(d)) return out;
   for (const f of fs.readdirSync(d, { withFileTypes: true })) {
+    if (f.name.startsWith('.')) continue;
     const p = path.join(d, f.name);
     if (f.isDirectory()) out.push(...walk(p, pre + f.name + '/'));
     else out.push(pre + f.name);

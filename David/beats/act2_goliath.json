@@ -1,0 +1,348 @@
+{
+  "story": "David",
+  "act": {
+    "id": "goliath",
+    "name": "Ch.2 · Goliath",
+    "source": "../data/act2_goliath.json",
+    "svg": "placeholder",
+    "bg": "radial-gradient(circle at 60% 40%, #2d1a0e, #120a04 65%, #060402)",
+    "particle": "dusk"
+  },
+  "beats": [
+    {
+      "id": "goliath_0",
+      "cite": "1 Samuel 17:4",
+      "items": [
+        {
+          "id": "goliath_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "For forty days the Philistine champion stood in the valley, morning and evening, calling for a champion of Israel. His height was six cubits and his spear was like a weaver's beam.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "goliath_1",
+      "items": [
+        {
+          "id": "goliath_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The men of Israel stood in their lines. No one moved. The giant's voice rolled across the valley like thunder.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "goliath_2",
+      "items": [
+        {
+          "id": "goliath_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Send me a man! Let him come down and fight. If he falls, we serve you. If I fall, we serve your God.",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "shake",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "goliath",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "goliath_3",
+      "cite": "1 Samuel 17:22",
+      "items": [
+        {
+          "id": "goliath_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David was in the camp, sent by his father to check on his brothers. He heard the giant's taunt and saw the fear on every Israelite face.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "goliath_4",
+      "items": [
+        {
+          "id": "goliath_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Who is this uncircumcised Philistine, that he should defy the armies of the living God?",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david_young",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "goliath_5",
+      "cite": "1 Samuel 17:38",
+      "items": [
+        {
+          "id": "goliath_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Saul wanted to clothe the boy in his own armour. David had not worn it before. He took it off and chose instead the tools of his trade.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "goliath_6",
+      "items": [
+        {
+          "id": "goliath_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I have not tested these. Let me take them off and go to the giant.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david_young",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "goliath_7",
+      "cite": "1 Samuel 17:40",
+      "items": [
+        {
+          "id": "goliath_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "He took his staff, chose five smooth stones from the brook, and held his sling. The valley fell silent.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "goliath_8",
+      "items": [
+        {
+          "id": "goliath_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The battle belongs to the LORD. Deliver him into your hand.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "goliath_8_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "NOT BY SWORD OR SPEAR!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "goliath_9",
+      "audioSfx": "assets/audio/sfx/sling_impact.mp3",
+      "cite": "1 Samuel 17:49",
+      "items": [
+        {
+          "id": "goliath_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David ran toward the enemy, reached for the sling, and let the stone fly. It struck the forehead and the giant fell face down.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "goliath_10",
+      "choices": [
+        {
+          "label": "Give the credit to the God of Israel ✝️",
+          "note": "He names the LORD before the people cheer."
+        },
+        {
+          "label": "Let the crowd carry the story 🎉",
+          "note": "Fame is sweet, and the moment is his alone."
+        }
+      ],
+      "items": [
+        {
+          "id": "goliath_10_text",
+          "type": "text",
+          "sfx": false,
+          "text": "David drew the giant's own sword and cut off his head. The valley erupted. The boy had not swung a sword at all.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

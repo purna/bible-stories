@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "default": "nile",
+  "scenes": [
+    {
+      "id": "nile",
+      "name": "The Nile (Low Poly)",
+      "file": "nile.js",
+      "type": "module"
+    },
+    {
+      "id": "nile_hd",
+      "name": "The Nile (High Definition)",
+      "file": "nile_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "babel-the-brick",
+      "name": "Ch.1 · The Brick",
+      "file": "babel-the-brick.js",
+      "type": "module"
+    },
+    {
+      "id": "babel-the-brick_hd",
+      "name": "Ch.1 · The Brick (HD)",
+      "file": "babel-the-brick_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "babel-the-tower",
+      "name": "Ch.2 · The Tower",
+      "file": "babel-the-tower.js",
+      "type": "module"
+    },
+    {
+      "id": "babel-the-tower_hd",
+      "name": "Ch.2 · The Tower (HD)",
+      "file": "babel-the-tower_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "babel-the-summit",
+      "name": "Ch.3 · The Summit",
+      "file": "babel-the-summit.js",
+      "type": "module"
+    },
+    {
+      "id": "babel-the-summit_hd",
+      "name": "Ch.3 · The Summit (HD)",
+      "file": "babel-the-summit_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "babel-the-confusion",
+      "name": "Ch.4 · The Confusion",
+      "file": "babel-the-confusion.js",
+      "type": "module"
+    },
+    {
+      "id": "babel-the-confusion_hd",
+      "name": "Ch.4 · The Confusion (HD)",
+      "file": "babel-the-confusion_hd.js",
+      "type": "module"
+    },
+    {
+      "id": "babel-the-scattering",
+      "name": "Ch.5 · The Scattering",
+      "file": "babel-the-scattering.js",
+      "type": "module"
+    },
+    {
+      "id": "babel-the-scattering_hd",
+      "name": "Ch.5 · The Scattering (HD)",
+      "file": "babel-the-scattering_hd.js",
+      "type": "module"
+    }
+  ]
+}

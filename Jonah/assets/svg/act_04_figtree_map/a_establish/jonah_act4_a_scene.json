@@ -1,0 +1,20 @@
+{
+  "story": "Jonah",
+  "act": 4,
+  "chapter": "Prayer Below",
+  "artSource": "art/act4_figtree_map.md",
+  "artFolder": "assets/svg/act_04_figtree_map",
+  "sceneId": "",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "desert_sand-dunes.svg",
+    "leaves-canopy.svg",
+    "leaves-scatter.svg"
+  ],
+  "layers": {
+    "background": "jonah_act4_a_background.svg",
+    "middleGround": "jonah_act4_a_middle_ground.svg",
+    "foreground": "jonah_act4_a_foreground.svg"
+  }
+}

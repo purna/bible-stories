@@ -1,0 +1,216 @@
+{
+  "story": "Noah",
+  "act": {
+    "id": "gathering",
+    "name": "Ch.4 · The Gathering",
+    "source": "../data/act4_gathering.json",
+    "svg": "ch4_animals_arrive",
+    "bg": "radial-gradient(circle at 60% 30%, #1a2e10, #0d1808 65%, #060a04)",
+    "particle": "dusk"
+  },
+  "beats": [
+    {
+      "id": "gathering_0",
+      "cite": "Genesis 7:2–3",
+      "items": [
+        {
+          "id": "gathering_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Seven pairs of every clean animal. One pair of every unclean. Two of every bird.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch4_animals_arrive"
+    },
+    {
+      "id": "gathering_1",
+      "audioSfx": "assets/audio/sfx/animal_march.mp3",
+      "interaction": "gathering",
+      "items": [
+        {
+          "id": "gathering_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "And then something impossible happened. The animals came to Noah.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch4_animals_arrive"
+    },
+    {
+      "id": "gathering_2",
+      "items": [
+        {
+          "id": "gathering_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Lions and lambs. Elephants and doves. Bears and deer. Marching, pair by pair.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "gathering_2_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "TWO BY TWO!",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ],
+      "svg": "ch4_parade"
+    },
+    {
+      "id": "gathering_3",
+      "items": [
+        {
+          "id": "gathering_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Are those... elephants? Walking TOWARD us?!",
+          "position": "middle-right",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "wife",
+          "align": "right",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch4_parade"
+    },
+    {
+      "id": "gathering_4",
+      "choices": [
+        {
+          "label": "Pack enough for a long journey 📦",
+          "note": "Every stall stocked. Every animal fed for weeks."
+        },
+        {
+          "label": "Pack light — it won't last long 🤞",
+          "note": "Maybe the flood will be brief. Maybe not."
+        }
+      ],
+      "items": [
+        {
+          "id": "gathering_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Noah provisioned the ark with food for every creature. It took days.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch4_loading"
+    },
+    {
+      "id": "gathering_5",
+      "items": [
+        {
+          "id": "gathering_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "When the last pair walked up the ramp, the ark was full. Seven days remained.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "type",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ],
+      "svg": "ch4_door_open"
+    }
+  ]
+}

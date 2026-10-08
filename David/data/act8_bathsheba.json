@@ -7,97 +7,249 @@
   "lines": [
     {
       "id": "bathsheba_0",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "In the spring, when kings go out to battle, David stayed in Jerusalem and walked on his roof. From there he saw a woman bathing, and he sent to learn who she was.",
       "cite": "2 Samuel 11:3",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "bathsheba_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "In the spring, when kings go out to battle, David stayed in Jerusalem and walked on his roof. From there he saw a woman bathing, and he sent to learn who she was.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "bathsheba_1",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "She was Bathsheba, the wife of Uriah the Hittite, one of David's own mighty men. David took her, and the child she carried was his.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "bathsheba_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "She was Bathsheba, the wife of Uriah the Hittite, one of David's own mighty men. David took her, and the child she carried was his.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "bathsheba_2",
-      "speaker": "david",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Send for Uriah. Let him come to me and sleep in his own house. Then we will know whether the child is his.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "bathsheba_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Send for Uriah. Let him come to me and sleep in his own house. Then we will know whether the child is his.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "bathsheba_3",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "Uriah came. He would not eat or sleep in his own house while his comrades fought under the walls of Rabbah. The king's plan would not work.",
       "cite": "2 Samuel 11:11",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "bathsheba_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Uriah came. He would not eat or sleep in his own house while his comrades fought under the walls of Rabbah. The king's plan would not work.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "bathsheba_4",
-      "speaker": "david",
-      "fx": "fade",
-      "delay": 800,
-      "align": "left",
-      "text": "Put Uriah at the front of the fight. Let the fiercest men surround him. Then retreat and leave him exposed.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "bathsheba_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Put Uriah at the front of the fight. Let the fiercest men surround him. Then retreat and leave him exposed.",
+          "position": "middle-left",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "david",
+          "align": "left",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "bathsheba_5",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
       "audioSfx": "assets/audio/sfx/camp_fire.mp3",
-      "text": "Uriah fell and was killed. The messenger ran to David with the news, and the king said nothing at all. The city kept its silence.",
       "cite": "2 Samuel 11:25",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "bathsheba_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Uriah fell and was killed. The messenger ran to David with the news, and the king said nothing at all. The city kept its silence.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "bathsheba_6",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The child born to Bathsheba fell ill and died within days. David held the infant and wept, but he could not undo what had been done.",
       "cite": "2 Samuel 12:18",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "bathsheba_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The child born to Bathsheba fell ill and died within days. David held the infant and wept, but he could not undo what had been done.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     },
     {
       "id": "bathsheba_7",
-      "speaker": "god",
-      "fx": "bounce",
-      "delay": 800,
-      "align": "center",
-      "sfx": "POWER HIDES WHAT CONSCIENCE KNOWS",
-      "text": "The most dangerous thing a king can do is use his power to make a wrong thing look like a right one. The roof was only a roof until he looked from it.",
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "bathsheba_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The most dangerous thing a king can do is use his power to make a wrong thing look like a right one. The roof was only a roof until he looked from it.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        },
+        {
+          "id": "bathsheba_7_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "POWER HIDES WHAT CONSCIENCE KNOWS",
+          "position": "top-middle",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "bounce",
+          "exitFx": "fade",
+          "style": "sfx-impact",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "god",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 2
+        }
+      ]
     },
     {
       "id": "bathsheba_8",
-      "speaker": "narrator",
-      "fx": "fade",
-      "delay": 800,
-      "align": "center",
-      "text": "The king had taken what was not his to take and killed the man who would not help him hide it. The story does not end with a good choice.",
       "choices": [
         {
           "label": "Wait for the prophet's word 📜",
@@ -108,11 +260,56 @@
           "note": "A greater roof might hide the old one from sight."
         }
       ],
-      "width": "1/2",
-      "valign": "middle"
+      "items": [
+        {
+          "id": "bathsheba_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The king had taken what was not his to take and killed the man who would not help him hide it. The story does not end with a good choice.",
+          "position": "center",
+          "margin": "M",
+          "delay": 800,
+          "visibleDuration": 0,
+          "entryFx": "fade",
+          "exitFx": "fade",
+          "style": "comic",
+          "bold": false,
+          "italic": false,
+          "rotation": 0,
+          "font": "default",
+          "fontSize": 0,
+          "speaker": "narrator",
+          "align": "center",
+          "width": "1/2",
+          "zIndex": 1
+        }
+      ]
     }
   ],
   "scene": "bathsheba",
   "foreground": "fg_bathsheba",
-  "index": 7
+  "index": 7,
+  "assetFolder": "act_08_bathsheba",
+  "artFolder": "assets/svg/act_08_bathsheba",
+  "assetStem": "david_act8",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_08_bathsheba/a_establish/david_act8_a_background.svg",
+      "middleGround": "assets/svg/act_08_bathsheba/a_establish/david_act8_a_middle_ground.svg",
+      "foreground": "assets/svg/act_08_bathsheba/a_establish/david_act8_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_08_bathsheba/b_core_action/david_act8_b_background.svg",
+      "middleGround": "assets/svg/act_08_bathsheba/b_core_action/david_act8_b_middle_ground.svg",
+      "foreground": "assets/svg/act_08_bathsheba/b_core_action/david_act8_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_08_bathsheba/c_resolve/david_act8_c_background.svg",
+      "middleGround": "assets/svg/act_08_bathsheba/c_resolve/david_act8_c_middle_ground.svg",
+      "foreground": "assets/svg/act_08_bathsheba/c_resolve/david_act8_c_foreground.svg"
+    }
+  },
+  "materials": [
+    "assets/materials/water_still-eddies.svg"
+  ]
 }

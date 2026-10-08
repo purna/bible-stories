@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="David act 8 Ch.8 · Bathsheba and Uriah background">
+  <metadata>{&quot;story&quot;:&quot;David&quot;,&quot;act&quot;:8,&quot;chapter&quot;:&quot;Ch.8 · Bathsheba and Uriah&quot;,&quot;scene&quot;:&quot;B&quot;,&quot;layer&quot;:&quot;background&quot;,&quot;materials&quot;:[&quot;water_still-calm.svg&quot;,&quot;water_still-eddies.svg&quot;],&quot;environment&quot;:&quot;sea&quot;,&quot;seed&quot;:1}</metadata>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1a0e08"/><stop offset="1" stop-color="#0a0604"/></linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#040202"/><stop offset="1" stop-color="#0a0604"/></linearGradient><pattern id="act-material" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M-8 16 Q10 7 28 16 T64 16 M-8 40 Q10 31 28 40 T64 40 M-8 64 Q10 55 28 64 T64 64" fill="none" stroke="#7c8480" stroke-width="2" opacity=".55"/></pattern></defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1500" cy="180" r="64" fill="#f2ddb0" opacity=".82"/>
+  <path d="M0 661.4 Q500 616.4 980 654.4 T1920 636.4 V806.4 H0Z" fill="#21393c" opacity=".65"/>
+  <path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#ground)"/><path d="M0 706.4 Q480 611.4 960 671.4 T1920 651.4 V1080 H0 Z" fill="url(#act-material)" opacity=".16"/>
+  </svg>
