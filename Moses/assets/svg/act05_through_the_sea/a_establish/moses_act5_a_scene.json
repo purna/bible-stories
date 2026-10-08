@@ -1,0 +1,19 @@
+{
+  "story": "Moses",
+  "act": 5,
+  "chapter": "Ch.5 · Through the Sea",
+  "artSource": "art/act5_sea.md",
+  "artFolder": "act05_through_the_sea",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "assets/materials/egypt_mud_brick-stretcher.svg",
+    "assets/materials/stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act5_a_background.svg",
+    "middleGround": "moses_act5_a_middle_ground.svg",
+    "foreground": "moses_act5_a_foreground.svg"
+  }
+}

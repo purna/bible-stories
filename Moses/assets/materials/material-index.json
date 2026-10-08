@@ -37,7 +37,7 @@
     {
       "act": 1,
       "title": "Ch.1 · The Child in the River",
-      "assetFolder": "act_01_basket",
+      "assetFolder": "act01_the_child_in_the_river",
       "materials": [
         {
           "key": "nile_reeds",
@@ -48,7 +48,7 @@
     {
       "act": 2,
       "title": "Ch.2 · The Burning Bush",
-      "assetFolder": "act_02_exile",
+      "assetFolder": "act02_the_burning_bush",
       "materials": [
         {
           "key": "nile_reeds",
@@ -63,7 +63,7 @@
     {
       "act": 3,
       "title": "Ch.3 · Before the Throne",
-      "assetFolder": "act_03_throne",
+      "assetFolder": "act03_before_the_throne",
       "materials": [
         {
           "key": "egypt_mud_brick",
@@ -86,7 +86,7 @@
     {
       "act": 4,
       "title": "Ch.4 · Passover Night",
-      "assetFolder": "act_04_passover",
+      "assetFolder": "act04_passover_night",
       "materials": [
         {
           "key": "egypt_mud_brick",
@@ -101,7 +101,7 @@
     {
       "act": 5,
       "title": "Ch.5 · Through the Sea",
-      "assetFolder": "act_05_sea",
+      "assetFolder": "act05_through_the_sea",
       "materials": [
         {
           "key": "egypt_mud_brick",
@@ -116,7 +116,7 @@
     {
       "act": 6,
       "title": "Ch.6 · Bread in the Wilderness",
-      "assetFolder": "act_06_bread",
+      "assetFolder": "act06_bread_in_the_wilderness",
       "materials": [
         {
           "key": "desert_sand",
@@ -127,7 +127,7 @@
     {
       "act": 7,
       "title": "Ch.7 · Water from the Rock",
-      "assetFolder": "act_07_rock",
+      "assetFolder": "act07_water_from_the_rock",
       "materials": [
         {
           "key": "nile_reeds",
@@ -146,7 +146,7 @@
     {
       "act": 8,
       "title": "Ch.8 · Jethro's Counsel",
-      "assetFolder": "act_08_jethro",
+      "assetFolder": "act08_jethro_s_counsel",
       "materials": [
         {
           "key": "nile_reeds",
@@ -169,7 +169,7 @@
     {
       "act": 9,
       "title": "Ch.9 · Thunder on Sinai",
-      "assetFolder": "act_09_mountain",
+      "assetFolder": "act09_thunder_on_sinai",
       "materials": [
         {
           "key": "desert_sand",
@@ -184,7 +184,7 @@
     {
       "act": 10,
       "title": "Ch.10 · The Golden Calf",
-      "assetFolder": "act_10_calf",
+      "assetFolder": "act10_the_golden_calf",
       "materials": [
         {
           "key": "nile_reeds",
@@ -207,7 +207,7 @@
     {
       "act": 11,
       "title": "Ch.11 · The Second Tablets",
-      "assetFolder": "act_11_tablets",
+      "assetFolder": "act11_the_second_tablets",
       "materials": [
         {
           "key": "egypt_mud_brick",
@@ -238,7 +238,7 @@
     {
       "act": 12,
       "title": "Ch.12 · The Spies and Rebellion",
-      "assetFolder": "act_12_spies",
+      "assetFolder": "act12_the_spies_and_rebellion",
       "materials": [
         {
           "key": "egypt_mud_brick",
@@ -261,7 +261,7 @@
     {
       "act": 13,
       "title": "Ch.13 · The Long Wilderness",
-      "assetFolder": "act_13_wilderness",
+      "assetFolder": "act13_the_long_wilderness",
       "materials": [
         {
           "key": "desert_sand",
@@ -280,7 +280,7 @@
     {
       "act": 14,
       "title": "Ch.14 · Moses' Final Words",
-      "assetFolder": "act_14_reviews",
+      "assetFolder": "act14_moses_final_words",
       "materials": [
         {
           "key": "nile_reeds",
@@ -303,7 +303,7 @@
     {
       "act": 15,
       "title": "Ch.15 · Mount Nebo",
-      "assetFolder": "act_15_nebo",
+      "assetFolder": "act15_mount_nebo",
       "materials": [
         {
           "key": "nile_reeds",

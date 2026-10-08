@@ -150,24 +150,24 @@
   "scene": "jethro_s_counsel",
   "foreground": "fg_jethro_s_counsel",
   "index": 7,
-  "assetFolder": "act_08_jethro",
-  "artFolder": "assets/svg/act_08_jethro",
+  "assetFolder": "act08_jethro_s_counsel",
+  "artFolder": "assets/svg/act08_jethro_s_counsel",
   "assetStem": "moses_act8",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_08_jethro/a_establish/moses_act8_a_background.svg",
-      "middleGround": "assets/svg/act_08_jethro/a_establish/moses_act8_a_middle_ground.svg",
-      "foreground": "assets/svg/act_08_jethro/a_establish/moses_act8_a_foreground.svg"
+      "background": "assets/svg/act08_jethro_s_counsel/a_establish/moses_act8_a_background.svg",
+      "middleGround": "assets/svg/act08_jethro_s_counsel/a_establish/moses_act8_a_middle_ground.svg",
+      "foreground": "assets/svg/act08_jethro_s_counsel/a_establish/moses_act8_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_background.svg",
-      "middleGround": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_middle_ground.svg",
-      "foreground": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_foreground.svg"
+      "background": "assets/svg/act08_jethro_s_counsel/b_core_action/moses_act8_b_background.svg",
+      "middleGround": "assets/svg/act08_jethro_s_counsel/b_core_action/moses_act8_b_middle_ground.svg",
+      "foreground": "assets/svg/act08_jethro_s_counsel/b_core_action/moses_act8_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_background.svg",
-      "middleGround": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_middle_ground.svg",
-      "foreground": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_foreground.svg"
+      "background": "assets/svg/act08_jethro_s_counsel/c_resolve/moses_act8_c_background.svg",
+      "middleGround": "assets/svg/act08_jethro_s_counsel/c_resolve/moses_act8_c_middle_ground.svg",
+      "foreground": "assets/svg/act08_jethro_s_counsel/c_resolve/moses_act8_c_foreground.svg"
     }
   },
   "materials": [

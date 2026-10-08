@@ -94,3 +94,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `hammered_gold` | Tabernacle Gold (Moses) | Bad News; Rise and Build |
 | `desert_sand` | Wilderness Sand (Moses) | Plots and Rumours |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Nehemiah Design SOT](../__docs/nehemiah-design-source-of-truth.md)

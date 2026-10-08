@@ -150,24 +150,24 @@
   "scene": "moses_final_words",
   "foreground": "fg_moses_final_words",
   "index": 13,
-  "assetFolder": "act_14_reviews",
-  "artFolder": "assets/svg/act_14_reviews",
+  "assetFolder": "act14_moses_final_words",
+  "artFolder": "assets/svg/act14_moses_final_words",
   "assetStem": "moses_act14",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_14_reviews/a_establish/moses_act14_a_background.svg",
-      "middleGround": "assets/svg/act_14_reviews/a_establish/moses_act14_a_middle_ground.svg",
-      "foreground": "assets/svg/act_14_reviews/a_establish/moses_act14_a_foreground.svg"
+      "background": "assets/svg/act14_moses_final_words/a_establish/moses_act14_a_background.svg",
+      "middleGround": "assets/svg/act14_moses_final_words/a_establish/moses_act14_a_middle_ground.svg",
+      "foreground": "assets/svg/act14_moses_final_words/a_establish/moses_act14_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_background.svg",
-      "middleGround": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_middle_ground.svg",
-      "foreground": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_foreground.svg"
+      "background": "assets/svg/act14_moses_final_words/b_core_action/moses_act14_b_background.svg",
+      "middleGround": "assets/svg/act14_moses_final_words/b_core_action/moses_act14_b_middle_ground.svg",
+      "foreground": "assets/svg/act14_moses_final_words/b_core_action/moses_act14_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_background.svg",
-      "middleGround": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_middle_ground.svg",
-      "foreground": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_foreground.svg"
+      "background": "assets/svg/act14_moses_final_words/c_resolve/moses_act14_c_background.svg",
+      "middleGround": "assets/svg/act14_moses_final_words/c_resolve/moses_act14_c_middle_ground.svg",
+      "foreground": "assets/svg/act14_moses_final_words/c_resolve/moses_act14_c_foreground.svg"
     }
   },
   "materials": [

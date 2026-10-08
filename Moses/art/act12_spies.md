@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act12_spies.json` |
-| SVG assets | `../assets/svg/act_12_spies/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act12_the_spies_and_rebellion/` |
 | 3D scene | `moses-spies` in `../tools/shot-designer/scenes/` |
 | Particle mode | dusk — low warm sun, long amber shadows, deep violet sky banding |
 | Game beat | Explore Canaan and face the consequences of unbelief. — call-and-response |
@@ -18,13 +18,13 @@ Twelve spies cross the land for forty days and return with a cluster of grapes o
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_12_spies/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_12_spies/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act12_the_spies_and_rebellion/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act12_the_spies_and_rebellion/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act12_a_background.svg`, `moses_act12_a_middle_ground.svg`, and `moses_act12_a_foreground.svg`.
 - `b_core_action/` contains `moses_act12_b_background.svg`, `moses_act12_b_middle_ground.svg`, and `moses_act12_b_foreground.svg`.
 - `c_resolve/` contains `moses_act12_c_background.svg`, `moses_act12_c_middle_ground.svg`, and `moses_act12_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

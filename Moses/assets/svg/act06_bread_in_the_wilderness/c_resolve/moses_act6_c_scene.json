@@ -1,0 +1,18 @@
+{
+  "story": "Moses",
+  "act": 6,
+  "chapter": "Ch.6 · Bread in the Wilderness",
+  "artSource": "art/act6_bread.md",
+  "artFolder": "act06_bread_in_the_wilderness",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "assets/materials/desert_sand-dunes.svg"
+  ],
+  "layers": {
+    "background": "moses_act6_c_background.svg",
+    "middleGround": "moses_act6_c_middle_ground.svg",
+    "foreground": "moses_act6_c_foreground.svg"
+  }
+}

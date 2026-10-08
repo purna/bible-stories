@@ -150,24 +150,24 @@
   "scene": "thunder_on_sinai",
   "foreground": "fg_thunder_on_sinai",
   "index": 8,
-  "assetFolder": "act_09_mountain",
-  "artFolder": "assets/svg/act_09_mountain",
+  "assetFolder": "act09_thunder_on_sinai",
+  "artFolder": "assets/svg/act09_thunder_on_sinai",
   "assetStem": "moses_act9",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_09_mountain/a_establish/moses_act9_a_background.svg",
-      "middleGround": "assets/svg/act_09_mountain/a_establish/moses_act9_a_middle_ground.svg",
-      "foreground": "assets/svg/act_09_mountain/a_establish/moses_act9_a_foreground.svg"
+      "background": "assets/svg/act09_thunder_on_sinai/a_establish/moses_act9_a_background.svg",
+      "middleGround": "assets/svg/act09_thunder_on_sinai/a_establish/moses_act9_a_middle_ground.svg",
+      "foreground": "assets/svg/act09_thunder_on_sinai/a_establish/moses_act9_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_background.svg",
-      "middleGround": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_middle_ground.svg",
-      "foreground": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_foreground.svg"
+      "background": "assets/svg/act09_thunder_on_sinai/b_core_action/moses_act9_b_background.svg",
+      "middleGround": "assets/svg/act09_thunder_on_sinai/b_core_action/moses_act9_b_middle_ground.svg",
+      "foreground": "assets/svg/act09_thunder_on_sinai/b_core_action/moses_act9_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_background.svg",
-      "middleGround": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_middle_ground.svg",
-      "foreground": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_foreground.svg"
+      "background": "assets/svg/act09_thunder_on_sinai/c_resolve/moses_act9_c_background.svg",
+      "middleGround": "assets/svg/act09_thunder_on_sinai/c_resolve/moses_act9_c_middle_ground.svg",
+      "foreground": "assets/svg/act09_thunder_on_sinai/c_resolve/moses_act9_c_foreground.svg"
     }
   },
   "materials": [

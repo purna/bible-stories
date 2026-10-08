@@ -95,3 +95,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `water_still` | Still Water (Water) | Rachel at the Well; The Flocks; Leaving Haran; The Night Wrestling |
 | `grass` | Grass (Foliage) | The Birthright; The Stolen Blessing; Bethel; Rachel at the Well; Leaving Haran; The Night Wrestling; Joseph's Coats |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Jacob Design SOT](../__docs/jacob-design-source-of-truth.md)

@@ -294,7 +294,7 @@ function diamondPath(r){
 /* ============================================================
    Texture Library
 ============================================================ */
-const STORY_TEXTURE_CONFIG = {"story":"Jeremiah","keys":["wall_brick","stone","wood_dark","fabric_weave","desert_sand","water_still"],"acts":[{"act":1,"title":"Ch.1 · The Call","assetFolder":"assets/svg/act_01_the_call","keys":["stone","wood_dark"]},{"act":2,"title":"Ch.2 · The Almond Branch","assetFolder":"assets/svg/act_02_the_almond_branch","keys":["wall_brick","stone","wood_dark","fabric_weave","desert_sand","water_still"]},{"act":3,"title":"Ch.3 · At the Temple Gate","assetFolder":"assets/svg/act_03_at_the_temple_gate","keys":["stone"]},{"act":4,"title":"Ch.4 · The Scroll","assetFolder":"assets/svg/act_04_the_scroll","keys":["wall_brick","stone","wood_dark","fabric_weave","desert_sand","water_still"]},{"act":5,"title":"Ch.5 · The Potter","assetFolder":"assets/svg/act_05_the_potter","keys":["wall_brick","stone","wood_dark","fabric_weave","desert_sand","water_still"]},{"act":6,"title":"Ch.6 · The Yoke","assetFolder":"assets/svg/act_06_the_yoke","keys":["wood_dark"]},{"act":7,"title":"Ch.7 · The Cistern","assetFolder":"assets/svg/act_07_the_cistern","keys":["stone","wood_dark","fabric_weave","water_still"]},{"act":8,"title":"Ch.8 · Buy the Field","assetFolder":"assets/svg/act_08_buy_the_field","keys":["wall_brick","stone","water_still"]},{"act":9,"title":"Ch.9 · The Fall of Jerusalem","assetFolder":"assets/svg/act_09_the_fall_of_jerusalem","keys":["wall_brick","stone","desert_sand"]},{"act":10,"title":"Ch.10 · Lament and Hope","assetFolder":"assets/svg/act_10_lament_and_hope","keys":["wood_dark","fabric_weave"]}]};
+const STORY_TEXTURE_CONFIG = {"story":"Jeremiah","keys":["wall_brick","stone","wood_dark","fabric_weave","desert_sand","water_still"],"acts":[{"act":1,"title":"Ch.1 · The Call","assetFolder":"assets/svg/act_01_the_call","keys":["wall_brick","stone","wood_dark"]},{"act":2,"title":"Ch.2 · The Almond Branch","assetFolder":"assets/svg/act_02_the_almond_branch","keys":["stone","wood_dark","fabric_weave"]},{"act":3,"title":"Ch.3 · At the Temple Gate","assetFolder":"assets/svg/act_03_at_the_temple_gate","keys":["fabric_weave","wall_brick","stone"]},{"act":4,"title":"Ch.4 · The Scroll","assetFolder":"assets/svg/act_04_the_scroll","keys":["wall_brick","stone","wood_dark"]},{"act":5,"title":"Ch.5 · The Potter","assetFolder":"assets/svg/act_05_the_potter","keys":["desert_sand","water_still","wall_brick"]},{"act":6,"title":"Ch.6 · The Yoke","assetFolder":"assets/svg/act_06_the_yoke","keys":["wall_brick","stone","wood_dark"]},{"act":7,"title":"Ch.7 · The Cistern","assetFolder":"assets/svg/act_07_the_cistern","keys":["wall_brick","stone","wood_dark"]},{"act":8,"title":"Ch.8 · Buy the Field","assetFolder":"assets/svg/act_08_buy_the_field","keys":["fabric_weave","water_still","stone"]},{"act":9,"title":"Ch.9 · The Fall of Jerusalem","assetFolder":"assets/svg/act_09_the_fall_of_jerusalem","keys":["wall_brick","stone","wood_dark"]},{"act":10,"title":"Ch.10 · Lament and Hope","assetFolder":"assets/svg/act_10_lament_and_hope","keys":["fabric_weave","desert_sand","water_still"]}]};
 const FULL_LIB = {
 
   water_still: {
@@ -894,6 +894,96 @@ const FULL_LIB = {
   }
 
 };
+function addMaterialVariant(key, texture){
+  const kind = /water_/.test(key) ? 'water'
+    : /^(camel_hair$|wool_fleece$)/.test(key) ? 'fibres'
+    : /^wood_/.test(key) ? 'wood'
+    : /^(stone$|stone_tablets$|rock_surface$|mosaic$)/.test(key) ? 'stone'
+    : /^(brick$|wall_brick$|egypt_mud_brick$)/.test(key) ? 'masonry'
+    : /^(leaves$|grass$|nile_reeds$|wheat_stalks$|torch_flame$)/.test(key) ? 'growth'
+    : /^(fabric_|tent_fabric$|wool_fleece$|bulrush_basket$)/.test(key) ? 'woven'
+    : /^desert_sand$/.test(key) ? 'sand'
+    : 'surface';
+  const labels = {
+    water:'Cross-current', wood:'End grain', stone:'Cut stone', masonry:'Weathered courses',
+    growth:'Dense growth', woven:'Tight weave', fibres:'Directional fibres', sand:'Wind-rippled', surface:'Hammered surface'
+  };
+  const specialLabels={mosaic:'Irregular tesserae',camel_hair:'Hair fibres',wool_fleece:'Fleece curls',tar:'Pooled tar',clay_jar:'Pitted ceramic',hammered_gold:'Hammered gold',trumpet_horn:'Hammered brass',sword_iron:'Forged iron'};
+  texture.shapes.push({
+    key:'forge_variant',
+    label:specialLabels[key]||labels[kind],
+    build(rng,p,c){
+      const w=120,h=120;
+      let body=`<rect width="${w}" height="${h}" fill="${c[0]}"/>`;
+      if(kind==='water'){
+        for(let row=0;row<10;row++){
+          const y=row*14+rnd(rng,-4,4), amp=rnd(rng,2,7), col=rng()>.72?(c[2]||c[1]):c[1];
+          let d=`M-8 ${fmt(y)}`;
+          for(let x=0;x<=w+8;x+=20) d+=` Q${fmt(x+10)} ${fmt(y+amp)} ${fmt(x+20)} ${fmt(y)}`;
+          body+=`<path d="${d}" fill="none" stroke="${col}" stroke-width="${fmt(rnd(rng,.7,2.4))}" opacity="${fmt(rnd(rng,.25,.7))}"/>`;
+        }
+        for(let i=0;i<12;i++) body+=`<ellipse cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" rx="${fmt(rnd(rng,2,7))}" ry="${fmt(rnd(rng,.6,2))}" fill="none" stroke="${c[2]||c[1]}" opacity=".55"/>`;
+      } else if(kind==='wood'){
+        for(let i=0;i<7;i++){
+          const rx=10+i*8, ry=7+i*8, cx=60+rnd(rng,-5,5), cy=60+rnd(rng,-5,5);
+          body+=`<ellipse cx="${fmt(cx)}" cy="${fmt(cy)}" rx="${fmt(rx)}" ry="${fmt(ry)}" fill="none" stroke="${i%2?(c[1]||c[0]):(c[2]||c[1])}" stroke-width="${fmt(rnd(rng,.7,2))}" opacity="${fmt(rnd(rng,.3,.75))}"/>`;
+        }
+        for(let i=0;i<18;i++) body+=`<path d="M${fmt(rnd(rng,0,w))} ${fmt(rnd(rng,0,h))} q${fmt(rnd(rng,2,10))} ${fmt(rnd(rng,-4,4))} ${fmt(rnd(rng,8,24))} 0" fill="none" stroke="${c[1]||c[0]}" opacity=".45"/>`;
+      } else if(kind==='stone' || kind==='masonry'){
+        const cols=kind==='masonry'?4:3, rows=kind==='masonry'?6:4, cw=w/cols, ch=h/rows;
+        body=`<rect width="${w}" height="${h}" fill="${c[1]||c[0]}"/>`;
+        for(let row=-1;row<=rows;row++) for(let col=-1;col<=cols;col++){
+          const stagger=kind==='masonry' && row%2 ? cw/2 : 0;
+          const x=col*cw+stagger, y=row*ch, inset=rnd(rng,1,4);
+          const fill=mix(c[0],c[2]||c[1],rnd(rng,.08,.48));
+          if(kind==='masonry') body+=`<rect x="${fmt(x+inset)}" y="${fmt(y+inset)}" width="${fmt(cw-inset*2)}" height="${fmt(ch-inset*2)}" rx="${fmt(rnd(rng,0,2))}" fill="${fill}"/>`;
+          else body+=`<path d="M${fmt(x+inset)} ${fmt(y+inset)} l${fmt(cw-inset*2)} ${fmt(rnd(rng,-2,2))} l${fmt(rnd(rng,-2,2))} ${fmt(ch-inset*2)} l${fmt(-cw+inset*2)} ${fmt(rnd(rng,-2,2))} Z" fill="${fill}" stroke="${c[1]||c[0]}" stroke-width="1.4"/>`;
+          if(rng()>.55) body+=`<path d="M${fmt(x+cw*.35)} ${fmt(y+ch*.35)} l${fmt(rnd(rng,-5,5))} ${fmt(rnd(rng,3,9))} l${fmt(rnd(rng,-4,4))} ${fmt(rnd(rng,2,6))}" fill="none" stroke="${c[1]||c[0]}" opacity=".55"/>`;
+        }
+      } else if(kind==='growth'){
+        for(let i=0;i<44;i++){
+          const x=rnd(rng,-5,w+5), y=rnd(rng,-5,h+5), size=rnd(rng,5,17), rot=rnd(rng,0,360);
+          const col=pick(rng,[c[1]||c[0],c[2]||c[1],mix(c[1]||c[0],c[2]||c[1],.5)]);
+          if(key==='grass'||key==='wheat_stalks'||key==='nile_reeds'||key==='torch_flame'){
+            const height=key==='torch_flame'?rnd(rng,7,20):size*1.8;
+            body+=`<path d="M${fmt(x)} ${fmt(y+height/2)} Q${fmt(x+rnd(rng,-8,8))} ${fmt(y)} ${fmt(x+rnd(rng,-8,8))} ${fmt(y-height/2)}" fill="none" stroke="${col}" stroke-width="${fmt(rnd(rng,1,3))}" stroke-linecap="round"/>`;
+            if(key==='nile_reeds'||key==='wheat_stalks') body+=`<ellipse cx="${fmt(x)}" cy="${fmt(y-height/2)}" rx="2.3" ry="5" fill="${c[2]||col}" transform="rotate(${fmt(rot)} ${fmt(x)} ${fmt(y-height/2)})"/>`;
+          } else body+=`<ellipse cx="${fmt(x)}" cy="${fmt(y)}" rx="${fmt(size*.32)}" ry="${fmt(size)}" fill="${col}" opacity=".82" transform="rotate(${fmt(rot)} ${fmt(x)} ${fmt(y)})"/>`;
+        }
+      } else if(kind==='fibres'){
+        for(let i=0;i<54;i++){
+          const x=rnd(rng,-8,w+8), y=rnd(rng,0,h), length=rnd(rng,10,42), bend=rnd(rng,-8,8);
+          const col=pick(rng,[c[1]||c[0],c[2]||c[1],mix(c[1]||c[0],c[2]||c[1],.45)]);
+          body+=`<path d="M${fmt(x)} ${fmt(y)} Q${fmt(x+bend)} ${fmt(y+length*.5)} ${fmt(x+rnd(rng,-5,5))} ${fmt(y+length)}" fill="none" stroke="${col}" stroke-width="${fmt(rnd(rng,.5,2.4))}" opacity="${fmt(rnd(rng,.35,.85))}" stroke-linecap="round"/>`;
+          if(key==='wool_fleece'&&i%3===0) body+=`<circle cx="${fmt(x)}" cy="${fmt(y)}" r="${fmt(rnd(rng,2,5))}" fill="${col}" opacity=".55"/>`;
+        }
+      } else if(kind==='woven'){
+        const step=12;
+        for(let y=-step;y<h+step;y+=step) for(let x=-step;x<w+step;x+=step){
+          const over=(Math.round(x/step)+Math.round(y/step))%2===0;
+          const col=over?(c[1]||c[0]):(c[2]||c[0]);
+          body+=`<rect x="${fmt(x)}" y="${fmt(y)}" width="${step-1}" height="${step-1}" rx="${key==='bulrush_basket'?1:0}" fill="${col}" opacity="${fmt(rnd(rng,.55,.95))}"/>`;
+          if(over) body+=`<path d="M${fmt(x+2)} ${fmt(y+2)} l8 0 M${fmt(x+2)} ${fmt(y+4)} l6 0" stroke="${c[0]}" opacity=".35"/>`;
+        }
+      } else if(kind==='sand'){
+        for(let row=0;row<14;row++){
+          const y=row*10+rnd(rng,-4,4), amp=rnd(rng,2,9), col=rng()>.6?c[2]:c[1];
+          body+=`<path d="M-8 ${fmt(y)} Q28 ${fmt(y-amp)} 60 ${fmt(y)} T128 ${fmt(y)}" fill="none" stroke="${col}" stroke-width="${fmt(rnd(rng,.8,2.5))}" opacity="${fmt(rnd(rng,.25,.65))}"/>`;
+        }
+        for(let i=0;i<55;i++) body+=`<circle cx="${fmt(rnd(rng,0,w))}" cy="${fmt(rnd(rng,0,h))}" r="${fmt(rnd(rng,.3,1.3))}" fill="${c[1]}" opacity=".6"/>`;
+      } else {
+        for(let i=0;i<52;i++){
+          const x=rnd(rng,0,w), y=rnd(rng,0,h), r=rnd(rng,1.5,7), col=rng()>.55?(c[2]||c[1]):(c[1]||c[0]);
+          body+=`<circle cx="${fmt(x)}" cy="${fmt(y)}" r="${fmt(r)}" fill="none" stroke="${col}" stroke-width="${fmt(rnd(rng,.5,2.2))}" opacity="${fmt(rnd(rng,.2,.65))}"/>`;
+          if(i%3===0) body+=`<path d="M${fmt(x-r)} ${fmt(y+r)} l${fmt(r*2)} ${fmt(-r*2)}" stroke="${c[2]||col}" stroke-width=".7" opacity=".5"/>`;
+        }
+      }
+      return {w,h,body};
+    }
+  });
+}
+Object.entries(FULL_LIB).forEach(([key,texture])=>addMaterialVariant(key,texture));
+
 const LIB = Object.fromEntries(STORY_TEXTURE_CONFIG.keys.filter(key => FULL_LIB[key]).map(key => {
   const item = FULL_LIB[key];
   return [key, {...item, group: STORY_TEXTURE_CONFIG.story}];
@@ -1003,7 +1093,7 @@ function buildColorRow(){
     item.className = 'colorItem';
     const input = document.createElement('input');
     input.type='color'; input.value = col.length===7? col : '#888888';
-    input.oninput = (e)=>{ state.colors[i] = e.target.value; render(); };
+    input.oninput = (e)=>{ state.colors[i] = e.target.value; renderPreview(); };
     const span = document.createElement('span');
     span.textContent = names[i] || ('c'+i);
     item.appendChild(input); item.appendChild(span);
@@ -1052,7 +1142,10 @@ function render(){
   buildShapeRow();
   buildColorRow();
   buildParamGrp();
+  renderPreview();
+}
 
+function renderPreview(){
   const gen = buildPatternMarkup();
   lastGenerated = gen;
   const patId = 'p_' + state.texKey + '_' + state.shapeKey;

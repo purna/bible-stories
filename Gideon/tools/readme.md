@@ -91,3 +91,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `tent_fabric` | Tent Fabric (Gideon) | The Dream; The Battle |
 | `sword_iron` | Sword Iron (Gideon) | The Army Reduced; The Dream; The Battle; The Victory |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Gideon Design SOT](../__docs/gideon-design-source-of-truth.md)

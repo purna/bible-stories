@@ -150,24 +150,24 @@
   "scene": "through_the_sea",
   "foreground": "fg_through_the_sea",
   "index": 4,
-  "assetFolder": "act_05_sea",
-  "artFolder": "assets/svg/act_05_sea",
+  "assetFolder": "act05_through_the_sea",
+  "artFolder": "assets/svg/act05_through_the_sea",
   "assetStem": "moses_act5",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_05_sea/a_establish/moses_act5_a_background.svg",
-      "middleGround": "assets/svg/act_05_sea/a_establish/moses_act5_a_middle_ground.svg",
-      "foreground": "assets/svg/act_05_sea/a_establish/moses_act5_a_foreground.svg"
+      "background": "assets/svg/act05_through_the_sea/a_establish/moses_act5_a_background.svg",
+      "middleGround": "assets/svg/act05_through_the_sea/a_establish/moses_act5_a_middle_ground.svg",
+      "foreground": "assets/svg/act05_through_the_sea/a_establish/moses_act5_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_05_sea/b_core_action/moses_act5_b_background.svg",
-      "middleGround": "assets/svg/act_05_sea/b_core_action/moses_act5_b_middle_ground.svg",
-      "foreground": "assets/svg/act_05_sea/b_core_action/moses_act5_b_foreground.svg"
+      "background": "assets/svg/act05_through_the_sea/b_core_action/moses_act5_b_background.svg",
+      "middleGround": "assets/svg/act05_through_the_sea/b_core_action/moses_act5_b_middle_ground.svg",
+      "foreground": "assets/svg/act05_through_the_sea/b_core_action/moses_act5_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_05_sea/c_resolve/moses_act5_c_background.svg",
-      "middleGround": "assets/svg/act_05_sea/c_resolve/moses_act5_c_middle_ground.svg",
-      "foreground": "assets/svg/act_05_sea/c_resolve/moses_act5_c_foreground.svg"
+      "background": "assets/svg/act05_through_the_sea/c_resolve/moses_act5_c_background.svg",
+      "middleGround": "assets/svg/act05_through_the_sea/c_resolve/moses_act5_c_middle_ground.svg",
+      "foreground": "assets/svg/act05_through_the_sea/c_resolve/moses_act5_c_foreground.svg"
     }
   },
   "materials": [

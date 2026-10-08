@@ -85,3 +85,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `water_still` | Still Water (Water) | Years of Faithfulness |
 | `leaves` | Leaves (Foliage) | The First Walk; Years of Faithfulness; Walking with God; Taken |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Enoch Design SOT](../__docs/enoch-design-source-of-truth.md)

@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act7_rock.json` |
-| SVG assets | `../assets/svg/act_07_rock/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act07_water_from_the_rock/` |
 | 3D scene | `moses-rock` in `../tools/shot-designer/scenes/` |
 | Particle mode | dusk — low warm sun, long amber shadows, deep violet sky banding |
 | Game beat | Find water in the desert and prevail over attackers. — pathfinding |
@@ -18,13 +18,13 @@ At Marah a tree thrown into the water makes it sweet; at Rephidim Moses strikes 
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_07_rock/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_07_rock/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act07_water_from_the_rock/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act07_water_from_the_rock/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act7_a_background.svg`, `moses_act7_a_middle_ground.svg`, and `moses_act7_a_foreground.svg`.
 - `b_core_action/` contains `moses_act7_b_background.svg`, `moses_act7_b_middle_ground.svg`, and `moses_act7_b_foreground.svg`.
 - `c_resolve/` contains `moses_act7_c_background.svg`, `moses_act7_c_middle_ground.svg`, and `moses_act7_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

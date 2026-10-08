@@ -95,3 +95,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `stone` | Stone (Structure) | Dry Ground; The Covenant |
 | `leaves` | Leaves (Foliage) | The Warning; The Long Wait; The Vineyard |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Noah Design SOT](../__docs/noah-design-source-of-truth.md)

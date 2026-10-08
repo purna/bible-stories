@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act9_mountain.json` |
-| SVG assets | `../assets/svg/act_09_mountain/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act09_thunder_on_sinai/` |
 | 3D scene | `moses-mountain` in `../tools/shot-designer/scenes/` |
 | Particle mode | storm — wind-driven rain, cold grey-blue, lightning flicker |
 | Game beat | Arrange the camp and carry the covenant words. — call-and-response |
@@ -18,13 +18,13 @@ The Lord comes down on Mount Sinai in fire, the mountain smokes, and the people 
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_09_mountain/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_09_mountain/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act09_thunder_on_sinai/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act09_thunder_on_sinai/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act9_a_background.svg`, `moses_act9_a_middle_ground.svg`, and `moses_act9_a_foreground.svg`.
 - `b_core_action/` contains `moses_act9_b_background.svg`, `moses_act9_b_middle_ground.svg`, and `moses_act9_b_foreground.svg`.
 - `c_resolve/` contains `moses_act9_c_background.svg`, `moses_act9_c_middle_ground.svg`, and `moses_act9_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

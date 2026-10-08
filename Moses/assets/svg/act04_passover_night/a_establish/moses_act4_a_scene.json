@@ -1,0 +1,19 @@
+{
+  "story": "Moses",
+  "act": 4,
+  "chapter": "Ch.4 · Passover Night",
+  "artSource": "art/act4_passover.md",
+  "artFolder": "act04_passover_night",
+  "sceneId": "placeholder",
+  "beat": "A",
+  "beatName": "Establish",
+  "materials": [
+    "assets/materials/egypt_mud_brick-stretcher.svg",
+    "assets/materials/stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act4_a_background.svg",
+    "middleGround": "moses_act4_a_middle_ground.svg",
+    "foreground": "moses_act4_a_foreground.svg"
+  }
+}

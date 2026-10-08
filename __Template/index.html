@@ -122,6 +122,47 @@
   <!-- portal iris transition overlay -->
   <div id="portal"></div>
 
+  <section id="actGame" class="act-game" role="dialog" aria-modal="true" aria-labelledby="actGameTitle" hidden>
+    <div class="act-game-card">
+      <div class="act-game-head">
+        <div><p class="story-complete-eyebrow">ACT CHALLENGE</p><h2 id="actGameTitle">Complete the challenge</h2><p id="actGameStatus">Finish this game to complete the act.</p></div>
+        <button id="actGameClose" type="button" class="secondary">Back to story</button>
+      </div>
+      <iframe id="actGameFrame" class="act-game-frame" title="Random chapter challenge"></iframe>
+      <div class="act-game-actions"><button id="actGameContinue" type="button" hidden>Continue to next chapter →</button></div>
+    </div>
+  </section>
+
+  <section id="storyComplete" class="story-complete" role="dialog" aria-modal="true" aria-labelledby="storyCompleteTitle" hidden>
+    <div class="story-complete-card">
+      <p class="story-complete-eyebrow">STORY COMPLETE</p>
+      <h2 id="storyCompleteTitle">You finished the story</h2>
+      <p id="storyCompleteMessage">All chapters are complete.</p>
+      <div id="storyBonusLinks" class="story-bonus-links"></div>
+      <button id="storyCompleteReplay" type="button">Replay from the beginning</button>
+      <button id="storyCompleteClose" type="button">Continue reading</button>
+    </div>
+  </section>
+
+  <style>
+    .story-complete{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:20px;background:#080611d9;color:#f8f3ff;font-family:Nunito,system-ui,sans-serif}
+    .story-complete[hidden]{display:none}
+    .story-complete-card{width:min(520px,100%);padding:28px;background:#211a2a;border:2px solid #ffd84d;border-radius:16px;box-shadow:0 20px 70px #0009}
+    .story-complete-eyebrow{margin:0;color:#ffd84d;font:700 12px 'Space Mono',monospace;letter-spacing:.16em}
+    .story-complete-card h2{margin:8px 0;font:400 36px Bangers,sans-serif;color:#ffd84d}
+    .story-complete-card>p:not(.story-complete-eyebrow){color:#ddd3e8;line-height:1.5}
+    .story-bonus-links{display:grid;gap:10px;margin:18px 0}
+    .story-bonus-links a,.story-complete-card button{display:block;padding:12px 16px;border:2px solid #110c18;border-radius:8px;background:#ffd84d;color:#17101f;font-weight:900;text-align:center;text-decoration:none;cursor:pointer}
+    .story-complete-card button{width:100%;background:#33283f;color:#f8f3ff;border-color:#665477}
+    .act-game{position:fixed;inset:0;z-index:9000;display:grid;place-items:center;padding:16px;background:#080611e8;color:#f8f3ff;font-family:Nunito,system-ui,sans-serif}
+    .act-game[hidden]{display:none}
+    .act-game-card{width:min(920px,100%);max-height:calc(100vh - 32px);overflow:auto;padding:20px;background:#211a2a;border:2px solid #ffd84d;border-radius:16px;box-shadow:0 20px 70px #0009}
+    .act-game-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.act-game-card h2{margin:6px 0 4px;font:400 32px Bangers,sans-serif;color:#ffd84d}.act-game-card p{color:#ddd3e8}
+    .act-game-frame{display:block;width:100%;height:min(66vh,600px);min-height:380px;border:1px solid #665477;border-radius:10px;background:#fff}
+    .act-game-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.act-game-actions button,.act-game-head button{padding:11px 15px;border:2px solid #110c18;border-radius:8px;background:#ffd84d;color:#17101f;font-weight:900;cursor:pointer}.act-game-head .secondary{background:#33283f;color:#f8f3ff;border-color:#665477}.act-game-actions button:disabled{opacity:.5;cursor:wait}
+    @media(max-width:600px){.act-game-card{padding:14px}.act-game-frame{height:65vh;min-height:330px}}
+  </style>
+
   <footer class="tools-footer" aria-label="Story creation tools">
     <span>Create assets</span>
     <a href="tools/character-designer/index.html">Character Generator</a>

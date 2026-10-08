@@ -1933,3 +1933,7 @@ This is the canonical visual storyboard for production. Each chapter uses three 
 
 A panel is ready only when its background, middle ground, and foreground are individually toggleable; its listed textures are used consistently; text remains readable at mobile width; the camera settles before dialogue; interactive 3D objects have a clear resting state; SVG loops are seamless; and reduced-motion mode communicates the same story beat.
 <!-- panel-scene-design:end -->
+
+---
+
+**Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./adam-design-source-of-truth.md) | [Music SOT](./adam-music-source-of-truth.md) | [SFX SOT](./adam-sfx-source-of-truth.md) | [Game Plan](./adam-game-plan.md)

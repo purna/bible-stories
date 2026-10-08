@@ -63,3 +63,7 @@ Each act contains one short, readable mini-game tied directly to its canonical s
 
 Each act JSON should declare `game.id`, `game.type`, `game.objective`, `game.controls`, `game.success`, and `game.accessibility`. The interaction mounts inside the middle-ground layer, locks story navigation only while actively manipulated, calls the shared completion callback once, then settles all 3D/SVG elements before the scripture reference appears.
 <!-- act-mini-games:end -->
+
+---
+
+**Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./elijah-design-source-of-truth.md) | [Music SOT](./elijah-music-source-of-truth.md) | [SFX SOT](./elijah-sfx-source-of-truth.md) | [Game Plan](./elijah-game-plan.md)

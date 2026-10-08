@@ -38,3 +38,7 @@
 
 Approve a cue only when its loop is inaudible, narration remains clear on phone speakers, the recurring motif is identifiable without dominating, transitions match the panel camera movement, no SFX is baked into the master, OGG/MP3 duration matches, and licensing is documented.
 <!-- canonical-music-production:end -->
+
+---
+
+**Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./elijah-design-source-of-truth.md) | [Music SOT](./elijah-music-source-of-truth.md) | [SFX SOT](./elijah-sfx-source-of-truth.md) | [Game Plan](./elijah-game-plan.md)

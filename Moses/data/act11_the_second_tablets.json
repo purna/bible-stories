@@ -150,24 +150,24 @@
   "scene": "the_second_tablets",
   "foreground": "fg_the_second_tablets",
   "index": 10,
-  "assetFolder": "act_11_tablets",
-  "artFolder": "assets/svg/act_11_tablets",
+  "assetFolder": "act11_the_second_tablets",
+  "artFolder": "assets/svg/act11_the_second_tablets",
   "assetStem": "moses_act11",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_11_tablets/a_establish/moses_act11_a_background.svg",
-      "middleGround": "assets/svg/act_11_tablets/a_establish/moses_act11_a_middle_ground.svg",
-      "foreground": "assets/svg/act_11_tablets/a_establish/moses_act11_a_foreground.svg"
+      "background": "assets/svg/act11_the_second_tablets/a_establish/moses_act11_a_background.svg",
+      "middleGround": "assets/svg/act11_the_second_tablets/a_establish/moses_act11_a_middle_ground.svg",
+      "foreground": "assets/svg/act11_the_second_tablets/a_establish/moses_act11_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_background.svg",
-      "middleGround": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_middle_ground.svg",
-      "foreground": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_foreground.svg"
+      "background": "assets/svg/act11_the_second_tablets/b_core_action/moses_act11_b_background.svg",
+      "middleGround": "assets/svg/act11_the_second_tablets/b_core_action/moses_act11_b_middle_ground.svg",
+      "foreground": "assets/svg/act11_the_second_tablets/b_core_action/moses_act11_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_background.svg",
-      "middleGround": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_middle_ground.svg",
-      "foreground": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_foreground.svg"
+      "background": "assets/svg/act11_the_second_tablets/c_resolve/moses_act11_c_background.svg",
+      "middleGround": "assets/svg/act11_the_second_tablets/c_resolve/moses_act11_c_middle_ground.svg",
+      "foreground": "assets/svg/act11_the_second_tablets/c_resolve/moses_act11_c_foreground.svg"
     }
   },
   "materials": [

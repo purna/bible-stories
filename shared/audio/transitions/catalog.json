@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "sounds": [
+    {
+      "file": "bell_chime_02.webm",
+      "label": "Bell Chime 02"
+    },
+    {
+      "file": "bell_element_06.webm",
+      "label": "Bell Element 06"
+    },
+    {
+      "file": "bell_swell_09.webm",
+      "label": "Bell Swell 09"
+    },
+    {
+      "file": "blast_energy_02.webm",
+      "label": "Blast Energy 02"
+    },
+    {
+      "file": "blurp_03.webm",
+      "label": "Blurp 03"
+    },
+    {
+      "file": "communication_distortion_scanner_02.webm",
+      "label": "Communication Distortion Scanner 02"
+    },
+    {
+      "file": "communication_distortion_scanner_04.webm",
+      "label": "Communication Distortion Scanner 04"
+    },
+    {
+      "file": "crystal_glow_01.webm",
+      "label": "Crystal Glow 01"
+    },
+    {
+      "file": "data_transmission_computer_03.webm",
+      "label": "Data Transmission Computer 03"
+    },
+    {
+      "file": "delay_short_14.webm",
+      "label": "Delay Short 14"
+    },
+    {
+      "file": "delay_short_17.webm",
+      "label": "Delay Short 17"
+    },
+    {
+      "file": "digital_bleep_01.webm",
+      "label": "Digital Bleep 01"
+    },
+    {
+      "file": "laser_02.webm",
+      "label": "Laser 02"
+    },
+    {
+      "file": "laser_03.webm",
+      "label": "Laser 03"
+    },
+    {
+      "file": "laser_horn_04.webm",
+      "label": "Laser Horn 04"
+    },
+    {
+      "file": "laser_short_01.webm",
+      "label": "Laser Short 01"
+    },
+    {
+      "file": "transmission_computer_05.webm",
+      "label": "Transmission Computer 05"
+    }
+  ]
+}

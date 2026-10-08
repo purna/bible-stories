@@ -56,16 +56,17 @@
   }
   const styleText = `
     #storyEditorToggle{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:10020;border:2px solid #20162a;border-radius:9px;padding:10px 15px;background:#ffd84d;color:#20162a;font:800 14px/1.2 system-ui;box-shadow:4px 4px 0 #20162a;cursor:pointer}
-    #storyEditorPanel{position:fixed;z-index:2147483000;right:0;top:0;width:min(220px,100vw);height:100dvh;box-sizing:border-box;display:none;grid-template-rows:auto auto auto minmax(0,1fr) auto;background:#17131f;color:#fff;font:12px/1.35 system-ui;box-shadow:-8px 0 30px #0008;pointer-events:auto;isolation:isolate}
+    #storyEditorPanel{position:fixed;z-index:2147483000;right:0;top:0;width:min(220px,100vw);height:100dvh;box-sizing:border-box;display:none;grid-template-rows:auto auto minmax(0,1fr) auto;background:#17131f;color:#fff;font:12px/1.35 system-ui;box-shadow:-8px 0 30px #0008;pointer-events:auto;isolation:isolate}
     #storyEditorPanel.open{display:grid} #storyEditorPanel *{box-sizing:border-box} #storyEditorPanel button,#storyEditorPanel select,#storyEditorPanel input,#storyEditorPanel textarea{font:inherit}
     .se-head{display:flex;align-items:center;justify-content:space-between;padding:10px;background:#241d2d;border-bottom:1px solid #ffffff24}.se-head h2{margin:0;font-size:16px}.se-head button,.se-actions button{border:1px solid #ffffff55;border-radius:6px;background:#342b40;color:#fff;padding:7px 5px;cursor:pointer}
     .se-selects{display:grid;grid-template-columns:1fr;gap:6px;padding:8px}.se-selects select{width:100%;min-width:0;padding:7px 26px 7px 9px;border:1px solid #8b779e;border-radius:7px;background:#2d2437;color:white;font-size:11px!important;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23ffd84d' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:11px;background-position:right 8px center}.se-selects select:focus,.se-items select:focus,.se-field select:focus{outline:2px solid #ffd84d;outline-offset:1px;border-color:#ffd84d}.se-selects option,.se-items option,.se-field select option{background:#241d2d;color:#fff}
     .se-items{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:4px;padding:0 8px 7px;position:relative;z-index:1}.se-items select{min-width:0;width:100%;padding:5px 22px 5px 6px;border:1px solid #8b779e;border-radius:6px;background:#2d2437;color:white;font-size:10px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23ffd84d' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:9px;background-position:right 6px center}.se-items button{position:relative;z-index:2;border:1px solid #ffffff44;border-radius:5px;background:#342b40;color:white;padding:4px 6px;font-size:10px;cursor:pointer;pointer-events:auto}
-    .se-body{overflow:auto;padding:8px;position:relative;z-index:0}.se-label{display:block;margin:8px 0 4px;font-weight:700;color:#e7d9f5}.se-text{width:100%;min-height:76px;resize:vertical;padding:7px;border:1px solid #ffffff44;border-radius:6px;background:#241d2d;color:white}
+    .se-body{overflow:auto;padding:0 8px 8px;position:relative;z-index:0}.se-group{margin:0 0 6px;border:1px solid #ffffff30;border-radius:7px;background:#1e1926}.se-group>summary{position:sticky;top:0;z-index:1;padding:8px;background:#30263a;color:#ffd84d;font-weight:800;cursor:pointer;list-style:none}.se-group>summary::-webkit-details-marker{display:none}.se-group>summary::after{content:'＋';float:right;color:#d9c5ec}.se-group[open]>summary::after{content:'−'}.se-group-content{padding:0 7px 7px}.se-label{display:block;margin:8px 0 4px;font-weight:700;color:#e7d9f5}.se-text{width:100%;min-height:76px;resize:vertical;padding:7px;border:1px solid #ffffff44;border-radius:6px;background:#241d2d;color:white}
     .se-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.se-grid button{display:grid;place-items:center;min-width:0;min-height:32px;padding:3px;border:1px solid #ffffff44;border-radius:5px;background:#241d2d;color:#eee;cursor:pointer}.se-grid button[aria-pressed=true]{background:#ffd84d;color:#20162a;border-color:#ffd84d;font-weight:800}.se-position-icon{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
     .se-font-links{display:flex;justify-content:space-between;gap:4px;margin-top:4px;font-size:9px}.se-font-links a{color:#ffd84d;text-decoration:underline}
-    .se-formrow{display:grid;grid-template-columns:1fr;gap:2px}.se-field input,.se-field select{width:100%;min-width:0;padding:7px 25px 7px 8px;border:1px solid #8b779e;border-radius:7px;background-color:#2d2437;color:white;font-size:11px!important}.se-field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23ffd84d' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:10px;background-position:right 8px center}.se-field input[type=range]{padding:0;accent-color:#ffd84d}.se-toggles{display:flex;gap:10px;margin-top:8px}.se-toggles label{display:flex;align-items:center;gap:4px}.se-rotation{display:flex;align-items:center;gap:6px}.se-rotation input[type=range]{flex:1;min-width:0}.se-rotation output{min-width:36px;text-align:right;font-variant-numeric:tabular-nums}.se-sfx-field{margin:8px 0;padding:0;border:0}
+    .se-formrow{display:grid;grid-template-columns:1fr;gap:2px}.se-field input,.se-field select{width:100%;min-width:0;padding:7px 25px 7px 8px;border:1px solid #8b779e;border-radius:7px;background-color:#2d2437;color:white;font-size:11px!important}.se-field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23ffd84d' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:10px;background-position:right 8px center}.se-field input[type=range]{padding:0;accent-color:#ffd84d}.se-field button[data-action=preview-audio]{margin-top:4px;padding:6px 9px;border:1px solid #ffffff44;border-radius:6px;background:#342b40;color:#fff;cursor:pointer}.se-field button[data-action=preview-audio]:disabled{opacity:.5;cursor:default}.se-toggles{display:flex;gap:10px;margin-top:8px}.se-toggles label{display:flex;align-items:center;gap:4px}.se-rotation{display:flex;align-items:center;gap:6px}.se-rotation input[type=range]{flex:1;min-width:0}.se-rotation output{min-width:36px;text-align:right;font-variant-numeric:tabular-nums}.se-sfx-field{margin:8px 0;padding:0;border:0}
     .se-actions{display:grid;grid-template-columns:repeat(2,1fr);gap:5px;padding:8px;border-top:1px solid #ffffff24}.se-actions button{display:flex;align-items:center;justify-content:center;gap:5px;font-size:10px!important;line-height:1.1}.se-actions button.primary{background:#ffd84d;color:#20162a;border-color:#ffd84d;font-weight:800}.se-icon{width:14px;height:14px;flex:none;fill:currentColor}.se-status{grid-column:1/-1;min-height:18px;color:#cdb8e3;font-size:10px}
+    .se-choice-list{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:4px;margin:6px 0}.se-choice-list select{min-width:0;width:100%;padding:5px 20px 5px 6px;border:1px solid #8b779e;border-radius:6px;background:#2d2437;color:#fff}.se-choice-list button{border:1px solid #ffffff44;border-radius:5px;background:#342b40;color:#fff;padding:4px 6px;cursor:pointer}.se-note{min-height:54px}
     [data-story-sfx="true"]{font-family:Bangers,cursive!important;font-size:clamp(28px,7vw,64px)!important;font-weight:900!important;color:#ffd84d!important;-webkit-text-stroke:2px var(--ink,#111);paint-order:stroke fill;text-shadow:3px 3px #ff6b5b;background:transparent!important;background-image:none!important;border-color:transparent!important;box-shadow:none!important;text-align:center!important}
     [data-story-sfx="true"][data-story-style="sfx-outline"]{color:#fff!important;-webkit-text-stroke:3px #17131f;text-shadow:4px 4px #ff6b5b}
     [data-story-sfx="true"][data-story-style="sfx-neon"]{color:#7df9ff!important;-webkit-text-stroke:1px #fff;text-shadow:0 0 8px #00eaff,0 0 20px #00eaff}
@@ -76,9 +77,13 @@
   const toggle = document.createElement('button'); toggle.id = 'storyEditorToggle'; toggle.type = 'button'; toggle.textContent = 'Edit story';
   const panel = document.createElement('aside'); panel.id = 'storyEditorPanel'; panel.setAttribute('aria-label', 'Story text editor');
   panel.innerHTML = `<header class="se-head"><h2>Story editor</h2><button type="button" data-action="close" aria-label="Close editor">×</button></header>
-    <div class="se-selects"><select data-field="act" aria-label="Act"></select><select data-field="line" aria-label="Scene"></select></div>
-    <div class="se-items"><select data-field="item" aria-label="Text or special effect item"></select><button type="button" data-action="add-text" title="Add text">+T</button><button type="button" data-action="remove-item" title="Remove selected item">−</button></div>
-    <div class="se-body"><div class="se-selected"></div></div>
+    <div class="se-selects"><select data-field="act" aria-label="Chapter"></select><select data-field="line" aria-label="Chapter scene"></select></div>
+    <div class="se-body">
+      <details class="se-group" open><summary>Chapter / scene</summary><div class="se-group-content" data-section="scene"></div></details>
+      <details class="se-group"><summary>Audio & transitions</summary><div class="se-group-content" data-section="audio"></div></details>
+      <details class="se-group"><summary>Choices</summary><div class="se-group-content" data-section="choices"></div></details>
+      <details class="se-group" open><summary>Text items</summary><div class="se-group-content"><div class="se-items"><select data-field="item" aria-label="Text or special effect item"></select><button type="button" data-action="add-text" title="Add text">+T</button><button type="button" data-action="remove-item" title="Remove selected item">−</button></div><div class="se-selected"></div></div></details>
+    </div>
     <footer class="se-actions"><button type="button" data-action="previous"><svg class="se-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 4.5a1.5 1.5 0 0 1 2.1 2.1L8.1 11H20a1.5 1.5 0 0 1 0 3H8.1l4.5 4.4a1.5 1.5 0 1 1-2.1 2.1l-7-7a1.5 1.5 0 0 1 0-2.1l7-7z"/></svg>Previous</button><button class="primary" type="button" data-action="next"><svg class="se-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 4.5a1.5 1.5 0 0 0-2.1 2.1L15.9 11H4a1.5 1.5 0 0 0 0 3h11.9l-4.5 4.4a1.5 1.5 0 1 0 2.1 2.1l7-7a1.5 1.5 0 0 0 0-2.1l-7-7z"/></svg>Next</button><button type="button" data-action="replay">↻ Replay</button><button type="button" data-action="export"><svg class="se-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v9.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L11 13.586V4a1 1 0 0 1 1-1zM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z"/></svg>Export</button><button type="button" data-action="import">↑ Import</button><button type="button" data-action="reset">Reset</button><input type="file" accept="application/json,.json" hidden><div class="se-status" role="status"></div></footer>`;
   document.body.append(toggle, panel);
 
@@ -86,11 +91,21 @@
   const lineSelect = panel.querySelector('[data-field="line"]');
   const itemSelect = panel.querySelector('[data-field="item"]');
   const fields = panel.querySelector('.se-selected');
+  const sceneFields = panel.querySelector('[data-section="scene"]');
+  const audioFields = panel.querySelector('[data-section="audio"]');
+  const choiceFields = panel.querySelector('[data-section="choices"]');
   const status = panel.querySelector('.se-status');
   const fileInput = panel.querySelector('input[type=file]');
-  let acts = [], currentActIndex = 0, currentLineIndex = 0, currentItemIndex = 0, replayToken = 0;
+  let acts = [], currentActIndex = 0, currentLineIndex = 0, currentItemIndex = 0, currentChoiceIndex = 0, replayToken = 0;
   const savedStoryElements = new Map();
   const replayElements = new Set();
+  const editorScriptUrl = document.currentScript?.src || new URL('../shared-tools/story-editor.js', location.href).href;
+  const sharedSfxCatalogUrl = new URL('../shared/audio/sfx/catalog.json', editorScriptUrl);
+  const sharedTransitionCatalogUrl = new URL('../shared/audio/transitions/catalog.json', editorScriptUrl);
+  let audioCatalog = [];
+  let transitionCatalog = [];
+  let audioPreview = null;
+  const replayAudioPlayers = new Set();
 
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function activeAct(){ return acts[currentActIndex]; }
@@ -130,19 +145,41 @@
   }
   function makeItem(line,isSfx=false){
     const count=(line.items||[]).length+1;
-    return {id:`${line.id||`scene_${currentLineIndex}`}_item_${count}`,type:isSfx?'sfx':'text',sfx:isSfx,text:isSfx?'SFX': '',speaker:'narrator',align:line.align||'center',width:line.width||'1/2',position:isSfx?'top-middle':defaultPosition(line),rotation:0,zIndex:Math.min(10,count),font:'default',fontSize:0,delay:0,visibleDuration:isSfx?1600:0,margin:'M',entryFx:isSfx?'bounce':'fade',exitFx:'fade',style:isSfx?'sfx-impact':'comic',bold:false,italic:false};
+    return {id:`${line.id||`scene_${currentLineIndex}`}_item_${count}`,type:isSfx?'sfx':'text',sfx:isSfx,text:isSfx?'SFX': '',audioSfx:'',speaker:'narrator',align:line.align||'center',width:line.width||'1/2',position:isSfx?'top-middle':defaultPosition(line),rotation:0,zIndex:Math.min(10,count),font:'default',fontSize:0,delay:0,visibleDuration:isSfx?1600:0,margin:'M',entryFx:isSfx?'bounce':'fade',exitFx:'fade',style:isSfx?'sfx-impact':'comic',bold:false,italic:false};
   }
   function getItems(line=activeLine(),sceneIndex=currentLineIndex){
     if(!line)return [];
+    if(!line.sfx&&typeof line.audioSfx==='string')line.sfx=line.audioSfx;
+    delete line.audioSfx;
     if(Array.isArray(line.items)&&!line.svg){const sceneSvg=line.items.find(item=>item.svg)?.svg;if(sceneSvg)line.svg=sceneSvg;}
     if(!Array.isArray(line.items)){
       line.items=[];
       if(line.text)line.items.push({id:`${line.id||`scene_${sceneIndex}`}_text`,type:'text',sfx:false,text:line.text,position:line.position||defaultPosition(line),rotation:Number(line.rotation)||0,font:'default',fontSize:Number(line.fontSize)||0,delay:Number(line.delay??800),visibleDuration:Number(line.visibleDuration)||0,entryFx:line.entryFx||'fade',exitFx:line.exitFx||'fade',style:line.style||'comic',bold:Boolean(line.bold),italic:Boolean(line.italic)});
-      if(line.sfx)line.items.push({id:`${line.id||`scene_${sceneIndex}`}_sfx`,type:'sfx',sfx:true,text:line.sfx,position:'top-middle',rotation:Number(line.sfxRotation)||0,font:'default',fontSize:Number(line.sfxFontSize)||0,delay:Number(line.delay??800),visibleDuration:0,entryFx:'bounce',exitFx:'fade',style:'sfx-impact',bold:false,italic:false});
+      if(line.sfx&&!/\.(mp3|wav|ogg|m4a|aac)(?:[?#].*)?$/i.test(line.sfx))line.items.push({id:`${line.id||`scene_${sceneIndex}`}_sfx`,type:'sfx',sfx:true,text:line.sfx,position:'top-middle',rotation:Number(line.sfxRotation)||0,font:'default',fontSize:Number(line.sfxFontSize)||0,delay:Number(line.delay??800),visibleDuration:0,entryFx:'bounce',exitFx:'fade',style:'sfx-impact',bold:false,italic:false});
     }
-    line.items.forEach((item,index)=>{item.sfx=Object.prototype.hasOwnProperty.call(item,'sfx')?Boolean(item.sfx):item.type==='sfx';item.type=item.sfx?'sfx':'text';item.id=item.id||`${line.id||`scene_${sceneIndex}`}_item_${index+1}`;item.delay=Number(item.delay)||0;item.visibleDuration=Number(item.visibleDuration)||0;item.position=item.position||(item.sfx?'top-middle':defaultPosition(line));item.margin=marginOffsets[item.margin]?item.margin:'M';item.padding=paddingFactors[item.padding]?item.padding:'M';item.rotation=Number(item.rotation)||0;item.zIndex=Math.max(1,Math.min(10,Number(item.zIndex)||index+1));item.speaker=item.speaker||line.speaker||'narrator';item.align=item.align||line.align||'center';item.width=item.width||line.width||'1/2';item.font=item.font||'default';item.fontSize=Number(item.fontSize)||0;item.entryFx=item.entryFx||'fade';item.exitFx=item.exitFx||'fade';item.style=item.style||(item.sfx?'sfx-impact':'comic');});
+    line.items.forEach((item,index)=>{item.sfx=Object.prototype.hasOwnProperty.call(item,'sfx')?Boolean(item.sfx):item.type==='sfx';item.type=item.sfx?'sfx':'text';item.id=item.id||`${line.id||`scene_${sceneIndex}`}_item_${index+1}`;item.audioSfx=typeof item.audioSfx==='string'?item.audioSfx:'';item.delay=Number(item.delay)||0;item.visibleDuration=Number(item.visibleDuration)||0;item.position=item.position||(item.sfx?'top-middle':defaultPosition(line));item.margin=marginOffsets[item.margin]?item.margin:'M';item.padding=paddingFactors[item.padding]?item.padding:'M';item.rotation=Number(item.rotation)||0;item.zIndex=Math.max(1,Math.min(10,Number(item.zIndex)||index+1));item.speaker=item.speaker||line.speaker||'narrator';item.align=item.align||line.align||'center';item.width=item.width||line.width||'1/2';item.font=item.font||'default';item.fontSize=Number(item.fontSize)||0;item.entryFx=item.entryFx||'fade';item.exitFx=item.exitFx||'fade';item.style=item.style||(item.sfx?'sfx-impact':'comic');});
     return line.items;
   }
+  function getChoices(line=activeLine()){
+    if(!line)return [];
+    if(!Array.isArray(line.choices))line.choices=[];
+    line.choices.forEach((choice,index)=>{
+      choice.id=choice.id||`${line.id||`scene_${currentLineIndex}`}_choice_${index+1}`;
+      choice.label=String(choice.label||'');choice.note=String(choice.note||'');
+      choice.style=styles.some(([value])=>value===choice.style&&!value.startsWith('sfx-'))?choice.style:'comic';
+      choice.font=choice.font||'default';choice.fontSize=Math.max(0,Math.min(160,Number(choice.fontSize)||0));
+      choice.bold=Boolean(choice.bold);choice.italic=Boolean(choice.italic);
+      choice.align=['left','center','right'].includes(choice.align)?choice.align:'center';
+      choice.width=widthChoices.some(([value])=>value===choice.width)?choice.width:'1/2';
+      choice.margin=marginOffsets[choice.margin]?choice.margin:'M';choice.padding=paddingFactors[choice.padding]?choice.padding:'M';
+      choice.rotation=Math.max(-180,Math.min(180,Number(choice.rotation)||0));choice.zIndex=Math.max(1,Math.min(10,Number(choice.zIndex)||index+1));
+      choice.entryFx=effects.includes(choice.entryFx)?choice.entryFx:'fade';choice.exitFx=effects.includes(choice.exitFx)?choice.exitFx:'fade';
+      choice.delay=Math.max(0,Math.min(30000,Number(choice.delay)||0));choice.visibleDuration=Math.max(0,Math.min(30000,Number(choice.visibleDuration)||0));
+      choice.audioSfx=typeof choice.audioSfx==='string'?choice.audioSfx:'';
+    });
+    return line.choices;
+  }
+  function activeChoice(){return getChoices()[currentChoiceIndex];}
   function activeItem(){return getItems()[currentItemIndex];}
   function setStatus(message){ status.textContent = message; }
   function rememberElement(element){
@@ -236,20 +273,71 @@
   function renderLines(){
     const lines=activeAct()?.lines||[];
     lineSelect.replaceChildren(...lines.map((line,i)=>new Option(`${i+1}. ${(line.text||line.sfx||line.items?.[0]?.text||'Scene').slice(0,55)}`,i)));
-    currentLineIndex=Math.min(currentLineIndex,Math.max(0,lines.length-1)); lineSelect.value=currentLineIndex; renderItems();
+    currentLineIndex=Math.min(currentLineIndex,Math.max(0,lines.length-1));currentChoiceIndex=0;lineSelect.value=currentLineIndex;renderItems();renderSceneSettings();renderAudioSettings();renderChoiceEditor();
   }
   function renderItems(){
     const items=getItems();
     itemSelect.replaceChildren(...items.map((item,i)=>new Option(`${item.sfx?'SFX':'Text'} ${i+1}: ${(item.text||'New item').slice(0,22)}`,i)));
-    currentItemIndex=Math.min(currentItemIndex,Math.max(0,items.length-1));itemSelect.value=String(currentItemIndex);renderForm();
+    currentItemIndex=Math.min(currentItemIndex,Math.max(0,items.length-1));itemSelect.value=String(currentItemIndex);renderForm();renderAudioSettings();
+  }
+  function renderSceneSettings(){
+    const line=activeLine();if(!line){sceneFields.textContent='No scene selected.';return;}
+    sceneFields.innerHTML=`<div class="se-field">${field('Scene SVG key',`<input data-line-prop="svg" type="text" value="${escape(line.svg||'')}" placeholder="scene_asset_key">`)}</div><p class="se-help">This scene illustration stays attached to this chapter item.</p>`;
+  }
+  function renderAudioSettings(){
+    const line=activeLine(),item=activeItem();if(!line){audioFields.textContent='No scene selected.';return;}
+    const actSound=activeAct()?.transitionSfx||'';
+    const lineSound=line.sfx||line.audioSfx||'';
+    const itemSound=item?.audioSfx||'';
+    const options=(catalog,folder,current)=>{
+      const paths=catalog.map(sound=>sharedAudioPath(sound.file,folder));
+      const missing=current&&!paths.includes(current);
+      return `${missing?`<option value="${escape(current)}" selected>${escape(current.split('/').pop())} (current)</option>`:''}${catalog.map(sound=>{const value=sharedAudioPath(sound.file,folder);return `<option value="${escape(value)}" ${current===value?'selected':''}>${escape(sound.label)}</option>`;}).join('')}`;
+    };
+    audioFields.innerHTML=`
+      <div class="se-field">${field('Chapter transition sound',`<select data-prop="transitionSfx"><option value="" ${!actSound?'selected':''}>No transition sound</option>${options(transitionCatalog,'transitions',actSound)}</select><button type="button" data-action="preview-transition" ${actSound?'':'disabled'}>▶ Preview</button>`)}</div>
+      <div class="se-field">${field('Scene sound effect',`<select data-prop="lineSfx"><option value="" ${!lineSound?'selected':''}>No scene sound</option>${options(audioCatalog,'sfx',lineSound)}</select><button type="button" data-action="preview-line-sfx" ${lineSound?'':'disabled'}>▶ Preview</button>`)}</div>
+      <div class="se-field">${field(`${item?.sfx?'SFX item':'Text item'} audio`,item?`<select data-prop="audioSfx"><option value="" ${!itemSound?'selected':''}>No audio</option>${options(audioCatalog,'sfx',itemSound)}</select><button type="button" data-action="preview-audio" ${itemSound?'':'disabled'}>▶ Preview</button>`:'<p class="se-help">Add a text item to attach an audio clip to it.</p>')}</div>`;
+  }
+  function renderChoiceEditor(){
+    const choices=getChoices();
+    currentChoiceIndex=Math.min(currentChoiceIndex,Math.max(0,choices.length-1));
+    if(!choices.length){choiceFields.innerHTML=`<div class="se-choice-list"><span class="se-help">No choices on this scene.</span><button type="button" data-action="add-choice" title="Add a choice">+</button></div>`;return;}
+    const choice=choices[currentChoiceIndex];
+    const choiceStyles=styles.filter(([value])=>!value.startsWith('sfx-'));
+    const choiceFonts=fontOptionMarkup(choice.font||'default');
+    const styleOptions=choiceStyles.map(([value,label])=>`<option value="${value}" ${choice.style===value?'selected':''}>${label}</option>`).join('');
+    choiceFields.innerHTML=`<div class="se-choice-list"><select data-field="choice" aria-label="Choice">${choices.map((item,index)=>new Option(`Choice ${index+1}: ${(item.label||'New choice').slice(0,22)}`,index).outerHTML).join('')}</select><button type="button" data-action="add-choice" title="Add a choice">+</button><button type="button" data-action="remove-choice" title="Remove choice">−</button></div>
+      <div class="se-field">${field('Choice label',`<textarea class="se-text" data-choice-prop="label">${escape(choice.label)}</textarea>`)}</div>
+      <div class="se-field">${field('Choice note',`<textarea class="se-text se-note" data-choice-prop="note">${escape(choice.note)}</textarea>`)}</div>
+      <div class="se-field">${field('Choice style',`<select data-choice-prop="style">${styleOptions}</select>`)}</div>
+      <div class="se-field">${field('Font',`<select data-choice-prop="font">${choiceFonts}</select>`)}</div>
+      <div class="se-field">${field('Font size (px, 0 = story default)',`<input data-choice-prop="fontSize" type="number" min="0" max="160" step="1" value="${choice.fontSize}"><input data-choice-slider="fontSize" type="range" min="0" max="160" step="1" value="${choice.fontSize}" aria-label="Choice font size in pixels">`)}</div>
+      <div class="se-toggles"><label><input type="checkbox" data-choice-prop="bold" ${choice.bold?'checked':''}> Bold</label><label><input type="checkbox" data-choice-prop="italic" ${choice.italic?'checked':''}> Italic</label></div>
+      <div class="se-formrow"><div class="se-field">${field('Text alignment',`<select data-choice-prop="align">${[['left','Left'],['center','Center'],['right','Right']].map(([value,label])=>`<option value="${value}" ${choice.align===value?'selected':''}>${label}</option>`).join('')}</select>`)}</div><div class="se-field">${field('Width',`<select data-choice-prop="width">${widthChoices.map(([value,label])=>`<option value="${value}" ${choice.width===value?'selected':''}>${label}</option>`).join('')}</select>`)}</div></div>
+      <div class="se-formrow"><div class="se-field">${field('Edge margin',`<select data-choice-prop="margin">${marginChoices.map(([value,label])=>`<option value="${value}" ${choice.margin===value?'selected':''}>${value} · ${label}</option>`).join('')}</select>`)}</div><div class="se-field">${field('Padding',`<select data-choice-prop="padding">${marginChoices.map(([value,label])=>`<option value="${value}" ${choice.padding===value?'selected':''}>${value} · ${label}</option>`).join('')}</select>`)}</div></div>
+      <div class="se-field">${field('Rotation',`<div class="se-rotation"><input data-choice-prop="rotation" type="range" min="-180" max="180" step="1" value="${choice.rotation}" aria-label="Choice rotation"><output data-choice-rotation>${choice.rotation}°</output></div>`)}</div>
+      <div class="se-field">${field('Stack order (1–10)',`<div class="se-rotation"><input data-choice-prop="zIndex" type="range" min="1" max="10" step="1" value="${choice.zIndex}" aria-label="Choice stack order"><output data-choice-zindex>${choice.zIndex}</output></div>`)}</div>
+      <div class="se-formrow"><div class="se-field">${field('Appear effect',`<select data-choice-prop="entryFx">${effects.map(value=>`<option value="${value}" ${choice.entryFx===value?'selected':''}>${value}</option>`).join('')}</select>`)}</div><div class="se-field">${field('Disappear effect',`<select data-choice-prop="exitFx">${effects.map(value=>`<option value="${value}" ${choice.exitFx===value?'selected':''}>${value}</option>`).join('')}</select>`)}</div></div>
+      <p class="se-help">Choices stay available until the reader selects one; their saved time-on-screen value does not auto-hide options.</p>`;
+    const select=choiceFields.querySelector('[data-field="choice"]');select.value=String(currentChoiceIndex);
+    previewChoice(choice);
   }
   function field(label, control){ return `<label class="se-label">${label}</label>${control}`; }
   function renderForm(){
     const line=activeLine(),item=activeItem(); if(!line||!item){fields.textContent='No items in this scene yet. Add text or SFX above.';return;}
     const position=item.position || defaultPosition(line);
     const availableStyles=styles.filter(([value])=>item.sfx?value.startsWith('sfx-'):!value.startsWith('sfx-'));
+    const currentAudio=item.audioSfx||'';
+    const audioOptions=audioCatalog.map(sound=>{const value=sharedAudioPath(sound.file);return `<option value="${escape(value)}" ${currentAudio===value?'selected':''}>${escape(sound.label)}</option>`;}).join('');
+    const currentAudioMissing=currentAudio&&!audioCatalog.some(sound=>sharedAudioPath(sound.file)===currentAudio);
+    const currentTransition=activeAct()?.transitionSfx||'';
+    const transitionOptions=transitionCatalog.map(sound=>{const value=sharedAudioPath(sound.file,'transitions');return `<option value="${escape(value)}" ${currentTransition===value?'selected':''}>${escape(sound.label)}</option>`;}).join('');
+    const currentTransitionMissing=currentTransition&&!transitionCatalog.some(sound=>sharedAudioPath(sound.file,'transitions')===currentTransition);
     fields.innerHTML = `<div class="se-field">${field('Text',`<textarea class="se-text" data-prop="text">${escape(item.text||'')}</textarea>`)}</div>
+      <div class="se-field">${field('Chapter transition sound',`<select data-prop="transitionSfx"><option value="" ${!currentTransition?'selected':''}>No transition sound</option>${currentTransitionMissing?`<option value="${escape(currentTransition)}" selected>${escape(currentTransition.split('/').pop())} (current)</option>`:''}${transitionOptions}</select><button type="button" data-action="preview-transition" ${currentTransition?'':'disabled'}>▶ Preview transition</button>`)}</div>
       <fieldset class="se-sfx-field"><legend class="se-label">Special effect (SFX)</legend><label class="se-toggles"><input type="checkbox" data-prop="sfx" ${item.sfx?'checked':''}> Show this item as a special effect</label></fieldset>
+      <div class="se-field">${field('Audio clip',`<select data-prop="audioSfx"><option value="" ${!currentAudio?'selected':''}>No audio</option>${currentAudioMissing?`<option value="${escape(currentAudio)}" selected>${escape(currentAudio.split('/').pop())} (current)</option>`:''}${audioOptions}</select><button type="button" data-action="preview-audio" ${currentAudio?'':'disabled'}>▶ Preview audio</button>`)}</div>
       <div class="se-field">${field('Speaker',`<select data-prop="speaker">${speakerChoices.map(({value,label})=>`<option value="${escape(value)}" ${(item.speaker||'narrator')===value?'selected':''}>${escape(label)}</option>`).join('')}</select>`)}</div>
       <div class="se-field">${field('Text alignment',`<select data-prop="align">${[['left','Left'],['center','Center'],['right','Right']].map(([value,label])=>`<option value="${value}" ${(item.align||'center')===value?'selected':''}>${label}</option>`).join('')}</select>`)}</div>
       ${field('Position',`<div class="se-grid">${positions.map(([value,label])=>`<button type="button" data-position="${value}" title="${label}" aria-label="${label}" aria-pressed="${position===value}"><svg class="se-position-icon" viewBox="0 0 24 24" aria-hidden="true">${positionIcons[value]}</svg></button>`).join('')}</div>`)}
@@ -266,6 +354,13 @@
     if(panel.classList.contains('open'))previewLine(item);
   }
   function updateLine(prop,value){
+    if(prop==='transitionSfx'){
+      const act=activeAct();if(!act)return;
+      act.transitionSfx=String(value||'');
+      const previewButton=fields.querySelector('[data-action="preview-transition"]');if(previewButton)previewButton.disabled=!act.transitionSfx;
+      setStatus('Chapter transition sound updated. Export the act JSON when ready.');
+      return;
+    }
     const line=activeLine(),item=activeItem(); if(!line||!item)return;
     if(prop==='delay'||prop==='visibleDuration'){
       item[prop]=Math.max(0,Math.min(30000,Number(value)||0));
@@ -284,6 +379,7 @@
     }
     else if(prop==='bold'||prop==='italic'||prop==='sfx') item[prop]=Boolean(value);
     else item[prop]=value;
+    if(prop==='audioSfx'){const previewButton=fields.querySelector('[data-action="preview-audio"]');if(previewButton)previewButton.disabled=!item.audioSfx;}
     if(prop==='sfx'){
       item.type=item.sfx?'sfx':'text';
       if(item.sfx&&!String(item.style||'').startsWith('sfx-'))item.style='sfx-impact';
@@ -306,7 +402,29 @@
     previewLine(item,false);
     setStatus('Unsaved edits. Export the act JSON when ready.');
   }
-  function close(){ replayToken++; clearReplayElements();panel.classList.remove('open'); restoreStoryText(); }
+  function sharedAudioPath(file,folder='sfx'){
+    const target=new URL(`../shared/audio/${folder}/${encodeURIComponent(file)}`,editorScriptUrl);
+    const from=new URL('.',location.href).pathname.split('/').filter(Boolean);
+    const to=target.pathname.split('/').filter(Boolean);
+    let common=0;while(common<from.length&&common<to.length&&from[common]===to[common])common++;
+    return `${'../'.repeat(from.length-common)}${to.slice(common).join('/')}`;
+  }
+  function previewAudioSfx(path){
+    if(audioPreview){audioPreview.pause();audioPreview.currentTime=0;}
+    if(!path){setStatus('Choose an audio clip first.');return;}
+    audioPreview=new Audio(path);
+    audioPreview.addEventListener('error',()=>setStatus(`Audio file not found yet: ${path}. Download it to the shared SFX folder first.`),{once:true});
+    audioPreview.play().then(()=>setStatus('Previewing audio clip.')).catch(()=>setStatus(`Could not play ${path}. Check that the file is in the shared SFX folder.`));
+  }
+  function playReplayAudio(path){
+    if(!path)return;
+    const player=new Audio(path);player.volume=.5;replayAudioPlayers.add(player);
+    const release=()=>replayAudioPlayers.delete(player);
+    player.addEventListener('ended',release,{once:true});player.addEventListener('error',release,{once:true});
+    player.play().catch(release);
+  }
+  function stopReplayAudio(){replayAudioPlayers.forEach(player=>{player.pause();player.currentTime=0;});replayAudioPlayers.clear();}
+  function close(){ replayToken++; clearReplayElements();stopReplayAudio();panel.classList.remove('open'); restoreStoryText(); }
   toggle.addEventListener('click',()=>{panel.classList.add('open');if(activeItem())previewLine(activeItem(),true);});
   panel.addEventListener('click',async e=>{
     const target=e.target instanceof Element?e.target:e.target?.parentElement;
@@ -316,6 +434,8 @@
     if(action==='import'){fileInput.click();return;}
     if(action==='reset'){await loadActs();setStatus('Loaded act JSON from the story files.');return;}
     if(action==='replay'){replayChapter();return;}
+    if(action==='preview-audio'){previewAudioSfx(activeItem()?.audioSfx);return;}
+    if(action==='preview-transition'){previewAudioSfx(activeAct()?.transitionSfx);return;}
     if(action==='next'){nextText();return;}
     if(action==='previous'){previousText();return;}
     if(action==='add-text'){addItem(false);return;}
@@ -340,14 +460,18 @@
   async function loadActs(){
     const response=await fetch('data/manifest.json');if(!response.ok)throw new Error('Story manifest not found');
     const manifest=await response.json();
+    const [catalogResponse,transitionResponse]=await Promise.all([fetch(sharedSfxCatalogUrl).catch(()=>null),fetch(sharedTransitionCatalogUrl).catch(()=>null)]);
+    audioCatalog=catalogResponse?.ok?(await catalogResponse.json()).sounds||[]:[];
+    transitionCatalog=transitionResponse?.ok?(await transitionResponse.json()).sounds||[]:[];
     acts=await Promise.all(manifest.acts.map(async item=>{const r=await fetch(`data/${item.file}`);if(!r.ok)throw new Error(`Could not load ${item.file}`);const act=await r.json();act.__editorFile=item.file;return act;}));
     buildSelects();
   }
   function exportAct(){
     const act=activeAct();if(!act)return;
     const out={...act};delete out.__editorFile;
+    out.transitionSfx=typeof act.transitionSfx==='string'?act.transitionSfx:'';
     out.lines=(out.lines||[]).map((line,sceneIndex)=>{
-      const items=getItems(line,sceneIndex).map(item=>({...item,type:item.sfx?'sfx':'text',sfx:Boolean(item.sfx),position:item.position||defaultPosition(line),margin:marginOffsets[item.margin]?item.margin:'M',padding:paddingFactors[item.padding]?item.padding:'M',rotation:Number(item.rotation)||0,zIndex:Math.max(1,Math.min(10,Number(item.zIndex)||1)),speaker:item.speaker||line.speaker||'narrator',align:item.align||line.align||'center',width:item.width||line.width||'1/2',font:item.font||'default',fontSize:Number(item.fontSize)||0,delay:Number(item.delay)||0,visibleDuration:Number(item.visibleDuration)||0,entryFx:item.entryFx||'fade',exitFx:item.exitFx||'fade',style:item.style||(item.sfx?'sfx-impact':'comic'),bold:Boolean(item.bold),italic:Boolean(item.italic)}));
+      const items=getItems(line,sceneIndex).map(item=>({...item,type:item.sfx?'sfx':'text',sfx:Boolean(item.sfx),audioSfx:typeof item.audioSfx==='string'?item.audioSfx:'',position:item.position||defaultPosition(line),margin:marginOffsets[item.margin]?item.margin:'M',padding:paddingFactors[item.padding]?item.padding:'M',rotation:Number(item.rotation)||0,zIndex:Math.max(1,Math.min(10,Number(item.zIndex)||1)),speaker:item.speaker||line.speaker||'narrator',align:item.align||line.align||'center',width:item.width||line.width||'1/2',font:item.font||'default',fontSize:Number(item.fontSize)||0,delay:Number(item.delay)||0,visibleDuration:Number(item.visibleDuration)||0,entryFx:item.entryFx||'fade',exitFx:item.exitFx||'fade',style:item.style||(item.sfx?'sfx-impact':'comic'),bold:Boolean(item.bold),italic:Boolean(item.italic)}));
       const exported={...line};
       for(const key of ['speaker','fx','delay','align','text','width','valign','sfx','style','bold','italic','position','rotation','font','fontSize','visibleDuration','exitFx','sfxRotation','sfxFontSize','__editorFile'])delete exported[key];
       exported.items=items;
@@ -358,7 +482,7 @@
     setStatus(`Exported ${anchor.download}. Replace the matching file in this story's data folder to publish it.`);
   }
   function nextText(){
-    replayToken++;clearReplayElements();
+    replayToken++;clearReplayElements();stopReplayAudio();
     const items=getItems();
     if(currentItemIndex+1<items.length){currentItemIndex++;itemSelect.value=String(currentItemIndex);renderForm();previewLine(activeItem(),true);return;}
     const lines=activeAct()?.lines||[];
@@ -367,7 +491,7 @@
     setStatus('You have reached the last text element in this story.');
   }
   function previousText(){
-    replayToken++;clearReplayElements();
+    replayToken++;clearReplayElements();stopReplayAudio();
     if(currentItemIndex>0){currentItemIndex--;itemSelect.value=String(currentItemIndex);renderForm();previewLine(activeItem(),true);return;}
     if(currentLineIndex>0){currentLineIndex--;lineSelect.value=String(currentLineIndex);currentItemIndex=Math.max(0,getItems(activeAct().lines[currentLineIndex],currentLineIndex).length-1);renderItems();previewLine(activeItem(),true);return;}
     if(currentActIndex>0){
@@ -390,13 +514,14 @@
   }
   async function replayChapter(){
     const token=++replayToken, act=activeAct();if(!act)return;
-    clearReplayElements();
+    clearReplayElements();stopReplayAudio();
     const line=activeLine();if(!line)return;
     const items=getItems(line);
     const liveAtSceneStart=getLiveText();if(liveAtSceneStart)liveAtSceneStart.text.style.opacity='0';
     const primary=items.find(item=>!item.sfx)||items[0];
     const jobs=items.map(item=>new Promise(resolve=>window.setTimeout(async()=>{
       if(token!==replayToken){resolve();return;}
+      if(item.audioSfx)playReplayAudio(item.audioSfx);
       const active=item===primary?previewLine(item,true):createReplayElement(item,line);
       const duration=Math.max(0,Number(item.visibleDuration)||0);
       if(duration===0){await new Promise(done=>setTimeout(done,item.entryFx==='none'?1:650));resolve();return;}

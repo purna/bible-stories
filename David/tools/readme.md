@@ -100,3 +100,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `water_still` | Still Water (Water) | Abigail; The Throne; Bathsheba and Uriah; Absalom |
 | `grass` | Grass (Foliage) | Anointed; Covenant Friends; The Throne; Nathan's Parable; Solomon |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [David Design SOT](../__docs/david-design-source-of-truth.md)

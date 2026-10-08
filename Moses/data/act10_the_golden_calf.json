@@ -150,24 +150,24 @@
   "scene": "the_golden_calf",
   "foreground": "fg_the_golden_calf",
   "index": 9,
-  "assetFolder": "act_10_calf",
-  "artFolder": "assets/svg/act_10_calf",
+  "assetFolder": "act10_the_golden_calf",
+  "artFolder": "assets/svg/act10_the_golden_calf",
   "assetStem": "moses_act10",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_10_calf/a_establish/moses_act10_a_background.svg",
-      "middleGround": "assets/svg/act_10_calf/a_establish/moses_act10_a_middle_ground.svg",
-      "foreground": "assets/svg/act_10_calf/a_establish/moses_act10_a_foreground.svg"
+      "background": "assets/svg/act10_the_golden_calf/a_establish/moses_act10_a_background.svg",
+      "middleGround": "assets/svg/act10_the_golden_calf/a_establish/moses_act10_a_middle_ground.svg",
+      "foreground": "assets/svg/act10_the_golden_calf/a_establish/moses_act10_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_10_calf/b_core_action/moses_act10_b_background.svg",
-      "middleGround": "assets/svg/act_10_calf/b_core_action/moses_act10_b_middle_ground.svg",
-      "foreground": "assets/svg/act_10_calf/b_core_action/moses_act10_b_foreground.svg"
+      "background": "assets/svg/act10_the_golden_calf/b_core_action/moses_act10_b_background.svg",
+      "middleGround": "assets/svg/act10_the_golden_calf/b_core_action/moses_act10_b_middle_ground.svg",
+      "foreground": "assets/svg/act10_the_golden_calf/b_core_action/moses_act10_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_10_calf/c_resolve/moses_act10_c_background.svg",
-      "middleGround": "assets/svg/act_10_calf/c_resolve/moses_act10_c_middle_ground.svg",
-      "foreground": "assets/svg/act_10_calf/c_resolve/moses_act10_c_foreground.svg"
+      "background": "assets/svg/act10_the_golden_calf/c_resolve/moses_act10_c_background.svg",
+      "middleGround": "assets/svg/act10_the_golden_calf/c_resolve/moses_act10_c_middle_ground.svg",
+      "foreground": "assets/svg/act10_the_golden_calf/c_resolve/moses_act10_c_foreground.svg"
     }
   },
   "materials": [

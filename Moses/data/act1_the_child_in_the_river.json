@@ -150,24 +150,24 @@
   "scene": "the_child_in_the_river",
   "foreground": "fg_the_child_in_the_river",
   "index": 0,
-  "assetFolder": "act_01_basket",
-  "artFolder": "assets/svg/act_01_basket",
+  "assetFolder": "act01_the_child_in_the_river",
+  "artFolder": "assets/svg/act01_the_child_in_the_river",
   "assetStem": "moses_act1",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_01_basket/a_establish/moses_act1_a_background.svg",
-      "middleGround": "assets/svg/act_01_basket/a_establish/moses_act1_a_middle_ground.svg",
-      "foreground": "assets/svg/act_01_basket/a_establish/moses_act1_a_foreground.svg"
+      "background": "assets/svg/act01_the_child_in_the_river/a_establish/moses_act1_a_background.svg",
+      "middleGround": "assets/svg/act01_the_child_in_the_river/a_establish/moses_act1_a_middle_ground.svg",
+      "foreground": "assets/svg/act01_the_child_in_the_river/a_establish/moses_act1_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_01_basket/b_core_action/moses_act1_b_background.svg",
-      "middleGround": "assets/svg/act_01_basket/b_core_action/moses_act1_b_middle_ground.svg",
-      "foreground": "assets/svg/act_01_basket/b_core_action/moses_act1_b_foreground.svg"
+      "background": "assets/svg/act01_the_child_in_the_river/b_core_action/moses_act1_b_background.svg",
+      "middleGround": "assets/svg/act01_the_child_in_the_river/b_core_action/moses_act1_b_middle_ground.svg",
+      "foreground": "assets/svg/act01_the_child_in_the_river/b_core_action/moses_act1_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_01_basket/c_resolve/moses_act1_c_background.svg",
-      "middleGround": "assets/svg/act_01_basket/c_resolve/moses_act1_c_middle_ground.svg",
-      "foreground": "assets/svg/act_01_basket/c_resolve/moses_act1_c_foreground.svg"
+      "background": "assets/svg/act01_the_child_in_the_river/c_resolve/moses_act1_c_background.svg",
+      "middleGround": "assets/svg/act01_the_child_in_the_river/c_resolve/moses_act1_c_middle_ground.svg",
+      "foreground": "assets/svg/act01_the_child_in_the_river/c_resolve/moses_act1_c_foreground.svg"
     }
   },
   "materials": [

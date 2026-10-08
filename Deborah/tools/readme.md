@@ -86,3 +86,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `grass` | Grass (Foliage) | Under the Palm; The Summons; Gather at Tabor; The Storm; Sisera Flees |
 | `water_fast` | Fast Water (Water) | The Storm; Sisera Flees; The Song |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Deborah Design SOT](../__docs/deborah-design-source-of-truth.md)

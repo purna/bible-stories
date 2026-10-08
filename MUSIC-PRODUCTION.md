@@ -225,3 +225,7 @@ Files: `Ch10_Vines_After_The_Flood.ogg`, `Ch10_Vines_After_The_Flood.mp3`
 - Keep background music near 30% playback volume beneath dialogue.
 - Add every delivered file to its story's precache manifest.
 - Test chapter jumps, mute persistence, start-screen autoplay handling, and offline playback.
+
+---
+
+**Navigation:** [← Source of Truth Overview](SOURCE-OF-TRUTH-OVERVIEW.md)

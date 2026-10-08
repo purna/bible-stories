@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2a2118">
+  <title>Abraham chapter — Bible Stories</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <style>
+    :root{color-scheme:dark;font-family:Nunito,system-ui,sans-serif;background:#171411;color:#f9f1df}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0,#6e5132,#221b16 62%,#100e0d);padding:clamp(12px,3vw,32px)}main{width:min(1100px,100%);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}.top a,.button{color:#21180d;background:#f3cb68;border:2px solid #120f0b;border-radius:8px;padding:10px 15px;font-weight:900;text-decoration:none;box-shadow:3px 3px 0 #120f0b}.top a:first-child{color:#dbc796;background:transparent;border:0;box-shadow:none;padding-left:0}.eyebrow{font:700 12px 'Space Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#e5c78e}h1{font:400 clamp(34px,6vw,58px)/1 Bangers,sans-serif;color:#f2c86c;margin:8px 0}.objective{color:#e5d5b4;margin:8px 0 16px}.game-frame{display:block;width:100%;height:min(680px,75vh);min-height:480px;background:#fffaf0;border:2px solid #786246;border-radius:12px;overflow:hidden}.completion{display:none;position:fixed;inset:0;z-index:10;place-items:center;background:#080604b8;padding:20px}.completion.show{display:grid}.completion-card{width:min(480px,100%);background:#261f19;border:2px solid #d5ad60;border-radius:16px;padding:26px;box-shadow:0 18px 70px #0009}.completion-card h2{font:400 34px Bangers,sans-serif;color:#f4cc75;margin:0 0 8px}.completion-card p{color:#e1d4b9;line-height:1.5}.completion-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.completion-actions a{display:inline-block}.completion-actions .secondary{color:#f9f1df;background:#3b3027;border-color:#786246}.error{border:2px solid #a65c48;padding:20px;border-radius:12px;background:#261f19}@media(max-width:560px){.top{align-items:flex-start}.game-frame{height:70vh;min-height:420px}}
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="top" aria-label="Chapter navigation"><a href="index.html">← Abraham chapters</a><a id="chapterProgress" href="index.html">Progress</a></nav>
+    <p class="eyebrow" id="chapterEyebrow">ABRAHAM · CHAPTER</p>
+    <h1 id="chapterTitle">Loading…</h1>
+    <p class="objective" id="chapterObjective"></p>
+    <div id="gameHost"></div>
+  </main>
+  <section class="completion" id="completion" role="dialog" aria-modal="true" aria-labelledby="completionTitle">
+    <div class="completion-card">
+      <p class="eyebrow" id="completionEyebrow">Chapter complete</p>
+      <h2 id="completionTitle">Well done</h2>
+      <p id="completionMessage"></p>
+      <div class="completion-actions" id="completionActions"></div>
+    </div>
+  </section>
+  <script>
+    (()=>{
+      const files={
+        'find-path':'find_path_6x6.html',
+        'fit-pieces':'fit_pieces_3x3.html',
+        'watch-and-move':'watch_move_river_crossing_easy.html',
+        'match-it-up':'match_it_up_3x4.html',
+        'gather-with-care':'manna_drop.html'
+      };
+      const key=number=>`bible-game:Abraham:${number}`;
+      const completed=number=>{try{return localStorage.getItem(key(number))==='complete'}catch{return false}};
+      const actNumber=Number(new URLSearchParams(location.search).get('act'));
+      const host=document.querySelector('#gameHost');
+      const modal=document.querySelector('#completion');
+
+      function showError(message){host.innerHTML=`<div class="error">${message}</div>`}
+      function showCompletion(chapter,chapters){
+        const allDone=chapters.every(item=>completed(item.number));
+        if(allDone){try{localStorage.setItem('bible-story:Abraham:complete','complete')}catch{}}
+        const next=chapters.find(item=>item.number>chapter.number&&!completed(item.number));
+        document.querySelector('#completionEyebrow').textContent=allDone?'ABRAHAM STORY COMPLETE':'CHAPTER COMPLETE';
+        document.querySelector('#completionTitle').textContent=allDone?'Babel bonus unlocked!':'Well done!';
+        document.querySelector('#completionMessage').textContent=allDone
+          ?'You completed all ten Abraham chapter challenges. The Tower of Babel bonus is now unlocked.'
+          :`Chapter ${chapter.number} is complete. Finish every Abraham chapter to unlock the Tower of Babel bonus.`;
+        const actions=document.querySelector('#completionActions');
+        actions.innerHTML=allDone
+          ?'<a class="button" href="Babel/index.html">Read the Babel bonus →</a><a class="button secondary" href="index.html">Abraham chapters</a>'
+          :`${next?`<a class="button" href="play.html?act=${next.number}">Next chapter →</a>`:''}<a class="button secondary" href="index.html">Abraham chapters</a>`;
+        modal.classList.add('show');
+      }
+
+      fetch('data/canon.json').then(response=>{if(!response.ok)throw Error('Chapter data could not be loaded.');return response.json()}).then(data=>{
+        const chapters=data.Abraham.chapters;
+        const chapter=chapters.find(item=>Number(item.number)===actNumber);
+        if(!chapter){showError('That Abraham chapter could not be found. Return to the chapter list and choose a chapter.');return}
+        const gameFile=files[chapter.engine];
+        if(!gameFile){showError('This chapter challenge is not available yet.');return}
+        document.title=`${chapter.title} — Abraham`;
+        document.querySelector('#chapterEyebrow').textContent=`ABRAHAM · CHAPTER ${chapter.number} OF ${chapters.length}`;
+        document.querySelector('#chapterTitle').textContent=chapter.title;
+        document.querySelector('#chapterObjective').textContent=chapter.game;
+        const done=chapters.filter(item=>completed(item.number)).length;
+        document.querySelector('#chapterProgress').textContent=`${done} / ${chapters.length} complete`;
+        host.innerHTML='<iframe class="game-frame" id="chapterGame" title="Abraham chapter challenge"></iframe>';
+        const frame=document.querySelector('#chapterGame');
+        frame.src=`../__shared/chapter-games/engines/${gameFile}`;
+        window.addEventListener('message',event=>{
+          if(event.source!==frame.contentWindow||event.origin!==location.origin)return;
+          if(event.data?.type!=='game-complete'&&event.data?.type!=='bible-story-game-complete')return;
+          try{localStorage.setItem(key(chapter.number),'complete')}catch{}
+          showCompletion(chapter,chapters);
+        });
+      }).catch(error=>showError(error.message));
+    })();
+  </script>
+</body>
+</html>

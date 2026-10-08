@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act11_tablets.json` |
-| SVG assets | `../assets/svg/act_11_tablets/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act11_the_second_tablets/` |
 | 3D scene | `moses-tablets` in `../tools/shot-designer/scenes/` |
 | Particle mode | dawn — cool pre-sunrise light, soft blue-grey shadow, first gold on the horizon |
 | Game beat | Renew the covenant and begin building God's dwelling. — gather-with-care |
@@ -18,13 +18,13 @@ Moses cuts two new tablets and climbs Sinai at dawn; the Lord passes before him 
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_11_tablets/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_11_tablets/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act11_the_second_tablets/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act11_the_second_tablets/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act11_a_background.svg`, `moses_act11_a_middle_ground.svg`, and `moses_act11_a_foreground.svg`.
 - `b_core_action/` contains `moses_act11_b_background.svg`, `moses_act11_b_middle_ground.svg`, and `moses_act11_b_foreground.svg`.
 - `c_resolve/` contains `moses_act11_c_background.svg`, `moses_act11_c_middle_ground.svg`, and `moses_act11_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

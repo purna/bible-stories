@@ -92,3 +92,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `fabric_weave` | Woven Linen (Fabric) | The Mantle; The Jordan |
 | `leaves` | Leaves (Foliage) | The Jordan |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Elisha Design SOT](../__docs/elisha-design-source-of-truth.md)

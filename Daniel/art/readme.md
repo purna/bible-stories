@@ -72,3 +72,7 @@ The mood board is the contract between the pipelines. When a scene changes:
 Palette, props, light and mood must agree across both, so a frame from the
 comic and a still from the 3D scene read as the same world.
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Daniel Design SOT](../__docs/daniel-design-source-of-truth.md)

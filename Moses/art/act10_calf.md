@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act10_calf.json` |
-| SVG assets | `../assets/svg/act_10_calf/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act10_the_golden_calf/` |
 | 3D scene | `moses-calf` in `../tools/shot-designer/scenes/` |
 | Particle mode | ember — firelight glow, warm orange accents against deep shadow |
 | Game beat | Confront the idol and intercede for the people. — ordered rhythm |
@@ -18,13 +18,13 @@ The people make a molten calf and worship it, and Moses breaks the tablets at th
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_10_calf/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_10_calf/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act10_the_golden_calf/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act10_the_golden_calf/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act10_a_background.svg`, `moses_act10_a_middle_ground.svg`, and `moses_act10_a_foreground.svg`.
 - `b_core_action/` contains `moses_act10_b_background.svg`, `moses_act10_b_middle_ground.svg`, and `moses_act10_b_foreground.svg`.
 - `c_resolve/` contains `moses_act10_c_background.svg`, `moses_act10_c_middle_ground.svg`, and `moses_act10_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

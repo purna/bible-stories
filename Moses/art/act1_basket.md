@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act1_basket.json` |
-| SVG assets | `../assets/svg/act_01_basket/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act01_the_child_in_the_river/` |
 | 3D scene | `moses-basket` in `../tools/shot-designer/scenes/` |
 | Particle mode | dawn — cool pre-sunrise light, soft blue-grey shadow, first gold on the horizon |
 | Game beat | Guide the basket through reeds while Miriam keeps watch. — pathfinding |
@@ -18,13 +18,13 @@ The mother hides the child for three months, then sets him in a basket of bulrus
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_01_basket/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_01_basket/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act01_the_child_in_the_river/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act01_the_child_in_the_river/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act1_a_background.svg`, `moses_act1_a_middle_ground.svg`, and `moses_act1_a_foreground.svg`.
 - `b_core_action/` contains `moses_act1_b_background.svg`, `moses_act1_b_middle_ground.svg`, and `moses_act1_b_foreground.svg`.
 - `c_resolve/` contains `moses_act1_c_background.svg`, `moses_act1_c_middle_ground.svg`, and `moses_act1_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

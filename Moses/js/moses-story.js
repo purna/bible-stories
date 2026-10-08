@@ -1,9 +1,9 @@
 /* =========================================================================
    THE BOOK OF MOSES — Interactive Comic Book (layered renderer)
    Stack per frame:
-     1. SVG background  (assets/svg/actN_scene_<id>.svg) — parallax via mouse
-     2. Three.js midground (assets/scenes/actN_<id>.js factory)
-     3. SVG foreground  (assets/svg/fg_<id>.svg)
+     1. SVG background selected for the current scene beat
+     2. SVG middle ground with optional Three.js scene layer
+     3. SVG foreground selected for the current scene beat
      4. Character SVG + speech/caption overlay
    Story data: loaded from data/manifest.json → data/actN_<id>.json
    ========================================================================= */

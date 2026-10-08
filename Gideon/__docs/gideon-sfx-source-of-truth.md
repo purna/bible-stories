@@ -94,3 +94,7 @@ Master mute immediately stops music, voice, all effects (including active one-sh
 
 Check all seven chapter names and scripture spans against the design/game documents. Audition mute/unmute, page hide/return, replay, codec fallback, missing files, rapid repeated input and narration ducking. Confirm the actual story JSON uses each event only at the corresponding narrative state, every information-bearing sound has equivalent visible text, captions can be read without a time limit, and both music and effects respect the global control. Licensing checks concern delivered assets, which were not supplied for this review.
 <!-- canonical-sfx-production:end -->
+
+---
+
+**Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./gideon-design-source-of-truth.md) | [Music SOT](./gideon-music-source-of-truth.md) | [SFX SOT](./gideon-sfx-source-of-truth.md) | [Game Plan](./gideon-game-plan.md)

@@ -96,3 +96,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `fabric_weave` | Woven Linen (Fabric) | (general texture — all scenes) |
 | `water_still` | Still Water (Water) | Exile and the Table; Four Beasts; The Ram and Goat; Seventy Weeks; Final Vision |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Daniel Design SOT](../__docs/daniel-design-source-of-truth.md)

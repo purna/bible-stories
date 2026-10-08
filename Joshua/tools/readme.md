@@ -93,3 +93,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `fabric_weave` | Woven Linen (Fabric) | Achan's Hidden Goods; The Gibeonites; Allot the Land |
 | `wood_dark` | Dark Timber (Wood) | Rahab and the Spies; Crossing Jordan; Achan's Hidden Goods; Allot the Land |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Joshua Design SOT](../__docs/joshua-design-source-of-truth.md)

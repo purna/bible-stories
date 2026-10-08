@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act3_throne.json` |
-| SVG assets | `../assets/svg/act_03_throne/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act03_before_the_throne/` |
 | 3D scene | `moses-throne` in `../tools/shot-designer/scenes/` |
 | Particle mode | dusk — low warm sun, long amber shadows, deep violet sky banding |
 | Game beat | Match signs and warnings to each audience. — match-it-up |
@@ -18,13 +18,13 @@ Moses stands before Pharaoh, and the plagues come: water to blood, frogs, gnats,
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_03_throne/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_03_throne/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act03_before_the_throne/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act03_before_the_throne/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act3_a_background.svg`, `moses_act3_a_middle_ground.svg`, and `moses_act3_a_foreground.svg`.
 - `b_core_action/` contains `moses_act3_b_background.svg`, `moses_act3_b_middle_ground.svg`, and `moses_act3_b_foreground.svg`.
 - `c_resolve/` contains `moses_act3_c_background.svg`, `moses_act3_c_middle_ground.svg`, and `moses_act3_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

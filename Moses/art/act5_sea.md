@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act5_sea.json` |
-| SVG assets | `../assets/svg/act_05_sea/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act05_through_the_sea/` |
 | 3D scene | `moses-sea` in `../tools/shot-designer/scenes/` |
 | Particle mode | flood — churning spray and mist, cold teal light, walls of water at night |
 | Game beat | Keep the people moving along the opened path. — ordered rhythm |
@@ -18,13 +18,13 @@ The pillar of cloud goes behind, the sea is divided, and the people cross on dry
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_05_sea/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_05_sea/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act05_through_the_sea/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act05_through_the_sea/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act5_a_background.svg`, `moses_act5_a_middle_ground.svg`, and `moses_act5_a_foreground.svg`.
 - `b_core_action/` contains `moses_act5_b_background.svg`, `moses_act5_b_middle_ground.svg`, and `moses_act5_b_foreground.svg`.
 - `c_resolve/` contains `moses_act5_c_background.svg`, `moses_act5_c_middle_ground.svg`, and `moses_act5_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

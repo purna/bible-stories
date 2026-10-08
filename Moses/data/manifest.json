@@ -7,25 +7,25 @@
       "file": "act1_the_child_in_the_river.json",
       "scene": "the_child_in_the_river",
       "foreground": "fg_the_child_in_the_river",
-      "assetFolder": "act_01_basket",
+      "assetFolder": "act01_the_child_in_the_river",
       "assetStem": "moses_act1",
       "particle": "dawn",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_01_basket/a_establish/moses_act1_a_background.svg",
-          "middleGround": "assets/svg/act_01_basket/a_establish/moses_act1_a_middle_ground.svg",
-          "foreground": "assets/svg/act_01_basket/a_establish/moses_act1_a_foreground.svg"
+          "background": "assets/svg/act01_the_child_in_the_river/a_establish/moses_act1_a_background.svg",
+          "middleGround": "assets/svg/act01_the_child_in_the_river/a_establish/moses_act1_a_middle_ground.svg",
+          "foreground": "assets/svg/act01_the_child_in_the_river/a_establish/moses_act1_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_01_basket/b_core_action/moses_act1_b_background.svg",
-          "middleGround": "assets/svg/act_01_basket/b_core_action/moses_act1_b_middle_ground.svg",
-          "foreground": "assets/svg/act_01_basket/b_core_action/moses_act1_b_foreground.svg"
+          "background": "assets/svg/act01_the_child_in_the_river/b_core_action/moses_act1_b_background.svg",
+          "middleGround": "assets/svg/act01_the_child_in_the_river/b_core_action/moses_act1_b_middle_ground.svg",
+          "foreground": "assets/svg/act01_the_child_in_the_river/b_core_action/moses_act1_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_01_basket/c_resolve/moses_act1_c_background.svg",
-          "middleGround": "assets/svg/act_01_basket/c_resolve/moses_act1_c_middle_ground.svg",
-          "foreground": "assets/svg/act_01_basket/c_resolve/moses_act1_c_foreground.svg"
+          "background": "assets/svg/act01_the_child_in_the_river/c_resolve/moses_act1_c_background.svg",
+          "middleGround": "assets/svg/act01_the_child_in_the_river/c_resolve/moses_act1_c_middle_ground.svg",
+          "foreground": "assets/svg/act01_the_child_in_the_river/c_resolve/moses_act1_c_foreground.svg"
         }
       },
       "materials": [
@@ -38,25 +38,25 @@
       "file": "act2_the_burning_bush.json",
       "scene": "the_burning_bush",
       "foreground": "fg_the_burning_bush",
-      "assetFolder": "act_02_exile",
+      "assetFolder": "act02_the_burning_bush",
       "assetStem": "moses_act2",
       "particle": "dusk",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_02_exile/a_establish/moses_act2_a_background.svg",
-          "middleGround": "assets/svg/act_02_exile/a_establish/moses_act2_a_middle_ground.svg",
-          "foreground": "assets/svg/act_02_exile/a_establish/moses_act2_a_foreground.svg"
+          "background": "assets/svg/act02_the_burning_bush/a_establish/moses_act2_a_background.svg",
+          "middleGround": "assets/svg/act02_the_burning_bush/a_establish/moses_act2_a_middle_ground.svg",
+          "foreground": "assets/svg/act02_the_burning_bush/a_establish/moses_act2_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_02_exile/b_core_action/moses_act2_b_background.svg",
-          "middleGround": "assets/svg/act_02_exile/b_core_action/moses_act2_b_middle_ground.svg",
-          "foreground": "assets/svg/act_02_exile/b_core_action/moses_act2_b_foreground.svg"
+          "background": "assets/svg/act02_the_burning_bush/b_core_action/moses_act2_b_background.svg",
+          "middleGround": "assets/svg/act02_the_burning_bush/b_core_action/moses_act2_b_middle_ground.svg",
+          "foreground": "assets/svg/act02_the_burning_bush/b_core_action/moses_act2_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_02_exile/c_resolve/moses_act2_c_background.svg",
-          "middleGround": "assets/svg/act_02_exile/c_resolve/moses_act2_c_middle_ground.svg",
-          "foreground": "assets/svg/act_02_exile/c_resolve/moses_act2_c_foreground.svg"
+          "background": "assets/svg/act02_the_burning_bush/c_resolve/moses_act2_c_background.svg",
+          "middleGround": "assets/svg/act02_the_burning_bush/c_resolve/moses_act2_c_middle_ground.svg",
+          "foreground": "assets/svg/act02_the_burning_bush/c_resolve/moses_act2_c_foreground.svg"
         }
       },
       "materials": [
@@ -70,25 +70,25 @@
       "file": "act3_before_the_throne.json",
       "scene": "before_the_throne",
       "foreground": "fg_before_the_throne",
-      "assetFolder": "act_03_throne",
+      "assetFolder": "act03_before_the_throne",
       "assetStem": "moses_act3",
       "particle": "ember",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_03_throne/a_establish/moses_act3_a_background.svg",
-          "middleGround": "assets/svg/act_03_throne/a_establish/moses_act3_a_middle_ground.svg",
-          "foreground": "assets/svg/act_03_throne/a_establish/moses_act3_a_foreground.svg"
+          "background": "assets/svg/act03_before_the_throne/a_establish/moses_act3_a_background.svg",
+          "middleGround": "assets/svg/act03_before_the_throne/a_establish/moses_act3_a_middle_ground.svg",
+          "foreground": "assets/svg/act03_before_the_throne/a_establish/moses_act3_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_03_throne/b_core_action/moses_act3_b_background.svg",
-          "middleGround": "assets/svg/act_03_throne/b_core_action/moses_act3_b_middle_ground.svg",
-          "foreground": "assets/svg/act_03_throne/b_core_action/moses_act3_b_foreground.svg"
+          "background": "assets/svg/act03_before_the_throne/b_core_action/moses_act3_b_background.svg",
+          "middleGround": "assets/svg/act03_before_the_throne/b_core_action/moses_act3_b_middle_ground.svg",
+          "foreground": "assets/svg/act03_before_the_throne/b_core_action/moses_act3_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_03_throne/c_resolve/moses_act3_c_background.svg",
-          "middleGround": "assets/svg/act_03_throne/c_resolve/moses_act3_c_middle_ground.svg",
-          "foreground": "assets/svg/act_03_throne/c_resolve/moses_act3_c_foreground.svg"
+          "background": "assets/svg/act03_before_the_throne/c_resolve/moses_act3_c_background.svg",
+          "middleGround": "assets/svg/act03_before_the_throne/c_resolve/moses_act3_c_middle_ground.svg",
+          "foreground": "assets/svg/act03_before_the_throne/c_resolve/moses_act3_c_foreground.svg"
         }
       },
       "materials": [
@@ -104,25 +104,25 @@
       "file": "act4_passover_night.json",
       "scene": "passover_night",
       "foreground": "fg_passover_night",
-      "assetFolder": "act_04_passover",
+      "assetFolder": "act04_passover_night",
       "assetStem": "moses_act4",
       "particle": "dawn",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_04_passover/a_establish/moses_act4_a_background.svg",
-          "middleGround": "assets/svg/act_04_passover/a_establish/moses_act4_a_middle_ground.svg",
-          "foreground": "assets/svg/act_04_passover/a_establish/moses_act4_a_foreground.svg"
+          "background": "assets/svg/act04_passover_night/a_establish/moses_act4_a_background.svg",
+          "middleGround": "assets/svg/act04_passover_night/a_establish/moses_act4_a_middle_ground.svg",
+          "foreground": "assets/svg/act04_passover_night/a_establish/moses_act4_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_04_passover/b_core_action/moses_act4_b_background.svg",
-          "middleGround": "assets/svg/act_04_passover/b_core_action/moses_act4_b_middle_ground.svg",
-          "foreground": "assets/svg/act_04_passover/b_core_action/moses_act4_b_foreground.svg"
+          "background": "assets/svg/act04_passover_night/b_core_action/moses_act4_b_background.svg",
+          "middleGround": "assets/svg/act04_passover_night/b_core_action/moses_act4_b_middle_ground.svg",
+          "foreground": "assets/svg/act04_passover_night/b_core_action/moses_act4_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_04_passover/c_resolve/moses_act4_c_background.svg",
-          "middleGround": "assets/svg/act_04_passover/c_resolve/moses_act4_c_middle_ground.svg",
-          "foreground": "assets/svg/act_04_passover/c_resolve/moses_act4_c_foreground.svg"
+          "background": "assets/svg/act04_passover_night/c_resolve/moses_act4_c_background.svg",
+          "middleGround": "assets/svg/act04_passover_night/c_resolve/moses_act4_c_middle_ground.svg",
+          "foreground": "assets/svg/act04_passover_night/c_resolve/moses_act4_c_foreground.svg"
         }
       },
       "materials": [
@@ -136,25 +136,25 @@
       "file": "act5_through_the_sea.json",
       "scene": "through_the_sea",
       "foreground": "fg_through_the_sea",
-      "assetFolder": "act_05_sea",
+      "assetFolder": "act05_through_the_sea",
       "assetStem": "moses_act5",
       "particle": "dusk",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_05_sea/a_establish/moses_act5_a_background.svg",
-          "middleGround": "assets/svg/act_05_sea/a_establish/moses_act5_a_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sea/a_establish/moses_act5_a_foreground.svg"
+          "background": "assets/svg/act05_through_the_sea/a_establish/moses_act5_a_background.svg",
+          "middleGround": "assets/svg/act05_through_the_sea/a_establish/moses_act5_a_middle_ground.svg",
+          "foreground": "assets/svg/act05_through_the_sea/a_establish/moses_act5_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_05_sea/b_core_action/moses_act5_b_background.svg",
-          "middleGround": "assets/svg/act_05_sea/b_core_action/moses_act5_b_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sea/b_core_action/moses_act5_b_foreground.svg"
+          "background": "assets/svg/act05_through_the_sea/b_core_action/moses_act5_b_background.svg",
+          "middleGround": "assets/svg/act05_through_the_sea/b_core_action/moses_act5_b_middle_ground.svg",
+          "foreground": "assets/svg/act05_through_the_sea/b_core_action/moses_act5_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_05_sea/c_resolve/moses_act5_c_background.svg",
-          "middleGround": "assets/svg/act_05_sea/c_resolve/moses_act5_c_middle_ground.svg",
-          "foreground": "assets/svg/act_05_sea/c_resolve/moses_act5_c_foreground.svg"
+          "background": "assets/svg/act05_through_the_sea/c_resolve/moses_act5_c_background.svg",
+          "middleGround": "assets/svg/act05_through_the_sea/c_resolve/moses_act5_c_middle_ground.svg",
+          "foreground": "assets/svg/act05_through_the_sea/c_resolve/moses_act5_c_foreground.svg"
         }
       },
       "materials": [
@@ -168,25 +168,25 @@
       "file": "act6_bread_in_the_wilderness.json",
       "scene": "bread_in_the_wilderness",
       "foreground": "fg_bread_in_the_wilderness",
-      "assetFolder": "act_06_bread",
+      "assetFolder": "act06_bread_in_the_wilderness",
       "assetStem": "moses_act6",
       "particle": "ember",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_06_bread/a_establish/moses_act6_a_background.svg",
-          "middleGround": "assets/svg/act_06_bread/a_establish/moses_act6_a_middle_ground.svg",
-          "foreground": "assets/svg/act_06_bread/a_establish/moses_act6_a_foreground.svg"
+          "background": "assets/svg/act06_bread_in_the_wilderness/a_establish/moses_act6_a_background.svg",
+          "middleGround": "assets/svg/act06_bread_in_the_wilderness/a_establish/moses_act6_a_middle_ground.svg",
+          "foreground": "assets/svg/act06_bread_in_the_wilderness/a_establish/moses_act6_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_06_bread/b_core_action/moses_act6_b_background.svg",
-          "middleGround": "assets/svg/act_06_bread/b_core_action/moses_act6_b_middle_ground.svg",
-          "foreground": "assets/svg/act_06_bread/b_core_action/moses_act6_b_foreground.svg"
+          "background": "assets/svg/act06_bread_in_the_wilderness/b_core_action/moses_act6_b_background.svg",
+          "middleGround": "assets/svg/act06_bread_in_the_wilderness/b_core_action/moses_act6_b_middle_ground.svg",
+          "foreground": "assets/svg/act06_bread_in_the_wilderness/b_core_action/moses_act6_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_06_bread/c_resolve/moses_act6_c_background.svg",
-          "middleGround": "assets/svg/act_06_bread/c_resolve/moses_act6_c_middle_ground.svg",
-          "foreground": "assets/svg/act_06_bread/c_resolve/moses_act6_c_foreground.svg"
+          "background": "assets/svg/act06_bread_in_the_wilderness/c_resolve/moses_act6_c_background.svg",
+          "middleGround": "assets/svg/act06_bread_in_the_wilderness/c_resolve/moses_act6_c_middle_ground.svg",
+          "foreground": "assets/svg/act06_bread_in_the_wilderness/c_resolve/moses_act6_c_foreground.svg"
         }
       },
       "materials": [
@@ -199,25 +199,25 @@
       "file": "act7_water_from_the_rock.json",
       "scene": "water_from_the_rock",
       "foreground": "fg_water_from_the_rock",
-      "assetFolder": "act_07_rock",
+      "assetFolder": "act07_water_from_the_rock",
       "assetStem": "moses_act7",
       "particle": "dawn",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_07_rock/a_establish/moses_act7_a_background.svg",
-          "middleGround": "assets/svg/act_07_rock/a_establish/moses_act7_a_middle_ground.svg",
-          "foreground": "assets/svg/act_07_rock/a_establish/moses_act7_a_foreground.svg"
+          "background": "assets/svg/act07_water_from_the_rock/a_establish/moses_act7_a_background.svg",
+          "middleGround": "assets/svg/act07_water_from_the_rock/a_establish/moses_act7_a_middle_ground.svg",
+          "foreground": "assets/svg/act07_water_from_the_rock/a_establish/moses_act7_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_07_rock/b_core_action/moses_act7_b_background.svg",
-          "middleGround": "assets/svg/act_07_rock/b_core_action/moses_act7_b_middle_ground.svg",
-          "foreground": "assets/svg/act_07_rock/b_core_action/moses_act7_b_foreground.svg"
+          "background": "assets/svg/act07_water_from_the_rock/b_core_action/moses_act7_b_background.svg",
+          "middleGround": "assets/svg/act07_water_from_the_rock/b_core_action/moses_act7_b_middle_ground.svg",
+          "foreground": "assets/svg/act07_water_from_the_rock/b_core_action/moses_act7_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_07_rock/c_resolve/moses_act7_c_background.svg",
-          "middleGround": "assets/svg/act_07_rock/c_resolve/moses_act7_c_middle_ground.svg",
-          "foreground": "assets/svg/act_07_rock/c_resolve/moses_act7_c_foreground.svg"
+          "background": "assets/svg/act07_water_from_the_rock/c_resolve/moses_act7_c_background.svg",
+          "middleGround": "assets/svg/act07_water_from_the_rock/c_resolve/moses_act7_c_middle_ground.svg",
+          "foreground": "assets/svg/act07_water_from_the_rock/c_resolve/moses_act7_c_foreground.svg"
         }
       },
       "materials": [
@@ -232,25 +232,25 @@
       "file": "act8_jethro_s_counsel.json",
       "scene": "jethro_s_counsel",
       "foreground": "fg_jethro_s_counsel",
-      "assetFolder": "act_08_jethro",
+      "assetFolder": "act08_jethro_s_counsel",
       "assetStem": "moses_act8",
       "particle": "dusk",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_08_jethro/a_establish/moses_act8_a_background.svg",
-          "middleGround": "assets/svg/act_08_jethro/a_establish/moses_act8_a_middle_ground.svg",
-          "foreground": "assets/svg/act_08_jethro/a_establish/moses_act8_a_foreground.svg"
+          "background": "assets/svg/act08_jethro_s_counsel/a_establish/moses_act8_a_background.svg",
+          "middleGround": "assets/svg/act08_jethro_s_counsel/a_establish/moses_act8_a_middle_ground.svg",
+          "foreground": "assets/svg/act08_jethro_s_counsel/a_establish/moses_act8_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_background.svg",
-          "middleGround": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_middle_ground.svg",
-          "foreground": "assets/svg/act_08_jethro/b_core_action/moses_act8_b_foreground.svg"
+          "background": "assets/svg/act08_jethro_s_counsel/b_core_action/moses_act8_b_background.svg",
+          "middleGround": "assets/svg/act08_jethro_s_counsel/b_core_action/moses_act8_b_middle_ground.svg",
+          "foreground": "assets/svg/act08_jethro_s_counsel/b_core_action/moses_act8_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_background.svg",
-          "middleGround": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_middle_ground.svg",
-          "foreground": "assets/svg/act_08_jethro/c_resolve/moses_act8_c_foreground.svg"
+          "background": "assets/svg/act08_jethro_s_counsel/c_resolve/moses_act8_c_background.svg",
+          "middleGround": "assets/svg/act08_jethro_s_counsel/c_resolve/moses_act8_c_middle_ground.svg",
+          "foreground": "assets/svg/act08_jethro_s_counsel/c_resolve/moses_act8_c_foreground.svg"
         }
       },
       "materials": [
@@ -266,25 +266,25 @@
       "file": "act9_thunder_on_sinai.json",
       "scene": "thunder_on_sinai",
       "foreground": "fg_thunder_on_sinai",
-      "assetFolder": "act_09_mountain",
+      "assetFolder": "act09_thunder_on_sinai",
       "assetStem": "moses_act9",
       "particle": "ember",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_09_mountain/a_establish/moses_act9_a_background.svg",
-          "middleGround": "assets/svg/act_09_mountain/a_establish/moses_act9_a_middle_ground.svg",
-          "foreground": "assets/svg/act_09_mountain/a_establish/moses_act9_a_foreground.svg"
+          "background": "assets/svg/act09_thunder_on_sinai/a_establish/moses_act9_a_background.svg",
+          "middleGround": "assets/svg/act09_thunder_on_sinai/a_establish/moses_act9_a_middle_ground.svg",
+          "foreground": "assets/svg/act09_thunder_on_sinai/a_establish/moses_act9_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_background.svg",
-          "middleGround": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_middle_ground.svg",
-          "foreground": "assets/svg/act_09_mountain/b_core_action/moses_act9_b_foreground.svg"
+          "background": "assets/svg/act09_thunder_on_sinai/b_core_action/moses_act9_b_background.svg",
+          "middleGround": "assets/svg/act09_thunder_on_sinai/b_core_action/moses_act9_b_middle_ground.svg",
+          "foreground": "assets/svg/act09_thunder_on_sinai/b_core_action/moses_act9_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_background.svg",
-          "middleGround": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_middle_ground.svg",
-          "foreground": "assets/svg/act_09_mountain/c_resolve/moses_act9_c_foreground.svg"
+          "background": "assets/svg/act09_thunder_on_sinai/c_resolve/moses_act9_c_background.svg",
+          "middleGround": "assets/svg/act09_thunder_on_sinai/c_resolve/moses_act9_c_middle_ground.svg",
+          "foreground": "assets/svg/act09_thunder_on_sinai/c_resolve/moses_act9_c_foreground.svg"
         }
       },
       "materials": [
@@ -298,25 +298,25 @@
       "file": "act10_the_golden_calf.json",
       "scene": "the_golden_calf",
       "foreground": "fg_the_golden_calf",
-      "assetFolder": "act_10_calf",
+      "assetFolder": "act10_the_golden_calf",
       "assetStem": "moses_act10",
       "particle": "dawn",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_10_calf/a_establish/moses_act10_a_background.svg",
-          "middleGround": "assets/svg/act_10_calf/a_establish/moses_act10_a_middle_ground.svg",
-          "foreground": "assets/svg/act_10_calf/a_establish/moses_act10_a_foreground.svg"
+          "background": "assets/svg/act10_the_golden_calf/a_establish/moses_act10_a_background.svg",
+          "middleGround": "assets/svg/act10_the_golden_calf/a_establish/moses_act10_a_middle_ground.svg",
+          "foreground": "assets/svg/act10_the_golden_calf/a_establish/moses_act10_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_10_calf/b_core_action/moses_act10_b_background.svg",
-          "middleGround": "assets/svg/act_10_calf/b_core_action/moses_act10_b_middle_ground.svg",
-          "foreground": "assets/svg/act_10_calf/b_core_action/moses_act10_b_foreground.svg"
+          "background": "assets/svg/act10_the_golden_calf/b_core_action/moses_act10_b_background.svg",
+          "middleGround": "assets/svg/act10_the_golden_calf/b_core_action/moses_act10_b_middle_ground.svg",
+          "foreground": "assets/svg/act10_the_golden_calf/b_core_action/moses_act10_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_10_calf/c_resolve/moses_act10_c_background.svg",
-          "middleGround": "assets/svg/act_10_calf/c_resolve/moses_act10_c_middle_ground.svg",
-          "foreground": "assets/svg/act_10_calf/c_resolve/moses_act10_c_foreground.svg"
+          "background": "assets/svg/act10_the_golden_calf/c_resolve/moses_act10_c_background.svg",
+          "middleGround": "assets/svg/act10_the_golden_calf/c_resolve/moses_act10_c_middle_ground.svg",
+          "foreground": "assets/svg/act10_the_golden_calf/c_resolve/moses_act10_c_foreground.svg"
         }
       },
       "materials": [
@@ -332,25 +332,25 @@
       "file": "act11_the_second_tablets.json",
       "scene": "the_second_tablets",
       "foreground": "fg_the_second_tablets",
-      "assetFolder": "act_11_tablets",
+      "assetFolder": "act11_the_second_tablets",
       "assetStem": "moses_act11",
       "particle": "dusk",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_11_tablets/a_establish/moses_act11_a_background.svg",
-          "middleGround": "assets/svg/act_11_tablets/a_establish/moses_act11_a_middle_ground.svg",
-          "foreground": "assets/svg/act_11_tablets/a_establish/moses_act11_a_foreground.svg"
+          "background": "assets/svg/act11_the_second_tablets/a_establish/moses_act11_a_background.svg",
+          "middleGround": "assets/svg/act11_the_second_tablets/a_establish/moses_act11_a_middle_ground.svg",
+          "foreground": "assets/svg/act11_the_second_tablets/a_establish/moses_act11_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_background.svg",
-          "middleGround": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_middle_ground.svg",
-          "foreground": "assets/svg/act_11_tablets/b_core_action/moses_act11_b_foreground.svg"
+          "background": "assets/svg/act11_the_second_tablets/b_core_action/moses_act11_b_background.svg",
+          "middleGround": "assets/svg/act11_the_second_tablets/b_core_action/moses_act11_b_middle_ground.svg",
+          "foreground": "assets/svg/act11_the_second_tablets/b_core_action/moses_act11_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_background.svg",
-          "middleGround": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_middle_ground.svg",
-          "foreground": "assets/svg/act_11_tablets/c_resolve/moses_act11_c_foreground.svg"
+          "background": "assets/svg/act11_the_second_tablets/c_resolve/moses_act11_c_background.svg",
+          "middleGround": "assets/svg/act11_the_second_tablets/c_resolve/moses_act11_c_middle_ground.svg",
+          "foreground": "assets/svg/act11_the_second_tablets/c_resolve/moses_act11_c_foreground.svg"
         }
       },
       "materials": [
@@ -368,25 +368,25 @@
       "file": "act12_the_spies_and_rebellion.json",
       "scene": "the_spies_and_rebellion",
       "foreground": "fg_the_spies_and_rebellion",
-      "assetFolder": "act_12_spies",
+      "assetFolder": "act12_the_spies_and_rebellion",
       "assetStem": "moses_act12",
       "particle": "ember",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_12_spies/a_establish/moses_act12_a_background.svg",
-          "middleGround": "assets/svg/act_12_spies/a_establish/moses_act12_a_middle_ground.svg",
-          "foreground": "assets/svg/act_12_spies/a_establish/moses_act12_a_foreground.svg"
+          "background": "assets/svg/act12_the_spies_and_rebellion/a_establish/moses_act12_a_background.svg",
+          "middleGround": "assets/svg/act12_the_spies_and_rebellion/a_establish/moses_act12_a_middle_ground.svg",
+          "foreground": "assets/svg/act12_the_spies_and_rebellion/a_establish/moses_act12_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_12_spies/b_core_action/moses_act12_b_background.svg",
-          "middleGround": "assets/svg/act_12_spies/b_core_action/moses_act12_b_middle_ground.svg",
-          "foreground": "assets/svg/act_12_spies/b_core_action/moses_act12_b_foreground.svg"
+          "background": "assets/svg/act12_the_spies_and_rebellion/b_core_action/moses_act12_b_background.svg",
+          "middleGround": "assets/svg/act12_the_spies_and_rebellion/b_core_action/moses_act12_b_middle_ground.svg",
+          "foreground": "assets/svg/act12_the_spies_and_rebellion/b_core_action/moses_act12_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_12_spies/c_resolve/moses_act12_c_background.svg",
-          "middleGround": "assets/svg/act_12_spies/c_resolve/moses_act12_c_middle_ground.svg",
-          "foreground": "assets/svg/act_12_spies/c_resolve/moses_act12_c_foreground.svg"
+          "background": "assets/svg/act12_the_spies_and_rebellion/c_resolve/moses_act12_c_background.svg",
+          "middleGround": "assets/svg/act12_the_spies_and_rebellion/c_resolve/moses_act12_c_middle_ground.svg",
+          "foreground": "assets/svg/act12_the_spies_and_rebellion/c_resolve/moses_act12_c_foreground.svg"
         }
       },
       "materials": [
@@ -402,25 +402,25 @@
       "file": "act13_the_long_wilderness.json",
       "scene": "the_long_wilderness",
       "foreground": "fg_the_long_wilderness",
-      "assetFolder": "act_13_wilderness",
+      "assetFolder": "act13_the_long_wilderness",
       "assetStem": "moses_act13",
       "particle": "dawn",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_background.svg",
-          "middleGround": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_middle_ground.svg",
-          "foreground": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_foreground.svg"
+          "background": "assets/svg/act13_the_long_wilderness/a_establish/moses_act13_a_background.svg",
+          "middleGround": "assets/svg/act13_the_long_wilderness/a_establish/moses_act13_a_middle_ground.svg",
+          "foreground": "assets/svg/act13_the_long_wilderness/a_establish/moses_act13_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_background.svg",
-          "middleGround": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_middle_ground.svg",
-          "foreground": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_foreground.svg"
+          "background": "assets/svg/act13_the_long_wilderness/b_core_action/moses_act13_b_background.svg",
+          "middleGround": "assets/svg/act13_the_long_wilderness/b_core_action/moses_act13_b_middle_ground.svg",
+          "foreground": "assets/svg/act13_the_long_wilderness/b_core_action/moses_act13_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_background.svg",
-          "middleGround": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_middle_ground.svg",
-          "foreground": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_foreground.svg"
+          "background": "assets/svg/act13_the_long_wilderness/c_resolve/moses_act13_c_background.svg",
+          "middleGround": "assets/svg/act13_the_long_wilderness/c_resolve/moses_act13_c_middle_ground.svg",
+          "foreground": "assets/svg/act13_the_long_wilderness/c_resolve/moses_act13_c_foreground.svg"
         }
       },
       "materials": [
@@ -435,25 +435,25 @@
       "file": "act14_moses_final_words.json",
       "scene": "moses_final_words",
       "foreground": "fg_moses_final_words",
-      "assetFolder": "act_14_reviews",
+      "assetFolder": "act14_moses_final_words",
       "assetStem": "moses_act14",
       "particle": "dusk",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_14_reviews/a_establish/moses_act14_a_background.svg",
-          "middleGround": "assets/svg/act_14_reviews/a_establish/moses_act14_a_middle_ground.svg",
-          "foreground": "assets/svg/act_14_reviews/a_establish/moses_act14_a_foreground.svg"
+          "background": "assets/svg/act14_moses_final_words/a_establish/moses_act14_a_background.svg",
+          "middleGround": "assets/svg/act14_moses_final_words/a_establish/moses_act14_a_middle_ground.svg",
+          "foreground": "assets/svg/act14_moses_final_words/a_establish/moses_act14_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_background.svg",
-          "middleGround": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_middle_ground.svg",
-          "foreground": "assets/svg/act_14_reviews/b_core_action/moses_act14_b_foreground.svg"
+          "background": "assets/svg/act14_moses_final_words/b_core_action/moses_act14_b_background.svg",
+          "middleGround": "assets/svg/act14_moses_final_words/b_core_action/moses_act14_b_middle_ground.svg",
+          "foreground": "assets/svg/act14_moses_final_words/b_core_action/moses_act14_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_background.svg",
-          "middleGround": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_middle_ground.svg",
-          "foreground": "assets/svg/act_14_reviews/c_resolve/moses_act14_c_foreground.svg"
+          "background": "assets/svg/act14_moses_final_words/c_resolve/moses_act14_c_background.svg",
+          "middleGround": "assets/svg/act14_moses_final_words/c_resolve/moses_act14_c_middle_ground.svg",
+          "foreground": "assets/svg/act14_moses_final_words/c_resolve/moses_act14_c_foreground.svg"
         }
       },
       "materials": [
@@ -469,25 +469,25 @@
       "file": "act15_mount_nebo.json",
       "scene": "mount_nebo",
       "foreground": "fg_mount_nebo",
-      "assetFolder": "act_15_nebo",
+      "assetFolder": "act15_mount_nebo",
       "assetStem": "moses_act15",
       "particle": "ember",
       "bg": "radial-gradient(circle at 50% 30%, #1a2a1a, #060402 65%)",
       "sceneLayers": {
         "a_establish": {
-          "background": "assets/svg/act_15_nebo/a_establish/moses_act15_a_background.svg",
-          "middleGround": "assets/svg/act_15_nebo/a_establish/moses_act15_a_middle_ground.svg",
-          "foreground": "assets/svg/act_15_nebo/a_establish/moses_act15_a_foreground.svg"
+          "background": "assets/svg/act15_mount_nebo/a_establish/moses_act15_a_background.svg",
+          "middleGround": "assets/svg/act15_mount_nebo/a_establish/moses_act15_a_middle_ground.svg",
+          "foreground": "assets/svg/act15_mount_nebo/a_establish/moses_act15_a_foreground.svg"
         },
         "b_core_action": {
-          "background": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_background.svg",
-          "middleGround": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_middle_ground.svg",
-          "foreground": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_foreground.svg"
+          "background": "assets/svg/act15_mount_nebo/b_core_action/moses_act15_b_background.svg",
+          "middleGround": "assets/svg/act15_mount_nebo/b_core_action/moses_act15_b_middle_ground.svg",
+          "foreground": "assets/svg/act15_mount_nebo/b_core_action/moses_act15_b_foreground.svg"
         },
         "c_resolve": {
-          "background": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_background.svg",
-          "middleGround": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_middle_ground.svg",
-          "foreground": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_foreground.svg"
+          "background": "assets/svg/act15_mount_nebo/c_resolve/moses_act15_c_background.svg",
+          "middleGround": "assets/svg/act15_mount_nebo/c_resolve/moses_act15_c_middle_ground.svg",
+          "foreground": "assets/svg/act15_mount_nebo/c_resolve/moses_act15_c_foreground.svg"
         }
       },
       "materials": [

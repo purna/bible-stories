@@ -150,24 +150,24 @@
   "scene": "the_spies_and_rebellion",
   "foreground": "fg_the_spies_and_rebellion",
   "index": 11,
-  "assetFolder": "act_12_spies",
-  "artFolder": "assets/svg/act_12_spies",
+  "assetFolder": "act12_the_spies_and_rebellion",
+  "artFolder": "assets/svg/act12_the_spies_and_rebellion",
   "assetStem": "moses_act12",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_12_spies/a_establish/moses_act12_a_background.svg",
-      "middleGround": "assets/svg/act_12_spies/a_establish/moses_act12_a_middle_ground.svg",
-      "foreground": "assets/svg/act_12_spies/a_establish/moses_act12_a_foreground.svg"
+      "background": "assets/svg/act12_the_spies_and_rebellion/a_establish/moses_act12_a_background.svg",
+      "middleGround": "assets/svg/act12_the_spies_and_rebellion/a_establish/moses_act12_a_middle_ground.svg",
+      "foreground": "assets/svg/act12_the_spies_and_rebellion/a_establish/moses_act12_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_12_spies/b_core_action/moses_act12_b_background.svg",
-      "middleGround": "assets/svg/act_12_spies/b_core_action/moses_act12_b_middle_ground.svg",
-      "foreground": "assets/svg/act_12_spies/b_core_action/moses_act12_b_foreground.svg"
+      "background": "assets/svg/act12_the_spies_and_rebellion/b_core_action/moses_act12_b_background.svg",
+      "middleGround": "assets/svg/act12_the_spies_and_rebellion/b_core_action/moses_act12_b_middle_ground.svg",
+      "foreground": "assets/svg/act12_the_spies_and_rebellion/b_core_action/moses_act12_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_12_spies/c_resolve/moses_act12_c_background.svg",
-      "middleGround": "assets/svg/act_12_spies/c_resolve/moses_act12_c_middle_ground.svg",
-      "foreground": "assets/svg/act_12_spies/c_resolve/moses_act12_c_foreground.svg"
+      "background": "assets/svg/act12_the_spies_and_rebellion/c_resolve/moses_act12_c_background.svg",
+      "middleGround": "assets/svg/act12_the_spies_and_rebellion/c_resolve/moses_act12_c_middle_ground.svg",
+      "foreground": "assets/svg/act12_the_spies_and_rebellion/c_resolve/moses_act12_c_foreground.svg"
     }
   },
   "materials": [

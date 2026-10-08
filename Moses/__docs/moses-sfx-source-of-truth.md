@@ -92,3 +92,7 @@ Caption any effect that carries story information. Never encode success by sound
 
 Approve a cue only when its trigger is deterministic, filename matches this table, loop seams are inaudible, dialogue remains clear, repeated effects have variants, the mute control stops it, the visual supplies equivalent information, and its license/credit record is complete.
 <!-- canonical-sfx-production:end -->
+
+---
+
+**Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./moses-design-source-of-truth.md) | [Music SOT](./moses-music-source-of-truth.md) | [SFX SOT](./moses-sfx-source-of-truth.md) | [Game Plan](./moses-game-plan.md)

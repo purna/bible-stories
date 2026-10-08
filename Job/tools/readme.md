@@ -94,3 +94,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `grass` | Grass (Foliage) | Loss upon Loss; Job Speaks |
 | `water_still` | Still Water (Water) | Seven Days; Job Responds |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Job Design SOT](../__docs/job-design-source-of-truth.md)

@@ -65,3 +65,7 @@ Provide separate music, SFX and voice gains plus a master mute. Master mute imme
 
 Duck music under narration and essential physical horn cues; audition dialogue at runtime, since -16 LUFS is a delivery target rather than a mandated playback level. Musical shofar is not a substitute for the Act 6 signal SFX. Never bake fire, dew/water, crickets, footsteps, jar breaks, crowd sounds or speech into these masters.
 <!-- canonical-music-production:end -->
+
+---
+
+**Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./gideon-design-source-of-truth.md) | [Music SOT](./gideon-music-source-of-truth.md) | [SFX SOT](./gideon-sfx-source-of-truth.md) | [Game Plan](./gideon-game-plan.md)

@@ -551,3 +551,7 @@ Use a non-graphic narrated summary for reprisals and deaths; do not make them a 
 Use bold comic silhouettes, halftone texture, theatrical light and tactile foreground props. The visual progression is dust → rock/fire → fleece/dew → water → night/dream → jar/torch → reflective rest. Ancient Near Eastern-inspired scoring uses lyre, reed flute, frame drum, low drones and shofar; this is artistic direction, not a claim of exact historical reconstruction.
 
 The recurring two-phrase motif moves from fragmented uncertainty to a complete answer, then restrained resolution. Detailed arrangement, seven cue names and all delivery rules live only in the [music source of truth](gideon-music-source-of-truth.md). Physical fire, water, footsteps, jar breaks and signal horns live in the [SFX source of truth](gideon-sfx-source-of-truth.md), never baked into the score.
+
+---
+
+**Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./gideon-design-source-of-truth.md) | [Music SOT](./gideon-music-source-of-truth.md) | [SFX SOT](./gideon-sfx-source-of-truth.md) | [Game Plan](./gideon-game-plan.md)

@@ -150,24 +150,24 @@
   "scene": "mount_nebo",
   "foreground": "fg_mount_nebo",
   "index": 14,
-  "assetFolder": "act_15_nebo",
-  "artFolder": "assets/svg/act_15_nebo",
+  "assetFolder": "act15_mount_nebo",
+  "artFolder": "assets/svg/act15_mount_nebo",
   "assetStem": "moses_act15",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_15_nebo/a_establish/moses_act15_a_background.svg",
-      "middleGround": "assets/svg/act_15_nebo/a_establish/moses_act15_a_middle_ground.svg",
-      "foreground": "assets/svg/act_15_nebo/a_establish/moses_act15_a_foreground.svg"
+      "background": "assets/svg/act15_mount_nebo/a_establish/moses_act15_a_background.svg",
+      "middleGround": "assets/svg/act15_mount_nebo/a_establish/moses_act15_a_middle_ground.svg",
+      "foreground": "assets/svg/act15_mount_nebo/a_establish/moses_act15_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_background.svg",
-      "middleGround": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_middle_ground.svg",
-      "foreground": "assets/svg/act_15_nebo/b_core_action/moses_act15_b_foreground.svg"
+      "background": "assets/svg/act15_mount_nebo/b_core_action/moses_act15_b_background.svg",
+      "middleGround": "assets/svg/act15_mount_nebo/b_core_action/moses_act15_b_middle_ground.svg",
+      "foreground": "assets/svg/act15_mount_nebo/b_core_action/moses_act15_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_background.svg",
-      "middleGround": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_middle_ground.svg",
-      "foreground": "assets/svg/act_15_nebo/c_resolve/moses_act15_c_foreground.svg"
+      "background": "assets/svg/act15_mount_nebo/c_resolve/moses_act15_c_background.svg",
+      "middleGround": "assets/svg/act15_mount_nebo/c_resolve/moses_act15_c_middle_ground.svg",
+      "foreground": "assets/svg/act15_mount_nebo/c_resolve/moses_act15_c_foreground.svg"
     }
   },
   "materials": [

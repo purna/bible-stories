@@ -92,3 +92,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `leaves` | Leaves (Foliage) | Under the Broom Tree; Naboth's Vineyard |
 | `fabric_weave` | Woven Linen (Fabric) | The Drought; The Rain Returns; The Quiet Voice; Chariots of Fire |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Elijah Design SOT](../__docs/elijah-design-source-of-truth.md)

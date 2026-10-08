@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act4_passover.json` |
-| SVG assets | `../assets/svg/act_04_passover/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act04_passover_night/` |
 | 3D scene | `moses-passover` in `../tools/shot-designer/scenes/` |
 | Particle mode | ember — lamplight and firelight, warm amber accents against near-black blue |
 | Game beat | Prepare the meal and mark the doorway before departure. — gather-with-care |
@@ -18,13 +18,13 @@ The people eat the lamb in haste, with loins girded, and the blood marks the doo
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_04_passover/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_04_passover/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act04_passover_night/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act04_passover_night/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act4_a_background.svg`, `moses_act4_a_middle_ground.svg`, and `moses_act4_a_foreground.svg`.
 - `b_core_action/` contains `moses_act4_b_background.svg`, `moses_act4_b_middle_ground.svg`, and `moses_act4_b_foreground.svg`.
 - `c_resolve/` contains `moses_act4_c_background.svg`, `moses_act4_c_middle_ground.svg`, and `moses_act4_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

@@ -94,3 +94,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `desert_sand` | Wilderness Sand (Moses) | (general texture — all scenes) |
 | `water_still` | Still Water (Water) | The Cistern; Buy the Field |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Jeremiah Design SOT](../__docs/jeremiah-design-source-of-truth.md)

@@ -95,3 +95,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `grass` | Grass (Foliage) | The Ark Captured; Ebenezer; Saul's First Victory; The Rejected King; David Anointed |
 | `water_still` | Still Water (Water) | The Ark Captured |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Samuel Design SOT](../__docs/samuel-design-source-of-truth.md)

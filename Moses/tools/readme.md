@@ -76,3 +76,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `hammered_gold` | Tabernacle Gold (Moses) | Before the Throne; Sinai; The Golden Calf; Forty Years |
 | `stone_tablets` | Stone Tablets (Moses) | Sinai; The Golden Calf |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Moses Design SOT](../__docs/moses-design-source-of-truth.md)

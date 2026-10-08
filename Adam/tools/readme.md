@@ -91,3 +91,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `wood_oak` | Oak Plank (Wood) | The Garden; The Boundary; The Choice; Hiding; East of Eden |
 | `fabric_weave` | Woven Linen (Fabric) | Cain and Abel; A New Line |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Adam Design SOT](../__docs/adam-design-source-of-truth.md)

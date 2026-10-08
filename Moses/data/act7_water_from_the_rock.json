@@ -150,24 +150,24 @@
   "scene": "water_from_the_rock",
   "foreground": "fg_water_from_the_rock",
   "index": 6,
-  "assetFolder": "act_07_rock",
-  "artFolder": "assets/svg/act_07_rock",
+  "assetFolder": "act07_water_from_the_rock",
+  "artFolder": "assets/svg/act07_water_from_the_rock",
   "assetStem": "moses_act7",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_07_rock/a_establish/moses_act7_a_background.svg",
-      "middleGround": "assets/svg/act_07_rock/a_establish/moses_act7_a_middle_ground.svg",
-      "foreground": "assets/svg/act_07_rock/a_establish/moses_act7_a_foreground.svg"
+      "background": "assets/svg/act07_water_from_the_rock/a_establish/moses_act7_a_background.svg",
+      "middleGround": "assets/svg/act07_water_from_the_rock/a_establish/moses_act7_a_middle_ground.svg",
+      "foreground": "assets/svg/act07_water_from_the_rock/a_establish/moses_act7_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_07_rock/b_core_action/moses_act7_b_background.svg",
-      "middleGround": "assets/svg/act_07_rock/b_core_action/moses_act7_b_middle_ground.svg",
-      "foreground": "assets/svg/act_07_rock/b_core_action/moses_act7_b_foreground.svg"
+      "background": "assets/svg/act07_water_from_the_rock/b_core_action/moses_act7_b_background.svg",
+      "middleGround": "assets/svg/act07_water_from_the_rock/b_core_action/moses_act7_b_middle_ground.svg",
+      "foreground": "assets/svg/act07_water_from_the_rock/b_core_action/moses_act7_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_07_rock/c_resolve/moses_act7_c_background.svg",
-      "middleGround": "assets/svg/act_07_rock/c_resolve/moses_act7_c_middle_ground.svg",
-      "foreground": "assets/svg/act_07_rock/c_resolve/moses_act7_c_foreground.svg"
+      "background": "assets/svg/act07_water_from_the_rock/c_resolve/moses_act7_c_background.svg",
+      "middleGround": "assets/svg/act07_water_from_the_rock/c_resolve/moses_act7_c_middle_ground.svg",
+      "foreground": "assets/svg/act07_water_from_the_rock/c_resolve/moses_act7_c_foreground.svg"
     }
   },
   "materials": [

@@ -90,3 +90,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `leaves` | Leaves (Foliage) | Into the Deep; The Warning; The Plant |
 | `fabric_weave` | Woven Linen (Fabric) | Nineveh Repents |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Jonah Design SOT](../__docs/jonah-design-source-of-truth.md)

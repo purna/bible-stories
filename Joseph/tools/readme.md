@@ -96,3 +96,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `hammered_gold` | Tabernacle Gold (Moses) | The Coloured Robe; Pharaoh's Dreams |
 | `egypt_mud_brick` | Egyptian Mud Brick (Moses) | Potiphar's House; Storehouses; The Brothers Arrive |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Joseph Design SOT](../__docs/joseph-design-source-of-truth.md)

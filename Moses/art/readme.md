@@ -41,9 +41,8 @@ Each beat folder contains three independently editable SVG layers:
 - `*_middle_ground.svg` — the act’s focal setting, props, and optional character staging.
 - `*_foreground.svg` — transparent edge framing and close props.
 
-`../assets/svg/scene-layer-manifest.json` and the act entry in `../data/manifest.json`
-(or `../data/canon.json` where a runtime act manifest is not used) link each beat
-to its three layer files and the act’s exported materials. The order is always
+The act entry in `../data/manifest.json` links each beat to its three layer files
+and the act’s exported materials. The order is always
 background → middle ground → foreground. The scene designer can export all
 beats as a ZIP rooted at the story folder.
 
@@ -72,3 +71,7 @@ The mood board is the contract between the pipelines. When a scene changes:
 Palette, props, light and mood must agree across both, so a frame from the
 comic and a still from the 3D scene read as the same world.
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Moses Design SOT](../__docs/moses-design-source-of-truth.md)

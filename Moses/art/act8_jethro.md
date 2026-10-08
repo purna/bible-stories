@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act8_jethro.json` |
-| SVG assets | `../assets/svg/act_08_jethro/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act08_jethro_s_counsel/` |
 | 3D scene | `moses-jethro` in `../tools/shot-designer/scenes/` |
 | Particle mode | dusk — low warm sun, long amber shadows, deep violet sky banding |
 | Game beat | Receive wisdom from Midian and reach the holy mountain. — match-it-up |
@@ -18,13 +18,13 @@ Jethro brings Zipporah and her sons to the camp, hears all that the Lord has don
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_08_jethro/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_08_jethro/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act08_jethro_s_counsel/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act08_jethro_s_counsel/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act8_a_background.svg`, `moses_act8_a_middle_ground.svg`, and `moses_act8_a_foreground.svg`.
 - `b_core_action/` contains `moses_act8_b_background.svg`, `moses_act8_b_middle_ground.svg`, and `moses_act8_b_foreground.svg`.
 - `c_resolve/` contains `moses_act8_c_background.svg`, `moses_act8_c_middle_ground.svg`, and `moses_act8_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

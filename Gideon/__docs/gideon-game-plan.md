@@ -72,3 +72,7 @@ Each act in the intended `gideon-story.json` declares `game.id` (stable `gideon_
 
 For each of seven acts, complete with pointer, touch, keyboard and sequential focus; also complete with sound off and reduced motion. Confirm canonical sequence, both fleece rounds, four representative sorting cards, one four-step battle sequence and all six aftermath cards. Verify hints and assisted completion, no navigation deadlock, callback once per run, progress persistence and storage failure, audio cleanup, caption equivalence and visible scripture references. Prototype resemblance is not acceptance evidence.
 <!-- act-mini-games:end -->
+
+---
+
+**Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./gideon-design-source-of-truth.md) | [Music SOT](./gideon-music-source-of-truth.md) | [SFX SOT](./gideon-sfx-source-of-truth.md) | [Game Plan](./gideon-game-plan.md)

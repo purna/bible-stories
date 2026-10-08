@@ -64,6 +64,7 @@
     <a href="tools/character-designer/index.html">Character Generator</a>
     <a href="tools/shot-designer/index.html">Shot Designer</a>
     <a href="tools/texture-forge.html">Texture Forge</a>
+    <a href="../tools/scene_designer.html">Scene Designer</a>
   </footer>
   <script src="../js/asset-download-manager.js"></script>
   <script src="../js/story-runtime.js"></script>
@@ -82,7 +83,7 @@
       window.addEventListener('load', async () => {
         const registrations = await navigator.serviceWorker.getRegistrations();
         await Promise.all(registrations
-          .filter(registration => registration.active?.scriptURL.endsWith('/Babel/js/sw.js'))
+          .filter(registration => [registration.active, registration.waiting, registration.installing].some(worker => worker?.scriptURL.endsWith('/Babel/js/sw.js')))
           .map(registration => registration.unregister()));
         navigator.serviceWorker.register('../sw.js');
       });

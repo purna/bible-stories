@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act2_exile.json` |
-| SVG assets | `../assets/svg/act_02_exile/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act02_the_burning_bush/` |
 | 3D scene | `moses-exile` in `../tools/shot-designer/scenes/` |
 | Particle mode | ember — firelight glow, warm orange accents against deep shadow |
 | Game beat | Herd sheep, approach the fire, and answer the call. — call-and-response |
@@ -18,13 +18,13 @@ Moses keeps the flock of Jethro in the wilderness of Horeb, and the angel of the
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_02_exile/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_02_exile/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act02_the_burning_bush/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act02_the_burning_bush/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act2_a_background.svg`, `moses_act2_a_middle_ground.svg`, and `moses_act2_a_foreground.svg`.
 - `b_core_action/` contains `moses_act2_b_background.svg`, `moses_act2_b_middle_ground.svg`, and `moses_act2_b_foreground.svg`.
 - `c_resolve/` contains `moses_act2_c_background.svg`, `moses_act2_c_middle_ground.svg`, and `moses_act2_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

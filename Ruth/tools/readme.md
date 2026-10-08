@@ -89,3 +89,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `water_still` | Still Water (Water) | Gleaning; At the Threshing Floor |
 | `leaves` | Leaves (Foliage) | Gleaning; Boaz Notices |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Ruth Design SOT](../__docs/ruth-design-source-of-truth.md)

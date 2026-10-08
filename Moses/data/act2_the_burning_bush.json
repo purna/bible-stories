@@ -150,24 +150,24 @@
   "scene": "the_burning_bush",
   "foreground": "fg_the_burning_bush",
   "index": 1,
-  "assetFolder": "act_02_exile",
-  "artFolder": "assets/svg/act_02_exile",
+  "assetFolder": "act02_the_burning_bush",
+  "artFolder": "assets/svg/act02_the_burning_bush",
   "assetStem": "moses_act2",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_02_exile/a_establish/moses_act2_a_background.svg",
-      "middleGround": "assets/svg/act_02_exile/a_establish/moses_act2_a_middle_ground.svg",
-      "foreground": "assets/svg/act_02_exile/a_establish/moses_act2_a_foreground.svg"
+      "background": "assets/svg/act02_the_burning_bush/a_establish/moses_act2_a_background.svg",
+      "middleGround": "assets/svg/act02_the_burning_bush/a_establish/moses_act2_a_middle_ground.svg",
+      "foreground": "assets/svg/act02_the_burning_bush/a_establish/moses_act2_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_02_exile/b_core_action/moses_act2_b_background.svg",
-      "middleGround": "assets/svg/act_02_exile/b_core_action/moses_act2_b_middle_ground.svg",
-      "foreground": "assets/svg/act_02_exile/b_core_action/moses_act2_b_foreground.svg"
+      "background": "assets/svg/act02_the_burning_bush/b_core_action/moses_act2_b_background.svg",
+      "middleGround": "assets/svg/act02_the_burning_bush/b_core_action/moses_act2_b_middle_ground.svg",
+      "foreground": "assets/svg/act02_the_burning_bush/b_core_action/moses_act2_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_02_exile/c_resolve/moses_act2_c_background.svg",
-      "middleGround": "assets/svg/act_02_exile/c_resolve/moses_act2_c_middle_ground.svg",
-      "foreground": "assets/svg/act_02_exile/c_resolve/moses_act2_c_foreground.svg"
+      "background": "assets/svg/act02_the_burning_bush/c_resolve/moses_act2_c_background.svg",
+      "middleGround": "assets/svg/act02_the_burning_bush/c_resolve/moses_act2_c_middle_ground.svg",
+      "foreground": "assets/svg/act02_the_burning_bush/c_resolve/moses_act2_c_foreground.svg"
     }
   },
   "materials": [

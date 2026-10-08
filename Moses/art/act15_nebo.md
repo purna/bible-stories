@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act15_nebo.json` |
-| SVG assets | `../assets/svg/act_15_nebo/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act15_mount_nebo/` |
 | 3D scene | `moses-nebo` in `../tools/shot-designer/scenes/` |
 | Particle mode | dusk — low warm sun, long amber shadows, deep violet sky banding |
 | Game beat | Appoint Joshua and identify the land from afar. — match-it-up |
@@ -18,13 +18,13 @@ Moses goes up to Mount Nebo and sees the whole land, and the Lord buries him in 
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_15_nebo/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_15_nebo/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act15_mount_nebo/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act15_mount_nebo/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act15_a_background.svg`, `moses_act15_a_middle_ground.svg`, and `moses_act15_a_foreground.svg`.
 - `b_core_action/` contains `moses_act15_b_background.svg`, `moses_act15_b_middle_ground.svg`, and `moses_act15_b_foreground.svg`.
 - `c_resolve/` contains `moses_act15_c_background.svg`, `moses_act15_c_middle_ground.svg`, and `moses_act15_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

@@ -3,6 +3,7 @@ class AudioManager {
         AudioManager.installStyles();
         this.enabled = AudioManager.readPreference();
         this.currentSrc = null;
+        this.currentActId = null;
         this.musicVolume = options.musicVolume ?? 0.3;
         this.sfxVolume = options.sfxVolume ?? 0.5;
         this.sfxPath = options.sfxPath || 'assets/audio/ping_pong.mp3';
@@ -13,6 +14,7 @@ class AudioManager {
         this.toggleBtn = document.querySelector('#audioToggle');
         this.fadeTimer = null;
         this.activeSfx = new Set();
+        this.pendingSfx = new Set();
 
         this.updateToggle();
         if (this.toggleBtn) {
@@ -85,7 +87,11 @@ class AudioManager {
 
     playAct(act) {
         const sources = Array.isArray(act && act.audio) ? act.audio : (act && act.audio ? [act.audio] : []);
+        const actId = act && (act.id || act.name || act);
+        const enteringNewAct = Boolean(actId && this.currentActId && this.currentActId !== actId);
+        if (actId) this.currentActId = actId;
         this.preloadAct(act);
+        if (enteringNewAct && act.transitionSfx) this.playSfx(act.transitionSfx);
         if (!sources.length) {
             this.fadeOut(true);
             return;
@@ -122,7 +128,8 @@ class AudioManager {
     preloadAct(act) {
         const sources = Array.isArray(act && act.audio) ? act.audio : (act && act.audio ? [act.audio] : []);
         const effects = Array.isArray(act && act.sfx) ? act.sfx : [];
-        return this.preloadFiles([...sources, ...effects]);
+        const itemEffects = (act && act.lines || []).flatMap(line => (line.items || []).map(item => item.audioSfx).filter(Boolean));
+        return this.preloadFiles([...sources, ...effects, ...itemEffects, act && act.transitionSfx]);
     }
 
     preloadStory(story, extraEffects = []) {
@@ -131,10 +138,11 @@ class AudioManager {
         acts.forEach(act => {
             const music = Array.isArray(act.audio) ? act.audio : (act.audio ? [act.audio] : []);
             const effects = Array.isArray(act.sfx) ? act.sfx : [];
-            files.push(...music, ...effects);
+            files.push(...music, ...effects, act.transitionSfx);
             (act.lines || []).forEach(line => {
                 const lineEffects = Array.isArray(line.audioSfx) ? line.audioSfx : (line.audioSfx ? [line.audioSfx] : []);
-                files.push(...lineEffects);
+                const itemEffects = (line.items || []).map(item => item.audioSfx).filter(Boolean);
+                files.push(...lineEffects, ...itemEffects);
             });
         });
         return this.preloadFiles(files);
@@ -165,8 +173,21 @@ class AudioManager {
 
     playLineSfx(line) {
         const effects = Array.isArray(line && line.audioSfx) ? line.audioSfx : (line && line.audioSfx ? [line.audioSfx] : []);
+        const itemEffects = (Array.isArray(line && line.items) ? line.items : [])
+            .filter(item => typeof item.audioSfx === 'string' && item.audioSfx.trim())
+            .map(item => ({ path: item.audioSfx, delay: Math.max(0, Number(item.delay) || 0) }));
         this.stopSfx();
         effects.forEach(path => this.playSfx(path));
+        itemEffects.forEach(({ path, delay }) => {
+            if (delay === 0) this.playSfx(path);
+            else {
+                const timer = setTimeout(() => {
+                    this.pendingSfx.delete(timer);
+                    this.playSfx(path);
+                }, delay);
+                this.pendingSfx.add(timer);
+            }
+        });
     }
 
     startSfxLoop(path, volume = 0.08) {
@@ -180,6 +201,8 @@ class AudioManager {
     }
 
     stopSfx() {
+        this.pendingSfx.forEach(timer => clearTimeout(timer));
+        this.pendingSfx.clear();
         this.activeSfx.forEach(sfx => { sfx.pause(); sfx.currentTime = 0; });
         this.activeSfx.clear();
     }

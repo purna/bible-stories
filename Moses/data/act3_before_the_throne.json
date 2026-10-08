@@ -150,24 +150,24 @@
   "scene": "before_the_throne",
   "foreground": "fg_before_the_throne",
   "index": 2,
-  "assetFolder": "act_03_throne",
-  "artFolder": "assets/svg/act_03_throne",
+  "assetFolder": "act03_before_the_throne",
+  "artFolder": "assets/svg/act03_before_the_throne",
   "assetStem": "moses_act3",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_03_throne/a_establish/moses_act3_a_background.svg",
-      "middleGround": "assets/svg/act_03_throne/a_establish/moses_act3_a_middle_ground.svg",
-      "foreground": "assets/svg/act_03_throne/a_establish/moses_act3_a_foreground.svg"
+      "background": "assets/svg/act03_before_the_throne/a_establish/moses_act3_a_background.svg",
+      "middleGround": "assets/svg/act03_before_the_throne/a_establish/moses_act3_a_middle_ground.svg",
+      "foreground": "assets/svg/act03_before_the_throne/a_establish/moses_act3_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_03_throne/b_core_action/moses_act3_b_background.svg",
-      "middleGround": "assets/svg/act_03_throne/b_core_action/moses_act3_b_middle_ground.svg",
-      "foreground": "assets/svg/act_03_throne/b_core_action/moses_act3_b_foreground.svg"
+      "background": "assets/svg/act03_before_the_throne/b_core_action/moses_act3_b_background.svg",
+      "middleGround": "assets/svg/act03_before_the_throne/b_core_action/moses_act3_b_middle_ground.svg",
+      "foreground": "assets/svg/act03_before_the_throne/b_core_action/moses_act3_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_03_throne/c_resolve/moses_act3_c_background.svg",
-      "middleGround": "assets/svg/act_03_throne/c_resolve/moses_act3_c_middle_ground.svg",
-      "foreground": "assets/svg/act_03_throne/c_resolve/moses_act3_c_foreground.svg"
+      "background": "assets/svg/act03_before_the_throne/c_resolve/moses_act3_c_background.svg",
+      "middleGround": "assets/svg/act03_before_the_throne/c_resolve/moses_act3_c_middle_ground.svg",
+      "foreground": "assets/svg/act03_before_the_throne/c_resolve/moses_act3_c_foreground.svg"
     }
   },
   "materials": [

@@ -87,3 +87,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `grass` | Grass (Foliage) | The Journey to Shiloh; Remembered |
 | `water_still` | Still Water (Water) | At the Table |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Hannah Design SOT](../__docs/hannah-design-source-of-truth.md)

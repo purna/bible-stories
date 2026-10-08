@@ -150,24 +150,24 @@
   "scene": "the_long_wilderness",
   "foreground": "fg_the_long_wilderness",
   "index": 12,
-  "assetFolder": "act_13_wilderness",
-  "artFolder": "assets/svg/act_13_wilderness",
+  "assetFolder": "act13_the_long_wilderness",
+  "artFolder": "assets/svg/act13_the_long_wilderness",
   "assetStem": "moses_act13",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_background.svg",
-      "middleGround": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_middle_ground.svg",
-      "foreground": "assets/svg/act_13_wilderness/a_establish/moses_act13_a_foreground.svg"
+      "background": "assets/svg/act13_the_long_wilderness/a_establish/moses_act13_a_background.svg",
+      "middleGround": "assets/svg/act13_the_long_wilderness/a_establish/moses_act13_a_middle_ground.svg",
+      "foreground": "assets/svg/act13_the_long_wilderness/a_establish/moses_act13_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_background.svg",
-      "middleGround": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_middle_ground.svg",
-      "foreground": "assets/svg/act_13_wilderness/b_core_action/moses_act13_b_foreground.svg"
+      "background": "assets/svg/act13_the_long_wilderness/b_core_action/moses_act13_b_background.svg",
+      "middleGround": "assets/svg/act13_the_long_wilderness/b_core_action/moses_act13_b_middle_ground.svg",
+      "foreground": "assets/svg/act13_the_long_wilderness/b_core_action/moses_act13_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_background.svg",
-      "middleGround": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_middle_ground.svg",
-      "foreground": "assets/svg/act_13_wilderness/c_resolve/moses_act13_c_foreground.svg"
+      "background": "assets/svg/act13_the_long_wilderness/c_resolve/moses_act13_c_background.svg",
+      "middleGround": "assets/svg/act13_the_long_wilderness/c_resolve/moses_act13_c_middle_ground.svg",
+      "foreground": "assets/svg/act13_the_long_wilderness/c_resolve/moses_act13_c_foreground.svg"
     }
   },
   "materials": [

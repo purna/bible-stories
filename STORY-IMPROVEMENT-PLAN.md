@@ -278,3 +278,7 @@ No story is release-ready until it completes without console errors and has an a
 11. **Responsive, accessibility, performance, and release QA.**
 
 This order fixes broken foundations first, validates the most distinctive mechanics early, and prevents large-scale asset or music production from being attached to interactions that may still change.
+
+---
+
+**Navigation:** [← Source of Truth Overview](SOURCE-OF-TRUTH-OVERVIEW.md)

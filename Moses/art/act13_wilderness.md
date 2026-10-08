@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act13_wilderness.json` |
-| SVG assets | `../assets/svg/act_13_wilderness/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act13_the_long_wilderness/` |
 | 3D scene | `moses-wilderness` in `../tools/shot-designer/scenes/` |
 | Particle mode | dusk — low warm sun, long amber shadows, deep violet sky banding |
 | Game beat | Navigate a provision-and-trust journey map. — pathfinding |
@@ -18,13 +18,13 @@ The people wander in the wilderness, and the Lord sends manna, water from the ro
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_13_wilderness/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_13_wilderness/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act13_the_long_wilderness/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act13_the_long_wilderness/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act13_a_background.svg`, `moses_act13_a_middle_ground.svg`, and `moses_act13_a_foreground.svg`.
 - `b_core_action/` contains `moses_act13_b_background.svg`, `moses_act13_b_middle_ground.svg`, and `moses_act13_b_foreground.svg`.
 - `c_resolve/` contains `moses_act13_c_background.svg`, `moses_act13_c_middle_ground.svg`, and `moses_act13_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

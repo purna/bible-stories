@@ -92,3 +92,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `desert_sand` | Wilderness Sand (Moses) | The Assyrian Shadow; Comfort My People |
 | `water_still` | Still Water (Water) | The Holy Throne; The Assyrian Shadow |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Isaiah Design SOT](../__docs/isaiah-design-source-of-truth.md)

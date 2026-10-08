@@ -1,0 +1,18 @@
+{
+  "story": "Moses",
+  "act": 1,
+  "chapter": "Ch.1 · The Child in the River",
+  "artSource": "art/act1_basket.md",
+  "artFolder": "act01_the_child_in_the_river",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "assets/materials/nile_reeds-riverbank.svg"
+  ],
+  "layers": {
+    "background": "moses_act1_c_background.svg",
+    "middleGround": "moses_act1_c_middle_ground.svg",
+    "foreground": "moses_act1_c_foreground.svg"
+  }
+}

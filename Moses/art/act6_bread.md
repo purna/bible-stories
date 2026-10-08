@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act6_bread.json` |
-| SVG assets | `../assets/svg/act_06_bread/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act06_bread_in_the_wilderness/` |
 | 3D scene | `moses-bread` in `../tools/shot-designer/scenes/` |
 | Particle mode | dusk — low warm sun, long amber shadows, deep violet sky banding |
 | Game beat | Gather only enough manna for the day. — gather-with-care |
@@ -18,13 +18,13 @@ The Lord gives manna in the morning and quails in the evening; the people gather
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_06_bread/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_06_bread/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act06_bread_in_the_wilderness/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act06_bread_in_the_wilderness/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act6_a_background.svg`, `moses_act6_a_middle_ground.svg`, and `moses_act6_a_foreground.svg`.
 - `b_core_action/` contains `moses_act6_b_background.svg`, `moses_act6_b_middle_ground.svg`, and `moses_act6_b_foreground.svg`.
 - `c_resolve/` contains `moses_act6_c_background.svg`, `moses_act6_c_middle_ground.svg`, and `moses_act6_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

@@ -1,0 +1,21 @@
+{
+  "story": "Moses",
+  "act": 3,
+  "chapter": "Ch.3 · Before the Throne",
+  "artSource": "art/act3_throne.md",
+  "artFolder": "act03_before_the_throne",
+  "sceneId": "placeholder",
+  "beat": "B",
+  "beatName": "Core Action",
+  "materials": [
+    "assets/materials/egypt_mud_brick-stretcher.svg",
+    "assets/materials/nile_reeds-riverbank.svg",
+    "assets/materials/hammered_gold-hammered.svg",
+    "assets/materials/stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act3_b_background.svg",
+    "middleGround": "moses_act3_b_middle_ground.svg",
+    "foreground": "moses_act3_b_foreground.svg"
+  }
+}

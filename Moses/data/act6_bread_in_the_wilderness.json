@@ -150,24 +150,24 @@
   "scene": "bread_in_the_wilderness",
   "foreground": "fg_bread_in_the_wilderness",
   "index": 5,
-  "assetFolder": "act_06_bread",
-  "artFolder": "assets/svg/act_06_bread",
+  "assetFolder": "act06_bread_in_the_wilderness",
+  "artFolder": "assets/svg/act06_bread_in_the_wilderness",
   "assetStem": "moses_act6",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_06_bread/a_establish/moses_act6_a_background.svg",
-      "middleGround": "assets/svg/act_06_bread/a_establish/moses_act6_a_middle_ground.svg",
-      "foreground": "assets/svg/act_06_bread/a_establish/moses_act6_a_foreground.svg"
+      "background": "assets/svg/act06_bread_in_the_wilderness/a_establish/moses_act6_a_background.svg",
+      "middleGround": "assets/svg/act06_bread_in_the_wilderness/a_establish/moses_act6_a_middle_ground.svg",
+      "foreground": "assets/svg/act06_bread_in_the_wilderness/a_establish/moses_act6_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_06_bread/b_core_action/moses_act6_b_background.svg",
-      "middleGround": "assets/svg/act_06_bread/b_core_action/moses_act6_b_middle_ground.svg",
-      "foreground": "assets/svg/act_06_bread/b_core_action/moses_act6_b_foreground.svg"
+      "background": "assets/svg/act06_bread_in_the_wilderness/b_core_action/moses_act6_b_background.svg",
+      "middleGround": "assets/svg/act06_bread_in_the_wilderness/b_core_action/moses_act6_b_middle_ground.svg",
+      "foreground": "assets/svg/act06_bread_in_the_wilderness/b_core_action/moses_act6_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_06_bread/c_resolve/moses_act6_c_background.svg",
-      "middleGround": "assets/svg/act_06_bread/c_resolve/moses_act6_c_middle_ground.svg",
-      "foreground": "assets/svg/act_06_bread/c_resolve/moses_act6_c_foreground.svg"
+      "background": "assets/svg/act06_bread_in_the_wilderness/c_resolve/moses_act6_c_background.svg",
+      "middleGround": "assets/svg/act06_bread_in_the_wilderness/c_resolve/moses_act6_c_middle_ground.svg",
+      "foreground": "assets/svg/act06_bread_in_the_wilderness/c_resolve/moses_act6_c_foreground.svg"
     }
   },
   "materials": [

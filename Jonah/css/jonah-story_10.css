@@ -1383,7 +1383,7 @@
     }
 
     #startScreen .issue {
-      font-family: 'Space Mono', monospace;
+      font-family: 'Space Mono', Tahoma, sans-serif;
       font-size: 12px;
       color: var(--ink);
       background: #FFD84D;
@@ -1395,7 +1395,7 @@
     }
 
     #startScreen h1 {
-      font-family: 'Bangers', cursive;
+      font-family: 'Bangers', Tahoma, sans-serif;
       font-size: clamp(54px, 14vw, 90px);
       margin: 0;
       color: #FFD84D;
@@ -1406,7 +1406,7 @@
     }
 
     #startScreen .subtitle {
-      font-family: 'Baloo 2', sans-serif;
+      font-family: 'Baloo 2', Tahoma, sans-serif;
       font-size: 24px;
       color: var(--cream);
       margin: 4px 0 16px;
@@ -1421,17 +1421,19 @@
     }
 
     #startScreen p {
-      font-family: 'Press Start 2P', monospace;
+      font-family: 'Press Start 2P', Tahoma, sans-serif;
       font-size: 10px;
       max-width: 460px;
       color: var(--cream);
       opacity: .9;
       margin: 18px 0 26px;
       line-height: 2;
-    }
+    
+  font-weight: 700;
+}
 
     #startBtn {
-      font-family: 'Press Start 2P', monospace;
+      font-family: 'Press Start 2P', Tahoma, sans-serif;
       font-size: 16px;
       background: #FF6B5B;
       color: var(--ink);
@@ -1440,12 +1442,13 @@
       cursor: pointer;
       box-shadow: 6px 6px 0 var(--ink);
       transition: all .1s;
-    }
+    
+  font-weight: 700;
+}
 
     #startBtn:hover {
       box-shadow: 4px 4px 0 var(--ink);
-      transform: translateY(2px);
-    }
+      transform: translateY(2px);}
 
     #startScreen.hide {
       opacity: 0;

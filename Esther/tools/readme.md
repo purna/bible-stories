@@ -93,3 +93,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `stone` | Stone (Structure) | The Gate Plot; For Such a Time; A New Decree |
 | `wood_dark` | Dark Timber (Wood) | The Sleepless Night; The Second Banquet |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Esther Design SOT](../__docs/esther-design-source-of-truth.md)

@@ -10,7 +10,13 @@
 
 /* ── STATE ───────────────────────────────────── */
 let STORY = [];
+let STORY_ID = 'template';
+let BONUS_STORIES = [];
+let GAME_POOL = [];
+let lastGameFile = '';
+const sessionCompletedActs = new Set();
 let actIdx = 0, lineIdx = 0, transitioning = false, choicePending = false, nextLineTimeout = null;
+let actGameCompleted = false;
 let use3D = true;
 let threeCanvas = null;
 let renderer = null, currentScene = null, camera = null;
@@ -25,6 +31,72 @@ const portal     = el('#portal');
 const bgGradient = el('#bgGradient');
 const dotsBox    = el('#dots');
 const audio = new AudioManager();
+const storyCompleteModal = el('#storyComplete');
+const actGameModal = el('#actGame');
+const actGameFrame = el('#actGameFrame');
+
+function actCompletionKey(act) { return `bible-story:${STORY_ID}:act:${act.id}`; }
+function isActComplete(act) {
+  if (sessionCompletedActs.has(act.id)) return true;
+  try { return localStorage.getItem(actCompletionKey(act)) === 'complete'; }
+  catch { return false; }
+}
+function allActsComplete() { return STORY.length > 0 && STORY.every(isActComplete); }
+function markActComplete(act) {
+  sessionCompletedActs.add(act.id);
+  try { localStorage.setItem(actCompletionKey(act), 'complete'); }
+  catch {}
+}
+function advanceAfterActGame() {
+  if (allActsComplete()) { showStoryCompletion(); return; }
+  const firstIncomplete = STORY.findIndex(act => !isActComplete(act));
+  if (firstIncomplete < 0) { showStoryCompletion(); return; }
+  fallTransition(() => { actIdx = firstIncomplete; lineIdx = 0; choicePending = false; populateChapterSelect(); renderLine(); });
+}
+function closeActGame() {
+  actGameModal.hidden = true;
+  actGameFrame.src = 'about:blank';
+  if (window.StoryRuntime) StoryRuntime.unlock('act-game');
+}
+function startActGame() {
+  if (!GAME_POOL.length) {
+    el('#actGameStatus').textContent = 'No shared chapter games are available. Check the shared games manifest.';
+    el('#actGameContinue').hidden = true;
+    actGameModal.hidden = false;
+    return;
+  }
+  const choices = GAME_POOL.filter(game => GAME_POOL.length < 2 || game.file !== lastGameFile);
+  const game = choices[Math.floor(Math.random() * choices.length)];
+  lastGameFile = game.file;
+  actGameCompleted = false;
+  el('#actGameTitle').textContent = `${currentAct().name} · ${game.title}`;
+  el('#actGameStatus').textContent = 'Finish this randomly selected game to complete the act.';
+  el('#actGameContinue').hidden = true;
+  actGameFrame.title = `${game.title} act challenge`;
+  actGameFrame.src = `../__shared/chapter-games/engines/${encodeURIComponent(game.file)}`;
+  actGameModal.hidden = false;
+  if (window.StoryRuntime) StoryRuntime.lock('act-game');
+}
+function showStoryCompletion() {
+  try { localStorage.setItem(`bible-story:${STORY_ID}:complete`, 'complete'); }
+  catch {}
+  const links = el('#storyBonusLinks');
+  links.replaceChildren();
+  BONUS_STORIES.forEach(bonus => {
+    if (!bonus || !bonus.entry || !bonus.title) return;
+    const link = document.createElement('a');
+    link.href = bonus.entry;
+    link.textContent = `Read ${bonus.title} →`;
+    if (bonus.description) link.setAttribute('aria-label', `${bonus.title}: ${bonus.description}`);
+    links.appendChild(link);
+  });
+  el('#storyCompleteMessage').textContent = BONUS_STORIES.length
+    ? 'You have completed every chapter. Your bonus stories are now unlocked.'
+    : 'You have completed every chapter. You can replay the story or add bonus stories in the story manifest.';
+  storyCompleteModal.hidden = false;
+  el('#storyCompleteClose').focus();
+  window.dispatchEvent(new CustomEvent('bible-story-complete', { detail: { story: STORY_ID } }));
+}
 
 /* ── Character portraits ─────────────────────── */
 const CHARACTER_KEYS = { guide:'guide', traveller:'traveller', witness:'witness', narrator:null, god:null };
@@ -205,7 +277,9 @@ function updateNextBtn() {
   const pal = `palette-act-${actIdx + 1}`;
   nextBtn.className = pal;
   nextBtn.classList.toggle('show', atEnd);
-  nextBtn.textContent = actIdx === STORY.length - 1 ? 'Read Again ↺' : 'Next Chapter ↴';
+  nextBtn.textContent = !isActComplete(currentAct())
+    ? 'Play Act Challenge 🎮'
+    : (allActsComplete() ? 'Finish Story ✓' : 'Next Chapter ↴');
   nextBtn.classList.toggle('finale', actIdx === STORY.length - 1);
   nextLineBtn.className = pal;
   nextLineBtn.classList.toggle('show', notAtEnd);
@@ -384,11 +458,8 @@ function fallTransition(mid) {
 }
 function goNextChapter() {
   if (transitioning) return;
-  if (actIdx >= STORY.length - 1) {
-    fallTransition(() => { actIdx = 0; lineIdx = 0; populateChapterSelect(); renderLine(); });
-    return;
-  }
-  fallTransition(() => { actIdx++; lineIdx = 0; choicePending = false; populateChapterSelect(); renderLine(); });
+  if (!isActComplete(currentAct())) { startActGame(); return; }
+  advanceAfterActGame();
 }
 function jumpToChapter(newIdx) {
   if (newIdx === actIdx || transitioning) return;
@@ -446,9 +517,29 @@ tickParticles();
 requestAnimationFrame(tick3D);
 
 nextLineBtn.addEventListener('click', () => goLine(1));
-nextBtn.addEventListener('click', () => {
-  if (actIdx === STORY.length - 1) { jumpToChapter(0); }
-  else goNextChapter();
+nextBtn.addEventListener('click', goNextChapter);
+el('#actGameClose').addEventListener('click', closeActGame);
+el('#actGameContinue').addEventListener('click', () => {
+  if (!actGameCompleted) return;
+  closeActGame();
+  advanceAfterActGame();
+});
+window.addEventListener('message', event => {
+  if (!actGameModal || actGameModal.hidden || event.source !== actGameFrame.contentWindow) return;
+  if (event.origin !== location.origin || event.data?.type !== 'game-complete') return;
+  if (actGameCompleted) return;
+  actGameCompleted = true;
+  markActComplete(currentAct());
+  updateNextBtn();
+  el('#actGameStatus').textContent = 'Challenge complete. This act is now complete.';
+  el('#actGameContinue').textContent = allActsComplete() ? 'Finish story →' : 'Continue to next chapter →';
+  el('#actGameContinue').hidden = false;
+  el('#actGameContinue').focus();
+});
+el('#storyCompleteClose').addEventListener('click', () => { storyCompleteModal.hidden = true; });
+el('#storyCompleteReplay').addEventListener('click', () => {
+  storyCompleteModal.hidden = true;
+  fallTransition(() => { actIdx = 0; lineIdx = 0; choicePending = false; populateChapterSelect(); renderLine(); });
 });
 el('#chapterSelect').addEventListener('change', e => jumpToChapter(parseInt(e.target.value)));
 
@@ -477,6 +568,14 @@ async function boot() {
   initThree();
   const res = await fetch('data/manifest.json');
   const manifest = await res.json();
+  STORY_ID = manifest.storyId || 'template';
+  BONUS_STORIES = Array.isArray(manifest.bonusStories) ? manifest.bonusStories : [];
+  const gameManifest = await fetch('../__shared/chapter-games/games.json').then(response => {
+    if (!response.ok) throw new Error('Shared chapter games are unavailable.');
+    return response.json();
+  }).catch(() => ({ games: [] }));
+  GAME_POOL = (Array.isArray(gameManifest.games) ? gameManifest.games : [])
+    .filter(game => game && typeof game.file === 'string' && /^[\w.-]+\.html$/.test(game.file) && typeof game.title === 'string');
   STORY = await Promise.all(manifest.acts.map(async act => {
     const r = await fetch(`data/${act.file}`);
     return r.json();

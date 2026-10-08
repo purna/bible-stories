@@ -18,6 +18,7 @@
         rel="stylesheet">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         html {
             min-height: 100%;
@@ -83,14 +84,29 @@
         }
 
         @keyframes coverWobble {
-            0%, 100% { transform: rotate(-2deg) translateX(0); }
-            25% { transform: rotate(-1.7deg) translateX(2px); }
-            50% { transform: rotate(-2.2deg) translateX(-1px); }
-            75% { transform: rotate(-1.9deg) translateX(1px); }
+
+            0%,
+            100% {
+                transform: rotate(-2deg) translateX(0);
+            }
+
+            25% {
+                transform: rotate(-1.7deg) translateX(2px);
+            }
+
+            50% {
+                transform: rotate(-2.2deg) translateX(-1px);
+            }
+
+            75% {
+                transform: rotate(-1.9deg) translateX(1px);
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .comic-cover.can-scroll-down { animation: none; }
+            .comic-cover.can-scroll-down {
+                animation: none;
+            }
         }
 
         .comic-cover h1 {
@@ -229,6 +245,8 @@
             color: #1a1a1a;
             /* Darker text for better contrast */
             padding: 0.75rem 1.5rem;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
             border-radius: 5px;
             text-decoration: none;
             font-family: 'Press Start 2P', cursive;
@@ -322,18 +340,63 @@
         <div class="scroll-hint scroll-hint--top" aria-hidden="true"><span>▲</span><span>scroll up</span></div>
         <ul class="comic-list">
             <li><a href="./Adam/">The Story of Adam & Eve</a></li>
-            <li><a href="./Abraham/">The Story of Abraham · includes the Babel bonus comic</a></li>
-            <li><a href="./Daniel/">The Story of Daniel</a></li>
-            <li><a href="./Elijah/">The Story of Elijah</a></li>
-            <li><a href="./Jonah/">The Story of Jonah</a></li>
-            <li><a href="./Moses/">The Story of Moses</a></li>
+            <li><a href="./Enoch/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Enoch</a></li>
             <li><a href="./Noah/">The Story of Noah</a></li>
+            <li><a href="./Abraham/">The Story of Abraham</a></li>
+            <li><a href="./Jacob/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Jacob</a></li>
+            <li><a href="./Joseph/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Joseph</a></li>
+            <li><a href="./Moses/">The Story of Moses</a></li>
+            <li><a href="./Joshua/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Joshua</a></li>
+            <li><a href="./Deborah/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Deborah</a></li>
+            <li><a href="./Ruth/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Ruth</a></li>
+            <li><a href="./Hannah/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Hannah</a></li>
+            <li><a href="./Samuel/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Samuel</a></li>
+            <li><a href="./David/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of David</a></li>
+            <li><a href="./Job/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Job</a></li>
+            <li><a href="./Elijah/">The Story of Elijah</a></li>
+            <li><a href="./Elisha/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Elisha</a></li>
+            <li><a href="./Jonah/">The Story of Jonah</a></li>
+            <li><a href="./Isaiah/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Isaiah</a></li>
+            <li><a href="./Jeremiah/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Jeremiah</a></li>
+            <li><a href="./Daniel/">The Story of Daniel</a></li>
+            <li><a href="./Esther/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Esther</a></li>
+            <li><a href="./Nehemiah/" class="locked" aria-disabled="true" tabindex="-1"
+                    style="opacity:0.6;pointer-events:none;cursor:not-allowed"><span
+                        style="margin-right:8px"><i class="fa-solid fa-lock" aria-hidden="true" style="font-size:1.25em; vertical-align:-0.05em;"></i></span>The Story of Nehemiah</a></li>
         </ul>
         <div class="scroll-hint scroll-hint--bottom" aria-hidden="true"><span>more stories</span><span>▼</span></div>
     </div>
 
     <div class="copyright-notice">Copyright 2026 <a href="http://www.pixelagent.co.uk" target="_blank"
-            rel="noopener noreferrer">Pixelagent.co.uk</a></div>
+            rel="noopener noreferrer">Pixelagent.co.uk</a> &middot; Icons by <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Font Awesome</a> &middot; Media from <a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">Pixabay</a></div>
 
     <script>
         window.addEventListener('load', async () => {

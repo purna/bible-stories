@@ -4,8 +4,8 @@
 
 | | |
 | --- | --- |
-| Data file | `../data/act14_review.json` |
-| SVG assets | `../assets/svg/act_14_reviews/` |
+| Data file | `../data/manifest.json` |
+| SVG assets | `../assets/svg/act14_moses_final_words/` |
 | 3D scene | `moses-reviews` in `../tools/shot-designer/scenes/` |
 | Particle mode | dusk — low warm sun, long amber shadows, deep violet sky banding |
 | Game beat | Prepare the next generation for the promised land. — match-it-up |
@@ -18,13 +18,13 @@ On the plains of Moab, Moses retells the journey to a new generation, sets the c
 
 ## 2D SVG composition
 
-The scene uses three ordered SVG panels in `../assets/svg/act_14_reviews/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act_14_reviews/`. The middle ground carries the focal setting and props, with optional character staging.
+The scene uses three ordered SVG panels in `../assets/svg/act14_moses_final_words/`. Each panel separates the view into background, middle-ground, and foreground SVG layers in `../assets/svg/act14_moses_final_words/`. The middle ground carries the focal setting and props, with optional character staging.
 
 - `a_establish/` contains `moses_act14_a_background.svg`, `moses_act14_a_middle_ground.svg`, and `moses_act14_a_foreground.svg`.
 - `b_core_action/` contains `moses_act14_b_background.svg`, `moses_act14_b_middle_ground.svg`, and `moses_act14_b_foreground.svg`.
 - `c_resolve/` contains `moses_act14_c_background.svg`, `moses_act14_c_middle_ground.svg`, and `moses_act14_c_foreground.svg`.
 
-The act JSON links the exports through `sceneLayers` in `../data/manifest.json` (or `../data/canon.json`).
+The act JSON links the exports through `sceneLayers` in `../data/manifest.json`.
 
 | Panel | Beat | Content |
 | --- | --- | --- |

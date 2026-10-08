@@ -150,24 +150,24 @@
   "scene": "passover_night",
   "foreground": "fg_passover_night",
   "index": 3,
-  "assetFolder": "act_04_passover",
-  "artFolder": "assets/svg/act_04_passover",
+  "assetFolder": "act04_passover_night",
+  "artFolder": "assets/svg/act04_passover_night",
   "assetStem": "moses_act4",
   "sceneLayers": {
     "a_establish": {
-      "background": "assets/svg/act_04_passover/a_establish/moses_act4_a_background.svg",
-      "middleGround": "assets/svg/act_04_passover/a_establish/moses_act4_a_middle_ground.svg",
-      "foreground": "assets/svg/act_04_passover/a_establish/moses_act4_a_foreground.svg"
+      "background": "assets/svg/act04_passover_night/a_establish/moses_act4_a_background.svg",
+      "middleGround": "assets/svg/act04_passover_night/a_establish/moses_act4_a_middle_ground.svg",
+      "foreground": "assets/svg/act04_passover_night/a_establish/moses_act4_a_foreground.svg"
     },
     "b_core_action": {
-      "background": "assets/svg/act_04_passover/b_core_action/moses_act4_b_background.svg",
-      "middleGround": "assets/svg/act_04_passover/b_core_action/moses_act4_b_middle_ground.svg",
-      "foreground": "assets/svg/act_04_passover/b_core_action/moses_act4_b_foreground.svg"
+      "background": "assets/svg/act04_passover_night/b_core_action/moses_act4_b_background.svg",
+      "middleGround": "assets/svg/act04_passover_night/b_core_action/moses_act4_b_middle_ground.svg",
+      "foreground": "assets/svg/act04_passover_night/b_core_action/moses_act4_b_foreground.svg"
     },
     "c_resolve": {
-      "background": "assets/svg/act_04_passover/c_resolve/moses_act4_c_background.svg",
-      "middleGround": "assets/svg/act_04_passover/c_resolve/moses_act4_c_middle_ground.svg",
-      "foreground": "assets/svg/act_04_passover/c_resolve/moses_act4_c_foreground.svg"
+      "background": "assets/svg/act04_passover_night/c_resolve/moses_act4_c_background.svg",
+      "middleGround": "assets/svg/act04_passover_night/c_resolve/moses_act4_c_middle_ground.svg",
+      "foreground": "assets/svg/act04_passover_night/c_resolve/moses_act4_c_foreground.svg"
     }
   },
   "materials": [

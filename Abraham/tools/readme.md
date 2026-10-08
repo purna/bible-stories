@@ -94,3 +94,7 @@ Textures required for the scenes, generated in Texture Forge (`STORY_TEXTURE_CON
 | `water_still` | Still Water (Water) | Egypt and Return; Lot Chooses; Rescue of Lot; Covenant Stars; Hagar in Wilderness; The Visitors |
 | `leaves` | Leaves (Foliage) | The Call; Lot Chooses; Hagar in Wilderness; The Visitors; Isaac Is Born |
 
+
+---
+
+**Navigation:** [← Source of Truth Overview](../SOURCE-OF-TRUTH-OVERVIEW.md) | [Abraham Design SOT](../__docs/abraham-design-source-of-truth.md)

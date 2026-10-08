@@ -1,0 +1,19 @@
+{
+  "story": "Moses",
+  "act": 9,
+  "chapter": "Ch.9 · Thunder on Sinai",
+  "artSource": "art/act9_mountain.md",
+  "artFolder": "act09_thunder_on_sinai",
+  "sceneId": "placeholder",
+  "beat": "C",
+  "beatName": "Resolve",
+  "materials": [
+    "assets/materials/desert_sand-dunes.svg",
+    "assets/materials/stone_tablets-hewn.svg"
+  ],
+  "layers": {
+    "background": "moses_act9_c_background.svg",
+    "middleGround": "moses_act9_c_middle_ground.svg",
+    "foreground": "moses_act9_c_foreground.svg"
+  }
+}
