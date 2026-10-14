@@ -429,11 +429,12 @@ async function renderLine() {
         const primary = line.items.find(item => !item.sfx) || line.items[0];
         const firstSfx = line.items.find(item => item.sfx);
         line.speaker = primary.speaker || 'narrator'; line.text = primary.sfx ? '' : (primary.text || '');
+        line.sceneAudioSfx = line.sceneAudioSfx ?? line.sfx;
         line.sfx = firstSfx ? firstSfx.text : '';         line.entryFx = primary.entryFx || 'fade'; line.delay = Math.min(...line.items.map(item => Number(item.delay) || 0));
         line.align = primary.align || 'center'; line.width = primary.width || '1/2'
     }
 
-    audio.playLineSfx(line);
+    audio.playLineSfx({ ...line, sfx: line.sceneAudioSfx ?? line.sfx });
 
     const frame = await createFrame(actIdx);
     const graphicContainer = await createGraphicContainer(line, act);

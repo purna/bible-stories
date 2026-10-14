@@ -28,7 +28,6 @@ class AudioManager {
         document.addEventListener('click', event => {
             const button = event.target.closest('button');
             if (!button || button === this.toggleBtn || button.disabled || button.getAttribute('aria-disabled') === 'true') return;
-            this.playSfx();
             if (button.id === 'startBtn') {
                 const act = window.__comic && window.__comic.currentAct ? window.__comic.currentAct() : null;
                 if (act) this.playAct(act);

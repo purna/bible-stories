@@ -113,6 +113,7 @@ function resolveLine(data) {
         const primary = data.items.find(item => !item.sfx) || data.items[0];
         const firstSfx = data.items.find(item => item.sfx);
         data.speaker = primary.speaker || 'narrator'; data.text = primary.sfx ? '' : (primary.text || '');
+        data.sceneAudioSfx = data.sceneAudioSfx ?? data.sfx;
         data.sfx = firstSfx ? firstSfx.text : '';
         data.fx = primary.entryFx || 'fade';
         data.delay = Math.min(...data.items.map(item => Number(item.delay) || 0));
@@ -139,7 +140,7 @@ async function renderLine() {
     if (nextLineTimeout) { clearTimeout(nextLineTimeout); nextLineTimeout = null; }
 
     const data = resolveLine(currentAct().lines[lineIdx]);
-    audio.playLineSfx(data);
+    audio.playLineSfx({ ...data, sfx: data.sceneAudioSfx ?? data.sfx });
     const actAudio = currentAct().audioShift && lineIdx >= currentAct().audioShift.line
         ? currentAct().audioShift
         : currentAct();
@@ -483,6 +484,7 @@ function showDeliveryChoices() {
         const firstSfx = data.items.find(item => item.sfx);
         data.speaker = primary.speaker || 'narrator';
         data.text = primary.sfx ? '' : (primary.text || '');
+        data.sceneAudioSfx = data.sceneAudioSfx ?? data.sfx;
         data.sfx = firstSfx ? firstSfx.text : '';
         data.fx = primary.entryFx || 'fade';
         data.delay = Math.min(...data.items.map(item => Number(item.delay) || 0));

@@ -7,13 +7,25 @@ async function getAsset(path) {
         return svgCache.get(path);
     }
     try {
-        const response = await fetch(path);
-        if (!response.ok) throw new Error(`Failed to fetch: ${path}`);
-        const text = await response.text();
+        // Prefer the shared asset cache so scenes still render after the story
+        // has been downloaded for offline use.
+        let text = '';
+        if (window.AssetDownloadManager) {
+            try { text = await window.AssetDownloadManager.getSvg(path); } catch {}
+        }
+        if (!text) {
+            const response = await fetch(path);
+            if (!response.ok) throw new Error(`Failed to fetch ${path} (${response.status})`);
+            text = await response.text();
+        }
+        if (!/<svg\b/i.test(text)) throw new Error(`No SVG markup returned for ${path}`);
         svgCache.set(path, text);
         return text;
     } catch (error) {
-        console.error(error);
+        console.error(`Could not load story SVG: ${path}`, error);
+        if (window.StoryRuntime?.showMessage) {
+            window.StoryRuntime.showMessage(`Scene artwork could not be loaded: ${path}`, 'error');
+        }
         return ''; // Return empty string on error
     }
 }
@@ -344,13 +356,14 @@ async function renderLine() {
         const firstSfx = data.items.find(item => item.sfx);
         data.speaker = primary.speaker || 'narrator';
         data.text = primary.sfx ? '' : (primary.text || '');
+        data.sceneAudioSfx = data.sceneAudioSfx ?? data.sfx;
         data.sfx = firstSfx ? firstSfx.text : '';
         data.fx = primary.entryFx || 'fade';
         data.delay = Math.min(...data.items.map(item => Number(item.delay) || 0));
         data.align = primary.align || 'center'; data.width = primary.width || '1/2'
     }
 
-    audio.playLineSfx(data);
+    audio.playLineSfx({ ...data, sfx: data.sceneAudioSfx ?? data.sfx });
 
     const frame = document.createElement('div');
     frame.className = `comic-frame popIn palette-act-${actIdx + 1}`;

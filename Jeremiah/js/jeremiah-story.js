@@ -257,13 +257,14 @@ async function renderLine() {
         const primary = data.items.find(item => !item.sfx) || data.items[0];
         const firstSfx = data.items.find(item => item.sfx);
         data.speaker = primary.speaker || 'narrator'; data.text = primary.sfx ? '' : (primary.text || '');
+        data.sceneAudioSfx = data.sceneAudioSfx ?? data.sfx;
         data.sfx = firstSfx ? firstSfx.text : '';
         data.fx = primary.entryFx || 'fade';
         data.delay = Math.min(...data.items.map(item => Number(item.delay) || 0));
         data.align = primary.align || 'center'; data.width = primary.width || '1/2'
     }
 
-  audio.playLineSfx(data);
+  audio.playLineSfx({ ...data, sfx: data.sceneAudioSfx ?? data.sfx });
   audio.playAct(act);
 
   bgGradient.style.background = act.bg;
