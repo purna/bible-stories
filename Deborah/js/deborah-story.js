@@ -447,7 +447,7 @@ async function renderLine() {
     }
     if (data.cite) {
       const cite = document.createElement('div');
-      cite.style.cssText = 'font-family:"Space Mono",monospace;font-size:10px;color:rgba(255,255,255,.45);text-align:center;position:absolute;bottom:6px;left:0;right:0;z-index:5;';
+      cite.style.cssText = 'font-family:"Space Mono", "Space Mono Local",monospace;font-size:10px;color:rgba(255,255,255,.45);text-align:center;position:absolute;bottom:6px;left:0;right:0;z-index:5;';
       cite.textContent = '— ' + data.cite;
       frame.appendChild(cite);
     }

@@ -7,8 +7,8 @@
   "reign": "belshazzar",
   "vision": "writing_wall",
   "audio": [
-    "assets/audio/music/Act4_Seven_Lamps_Burning.ogg",
-    "assets/audio/music/Act4_Seven_Lamps_Burning.mp3"
+    "assets/music/Act4_Seven_Lamps_Burning.ogg",
+    "assets/music/Act4_Seven_Lamps_Burning.mp3"
   ],
   "lines": [
     {

@@ -5,8 +5,8 @@
   "particle": "stars",
   "svg": "exile_dawn",
   "audio": [
-    "assets/audio/music/Act6_West_of_the_Divide.ogg",
-    "assets/audio/music/Act6_West_of_the_Divide.mp3"
+    "assets/music/Act6_West_of_the_Divide.ogg",
+    "assets/music/Act6_West_of_the_Divide.mp3"
   ],
   "lines": [
     {

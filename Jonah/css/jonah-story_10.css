@@ -61,7 +61,7 @@
       height: 100%;
       overflow: hidden;
       background: var(--ink);
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Nunito', 'Nunito Local', sans-serif;
       color: var(--cream);
     }
 
@@ -490,7 +490,7 @@
     }
 
     #chapterSelect {
-      font-family: 'Press Start 2P', monospace;
+      font-family: 'Press Start 2P', 'Press Start 2P Local', monospace;
       font-size: 10px;
       letter-spacing: .05em;
       text-transform: uppercase;
@@ -808,7 +808,7 @@
       background-image: radial-gradient(rgba(0, 0, 0, 0.1) 15%, transparent 15%);
       background-size: 6px 6px;
       color: var(--ink);
-      font-family: 'Press Start 2P', monospace;
+      font-family: 'Press Start 2P', 'Press Start 2P Local', monospace;
       font-size: clamp(11px, 2vw, 14px);
       line-height: 1.6;
       padding: 16px 20px;
@@ -873,7 +873,7 @@
       color: var(--text-color);
       padding: 20px 26px;
       border: 4px solid var(--ink);
-      font-family: 'Baloo 2', sans-serif;
+      font-family: 'Baloo 2', 'Baloo 2 Local', sans-serif;
       font-weight: 800;
       font-size: clamp(18px, 3vw, 26px);
       /* Increased text size */
@@ -933,7 +933,7 @@
     .bubble.god {
       background-color: #FFD84D;
       color: #0A0812;
-      font-family: 'Bangers', cursive;
+      font-family: 'Bangers', 'Bangers Local', cursive;
       font-size: clamp(28px, 5vw, 44px);
       /* Increased text size */
       letter-spacing: .05em;
@@ -955,7 +955,7 @@
     }
 
     .sfx {
-      font-family: 'Bangers', cursive;
+      font-family: 'Bangers', 'Bangers Local', cursive;
       font-size: clamp(60px, 11vw, 100px);
       /* Increased sound FX text size */
       color: #FFD84D;
@@ -1109,7 +1109,7 @@
     }
 
     .choiceBtn {
-      font-family: 'Press Start 2P', monospace;
+      font-family: 'Press Start 2P', 'Press Start 2P Local', monospace;
       font-size: 11px;
       background: #4ECDC4;
       border: 4px solid var(--ink);
@@ -1137,7 +1137,7 @@
       bottom: 20px;
       transform: rotate(-0.5deg);
       z-index: 15;
-      font-family: 'Press Start 2P', monospace;
+      font-family: 'Press Start 2P', 'Press Start 2P Local', monospace;
       font-size: clamp(10px, 1.8vw, 13px);
       color: var(--ink);
       background-color: #FFD84D;
@@ -1193,7 +1193,7 @@
       row-gap: 4px;
       gap: clamp(8px, 3vw, 22px);
       padding: 0 12px;
-      font-family: 'Space Mono', monospace;
+      font-family: 'Space Mono', 'Space Mono Local', monospace;
       font-size: clamp(8.5px, 2.6vw, 11px);
       letter-spacing: .05em;
       color: rgba(255, 255, 255, .55);
@@ -1219,7 +1219,7 @@
       bottom: 6.2vh;
       right: 4vw;
       z-index: 25;
-      font-family: 'Baloo 2', sans-serif;
+      font-family: 'Baloo 2', 'Baloo 2 Local', sans-serif;
       font-weight: 900;
       font-size: 16px;
       background: #FF6B5B;
@@ -1254,7 +1254,7 @@
       bottom: 6.2vh;
       right: 4vw;
       z-index: 25;
-      font-family: 'Baloo 2', sans-serif;
+      font-family: 'Baloo 2', 'Baloo 2 Local', sans-serif;
       font-weight: 900;
       font-size: 14px;
       background: #4ECDC4;
@@ -1383,7 +1383,7 @@
     }
 
     #startScreen .issue {
-      font-family: 'Space Mono', Tahoma, sans-serif;
+      font-family: 'Space Mono', 'Space Mono Local', Tahoma, sans-serif;
       font-size: 12px;
       color: var(--ink);
       background: #FFD84D;
@@ -1395,7 +1395,7 @@
     }
 
     #startScreen h1 {
-      font-family: 'Bangers', Tahoma, sans-serif;
+      font-family: 'Bangers', 'Bangers Local', Tahoma, sans-serif;
       font-size: clamp(54px, 14vw, 90px);
       margin: 0;
       color: #FFD84D;
@@ -1406,7 +1406,7 @@
     }
 
     #startScreen .subtitle {
-      font-family: 'Baloo 2', Tahoma, sans-serif;
+      font-family: 'Baloo 2', 'Baloo 2 Local', Tahoma, sans-serif;
       font-size: 24px;
       color: var(--cream);
       margin: 4px 0 16px;
@@ -1421,7 +1421,7 @@
     }
 
     #startScreen p {
-      font-family: 'Press Start 2P', Tahoma, sans-serif;
+      font-family: 'Press Start 2P', 'Press Start 2P Local', Tahoma, sans-serif;
       font-size: 10px;
       max-width: 460px;
       color: var(--cream);
@@ -1433,7 +1433,7 @@
 }
 
     #startBtn {
-      font-family: 'Press Start 2P', Tahoma, sans-serif;
+      font-family: 'Press Start 2P', 'Press Start 2P Local', Tahoma, sans-serif;
       font-size: 16px;
       background: #FF6B5B;
       color: var(--ink);

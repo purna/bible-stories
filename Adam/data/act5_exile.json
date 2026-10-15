@@ -5,8 +5,8 @@
   "particle": "stars",
   "svg": "exile_eden",
   "audio": [
-    "assets/audio/music/Act5_The_Long_Road_to_Yuma.ogg",
-    "assets/audio/music/Act5_The_Long_Road_to_Yuma.mp3"
+    "assets/music/Act5_The_Long_Road_to_Yuma.ogg",
+    "assets/music/Act5_The_Long_Road_to_Yuma.mp3"
   ],
   "lines": [
     {
@@ -251,7 +251,7 @@
         }
       ],
       "svg": "exile_driven",
-      "sfx": "assets/audio/sfx/exile_footsteps.mp3"
+      "sfx": "../shared/audio/adam/sfx/exile_footsteps.mp3"
     },
     {
       "id": "exile_8",

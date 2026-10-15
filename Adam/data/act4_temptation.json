@@ -5,8 +5,8 @@
   "particle": "fire",
   "svg": "serpent_tree",
   "audio": [
-    "assets/audio/music/Act4_The_Open_Gate_at_Twilight.ogg",
-    "assets/audio/music/Act4_The_Open_Gate_at_Twilight.mp3"
+    "assets/music/Act4_The_Open_Gate_at_Twilight.ogg",
+    "assets/music/Act4_The_Open_Gate_at_Twilight.mp3"
   ],
   "lines": [
     {
@@ -284,7 +284,7 @@
         }
       ],
       "svg": "the_fall",
-      "sfx": "assets/audio/sfx/fall_crack.mp3"
+      "sfx": "../shared/audio/adam/sfx/fall_crack.mp3"
     },
     {
       "id": "temptation_8",

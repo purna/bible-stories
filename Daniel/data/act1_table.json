@@ -6,8 +6,8 @@
   "svg": "babylon_court",
   "reign": "nebuchadnezzar",
   "audio": [
-    "assets/audio/music/Act1_Blue_Shadows_at_Noon.ogg",
-    "assets/audio/music/Act1_Blue_Shadows_at_Noon.mp3"
+    "assets/music/Act1_Blue_Shadows_at_Noon.ogg",
+    "assets/music/Act1_Blue_Shadows_at_Noon.mp3"
   ],
   "lines": [
     {
@@ -65,7 +65,7 @@
         }
       ],
       "svg": "training_house",
-      "sfx": "assets/audio/sfx/babylon_crowd.mp3"
+      "sfx": "../shared/audio/daniel/sfx/babylon_crowd.mp3"
     },
     {
       "id": "table_2",

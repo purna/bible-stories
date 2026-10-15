@@ -117,7 +117,7 @@
     },
     {
       "id": "statue_3",
-      "audioSfx": "assets/audio/sfx/vision_reveal.mp3",
+      "audioSfx": "../shared/audio/daniel/sfx/vision_reveal.mp3",
       "items": [
         {
           "id": "statue_3_text",

@@ -67,7 +67,7 @@
     },
     {
       "id": "garden_2",
-      "audioSfx": "assets/audio/sfx/garden_water.mp3",
+      "audioSfx": "../shared/audio/adam/sfx/garden_water.mp3",
       "items": [
         {
           "id": "garden_2_text",

@@ -148,7 +148,7 @@
     },
     {
       "id": "anointed_5",
-      "audioSfx": "assets/audio/sfx/shepherd_footsteps.mp3",
+      "audioSfx": "../shared/audio/david/sfx/shepherd_footsteps.mp3",
       "items": [
         {
           "id": "anointed_5_text",

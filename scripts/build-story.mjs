@@ -7,6 +7,7 @@
    Shared runtime files are copied from __Template. */
 import fs from 'node:fs';
 import path from 'node:path';
+import { refreshPrecache } from './refresh-precache.mjs';
 
 const root = process.cwd();
 const story = process.argv[2];
@@ -265,7 +266,7 @@ body.palette-act-10 #${story.toLowerCase()}FieldBackdrop {
 @media (prefers-reduced-motion: reduce) { .${story.toLowerCase()}-grass-clump { animation: none; } }
 
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: var(--ink); font-family: 'Nunito', sans-serif; color: var(--cream); }
+html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: var(--ink); font-family: 'Nunito', 'Nunito Local', sans-serif; color: var(--cream); }
 `;
 // ── 5. CSS — template base + story-specific palettes + field backdrop ──
 const templateCss = fs.readFileSync(path.join(root, '__Template', 'css', 'template-comic.css'), 'utf8');
@@ -286,6 +287,7 @@ const html = `<!DOCTYPE html>
     <meta name="mobile-web-app-capable" content="yes">
     <title>${story.toUpperCase()}! — An Interactive Comic Book</title>
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Bangers&amp;family=Nunito:wght@700;900&amp;family=Press+Start+2P&amp;family=Space+Mono:wght@400;700&amp;display=swap">
     <link rel="stylesheet" href="css/story-runtime.css">
     <link rel="stylesheet" href="css/loading-screen.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -302,6 +304,7 @@ const html = `<!DOCTYPE html>
       <div class="subtitle">& ${meta.question.replace(/[?]/,'')}</div>
       <div class="bigtorch"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
       <p>An interactive ${acts.length}-chapter comic. Use arrow keys, swipe, or tap Next to navigate. Drag inside the panel to look around each scene.</p>
+      <p class="faith-theme">Explore faith in God through the choices and challenges of this story.</p>
       <button id="startBtn">LAUNCH COMIC</button>
     </div>
   </div>
@@ -348,7 +351,7 @@ const html = `<!DOCTYPE html>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        const registerStoryWorker = () => navigator.serviceWorker.register('js/sw.js');
+        const registerStoryWorker = () => navigator.serviceWorker.register('sw.js');
         if (window.__storyAssetsReady) registerStoryWorker();
         else window.addEventListener('story:assetsready', registerStoryWorker, { once: true });
       });
@@ -409,5 +412,6 @@ existing.urls = urls;
 existing.version = '2.0.0';
 existing.description = `${story} ${acts.length}-act layered comic`;
 fs.writeFileSync(manifestPath, JSON.stringify(existing) + '\n');
+refreshPrecache(dir);
 
 console.log(`✓ ${story}: ${acts.length} acts, ${svgCount} SVGs, ${urls.length} precache entries`);

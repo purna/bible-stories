@@ -288,7 +288,7 @@
         }
       ],
       "svg": "mount_carmel_fire",
-      "sfx": "assets/audio/sfx/altar_fire.mp3"
+      "sfx": "../shared/audio/elijah/sfx/altar_fire.mp3"
     },
     {
       "id": "carmel_9",
@@ -373,7 +373,7 @@
         }
       ],
       "svg": "mount_carmel_fire",
-      "sfx": "assets/audio/sfx/rain_thunder.mp3"
+      "sfx": "../shared/audio/elijah/sfx/rain_thunder.mp3"
     }
   ],
   "assetFolder": "act_03_carmel",

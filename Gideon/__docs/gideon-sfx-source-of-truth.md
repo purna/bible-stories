@@ -22,7 +22,7 @@ Effects establish place, confirm physical interaction and clarify narrative chan
 
 ### Chapter cue map
 
-Rows are narrative event IDs, **not verified story panel IDs**. Bind them to actual lines/panels in `gideon-story.json` when available; do not invent 1A/1B/1C scene coverage. All basenames below live under `assets/audio/sfx/`. Every listed cue ships as `.ogg` plus `.mp3` fallback; retain a WAV master outside the runtime bundle. A basename with `{01,02,03}` explicitly denotes three files in each codec. Select one variant and one codec per trigger.
+Rows are narrative event IDs, **not verified story panel IDs**. Bind them to actual lines/panels in `gideon-story.json` when available; do not invent 1A/1B/1C scene coverage. All basenames below live under `../shared/audio/gideon/sfx`. Every listed cue ships as `.ogg` plus `.mp3` fallback; retain a WAV master outside the runtime bundle. A basename with `{01,02,03}` explicitly denotes three files in each codec. Select one variant and one codec per trigger.
 
 | Event ID | Act / chapter | Canonical basename | Trigger / playback type | Sound, caption and treatment |
 |---|---|---|---|---|
@@ -60,13 +60,13 @@ Battle cries, the angel’s call, the two soldiers’ speech and narration are v
 
 ### Shared and interface effects
 
-- The supplied shared UI convention is `assets/audio/ping_pong.mp3`; verify availability before integration and do not duplicate it inside story SFX folders. Ordinary navigation uses that UI family. A game action with a dedicated physical cue must not also trigger the ordinary button sound.
+- The supplied shared UI convention is `../shared/audio/ui/ping_pong.mp3`; verify availability before integration and do not duplicate it inside story SFX folders. Ordinary navigation uses that UI family. A game action with a dedicated physical cue must not also trigger the ordinary button sound.
 - Navigation, choice confirmation, and accessibility feedback must use the same shared UI family across stories.
 - A wrong input may use a quiet neutral tick; never use a humiliating buzzer.
 
 ### File, mix, and runtime contract
 
-- Runtime folder: `assets/audio/sfx/`. Line-triggered effects use `audioSfx`; multiple simultaneous cues use `audioSfxs`; chapter preload lists use `sfx`.
+- Runtime folder: `../shared/audio/gideon/sfx`. Line-triggered effects use `audioSfx`; multiple simultaneous cues use `audioSfxs`; chapter preload lists use `sfx`.
 - For this revised Gideon set, deliver OGG and MP3 alternatives for every listed cue. Match decoded duration/loudness; check decoder padding and loop points in both formats. Retain WAV production masters outside the runtime bundle. Ambience loops should use 1.5–3 second boundary crossfades where appropriate, with no obvious periodic event; this is crossfade duration, not total loop length.
 - Ambience should generally sit 12–20 dB below narration. One-shots must peak below -1 dBTP and be auditioned at the runtime’s default SFX gain. Avoid heavy limiting.
 - Duck or pause nonessential ambience during quiet dialogue, choices, and scripture references. Stop all loops on chapter transition, replay, mute, or page hide.

@@ -19,7 +19,7 @@
       { "file": "sling_impact.mp3", "scene": "Goliath", "trigger": "The stone strikes", "type": "one-shot", "sourcePage": "https://mixkit.co/free-sound-effects/wood/", "url": "https://assets.mixkit.co/active_storage/sfx/2182/2182-preview.mp3" },
       { "file": "camp_fire.mp3", "scene": "Wilderness", "trigger": "Night camp and pursuit", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/fire/", "url": "https://assets.mixkit.co/active_storage/sfx/2653/2653-preview.mp3" }
     ]},
-    { "folder": "Eiljah", "slug": "elijah", "title": "Elijah", "effects": [
+    { "folder": "Elijah", "slug": "elijah", "title": "Elijah", "effects": [
       { "file": "desert_wind.mp3", "scene": "The drought", "trigger": "Dry wilderness atmosphere", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/wind/", "url": "https://assets.mixkit.co/active_storage/sfx/788/788-preview.mp3" },
       { "file": "altar_fire.mp3", "scene": "Mount Carmel", "trigger": "Fire falls on the altar", "type": "one-shot", "sourcePage": "https://mixkit.co/free-sound-effects/fire/", "url": "https://assets.mixkit.co/active_storage/sfx/1328/1328-preview.mp3" },
       { "file": "rain_thunder.mp3", "scene": "Rain returns", "trigger": "The storm breaks", "type": "ambience", "sourcePage": "https://mixkit.co/free-sound-effects/thunder/", "url": "https://assets.mixkit.co/active_storage/sfx/2390/2390-preview.mp3" },

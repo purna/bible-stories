@@ -60,7 +60,7 @@ Instrumental classic country-western storytelling with Appalachian warmth: finge
 - Leave the first and last 1–2 seconds rhythmically compatible.
 - Keep the midrange clear for reading. No lead instrument should behave like a vocal throughout.
 - Use gentle starts; avoid an attention-grabbing downbeat when a chapter loads.
-- Button sound remains `assets/audio/ping_pong.mp3` and is not part of the musical palette.
+- Button sound remains `../shared/audio/ui/ping_pong.mp3` and is not part of the musical palette.
 
 ## Continuity Check
 
@@ -1170,15 +1170,15 @@ Each act has a dedicated background music track that plays on loop:
 
 | Act | ID | Music File (OGG primary, MP3 fallback) |
 |-----|----|----------------------------------------|
-| 1 | `creation` | `assets/audio/music/Act1_Morning_on_the_Mesa.ogg` |
-| 2 | `garden` | `assets/audio/music/Act2_After_the_Spring_Rain.ogg` |
-| 3 | `helper` | `assets/audio/music/Act3_Before_the_Sun_Climbs.ogg` |
-| 4 | `temptation` | `assets/audio/music/Act4_The_Open_Gate_at_Twilight.ogg` |
-| 5 | `exile` | `assets/audio/music/Act5_The_Long_Road_to_Yuma.ogg` |
-| 6 | `west` | `assets/audio/music/Act6_West_of_the_Divide.ogg` |
+| 1 | `creation` | `assets/music/Act1_Morning_on_the_Mesa.ogg` |
+| 2 | `garden` | `assets/music/Act2_After_the_Spring_Rain.ogg` |
+| 3 | `helper` | `assets/music/Act3_Before_the_Sun_Climbs.ogg` |
+| 4 | `temptation` | `assets/music/Act4_The_Open_Gate_at_Twilight.ogg` |
+| 5 | `exile` | `assets/music/Act5_The_Long_Road_to_Yuma.ogg` |
+| 6 | `west` | `assets/music/Act6_West_of_the_Divide.ogg` |
 
 ### Sound Effects
-- **Navigation**: `assets/audio/ping_pong.mp3` plays when advancing lines or chapters via the Next button.
+- **Navigation**: `../shared/audio/ui/ping_pong.mp3` plays when advancing lines or chapters via the Next button.
 
 ### Audio Toggle
 - **Button**: `#audioToggle` in the bottom-right corner

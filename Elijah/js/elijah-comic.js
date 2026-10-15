@@ -337,9 +337,9 @@ function startHearingInteraction(container) {
     setStatus('Listen…');
     audio.stopSfx();
     const listeningLoops = [
-        audio.startSfxLoop('assets/audio/sfx/desert_wind.mp3', 0.08),
-        audio.startSfxLoop('assets/audio/sfx/rain_thunder.mp3', 0.045),
-        audio.startSfxLoop('assets/audio/sfx/altar_fire.mp3', 0.035)
+        audio.startSfxLoop('../shared/audio/elijah/sfx/desert_wind.mp3', 0.08),
+        audio.startSfxLoop('../shared/audio/elijah/sfx/rain_thunder.mp3', 0.045),
+        audio.startSfxLoop('../shared/audio/elijah/sfx/altar_fire.mp3', 0.035)
     ].filter(Boolean);
     const baseLoopVolumes = [0.08, 0.045, 0.035];
     const meterRenderer = renderMeters;

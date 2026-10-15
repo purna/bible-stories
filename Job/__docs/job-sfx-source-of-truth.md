@@ -44,13 +44,13 @@ Effects establish place, confirm physical interaction, and clarify narrative cha
 
 ### Shared and interface effects
 
-- All ordinary buttons use `assets/audio/ping_pong.mp3`; do not duplicate it inside story SFX folders.
+- All ordinary buttons use `../shared/audio/ui/ping_pong.mp3`; do not duplicate it inside story SFX folders.
 - Navigation, choice confirmation, and accessibility feedback must use the same shared UI family across stories.
 - A wrong input may use a quiet neutral tick; never use a humiliating buzzer.
 
 ### File, mix, and runtime contract
 
-- Runtime folder: `assets/audio/sfx/`. Line-triggered effects use `audioSfx`; multiple simultaneous cues use `audioSfxs`; chapter preload lists use `sfx`.
+- Runtime folder: `../shared/audio/job/sfx`. Line-triggered effects use `audioSfx`; multiple simultaneous cues use `audioSfxs`; chapter preload lists use `sfx`.
 - Deliver ambience as seamless OGG with MP3 fallback when required. Deliver short one-shots as high-quality MP3 or OGG; retain a WAV production master outside the runtime bundle.
 - Ambience should generally sit 12–20 dB below narration. One-shots must peak below -1 dBTP and be auditioned at the runtime’s default SFX gain. Avoid heavy limiting.
 - Duck or pause nonessential ambience during quiet dialogue, choices, and scripture references. Stop all loops on chapter transition, replay, mute, or page hide.

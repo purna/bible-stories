@@ -39,7 +39,7 @@
     },
     {
       "id": "table_1",
-      "audioSfx": "assets/audio/sfx/babylon_crowd.mp3",
+      "audioSfx": "../shared/audio/daniel/sfx/babylon_crowd.mp3",
       "items": [
         {
           "id": "table_1_text",

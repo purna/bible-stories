@@ -62,7 +62,7 @@ Instrumental rural country-folk with wooden, weathered textures. Acoustic guitar
 - OGG is the preferred playback source; MP3 is fallback.
 - Build and flood chapters need sustainable rhythms that can repeat without fatigue.
 - Keep thunder, rain, animals, doors, axes, birds, and crowd mockery as separately controllable effects.
-- Music must leave space for narration and for `assets/audio/ping_pong.mp3`.
+- Music must leave space for narration and for `../shared/audio/ui/ping_pong.mp3`.
 - Noah currently has no chapter music files; the planned filenames above are canonical production targets.
 
 <!-- panel-scene-design:start -->

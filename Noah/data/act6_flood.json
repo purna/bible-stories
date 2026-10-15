@@ -33,7 +33,7 @@
         }
       ],
       "svg": "ch6_water_rising",
-      "sfx": "assets/audio/sfx/flood_water.mp3"
+      "sfx": "../shared/audio/noah/sfx/flood_water.mp3"
     },
     {
       "id": "flood_1",

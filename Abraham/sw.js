@@ -1,4 +1,4 @@
-const CACHE_NAME = 'abraham-story-bundle-v1';
+const CACHE_NAME = 'abraham-story-bundle-v3-story-music';
 const STORY_SCOPE = new URL('./', self.location.href);
 
 self.addEventListener('install', event => {
@@ -31,7 +31,9 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
   const url = new URL(event.request.url);
-  if (url.origin !== self.location.origin || !url.pathname.startsWith(STORY_SCOPE.pathname)) return;
+  const sharedScope = new URL('../shared/', STORY_SCOPE).pathname;
+  const sharedToolsScope = new URL('../shared-tools/', STORY_SCOPE).pathname;
+  if (url.origin !== self.location.origin || !(url.pathname.startsWith(STORY_SCOPE.pathname) || url.pathname.startsWith(sharedScope) || url.pathname.startsWith(sharedToolsScope))) return;
   if (url.pathname.endsWith('/precache-manifest.json')) return;
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);

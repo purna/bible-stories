@@ -9,8 +9,8 @@
       "particle": "constellation",
       "bg": "radial-gradient(circle at 30% 30%, #0a0812, #1a1224 65%, #0d1b2a)",
       "audio": [
-        "assets/audio/music/Act1_Morning_on_the_Mesa.ogg",
-        "assets/audio/music/Act1_Morning_on_the_Mesa.mp3"
+        "assets/music/Act1_Morning_on_the_Mesa.ogg",
+        "assets/music/Act1_Morning_on_the_Mesa.mp3"
       ],
       "sceneLayers": {
         "a_establish": {
@@ -44,8 +44,8 @@
       "particle": "dusk",
       "bg": "radial-gradient(circle at 50% 30%, #2b1d0c, #1a0e06 65%, #0d0705)",
       "audio": [
-        "assets/audio/music/Act2_After_the_Spring_Rain.ogg",
-        "assets/audio/music/Act2_After_the_Spring_Rain.mp3"
+        "assets/music/Act2_After_the_Spring_Rain.ogg",
+        "assets/music/Act2_After_the_Spring_Rain.mp3"
       ],
       "sceneLayers": {
         "a_establish": {
@@ -80,8 +80,8 @@
       "particle": "dream",
       "bg": "radial-gradient(circle at 50% 40%, #2b1220, #160a14 65%, #0d0709)",
       "audio": [
-        "assets/audio/music/Act3_Before_the_Sun_Climbs.ogg",
-        "assets/audio/music/Act3_Before_the_Sun_Climbs.mp3"
+        "assets/music/Act3_Before_the_Sun_Climbs.ogg",
+        "assets/music/Act3_Before_the_Sun_Climbs.mp3"
       ],
       "sceneLayers": {
         "a_establish": {
@@ -119,8 +119,8 @@
       "particle": "fire",
       "bg": "radial-gradient(circle at 50% 60%, #8b2500, #3d1200 65%, #1a0700)",
       "audio": [
-        "assets/audio/music/Act4_The_Open_Gate_at_Twilight.ogg",
-        "assets/audio/music/Act4_The_Open_Gate_at_Twilight.mp3"
+        "assets/music/Act4_The_Open_Gate_at_Twilight.ogg",
+        "assets/music/Act4_The_Open_Gate_at_Twilight.mp3"
       ],
       "sceneLayers": {
         "a_establish": {
@@ -156,8 +156,8 @@
       "particle": "stars",
       "bg": "radial-gradient(circle at 30% 30%, #0A0812, #061224 65%, #030b18)",
       "audio": [
-        "assets/audio/music/Act5_The_Long_Road_to_Yuma.ogg",
-        "assets/audio/music/Act5_The_Long_Road_to_Yuma.mp3"
+        "assets/music/Act5_The_Long_Road_to_Yuma.ogg",
+        "assets/music/Act5_The_Long_Road_to_Yuma.mp3"
       ],
       "sceneLayers": {
         "a_establish": {
@@ -191,8 +191,8 @@
       "particle": "stars",
       "bg": "radial-gradient(circle at 50% 50%, #0d1b2a, #061224 65%, #030b18)",
       "audio": [
-        "assets/audio/music/Act6_West_of_the_Divide.ogg",
-        "assets/audio/music/Act6_West_of_the_Divide.mp3"
+        "assets/music/Act6_West_of_the_Divide.ogg",
+        "assets/music/Act6_West_of_the_Divide.mp3"
       ],
       "sceneLayers": {
         "a_establish": {

@@ -6,8 +6,8 @@
   "svg": "plain_of_dura",
   "reign": null,
   "audio": [
-    "assets/audio/music/Act3_Seven_Times_Heated.ogg",
-    "assets/audio/music/Act3_Seven_Times_Heated.mp3"
+    "assets/music/Act3_Seven_Times_Heated.ogg",
+    "assets/music/Act3_Seven_Times_Heated.mp3"
   ],
   "lines": [
     {
@@ -221,7 +221,7 @@
         }
       ],
       "svg": "furnace_lit",
-      "sfx": "assets/audio/sfx/furnace_roar.mp3"
+      "sfx": "../shared/audio/daniel/sfx/furnace_roar.mp3"
     },
     {
       "id": "furnace_6",

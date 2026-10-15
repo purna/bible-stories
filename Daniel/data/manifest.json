@@ -9,8 +9,8 @@
       "particle": "dusk",
       "bg": "radial-gradient(circle at 30% 20%, #5c4033, #2b1d0c 65%, #1a0e06)",
       "audio": [
-        "assets/audio/music/Act1_Blue_Shadows_at_Noon.ogg",
-        "assets/audio/music/Act1_Blue_Shadows_at_Noon.mp3"
+        "assets/music/Act1_Blue_Shadows_at_Noon.ogg",
+        "assets/music/Act1_Blue_Shadows_at_Noon.mp3"
       ],
       "sceneLayers": {
         "a_establish": {
@@ -45,8 +45,8 @@
       "particle": "dream",
       "bg": "radial-gradient(circle at 50% 20%, #3d1c08, #1e0f0a 65%, #0d0705)",
       "audio": [
-        "assets/audio/music/Act2_Where_the_Kings_Kneel.ogg",
-        "assets/audio/music/Act2_Where_the_Kings_Kneel.mp3"
+        "assets/music/Act2_Where_the_Kings_Kneel.ogg",
+        "assets/music/Act2_Where_the_Kings_Kneel.mp3"
       ],
       "sceneLayers": {
         "a_establish": {
@@ -81,8 +81,8 @@
       "particle": "fire",
       "bg": "radial-gradient(circle at 50% 80%, #8b2500, #3d1200 60%, #1a0700)",
       "audio": [
-        "assets/audio/music/Act3_Seven_Times_Heated.ogg",
-        "assets/audio/music/Act3_Seven_Times_Heated.mp3"
+        "assets/music/Act3_Seven_Times_Heated.ogg",
+        "assets/music/Act3_Seven_Times_Heated.mp3"
       ],
       "sceneLayers": {
         "a_establish": {
@@ -120,8 +120,8 @@
       "particle": "constellation",
       "bg": "radial-gradient(circle at 30% 30%, #2b1220, #160a14 60%, #090510)",
       "audio": [
-        "assets/audio/music/Act4_Seven_Lamps_Burning.ogg",
-        "assets/audio/music/Act4_Seven_Lamps_Burning.mp3"
+        "assets/music/Act4_Seven_Lamps_Burning.ogg",
+        "assets/music/Act4_Seven_Lamps_Burning.mp3"
       ],
       "sceneLayers": {
         "a_establish": {
@@ -157,8 +157,8 @@
       "particle": "stars",
       "bg": "radial-gradient(circle at 50% 20%, #0d1b2a, #061224 65%, #030b18)",
       "audio": [
-        "assets/audio/music/Act5_Shadows_on_the_Ridge.ogg",
-        "assets/audio/music/Act5_Shadows_on_the_Ridge.mp3"
+        "assets/music/Act5_Shadows_on_the_Ridge.ogg",
+        "assets/music/Act5_Shadows_on_the_Ridge.mp3"
       ],
       "sceneLayers": {
         "a_establish": {

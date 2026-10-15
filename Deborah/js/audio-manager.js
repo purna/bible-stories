@@ -6,7 +6,7 @@ class AudioManager {
         this.currentActId = null;
         this.musicVolume = options.musicVolume ?? 0.3;
         this.sfxVolume = options.sfxVolume ?? 0.5;
-        this.sfxPath = options.sfxPath || 'assets/audio/ping_pong.mp3';
+        this.sfxPath = options.sfxPath || '../shared/audio/ui/ping_pong.mp3';
         this.fadeDuration = options.fadeDuration ?? 500;
         this.bgm = new Audio();
         this.bgm.loop = true;

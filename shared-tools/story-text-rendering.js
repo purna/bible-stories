@@ -1,6 +1,8 @@
 /* Persistent renderer for positioned, timed text and SFX items in story act JSON. */
 (() => {
   'use strict';
+  const toolBase = new URL('./', document.currentScript.src);
+  const balloonBase = new URL('../shared/svg/balloons/', toolBase).href;
   const positions=new Set(['top-left','top-middle','top-right','middle-left','center','middle-right','bottom-left','bottom-middle','bottom-right']);
   const styles=new Set(['comic','thought-balloon','breath-marks','burst-balloon','caption-location-time','caption-internal-monologue','caption-spoken','caption-editorial','rough-balloon','telepathic-balloon','whispering','caption','serif','impact','outline','soft','sfx-impact','sfx-outline','sfx-neon','sfx-burst','sfx-hollow','sfx-roach-chew']);
   const fontOptions=[
@@ -23,7 +25,7 @@
   }
   window.STORY_TEXT_FONT_OPTIONS=fontOptions.map(([value,label,,group])=>({value,label,group}));
   window.STORY_TEXT_FONT_FAMILIES=fontFamilies;
-  const fontSheet=document.createElement('link');fontSheet.rel='stylesheet';fontSheet.href='../shared-tools/story-fonts.css';document.head.appendChild(fontSheet);
+  const fontSheet=document.createElement('link');fontSheet.rel='stylesheet';fontSheet.href=new URL('story-fonts.css', toolBase).href;document.head.appendChild(fontSheet);
   const css=document.createElement('style');
   css.textContent=`
     .content-overlay [data-story-position],#stage [data-story-position]{position:absolute!important;z-index:5;max-width:min(95%,900px);margin:0!important}
@@ -35,15 +37,15 @@
     [data-story-style="soft"]{border-radius:24px!important;border:1px solid #ffffff70!important;background:#332c40dd!important;color:#fff!important;font-weight:500!important}
     [data-story-style="caption"]{font-family:system-ui,sans-serif!important;border-radius:5px!important}
     .choiceBtn[data-story-style="thought-balloon"],.choiceBtn[data-story-style="burst-balloon"],.choiceBtn[data-story-style="rough-balloon"],.choiceBtn[data-story-style="telepathic-balloon"],.choiceBtn[data-story-style="whispering"],.choiceBtn[data-story-style^="caption-"]{background-color:transparent!important;background-repeat:no-repeat!important;background-position:center!important;background-size:100% 100%!important;border:0!important;box-shadow:none!important}
-    .choiceBtn[data-story-style="thought-balloon"]{background-image:url("assets/svg/lettering/thought-balloon.svg")!important;padding:var(--choice-padding,13% 17% 22% 17%)!important;font-style:italic}
-    .choiceBtn[data-story-style="burst-balloon"]{background-image:url("assets/svg/lettering/burst-balloon.svg")!important;padding:var(--choice-padding,16% 19%)!important;font-weight:900}
-    .choiceBtn[data-story-style="rough-balloon"]{background-image:url("assets/svg/lettering/rough-balloon.svg")!important;padding:var(--choice-padding,17%)!important;font-weight:800}
-    .choiceBtn[data-story-style="telepathic-balloon"]{background-image:url("assets/svg/lettering/telepathic-balloon.svg")!important;padding:var(--choice-padding,18% 20%)!important;color:#38315f}
-    .choiceBtn[data-story-style="whispering"]{background-image:url("assets/svg/lettering/whisper-balloon.svg")!important;padding:var(--choice-padding,18% 20%)!important;color:#707984;font-style:italic}
-    .choiceBtn[data-story-style="caption-location-time"]{background-image:url("assets/svg/lettering/caption-location-time.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important}
-    .choiceBtn[data-story-style="caption-internal-monologue"]{background-image:url("assets/svg/lettering/caption-internal-monologue.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important;font-style:italic}
-    .choiceBtn[data-story-style="caption-spoken"]{background-image:url("assets/svg/lettering/caption-spoken.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important}
-    .choiceBtn[data-story-style="caption-editorial"]{background-image:url("assets/svg/lettering/caption-editorial.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important;font-family:Georgia,serif}
+    .choiceBtn[data-story-style="thought-balloon"]{background-image:url("${balloonBase}thought-balloon.svg")!important;padding:var(--choice-padding,13% 17% 22% 17%)!important;font-style:italic}
+    .choiceBtn[data-story-style="burst-balloon"]{background-image:url("${balloonBase}burst-balloon.svg")!important;padding:var(--choice-padding,16% 19%)!important;font-weight:900}
+    .choiceBtn[data-story-style="rough-balloon"]{background-image:url("${balloonBase}rough-balloon.svg")!important;padding:var(--choice-padding,17%)!important;font-weight:800}
+    .choiceBtn[data-story-style="telepathic-balloon"]{background-image:url("${balloonBase}telepathic-balloon.svg")!important;padding:var(--choice-padding,18% 20%)!important;color:#38315f}
+    .choiceBtn[data-story-style="whispering"]{background-image:url("${balloonBase}whisper-balloon.svg")!important;padding:var(--choice-padding,18% 20%)!important;color:#707984;font-style:italic}
+    .choiceBtn[data-story-style="caption-location-time"]{background-image:url("${balloonBase}caption-location-time.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important}
+    .choiceBtn[data-story-style="caption-internal-monologue"]{background-image:url("${balloonBase}caption-internal-monologue.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important;font-style:italic}
+    .choiceBtn[data-story-style="caption-spoken"]{background-image:url("${balloonBase}caption-spoken.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important}
+    .choiceBtn[data-story-style="caption-editorial"]{background-image:url("${balloonBase}caption-editorial.svg")!important;padding:var(--choice-padding,16% 12%)!important;border-radius:0!important;font-family:Georgia,serif}
     [data-story-sfx="true"]{font-family:Bangers,cursive!important;font-size:clamp(28px,7vw,64px)!important;font-weight:900!important;color:#ffd84d!important;-webkit-text-stroke:2px var(--ink,#111);paint-order:stroke fill;text-shadow:3px 3px #ff6b5b;background:transparent!important;background-image:none!important;border-color:transparent!important;box-shadow:none!important;text-align:center!important}
     [data-story-sfx="true"][data-story-style="sfx-outline"]{color:#fff!important;-webkit-text-stroke:3px #17131f;text-shadow:4px 4px #ff6b5b}
     [data-story-sfx="true"][data-story-style="sfx-neon"]{color:#7df9ff!important;-webkit-text-stroke:1px #fff;text-shadow:0 0 8px #00eaff,0 0 20px #00eaff}

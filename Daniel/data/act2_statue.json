@@ -7,8 +7,8 @@
   "reign": "nebuchadnezzar",
   "vision": "statue_dream",
   "audio": [
-    "assets/audio/music/Act2_Where_the_Kings_Kneel.ogg",
-    "assets/audio/music/Act2_Where_the_Kings_Kneel.mp3"
+    "assets/music/Act2_Where_the_Kings_Kneel.ogg",
+    "assets/music/Act2_Where_the_Kings_Kneel.mp3"
   ],
   "lines": [
     {
@@ -144,7 +144,7 @@
         }
       ],
       "svg": "daniel_prays",
-      "sfx": "assets/audio/sfx/vision_reveal.mp3"
+      "sfx": "../shared/audio/daniel/sfx/vision_reveal.mp3"
     },
     {
       "id": "statue_4",

@@ -173,7 +173,7 @@
     },
     {
       "id": "furnace_5",
-      "audioSfx": "assets/audio/sfx/furnace_roar.mp3",
+      "audioSfx": "../shared/audio/daniel/sfx/furnace_roar.mp3",
       "items": [
         {
           "id": "furnace_5_text",

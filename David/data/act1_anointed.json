@@ -190,7 +190,7 @@
           "zIndex": 2
         }
       ],
-      "sfx": "assets/audio/sfx/shepherd_footsteps.mp3"
+      "sfx": "../shared/audio/david/sfx/shepherd_footsteps.mp3"
     },
     {
       "id": "anointed_6",

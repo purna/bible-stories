@@ -5,8 +5,8 @@
   "particle": "dream",
   "svg": "forming_eve",
   "audio": [
-    "assets/audio/music/Act3_Before_the_Sun_Climbs.ogg",
-    "assets/audio/music/Act3_Before_the_Sun_Climbs.mp3"
+    "assets/music/Act3_Before_the_Sun_Climbs.ogg",
+    "assets/music/Act3_Before_the_Sun_Climbs.mp3"
   ],
   "lines": [
     {

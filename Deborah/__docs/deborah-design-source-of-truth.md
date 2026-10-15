@@ -107,7 +107,7 @@ Instrumental classic country-western storytelling with Appalachian warmth: finge
 - Leave the first and last 1–2 seconds rhythmically compatible.
 - Keep the midrange clear for reading. No lead instrument should behave like a vocal throughout.
 - Use gentle starts; avoid an attention-grabbing downbeat when a chapter loads.
-- Button sound remains `assets/audio/ping_pong.mp3` and is not part of the musical palette.
+- Button sound remains `../shared/audio/ui/ping_pong.mp3` and is not part of the musical palette.
 
 ## Continuity Check
 

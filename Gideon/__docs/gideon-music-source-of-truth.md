@@ -28,7 +28,7 @@ Instrumental ancient Near Eastern-inspired music with restrained cinematic weigh
 
 ### Chapter cue map
 
-Each basename below is preserved from the supplied Gideon design document. Deliver both `.ogg` and `.mp3` under `assets/audio/music/`, with case exactly as written. These are established naming exceptions to new lowercase snake_case assets. No Enoch audio filename is a valid Gideon alias.
+Each basename below is preserved from the supplied Gideon design document. Deliver both `.ogg` and `.mp3` under `../shared/audio/gideon/music`, with case exactly as written. These are established naming exceptions to new lowercase snake_case assets. No Enoch audio filename is a valid Gideon alias.
 
 | Act | Chapter / scripture coverage | Emotional/play purpose | Arrangement and development | Tempo / mode | Motif / dynamics | Canonical basename (.ogg and .mp3) |
 |---:|---|---|---|---|---|---|
@@ -44,7 +44,7 @@ Each basename below is preserved from the supplied Gideon design document. Deliv
 
 - Compose instrumental masters only: no vocals, chant, choir, borrowed melody, or imitation of a named performer.
 - Target 90–150 seconds per base loop, up to 180 seconds where sustained interaction benefits. Reading is untimed, so every cue must loop indefinitely without advancing the story. Deliver seamless **OGG** first and **MP3** fallback at matched decoded musical duration and loudness; trim codec padding or define decoder-aware loop points. Verify both codecs in the target player, not merely equal file metadata durations.
-- Music lives under `assets/audio/music/`; act data references the relative path in `audio`. Start with the current scene after the browser/user audio gate permits; use 350–800 ms fades rather than hard restarts. Do not replay an intro on every game input.
+- Music lives under `../shared/audio/gideon/music`; act data references the relative path in `audio`. Start with the current scene after the browser/user audio gate permits; use 350–800 ms fades rather than hard restarts. Do not replay an intro on every game input.
 - Keep narration space clear, especially 500 Hz–3 kHz. Target approximately -16 LUFS integrated for music masters, true peak at or below -1 dBTP, then audition at the runtime’s default music gain.
 - Do not bake rain, crowds, animals, fire, doors, impacts, or UI sounds into music. Those remain separately controllable SFX.
 - For interactive chapters, stems may be **foundation**, **tension**, **presence/hope**, and **reflection**. Stems must share sample length and loop points.

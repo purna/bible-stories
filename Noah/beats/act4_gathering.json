@@ -40,7 +40,7 @@
     },
     {
       "id": "gathering_1",
-      "audioSfx": "assets/audio/sfx/animal_march.mp3",
+      "audioSfx": "../shared/audio/noah/sfx/animal_march.mp3",
       "interaction": "gathering",
       "items": [
         {

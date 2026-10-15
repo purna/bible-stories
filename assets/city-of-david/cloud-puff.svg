@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" preserveAspectRatio="none">
+ <defs><radialGradient id="puff"><stop stop-color="#fffaf1" stop-opacity=".85"/><stop offset=".45" stop-color="#f8f3eb" stop-opacity=".72"/><stop offset=".78" stop-color="#f4eee5" stop-opacity=".28"/><stop offset="1" stop-color="#f4eee5" stop-opacity="0"/></radialGradient></defs>
+ <g fill="url(#puff)">
+  <ellipse cx="300" cy="232" rx="240" ry="88"/>
+  <ellipse cx="166" cy="206" rx="106" ry="85"/>
+  <ellipse cx="248" cy="164" rx="108" ry="116"/>
+  <ellipse cx="350" cy="150" rx="105" ry="121"/>
+  <ellipse cx="435" cy="203" rx="102" ry="90"/>
+  <ellipse cx="300" cy="213" rx="160" ry="81"/>
+ </g>
+</svg>

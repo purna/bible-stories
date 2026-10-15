@@ -1,16 +1,33 @@
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v25-rich-warm';
 const CACHE_NAME = 'bible-stories-cache-' + CACHE_VERSION;
 const RUNTIME_CACHE_NAME = 'bible-stories-runtime-' + CACHE_VERSION;
 const OFFLINE_PAGE = new URL('offline.html', self.location).href;
 
 const MANIFEST_URLS = [
-  'precache-manifest.json',
-  'Adam/precache-manifest.json',
-  'Daniel/precache-manifest.json',
-  'Eiljah/precache-manifest.json',
-  'Jonah/precache-manifest.json',
-  'Moses/precache-manifest.json',
-  'Noah/precache-manifest.json'
+  "precache-manifest.json",
+  "Elisha/precache-manifest.json",
+  "Gideon/precache-manifest.json",
+  "Jeremiah/precache-manifest.json",
+  "Deborah/precache-manifest.json",
+  "Ruth/precache-manifest.json",
+  "Joseph/precache-manifest.json",
+  "Daniel/precache-manifest.json",
+  "Abraham/precache-manifest.json",
+  "Samuel/precache-manifest.json",
+  "Jonah/precache-manifest.json",
+  "Jacob/precache-manifest.json",
+  "Enoch/precache-manifest.json",
+  "David/precache-manifest.json",
+  "Nehemiah/precache-manifest.json",
+  "Job/precache-manifest.json",
+  "Noah/precache-manifest.json",
+  "Hannah/precache-manifest.json",
+  "Moses/precache-manifest.json",
+  "Adam/precache-manifest.json",
+  "Esther/precache-manifest.json",
+  "Elijah/precache-manifest.json",
+  "Isaiah/precache-manifest.json",
+  "Joshua/precache-manifest.json"
 ];
 
 self.addEventListener('install', (event) => {
@@ -25,9 +42,10 @@ self.addEventListener('install', (event) => {
             const urls = data.urls || [];
             for (const url of urls) {
               try {
-                const res = await fetch(url);
+                const assetUrl = new URL(url, new URL(manifestUrl, self.location.href)).href;
+                const res = await fetch(assetUrl);
                 if (res && res.status === 200) {
-                  await cache.put(url, res.clone());
+                  await cache.put(assetUrl, res.clone());
                 }
               } catch (e) {
                 console.warn('Failed to cache', url, e);
@@ -79,6 +97,18 @@ self.addEventListener('fetch', (event) => {
           .then((cached) => cached || caches.match(OFFLINE_PAGE))
         )
     );
+    return;
+  }
+
+  // Scene edits should appear immediately online, with the cached scene available offline.
+  if (url.origin === self.location.origin && url.pathname.includes('/assets/city-of-david/')) {
+    event.respondWith(fetch(request).then(response => {
+      if (response.ok) {
+        const copy = response.clone();
+        event.waitUntil(caches.open(RUNTIME_CACHE_NAME).then(cache => cache.put(request, copy)));
+      }
+      return response;
+    }).catch(() => caches.match(request, { ignoreSearch: true })));
     return;
   }
 

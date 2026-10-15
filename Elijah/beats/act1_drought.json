@@ -67,7 +67,7 @@
     },
     {
       "id": "drought_2",
-      "audioSfx": "assets/audio/sfx/desert_wind.mp3",
+      "audioSfx": "../shared/audio/elijah/sfx/desert_wind.mp3",
       "choices": [
         {
           "label": "Stand boldly on God's word",

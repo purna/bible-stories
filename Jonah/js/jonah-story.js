@@ -22,7 +22,7 @@
         id: "escaping", name: "Dialogue: Escaping",
         bg: "radial-gradient(circle at 30% 20%, #1c3a63, #0d2238 65%, #071220)",
         particle: "dusk", svg: "Act1_01_A_small_town_by_the_sea",
-        audio: "assets/audio/music/Act1_Salt_on_the_Tracks.mp3",
+        audio: "assets/music/Act1_Salt_on_the_Tracks.mp3",
         lines: [
           { speaker: "narrator", fx: "fade", text: "Long ago, in a small town by the sea, there lived a man named Jonah.", align: "left", svg: "Act1_01_A_small_town_by_the_sea" },
           { speaker: "god", fx: "bounce", text: "Jonah! Go to the great city of Nineveh. Tell them I see how they treat each other, and it must change.", align: "right", svg: "Act1_02_The_Call_to_Nineveh" },
@@ -36,7 +36,7 @@
               { label: "Hide behind a crate first 📦", note: "Jonah peeks around a crate... then buys a ticket anyway. Tarshish it is." }
             ]
           },
-          { speaker: "narrator", audioSfx: "assets/audio/sfx/sea_waves.mp3", fx: "type", text: "He found a ship sailing to Tarshish — which was in the exact opposite direction of Nineveh.", svg: "Act1_05_Found_a_ship_to_Tarshish" },
+          { speaker: "narrator", audioSfx: "../shared/audio/jonah/sfx/sea_waves.mp3", fx: "type", text: "He found a ship sailing to Tarshish — which was in the exact opposite direction of Nineveh.", svg: "Act1_05_Found_a_ship_to_Tarshish" },
           { speaker: "jonah", fx: "fade", text: "Perfect. If I just sail away fast enough, maybe I can outrun a job I don't want to do.", svg: "Act1_07_Sail_away_fast_enough" },
           { speaker: "narrator", fx: "fade", text: "Jonah climbed aboard, went below deck, curled up... and fell fast asleep.", svg: "Act1_08_Fast_asleep_below_deck" }
         ]
@@ -45,9 +45,9 @@
         id: "trapped", name: "Feeling Trapped",
         bg: "radial-gradient(circle at 50% 30%, #14335a, #0A1930 60%, #050b18)",
         particle: "storm", svg: "Act2_01_Sky_turned_the_color_of_a_bruise",
-        audio: "assets/audio/music/Act2_Beneath_the_Heavy_Current.mp3",
+        audio: "assets/music/Act2_Beneath_the_Heavy_Current.mp3",
         lines: [
-          { speaker: "narrator", audioSfx: "assets/audio/sfx/storm_wind.mp3", fx: "shake", text: "Out on the water, the sky turned the color of a bruise. The wind began to howl.", align: "left", svg: "Act2_01_Sky_turned_the_color_of_a_bruise" },
+          { speaker: "narrator", audioSfx: "../shared/audio/jonah/sfx/storm_wind.mp3", fx: "shake", text: "Out on the water, the sky turned the color of a bruise. The wind began to howl.", align: "left", svg: "Act2_01_Sky_turned_the_color_of_a_bruise" },
           { sfx: "CRASH!", speaker: "sailors", fx: "shake", text: "ALL HANDS! THE SEA IS EATING THE SHIP!", align: "center", svg: "Act2_02_The_sea_is_eating_the_ship" },
           {
             speaker: "narrator", fx: "shake", text: "Waves the size of houses slammed the deck. The sailors threw cargo overboard, praying to anyone who'd listen.",
@@ -61,10 +61,10 @@
           { speaker: "jonah", fx: "fade", text: "...It's me. I ran from something I was supposed to do.", svg: "Act2_05_Its_me_I_ran" },
           { speaker: "jonah", fx: "fade", text: "Throw me in — maybe the sea will calm down.", svg: "Act2_06_Throw_me_in" },
           { speaker: "narrator", fx: "fade", text: "The sailors didn't want to. But the storm gave them no choice.", svg: "Act2_07_The_storm_gave_them_no_choice" },
-          { speaker: "narrator", audioSfx: "assets/audio/sfx/ocean_splash.mp3", fx: "fade", text: "Jonah hit the cold, dark water — and the moment he did, the storm went silent.", svg: "Act2_08_Jonah_hit_the_water_the_storm_went_silent" },
+          { speaker: "narrator", audioSfx: "../shared/audio/jonah/sfx/ocean_splash.mp3", fx: "fade", text: "Jonah hit the cold, dark water — and the moment he did, the storm went silent.", svg: "Act2_08_Jonah_hit_the_water_the_storm_went_silent" },
           { sfx: "GULP!", speaker: "narrator", fx: "fade", text: "Down, down, down he sank... until something HUGE rose up beneath him.", svg: "Act2_09_Down_down_something_HUGE_rose_up" },
           { speaker: "narrator", fx: "bounce", text: "A colossal whale opened its enormous jaws and swallowed Jonah whole.", svg: "Act2_10_A_colossal_whale_opened_its_enormous_jaws" },
-          { speaker: "jonah", audioSfx: "assets/audio/sfx/deep_bubbles.mp3", fx: "fade", text: "It's... dark in here. And warm. And it smells like the bottom of the sea.", svg: "Act2_11_Dark_warm_smells_like_the_sea" },
+          { speaker: "jonah", audioSfx: "../shared/audio/jonah/sfx/deep_bubbles.mp3", fx: "fade", text: "It's... dark in here. And warm. And it smells like the bottom of the sea.", svg: "Act2_11_Dark_warm_smells_like_the_sea" },
           { speaker: "narrator", fx: "fade", text: "For three days, Jonah sat inside the belly of the whale, wrapped in ribs like a cave, with nothing to do but think.", svg: "Act2_12_Three_days_wrapped_in_ribs_like_a_cave" },
           { speaker: "jonah", fx: "type", text: "I ran because I was scared. Not of Nineveh — of what it would mean to actually go there.", svg: "Act2_13_I_ran_because_I_was_scared" },
           { speaker: "jonah", fx: "fade", text: "Okay. I hear you. I'll go. Just... please, get me out of this fish.", svg: "Act2_14_Okay_I_hear_you_Ill_go" }
@@ -74,7 +74,7 @@
         id: "mission", name: "The Mission",
         bg: "radial-gradient(circle at 60% 20%, #4a3a1a, #5c4033 65%, #23160a)",
         particle: "desert", svg: "Act3_01_Sucked_from_the_deep_spat_onto_the_sand",
-        audio: "assets/audio/music/Act3_Beyond_the_Western_Gate.mp3",
+        audio: "assets/music/Act3_Beyond_the_Western_Gate.mp3",
         lines: [
           { sfx: "PTOOEY!", speaker: "narrator", fx: "bounce", text: "The whale swam to shore and spat Jonah out onto the sand.", svg: "Act3_01_Sucked_from_the_deep_spat_onto_the_sand" },
           { speaker: "god", fx: "bounce", text: "Jonah. Go to Nineveh. I'm still asking.", align: "center", svg: "Act3_02_The_second_call" },
@@ -97,7 +97,7 @@
         id: "reflection", name: "Reflection",
         bg: "radial-gradient(circle at 40% 70%, #1e4d6b, #102a43 65%, #071220)",
         particle: "constellation", svg: "Act4_01_They_were_SPARED",
-        audio: "assets/audio/music/Act4_Running_from_Nineveh.mp3",
+        audio: "assets/music/Act4_Running_from_Nineveh.mp3",
         lines: [
           { speaker: "jonah", fx: "shake", text: "They were SPARED?! I walked all that way and now everyone just... gets to be fine?!", align: "left", svg: "Act4_01_They_were_SPARED" },
           {

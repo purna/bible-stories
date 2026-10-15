@@ -35,7 +35,7 @@
 html, body {
   margin: 0; padding: 0; height: 100%; overflow: hidden;
   background: var(--ink);
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', 'Nunito Local', sans-serif;
   color: var(--cream);
 }
 
@@ -56,13 +56,13 @@ html, body {
   background-size: 12px 12px;
 }
 #startScreen .issue {
-  font-family: 'Space Mono', Tahoma, sans-serif; font-size: 12px;
+  font-family: 'Space Mono', 'Space Mono Local', Tahoma, sans-serif; font-size: 12px;
   color: var(--ink); background: #E8B84B;
   display: inline-block; padding: 4px 10px; margin-bottom: 14px;
   font-weight: 700; border: 2px solid var(--ink);
 }
 #startScreen h1 {
-  font-family: 'Bangers', Tahoma, sans-serif;
+  font-family: 'Bangers', 'Bangers Local', Tahoma, sans-serif;
   font-size: clamp(54px, 14vw, 96px);
   margin: 0; color: #E8B84B;
   -webkit-text-stroke: 4px var(--ink);
@@ -70,20 +70,20 @@ html, body {
   text-shadow: 6px 6px 0 #c84b4b;
 }
 #startScreen .subtitle {
-  font-family: 'Baloo 2', Tahoma, sans-serif; font-size: 22px;
+  font-family: 'Baloo 2', 'Baloo 2 Local', Tahoma, sans-serif; font-size: 22px;
   color: var(--cream); margin: 4px 0 16px; font-weight: 800;
   text-shadow: 2px 2px 0px var(--ink);
 }
 .bigtorch { font-size: 64px; margin-bottom: 10px; animation: popInAnim .8s .2s both; filter: drop-shadow(0 0 10px rgba(255,180,80,0.5)); }
 #startScreen p {
-  font-family: 'Press Start 2P', Tahoma, sans-serif; font-size: 10px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', Tahoma, sans-serif; font-size: 10px;
   max-width: 460px; color: var(--cream); opacity: .9;
   margin: 18px 0 26px; line-height: 2;
 
   font-weight: 700;
 }
 #startBtn {
-  font-family: 'Press Start 2P', Tahoma, sans-serif; font-size: 14px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', Tahoma, sans-serif; font-size: 14px;
   background: #c87a30; color: var(--ink);
   border: 4px solid var(--ink); padding: 16px 30px; cursor: pointer;
   box-shadow: 6px 6px 0 var(--ink); transition: all .1s;
@@ -200,7 +200,7 @@ html, body {
   padding: 22px 28px; pointer-events: auto; gap: 10px;
 }
 #chapterSelect {
-  font-family: 'Press Start 2P', monospace; font-size: 9px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 9px;
   letter-spacing: .05em; text-transform: uppercase;
   background-color: var(--accent-color); color: var(--ink);
   border: 4px solid var(--ink); padding: 10px 34px 10px 16px;
@@ -279,7 +279,7 @@ html, body {
   background-color: #E8B84B;
   background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 15%);
   background-size: 6px 6px;
-  color: var(--ink); font-family: 'Press Start 2P', monospace;
+  color: var(--ink); font-family: 'Press Start 2P', 'Press Start 2P Local', monospace;
   font-size: clamp(10px, 1.8vw, 13px); line-height: 1.6;
   padding: 14px 18px; border: 4px solid var(--ink);
   transform: rotate(-0.5deg); box-shadow: 6px 6px 0px var(--ink);
@@ -298,7 +298,7 @@ html, body {
 .bubble {
   position: relative; background-color: var(--bubble-bg); color: var(--text-color);
   padding: 18px 24px; border: 4px solid var(--ink);
-  font-family: 'Baloo 2', sans-serif; font-weight: 800;
+  font-family: 'Baloo 2', 'Baloo 2 Local', sans-serif; font-weight: 800;
   font-size: clamp(16px, 2.8vw, 24px); line-height: 1.35;
   width: 100%; border-radius: 16px; box-shadow: 6px 6px 0px var(--ink);
   text-align: center; hyphens: none; word-break: keep-all; max-width: 100%;
@@ -320,7 +320,7 @@ html, body {
 /* God's voice — gold dashed border, Bangers font */
 .bubble.god {
   background-color: #E8B84B; color: #0A0812;
-  font-family: 'Bangers', cursive; font-size: clamp(24px, 4.5vw, 40px);
+  font-family: 'Bangers', 'Bangers Local', cursive; font-size: clamp(24px, 4.5vw, 40px);
   letter-spacing: .05em; border-radius: 4px; border: 5px dashed var(--ink);
 }
 .bubble.god::after  { left: 50%; transform: translateX(-50%); }
@@ -343,7 +343,7 @@ html, body {
 
 /* ── SFX Text ─────────────────────────────────── */
 .sfx {
-  font-family: 'Bangers', cursive;
+  font-family: 'Bangers', 'Bangers Local', cursive;
   font-size: clamp(54px, 10vw, 90px);
   color: #E8B84B; -webkit-text-stroke: 4px var(--ink); paint-order: stroke fill;
   text-shadow: 6px 6px 0 #c84b4b;
@@ -359,7 +359,7 @@ html, body {
 }
 #choices.show { opacity: 1; pointer-events: auto; }
 .choiceBtn {
-  font-family: 'Press Start 2P', monospace; font-size: 10px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 10px;
   background: #c87a30; border: 4px solid var(--ink); color: var(--ink);
   padding: 12px 20px; cursor: pointer; transition: all .1s;
   box-shadow: 0 6px 0 var(--ink); text-align: center;
@@ -370,7 +370,7 @@ html, body {
 /* ── Delay Note ──────────────────────────────── */
 #delayNote {
   position: absolute; right: 4vw; bottom: 20px; transform: rotate(-0.5deg);
-  z-index: 15; font-family: 'Press Start 2P', monospace; font-size: clamp(9px, 1.6vw, 12px);
+  z-index: 15; font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: clamp(9px, 1.6vw, 12px);
   color: var(--ink); background-color: #E8B84B;
   background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 15%);
   background-size: 6px 6px; padding: 14px 22px; border: 4px solid var(--ink);
@@ -384,12 +384,12 @@ html, body {
   position: absolute; bottom: 2.4vh; left: 0; right: 0; z-index: 20;
   display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
   row-gap: 4px; gap: clamp(8px, 3vw, 22px); padding: 0 12px;
-  font-family: 'Space Mono', monospace; font-size: clamp(8px, 2.4vw, 11px);
+  font-family: 'Space Mono', 'Space Mono Local', monospace; font-size: clamp(8px, 2.4vw, 11px);
   letter-spacing: .05em; color: rgba(255,255,255,.5); pointer-events: none; text-align: center;
 }
 #nextBtn, #nextLineBtn {
   position: absolute; bottom: 6.2vh; right: 4vw; z-index: 25;
-  font-family: 'Baloo 2', sans-serif; font-weight: 900;
+  font-family: 'Baloo 2', 'Baloo 2 Local', sans-serif; font-weight: 900;
   color: var(--ink); border: 3px solid var(--ink); padding: 12px 24px; cursor: pointer;
   box-shadow: 4px 4px 0px var(--ink); opacity: 0; transform: translateY(20px);
   transition: .4s; pointer-events: none;
@@ -471,15 +471,15 @@ html, body {
   border-radius: 6px;
   text-align: center;
 }
-.sea-walk-kicker { font-family: "Bangers", cursive; letter-spacing: 0.18em; font-size: 16px; color: #5fb8e0; text-shadow: 2px 2px 0 #0A0812; }
-.sea-walk-title  { font-family: "Bangers", cursive; font-size: clamp(22px, 4vw, 30px); margin: 4px 0 6px; color: #e8f4ff; letter-spacing: 0.04em; }
+.sea-walk-kicker { font-family: "Bangers", "Bangers Local", cursive; letter-spacing: 0.18em; font-size: 16px; color: #5fb8e0; text-shadow: 2px 2px 0 #0A0812; }
+.sea-walk-title  { font-family: "Bangers", "Bangers Local", cursive; font-size: clamp(22px, 4vw, 30px); margin: 4px 0 6px; color: #e8f4ff; letter-spacing: 0.04em; }
 .sea-walk-prompt { font-size: 13px; line-height: 1.55; color: #c8d8e8; margin: 0 0 12px; }
 .sea-walk-stage  { position: relative; height: 110px; margin: 8px 0 14px; background: linear-gradient(180deg, #c8e8ff 0%, #5fb8e0 60%, #173f70 100%); border: 3px solid #0A0812; border-radius: 4px; overflow: hidden; box-shadow: inset 0 0 18px rgba(0,0,0,0.4); }
 .sea-walk-path   { position: absolute; left: 50%; top: 8px; bottom: 8px; width: 30px; transform: translateX(-50%); background: linear-gradient(180deg, #f4e0b0, #c8a060); border: 2px dashed #0A0812; }
 .sea-walk-crowd  { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 36px; transition: transform 0.6s ease; }
-.sea-walk-status { font-family: "Bangers", cursive; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 10px; color: #ffd84d; min-height: 18px; }
+.sea-walk-status { font-family: "Bangers", "Bangers Local", cursive; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 10px; color: #ffd84d; min-height: 18px; }
 .sea-walk-status.done { color: #b9f2d8; }
-.sea-walk-staff  { font-family: "Bangers", cursive; font-size: 16px; padding: 10px 18px; background: #c87a30; color: #0A0812; border: 3px solid #0A0812; cursor: pointer; box-shadow: 4px 4px 0 #0A0812; }
+.sea-walk-staff  { font-family: "Bangers", "Bangers Local", cursive; font-size: 16px; padding: 10px 18px; background: #c87a30; color: #0A0812; border: 3px solid #0A0812; cursor: pointer; box-shadow: 4px 4px 0 #0A0812; }
 .sea-walk-staff:active { box-shadow: 1px 1px 0 #0A0812; transform: translate(3px, 3px); }
 .sea-walk-staff.holding { background: #ffd84d; }
 .sea-walk-help { font-size: 12px; color: #a8c0d8; margin-top: 8px; line-height: 1.4; }
@@ -510,22 +510,22 @@ html, body {
   border-radius: 6px;
   text-align: center;
 }
-.tablets-kicker { font-family: "Bangers", cursive; letter-spacing: 0.18em; font-size: 16px; color: #b078d0; text-shadow: 2px 2px 0 #0A0812; }
-.tablets-title  { font-family: "Bangers", cursive; font-size: clamp(22px, 4vw, 30px); margin: 4px 0 6px; color: #fff; letter-spacing: 0.04em; }
+.tablets-kicker { font-family: "Bangers", "Bangers Local", cursive; letter-spacing: 0.18em; font-size: 16px; color: #b078d0; text-shadow: 2px 2px 0 #0A0812; }
+.tablets-title  { font-family: "Bangers", "Bangers Local", cursive; font-size: clamp(22px, 4vw, 30px); margin: 4px 0 6px; color: #fff; letter-spacing: 0.04em; }
 .tablets-prompt { font-size: 13px; line-height: 1.55; color: #d8c8e8; margin: 0 0 12px; }
 .tablets-grid   { display: flex; gap: 14px; justify-content: flex-start; margin: 10px 0 14px; }
 .tablet-stone   {
   width: 110px; height: 150px; display: flex; align-items: center; justify-content: flex-start;
   background: linear-gradient(180deg, #d4c098, #8a6a30);
   border: 4px solid #0A0812; border-radius: 6px;
-  font-family: "Press Start 2P", monospace; font-size: 10px; line-height: 1.6; color: #0A0812;
+  font-family: "Press Start 2P", "Press Start 2P Local", monospace; font-size: 10px; line-height: 1.6; color: #0A0812;
   box-shadow: 4px 4px 0 #0A0812;
   transition: transform .3s;
 }
 .tablet-stone.lift { transform: translateY(-6px); }
-.tablets-status { font-family: "Bangers", cursive; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 10px; color: #ffd84d; min-height: 18px; }
+.tablets-status { font-family: "Bangers", "Bangers Local", cursive; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 10px; color: #ffd84d; min-height: 18px; }
 .tablets-status.done { color: #b9f2d8; }
-.tablets-btn    { font-family: "Bangers", cursive; font-size: 16px; padding: 10px 18px; background: #b078d0; color: #0A0812; border: 3px solid #0A0812; cursor: pointer; box-shadow: 4px 4px 0 #0A0812; }
+.tablets-btn    { font-family: "Bangers", "Bangers Local", cursive; font-size: 16px; padding: 10px 18px; background: #b078d0; color: #0A0812; border: 3px solid #0A0812; cursor: pointer; box-shadow: 4px 4px 0 #0A0812; }
 .tablets-btn:hover { box-shadow: 1px 1px 0 #0A0812; transform: translate(3px, 3px); }
 .tablets-help { font-size: 12px; color: #b3a3c8; margin-top: 8px; line-height: 1.4; }
 :root {
@@ -565,7 +565,7 @@ html, body {
 html, body {
   margin: 0; padding: 0; height: 100%; overflow: hidden;
   background: var(--ink);
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', 'Nunito Local', sans-serif;
   color: var(--cream);
 }
 
@@ -586,13 +586,13 @@ html, body {
   background-size: 12px 12px;
 }
 #startScreen .issue {
-  font-family: 'Space Mono', Tahoma, sans-serif; font-size: 12px;
+  font-family: 'Space Mono', 'Space Mono Local', Tahoma, sans-serif; font-size: 12px;
   color: var(--ink); background: #E8B84B;
   display: inline-block; padding: 4px 10px; margin-bottom: 14px;
   font-weight: 700; border: 2px solid var(--ink);
 }
 #startScreen h1 {
-  font-family: 'Bangers', Tahoma, sans-serif;
+  font-family: 'Bangers', 'Bangers Local', Tahoma, sans-serif;
   font-size: clamp(54px, 14vw, 96px);
   margin: 0; color: #E8B84B;
   -webkit-text-stroke: 4px var(--ink);
@@ -600,20 +600,20 @@ html, body {
   text-shadow: 6px 6px 0 #c84b4b;
 }
 #startScreen .subtitle {
-  font-family: 'Baloo 2', Tahoma, sans-serif; font-size: 22px;
+  font-family: 'Baloo 2', 'Baloo 2 Local', Tahoma, sans-serif; font-size: 22px;
   color: var(--cream); margin: 4px 0 16px; font-weight: 800;
   text-shadow: 2px 2px 0px var(--ink);
 }
 .bigtorch { font-size: 64px; margin-bottom: 10px; animation: popInAnim .8s .2s both; filter: drop-shadow(0 0 10px rgba(255,180,80,0.5)); }
 #startScreen p {
-  font-family: 'Press Start 2P', Tahoma, sans-serif; font-size: 10px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', Tahoma, sans-serif; font-size: 10px;
   max-width: 460px; color: var(--cream); opacity: .9;
   margin: 18px 0 26px; line-height: 2;
 
   font-weight: 700;
 }
 #startBtn {
-  font-family: 'Press Start 2P', Tahoma, sans-serif; font-size: 14px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', Tahoma, sans-serif; font-size: 14px;
   background: #c87a30; color: var(--ink);
   border: 4px solid var(--ink); padding: 16px 30px; cursor: pointer;
   box-shadow: 6px 6px 0 var(--ink); transition: all .1s;
@@ -730,7 +730,7 @@ html, body {
   padding: 22px 28px; pointer-events: auto; gap: 10px;
 }
 #chapterSelect {
-  font-family: 'Press Start 2P', monospace; font-size: 9px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 9px;
   letter-spacing: .05em; text-transform: uppercase;
   background-color: var(--accent-color); color: var(--ink);
   border: 4px solid var(--ink); padding: 10px 34px 10px 16px;
@@ -809,7 +809,7 @@ html, body {
   background-color: #E8B84B;
   background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 15%);
   background-size: 6px 6px;
-  color: var(--ink); font-family: 'Press Start 2P', monospace;
+  color: var(--ink); font-family: 'Press Start 2P', 'Press Start 2P Local', monospace;
   font-size: clamp(10px, 1.8vw, 13px); line-height: 1.6;
   padding: 14px 18px; border: 4px solid var(--ink);
   transform: rotate(-0.5deg); box-shadow: 6px 6px 0px var(--ink);
@@ -828,7 +828,7 @@ html, body {
 .bubble {
   position: relative; background-color: var(--bubble-bg); color: var(--text-color);
   padding: 18px 24px; border: 4px solid var(--ink);
-  font-family: 'Baloo 2', sans-serif; font-weight: 800;
+  font-family: 'Baloo 2', 'Baloo 2 Local', sans-serif; font-weight: 800;
   font-size: clamp(16px, 2.8vw, 24px); line-height: 1.35;
   width: 100%; border-radius: 16px; box-shadow: 6px 6px 0px var(--ink);
   text-align: center; hyphens: none; word-break: keep-all; max-width: 100%;
@@ -850,7 +850,7 @@ html, body {
 /* God's voice — gold dashed border, Bangers font */
 .bubble.god {
   background-color: #E8B84B; color: #0A0812;
-  font-family: 'Bangers', cursive; font-size: clamp(24px, 4.5vw, 40px);
+  font-family: 'Bangers', 'Bangers Local', cursive; font-size: clamp(24px, 4.5vw, 40px);
   letter-spacing: .05em; border-radius: 4px; border: 5px dashed var(--ink);
 }
 .bubble.god::after  { left: 50%; transform: translateX(-50%); }
@@ -873,7 +873,7 @@ html, body {
 
 /* ── SFX Text ─────────────────────────────────── */
 .sfx {
-  font-family: 'Bangers', cursive;
+  font-family: 'Bangers', 'Bangers Local', cursive;
   font-size: clamp(54px, 10vw, 90px);
   color: #E8B84B; -webkit-text-stroke: 4px var(--ink); paint-order: stroke fill;
   text-shadow: 6px 6px 0 #c84b4b;
@@ -889,7 +889,7 @@ html, body {
 }
 #choices.show { opacity: 1; pointer-events: auto; }
 .choiceBtn {
-  font-family: 'Press Start 2P', monospace; font-size: 10px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 10px;
   background: #c87a30; border: 4px solid var(--ink); color: var(--ink);
   padding: 12px 20px; cursor: pointer; transition: all .1s;
   box-shadow: 0 6px 0 var(--ink); text-align: center;
@@ -900,7 +900,7 @@ html, body {
 /* ── Delay Note ──────────────────────────────── */
 #delayNote {
   position: absolute; right: 4vw; bottom: 20px; transform: rotate(-0.5deg);
-  z-index: 15; font-family: 'Press Start 2P', monospace; font-size: clamp(9px, 1.6vw, 12px);
+  z-index: 15; font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: clamp(9px, 1.6vw, 12px);
   color: var(--ink); background-color: #E8B84B;
   background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 15%);
   background-size: 6px 6px; padding: 14px 22px; border: 4px solid var(--ink);
@@ -914,12 +914,12 @@ html, body {
   position: absolute; bottom: 2.4vh; left: 0; right: 0; z-index: 20;
   display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
   row-gap: 4px; gap: clamp(8px, 3vw, 22px); padding: 0 12px;
-  font-family: 'Space Mono', monospace; font-size: clamp(8px, 2.4vw, 11px);
+  font-family: 'Space Mono', 'Space Mono Local', monospace; font-size: clamp(8px, 2.4vw, 11px);
   letter-spacing: .05em; color: rgba(255,255,255,.5); pointer-events: none; text-align: center;
 }
 #nextBtn, #nextLineBtn {
   position: absolute; bottom: 6.2vh; right: 4vw; z-index: 25;
-  font-family: 'Baloo 2', sans-serif; font-weight: 900;
+  font-family: 'Baloo 2', 'Baloo 2 Local', sans-serif; font-weight: 900;
   color: var(--ink); border: 3px solid var(--ink); padding: 12px 24px; cursor: pointer;
   box-shadow: 4px 4px 0px var(--ink); opacity: 0; transform: translateY(20px);
   transition: .4s; pointer-events: none;
@@ -1001,15 +1001,15 @@ html, body {
   border-radius: 6px;
   text-align: center;
 }
-.sea-walk-kicker { font-family: "Bangers", cursive; letter-spacing: 0.18em; font-size: 16px; color: #5fb8e0; text-shadow: 2px 2px 0 #0A0812; }
-.sea-walk-title  { font-family: "Bangers", cursive; font-size: clamp(22px, 4vw, 30px); margin: 4px 0 6px; color: #e8f4ff; letter-spacing: 0.04em; }
+.sea-walk-kicker { font-family: "Bangers", "Bangers Local", cursive; letter-spacing: 0.18em; font-size: 16px; color: #5fb8e0; text-shadow: 2px 2px 0 #0A0812; }
+.sea-walk-title  { font-family: "Bangers", "Bangers Local", cursive; font-size: clamp(22px, 4vw, 30px); margin: 4px 0 6px; color: #e8f4ff; letter-spacing: 0.04em; }
 .sea-walk-prompt { font-size: 13px; line-height: 1.55; color: #c8d8e8; margin: 0 0 12px; }
 .sea-walk-stage  { position: relative; height: 110px; margin: 8px 0 14px; background: linear-gradient(180deg, #c8e8ff 0%, #5fb8e0 60%, #173f70 100%); border: 3px solid #0A0812; border-radius: 4px; overflow: hidden; box-shadow: inset 0 0 18px rgba(0,0,0,0.4); }
 .sea-walk-path   { position: absolute; left: 50%; top: 8px; bottom: 8px; width: 30px; transform: translateX(-50%); background: linear-gradient(180deg, #f4e0b0, #c8a060); border: 2px dashed #0A0812; }
 .sea-walk-crowd  { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 36px; transition: transform 0.6s ease; }
-.sea-walk-status { font-family: "Bangers", cursive; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 10px; color: #ffd84d; min-height: 18px; }
+.sea-walk-status { font-family: "Bangers", "Bangers Local", cursive; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 10px; color: #ffd84d; min-height: 18px; }
 .sea-walk-status.done { color: #b9f2d8; }
-.sea-walk-staff  { font-family: "Bangers", cursive; font-size: 16px; padding: 10px 18px; background: #c87a30; color: #0A0812; border: 3px solid #0A0812; cursor: pointer; box-shadow: 4px 4px 0 #0A0812; }
+.sea-walk-staff  { font-family: "Bangers", "Bangers Local", cursive; font-size: 16px; padding: 10px 18px; background: #c87a30; color: #0A0812; border: 3px solid #0A0812; cursor: pointer; box-shadow: 4px 4px 0 #0A0812; }
 .sea-walk-staff:active { box-shadow: 1px 1px 0 #0A0812; transform: translate(3px, 3px); }
 .sea-walk-staff.holding { background: #ffd84d; }
 .sea-walk-help { font-size: 12px; color: #a8c0d8; margin-top: 8px; line-height: 1.4; }
@@ -1040,22 +1040,22 @@ html, body {
   border-radius: 6px;
   text-align: center;
 }
-.tablets-kicker { font-family: "Bangers", cursive; letter-spacing: 0.18em; font-size: 16px; color: #b078d0; text-shadow: 2px 2px 0 #0A0812; }
-.tablets-title  { font-family: "Bangers", cursive; font-size: clamp(22px, 4vw, 30px); margin: 4px 0 6px; color: #fff; letter-spacing: 0.04em; }
+.tablets-kicker { font-family: "Bangers", "Bangers Local", cursive; letter-spacing: 0.18em; font-size: 16px; color: #b078d0; text-shadow: 2px 2px 0 #0A0812; }
+.tablets-title  { font-family: "Bangers", "Bangers Local", cursive; font-size: clamp(22px, 4vw, 30px); margin: 4px 0 6px; color: #fff; letter-spacing: 0.04em; }
 .tablets-prompt { font-size: 13px; line-height: 1.55; color: #d8c8e8; margin: 0 0 12px; }
 .tablets-grid   { display: flex; gap: 14px; justify-content: flex-start; margin: 10px 0 14px; }
 .tablet-stone   {
   width: 110px; height: 150px; display: flex; align-items: center; justify-content: flex-start;
   background: linear-gradient(180deg, #d4c098, #8a6a30);
   border: 4px solid #0A0812; border-radius: 6px;
-  font-family: "Press Start 2P", monospace; font-size: 10px; line-height: 1.6; color: #0A0812;
+  font-family: "Press Start 2P", "Press Start 2P Local", monospace; font-size: 10px; line-height: 1.6; color: #0A0812;
   box-shadow: 4px 4px 0 #0A0812;
   transition: transform .3s;
 }
 .tablet-stone.lift { transform: translateY(-6px); }
-.tablets-status { font-family: "Bangers", cursive; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 10px; color: #ffd84d; min-height: 18px; }
+.tablets-status { font-family: "Bangers", "Bangers Local", cursive; font-size: 14px; letter-spacing: 0.08em; margin: 0 0 10px; color: #ffd84d; min-height: 18px; }
 .tablets-status.done { color: #b9f2d8; }
-.tablets-btn    { font-family: "Bangers", cursive; font-size: 16px; padding: 10px 18px; background: #b078d0; color: #0A0812; border: 3px solid #0A0812; cursor: pointer; box-shadow: 4px 4px 0 #0A0812; }
+.tablets-btn    { font-family: "Bangers", "Bangers Local", cursive; font-size: 16px; padding: 10px 18px; background: #b078d0; color: #0A0812; border: 3px solid #0A0812; cursor: pointer; box-shadow: 4px 4px 0 #0A0812; }
 .tablets-btn:hover { box-shadow: 1px 1px 0 #0A0812; transform: translate(3px, 3px); }
 .tablets-help { font-size: 12px; color: #b3a3c8; margin-top: 8px; line-height: 1.4; }
 /* Enoch — Comic CSS. Palettes derived from canon.json. */
@@ -1118,7 +1118,7 @@ body.palette-act-10 #enochFieldBackdrop {
 @media (prefers-reduced-motion: reduce) { .enoch-grass-clump { animation: none; } }
 
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: var(--ink); font-family: 'Nunito', sans-serif; color: var(--cream); }
+html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: var(--ink); font-family: 'Nunito', 'Nunito Local', sans-serif; color: var(--cream); }
 
 
 

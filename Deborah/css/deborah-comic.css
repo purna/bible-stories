@@ -29,7 +29,7 @@
 html, body {
   margin: 0; padding: 0; height: 100%; overflow: hidden;
   background: var(--ink);
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', 'Nunito Local', sans-serif;
   color: var(--cream);
 }
 
@@ -50,13 +50,13 @@ html, body {
   background-size: 12px 12px;
 }
 #startScreen .issue {
-  font-family: 'Space Mono', Tahoma, sans-serif; font-size: 12px;
+  font-family: 'Space Mono', 'Space Mono Local', Tahoma, sans-serif; font-size: 12px;
   color: var(--ink); background: #4e9e6b;
   display: inline-block; padding: 4px 10px; margin-bottom: 14px;
   font-weight: 700; border: 2px solid var(--ink);
 }
 #startScreen h1 {
-  font-family: 'Bangers', Tahoma, sans-serif;
+  font-family: 'Bangers', 'Bangers Local', Tahoma, sans-serif;
   font-size: clamp(54px, 14vw, 60px);
   margin: 0; color: #4e9e6b;
   -webkit-text-stroke: 4px var(--ink);
@@ -64,20 +64,20 @@ html, body {
   text-shadow: 6px 6px 0 #2d6f73;
 }
 #startScreen .subtitle {
-  font-family: 'Baloo 2', Tahoma, sans-serif; font-size: 22px;
+  font-family: 'Baloo 2', 'Baloo 2 Local', Tahoma, sans-serif; font-size: 22px;
   color: var(--cream); margin: 4px 0 16px; font-weight: 800;
   text-shadow: 2px 2px 0px var(--ink);
 }
 .bigtorch { font-size: 64px; margin-bottom: 10px; animation: popInAnim .8s .2s both; filter: drop-shadow(0 0 10px rgba(78,158,107,0.5)); }
 #startScreen p {
-  font-family: 'Press Start 2P', Tahoma, sans-serif; font-size: 12px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', Tahoma, sans-serif; font-size: 12px;
   max-width: 460px; color: var(--cream); opacity: .9;
   margin: 18px 0 26px; line-height: 2;
 
   font-weight: 700;
 }
 #startBtn {
-  font-family: 'Press Start 2P', Tahoma, sans-serif; font-size: 14px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', Tahoma, sans-serif; font-size: 14px;
   background: #2d6f73; color: var(--ink);
   border: 4px solid var(--ink); padding: 16px 30px; cursor: pointer;
   box-shadow: 6px 6px 0 var(--ink); transition: all .1s;
@@ -208,7 +208,7 @@ html, body {
   padding: 22px 28px; pointer-events: auto; gap: 10px;
 }
 #chapterSelect {
-  font-family: 'Press Start 2P', monospace; font-size: 9px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 9px;
   letter-spacing: .05em; text-transform: uppercase;
   background-color: var(--accent-color); color: var(--ink);
   border: 4px solid var(--ink); padding: 10px 34px 10px 16px;
@@ -287,7 +287,7 @@ html, body {
   background-color: #E8B84B;
   background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 15%);
   background-size: 6px 6px;
-  color: var(--ink); font-family: 'Press Start 2P', monospace;
+  color: var(--ink); font-family: 'Press Start 2P', 'Press Start 2P Local', monospace;
   font-size: clamp(12px, 1.8vw, 13px); line-height: 1.6;
   font-weight: 700;
   padding: 14px 18px; border: 4px solid var(--ink);
@@ -307,7 +307,7 @@ html, body {
 .bubble {
   position: relative; background-color: var(--bubble-bg); color: var(--text-color);
   padding: 18px 24px; border: 4px solid var(--ink);
-  font-family: 'Baloo 2', sans-serif; font-weight: 800;
+  font-family: 'Baloo 2', 'Baloo 2 Local', sans-serif; font-weight: 800;
   font-size: clamp(16px, 2.8vw, 24px); line-height: 1.35;
   width: 100%; border-radius: 16px; box-shadow: 6px 6px 0px var(--ink);
   text-align: center; hyphens: none; word-break: keep-all; max-width: 100%;
@@ -349,7 +349,7 @@ html, body {
   background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 15%);
   background-size: 6px 6px;
   color: var(--ink);
-  font-family: 'Press Start 2P', monospace;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', monospace;
   font-size: clamp(10px, 1.6vw, 12px);
   font-weight: 700;
   line-height: 1.5;
@@ -364,7 +364,7 @@ html, body {
 }
 .game-instructions .game-kicker {
   display: block;
-  font-family: 'Bangers', cursive;
+  font-family: 'Bangers', 'Bangers Local', cursive;
   font-size: clamp(14px, 2.2vw, 18px);
   letter-spacing: 0.1em;
   color: var(--accent-color);
@@ -374,14 +374,14 @@ html, body {
 }
 .game-instructions .game-title {
   display: block;
-  font-family: 'Bangers', cursive;
+  font-family: 'Bangers', 'Bangers Local', cursive;
   font-size: clamp(18px, 3vw, 24px);
   margin-bottom: 8px;
   color: var(--ink);
 }
 .game-instructions .game-prompt {
   display: block;
-  font-family: 'Press Start 2P', monospace;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', monospace;
   font-size: clamp(9px, 1.4vw, 11px);
   line-height: 1.5;
   margin-bottom: 8px;
@@ -389,7 +389,7 @@ html, body {
 }
 .game-instructions .game-status {
   display: block;
-  font-family: 'Bangers', cursive;
+  font-family: 'Bangers', 'Bangers Local', cursive;
   font-size: clamp(11px, 1.8vw, 14px);
   letter-spacing: 0.06em;
   color: var(--accent-color);
@@ -399,7 +399,7 @@ html, body {
 
 /* ── SFX Text ────────────────────────────────── */
 .sfx {
-  font-family: 'Bangers', cursive;
+  font-family: 'Bangers', 'Bangers Local', cursive;
   font-size: clamp(54px, 10vw, 90px);
   color: #4e9e6b; -webkit-text-stroke: 4px var(--ink); paint-order: stroke fill;
   text-shadow: 6px 6px 0 #2d6f73;
@@ -415,7 +415,7 @@ html, body {
 }
 #choices.show { opacity: 1; pointer-events: auto; }
 .choiceBtn {
-  font-family: 'Press Start 2P', monospace; font-size: 10px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 10px;
   background: #2d6f73; border: 4px solid var(--ink); color: var(--ink);
   padding: 12px 20px; cursor: pointer; transition: all .1s;
   box-shadow: 0 6px 0 var(--ink); text-align: center;
@@ -426,7 +426,7 @@ html, body {
 /* ── Delay Note ──────────────────────────────── */
 #delayNote {
   position: absolute; right: 4vw; bottom: 20px; transform: rotate(-0.5deg);
-  z-index: 15; font-family: 'Press Start 2P', monospace; font-size: clamp(9px, 1.6vw, 12px);
+  z-index: 15; font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: clamp(9px, 1.6vw, 12px);
   color: var(--ink); background-color: #E8B84B;
   background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 15%);
   background-size: 6px 6px; padding: 14px 22px; border: 4px solid var(--ink);
@@ -448,32 +448,32 @@ html, body {
 }
 #gamePanel.open { opacity: 1; pointer-events: auto; max-height: 600px; overflow-y: auto; }
 .game-heading { margin-bottom: 12px; }
-.game-heading .eyebrow { font-family: 'Space Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--accent-color); margin: 0 0 4px; }
-.game-heading h2 { font-family: 'Bangers', cursive; font-size: clamp(22px, 4vw, 30px); margin: 0 0 8px; color: var(--cream); }
+.game-heading .eyebrow { font-family: 'Space Mono', 'Space Mono Local', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--accent-color); margin: 0 0 4px; }
+.game-heading h2 { font-family: 'Bangers', 'Bangers Local', cursive; font-size: clamp(22px, 4vw, 30px); margin: 0 0 8px; color: var(--cream); }
 #gameInstructions { font-size: 13px; line-height: 1.5; color: var(--cream); margin: 0; opacity: .9; }
 .game-area { display: flex; flex-direction: column; gap: 12px; }
-.game-message { font-family: 'Press Start 2P', monospace; font-size: 11px; color: var(--accent-color); margin: 10px 0 0; min-height: 18px; }
+.game-message { font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 11px; color: var(--accent-color); margin: 10px 0 0; min-height: 18px; }
 .game-retry { margin: 10px 0 0; border: 3px solid var(--ink); padding: 9px 12px; background: #ffd84d; color: var(--ink); box-shadow: 3px 3px 0 var(--ink); font: inherit; cursor: pointer; }
 .game-retry:hover { transform: translateY(1px); box-shadow: 2px 2px 0 var(--ink); }
 .game-retry:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 
 .choice-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-.choice { font-family: 'Press Start 2P', monospace; font-size: 13px; background: var(--accent-color); color: var(--ink); border: 3px solid var(--ink); padding: 12px 18px; cursor: pointer; box-shadow: 4px 4px 0 var(--ink); transition: all .1s; }
+.choice { font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 13px; background: var(--accent-color); color: var(--ink); border: 3px solid var(--ink); padding: 12px 18px; cursor: pointer; box-shadow: 4px 4px 0 var(--ink); transition: all .1s; }
 .choice:hover { transform: translateY(2px); box-shadow: 2px 2px 0 var(--ink); }
 .choice.correct { background: #4e9e6b; color: white; }
 .choice.wrong { background: #c84b4b; color: white; }
 .choice:disabled { cursor: not-allowed; opacity: .72; box-shadow: 1px 1px 0 var(--ink); }
 
 .sequence-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-.sequence-card { font-family: 'Press Start 2P', monospace; font-size: 11px; background: var(--accent-color); color: var(--ink); border: 3px solid var(--ink); padding: 12px 18px; cursor: pointer; box-shadow: 4px 4px 0 var(--ink); transition: all .1s; }
+.sequence-card { font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 11px; background: var(--accent-color); color: var(--ink); border: 3px solid var(--ink); padding: 12px 18px; cursor: pointer; box-shadow: 4px 4px 0 var(--ink); transition: all .1s; }
 .sequence-card.selected { background: #4e9e6b; color: white; transform: translateY(2px); box-shadow: 2px 2px 0 var(--ink); }
 
 .river-game { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-.river-token { font-family: 'Press Start 2P', monospace; font-size: 11px; background: #6b8cae; color: var(--ink); border: 3px solid var(--ink); padding: 12px 18px; cursor: pointer; box-shadow: 4px 4px 0 var(--ink); transition: all .4s ease; }
+.river-token { font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 11px; background: #6b8cae; color: var(--ink); border: 3px solid var(--ink); padding: 12px 18px; cursor: pointer; box-shadow: 4px 4px 0 var(--ink); transition: all .4s ease; }
 .river-token:disabled { opacity: .4; cursor: not-allowed; transform: translateY(10px); }
 
 .song-words { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-.song-word { font-family: 'Press Start 2P', monospace; font-size: 11px; background: #d4b84b; color: var(--ink); border: 3px solid var(--ink); padding: 12px 18px; cursor: pointer; box-shadow: 4px 4px 0 var(--ink); transition: all .1s; }
+.song-word { font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 11px; background: #d4b84b; color: var(--ink); border: 3px solid var(--ink); padding: 12px 18px; cursor: pointer; box-shadow: 4px 4px 0 var(--ink); transition: all .1s; }
 .song-word.chosen { background: #4e9e6b; color: white; transform: translateY(2px); box-shadow: 2px 2px 0 var(--ink); }
 
 /* ── Navigation ──────────────────────────────── */
@@ -481,12 +481,12 @@ html, body {
   position: absolute; bottom: 2.4vh; left: 0; right: 0; z-index: 20;
   display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
   row-gap: 4px; gap: clamp(8px, 3vw, 22px); padding: 0 12px;
-  font-family: 'Space Mono', monospace; font-size: clamp(8px, 2.4vw, 11px);
+  font-family: 'Space Mono', 'Space Mono Local', monospace; font-size: clamp(8px, 2.4vw, 11px);
   letter-spacing: .05em; color: rgba(255,255,255,.5); pointer-events: none; text-align: center;
 }
 #nextBtn, #nextLineBtn {
   position: absolute; bottom: 6.2vh; right: 4vw; z-index: 25;
-  font-family: 'Baloo 2', sans-serif; font-weight: 900;
+  font-family: 'Baloo 2', 'Baloo 2 Local', sans-serif; font-weight: 900;
   color: var(--ink); border: 3px solid var(--ink); padding: 12px 24px; cursor: pointer;
   box-shadow: 4px 4px 0px var(--ink); opacity: 0; transform: translateY(20px);
   transition: .4s; pointer-events: none;

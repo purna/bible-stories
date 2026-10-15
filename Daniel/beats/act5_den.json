@@ -229,7 +229,7 @@
     },
     {
       "id": "den_7",
-      "audioSfx": "assets/audio/sfx/stone_footsteps.mp3",
+      "audioSfx": "../shared/audio/daniel/sfx/stone_footsteps.mp3",
       "items": [
         {
           "id": "den_7_text",

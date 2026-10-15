@@ -51,7 +51,7 @@
   border: 5px solid var(--modal-ink);
   border-radius: 13px 25px 16px 10px;
   box-shadow: 12px 12px 0 var(--modal-ink), inset 0 0 35px rgba(167, 111, 32, .16);
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", "Nunito Local", sans-serif;
   transform: rotate(-.25deg);
 }
 .story-info-card::before {
@@ -77,7 +77,7 @@
   background: #ef4b3f;
   color: #fff;
   box-shadow: 3px 3px 0 var(--modal-ink);
-  font: 900 24px/1 "Nunito", sans-serif;
+  font: 900 24px/1 "Nunito", "Nunito Local", sans-serif;
   cursor: pointer;
 }
 
@@ -125,17 +125,17 @@
 }
 .story-info-card.has-more::after { opacity: 1; }
 
-.story-info-kicker { display: inline-block; padding: 4px 9px; color: #fff; background: #e84036; border: 3px solid var(--modal-ink); font: 9px "Press Start 2P", monospace; }
-.story-info-card h2 { margin: 10px 0 2px; font: 42px/1 "Bangers", sans-serif; letter-spacing: 1px; }
+.story-info-kicker { display: inline-block; padding: 4px 9px; color: #fff; background: #e84036; border: 3px solid var(--modal-ink); font: 9px "Press Start 2P", "Press Start 2P Local", monospace; }
+.story-info-card h2 { margin: 10px 0 2px; font: 42px/1 "Bangers", "Bangers Local", sans-serif; letter-spacing: 1px; }
 .story-info-lead { margin: 0; font-weight: 900; color: #7a2a21; }
-.story-info-card h3 { margin: 20px 0 7px; padding-bottom: 4px; border-bottom: 3px solid var(--modal-ink); font: 25px/1 "Bangers", sans-serif; letter-spacing: .6px; }
+.story-info-card h3 { margin: 20px 0 7px; padding-bottom: 4px; border-bottom: 3px solid var(--modal-ink); font: 25px/1 "Bangers", "Bangers Local", sans-serif; letter-spacing: .6px; }
 .story-info-card h3:first-child { margin-top: 0; }
 .story-info-card p { margin: 7px 0; line-height: 1.45; }
 .story-info-card a { color: #064fa4; font-weight: 900; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .story-info-links { display: flex; flex-wrap: wrap; gap: 9px; }
 .story-info-links a { padding: 8px 11px; color: var(--modal-ink); background: #ffd64a; border: 3px solid var(--modal-ink); border-radius: 5px; box-shadow: 3px 3px 0 var(--modal-ink); text-decoration: none; }
 .story-info-libraries { display: flex; flex-wrap: wrap; gap: 7px; margin: 8px 0; padding: 0; list-style: none; }
-.story-info-libraries li { padding: 5px 9px; background: #fff; border: 2px solid var(--modal-ink); border-radius: 99px; font: 700 12px "Space Mono", monospace; }
+.story-info-libraries li { padding: 5px 9px; background: #fff; border: 2px solid var(--modal-ink); border-radius: 99px; font: 700 12px "Space Mono", "Space Mono Local", monospace; }
 .story-info-small { font-size: 12px; opacity: .76; }
 
 @media (max-width: 640px) {

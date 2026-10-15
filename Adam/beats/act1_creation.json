@@ -39,7 +39,7 @@
     },
     {
       "id": "creation_1",
-      "audioSfx": "assets/audio/sfx/creation_light.mp3",
+      "audioSfx": "../shared/audio/adam/sfx/creation_light.mp3",
       "items": [
         {
           "id": "creation_1_text",

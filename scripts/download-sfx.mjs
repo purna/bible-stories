@@ -14,7 +14,7 @@ function sourceDoc(story) {
   const rows = story.effects.map(effect => `| \`${effect.file}\` | ${effect.scene} | ${effect.trigger} | ${effect.type} |`).join('\n');
   return `# ${story.title} — SFX Source of Truth
 
-Canonical first-pass production SFX plan. Keep this synchronized with the story data and \`assets/audio/sfx/\`. Comic text such as **CRASH!** remains visual; these files are production audio.
+Canonical first-pass production SFX plan. Keep this synchronized with the story data and \`../shared/audio/${story.slug}/sfx/\`. Comic text such as **CRASH!** remains visual; these files are production audio.
 
 ## Direction
 
@@ -28,11 +28,11 @@ ${rows}
 
 ## Interface Effect
 
-All buttons continue to use \`assets/audio/ping_pong.mp3\`. It is not duplicated in the SFX folder.
+All buttons continue to use \`../shared/audio/ui/ping_pong.mp3\`. It is not duplicated in the SFX folder.
 
 ## Runtime Integration
 
-- Runtime path: \`assets/audio/sfx/<file>\`.
+- Runtime path: \`../shared/audio/${story.slug}/sfx/<file>\`.
 - Put that path in the triggering line's \`audioSfx\` field; the renderer calls \`audio.playLineSfx(line)\`.
 - The audio manager discovers and preloads every line-level \`audioSfx\` entry.
 - Prefer OGG for future seamless ambience masters; retain these MP3 downloads as traceable originals.
@@ -47,7 +47,7 @@ function linksDoc(story) {
 
 for (const story of stories) {
   const docsDir = path.join(root, story.folder, '__docs');
-  const audioDir = path.join(root, story.folder, 'assets', 'audio', 'sfx');
+  const audioDir = path.join(root, 'shared', 'audio', story.slug, 'sfx');
   await fs.mkdir(docsDir, { recursive: true });
   await fs.mkdir(audioDir, { recursive: true });
   await fs.writeFile(path.join(docsDir, `${story.slug}-sfx-source-of-truth.md`), sourceDoc(story));

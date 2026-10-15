@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#7c9296"/><stop offset="1" stop-color="#edd1ab"/></linearGradient><linearGradient id="hill" x2="0" y2="1"><stop stop-color="#bdad85"/><stop offset="1" stop-color="#798364"/></linearGradient><g id="home"><path d="M0 0h34v28H0z" fill="#c6ab84"/><path d="M34 0l15-7v28l-15 7" fill="#a88c69"/><path d="M0 0l15-7h34L34 0" fill="#ead2ab"/><path d="M10 15h7v13h-7" fill="#5d594b"/></g><g id="tree"><path d="M0 0v-42m0 22l-14-15m14 6l13-14" fill="none" stroke="#68634f" stroke-width="6"/><path d="M-29-35q-10-27 13-28 5-23 26-8 30-3 28 23 15 27-15 25-36 17-52-12" fill="#687852"/></g></defs>
+<path fill="url(#sky)" d="M0 0h1440v900H0z"/><circle cx="1100" cy="180" r="45" fill="#ffe6bb"/>
+<path d="M0 460Q200 250 410 380T820 350T1440 310V900H0" fill="#b7b09b"/><path d="M0 550Q190 370 490 490T880 420T1440 460V900H0" fill="#a7a58a"/>
+<path d="M100 900Q460 590 620 540T830 360Q970 310 1130 470T1440 740V900" fill="url(#hill)"/>
+<g fill="none" stroke="#b6a580" stroke-width="9"><path d="M530 790Q880 510 1290 740"/><path d="M590 710Q920 470 1230 650"/><path d="M670 630Q900 445 1190 580"/></g>
+<g transform="translate(690 455)"><use href="#home"/><use href="#home" x="42" y="-16"/><use href="#home" x="84" y="-23"/><use href="#home" x="125" y="-36"/><use href="#home" x="170" y="-44"/><use href="#home" x="214" y="-20"/><use href="#home" x="255" y="0"/><use href="#home" x="40" y="35"/><use href="#home" x="85" y="20"/><use href="#home" x="130" y="9"/><use href="#home" x="172" y="12"/><use href="#home" x="215" y="22"/><use href="#home" x="257" y="38"/></g>
+<path d="M683 488L1015 488 1040 520 697 544Z" fill="#b69c75"/><path d="M683 488L1015 488 1040 500 697 518Z" fill="#dac09a"/>
+<path d="M822 395v-70h83v70M803 402v-60h27v60m68 0v-64h28v64" fill="#c5a781"/><path d="M832 326h8v-10h12v10h12v-10h12v10h12v-10h12v10" fill="#e1c399"/>
+<path d="M985 520v-58h25v58m-85 0v-58h25v58m0-4v-28h35v28" fill="#d0b48b"/><path d="M951 520v-23a12 12 0 0 1 24 0v23" fill="#655d4e"/>
+<path d="M960 521Q1150 610 1010 700T1080 900" fill="none" stroke="#d5c39d" stroke-width="24"/>
+<use href="#tree" x="1200" y="790" transform="rotate(4 1200 790)"/><use href="#tree" x="670" y="710"/><use href="#tree" x="1320" y="850" transform="translate(-1320 -850) scale(2) translate(660 425)"/>
+</svg>

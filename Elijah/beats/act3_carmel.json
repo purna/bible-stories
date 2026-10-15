@@ -245,7 +245,7 @@
     },
     {
       "id": "carmel_8",
-      "audioSfx": "assets/audio/sfx/altar_fire.mp3",
+      "audioSfx": "../shared/audio/elijah/sfx/altar_fire.mp3",
       "items": [
         {
           "id": "carmel_8_text",
@@ -352,7 +352,7 @@
     },
     {
       "id": "carmel_11",
-      "audioSfx": "assets/audio/sfx/rain_thunder.mp3",
+      "audioSfx": "../shared/audio/elijah/sfx/rain_thunder.mp3",
       "items": [
         {
           "id": "carmel_11_text",

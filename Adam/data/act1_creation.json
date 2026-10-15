@@ -5,8 +5,8 @@
   "particle": "constellation",
   "svg": "creation_cosmos",
   "audio": [
-    "assets/audio/music/Act1_Morning_on_the_Mesa.ogg",
-    "assets/audio/music/Act1_Morning_on_the_Mesa.mp3"
+    "assets/music/Act1_Morning_on_the_Mesa.ogg",
+    "assets/music/Act1_Morning_on_the_Mesa.mp3"
   ],
   "lines": [
     {
@@ -86,7 +86,7 @@
         }
       ],
       "svg": "creation_light",
-      "sfx": "assets/audio/sfx/creation_light.mp3"
+      "sfx": "../shared/audio/adam/sfx/creation_light.mp3"
     },
     {
       "id": "creation_2",

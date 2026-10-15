@@ -1,0 +1,91 @@
+/* Landing page: a quiet, warm landscape behind the comic library. */
+*,*::before,*::after { box-sizing:border-box; }
+html { background:#2b2220;filter:none;overflow:hidden; }
+body { isolation:isolate;display:flow-root;height:100svh;min-height:100svh;overflow:hidden; }
+.city-scene { position:fixed;inset:0;z-index:-2;overflow:hidden;background:linear-gradient(#80524d 0%,#b97d62 40%,#d4ad76 72%,#7b8b54 100%); }
+.city-scene::before { content:"";position:absolute;inset:0;background:url("fallback.svg") center/cover no-repeat;transition:opacity .5s; }
+.city-scene[data-state="ready"]::before { opacity:0; }
+.city-scene::after { content:"";position:absolute;inset:0;pointer-events:none;z-index:2;background:linear-gradient(90deg,#49332b20,transparent 48%),linear-gradient(0deg,#4b392e70,transparent 40%); }
+.city-scene .bg-canvas { filter:saturate(1.2) contrast(1.09);position:absolute;inset:0;z-index:1;display:block;width:100%;height:100%;margin:0; }
+.city-scene[data-state="fallback"] canvas { visibility:hidden; }
+.city-sun { position:absolute;right:23%;top:15%;width:72px;aspect-ratio:1;border-radius:50%;background:#e3c7a5;box-shadow:0 0 90px 44px #c4845936; }
+body > .comic-cover { width:min(390px,32vw);max-width:none;height:min(720px,calc(100svh - 128px));max-height:80svh;margin:52px 0 70px 4vw;padding:24px 20px;background:#faeacbdc;border:1px solid #f9e4b9;border-radius:5px;box-shadow:0 16px 65px #242a2940;color:#343d35;text-align:left;transform:rotate(-2deg);backdrop-filter:blur(14px);animation:none; }
+body > .comic-cover:hover,body > .comic-cover.can-scroll-down,body > .comic-cover.can-scroll-up { transform:rotate(-2deg);animation:none; }
+.comic-cover .landing-eyebrow {font:700 10px "Space Mono", "Space Mono Local",monospace;text-transform:uppercase;letter-spacing:.2em;color:#806749;margin:0 0 8px;}
+.comic-cover h1 {font-size:clamp(42px,4.5vw,70px);color:#394537;text-shadow:none;line-height:1.05;animation:none;}
+.comic-cover .subtitle {font-size:14px;font-weight:700;color:#74624e;margin:10px 0 0;}
+.comic-list { margin:20px 0 12px;padding-right:8px;max-height:none;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;flex:1 1 auto;scrollbar-width:thin;scrollbar-color:#c99b7d #2b201c; }
+.scroll-hint {display:flex;}
+.comic-cover > :not(.comic-list) {flex-shrink:0;}
+.comic-list li { margin:8px 0; }
+.comic-list a {font-family:"Nunito", "Nunito Local",sans-serif;font-size:14px;font-weight:900;line-height:1.4;padding:12px 13px;margin:0 3px 0 0;border:1px solid #c3ac86;border-radius:3px;background:#fff5ddaa;color:#3d483b;box-shadow:0 2px 0 #a58b6826;transition:background .2s,transform .2s;}
+.comic-list a::before {display:none;}
+.comic-list a:hover {background:#fff9e9;transform:translateX(3px);box-shadow:0 2px 0 #a58b6826;}
+.comic-list a:focus-visible,.city-controls button:focus-visible,.city-controls input:focus-visible {outline:3px solid #f2d9c5;outline-offset:3px;}
+.scroll-hint {color:#806749;font-size:10px;justify-content:flex-start;}
+.city-controls {position:fixed;bottom:36px;right:6vw;display:flex;gap:16px;align-items:center;color:#fff2d9;font:700 10px "Space Mono", "Space Mono Local",monospace;}
+.city-controls label {display:flex;align-items:center;gap:10px;}
+.city-controls input {width:90px;accent-color:#f3d4a1;cursor:ew-resize;}
+.city-controls button {font:inherit;color:inherit;background:#343d346e;border:1px solid #fae8c06b;padding:8px 10px;border-radius:3px;cursor:pointer;}
+.city-controls button:hover {background:#343d34b8;}
+.copyright-notice {position:fixed;bottom:8px;right:12px;margin:0;font:700 9px/1.5 "Nunito", "Nunito Local",sans-serif;max-width:90vw;color:#fff2dc99;background:none;border:0;padding:0;z-index:2;}
+.copyright-notice a {color:inherit;}
+@media(max-width:800px) {
+ body {background:transparent;}
+ .city-scene {position:fixed;bottom:auto;height:100svh;min-height:290px;}
+ .city-sun {top:9%;width:45px;right:21%;}
+ .city-scene::after {background:linear-gradient(0deg,#30382d55,transparent 40%);}
+ body > .comic-cover {position:fixed;top:clamp(105px,21svh,180px);bottom:calc(82px + env(safe-area-inset-bottom,0px));left:28px;right:28px;width:auto;height:auto;max-height:none;min-height:0;margin:0;padding:18px 16px;backdrop-filter:none;background:#fff2d7;box-shadow:0 5px 25px #675c4026;}
+ .comic-cover h1 {font-size:clamp(34px,11vw,48px);}
+ .comic-cover .subtitle {font-size:12px;margin:8px 0 0;}
+ .comic-cover .landing-eyebrow {font-size:9px;margin-bottom:6px;}
+ .comic-list {margin:14px 0 8px;touch-action:pan-y;-webkit-overflow-scrolling:touch;}
+ .comic-list {max-height:none;min-height:0;flex:1 1 auto;}
+ .city-controls {position:fixed;top:auto;left:24px;right:24px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:3;justify-content:space-between;gap:6px;font-size:9px;}
+ .city-controls input {width:75px;}
+ .copyright-notice {position:fixed;bottom:2px;right:12px;margin:0;text-align:center;color:#746650;}
+}
+@media(prefers-reduced-motion:reduce) {
+ *,*::before,*::after {scroll-behavior:auto!important;animation:none!important;transition:none!important;}
+}
+
+/* Printed comic dots and the original pointer-following pool of light. */
+.comic-screen-overlay,.mouse-highlight {position:fixed;inset:0;z-index:-1;pointer-events:none;}
+.comic-screen-overlay {background:radial-gradient(circle,#1827269c .8px,transparent 1.25px) 0 0/5px 5px;mix-blend-mode:multiply;opacity:.26;}
+.mouse-highlight {background:radial-gradient(circle 330px at var(--highlight-x,65vw) var(--highlight-y,35vh),#eed3b644 0%,#bd77531c 45%,transparent 75%);mix-blend-mode:screen;}
+body > .comic-cover {background:#fff0d8;background-image:linear-gradient(135deg,#fff5e1,#f3dab9);border:4px solid #16120e;border-radius:10px;box-shadow:7px 9px 0 #17171080,0 16px 50px #242a2940;backdrop-filter:none;transform:rotate(-2deg);}
+.comic-cover h1 {color:#e76419;text-shadow:3px 3px 0 #4b2f26,-2px -2px 0 #fff7e9;}
+.comic-cover .landing-eyebrow,.comic-cover .subtitle {color:#4a2f28;}
+.comic-list a {color:#171d16;background:#78a878;border:3px solid #171710;border-radius:5px;box-shadow:4px 4px 0 #171710;font-family:"Press Start 2P","Press Start 2P Local",monospace;font-size:11px;line-height:1.65;}
+.comic-list a::before {display:block;background:radial-gradient(circle,#17241755 .65px,transparent 1px) 0 0/4px 4px;filter:none;}
+.comic-list a:hover {background:#93bd83;box-shadow:6px 6px 0 #171710;transform:translate(-2px,-2px);}
+/* Scroll moves each mist bank at a different depth, in either direction. */
+.city-fog {position:absolute;left:var(--cloud-left);top:var(--cloud-top);width:var(--cloud-width);height:var(--cloud-height);z-index:3;pointer-events:none;will-change:transform;opacity:calc(var(--cloud-opacity) * .55);}
+@media(max-width:800px) {.city-fog {width:calc(var(--cloud-width) * 1.6);left:calc(var(--cloud-left) - 20%);}}
+@media(max-width:800px) {.comic-list a {font-size:10px;} .mouse-highlight {background:radial-gradient(circle 250px at 65% 28%,#eed3b62c,transparent 75%);}}
+
+@media(max-width:800px) and (max-height:540px) {
+ body > .comic-cover {top:64px;bottom:64px;padding:10px 14px;}
+ .comic-cover h1 {font-size:30px;}
+ .comic-cover .landing-eyebrow,.comic-cover .subtitle {display:none;}
+ .comic-list {margin-top:8px;}
+}
+
+/* Solid surfaces keep labels readable against clouds, stone, and the moving light. */
+.city-controls {color:#402620;background:#fff0d8;border:2px solid #9b553a;border-radius:6px;padding:7px 10px;box-shadow:0 3px 12px #170e0b77;}
+.city-controls button {color:#2b201c;background:#ef8864;border:1px solid #b85a37;font-weight:900;}
+.city-controls button:hover {color:#261711;background:#f2d9c5;}
+.city-controls input {accent-color:#d45b32;}
+.comic-cover h1 {-webkit-text-stroke:1px #170f0d;}
+.comic-list a {color:#402620;background:#ef8864;}
+.comic-list a:hover {color:#402620;background:#ffa57e;}
+.comic-list a.locked {opacity:1!important;color:#615044;background:#e3dacb;box-shadow:4px 4px 0 #8b7968;}
+.comic-list a::before {opacity:.45;}
+.scroll-hint {color:#4a2f28;}
+.copyright-notice {color:#fff1e4;background:#2b201ced;border-radius:3px;padding:2px 6px;font-size:10px;}
+@media(max-width:800px) {.copyright-notice {font-size:8px;}}
+
+.city-bird {position:absolute;top:0;left:0;z-index:2;pointer-events:none;will-change:transform;color:#30201d;}
+.city-bird svg {display:block;width:100%;height:auto;overflow:visible;fill:currentColor;}
+
+.cloud-puff {position:absolute;display:block;pointer-events:none;background:url("cloud-puff.svg") center/100% 100% no-repeat;}

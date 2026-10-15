@@ -102,7 +102,7 @@ The canonical score is instrumental country-western and Appalachian storytelling
 - The Hearing mechanic should use synchronized stems or filters so noise can be removed without restarting the track.
 - Dialogue and story text take priority in the mix; avoid persistent lead melodies in the speech range.
 - Strong events may use separate stingers, but the underlying loop must remain stable.
-- Button feedback remains `assets/audio/ping_pong.mp3` and is not part of the musical identity.
+- Button feedback remains `../shared/audio/ui/ping_pong.mp3` and is not part of the musical identity.
 
 ---
 

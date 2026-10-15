@@ -11,7 +11,7 @@
   "beats": [
     {
       "id": "flood_0",
-      "audioSfx": "assets/audio/sfx/flood_water.mp3",
+      "audioSfx": "../shared/audio/noah/sfx/flood_water.mp3",
       "cite": "Genesis 7:17",
       "items": [
         {

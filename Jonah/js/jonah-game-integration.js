@@ -149,7 +149,7 @@
       if (prayerSound) prayerSound.volume = Math.min(.2, .04 + prayerProgress * .16);
       if (elapsed >= duration) stop(true); else frame = requestAnimationFrame(tick);
     };
-    holdBtn.onpointerdown = e => { e.preventDefault(); prayerSound = window.__comic?.audio?.startSfxLoop('assets/audio/sfx/deep_bubbles.mp3', .04) || null; start = performance.now(); frame = requestAnimationFrame(tick); };
+    holdBtn.onpointerdown = e => { e.preventDefault(); prayerSound = window.__comic?.audio?.startSfxLoop('../shared/audio/jonah/sfx/deep_bubbles.mp3', .04) || null; start = performance.now(); frame = requestAnimationFrame(tick); };
     holdBtn.onpointerup = () => stop(false);
     holdBtn.onpointercancel = () => stop(false);
     holdBtn.onpointerleave = () => stop(false);

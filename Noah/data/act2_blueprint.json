@@ -184,7 +184,7 @@
         }
       ],
       "svg": "ch2_keel_laid",
-      "sfx": "assets/audio/sfx/ark_wood_creak.mp3"
+      "sfx": "../shared/audio/noah/sfx/ark_wood_creak.mp3"
     }
   ],
   "assetFolder": "act_02_blueprint",

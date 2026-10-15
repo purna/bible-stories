@@ -62,7 +62,7 @@
         }
       ],
       "svg": "ch4_animals_arrive",
-      "sfx": "assets/audio/sfx/animal_march.mp3"
+      "sfx": "../shared/audio/noah/sfx/animal_march.mp3"
     },
     {
       "id": "gathering_2",

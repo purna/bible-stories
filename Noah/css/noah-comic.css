@@ -25,7 +25,7 @@
 html, body {
   margin: 0; padding: 0; height: 100%; overflow: hidden;
   background: var(--ink);
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', 'Nunito Local', sans-serif;
   color: var(--cream);
 }
 
@@ -46,13 +46,13 @@ html, body {
   background-size: 12px 12px;
 }
 #startScreen .issue {
-  font-family: 'Space Mono', Tahoma, sans-serif; font-size: 12px;
+  font-family: 'Space Mono', 'Space Mono Local', Tahoma, sans-serif; font-size: 12px;
   color: var(--ink); background: #E8B84B;
   display: inline-block; padding: 4px 10px; margin-bottom: 14px;
   font-weight: 700; border: 2px solid var(--ink);
 }
 #startScreen h1 {
-  font-family: 'Bangers', Tahoma, sans-serif;
+  font-family: 'Bangers', 'Bangers Local', Tahoma, sans-serif;
   font-size: clamp(54px, 14vw, 90px);
   margin: 0; color: #E8B84B;
   -webkit-text-stroke: 4px var(--ink);
@@ -60,20 +60,20 @@ html, body {
   text-shadow: 6px 6px 0 #7EC850;
 }
 #startScreen .subtitle {
-  font-family: 'Baloo 2', Tahoma, sans-serif; font-size: 22px;
+  font-family: 'Baloo 2', 'Baloo 2 Local', Tahoma, sans-serif; font-size: 22px;
   color: var(--cream); margin: 4px 0 16px; font-weight: 800;
   text-shadow: 2px 2px 0px var(--ink);
 }
 .bigark { font-size: 64px; margin-bottom: 10px; animation: popInAnim .8s .2s both; }
 #startScreen p {
-  font-family: 'Press Start 2P', Tahoma, sans-serif; font-size: 10px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', Tahoma, sans-serif; font-size: 10px;
   max-width: 460px; color: var(--cream); opacity: .9;
   margin: 18px 0 26px; line-height: 2;
 
   font-weight: 700;
 }
 #startBtn {
-  font-family: 'Press Start 2P', Tahoma, sans-serif; font-size: 14px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', Tahoma, sans-serif; font-size: 14px;
   background: #7EC850; color: var(--ink);
   border: 4px solid var(--ink); padding: 16px 30px; cursor: pointer;
   box-shadow: 6px 6px 0 var(--ink); transition: all .1s;
@@ -157,7 +157,7 @@ html, body {
   padding: 22px 28px; pointer-events: auto; gap: 10px;
 }
 #chapterSelect {
-  font-family: 'Press Start 2P', monospace; font-size: 9px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 9px;
   letter-spacing: .05em; text-transform: uppercase;
   background-color: var(--accent-color); color: var(--ink);
   border: 4px solid var(--ink); padding: 10px 34px 10px 16px;
@@ -227,7 +227,7 @@ html, body {
   background-color: #E8B84B;
   background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 15%);
   background-size: 6px 6px;
-  color: var(--ink); font-family: 'Press Start 2P', monospace;
+  color: var(--ink); font-family: 'Press Start 2P', 'Press Start 2P Local', monospace;
   font-size: clamp(10px, 1.8vw, 13px); line-height: 1.6;
   padding: 14px 18px; border: 4px solid var(--ink);
   transform: rotate(-0.5deg); box-shadow: 6px 6px 0px var(--ink);
@@ -246,7 +246,7 @@ html, body {
 .bubble {
   position: relative; background-color: var(--bubble-bg); color: var(--text-color);
   padding: 18px 24px; border: 4px solid var(--ink);
-  font-family: 'Baloo 2', sans-serif; font-weight: 800;
+  font-family: 'Baloo 2', 'Baloo 2 Local', sans-serif; font-weight: 800;
   font-size: clamp(16px, 2.8vw, 24px); line-height: 1.35;
   width: 100%; border-radius: 16px; box-shadow: 6px 6px 0px var(--ink);
   text-align: center; hyphens: none; word-break: keep-all; max-width: 100%;
@@ -268,7 +268,7 @@ html, body {
 /* God's voice — gold dashed border, Bangers font */
 .bubble.god {
   background-color: #E8B84B; color: #0A0812;
-  font-family: 'Bangers', cursive; font-size: clamp(24px, 4.5vw, 40px);
+  font-family: 'Bangers', 'Bangers Local', cursive; font-size: clamp(24px, 4.5vw, 40px);
   letter-spacing: .05em; border-radius: 4px; border: 5px dashed var(--ink);
 }
 .bubble.god::after  { left: 50%; transform: translateX(-50%); }
@@ -278,7 +278,7 @@ html, body {
 
 /* ── SFX Text ─────────────────────────────────── */
 .sfx {
-  font-family: 'Bangers', cursive;
+  font-family: 'Bangers', 'Bangers Local', cursive;
   font-size: clamp(54px, 10vw, 90px);
   color: #E8B84B; -webkit-text-stroke: 4px var(--ink); paint-order: stroke fill;
   text-shadow: 6px 6px 0 #7EC850;
@@ -293,7 +293,7 @@ html, body {
 }
 #choices.show { opacity: 1; pointer-events: auto; }
 .choiceBtn {
-  font-family: 'Press Start 2P', monospace; font-size: 10px;
+  font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: 10px;
   background: #7EC850; border: 4px solid var(--ink); color: var(--ink);
   padding: 12px 20px; cursor: pointer; transition: all .1s;
   box-shadow: 0 6px 0 var(--ink); text-align: center;
@@ -304,7 +304,7 @@ html, body {
 /* ── Delay Note ──────────────────────────────── */
 #delayNote {
   position: absolute; right: 4vw; bottom: 20px; transform: rotate(-0.5deg);
-  z-index: 15; font-family: 'Press Start 2P', monospace; font-size: clamp(9px, 1.6vw, 12px);
+  z-index: 15; font-family: 'Press Start 2P', 'Press Start 2P Local', monospace; font-size: clamp(9px, 1.6vw, 12px);
   color: var(--ink); background-color: #E8B84B;
   background-image: radial-gradient(rgba(0,0,0,0.1) 15%, transparent 15%);
   background-size: 6px 6px; padding: 14px 22px; border: 4px solid var(--ink);
@@ -318,12 +318,12 @@ html, body {
   position: absolute; bottom: 2.4vh; left: 0; right: 0; z-index: 20;
   display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
   row-gap: 4px; gap: clamp(8px, 3vw, 22px); padding: 0 12px;
-  font-family: 'Space Mono', monospace; font-size: clamp(8px, 2.4vw, 11px);
+  font-family: 'Space Mono', 'Space Mono Local', monospace; font-size: clamp(8px, 2.4vw, 11px);
   letter-spacing: .05em; color: rgba(255,255,255,.5); pointer-events: none; text-align: center;
 }
 #nextBtn, #nextLineBtn {
   position: absolute; bottom: 6.2vh; right: 4vw; z-index: 25;
-  font-family: 'Baloo 2', sans-serif; font-weight: 900;
+  font-family: 'Baloo 2', 'Baloo 2 Local', sans-serif; font-weight: 900;
   color: var(--ink); border: 3px solid var(--ink); padding: 12px 24px; cursor: pointer;
   box-shadow: 4px 4px 0px var(--ink); opacity: 0; transform: translateY(20px);
   transition: .4s; pointer-events: none;
@@ -408,14 +408,14 @@ html, body {
   text-align: center;
 }
 .gathering-kicker {
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", "Bangers Local", cursive;
   letter-spacing: 0.18em;
   font-size: 16px;
   color: #ffd84d;
   text-shadow: 2px 2px 0 #0A0812;
 }
 .gathering-title {
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", "Bangers Local", cursive;
   font-size: clamp(22px, 4vw, 30px);
   margin: 4px 0 6px;
   color: #fff9e5;
@@ -428,7 +428,7 @@ html, body {
   margin: 0 0 12px;
 }
 .gathering-status {
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", "Bangers Local", cursive;
   font-size: 14px;
   letter-spacing: 0.08em;
   margin: 0 0 10px;
@@ -494,7 +494,7 @@ html, body {
   justify-content: center;
   background: rgba(0, 0, 0, 0.35);
   position: relative;
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", "Bangers Local", cursive;
   font-size: 11px;
   letter-spacing: 0.08em;
   color: #a3b18a;
@@ -514,7 +514,7 @@ html, body {
   margin-top: 4px;
 }
 .gathering-btn {
-  font-family: "Bangers", cursive;
+  font-family: "Bangers", "Bangers Local", cursive;
   font-size: 14px;
   letter-spacing: 0.08em;
   background: #4ECDC4;

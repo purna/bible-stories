@@ -151,7 +151,7 @@
     },
     {
       "id": "chariot_5",
-      "audioSfx": "assets/audio/sfx/heavenly_transition.mp3",
+      "audioSfx": "../shared/audio/elijah/sfx/heavenly_transition.mp3",
       "items": [
         {
           "id": "chariot_5_text",

@@ -10,7 +10,7 @@ Instrumental rural country-folk with wooden, weathered textures. Acoustic guitar
 
 - No vocals, novelty animal music, or imitation of an existing performer.
 - Rain and animal sounds are ambience, not baked loudly into music loops.
-- Music must leave space for narration and `assets/audio/ping_pong.mp3`.
+- Music must leave space for narration and `../shared/audio/ui/ping_pong.mp3`.
 - Target 90–150 seconds per track, with seamless OGG (preferred) and MP3 (fallback) versions.
 - Keep thunder, rain, animals, doors, axes, birds, and crowd mockery as separately controllable effects.
 
@@ -120,7 +120,7 @@ Instrumental rural country-folk with wooden, weathered textures. Acoustic guitar
 
 - Compose instrumental masters only: no vocals, chant, choir, borrowed melody, or imitation of a named performer.
 - Target 90–150 seconds for reading-led chapters and up to 180 seconds for sustained interaction. Deliver seamless **OGG** first and **MP3** fallback at matched duration and loudness.
-- Music lives under `assets/audio/music/`; act data references the relative path in `audio`. Start chapter cues together with the scene and use 350–800 ms fades rather than hard restarts.
+- Music lives under `../shared/audio/noah/music`; act data references the relative path in `audio`. Start chapter cues together with the scene and use 350–800 ms fades rather than hard restarts.
 - Keep narration space clear, especially 500 Hz–3 kHz. Target approximately -16 LUFS integrated for music masters, true peak at or below -1 dBTP, then audition at the runtime’s default music gain.
 - Do not bake rain, crowds, animals, fire, doors, impacts, or UI sounds into music. Those remain separately controllable SFX.
 - For interactive chapters, stems may be **foundation**, **tension**, **presence/hope**, and **reflection**. Stems must share sample length and loop points.

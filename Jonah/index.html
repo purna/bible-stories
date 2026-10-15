@@ -20,7 +20,10 @@
     <link rel="stylesheet" href="css/jonah-game.css">
     <link rel="stylesheet" href="css/info-modal.css">
     <script src="vendor/three.r128.min.js"></script>
-  </head>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Bangers&amp;family=Nunito:wght@700;900&amp;family=Press+Start+2P&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+</head>
 
 <body>
   <div id="startScreen">
@@ -34,7 +37,8 @@
       <div class="subtitle">& the Ominous Depths</div>
       <div class="bigfish">🐋</div>
       <p>An interactive single-panel comic book experience! Interact using actions, arrows, or touch swipes.</p>
-      <button id="startBtn">LAUNCH COMIC</button>
+      <p class="faith-theme">Explore faith, mercy, and the challenge of trusting God’s compassion for others.</p>
+            <button id="startBtn">LAUNCH COMIC</button>
     </div>
   </div>
 
@@ -161,7 +165,7 @@
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        const registerStoryWorker = () => navigator.serviceWorker.register('js/sw.js');
+        const registerStoryWorker = () => navigator.serviceWorker.register('sw.js');
         if (window.__storyAssetsReady) registerStoryWorker();
         else window.addEventListener('story:assetsready', registerStoryWorker, { once: true });
       });

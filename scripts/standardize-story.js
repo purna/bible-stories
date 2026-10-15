@@ -145,18 +145,8 @@ function consolidateCharacterFiles(storyDir) {
  * Ensure the button-click SFX exists.
  */
 function ensurePingPong(storyDir) {
-    const audioDir = path.join(storyDir, 'assets', 'audio');
-    const target = path.join(audioDir, 'ping_pong.mp3');
-    if (!fs.existsSync(target)) {
-        ensureDir(audioDir);
-        const templateSrc = path.join(TEMPLATE, 'assets', 'audio', 'ping_pong.mp3');
-        if (fs.existsSync(templateSrc)) {
-            fs.copyFileSync(templateSrc, target);
-            log(`  copied template ping_pong.mp3 -> assets/audio/ping_pong.mp3`);
-        } else {
-            log(`  WARNING: template ping_pong.mp3 not found, skipping`);
-        }
-    }
+    const target = path.join(path.dirname(TEMPLATE), 'shared', 'audio', 'ui', 'ping_pong.mp3');
+    if (!fs.existsSync(target)) log('  WARNING: shared/audio/ui/ping_pong.mp3 is missing');
 }
 
 /**

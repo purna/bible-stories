@@ -237,7 +237,7 @@
     },
     {
       "id": "temptation_7",
-      "audioSfx": "assets/audio/sfx/fall_crack.mp3",
+      "audioSfx": "../shared/audio/adam/sfx/fall_crack.mp3",
       "items": [
         {
           "id": "temptation_7_text",

@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="css/info-modal.css">
     <link rel="stylesheet" href="css/story-lettering.css">
     <link rel="stylesheet" href="../shared-tools/ui-feedback.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Bangers&amp;family=Nunito:wght@700;900&amp;family=Press+Start+2P&amp;family=Space+Mono:wght@400;700&amp;display=swap">
 </head>
 <body>
 
@@ -34,7 +37,8 @@
       <div class="subtitle">The Ark, The Flood &amp; The Covenant</div>
       <div class="bigark">🚢</div>
       <p>An interactive 10-chapter comic. Use arrow keys, swipe, or tap Next to navigate.</p>
-      <button id="startBtn">OPEN THE ARK</button>
+      <p class="faith-theme">Discover Noah’s faith in God through preparation, the flood, and a new beginning.</p>
+            <button id="startBtn">OPEN THE ARK</button>
     </div>
   </div>
 
@@ -131,7 +135,7 @@
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        const registerStoryWorker = () => navigator.serviceWorker.register('js/sw.js');
+        const registerStoryWorker = () => navigator.serviceWorker.register('sw.js');
         if (window.__storyAssetsReady) registerStoryWorker();
         else window.addEventListener('story:assetsready', registerStoryWorker, { once: true });
       });

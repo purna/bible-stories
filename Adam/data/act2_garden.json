@@ -5,8 +5,8 @@
   "particle": "dusk",
   "svg": "garden_eden",
   "audio": [
-    "assets/audio/music/Act2_After_the_Spring_Rain.ogg",
-    "assets/audio/music/Act2_After_the_Spring_Rain.mp3"
+    "assets/music/Act2_After_the_Spring_Rain.ogg",
+    "assets/music/Act2_After_the_Spring_Rain.mp3"
   ],
   "lines": [
     {
@@ -92,7 +92,7 @@
         }
       ],
       "svg": "garden_trees",
-      "sfx": "assets/audio/sfx/garden_water.mp3"
+      "sfx": "../shared/audio/adam/sfx/garden_water.mp3"
     },
     {
       "id": "garden_3",

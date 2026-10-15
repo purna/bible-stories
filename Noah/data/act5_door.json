@@ -82,7 +82,7 @@
         }
       ],
       "svg": "ch5_first_rain",
-      "sfx": "assets/audio/sfx/flood_thunder.mp3"
+      "sfx": "../shared/audio/noah/sfx/flood_thunder.mp3"
     },
     {
       "id": "door_2",

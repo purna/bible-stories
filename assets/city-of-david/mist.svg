@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" preserveAspectRatio="none">
+  <defs>
+    <filter id="soft" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="15"/></filter>
+    <linearGradient id="horizontal" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0">
+      <stop offset="0" stop-color="white" stop-opacity="0"/><stop offset=".025" stop-color="white" stop-opacity="0"/>
+      <stop offset=".18" stop-color="white"/><stop offset=".82" stop-color="white"/>
+      <stop offset=".975" stop-color="white" stop-opacity="0"/><stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="vertical" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="360">
+      <stop offset="0" stop-color="white" stop-opacity="0"/><stop offset=".04" stop-color="white" stop-opacity="0"/>
+      <stop offset=".23" stop-color="white"/><stop offset=".77" stop-color="white"/>
+      <stop offset=".96" stop-color="white" stop-opacity="0"/><stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="fade-x" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="360"><path fill="url(#horizontal)" d="M0 0h1200v360H0z"/></mask>
+    <mask id="fade-y" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="360"><path fill="url(#vertical)" d="M0 0h1200v360H0z"/></mask>
+  </defs>
+  <!-- Fade after blurring, on all four sides, so the image rectangle is invisible. -->
+  <g mask="url(#fade-x)"><g mask="url(#fade-y)"><g fill="#f5faf3" filter="url(#soft)">
+    <ellipse cx="130" cy="195" rx="210" ry="67"/><ellipse cx="325" cy="150" rx="165" ry="84"/>
+    <ellipse cx="520" cy="194" rx="220" ry="70"/><ellipse cx="720" cy="140" rx="190" ry="95"/>
+    <ellipse cx="940" cy="182" rx="220" ry="76"/><ellipse cx="1130" cy="137" rx="145" ry="65"/>
+  </g></g></g>
+</svg>
