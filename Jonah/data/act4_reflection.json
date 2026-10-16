@@ -1,0 +1,239 @@
+{
+  "id": "reflection",
+  "name": "Reflection",
+  "bg": "radial-gradient(circle at 40% 70%, #1e4d6b, #102a43 65%, #071220)",
+  "particle": "constellation",
+  "svg": "Act4_01_They_were_SPARED",
+  "audio": "assets/music/Act4_Running_from_Nineveh.mp3",
+  "lines": [
+    {
+      "speaker": "jonah",
+      "fx": "shake",
+      "align": "left",
+      "svg": "Act4_01_They_were_SPARED",
+      "id": "reflection_0",
+      "items": [
+        {
+          "id": "reflection_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "They were SPARED?! I walked all that way and now everyone just... gets to be fine?!",
+          "speaker": "jonah",
+          "align": "left",
+          "position": "middle-left",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "shake",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "right",
+      "svg": "Act4_02_Jonah_stomped_off_sat_under_a_fig_tree",
+      "choices": [
+        {
+          "label": "Jonah stays grumpy",
+          "note": "Jonah crosses his arms. He is, in fact, extremely grumpy."
+        },
+        {
+          "label": "Jonah kicks a pebble",
+          "note": "Jonah kicks a pebble into the dirt. Still grumpy."
+        }
+      ],
+      "id": "reflection_1",
+      "items": [
+        {
+          "id": "reflection_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jonah stomped off outside the city, sat under a leafy fig tree, and sulked in its shade.",
+          "speaker": "narrator",
+          "align": "right",
+          "position": "middle-right",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "svg": "Act4_03_worm_nibbled_the_roots_and_the_plant_withered",
+      "id": "reflection_2",
+      "items": [
+        {
+          "id": "reflection_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Overnight, a worm nibbled the roots, and the plant withered away completely.",
+          "speaker": "narrator",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "jonah",
+      "fx": "type",
+      "svg": "Act4_04_My_favorite_tree_Gone",
+      "id": "reflection_3",
+      "items": [
+        {
+          "id": "reflection_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "My favorite tree! Gone! Why does everything I care about disappear?!",
+          "speaker": "jonah",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "type",
+          "delay": 800
+        },
+        {
+          "id": "reflection_3_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "ARGH!",
+          "position": "top-middle",
+          "style": "sfx-impact",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "god",
+      "fx": "fade",
+      "svg": "Act4_05_Youre_upset_about_one_small_plant",
+      "id": "reflection_4",
+      "items": [
+        {
+          "id": "reflection_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "You're upset about one small plant that you didn't even plant yourself.",
+          "speaker": "god",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "god",
+      "fx": "fade",
+      "svg": "Act4_06_care_about_a_whole_city_full_of_people",
+      "id": "reflection_5",
+      "items": [
+        {
+          "id": "reflection_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "So why is it so hard to believe I'd care about a whole city full of people — even ones who made mistakes?",
+          "speaker": "god",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "jonah",
+      "fx": "fade",
+      "svg": "Act4_05_Youre_upset_about_one_small_plant",
+      "id": "reflection_6",
+      "items": [
+        {
+          "id": "reflection_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "...I guess I wanted them to get in trouble. But I got a second chance too. Out of a fish, of all places.",
+          "speaker": "jonah",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "type",
+      "svg": "Act4_07_everyone_stumbles_sometimes",
+      "id": "reflection_7",
+      "items": [
+        {
+          "id": "reflection_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "And Jonah sat in the quiet, and understood — everyone stumbles sometimes. Everyone deserves a way back.",
+          "speaker": "narrator",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "type",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "svg": "Act4_08_THE_END",
+      "id": "reflection_8",
+      "items": [
+        {
+          "id": "reflection_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "THE END",
+          "speaker": "narrator",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    }
+  ],
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_04_figtree_map/a_establish/jonah_act9_a_background.svg",
+      "middleGround": "assets/svg/act_04_figtree_map/a_establish/jonah_act9_a_middle_ground.svg",
+      "foreground": "assets/svg/act_04_figtree_map/a_establish/jonah_act9_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_04_figtree_map/b_core_action/jonah_act9_b_background.svg",
+      "middleGround": "assets/svg/act_04_figtree_map/b_core_action/jonah_act9_b_middle_ground.svg",
+      "foreground": "assets/svg/act_04_figtree_map/b_core_action/jonah_act9_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_04_figtree_map/c_resolve/jonah_act9_c_background.svg",
+      "middleGround": "assets/svg/act_04_figtree_map/c_resolve/jonah_act9_c_middle_ground.svg",
+      "foreground": "assets/svg/act_04_figtree_map/c_resolve/jonah_act9_c_foreground.svg"
+    }
+  },
+  "assetFolder": "act_04_figtree_map",
+  "assetStem": "jonah_act9"
+}

@@ -279,12 +279,21 @@ function startCreationInteraction(container) {
   }
 
   function cleanup() {
+    window.removeEventListener('story:chapterchanging', cancelForChapterChange);
     document.removeEventListener('keydown', keyHandler);
     if (window.StoryRuntime) StoryRuntime.unlock('creation-ordering');
   }
+  function cancelForChapterChange(){ cleanup(); container.remove(); updateNextBtn(); }
+  window.addEventListener('story:chapterchanging',cancelForChapterChange);
 
-  finishBtn.addEventListener('click', () => { cleanup(); container.remove(); });
-  skipBtn.addEventListener('click', () => { cleanup(); container.remove(); });
+
+  function closeCreation() {
+    cleanup();
+    container.remove();
+    updateNextBtn();
+  }
+  finishBtn.addEventListener('click', closeCreation);
+  skipBtn.addEventListener('click',()=>{closeCreation();lineIdx<currentAct().lines.length-1?goLine(1):goNextChapter();});
 
   document.addEventListener('keydown', keyHandler);
   if (window.StoryRuntime) StoryRuntime.setMode('game', { lock: 'creation-ordering' });
@@ -421,7 +430,7 @@ async function renderLine() {
             const charBox = document.createElement('div');
             charBox.className = 'char-container';
             charBox.innerHTML = await getAsset(CHARACTERS[data.speaker]);
-            overlay.appendChild(charBox);
+            if (frame.isConnected) frame.appendChild(charBox);
         }
 
         if (data.sfx) {
@@ -496,6 +505,8 @@ function renderChoices(data) {
             b.textContent = c.label;
             b.onclick = () => {
                 choicesBox.classList.remove('show');
+                choicesBox.replaceChildren();
+                delayNote.closest('.content-overlay')?.classList.add('choice-answered');
                 delayNote.textContent = c.note;
                 delayNote.classList.add('show');
                 choicePending = false;
@@ -513,7 +524,7 @@ function updateNextBtn() {
     const atEnd = lineIdx === currentAct().lines.length - 1 && !choicePending;
     nextBtn.className = `palette-act-${actIdx + 1}`;
     nextBtn.classList.toggle('show', atEnd);
-    nextBtn.textContent = actIdx === STORY.length - 1 ? 'Read Again ↺' : 'Next Chapter ↴';
+    nextBtn.textContent = actIdx === STORY.length - 1 ? 'Finish story →' : 'Next Chapter ↴';
 
     const notAtEnd = lineIdx < currentAct().lines.length - 1 && !choicePending;
     nextLineBtn.className = `palette-act-${actIdx + 1}`;
@@ -547,6 +558,7 @@ async function goLine(delta) {
 
 function goNextChapter() {
     if (transitioning) return;
+  if(window.StoryProgress){StoryProgress.markChapter(actIdx,STORY.length);if(actIdx===STORY.length-1&&StoryProgress.allComplete(STORY.length)){StoryProgress.openMap();return;}}
     if (actIdx === STORY.length - 1) { fallTransition(() => { actIdx = 0; lineIdx = 0; loadAct(); }); return; }
     fallTransition(() => { actIdx++; lineIdx = 0; loadAct(); });
 }

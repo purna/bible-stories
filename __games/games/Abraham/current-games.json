@@ -1,0 +1,111 @@
+{
+  "story": "Abraham",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "act1_the_call",
+      "title": "Ch.1 \u00b7 The Call",
+      "status": "live-copy",
+      "kind": "abraham",
+      "source": "Abraham/data/act1_the_call.json",
+      "file": "chapter-01.html",
+      "line": null
+    },
+    {
+      "chapter": 2,
+      "id": "act2_egypt_and_return",
+      "title": "Ch.2 \u00b7 Egypt and Return",
+      "status": "live-copy",
+      "kind": "abraham",
+      "source": "Abraham/data/act2_egypt_and_return.json",
+      "file": "chapter-02.html",
+      "line": null
+    },
+    {
+      "chapter": 3,
+      "id": "act3_lot_chooses",
+      "title": "Ch.3 \u00b7 Lot Chooses",
+      "status": "live-copy",
+      "kind": "abraham",
+      "source": "Abraham/data/act3_lot_chooses.json",
+      "file": "chapter-03.html",
+      "line": null
+    },
+    {
+      "chapter": 4,
+      "id": "act4_rescue_of_lot",
+      "title": "Ch.4 \u00b7 Rescue of Lot",
+      "status": "live-copy",
+      "kind": "abraham",
+      "source": "Abraham/data/act4_rescue_of_lot.json",
+      "file": "chapter-04.html",
+      "line": null
+    },
+    {
+      "chapter": 5,
+      "id": "act5_covenant_stars",
+      "title": "Ch.5 \u00b7 Covenant Stars",
+      "status": "live-copy",
+      "kind": "abraham",
+      "source": "Abraham/data/act5_covenant_stars.json",
+      "file": "chapter-05.html",
+      "line": null
+    },
+    {
+      "chapter": 6,
+      "id": "act6_hagar_in_the_wilderness",
+      "title": "Ch.6 \u00b7 Hagar in the Wilderness",
+      "status": "live-copy",
+      "kind": "abraham",
+      "source": "Abraham/data/act6_hagar_in_the_wilderness.json",
+      "file": "chapter-06.html",
+      "line": null
+    },
+    {
+      "chapter": 7,
+      "id": "act7_the_visitors",
+      "title": "Ch.7 \u00b7 The Visitors",
+      "status": "live-copy",
+      "kind": "abraham",
+      "source": "Abraham/data/act7_the_visitors.json",
+      "file": "chapter-07.html",
+      "line": null
+    },
+    {
+      "chapter": 8,
+      "id": "act8_sodom_and_gomorrah",
+      "title": "Ch.8 \u00b7 Sodom and Gomorrah",
+      "status": "live-copy",
+      "kind": "abraham",
+      "source": "Abraham/data/act8_sodom_and_gomorrah.json",
+      "file": "chapter-08.html",
+      "line": null
+    },
+    {
+      "chapter": 9,
+      "id": "act9_isaac_is_born",
+      "title": "Ch.9 \u00b7 Isaac Is Born",
+      "status": "live-copy",
+      "kind": "abraham",
+      "source": "Abraham/data/act9_isaac_is_born.json",
+      "file": "chapter-09.html",
+      "line": null
+    },
+    {
+      "chapter": 10,
+      "id": "act10_moriah",
+      "title": "Ch.10 \u00b7 Moriah",
+      "status": "live-copy",
+      "kind": "abraham",
+      "source": "Abraham/data/act10_moriah.json",
+      "file": "chapter-10.html",
+      "line": null
+    }
+  ],
+  "snapshotSources": [
+    {
+      "path": "__shared/chapter-games/native/abraham.js",
+      "sha256": "174cfe0ff5edd01e1a13380b98bba512cd5c4cd17499ff2b2d972a0f5ed2deca"
+    }
+  ]
+}

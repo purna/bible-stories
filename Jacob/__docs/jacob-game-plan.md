@@ -31,41 +31,44 @@ Can a grasping deceiver become someone who receives blessing without stealing it
 
 Use no more than one primary mechanic and one optional discovery per chapter. Reuse navigation, dialogue, audio, and layer-loading systems from `__Template`. Reserve 3D for actions that benefit from depth; otherwise keep the middle ground empty and use SVG layers.
 
-<!-- act-mini-games:start -->
-## Simple game in every act
 
-Each act contains one short, readable mini-game tied directly to its canonical story action. The target play time is **30–90 seconds** on a first attempt. These are participation mechanics, not alternate-history branches: completing the game advances the scripture-aligned event already defined by the story.
-
-| Act | Chapter | Mini-game | Game engine type | Example prototype | Objective | Input | Core loop | Completion and story payoff | Gentle retry / accessibility |
-|---:|---|---|---|---|---|---|---|---|---|
-| 1 | The Birthright | **Look Closely** | `look-closely` | `look_closely_3x3.html` | Weigh hunger against a lasting inheritance. | Select evidence in the panel, then choose the statement it supports. | Inspect two or three clues, reveal their meaning, and make a considered response. | Complete the action, settle the scene, then reveal the canonical “The Birthright” outcome and scripture reference. | Unexamined evidence remains highlighted; the player can revise before confirming. |
-| 2 | The Stolen Blessing | **Fit the Pieces** | `fit-pieces` | `fit_pieces_4x3.html` | Assemble the disguise, then witness its cost. | Drag or select pieces and snap them into highlighted positions. | Inspect the outline, choose one piece, place it, then see the structure respond. | Complete the action, settle the scene, then reveal the canonical “The Stolen Blessing” outcome and scripture reference. | An incorrect piece returns gently to the tray; its correct area glows after two attempts. |
-| 3 | Bethel | **Fit the Pieces** | `fit-pieces` | `fit_pieces_4x4.html` | Build the stone pillar after the ladder dream. | Drag or select pieces and snap them into highlighted positions. | Inspect the outline, choose one piece, place it, then see the structure respond. | Complete the action, settle the scene, then reveal the canonical “Bethel” outcome and scripture reference. | An incorrect piece returns gently to the tray; its correct area glows after two attempts. |
-| 4 | Rachel at the Well | **Gather with Care** | `look-closely` | `sheep_count.html` | Move the stone and water the flock. | Tap or drag the needed items into a basket, jar, pen, or marked area. | Read the short need list, collect one suitable item at a time, and stop when there is enough. | Complete the action, settle the scene, then reveal the canonical “Rachel at the Well” outcome and scripture reference. | Extra or unsuitable items slide back with a calm hint; there is no timer unless the story requires urgency. |
-| 5 | Laban’s Bargain | **Watch and Move** | `watch-and-move` | `watch_move_river_crossing_easy.html` | Track changing wages and wedding promises. | Hold to observe; release or tap a destination when sight-lines are clear. | Observe a repeating movement pattern, move during a safe opening, and reach the marked point. | Complete the action, settle the scene, then reveal the canonical “Laban’s Bargain” outcome and scripture reference. | Detection freezes the moment and rewinds to the previous cover point without losing progress. |
-| 6 | The Flocks | **See the Pattern** | `look-closely` | `sheep_count.html` | Sort speckled and spotted animals fairly. | Drag cards, symbols, people, or objects into matching slots. | Inspect visual clues, make one match, receive immediate context, and complete the small pattern. | Complete the action, settle the scene, then reveal the canonical “The Flocks” outcome and scripture reference. | A mismatch remains available and highlights one relevant clue rather than marking failure. |
-| 7 | Leaving Haran | **Gather with Care** | `gather-with-care` | `manna_drop.html` | Pack the camp before Laban catches up. | Tap or drag the needed items into a basket, jar, pen, or marked area. | Read the short need list, collect one suitable item at a time, and stop when there is enough. | Complete the action, settle the scene, then reveal the canonical “Leaving Haran” outcome and scripture reference. | Extra or unsuitable items slide back with a calm hint; there is no timer unless the story requires urgency. |
-| 8 | The Night Wrestling | **Ready, Then Act** | `ready-then-act` | `ready_then_act_multibar_balanced.html` | Hold on through the night and receive a new name. | Press/hold and release inside a broad highlighted timing window. | Watch a slow readable rhythm, prepare the action, and release once at the story’s decisive beat. | Complete the action, settle the scene, then reveal the canonical “The Night Wrestling” outcome and scripture reference. | The timing window widens after a miss and reduced-motion mode replaces movement with a clear progress ring. |
-| 9 | Meeting Esau | **Complete the Story Beat** | `tap-sequence` | `tap_sequence_3x2.html` | Arrange gifts, then step forward unarmed. | Tap/click the highlighted story objects in a clear sequence. | Observe the panel, perform three small actions, and watch the canonical beat resolve. | Complete the action, settle the scene, then reveal the canonical “Meeting Esau” outcome and scripture reference. | The next valid object gains an outline after a pause; progress is never reset. |
-| 10 | Joseph’s Coats | **See the Pattern** | `match-it-up` | `match_it_up_4x4.html` | Recognise favouritism forming in the household. | Drag cards, symbols, people, or objects into matching slots. | Inspect visual clues, make one match, receive immediate context, and complete the small pattern. | Complete the action, settle the scene, then reveal the canonical “Joseph’s Coats” outcome and scripture reference. | A mismatch remains available and highlights one relevant clue rather than marking failure. |
-
-### Shared mini-game rules
-
-- Teach the game inside the panel with one animated example; do not open a separate instruction screen.
-- Support pointer, touch, keyboard and switch-style sequential focus. Tap targets are at least 44×44 CSS pixels.
-- Do not require more than three simultaneous resources, eight draggable items, or one primary action verb per game.
-- A first play should take 30–90 seconds; experienced replay should take under 45 seconds.
-- No game-over screen, lives, score chasing, loot, combat grind, or canonical “bad ending.” Mistakes produce a clue and a quick retry.
-- Pause camera movement and decorative animation while the player is reading instructions or choosing.
-- Reduced-motion mode replaces timing, drag momentum and camera movement with discrete selection and progress states.
-- Sound confirms actions but never carries required information without captions, shape, colour-independent icons, or motion-safe highlights.
-- Save only completion and optional discovery flags. Restarting an act resets its mini-game locally without changing prior chapters.
-
-### Implementation contract
-
-Each act JSON should declare `game.id`, `game.type`, `game.objective`, `game.controls`, `game.success`, and `game.accessibility`. The interaction mounts inside the middle-ground layer, locks story navigation only while actively manipulated, calls the shared completion callback once, then settles all 3D/SVG elements before the scripture reference appears.
-<!-- act-mini-games:end -->
 
 ---
 
 **Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./jacob-design-source-of-truth.md) | [Music SOT](./jacob-music-source-of-truth.md) | [SFX SOT](./jacob-sfx-source-of-truth.md) | [Game Plan](./jacob-game-plan.md)
+
+<!-- faith-games:start -->
+## Revised chapter games and faith crafting
+
+**Planning update — not yet integrated into the live games.** This section supersedes earlier prototype assignments. Every challenge follows the final comic panel. Shared native modules; no frames. Each chapter in this story uses a different mechanic. Cross-story adaptations must change rules or interaction, not just labels. Full unique-mechanic review remains required before implementation.
+
+Source: [HTML/CSS/JavaScript game collection](https://github.com/he-is-talha/html-css-javascript-games). Exact source folders and integration status are recorded in [the shared plan](../../__shared/chapter-games/story-game-plan.json). These are mechanic references, not imported code.
+
+| Chapter | Story beat | Mechanic | Story action | Proposed rules |
+|---:|---|---|---|---|
+| 1 | The Birthright | memory | Weigh hunger against a lasting inheritance. | Reveal pairs of illustrated story objects; matched pairs stay visible. |
+| 2 | The Stolen Blessing | sequence | Assemble the disguise, then witness its cost. | Repeat a short visual signal sequence; add one signal after each round. |
+| 3 | Bethel | faith-crafting | Build the stone pillar after the ladder dream. | Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. |
+| 4 | Rachel at the Well | catch | Move the stone and water the flock. | Tap the requested moving story objects; ignore unrelated objects without a penalty. |
+| 5 | Laban’s Bargain | route | Track changing wages and wedding promises. | Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt. |
+| 6 | The Flocks | crossing | Sort speckled and spotted animals fairly. | Move one lane at a time when the passage is clear; pause the lanes while reading. |
+| 7 | Leaving Haran | stack | Pack the camp before Laban catches up. | Place a moving building piece over a marked foundation; use a wide timing window. |
+| 8 | The Night Wrestling | packing | Hold on through the night and receive a new name. | Rotate and place a small set of fixed pieces into an outline; no falling timer. |
+| 9 | Meeting Esau | order | Arrange gifts, then step forward unarmed. | Slide illustrated tiles into the story order; allow an easy reset and step hint. |
+| 10 | Joseph’s Coats | search | Recognise favouritism forming in the household. | Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion. |
+
+### Faith crafting: chapter 3
+
+Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. Materials: Stone, Wood, Flax, Oil. Goal: **Pillar, Staff**.
+
+- Wood + Flax → **Staff**. Timber bound with fibre.
+- Stone + Stone + Oil → **Pillar**. Stones set up and anointed.
+
+Use a visible recipe card and a three-slot bench; allow repeated ingredients. If a recipe has more than three ingredients, split it into sub-recipes. Materials are replenishable and unfinished work is saved. An unsuccessful combination returns every item. Use SVG material icons and visible labels, not emoji. Do not treat faith, patience or miracles as manufactured inventory items. The character prepares and responds; God acts in the narrative. Objects are a playful illustration, not a claim about historical manufacture.
+
+### Mobile and completion requirements
+
+At 320×568, use one scrolling column, 44px minimum targets, a two-column ingredient tray and a wrapping button row. Tap-select then tap-place must provide every drag action. Keep the chapter selector above the game. Text and buttons sit above the comic dots. Provide SVG icons, accessible labels, keyboard controls, visual equivalents for sound and reduced motion. No required typing, microphone, tilt or fast reaction. Skip → stays available until success; hide it after success and show Continue →. Save chapter reading, skipped challenges and game wins separately. Each game must expose mount, complete, skip and destroy hooks, including listener/timer cleanup.
+
+Chapter assignments follow the current manifest and canonical story actions.
+<!-- faith-games:end -->

@@ -1,0 +1,92 @@
+{
+  "story": "Nehemiah",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "bad_news",
+      "title": "Ch.1 \u00b7 Bad News",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Nehemiah/data/act1_bad_news.json"
+    },
+    {
+      "chapter": 2,
+      "id": "before_the_king",
+      "title": "Ch.2 \u00b7 Before the King",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Nehemiah/data/act2_before_the_king.json"
+    },
+    {
+      "chapter": 3,
+      "id": "night_inspection",
+      "title": "Ch.3 \u00b7 Night Inspection",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Nehemiah/data/act3_night_inspection.json"
+    },
+    {
+      "chapter": 4,
+      "id": "rise_and_build",
+      "title": "Ch.4 \u00b7 Rise and Build",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Nehemiah/data/act4_rise_and_build.json"
+    },
+    {
+      "chapter": 5,
+      "id": "sword_and_trowel",
+      "title": "Ch.5 \u00b7 Sword and Trowel",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Nehemiah/data/act5_sword_and_trowel.json"
+    },
+    {
+      "chapter": 6,
+      "id": "the_outcry",
+      "title": "Ch.6 \u00b7 The Outcry",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Nehemiah/data/act6_the_outcry.json"
+    },
+    {
+      "chapter": 7,
+      "id": "plots_and_rumours",
+      "title": "Ch.7 \u00b7 Plots and Rumours",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Nehemiah/data/act7_plots_and_rumours.json"
+    },
+    {
+      "chapter": 8,
+      "id": "the_wall_completed",
+      "title": "Ch.8 \u00b7 The Wall Completed",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Nehemiah/data/act8_the_wall_completed.json"
+    },
+    {
+      "chapter": 9,
+      "id": "the_book_read",
+      "title": "Ch.9 \u00b7 The Book Read",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Nehemiah/data/act9_the_book_read.json"
+    },
+    {
+      "chapter": 10,
+      "id": "reform",
+      "title": "Ch.10 \u00b7 Reform",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Nehemiah/data/act10_reform.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Nehemiah.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

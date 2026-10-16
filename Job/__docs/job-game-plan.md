@@ -31,41 +31,44 @@ Can faith remain honest when suffering refuses a simple explanation? The game st
 
 Use no more than one primary mechanic and one optional discovery per chapter. Reuse navigation, dialogue, audio, and layer-loading systems from `__Template`. Reserve 3D for actions that benefit from depth; otherwise keep the middle ground empty and use SVG layers.
 
-<!-- act-mini-games:start -->
-## Simple game in every act
 
-Each act contains one short, readable mini-game tied directly to its canonical story action. The target play time is **30–90 seconds** on a first attempt. These are participation mechanics, not alternate-history branches: completing the game advances the scripture-aligned event already defined by the story.
-
-| Act | Chapter | Mini-game | Game engine type | Example prototype | Objective | Input | Core loop | Completion and story payoff | Gentle retry / accessibility |
-|---:|---|---|---|---|---|---|---|---|---|
-| 1 | A Blameless Life | **Keep the Balance** | `keep-balance` | `keep_balance_x3.html` | Tend Job’s household and practice generous justice. | Drag limited tokens between two or three clearly labelled needs. | Notice which need is falling, make one adjustment, and keep every need inside the safe band for a short cycle. | Complete the action, settle the scene, then reveal the canonical “A Blameless Life” outcome and scripture reference. | The game pauses before a meter empties and explains one helpful adjustment; no irreversible failure state. |
-| 2 | The Accuser | **Complete the Story Beat** | `tap-sequence` | `tap_sequence_4x1.html` | Observe the heavenly challenge without controlling it. | Tap/click the highlighted story objects in a clear sequence. | Observe the panel, perform three small actions, and watch the canonical beat resolve. | Complete the action, settle the scene, then reveal the canonical “The Accuser” outcome and scripture reference. | The next valid object gains an outline after a pause; progress is never reset. |
-| 3 | Loss upon Loss | **Complete the Story Beat** | `tap-sequence` | `tap_sequence_3x2.html` | Receive each messenger and sit with the silence. | Tap/click the highlighted story objects in a clear sequence. | Observe the panel, perform three small actions, and watch the canonical beat resolve. | Complete the action, settle the scene, then reveal the canonical “Loss upon Loss” outcome and scripture reference. | The next valid object gains an outline after a pause; progress is never reset. |
-| 4 | Seven Days | **Keep the Balance** | `keep-balance` | `keep_balance_x3_v2.html` | Keep vigil without offering explanations. | Drag limited tokens between two or three clearly labelled needs. | Notice which need is falling, make one adjustment, and keep every need inside the safe band for a short cycle. | Complete the action, settle the scene, then reveal the canonical “Seven Days” outcome and scripture reference. | The game pauses before a meter empties and explains one helpful adjustment; no irreversible failure state. |
-| 5 | Job Speaks | **Fit the Pieces** | `fit-pieces` | `fit_pieces_3x3.html` | Build an honest lament from grief and protest. | Drag or select pieces and snap them into highlighted positions. | Inspect the outline, choose one piece, place it, then see the structure respond. | Complete the action, settle the scene, then reveal the canonical “Job Speaks” outcome and scripture reference. | An incorrect piece returns gently to the tray; its correct area glows after two attempts. |
-| 6 | The Friends | **See the Pattern** | `match-it-up` | `match_it_up_4x4.html` | Identify when counsel becomes accusation. | Drag cards, symbols, people, or objects into matching slots. | Inspect visual clues, make one match, receive immediate context, and complete the small pattern. | Complete the action, settle the scene, then reveal the canonical “The Friends” outcome and scripture reference. | A mismatch remains available and highlights one relevant clue rather than marking failure. |
-| 7 | Elihu | **Listen and Respond** | `listen-respond` | `listen_respond_3x2.html` | Listen, test claims, and resist easy scoring. | Choose or hold the clearest phrase/sound when the visual noise settles. | Wait through competing signals, identify the meaningful cue, then respond with the matching action or phrase. | Complete the action, settle the scene, then reveal the canonical “Elihu” outcome and scripture reference. | Noise reduces gradually after a missed cue; captions and a visual pulse always provide equivalent information. |
-| 8 | Out of the Whirlwind | **Complete the Story Beat** | `tap-sequence` | `tap_sequence_4x1.html` | Explore questions about creation. | Tap/click the highlighted story objects in a clear sequence. | Observe the panel, perform three small actions, and watch the canonical beat resolve. | Complete the action, settle the scene, then reveal the canonical “Out of the Whirlwind” outcome and scripture reference. | The next valid object gains an outline after a pause; progress is never reset. |
-| 9 | Job Responds | **Complete the Story Beat** | `tap-sequence` | `tap_sequence_3x2.html` | Release the demand to master every answer. | Tap/click the highlighted story objects in a clear sequence. | Observe the panel, perform three small actions, and watch the canonical beat resolve. | Complete the action, settle the scene, then reveal the canonical “Job Responds” outcome and scripture reference. | The next valid object gains an outline after a pause; progress is never reset. |
-| 10 | Restoration | **Fit the Pieces** | `fit-pieces` | `fit_pieces_4x3.html` | Rebuild community without treating new gifts as replacements. | Drag or select pieces and snap them into highlighted positions. | Inspect the outline, choose one piece, place it, then see the structure respond. | Complete the action, settle the scene, then reveal the canonical “Restoration” outcome and scripture reference. | An incorrect piece returns gently to the tray; its correct area glows after two attempts. |
-
-### Shared mini-game rules
-
-- Teach the game inside the panel with one animated example; do not open a separate instruction screen.
-- Support pointer, touch, keyboard and switch-style sequential focus. Tap targets are at least 44×44 CSS pixels.
-- Do not require more than three simultaneous resources, eight draggable items, or one primary action verb per game.
-- A first play should take 30–90 seconds; experienced replay should take under 45 seconds.
-- No game-over screen, lives, score chasing, loot, combat grind, or canonical “bad ending.” Mistakes produce a clue and a quick retry.
-- Pause camera movement and decorative animation while the player is reading instructions or choosing.
-- Reduced-motion mode replaces timing, drag momentum and camera movement with discrete selection and progress states.
-- Sound confirms actions but never carries required information without captions, shape, colour-independent icons, or motion-safe highlights.
-- Save only completion and optional discovery flags. Restarting an act resets its mini-game locally without changing prior chapters.
-
-### Implementation contract
-
-Each act JSON should declare `game.id`, `game.type`, `game.objective`, `game.controls`, `game.success`, and `game.accessibility`. The interaction mounts inside the middle-ground layer, locks story navigation only while actively manipulated, calls the shared completion callback once, then settles all 3D/SVG elements before the scripture reference appears.
-<!-- act-mini-games:end -->
 
 ---
 
 **Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./job-design-source-of-truth.md) | [Music SOT](./job-music-source-of-truth.md) | [SFX SOT](./job-sfx-source-of-truth.md) | [Game Plan](./job-game-plan.md)
+
+<!-- faith-games:start -->
+## Revised chapter games and faith crafting
+
+**Planning update — not yet integrated into the live games.** This section supersedes earlier prototype assignments. Every challenge follows the final comic panel. Shared native modules; no frames. Each chapter in this story uses a different mechanic. Cross-story adaptations must change rules or interaction, not just labels. Full unique-mechanic review remains required before implementation.
+
+Source: [HTML/CSS/JavaScript game collection](https://github.com/he-is-talha/html-css-javascript-games). Exact source folders and integration status are recorded in [the shared plan](../../__shared/chapter-games/story-game-plan.json). These are mechanic references, not imported code.
+
+| Chapter | Story beat | Mechanic | Story action | Proposed rules |
+|---:|---|---|---|---|
+| 1 | A Blameless Life | memory | Tend Job’s household and practice generous justice. | Reveal pairs of illustrated story objects; matched pairs stay visible. |
+| 2 | The Accuser | sequence | Observe the heavenly challenge without controlling it. | Repeat a short visual signal sequence; add one signal after each round. |
+| 3 | Loss upon Loss | route | Receive each messenger and sit with the silence. | Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt. |
+| 4 | Seven Days | packing | Keep vigil without offering explanations. | Rotate and place a small set of fixed pieces into an outline; no falling timer. |
+| 5 | Job Speaks | stack | Build an honest lament from grief and protest. | Place a moving building piece over a marked foundation; use a wide timing window. |
+| 6 | The Friends | faith-crafting | Identify when counsel becomes accusation. | Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. |
+| 7 | Elihu | crossing | Listen, test claims, and resist easy scoring. | Move one lane at a time when the passage is clear; pause the lanes while reading. |
+| 8 | Out of the Whirlwind | search | Explore questions about creation. | Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion. |
+| 9 | Job Responds | picture | Release the demand to master every answer. | Fill a small picture grid from row and column clues; provide a reveal-one-cell hint. |
+| 10 | Restoration | order | Rebuild community without treating new gifts as replacements. | Slide illustrated tiles into the story order; allow an easy reset and step hint. |
+
+### Faith crafting: chapter 6
+
+Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. Materials: Stone, Wood, Flax. Goal: **Altar, Cloth**.
+
+- Flax + Flax → **Cloth**. Woven for mourning.
+- Stone + Stone + Wood → **Altar**. Stacked stones and timber.
+
+Use a visible recipe card and a three-slot bench; allow repeated ingredients. If a recipe has more than three ingredients, split it into sub-recipes. Materials are replenishable and unfinished work is saved. An unsuccessful combination returns every item. Use SVG material icons and visible labels, not emoji. Do not treat faith, patience or miracles as manufactured inventory items. The character prepares and responds; God acts in the narrative. Objects are a playful illustration, not a claim about historical manufacture.
+
+### Mobile and completion requirements
+
+At 320×568, use one scrolling column, 44px minimum targets, a two-column ingredient tray and a wrapping button row. Tap-select then tap-place must provide every drag action. Keep the chapter selector above the game. Text and buttons sit above the comic dots. Provide SVG icons, accessible labels, keyboard controls, visual equivalents for sound and reduced motion. No required typing, microphone, tilt or fast reaction. Skip → stays available until success; hide it after success and show Continue →. Save chapter reading, skipped challenges and game wins separately. Each game must expose mount, complete, skip and destroy hooks, including listener/timer cleanup.
+
+Chapter assignments follow the current manifest and canonical story actions.
+<!-- faith-games:end -->

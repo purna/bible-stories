@@ -1,0 +1,84 @@
+{
+  "story": "Isaiah",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "a_city_in_need",
+      "title": "Ch.1 \u00b7 A City in Need",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Isaiah/data/act1_a_city_in_need.json"
+    },
+    {
+      "chapter": 2,
+      "id": "the_holy_throne",
+      "title": "Ch.2 \u00b7 The Holy Throne",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Isaiah/data/act2_the_holy_throne.json"
+    },
+    {
+      "chapter": 3,
+      "id": "the_vineyard_song",
+      "title": "Ch.3 \u00b7 The Vineyard Song",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Isaiah/data/act3_the_vineyard_song.json"
+    },
+    {
+      "chapter": 4,
+      "id": "immanuel_sign",
+      "title": "Ch.4 \u00b7 Immanuel Sign",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Isaiah/data/act4_immanuel_sign.json"
+    },
+    {
+      "chapter": 5,
+      "id": "the_assyrian_shadow",
+      "title": "Ch.5 \u00b7 The Assyrian Shadow",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Isaiah/data/act5_the_assyrian_shadow.json"
+    },
+    {
+      "chapter": 6,
+      "id": "hezekiah_s_crisis",
+      "title": "Ch.6 \u00b7 Hezekiah\u2019s Crisis",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Isaiah/data/act6_hezekiah_s_crisis.json"
+    },
+    {
+      "chapter": 7,
+      "id": "comfort_my_people",
+      "title": "Ch.7 \u00b7 Comfort My People",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Isaiah/data/act7_comfort_my_people.json"
+    },
+    {
+      "chapter": 8,
+      "id": "the_servant",
+      "title": "Ch.8 \u00b7 The Servant",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Isaiah/data/act8_the_servant.json"
+    },
+    {
+      "chapter": 9,
+      "id": "new_creation",
+      "title": "Ch.9 \u00b7 New Creation",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Isaiah/data/act9_new_creation.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Isaiah.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

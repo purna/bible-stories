@@ -1,0 +1,68 @@
+{
+  "story": "Gideon",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "the_winepress",
+      "title": "Ch.1 \u00b7 The Winepress",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Gideon/data/act1_the_winepress.json"
+    },
+    {
+      "chapter": 2,
+      "id": "the_sign",
+      "title": "Ch.2 \u00b7 The Sign",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Gideon/data/act2_the_sign.json"
+    },
+    {
+      "chapter": 3,
+      "id": "the_fleece",
+      "title": "Ch.3 \u00b7 The Fleece",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Gideon/data/act3_the_fleece.json"
+    },
+    {
+      "chapter": 4,
+      "id": "the_army_reduced",
+      "title": "Ch.4 \u00b7 The Army Reduced",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Gideon/data/act4_the_army_reduced.json"
+    },
+    {
+      "chapter": 5,
+      "id": "the_dream",
+      "title": "Ch.5 \u00b7 The Dream",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Gideon/data/act5_the_dream.json"
+    },
+    {
+      "chapter": 6,
+      "id": "the_battle",
+      "title": "Ch.6 \u00b7 The Battle",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Gideon/data/act6_the_battle.json"
+    },
+    {
+      "chapter": 7,
+      "id": "the_victory",
+      "title": "Ch.7 \u00b7 The Victory",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Gideon/data/act7_the_victory.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Ruth.html",
+    "status": "standalone-prototype",
+    "adapted": true
+  }
+}

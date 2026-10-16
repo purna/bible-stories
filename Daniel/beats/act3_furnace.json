@@ -254,7 +254,7 @@
       "id": "furnace_7",
       "choices": [
         {
-          "label": "They are rescued before the fire 🙏",
+          "label": "They are rescued before the fire",
           "note": "No. They walk IN it. The rescue happens inside the thing they refused to avoid.",
           "decisionId": "furnace_rescue_inside",
           "tags": [
@@ -263,7 +263,7 @@
           ]
         },
         {
-          "label": "They walk out unharmed ✅",
+          "label": "They walk out unharmed",
           "note": "Not a hair singed. No smell of smoke. The fire had no power over them.",
           "decisionId": "furnace_unharmed",
           "tags": [

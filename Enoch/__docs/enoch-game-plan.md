@@ -28,38 +28,42 @@ What does it mean to walk faithfully across an ordinary lifetime? The game stays
 
 Use no more than one primary mechanic and one optional discovery per chapter. Reuse navigation, dialogue, audio, and layer-loading systems from `__Template`. Reserve 3D for actions that benefit from depth; otherwise keep the middle ground empty and use SVG layers.
 
-<!-- act-mini-games:start -->
-## Simple game in every act
 
-Each act contains one short, readable mini-game tied directly to its canonical story action. The target play time is **30–90 seconds** on a first attempt. These are participation mechanics, not alternate-history branches: completing the game advances the scripture-aligned event already defined by the story.
-
-| Act | Chapter | Mini-game | Game engine type | Example prototype | Objective | Input | Core loop | Completion and story payoff | Gentle retry / accessibility |
-|---:|---|---|---|---|---|---|---|---|---|
-| 1 | A Family Record | **Fit the Pieces** | `fit-pieces` | `fit_pieces_3x3.html` | Place Enoch correctly in the generations. | Drag or select pieces and snap them into highlighted positions. | Inspect the outline, choose one piece, place it, then see the structure respond. | Complete the action, settle the scene, then reveal the canonical “A Family Record” outcome and scripture reference. | An incorrect piece returns gently to the tray; its correct area glows after two attempts. |
-| 2 | The First Walk | **Find the Faithful Path** | `find-path` | `find_path_9x9.html` | Choose a daily route that serves neighbours. | Tap/click adjacent waypoints or use arrow keys to move one step. | Read the environment, choose the next safe waypoint, and advance the group toward the destination. | Complete the action, settle the scene, then reveal the canonical “The First Walk” outcome and scripture reference. | A risky route pauses with a visual hint and returns the player to the last safe waypoint. |
-| 3 | A Son Named Methuselah | **Gather with Care** | `gather-with-care` | `manna_drop.html` | Prepare the home for a new child. | Tap or drag the needed items into a basket, jar, pen, or marked area. | Read the short need list, collect one suitable item at a time, and stop when there is enough. | Complete the action, settle the scene, then reveal the canonical “A Son Named Methuselah” outcome and scripture reference. | Extra or unsuitable items slide back with a calm hint; there is no timer unless the story requires urgency. |
-| 4 | Years of Faithfulness | **Complete the Story Beat** | `tap-sequence` | `tap_sequence_4x1.html` | Complete repeated small acts without a fame meter. | Tap/click the highlighted story objects in a clear sequence. | Observe the panel, perform three small actions, and watch the canonical beat resolve. | Complete the action, settle the scene, then reveal the canonical “Years of Faithfulness” outcome and scripture reference. | The next valid object gains an outline after a pause; progress is never reset. |
-| 5 | A Warning | **Listen and Respond** | `listen-respond` | `listen_respond_3x2.html` | Deliver a hard truth without cruelty. | Choose or hold the clearest phrase/sound when the visual noise settles. | Wait through competing signals, identify the meaningful cue, then respond with the matching action or phrase. | Complete the action, settle the scene, then reveal the canonical “A Warning” outcome and scripture reference. | Noise reduces gradually after a missed cue; captions and a visual pulse always provide equivalent information. |
-| 6 | Walking with God | **Find the Faithful Path** | `find-path` | `find_path_18x9.html` | Follow a quiet path as the landscape changes. | Tap/click adjacent waypoints or use arrow keys to move one step. | Read the environment, choose the next safe waypoint, and advance the group toward the destination. | Complete the action, settle the scene, then reveal the canonical “Walking with God” outcome and scripture reference. | A risky route pauses with a visual hint and returns the player to the last safe waypoint. |
-| 7 | Taken | **Find the Faithful Path** | `find-path` | `find_path_6x6.html` | Let go of the route and enter the final light. | Tap/click adjacent waypoints or use arrow keys to move one step. | Read the environment, choose the next safe waypoint, and advance the group toward the destination. | Complete the action, settle the scene, then reveal the canonical “Taken” outcome and scripture reference. | A risky route pauses with a visual hint and returns the player to the last safe waypoint. |
-
-### Shared mini-game rules
-
-- Teach the game inside the panel with one animated example; do not open a separate instruction screen.
-- Support pointer, touch, keyboard and switch-style sequential focus. Tap targets are at least 44×44 CSS pixels.
-- Do not require more than three simultaneous resources, eight draggable items, or one primary action verb per game.
-- A first play should take 30–90 seconds; experienced replay should take under 45 seconds.
-- No game-over screen, lives, score chasing, loot, combat grind, or canonical “bad ending.” Mistakes produce a clue and a quick retry.
-- Pause camera movement and decorative animation while the player is reading instructions or choosing.
-- Reduced-motion mode replaces timing, drag momentum and camera movement with discrete selection and progress states.
-- Sound confirms actions but never carries required information without captions, shape, colour-independent icons, or motion-safe highlights.
-- Save only completion and optional discovery flags. Restarting an act resets its mini-game locally without changing prior chapters.
-
-### Implementation contract
-
-Each act JSON should declare `game.id`, `game.type`, `game.objective`, `game.controls`, `game.success`, and `game.accessibility`. The interaction mounts inside the middle-ground layer, locks story navigation only while actively manipulated, calls the shared completion callback once, then settles all 3D/SVG elements before the scripture reference appears.
-<!-- act-mini-games:end -->
 
 ---
 
 **Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./enoch-design-source-of-truth.md) | [Music SOT](./enoch-music-source-of-truth.md) | [SFX SOT](./enoch-sfx-source-of-truth.md) | [Game Plan](./enoch-game-plan.md)
+
+<!-- faith-games:start -->
+## Revised chapter games and faith crafting
+
+**Planning update — not yet integrated into the live games.** This section supersedes earlier prototype assignments. Every challenge follows the final comic panel. Shared native modules; no frames. Each chapter in this story uses a different mechanic. Cross-story adaptations must change rules or interaction, not just labels. Full unique-mechanic review remains required before implementation.
+
+Source: [HTML/CSS/JavaScript game collection](https://github.com/he-is-talha/html-css-javascript-games). Exact source folders and integration status are recorded in [the shared plan](../../__shared/chapter-games/story-game-plan.json). These are mechanic references, not imported code.
+
+| Chapter | Story beat | Mechanic | Story action | Proposed rules |
+|---:|---|---|---|---|
+| 1 | A Family Record | memory | Place Enoch correctly in the generations. | Reveal pairs of illustrated story objects; matched pairs stay visible. |
+| 2 | The First Walk | faith-crafting | Choose a daily route that serves neighbours. | Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. |
+| 3 | A Son Named Methuselah | sequence | Prepare the home for a new child. | Repeat a short visual signal sequence; add one signal after each round. |
+| 4 | Years of Faithfulness | route | Complete repeated small acts without a fame meter. | Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt. |
+| 5 | A Warning | crossing | Deliver a hard truth without cruelty. | Move one lane at a time when the passage is clear; pause the lanes while reading. |
+| 6 | Walking with God | stack | Follow a quiet path as the landscape changes. | Place a moving building piece over a marked foundation; use a wide timing window. |
+| 7 | Taken | packing | Let go of the route and enter the final light. | Rotate and place a small set of fixed pieces into an outline; no falling timer. |
+
+### Faith crafting: chapter 2
+
+Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. Materials: Wood, Flax, Water. Goal: **Staff, Sandals, Waterskin**.
+
+- Wood + Flax → **Staff**. Timber bound with fibre.
+- Flax + Flax → **Sandals**. Woven strips for the road.
+- Flax + Water → **Waterskin**. Woven fibre that holds water.
+
+Use a visible recipe card and a three-slot bench; allow repeated ingredients. If a recipe has more than three ingredients, split it into sub-recipes. Materials are replenishable and unfinished work is saved. An unsuccessful combination returns every item. Use SVG material icons and visible labels, not emoji. Do not treat faith, patience or miracles as manufactured inventory items. The character prepares and responds; God acts in the narrative. Objects are a playful illustration, not a claim about historical manufacture.
+
+### Mobile and completion requirements
+
+At 320×568, use one scrolling column, 44px minimum targets, a two-column ingredient tray and a wrapping button row. Tap-select then tap-place must provide every drag action. Keep the chapter selector above the game. Text and buttons sit above the comic dots. Provide SVG icons, accessible labels, keyboard controls, visual equivalents for sound and reduced motion. No required typing, microphone, tilt or fast reaction. Skip → stays available until success; hide it after success and show Continue →. Save chapter reading, skipped challenges and game wins separately. Each game must expose mount, complete, skip and destroy hooks, including listener/timer cleanup.
+
+Chapter assignments follow the current manifest and canonical story actions.
+<!-- faith-games:end -->

@@ -1,0 +1,103 @@
+{
+  "story": "Elijah",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "drought",
+      "title": "The Drought",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elijah/data/act1_drought.json"
+    },
+    {
+      "chapter": 2,
+      "id": "widow",
+      "title": "The Widow of Zarephath",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elijah/data/act2_widow.json"
+    },
+    {
+      "chapter": 3,
+      "id": "carmel",
+      "title": "Mount Carmel",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elijah/data/act3_carmel.json"
+    },
+    {
+      "chapter": 4,
+      "id": "flight",
+      "title": "The Flight to Horeb",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elijah/data/act4_flight.json"
+    },
+    {
+      "chapter": 5,
+      "id": "voice",
+      "title": "The Still, Small Voice",
+      "status": "live-copy",
+      "kind": "hearing",
+      "source": "Elijah/data/act5_voice.json",
+      "file": "chapter-05.html",
+      "line": 5
+    },
+    {
+      "chapter": 6,
+      "id": "vineyard",
+      "title": "Naboth's Vineyard",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elijah/data/act6_vineyard.json"
+    },
+    {
+      "chapter": 7,
+      "id": "chariot",
+      "title": "The Chariot of Fire",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elijah/data/act7_chariot.json"
+    }
+  ],
+  "snapshotSources": [
+    {
+      "path": "Elijah/js/story-runtime.js",
+      "sha256": "9161d7d897a7d7be0653592aaea1351316b3c59701c2699bd017b0ef4f9ed11b"
+    },
+    {
+      "path": "Elijah/js/audio-manager.js",
+      "sha256": "c2a6a18e7879348283a22ce078cec76f9f093b798b48e1719fff2551af50a549"
+    },
+    {
+      "path": "Elijah/js/elijah-comic.js",
+      "sha256": "d1c3dcb75058a146e75c25241bf69971f15d3779979f8b12f815f547ad8e8282"
+    },
+    {
+      "path": "Elijah/js/story-editor-config.js",
+      "sha256": "f5410d3d3a17afff6065186119bff222edc7cee1243a85c3c785163069627b85"
+    },
+    {
+      "path": "shared-tools/story-text-rendering.js",
+      "sha256": "709bb8f7bc28aeaa0e169fd3ee4d936dcfbd63fa2a4dba0fc8fe7f6eb741c43c"
+    },
+    {
+      "path": "shared-tools/ui-feedback.js",
+      "sha256": "9f5cc74c96ee2394e467c6efb627112acb901b29cea015858244ca03ed09dcfd"
+    },
+    {
+      "path": "shared-tools/story-game-icons.js",
+      "sha256": "1f6e3be7d68578cfc899a39e1a2f78e3182d2fb574c23d6e98c8b7b6624d1070"
+    },
+    {
+      "path": "shared-tools/story-game-controls.js",
+      "sha256": "4c501f77588d34e94e480806292e3dfe8f6d924387077ae34e7f4cb855485b13"
+    }
+  ],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Elijah.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

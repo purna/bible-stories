@@ -136,6 +136,8 @@ function loadScene3D(act, activeLine) {
   const factory = window.createDeborahMiddleGround(act, activeLine);
   if (!factory) return;
   currentScene = factory;
+  // Preserve the SVG background underneath the transparent 3D layer.
+  if (factory.scene) factory.scene.background = null;
   camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
   const cfg = factory.cameraConfig || { distance: 60, height: 20 };
   camera.position.set(0, cfg.height || 20, cfg.distance || 60);
@@ -210,6 +212,8 @@ function renderChoices(data) {
       b.textContent = c.label;
       b.onclick = () => {
         choicesBox.classList.remove('show');
+        choicesBox.replaceChildren();
+        delayNote.closest('.content-overlay')?.classList.add('choice-answered');
         delayNote.className = 'show';
         delayNote.textContent = c.note;
         choicePending = false;
@@ -224,6 +228,7 @@ function renderChoices(data) {
 
 /* ── Game Panel ─────────────────────────────── */
 function openGame() {
+  delete gamePanel.dataset.gameComplete;
   gameOpen = true;
   gamePanel.classList.add('open');
   gameMessage.textContent = '';
@@ -242,6 +247,7 @@ function closeGame() {
   updateNextBtn();
 }
 function winGame(msg) {
+  gamePanel.dataset.gameComplete='true';
   gameCompleted[actIdx] = true;
   gameMessage.textContent = msg;
   updateNextBtn();
@@ -288,7 +294,7 @@ function updateNextBtn() {
     nextLineBtn.classList.remove('show');
   } else if (atEnd) {
     nextBtn.classList.add('show');
-    nextBtn.textContent = actIdx === STORY.length - 1 ? 'Read Again ↺' : 'Next Chapter ↴';
+    nextBtn.textContent = actIdx === STORY.length - 1 ? 'Finish story →' : 'Next Chapter ↴';
     nextBtn.classList.toggle('finale', actIdx === STORY.length - 1);
     nextLineBtn.classList.remove('show');
   } else {
@@ -302,18 +308,18 @@ function updateNextBtn() {
 function applyAtmosphere(act) {
   const id = act.id;
   const particle = act.particle || 'dusk';
-  el('#rainLayer').classList.toggle('active', false);
-  el('#seaLayer').classList.toggle('active', false);
-  el('#fireLayer').classList.toggle('active', false);
-  el('#thunderLayer').classList.toggle('active', false);
+  el('#rainLayer')?.classList.toggle('active', false);
+  el('#seaLayer')?.classList.toggle('active', false);
+  el('#fireLayer')?.classList.toggle('active', false);
+  el('#thunderLayer')?.classList.toggle('active', false);
   const isDawn = id === 'voice_beneath_palm' || id === 'song_of_peace' || particle === 'dawn';
   const isLand = id === 'song_of_peace';
-  el('#ambientLayer').classList.toggle('active', isDawn);
-  el('#ambientLayer').classList.toggle('land', isLand);
-  if (particle === 'storm') el('#rainLayer').classList.toggle('active', true);
-  if (particle === 'flood') el('#seaLayer').classList.toggle('active', true);
-  if (particle === 'ember') el('#fireLayer').classList.toggle('active', true);
-  if (particle === 'storm') el('#thunderLayer').classList.toggle('active', true);
+  el('#ambientLayer')?.classList.toggle('active', isDawn);
+  el('#ambientLayer')?.classList.toggle('land', isLand);
+  if (particle === 'storm') el('#rainLayer')?.classList.toggle('active', true);
+  if (particle === 'flood') el('#seaLayer')?.classList.toggle('active', true);
+  if (particle === 'ember') el('#fireLayer')?.classList.toggle('active', true);
+  if (particle === 'storm') el('#thunderLayer')?.classList.toggle('active', true);
 }
 
 /* ── Principal panel asset selection ─────────── */
@@ -419,7 +425,7 @@ async function renderLine() {
         charBox.className = 'char-container';
         if (data.align === 'right') charBox.classList.add('right');
         charBox.innerHTML = charSvg;
-        overlay.appendChild(charBox);
+        if (frame.isConnected) frame.appendChild(charBox);
       }
     }
     if (data.sfx) {
@@ -492,6 +498,7 @@ function fallTransition(mid) {
 }
 function goNextChapter() {
   if (transitioning) return;
+  if(window.StoryProgress){StoryProgress.markChapter(actIdx,STORY.length);if(actIdx===STORY.length-1&&StoryProgress.allComplete(STORY.length)){StoryProgress.openMap();return;}}
   if (actIdx >= STORY.length - 1) {
     fallTransition(() => { actIdx = 0; lineIdx = 0; gameCompleted = {}; populateChapterSelect(); renderLine(); });
     return;
@@ -562,8 +569,7 @@ nextBtn.addEventListener('click', () => {
   } else if (hasGame && gameOpen && !gameCompleted[actIdx]) {
     gameMessage.textContent = 'Complete the challenge to continue.';
   } else {
-    if (actIdx === STORY.length - 1) { jumpToChapter(0); }
-    else goNextChapter();
+    goNextChapter();
   }
 });
 el('#chapterSelect').addEventListener('change', e => jumpToChapter(parseInt(e.target.value)));
@@ -658,3 +664,6 @@ async function boot() {
 }
 
 boot();
+
+window.addEventListener('story:skipgame',()=>{if(!gameOpen)return;gameCompleted[actIdx]=true;closeGame();goNextChapter();});
+window.addEventListener('story:chapterchanging',()=>{if(gameOpen)closeGame();});

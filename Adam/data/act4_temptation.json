@@ -173,11 +173,11 @@
       "id": "temptation_5",
       "choices": [
         {
-          "label": "Resist the serpent 🛡️",
+          "label": "Resist the serpent",
           "note": "The moment passes. Temptation without action is just a whisper."
         },
         {
-          "label": "Taste the fruit 🍎",
+          "label": "Taste the fruit",
           "note": "The first bite changes everything. Knowledge comes at the price of innocence."
         }
       ],

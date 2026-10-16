@@ -1,0 +1,99 @@
+{
+  "id": "act10_moriah",
+  "name": "Ch.10 · Moriah",
+  "bg": "radial-gradient(circle at 40% 20%, #375568, #151729 75%)",
+  "particle": "dawn",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_10_moriah/a_establish/abraham_act10_a_background.svg",
+      "middleGround": "assets/svg/act_10_moriah/a_establish/abraham_act10_a_middle_ground.svg",
+      "foreground": "assets/svg/act_10_moriah/a_establish/abraham_act10_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_10_moriah/b_core_action/abraham_act10_b_background.svg",
+      "middleGround": "assets/svg/act_10_moriah/b_core_action/abraham_act10_b_middle_ground.svg",
+      "foreground": "assets/svg/act_10_moriah/b_core_action/abraham_act10_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_10_moriah/c_resolve/abraham_act10_c_background.svg",
+      "middleGround": "assets/svg/act_10_moriah/c_resolve/abraham_act10_c_middle_ground.svg",
+      "foreground": "assets/svg/act_10_moriah/c_resolve/abraham_act10_c_foreground.svg"
+    }
+  },
+  "assetFolder": "act_10_moriah",
+  "assetStem": "abraham_act10",
+  "lines": [
+    {
+      "id": "act10_moriah_0",
+      "items": [
+        {
+          "id": "act10_moriah_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Abraham faced a difficult test involving Isaac, the son he loved. They travelled toward a mountain in Moriah.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act10_moriah_1",
+      "items": [
+        {
+          "id": "act10_moriah_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Isaac carried wood, and Abraham carried the fire. When Isaac asked about the offering, Abraham said God would provide.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act10_moriah_2",
+      "items": [
+        {
+          "id": "act10_moriah_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At the crucial moment, God’s messenger stopped Abraham. Isaac was spared, and a ram was provided instead.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act10_moriah_3",
+      "items": [
+        {
+          "id": "act10_moriah_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "God renewed the promise of blessing. Abraham named the place “The Lord will provide.”",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    }
+  ]
+}

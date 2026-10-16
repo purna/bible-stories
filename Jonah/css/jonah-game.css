@@ -106,3 +106,14 @@
   85%  { opacity: 1; }
   100% { opacity: 0; }
 }
+
+/* Chapter games are overlays owned by the shared story player. */
+.jonah-game { z-index:20020; }
+.chapter-game-active #storyControls,.chapter-game-active .story-footer { display:none!important; }
+@media(max-width:640px) {
+ .game-objective { left:12px;top:12px;padding:10px;width:calc(100% - 100px); }
+ .game-objective strong { font-size:20px; }
+ .game-objective > span:not(.game-kicker) { font-size:11px; }
+ .game-choice,.game-hold { max-height:60dvh;overflow-y:auto;overscroll-behavior:contain; }
+ .game-dpad button { min-width:44px;min-height:44px; }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "act6_hagar_in_the_wilderness",
+  "name": "Ch.6 · Hagar in the Wilderness",
+  "bg": "radial-gradient(circle at 40% 20%, #375568, #151729 75%)",
+  "particle": "dawn",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_06_hagar_in_the_wilderness/a_establish/abraham_act6_a_background.svg",
+      "middleGround": "assets/svg/act_06_hagar_in_the_wilderness/a_establish/abraham_act6_a_middle_ground.svg",
+      "foreground": "assets/svg/act_06_hagar_in_the_wilderness/a_establish/abraham_act6_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_06_hagar_in_the_wilderness/b_core_action/abraham_act6_b_background.svg",
+      "middleGround": "assets/svg/act_06_hagar_in_the_wilderness/b_core_action/abraham_act6_b_middle_ground.svg",
+      "foreground": "assets/svg/act_06_hagar_in_the_wilderness/b_core_action/abraham_act6_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_06_hagar_in_the_wilderness/c_resolve/abraham_act6_c_background.svg",
+      "middleGround": "assets/svg/act_06_hagar_in_the_wilderness/c_resolve/abraham_act6_c_middle_ground.svg",
+      "foreground": "assets/svg/act_06_hagar_in_the_wilderness/c_resolve/abraham_act6_c_foreground.svg"
+    }
+  },
+  "assetFolder": "act_06_hagar_in_the_wilderness",
+  "assetStem": "abraham_act6",
+  "lines": [
+    {
+      "id": "act6_hagar_in_the_wilderness_0",
+      "items": [
+        {
+          "id": "act6_hagar_in_the_wilderness_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Sarai and Abram tried to solve their long wait by having Hagar bear a child. Their plan brought pain and conflict.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act6_hagar_in_the_wilderness_1",
+      "items": [
+        {
+          "id": "act6_hagar_in_the_wilderness_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Hagar fled into the wilderness. Alone and afraid, she stopped near a spring.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act6_hagar_in_the_wilderness_2",
+      "items": [
+        {
+          "id": "act6_hagar_in_the_wilderness_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "God’s messenger met her there and spoke of her son, Ishmael. Hagar knew that God had seen her suffering.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act6_hagar_in_the_wilderness_3",
+      "items": [
+        {
+          "id": "act6_hagar_in_the_wilderness_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "She called God the One who sees her. God’s care reached a woman who felt forgotten.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    }
+  ]
+}

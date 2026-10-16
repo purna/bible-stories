@@ -1,0 +1,211 @@
+{
+  "story": "Adam",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "creation",
+      "title": "Let There Be Light",
+      "status": "live-copy",
+      "kind": "ordering",
+      "source": "Adam/data/act1_creation.json",
+      "file": "chapter-01.html",
+      "line": 3
+    },
+    {
+      "chapter": 2,
+      "id": "garden",
+      "title": "The Garden",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Adam/data/act2_garden.json"
+    },
+    {
+      "chapter": 3,
+      "id": "helper",
+      "title": "Helper Suitable",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Adam/data/act3_helper.json"
+    },
+    {
+      "chapter": 4,
+      "id": "temptation",
+      "title": "The Temptation",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Adam/data/act4_temptation.json"
+    },
+    {
+      "chapter": 5,
+      "id": "exile",
+      "title": "Exile",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Adam/data/act5_exile.json"
+    },
+    {
+      "chapter": 6,
+      "id": "west",
+      "title": "West of the Divide",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Adam/data/act6_west.json"
+    }
+  ],
+  "snapshotSources": [
+    {
+      "path": "Adam/js/story-runtime.js",
+      "sha256": "9161d7d897a7d7be0653592aaea1351316b3c59701c2699bd017b0ef4f9ed11b"
+    },
+    {
+      "path": "Adam/js/audio-manager.js",
+      "sha256": "c2a6a18e7879348283a22ce078cec76f9f093b798b48e1719fff2551af50a549"
+    },
+    {
+      "path": "Adam/js/adam-scenes-helpers.js",
+      "sha256": "875d48bc951075ac5c27b4146cccebcbf04296def3975dd7d0634118e368f0ba"
+    },
+    {
+      "path": "Adam/assets/scenes/act1_creation_cosmos.js",
+      "sha256": "655cb1d21b3b6a6bd05804b49ebe86e30f344456317ad526e5028eb7499f4ee2"
+    },
+    {
+      "path": "Adam/assets/scenes/act1_creation_light.js",
+      "sha256": "83939c95feb044ef922b5a83799425779080ca830698ef31f4cb16b54bb54db5"
+    },
+    {
+      "path": "Adam/assets/scenes/act1_creation_separation.js",
+      "sha256": "e94e5320ae5feefa90dea731c381b8a102f8e55cd97587fd231484d17ea603b5"
+    },
+    {
+      "path": "Adam/assets/scenes/act1_creation_days.js",
+      "sha256": "b2e104fdcf4442277124f00f95c7686c7d584edb299dc6982346a643e68250f0"
+    },
+    {
+      "path": "Adam/assets/scenes/act2_garden_eden.js",
+      "sha256": "5c854d197c2b9bc2d47849ec1e8020a8f2543fd3594afb86b39ddc726b509170"
+    },
+    {
+      "path": "Adam/assets/scenes/act2_garden_placed.js",
+      "sha256": "20d5b87553f209f1a9c26d11b007a118e18f4ca025e7a12e943c50045175650a"
+    },
+    {
+      "path": "Adam/assets/scenes/act2_garden_tended.js",
+      "sha256": "258daadd23413688f6b2752d54a5fee6ec37ffc2a3e6f634de7f42b7b28f30b7"
+    },
+    {
+      "path": "Adam/assets/scenes/act2_garden_trees.js",
+      "sha256": "eb071bb12bde3842b67b4611e2518a04190b7bb58117cb4efac9432a62c26a07"
+    },
+    {
+      "path": "Adam/assets/scenes/act2_garden_command.js",
+      "sha256": "0ca181711ecb6540e3a127af8f0eaaa6900624eaede8b474a83bd655156e88a6"
+    },
+    {
+      "path": "Adam/assets/scenes/act2_garden_warning.js",
+      "sha256": "9e1ac81230b071b3f1c15cfd124ba74e4a60cd5d411421a30a3abb174849a5cd"
+    },
+    {
+      "path": "Adam/assets/scenes/act3_garden_paradise.js",
+      "sha256": "e02deec64a4c9e2aa05e0d5cc20ee7253c8ee90a3a31a8b8db0f949a67afa3e3"
+    },
+    {
+      "path": "Adam/assets/scenes/act3_forming_eve.js",
+      "sha256": "8f721f6b7d640affabe8ede4be554a565205db86adcbcbceeb0fb8f7cc2a4eee"
+    },
+    {
+      "path": "Adam/assets/scenes/act3_forming_names.js",
+      "sha256": "a0ba80d4a9aa234d06bb79f417651c387cb847570bbf4b7f3f0ffa9ffdc57bb0"
+    },
+    {
+      "path": "Adam/assets/scenes/act3_forming_sleep.js",
+      "sha256": "3b090e0debb9b1baa7eef1efb0cc675f8b33d624bf269347233198256742290d"
+    },
+    {
+      "path": "Adam/assets/scenes/act3_forming_united.js",
+      "sha256": "f9b410ae5af3de0dbd88d1dd1864fabcc2df048eded5f3cd065c3079ffb68646"
+    },
+    {
+      "path": "Adam/assets/scenes/act4_serpent_tree.js",
+      "sha256": "85726ae7167d629f8e349d733a7ad7e944ae869d6185d1677f914fe822c199a6"
+    },
+    {
+      "path": "Adam/assets/scenes/act4_serpent_deceive.js",
+      "sha256": "38eba149e7c6db8ba6c8bf3622f741e9491854d836ed482908eb033ee884d2ba"
+    },
+    {
+      "path": "Adam/assets/scenes/act4_serpent_taken.js",
+      "sha256": "1e09d0b0a305be709ed1f820f6a5374fc0e746268c81e09745291aca48c71dd2"
+    },
+    {
+      "path": "Adam/assets/scenes/act4_forbidden_fruit.js",
+      "sha256": "bdcc5b820a1b09fe50493be6b02ce1cba3a80e6c3a1fb565de578fbcbd86c3b7"
+    },
+    {
+      "path": "Adam/assets/scenes/act4_forbidden_taken.js",
+      "sha256": "c84047f14350b27c990bd73a027711207df5fc1a3165df2ebfb30ee2014db900"
+    },
+    {
+      "path": "Adam/assets/scenes/act4_the_fall.js",
+      "sha256": "87b342ae02cdf0aca662c59cc38d6edf010f322b5da0ef26c0fa8869738baa08"
+    },
+    {
+      "path": "Adam/assets/scenes/act4_the_hiding.js",
+      "sha256": "34d7621fe924378abeba4e55f0e9af94deb281c9c1c921ac2ff8360f511d4346"
+    },
+    {
+      "path": "Adam/assets/scenes/act5_exile_eden.js",
+      "sha256": "1c0a10b9f6252f1ba80a2deae818c3817d0a864e3ddbd229cd03180e8737e197"
+    },
+    {
+      "path": "Adam/assets/scenes/act5_exile_judged.js",
+      "sha256": "909cd5c9bfed2778ca37dba20665664f540c8732172a0be2d0efb5f4f4414f2f"
+    },
+    {
+      "path": "Adam/assets/scenes/act5_exile_garments.js",
+      "sha256": "06f3734a0dfd9d8d444dbd13a87f65f2bfa9e7b9c9ebfd7290f2b0a8fcedee60"
+    },
+    {
+      "path": "Adam/assets/scenes/act5_exile_dawn.js",
+      "sha256": "5a1f771edfe0c44a85218603f2867f556030892dfb43a525505ea21051c7ea53"
+    },
+    {
+      "path": "Adam/assets/scenes/act5_exile_driven.js",
+      "sha256": "625ab9337a1e4e3296352d31a39936946889a3fe8ab30d320dffe6cd056defe9"
+    },
+    {
+      "path": "Adam/assets/scenes/act5_cain_abel.js",
+      "sha256": "daa96aded9a653364a1743bcb5652a136e8ccd602baaad37a8fe27932c721685"
+    },
+    {
+      "path": "Adam/js/adam-comic.js",
+      "sha256": "caa3a72c2bdb2989bffdf8d338b1488af63e4b3c369b120e87117f1364d98cf8"
+    },
+    {
+      "path": "Adam/js/story-editor-config.js",
+      "sha256": "b0f797a869bc5aa653c160626f93ec67c641877cd058563cf58f8d7803bd5f9f"
+    },
+    {
+      "path": "shared-tools/story-text-rendering.js",
+      "sha256": "709bb8f7bc28aeaa0e169fd3ee4d936dcfbd63fa2a4dba0fc8fe7f6eb741c43c"
+    },
+    {
+      "path": "shared-tools/ui-feedback.js",
+      "sha256": "9f5cc74c96ee2394e467c6efb627112acb901b29cea015858244ca03ed09dcfd"
+    },
+    {
+      "path": "shared-tools/story-game-icons.js",
+      "sha256": "1f6e3be7d68578cfc899a39e1a2f78e3182d2fb574c23d6e98c8b7b6624d1070"
+    },
+    {
+      "path": "shared-tools/story-game-controls.js",
+      "sha256": "4c501f77588d34e94e480806292e3dfe8f6d924387077ae34e7f4cb855485b13"
+    }
+  ],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Adam.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

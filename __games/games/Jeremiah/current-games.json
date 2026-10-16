@@ -1,0 +1,92 @@
+{
+  "story": "Jeremiah",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "the_call",
+      "title": "Ch.1 \u00b7 The Call",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jeremiah/data/act1_the_call.json"
+    },
+    {
+      "chapter": 2,
+      "id": "the_almond_branch",
+      "title": "Ch.2 \u00b7 The Almond Branch",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jeremiah/data/act2_the_almond_branch.json"
+    },
+    {
+      "chapter": 3,
+      "id": "at_the_temple_gate",
+      "title": "Ch.3 \u00b7 At the Temple Gate",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jeremiah/data/act3_at_the_temple_gate.json"
+    },
+    {
+      "chapter": 4,
+      "id": "the_scroll",
+      "title": "Ch.4 \u00b7 The Scroll",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jeremiah/data/act4_the_scroll.json"
+    },
+    {
+      "chapter": 5,
+      "id": "the_potter",
+      "title": "Ch.5 \u00b7 The Potter",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jeremiah/data/act5_the_potter.json"
+    },
+    {
+      "chapter": 6,
+      "id": "the_yoke",
+      "title": "Ch.6 \u00b7 The Yoke",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jeremiah/data/act6_the_yoke.json"
+    },
+    {
+      "chapter": 7,
+      "id": "the_cistern",
+      "title": "Ch.7 \u00b7 The Cistern",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jeremiah/data/act7_the_cistern.json"
+    },
+    {
+      "chapter": 8,
+      "id": "buy_the_field",
+      "title": "Ch.8 \u00b7 Buy the Field",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jeremiah/data/act8_buy_the_field.json"
+    },
+    {
+      "chapter": 9,
+      "id": "the_fall_of_jerusalem",
+      "title": "Ch.9 \u00b7 The Fall of Jerusalem",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jeremiah/data/act9_the_fall_of_jerusalem.json"
+    },
+    {
+      "chapter": 10,
+      "id": "lament_and_hope",
+      "title": "Ch.10 \u00b7 Lament and Hope",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jeremiah/data/act10_lament_and_hope.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Jeremiah.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

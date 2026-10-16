@@ -1,0 +1,99 @@
+{
+  "id": "act9_isaac_is_born",
+  "name": "Ch.9 · Isaac Is Born",
+  "bg": "radial-gradient(circle at 40% 20%, #375568, #151729 75%)",
+  "particle": "dawn",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_09_isaac_is_born/a_establish/abraham_act9_a_background.svg",
+      "middleGround": "assets/svg/act_09_isaac_is_born/a_establish/abraham_act9_a_middle_ground.svg",
+      "foreground": "assets/svg/act_09_isaac_is_born/a_establish/abraham_act9_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_09_isaac_is_born/b_core_action/abraham_act9_b_background.svg",
+      "middleGround": "assets/svg/act_09_isaac_is_born/b_core_action/abraham_act9_b_middle_ground.svg",
+      "foreground": "assets/svg/act_09_isaac_is_born/b_core_action/abraham_act9_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_09_isaac_is_born/c_resolve/abraham_act9_c_background.svg",
+      "middleGround": "assets/svg/act_09_isaac_is_born/c_resolve/abraham_act9_c_middle_ground.svg",
+      "foreground": "assets/svg/act_09_isaac_is_born/c_resolve/abraham_act9_c_foreground.svg"
+    }
+  },
+  "assetFolder": "act_09_isaac_is_born",
+  "assetStem": "abraham_act9",
+  "lines": [
+    {
+      "id": "act9_isaac_is_born_0",
+      "items": [
+        {
+          "id": "act9_isaac_is_born_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "At the time God had promised, Sarah gave birth to a son. Abraham named him Isaac.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act9_isaac_is_born_1",
+      "items": [
+        {
+          "id": "act9_isaac_is_born_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Sarah’s laughter of doubt became laughter of joy. God had kept the promise through the long wait.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act9_isaac_is_born_2",
+      "items": [
+        {
+          "id": "act9_isaac_is_born_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Abraham and Sarah celebrated their child. God also cared for Hagar and Ishmael and heard their cries.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act9_isaac_is_born_3",
+      "items": [
+        {
+          "id": "act9_isaac_is_born_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Isaac grew, and Abraham’s family continued their journey of faith.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    }
+  ]
+}

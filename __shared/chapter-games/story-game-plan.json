@@ -1,0 +1,4054 @@
+{
+  "version": 2,
+  "status": "design-plan",
+  "sourceRepository": "https://github.com/he-is-talha/html-css-javascript-games",
+  "runtimeUnchanged": true,
+  "stories": [
+    {
+      "storyId": "Adam",
+      "title": "Adam & Eve",
+      "entry": "Adam/",
+      "manifest": "Adam/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 6,
+      "requiresNarrativeReview": true,
+      "crafting": {
+        "title": "Adam & Eve: Built by Faith",
+        "chapter": 2,
+        "materials": [
+          "Seed",
+          "Water",
+          "Branch"
+        ],
+        "recipes": [
+          {
+            "result": "Bed",
+            "ingredients": [
+              "Seed",
+              "Water"
+            ],
+            "hint": "Seed and water in the soil."
+          },
+          {
+            "result": "Garden",
+            "ingredients": [
+              "Bed",
+              "Bed",
+              "Branch"
+            ],
+            "hint": "Two beds with a tree's care."
+          }
+        ],
+        "goals": [
+          "Garden"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Adam.html",
+          "__games/examples/Crafting_v2/bible-crafting/Adam.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "creation",
+          "chapterTitle": "Let There Be Light",
+          "storyAction": "Complete a visual task based on the “Let There Be Light” comic panels.",
+          "mechanic": "memory",
+          "title": "Let There Be Light — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "garden",
+          "chapterTitle": "The Garden",
+          "storyAction": "Complete a visual task based on the “The Garden” comic panels.",
+          "mechanic": "faith-crafting",
+          "title": "Adam & Eve: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "helper",
+          "chapterTitle": "Helper Suitable",
+          "storyAction": "Complete a visual task based on the “Helper Suitable” comic panels.",
+          "mechanic": "sequence",
+          "title": "Helper Suitable — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "temptation",
+          "chapterTitle": "The Temptation",
+          "storyAction": "Complete a visual task based on the “The Temptation” comic panels.",
+          "mechanic": "route",
+          "title": "The Temptation — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "exile",
+          "chapterTitle": "Exile",
+          "storyAction": "Complete a visual task based on the “Exile” comic panels.",
+          "mechanic": "crossing",
+          "title": "Exile — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "west",
+          "chapterTitle": "West of the Divide",
+          "storyAction": "Complete a visual task based on the “West of the Divide” comic panels.",
+          "mechanic": "stack",
+          "title": "West of the Divide — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Enoch",
+      "title": "Enoch",
+      "entry": "Enoch/",
+      "manifest": "Enoch/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 7,
+      "liveChapterCount": 7,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Enoch: Built by Faith",
+        "chapter": 2,
+        "materials": [
+          "Wood",
+          "Flax",
+          "Water"
+        ],
+        "recipes": [
+          {
+            "result": "Staff",
+            "ingredients": [
+              "Wood",
+              "Flax"
+            ],
+            "hint": "Timber bound with fibre."
+          },
+          {
+            "result": "Sandals",
+            "ingredients": [
+              "Flax",
+              "Flax"
+            ],
+            "hint": "Woven strips for the road."
+          },
+          {
+            "result": "Waterskin",
+            "ingredients": [
+              "Flax",
+              "Water"
+            ],
+            "hint": "Woven fibre that holds water."
+          }
+        ],
+        "goals": [
+          "Staff",
+          "Sandals",
+          "Waterskin"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Enoch.html",
+          "__games/examples/Crafting_v2/bible-crafting/Enoch.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "a_family_record",
+          "chapterTitle": "A Family Record",
+          "storyAction": "Place Enoch correctly in the generations.",
+          "mechanic": "memory",
+          "title": "A Family Record — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "the_first_walk",
+          "chapterTitle": "The First Walk",
+          "storyAction": "Choose a daily route that serves neighbours.",
+          "mechanic": "faith-crafting",
+          "title": "Enoch: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "a_son_named_methuselah",
+          "chapterTitle": "A Son Named Methuselah",
+          "storyAction": "Prepare the home for a new child.",
+          "mechanic": "sequence",
+          "title": "A Son Named Methuselah — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "years_of_faithfulness",
+          "chapterTitle": "Years of Faithfulness",
+          "storyAction": "Complete repeated small acts without a fame meter.",
+          "mechanic": "route",
+          "title": "Years of Faithfulness — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "a_warning",
+          "chapterTitle": "A Warning",
+          "storyAction": "Deliver a hard truth without cruelty.",
+          "mechanic": "crossing",
+          "title": "A Warning — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "walking_with_god",
+          "chapterTitle": "Walking with God",
+          "storyAction": "Follow a quiet path as the landscape changes.",
+          "mechanic": "stack",
+          "title": "Walking with God — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "taken",
+          "chapterTitle": "Taken",
+          "storyAction": "Let go of the route and enter the final light.",
+          "mechanic": "packing",
+          "title": "Taken — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Noah",
+      "title": "Noah",
+      "entry": "Noah/",
+      "manifest": "Noah/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 10,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Noah: Built by Faith",
+        "chapter": 3,
+        "materials": [
+          "Wood",
+          "Clay",
+          "Reed"
+        ],
+        "recipes": [
+          {
+            "result": "Plank",
+            "ingredients": [
+              "Wood",
+              "Wood"
+            ],
+            "hint": "Two pieces of the same timber."
+          },
+          {
+            "result": "Pitch",
+            "ingredients": [
+              "Wood",
+              "Clay"
+            ],
+            "hint": "Burn timber with earth for a sealant."
+          },
+          {
+            "result": "Ark",
+            "ingredients": [
+              "Plank",
+              "Plank",
+              "Pitch"
+            ],
+            "hint": "Beams, sealed within and without."
+          }
+        ],
+        "goals": [
+          "Ark"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Noah.html",
+          "__games/examples/Crafting_v2/bible-crafting/Noah.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "warning",
+          "chapterTitle": "The Warning",
+          "storyAction": "Accept the Ark blueprint.",
+          "mechanic": "stack",
+          "title": "The Warning — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "blueprint",
+          "chapterTitle": "The Blueprint",
+          "storyAction": "Measure the hull to the given proportions.",
+          "mechanic": "memory",
+          "title": "The Blueprint — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "build",
+          "chapterTitle": "The Long Build",
+          "storyAction": "Gather timber, fit planks, and seal with pitch.",
+          "mechanic": "faith-crafting",
+          "title": "Noah: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "gathering",
+          "chapterTitle": "The Gathering",
+          "storyAction": "Pair animals and stock each pen.",
+          "mechanic": "catch",
+          "title": "The Gathering — Insect Catch adaptation",
+          "rules": "Tap the requested moving story objects; ignore unrelated objects without a penalty.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/26-Insect-Catch-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "door",
+          "chapterTitle": "The Door Shuts",
+          "storyAction": "Finish the final checks and surrender control.",
+          "mechanic": "sequence",
+          "title": "The Door Shuts — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "flood",
+          "chapterTitle": "Forty Days",
+          "storyAction": "Feed, calm, and clean animal pens during the storm.",
+          "mechanic": "route",
+          "title": "Forty Days — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "waiting",
+          "chapterTitle": "The Long Wait",
+          "storyAction": "Send raven and doves at the right intervals.",
+          "mechanic": "crossing",
+          "title": "The Long Wait — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "dryground",
+          "chapterTitle": "Dry Ground",
+          "storyAction": "Release animals habitat by habitat.",
+          "mechanic": "packing",
+          "title": "Dry Ground — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "covenant",
+          "chapterTitle": "The Altar & the Covenant",
+          "storyAction": "Build the altar and reveal the rainbow.",
+          "mechanic": "search",
+          "title": "The Altar & the Covenant — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "vineyard",
+          "chapterTitle": "The Vineyard",
+          "storyAction": "Witness Noah’s failure and choose how the sons respond.",
+          "mechanic": "picture",
+          "title": "The Vineyard — Nonogram adaptation",
+          "rules": "Fill a small picture grid from row and column clues; provide a reveal-one-cell hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/49-Nonogram-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Babel",
+      "title": "Babel",
+      "entry": "Abraham/Babel/",
+      "manifest": "Abraham/Babel/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 8,
+      "liveChapterCount": 5,
+      "requiresNarrativeReview": true,
+      "crafting": {
+        "title": "Babel: Built by Faith",
+        "chapter": 2,
+        "materials": [
+          "Clay",
+          "Water",
+          "Straw"
+        ],
+        "recipes": [
+          {
+            "result": "Brick",
+            "ingredients": [
+              "Clay",
+              "Water",
+              "Straw"
+            ],
+            "hint": "Mix, shape and dry a clay brick."
+          },
+          {
+            "result": "Shared shelter",
+            "ingredients": [
+              "Brick",
+              "Brick"
+            ],
+            "hint": "Use the bricks to care for neighbours."
+          }
+        ],
+        "goals": [
+          "Shared shelter"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": []
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "the_brick",
+          "chapterTitle": "The Brick",
+          "storyAction": "Complete a visual task based on the “The Brick” comic panels.",
+          "mechanic": "memory",
+          "title": "The Brick — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "the_tower",
+          "chapterTitle": "The Tower",
+          "storyAction": "Complete a visual task based on the “The Tower” comic panels.",
+          "mechanic": "faith-crafting",
+          "title": "Babel: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "the_summit",
+          "chapterTitle": "The Summit",
+          "storyAction": "Complete a visual task based on the “The Summit” comic panels.",
+          "mechanic": "sequence",
+          "title": "The Summit — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "the_confusion",
+          "chapterTitle": "The Confusion",
+          "storyAction": "Complete a visual task based on the “The Confusion” comic panels.",
+          "mechanic": "route",
+          "title": "The Confusion — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "the_scattering",
+          "chapterTitle": "The Scattering",
+          "storyAction": "Complete a visual task based on the “The Scattering” comic panels.",
+          "mechanic": "crossing",
+          "title": "The Scattering — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Abraham",
+      "title": "Abraham",
+      "entry": "Abraham/",
+      "manifest": "Abraham/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 10,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Abraham: Built by Faith",
+        "chapter": 7,
+        "materials": [
+          "Flax",
+          "Wood",
+          "Grain",
+          "Water"
+        ],
+        "recipes": [
+          {
+            "result": "Rope",
+            "ingredients": [
+              "Flax",
+              "Flax"
+            ],
+            "hint": "Twist fibre with fibre."
+          },
+          {
+            "result": "Tent",
+            "ingredients": [
+              "Rope",
+              "Rope",
+              "Wood"
+            ],
+            "hint": "Cord, cord and a pole."
+          },
+          {
+            "result": "Bread",
+            "ingredients": [
+              "Grain",
+              "Grain",
+              "Water"
+            ],
+            "hint": "Ground grain bound with water."
+          }
+        ],
+        "goals": [
+          "Tent",
+          "Bread"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Abraham.html",
+          "__games/examples/Crafting_v2/bible-crafting/Abraham.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "act1_the_call",
+          "chapterTitle": "The Call",
+          "storyAction": "Follow the road markers out of Haran.",
+          "mechanic": "stack",
+          "title": "The Call — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "act2_egypt_and_return",
+          "chapterTitle": "Egypt and Return",
+          "storyAction": "Choose honest repairs after a fearful mistake.",
+          "mechanic": "memory",
+          "title": "Egypt and Return — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "act3_lot_chooses",
+          "chapterTitle": "Lot Chooses",
+          "storyAction": "Survey the land and give Lot first choice.",
+          "mechanic": "sequence",
+          "title": "Lot Chooses — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "act4_rescue_of_lot",
+          "chapterTitle": "Rescue of Lot",
+          "storyAction": "Plan a fast night rescue without taking spoil.",
+          "mechanic": "packing",
+          "title": "Rescue of Lot — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "act5_covenant_stars",
+          "chapterTitle": "Covenant Stars",
+          "storyAction": "Trace the promised constellation.",
+          "mechanic": "picture",
+          "title": "Covenant Stars — Nonogram adaptation",
+          "rules": "Fill a small picture grid from row and column clues; provide a reveal-one-cell hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/49-Nonogram-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "act6_hagar_in_the_wilderness",
+          "chapterTitle": "Hagar in the Wilderness",
+          "storyAction": "Find water and listen before acting.",
+          "mechanic": "route",
+          "title": "Hagar in the Wilderness — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "act7_the_visitors",
+          "chapterTitle": "The Visitors",
+          "storyAction": "Prepare hospitality before the guests depart.",
+          "mechanic": "faith-crafting",
+          "title": "Abraham: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "act8_sodom_and_gomorrah",
+          "chapterTitle": "Sodom and Gomorrah",
+          "storyAction": "Guide Lot’s household away without looking back.",
+          "mechanic": "crossing",
+          "title": "Sodom and Gomorrah — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "act9_isaac_is_born",
+          "chapterTitle": "Isaac Is Born",
+          "storyAction": "Assemble a celebration tent.",
+          "mechanic": "search",
+          "title": "Isaac Is Born — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "act10_moriah",
+          "chapterTitle": "Moriah",
+          "storyAction": "Climb, gather wood, and respond to the provided ram.",
+          "mechanic": "order",
+          "title": "Moriah — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Jacob",
+      "title": "Jacob",
+      "entry": "Jacob/",
+      "manifest": "Jacob/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 10,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Jacob: Built by Faith",
+        "chapter": 3,
+        "materials": [
+          "Stone",
+          "Wood",
+          "Flax",
+          "Oil"
+        ],
+        "recipes": [
+          {
+            "result": "Staff",
+            "ingredients": [
+              "Wood",
+              "Flax"
+            ],
+            "hint": "Timber bound with fibre."
+          },
+          {
+            "result": "Pillar",
+            "ingredients": [
+              "Stone",
+              "Stone",
+              "Oil"
+            ],
+            "hint": "Stones set up and anointed."
+          }
+        ],
+        "goals": [
+          "Pillar",
+          "Staff"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Jacob.html",
+          "__games/examples/Crafting_v2/bible-crafting/Jacob.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "the_birthright",
+          "chapterTitle": "The Birthright",
+          "storyAction": "Weigh hunger against a lasting inheritance.",
+          "mechanic": "memory",
+          "title": "The Birthright — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "the_stolen_blessing",
+          "chapterTitle": "The Stolen Blessing",
+          "storyAction": "Assemble the disguise, then witness its cost.",
+          "mechanic": "sequence",
+          "title": "The Stolen Blessing — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "bethel",
+          "chapterTitle": "Bethel",
+          "storyAction": "Build the stone pillar after the ladder dream.",
+          "mechanic": "faith-crafting",
+          "title": "Jacob: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "rachel_at_the_well",
+          "chapterTitle": "Rachel at the Well",
+          "storyAction": "Move the stone and water the flock.",
+          "mechanic": "catch",
+          "title": "Rachel at the Well — Insect Catch adaptation",
+          "rules": "Tap the requested moving story objects; ignore unrelated objects without a penalty.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/26-Insect-Catch-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "laban_s_bargain",
+          "chapterTitle": "Laban’s Bargain",
+          "storyAction": "Track changing wages and wedding promises.",
+          "mechanic": "route",
+          "title": "Laban’s Bargain — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "the_flocks",
+          "chapterTitle": "The Flocks",
+          "storyAction": "Sort speckled and spotted animals fairly.",
+          "mechanic": "crossing",
+          "title": "The Flocks — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "leaving_haran",
+          "chapterTitle": "Leaving Haran",
+          "storyAction": "Pack the camp before Laban catches up.",
+          "mechanic": "stack",
+          "title": "Leaving Haran — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "the_night_wrestling",
+          "chapterTitle": "The Night Wrestling",
+          "storyAction": "Hold on through the night and receive a new name.",
+          "mechanic": "packing",
+          "title": "The Night Wrestling — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "meeting_esau",
+          "chapterTitle": "Meeting Esau",
+          "storyAction": "Arrange gifts, then step forward unarmed.",
+          "mechanic": "order",
+          "title": "Meeting Esau — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "joseph_s_coats",
+          "chapterTitle": "Joseph’s Coats",
+          "storyAction": "Recognise favouritism forming in the household.",
+          "mechanic": "search",
+          "title": "Joseph’s Coats — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Joseph",
+      "title": "Joseph",
+      "entry": "Joseph/",
+      "manifest": "Joseph/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 10,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Joseph: Built by Faith",
+        "chapter": 7,
+        "materials": [
+          "Grain",
+          "Clay",
+          "Wood"
+        ],
+        "recipes": [
+          {
+            "result": "Jar",
+            "ingredients": [
+              "Clay",
+              "Clay"
+            ],
+            "hint": "Fire-hardened earth."
+          },
+          {
+            "result": "Granary",
+            "ingredients": [
+              "Jar",
+              "Jar",
+              "Grain"
+            ],
+            "hint": "Jars filled and stored against famine."
+          }
+        ],
+        "goals": [
+          "Granary"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Joseph.html",
+          "__games/examples/Crafting_v2/bible-crafting/Joseph.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "the_coloured_robe",
+          "chapterTitle": "The Coloured Robe",
+          "storyAction": "Assemble the robe and notice the family tension.",
+          "mechanic": "memory",
+          "title": "The Coloured Robe — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "dreams_and_the_pit",
+          "chapterTitle": "Dreams and the Pit",
+          "storyAction": "Order the dreams, then find a path through betrayal.",
+          "mechanic": "order",
+          "title": "Dreams and the Pit — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "potiphar_s_house",
+          "chapterTitle": "Potiphar’s House",
+          "storyAction": "Manage the household with integrity.",
+          "mechanic": "sequence",
+          "title": "Potiphar’s House — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "the_prison",
+          "chapterTitle": "The Prison",
+          "storyAction": "Care for prisoners and interpret two dreams.",
+          "mechanic": "route",
+          "title": "The Prison — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "pharaoh_s_dreams",
+          "chapterTitle": "Pharaoh’s Dreams",
+          "storyAction": "Pair cows and grain with seven-year cycles.",
+          "mechanic": "catch",
+          "title": "Pharaoh’s Dreams — Insect Catch adaptation",
+          "rules": "Tap the requested moving story objects; ignore unrelated objects without a penalty.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/26-Insect-Catch-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "storehouses",
+          "chapterTitle": "Storehouses",
+          "storyAction": "Plan grain reserves across Egypt.",
+          "mechanic": "crossing",
+          "title": "Storehouses — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "the_brothers_arrive",
+          "chapterTitle": "The Brothers Arrive",
+          "storyAction": "Test recognition while distributing food.",
+          "mechanic": "faith-crafting",
+          "title": "Joseph: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "benjamin_s_cup",
+          "chapterTitle": "Benjamin’s Cup",
+          "storyAction": "Trace the hidden cup and Judah’s offer.",
+          "mechanic": "search",
+          "title": "Benjamin’s Cup — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "revealed",
+          "chapterTitle": "Revealed",
+          "storyAction": "Choose the moment Joseph names himself.",
+          "mechanic": "stack",
+          "title": "Revealed — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "goshen",
+          "chapterTitle": "Goshen",
+          "storyAction": "Settle the family and preserve the famine record.",
+          "mechanic": "packing",
+          "title": "Goshen — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Moses",
+      "title": "Moses",
+      "entry": "Moses/",
+      "manifest": "Moses/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 15,
+      "liveChapterCount": 15,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Moses: Built by Faith",
+        "chapter": 14,
+        "materials": [
+          "Flax",
+          "Wood"
+        ],
+        "recipes": [
+          {
+            "result": "Cloth",
+            "ingredients": [
+              "Flax",
+              "Flax"
+            ],
+            "hint": "Weave fibres into cloth."
+          },
+          {
+            "result": "Curtain",
+            "ingredients": [
+              "Cloth",
+              "Cloth"
+            ],
+            "hint": "Join cloth panels."
+          },
+          {
+            "result": "Frame",
+            "ingredients": [
+              "Wood",
+              "Wood"
+            ],
+            "hint": "Fit two boards together."
+          }
+        ],
+        "goals": [
+          "Curtain",
+          "Frame"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Moses.html",
+          "__games/examples/Crafting_v2/bible-crafting/Moses.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "the_child_in_the_river",
+          "chapterTitle": "The Child in the River",
+          "storyAction": "Guide the basket through reeds while Miriam keeps watch.",
+          "mechanic": "route",
+          "title": "The Child in the River — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "the_burning_bush",
+          "chapterTitle": "The Burning Bush",
+          "storyAction": "Herd sheep, approach the fire, and answer the call.",
+          "mechanic": "memory",
+          "title": "The Burning Bush — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "before_the_throne",
+          "chapterTitle": "Before the Throne",
+          "storyAction": "Match signs and warnings to each audience.",
+          "mechanic": "sequence",
+          "title": "Before the Throne — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "passover_night",
+          "chapterTitle": "Passover Night",
+          "storyAction": "Prepare the meal and mark the doorway before departure.",
+          "mechanic": "stack",
+          "title": "Passover Night — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "through_the_sea",
+          "chapterTitle": "Through the Sea",
+          "storyAction": "Keep the people moving along the opened path.",
+          "mechanic": "crossing",
+          "title": "Through the Sea — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "bread_in_the_wilderness",
+          "chapterTitle": "Bread in the Wilderness",
+          "storyAction": "Gather only enough manna for the day.",
+          "mechanic": "catch",
+          "title": "Bread in the Wilderness — Insect Catch adaptation",
+          "rules": "Tap the requested moving story objects; ignore unrelated objects without a penalty.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/26-Insect-Catch-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "water_from_the_rock",
+          "chapterTitle": "Water from the Rock",
+          "storyAction": "Find water in the desert and prevail over attackers.",
+          "mechanic": "packing",
+          "title": "Water from the Rock — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "jethro_s_counsel",
+          "chapterTitle": "Jethro's Counsel",
+          "storyAction": "Receive wisdom from Midian and reach the holy mountain.",
+          "mechanic": "search",
+          "title": "Jethro's Counsel — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "thunder_on_sinai",
+          "chapterTitle": "Thunder on Sinai",
+          "storyAction": "Navigate a provision-and-trust journey map.",
+          "mechanic": "picture",
+          "title": "Thunder on Sinai — Nonogram adaptation",
+          "rules": "Fill a small picture grid from row and column clues; provide a reveal-one-cell hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/49-Nonogram-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "the_golden_calf",
+          "chapterTitle": "The Golden Calf",
+          "storyAction": "Appoint Joshua and identify the land from afar.",
+          "mechanic": "order",
+          "title": "The Golden Calf — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 11,
+          "id": "the_second_tablets",
+          "chapterTitle": "The Second Tablets",
+          "storyAction": "Renew the covenant and begin building God's dwelling.",
+          "mechanic": "code",
+          "title": "The Second Tablets — Mastermind adaptation",
+          "rules": "Arrange symbols and use position clues to revise the answer; clues remain visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/38-Mastermind-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 12,
+          "id": "the_spies_and_rebellion",
+          "chapterTitle": "The Spies and Rebellion",
+          "storyAction": "Explore Canaan and face the consequences of unbelief.",
+          "mechanic": "aim",
+          "title": "The Spies and Rebellion — Archery adaptation",
+          "rules": "Set direction and release toward a non-person target; simplify to a tap-to-aim control.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/14-Archery-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 13,
+          "id": "the_long_wilderness",
+          "chapterTitle": "The Long Wilderness",
+          "storyAction": "Journey through hardship and see God's provision.",
+          "mechanic": "connect",
+          "title": "The Long Wilderness — Connect Four adaptation",
+          "rules": "Place tokens to connect a marked route; play a cooperative finite puzzle rather than competitive AI.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/25-Connect-Four-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 14,
+          "id": "moses_final_words",
+          "chapterTitle": "Moses' Final Words",
+          "storyAction": "Prepare the next generation for the promised land.",
+          "mechanic": "faith-crafting",
+          "title": "Moses: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 15,
+          "id": "mount_nebo",
+          "chapterTitle": "Mount Nebo",
+          "storyAction": "See the fulfillment of God's promise from afar.",
+          "mechanic": "lights",
+          "title": "Mount Nebo — Lights Out adaptation",
+          "rules": "Toggle a tile and its neighbours until the marked signal pattern is lit.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/50-Lights-Out-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Joshua",
+      "title": "Joshua",
+      "entry": "Joshua/",
+      "manifest": "Joshua/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 10,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Joshua: Built by Faith",
+        "chapter": 3,
+        "materials": [
+          "Clay",
+          "Wood",
+          "Stone"
+        ],
+        "recipes": [
+          {
+            "result": "Horn",
+            "ingredients": [
+              "Clay",
+              "Clay",
+              "Wood"
+            ],
+            "hint": "Earth shaped around a wooden core."
+          },
+          {
+            "result": "Memorial",
+            "ingredients": [
+              "Stone",
+              "Stone",
+              "Stone"
+            ],
+            "hint": "Three stones from the river."
+          }
+        ],
+        "goals": [
+          "Horn",
+          "Horn",
+          "Memorial"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Joshua.html",
+          "__games/examples/Crafting_v2/bible-crafting/Joshua.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "be_strong",
+          "chapterTitle": "Be Strong",
+          "storyAction": "Meditate on the instruction before crossing.",
+          "mechanic": "route",
+          "title": "Be Strong — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "rahab_and_the_spies",
+          "chapterTitle": "Rahab and the Spies",
+          "storyAction": "Hide the scouts and mark the scarlet cord.",
+          "mechanic": "stack",
+          "title": "Rahab and the Spies — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "crossing_jordan",
+          "chapterTitle": "Crossing Jordan",
+          "storyAction": "Carry twelve memorial stones from the riverbed.",
+          "mechanic": "faith-crafting",
+          "title": "Joshua: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "jericho",
+          "chapterTitle": "Jericho",
+          "storyAction": "March the pattern, sound the trumpets, protect Rahab.",
+          "mechanic": "sequence",
+          "title": "Jericho — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "achan_s_hidden_goods",
+          "chapterTitle": "Achan’s Hidden Goods",
+          "storyAction": "Trace the community’s loss to the buried objects.",
+          "mechanic": "search",
+          "title": "Achan’s Hidden Goods — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "ai",
+          "chapterTitle": "Ai",
+          "storyAction": "Set the ambush without repeating earlier presumption.",
+          "mechanic": "memory",
+          "title": "Ai — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "the_gibeonites",
+          "chapterTitle": "The Gibeonites",
+          "storyAction": "Inspect the worn supplies and face a rushed oath.",
+          "mechanic": "crossing",
+          "title": "The Gibeonites — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "the_long_campaign",
+          "chapterTitle": "The Long Campaign",
+          "storyAction": "Resolve territory challenges without spectacle.",
+          "mechanic": "packing",
+          "title": "The Long Campaign — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "allot_the_land",
+          "chapterTitle": "Allot the Land",
+          "storyAction": "Distribute inheritance among tribes.",
+          "mechanic": "picture",
+          "title": "Allot the Land — Nonogram adaptation",
+          "rules": "Fill a small picture grid from row and column clues; provide a reveal-one-cell hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/49-Nonogram-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "choose_this_day",
+          "chapterTitle": "Choose This Day",
+          "storyAction": "Place household stones beside the covenant witness.",
+          "mechanic": "order",
+          "title": "Choose This Day — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Deborah",
+      "title": "Deborah",
+      "entry": "Deborah/",
+      "manifest": "Deborah/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 7,
+      "liveChapterCount": 7,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Deborah: Built by Faith",
+        "chapter": 3,
+        "materials": [
+          "Wood",
+          "Flax",
+          "Iron"
+        ],
+        "recipes": [
+          {
+            "result": "Banner",
+            "ingredients": [
+              "Flax",
+              "Wood"
+            ],
+            "hint": "Cloth on a pole."
+          },
+          {
+            "result": "Peg",
+            "ingredients": [
+              "Wood",
+              "Iron"
+            ],
+            "hint": "An iron-tipped tent stake."
+          }
+        ],
+        "goals": [
+          "Banner",
+          "Banner",
+          "Peg"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Deborah.html",
+          "__games/examples/Crafting_v2/bible-crafting/Deborah.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "under_the_palm",
+          "chapterTitle": "Under the Palm",
+          "storyAction": "Hear disputes and restore a fair path.",
+          "mechanic": "memory",
+          "title": "Under the Palm — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "the_summons",
+          "chapterTitle": "The Summons",
+          "storyAction": "Carry Deborah’s message to Barak.",
+          "mechanic": "sequence",
+          "title": "The Summons — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "gather_at_tabor",
+          "chapterTitle": "Gather at Tabor",
+          "storyAction": "Rally tribes without alerting Sisera.",
+          "mechanic": "faith-crafting",
+          "title": "Deborah: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "the_storm",
+          "chapterTitle": "The Storm",
+          "storyAction": "Use the flooded ground to break the chariot advantage.",
+          "mechanic": "route",
+          "title": "The Storm — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "sisera_flees",
+          "chapterTitle": "Sisera Flees",
+          "storyAction": "Track the fleeing commander to Jael’s tent.",
+          "mechanic": "stack",
+          "title": "Sisera Flees — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "jaels_choice",
+          "chapterTitle": "Jael’s Choice",
+          "storyAction": "Prepare hospitality, then protect the camp.",
+          "mechanic": "crossing",
+          "title": "Jael’s Choice — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "the_song",
+          "chapterTitle": "The Song",
+          "storyAction": "Rebuild the victory song in call-and-response.",
+          "mechanic": "packing",
+          "title": "The Song — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Gideon",
+      "title": "Gideon",
+      "entry": "Gideon/",
+      "manifest": "Gideon/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": null,
+      "liveChapterCount": 7,
+      "requiresNarrativeReview": true,
+      "crafting": {
+        "title": "Gideon: Built by Faith",
+        "chapter": 6,
+        "materials": [
+          "Wood",
+          "Cloth",
+          "Oil",
+          "Clay"
+        ],
+        "recipes": [
+          {
+            "result": "Torch",
+            "ingredients": [
+              "Wood",
+              "Cloth",
+              "Oil"
+            ],
+            "hint": "Wrap the timber and add oil."
+          },
+          {
+            "result": "Covered torch",
+            "ingredients": [
+              "Torch",
+              "Clay"
+            ],
+            "hint": "Cover the flame with a clay jar."
+          }
+        ],
+        "goals": [
+          "Covered torch"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": []
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "the_winepress",
+          "chapterTitle": "The Winepress",
+          "storyAction": "Complete a visual task based on the “The Winepress” comic panels.",
+          "mechanic": "memory",
+          "title": "The Winepress — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "the_sign",
+          "chapterTitle": "The Sign",
+          "storyAction": "Complete a visual task based on the “The Sign” comic panels.",
+          "mechanic": "sequence",
+          "title": "The Sign — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "the_fleece",
+          "chapterTitle": "The Fleece",
+          "storyAction": "Complete a visual task based on the “The Fleece” comic panels.",
+          "mechanic": "route",
+          "title": "The Fleece — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "the_army_reduced",
+          "chapterTitle": "The Army Reduced",
+          "storyAction": "Complete a visual task based on the “The Army Reduced” comic panels.",
+          "mechanic": "crossing",
+          "title": "The Army Reduced — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "the_dream",
+          "chapterTitle": "The Dream",
+          "storyAction": "Complete a visual task based on the “The Dream” comic panels.",
+          "mechanic": "stack",
+          "title": "The Dream — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "the_battle",
+          "chapterTitle": "The Battle",
+          "storyAction": "Complete a visual task based on the “The Battle” comic panels.",
+          "mechanic": "faith-crafting",
+          "title": "Gideon: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "the_victory",
+          "chapterTitle": "The Victory",
+          "storyAction": "Complete a visual task based on the “The Victory” comic panels.",
+          "mechanic": "packing",
+          "title": "The Victory — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Ruth",
+      "title": "Ruth",
+      "entry": "Ruth/",
+      "manifest": "Ruth/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 8,
+      "liveChapterCount": 8,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Ruth: Built by Faith",
+        "chapter": 3,
+        "materials": [
+          "Grain",
+          "Flax",
+          "Water"
+        ],
+        "recipes": [
+          {
+            "result": "Sheaf",
+            "ingredients": [
+              "Grain",
+              "Grain"
+            ],
+            "hint": "Gathered grain tied up."
+          },
+          {
+            "result": "Basket",
+            "ingredients": [
+              "Flax",
+              "Flax"
+            ],
+            "hint": "Woven reeds to carry the harvest."
+          },
+          {
+            "result": "Bread",
+            "ingredients": [
+              "Sheaf",
+              "Water"
+            ],
+            "hint": "Gleaned grain ground with water."
+          }
+        ],
+        "goals": [
+          "Basket",
+          "Bread"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Ruth.html",
+          "__games/examples/Crafting_v2/bible-crafting/Ruth.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "leaving_moab",
+          "chapterTitle": "Leaving Moab",
+          "storyAction": "Pack lightly and choose whether to accompany Naomi.",
+          "mechanic": "memory",
+          "title": "Leaving Moab — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "your_people",
+          "chapterTitle": "Your People",
+          "storyAction": "Follow the road to Bethlehem together.",
+          "mechanic": "sequence",
+          "title": "Your People — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "gleaning",
+          "chapterTitle": "Gleaning",
+          "storyAction": "Collect only grain left for gleaners.",
+          "mechanic": "faith-crafting",
+          "title": "Ruth: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "boaz_notices",
+          "chapterTitle": "Boaz Notices",
+          "storyAction": "Deliver water and protection instructions to the workers.",
+          "mechanic": "catch",
+          "title": "Boaz Notices — Insect Catch adaptation",
+          "rules": "Tap the requested moving story objects; ignore unrelated objects without a penalty.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/26-Insect-Catch-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "threshing_floor",
+          "chapterTitle": "Threshing Floor",
+          "storyAction": "Follow Naomi’s plan with restraint and clarity.",
+          "mechanic": "packing",
+          "title": "Threshing Floor — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "at_the_gate",
+          "chapterTitle": "At the Gate",
+          "storyAction": "Arrange witnesses and present the redemption choice.",
+          "mechanic": "order",
+          "title": "At the Gate — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "redeemed",
+          "chapterTitle": "Redeemed",
+          "storyAction": "Transfer the sandal and join the households.",
+          "mechanic": "route",
+          "title": "Redeemed — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "obed",
+          "chapterTitle": "Obed",
+          "storyAction": "Build the family line toward David.",
+          "mechanic": "stack",
+          "title": "Obed — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Hannah",
+      "title": "Hannah",
+      "entry": "Hannah/",
+      "manifest": "Hannah/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 8,
+      "liveChapterCount": 8,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Hannah: Built by Faith",
+        "chapter": 6,
+        "materials": [
+          "Wool",
+          "Flax"
+        ],
+        "recipes": [
+          {
+            "result": "Thread",
+            "ingredients": [
+              "Wool",
+              "Wool"
+            ],
+            "hint": "Spin the fleece."
+          },
+          {
+            "result": "Robe",
+            "ingredients": [
+              "Thread",
+              "Thread",
+              "Flax"
+            ],
+            "hint": "Cloth stitched for a small boy."
+          },
+          {
+            "result": "Basket",
+            "ingredients": [
+              "Flax",
+              "Flax"
+            ],
+            "hint": "Woven reeds for an offering."
+          }
+        ],
+        "goals": [
+          "Robe",
+          "Basket"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Hannah.html",
+          "__games/examples/Crafting_v2/bible-crafting/Hannah.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "the_journey_to_shiloh",
+          "chapterTitle": "The Journey to Shiloh",
+          "storyAction": "Gather the household for the annual worship journey.",
+          "mechanic": "route",
+          "title": "The Journey to Shiloh — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "at_the_table",
+          "chapterTitle": "At the Table",
+          "storyAction": "Navigate hurt without retaliating.",
+          "mechanic": "memory",
+          "title": "At the Table — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "silent_prayer",
+          "chapterTitle": "Silent Prayer",
+          "storyAction": "Form Hannah’s prayer from honest fragments.",
+          "mechanic": "sequence",
+          "title": "Silent Prayer — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "misunderstood",
+          "chapterTitle": "Misunderstood",
+          "storyAction": "Explain quiet prayer to Eli.",
+          "mechanic": "crossing",
+          "title": "Misunderstood — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "remembered",
+          "chapterTitle": "Remembered",
+          "storyAction": "Prepare for Samuel’s birth.",
+          "mechanic": "stack",
+          "title": "Remembered — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "the_little_robe",
+          "chapterTitle": "The Little Robe",
+          "storyAction": "Weave and size a yearly robe.",
+          "mechanic": "faith-crafting",
+          "title": "Hannah: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "given_back",
+          "chapterTitle": "Given Back",
+          "storyAction": "Bring Samuel to serve at Shiloh.",
+          "mechanic": "packing",
+          "title": "Given Back — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "hannah_s_song",
+          "chapterTitle": "Hannah’s Song",
+          "storyAction": "Arrange lines of reversal and hope.",
+          "mechanic": "search",
+          "title": "Hannah’s Song — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Samuel",
+      "title": "Samuel",
+      "entry": "Samuel/",
+      "manifest": "Samuel/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 10,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Samuel: Built by Faith",
+        "chapter": 2,
+        "materials": [
+          "Olive",
+          "Clay"
+        ],
+        "recipes": [
+          {
+            "result": "Oil",
+            "ingredients": [
+              "Olive",
+              "Olive"
+            ],
+            "hint": "Press the fruit."
+          },
+          {
+            "result": "Flask",
+            "ingredients": [
+              "Clay",
+              "Clay"
+            ],
+            "hint": "Fire-hardened earth."
+          },
+          {
+            "result": "Oil Flask",
+            "ingredients": [
+              "Flask",
+              "Oil"
+            ],
+            "hint": "A vessel filled for anointing."
+          },
+          {
+            "result": "Lamp",
+            "ingredients": [
+              "Clay",
+              "Oil"
+            ],
+            "hint": "A clay bowl that burns."
+          }
+        ],
+        "goals": [
+          "Oil Flask",
+          "Lamp"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Samuel.html",
+          "__games/examples/Crafting_v2/bible-crafting/Samuel.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "the_boy_at_shiloh",
+          "chapterTitle": "The Boy at Shiloh",
+          "storyAction": "Complete temple tasks beside Eli.",
+          "mechanic": "memory",
+          "title": "The Boy at Shiloh — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "the_voice_at_night",
+          "chapterTitle": "The Voice at Night",
+          "storyAction": "Listen three times and answer correctly.",
+          "mechanic": "faith-crafting",
+          "title": "Samuel: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "a_hard_message",
+          "chapterTitle": "A Hard Message",
+          "storyAction": "Tell Eli the whole message without embellishment.",
+          "mechanic": "sequence",
+          "title": "A Hard Message — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "the_ark_captured",
+          "chapterTitle": "The Ark Captured",
+          "storyAction": "Track the cost of treating the Ark like a charm.",
+          "mechanic": "stack",
+          "title": "The Ark Captured — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "ebenezer",
+          "chapterTitle": "Ebenezer",
+          "storyAction": "Raise a memorial stone after deliverance.",
+          "mechanic": "route",
+          "title": "Ebenezer — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "a_king_demanded",
+          "chapterTitle": "A King Demanded",
+          "storyAction": "Hear the elders and explain the tradeoffs.",
+          "mechanic": "crossing",
+          "title": "A King Demanded — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "saul_chosen",
+          "chapterTitle": "Saul Chosen",
+          "storyAction": "Find Saul among the baggage.",
+          "mechanic": "search",
+          "title": "Saul Chosen — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "saul_s_first_victory",
+          "chapterTitle": "Saul’s First Victory",
+          "storyAction": "Rally the people and refuse revenge.",
+          "mechanic": "packing",
+          "title": "Saul’s First Victory — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "the_rejected_king",
+          "chapterTitle": "The Rejected King",
+          "storyAction": "Compare obedience with impressive sacrifice.",
+          "mechanic": "picture",
+          "title": "The Rejected King — Nonogram adaptation",
+          "rules": "Fill a small picture grid from row and column clues; provide a reveal-one-cell hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/49-Nonogram-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "david_anointed",
+          "chapterTitle": "David Anointed",
+          "storyAction": "Look past height and choose the shepherd son.",
+          "mechanic": "order",
+          "title": "David Anointed — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "David",
+      "title": "David",
+      "entry": "David/",
+      "manifest": "David/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 12,
+      "liveChapterCount": 12,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "David: Built by Faith",
+        "chapter": 2,
+        "materials": [
+          "Stone",
+          "Flax",
+          "Water"
+        ],
+        "recipes": [
+          {
+            "result": "Sling",
+            "ingredients": [
+              "Flax",
+              "Flax"
+            ],
+            "hint": "Braided strands with a pouch."
+          },
+          {
+            "result": "Smooth Stone",
+            "ingredients": [
+              "Stone",
+              "Water"
+            ],
+            "hint": "Rubbed smooth in the brook."
+          }
+        ],
+        "goals": [
+          "Sling",
+          "Smooth Stone",
+          "Smooth Stone"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/David.html",
+          "__games/examples/Crafting_v2/bible-crafting/David.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "anointed",
+          "chapterTitle": "Anointed",
+          "storyAction": "Identify the overlooked shepherd among Jesse’s sons.",
+          "mechanic": "memory",
+          "title": "Anointed — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "goliath",
+          "chapterTitle": "Goliath",
+          "storyAction": "Time a sling throw after refusing heavy armour.",
+          "mechanic": "faith-crafting",
+          "title": "David: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "court",
+          "chapterTitle": "Saul's Court",
+          "storyAction": "Play a calming melody while watching Saul’s mood.",
+          "mechanic": "sequence",
+          "title": "Saul's Court — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "friends",
+          "chapterTitle": "Covenant Friends",
+          "storyAction": "Exchange signals with Jonathan unseen.",
+          "mechanic": "route",
+          "title": "Covenant Friends — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "wilderness",
+          "chapterTitle": "The Wilderness",
+          "storyAction": "Escape Saul and spare him in the cave.",
+          "mechanic": "crossing",
+          "title": "The Wilderness — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "abigail",
+          "chapterTitle": "Abigail",
+          "storyAction": "Deliver provisions before anger becomes violence.",
+          "mechanic": "stack",
+          "title": "Abigail — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "throne",
+          "chapterTitle": "The Throne",
+          "storyAction": "Resolve petitions without favouritism.",
+          "mechanic": "packing",
+          "title": "The Throne — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "bathsheba",
+          "chapterTitle": "Bathsheba and Uriah",
+          "storyAction": "Confront the irreversible harm rather than hiding it.",
+          "mechanic": "search",
+          "title": "Bathsheba and Uriah — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "nathan",
+          "chapterTitle": "Nathan's Parable",
+          "storyAction": "Recognise the king inside the story and repent.",
+          "mechanic": "picture",
+          "title": "Nathan's Parable — Nonogram adaptation",
+          "rules": "Fill a small picture grid from row and column clues; provide a reveal-one-cell hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/49-Nonogram-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "absalom",
+          "chapterTitle": "Absalom",
+          "storyAction": "Navigate divided loyalties without celebrating loss.",
+          "mechanic": "order",
+          "title": "Absalom — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 11,
+          "id": "census",
+          "chapterTitle": "The Census",
+          "storyAction": "Choose responsibility during the plague.",
+          "mechanic": "code",
+          "title": "The Census — Mastermind adaptation",
+          "rules": "Arrange symbols and use position clues to revise the answer; clues remain visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/38-Mastermind-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 12,
+          "id": "solomon",
+          "chapterTitle": "Solomon",
+          "storyAction": "Pass plans and wisdom to the next king.",
+          "mechanic": "catch",
+          "title": "Solomon — Insect Catch adaptation",
+          "rules": "Tap the requested moving story objects; ignore unrelated objects without a penalty.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/26-Insect-Catch-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Elijah",
+      "title": "Elijah",
+      "entry": "Elijah/",
+      "manifest": "Elijah/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 9,
+      "liveChapterCount": 7,
+      "requiresNarrativeReview": true,
+      "crafting": {
+        "title": "Elijah: Built by Faith",
+        "chapter": 2,
+        "materials": [
+          "Stone",
+          "Wood",
+          "Grain",
+          "Water"
+        ],
+        "recipes": [
+          {
+            "result": "Altar",
+            "ingredients": [
+              "Stone",
+              "Stone",
+              "Wood"
+            ],
+            "hint": "Stones stacked with timber."
+          },
+          {
+            "result": "Cake",
+            "ingredients": [
+              "Grain",
+              "Water"
+            ],
+            "hint": "The widow's last flour and oil."
+          }
+        ],
+        "goals": [
+          "Altar",
+          "Cake"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Elijah.html",
+          "__games/examples/Crafting_v2/bible-crafting/Elijah.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "drought",
+          "chapterTitle": "The Drought",
+          "storyAction": "Complete a visual task based on the “The Drought” comic panels.",
+          "mechanic": "memory",
+          "title": "The Drought — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "widow",
+          "chapterTitle": "The Widow of Zarephath",
+          "storyAction": "Complete a visual task based on the “The Widow of Zarephath” comic panels.",
+          "mechanic": "faith-crafting",
+          "title": "Elijah: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "carmel",
+          "chapterTitle": "Mount Carmel",
+          "storyAction": "Complete a visual task based on the “Mount Carmel” comic panels.",
+          "mechanic": "sequence",
+          "title": "Mount Carmel — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "flight",
+          "chapterTitle": "The Flight to Horeb",
+          "storyAction": "Complete a visual task based on the “The Flight to Horeb” comic panels.",
+          "mechanic": "route",
+          "title": "The Flight to Horeb — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "voice",
+          "chapterTitle": "The Still, Small Voice",
+          "storyAction": "Complete a visual task based on the “The Still, Small Voice” comic panels.",
+          "mechanic": "crossing",
+          "title": "The Still, Small Voice — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "vineyard",
+          "chapterTitle": "Naboth's Vineyard",
+          "storyAction": "Complete a visual task based on the “Naboth's Vineyard” comic panels.",
+          "mechanic": "stack",
+          "title": "Naboth's Vineyard — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "chariot",
+          "chapterTitle": "The Chariot of Fire",
+          "storyAction": "Complete a visual task based on the “The Chariot of Fire” comic panels.",
+          "mechanic": "packing",
+          "title": "The Chariot of Fire — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Elisha",
+      "title": "Elisha",
+      "entry": "Elisha/",
+      "manifest": "Elisha/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 9,
+      "liveChapterCount": 9,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Elisha: Built by Faith",
+        "chapter": 3,
+        "materials": [
+          "Clay",
+          "Oil",
+          "Salt"
+        ],
+        "recipes": [
+          {
+            "result": "Jar",
+            "ingredients": [
+              "Clay",
+              "Clay"
+            ],
+            "hint": "Empty vessels borrowed from neighbours."
+          },
+          {
+            "result": "Bowl",
+            "ingredients": [
+              "Clay",
+              "Salt"
+            ],
+            "hint": "A new bowl with salt."
+          },
+          {
+            "result": "Full Jar",
+            "ingredients": [
+              "Jar",
+              "Oil"
+            ],
+            "hint": "Oil poured until it fills."
+          }
+        ],
+        "goals": [
+          "Full Jar",
+          "Full Jar",
+          "Bowl"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Elisha.html",
+          "__games/examples/Crafting_v2/bible-crafting/Elisha.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "the_mantle",
+          "chapterTitle": "The Mantle",
+          "storyAction": "Leave the plough and follow Elijah.",
+          "mechanic": "memory",
+          "title": "The Mantle — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "the_jordan",
+          "chapterTitle": "The Jordan",
+          "storyAction": "Strike the water and cross.",
+          "mechanic": "route",
+          "title": "The Jordan — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "the_widow_s_oil",
+          "chapterTitle": "The Widow’s Oil",
+          "storyAction": "Collect jars and pour without waste.",
+          "mechanic": "faith-crafting",
+          "title": "Elisha: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "the_shunammite_room",
+          "chapterTitle": "The Shunammite Room",
+          "storyAction": "Arrange a simple guest room.",
+          "mechanic": "order",
+          "title": "The Shunammite Room — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "the_child",
+          "chapterTitle": "The Child",
+          "storyAction": "Climb to the room and persist in care.",
+          "mechanic": "sequence",
+          "title": "The Child — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "naaman",
+          "chapterTitle": "Naaman",
+          "storyAction": "Guide the commander through seven Jordan immersions.",
+          "mechanic": "crossing",
+          "title": "Naaman — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "the_floating_axe",
+          "chapterTitle": "The Floating Axe",
+          "storyAction": "Mark where the borrowed iron fell.",
+          "mechanic": "stack",
+          "title": "The Floating Axe — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "the_unseen_army",
+          "chapterTitle": "The Unseen Army",
+          "storyAction": "Reveal protection around the frightened servant.",
+          "mechanic": "packing",
+          "title": "The Unseen Army — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "a_blind_feast",
+          "chapterTitle": "A Blind Feast",
+          "storyAction": "Lead enemies safely to a meal instead of an ambush.",
+          "mechanic": "search",
+          "title": "A Blind Feast — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Job",
+      "title": "Job",
+      "entry": "Job/",
+      "manifest": "Job/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 10,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Job: Built by Faith",
+        "chapter": 6,
+        "materials": [
+          "Stone",
+          "Wood",
+          "Flax"
+        ],
+        "recipes": [
+          {
+            "result": "Cloth",
+            "ingredients": [
+              "Flax",
+              "Flax"
+            ],
+            "hint": "Woven for mourning."
+          },
+          {
+            "result": "Altar",
+            "ingredients": [
+              "Stone",
+              "Stone",
+              "Wood"
+            ],
+            "hint": "Stacked stones and timber."
+          }
+        ],
+        "goals": [
+          "Altar",
+          "Cloth"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Job.html",
+          "__games/examples/Crafting_v2/bible-crafting/Job.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "a_blameless_life",
+          "chapterTitle": "A Blameless Life",
+          "storyAction": "Tend Job’s household and practice generous justice.",
+          "mechanic": "memory",
+          "title": "A Blameless Life — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "the_accuser",
+          "chapterTitle": "The Accuser",
+          "storyAction": "Observe the heavenly challenge without controlling it.",
+          "mechanic": "sequence",
+          "title": "The Accuser — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "loss_upon_loss",
+          "chapterTitle": "Loss upon Loss",
+          "storyAction": "Receive each messenger and sit with the silence.",
+          "mechanic": "route",
+          "title": "Loss upon Loss — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "seven_days",
+          "chapterTitle": "Seven Days",
+          "storyAction": "Keep vigil without offering explanations.",
+          "mechanic": "packing",
+          "title": "Seven Days — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "job_speaks",
+          "chapterTitle": "Job Speaks",
+          "storyAction": "Build an honest lament from grief and protest.",
+          "mechanic": "stack",
+          "title": "Job Speaks — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "the_friends",
+          "chapterTitle": "The Friends",
+          "storyAction": "Identify when counsel becomes accusation.",
+          "mechanic": "faith-crafting",
+          "title": "Job: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "elihu",
+          "chapterTitle": "Elihu",
+          "storyAction": "Listen, test claims, and resist easy scoring.",
+          "mechanic": "crossing",
+          "title": "Elihu — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "out_of_the_whirlwind",
+          "chapterTitle": "Out of the Whirlwind",
+          "storyAction": "Explore questions about creation.",
+          "mechanic": "search",
+          "title": "Out of the Whirlwind — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "job_responds",
+          "chapterTitle": "Job Responds",
+          "storyAction": "Release the demand to master every answer.",
+          "mechanic": "picture",
+          "title": "Job Responds — Nonogram adaptation",
+          "rules": "Fill a small picture grid from row and column clues; provide a reveal-one-cell hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/49-Nonogram-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "restoration",
+          "chapterTitle": "Restoration",
+          "storyAction": "Rebuild community without treating new gifts as replacements.",
+          "mechanic": "order",
+          "title": "Restoration — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Jonah",
+      "title": "Jonah",
+      "entry": "Jonah/",
+      "manifest": "Jonah/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 9,
+      "liveChapterCount": 4,
+      "requiresNarrativeReview": true,
+      "crafting": {
+        "title": "Jonah: Built by Faith",
+        "chapter": 3,
+        "materials": [
+          "Ash",
+          "Water",
+          "Reed",
+          "Flax"
+        ],
+        "recipes": [
+          {
+            "result": "Ink",
+            "ingredients": [
+              "Ash",
+              "Water"
+            ],
+            "hint": "Soot mixed with water."
+          },
+          {
+            "result": "Scroll",
+            "ingredients": [
+              "Reed",
+              "Ink"
+            ],
+            "hint": "Written warning."
+          },
+          {
+            "result": "Sackcloth",
+            "ingredients": [
+              "Flax",
+              "Flax"
+            ],
+            "hint": "Rough weave for repentance."
+          }
+        ],
+        "goals": [
+          "Scroll",
+          "Sackcloth"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Jonah.html",
+          "__games/examples/Crafting_v2/bible-crafting/Jonah.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "escaping",
+          "chapterTitle": "Dialogue: Escaping",
+          "storyAction": "Complete a visual task based on the “Dialogue: Escaping” comic panels.",
+          "mechanic": "memory",
+          "title": "Dialogue: Escaping — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "trapped",
+          "chapterTitle": "Feeling Trapped",
+          "storyAction": "Complete a visual task based on the “Feeling Trapped” comic panels.",
+          "mechanic": "sequence",
+          "title": "Feeling Trapped — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "mission",
+          "chapterTitle": "The Mission",
+          "storyAction": "Complete a visual task based on the “The Mission” comic panels.",
+          "mechanic": "faith-crafting",
+          "title": "Jonah: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "reflection",
+          "chapterTitle": "Reflection",
+          "storyAction": "Complete a visual task based on the “Reflection” comic panels.",
+          "mechanic": "route",
+          "title": "Reflection — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Isaiah",
+      "title": "Isaiah",
+      "entry": "Isaiah/",
+      "manifest": "Isaiah/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 9,
+      "liveChapterCount": 9,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Isaiah: Built by Faith",
+        "chapter": 1,
+        "materials": [
+          "Wood",
+          "Soot",
+          "Reed",
+          "Water"
+        ],
+        "recipes": [
+          {
+            "result": "Ink",
+            "ingredients": [
+              "Soot",
+              "Water"
+            ],
+            "hint": "Soot mixed with water."
+          },
+          {
+            "result": "Scroll",
+            "ingredients": [
+              "Reed",
+              "Ink"
+            ],
+            "hint": "Written prophecy."
+          },
+          {
+            "result": "Coal",
+            "ingredients": [
+              "Wood",
+              "Soot"
+            ],
+            "hint": "A burning ember."
+          }
+        ],
+        "goals": [
+          "Scroll",
+          "Coal"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Isaiah.html",
+          "__games/examples/Crafting_v2/bible-crafting/Isaiah.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "a_city_in_need",
+          "chapterTitle": "A City in Need",
+          "storyAction": "Identify worship separated from justice.",
+          "mechanic": "faith-crafting",
+          "title": "Isaiah: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "the_holy_throne",
+          "chapterTitle": "The Holy Throne",
+          "storyAction": "Navigate the temple vision and answer the call.",
+          "mechanic": "memory",
+          "title": "The Holy Throne — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "the_vineyard_song",
+          "chapterTitle": "The Vineyard Song",
+          "storyAction": "Tend a vineyard that yields injustice.",
+          "mechanic": "sequence",
+          "title": "The Vineyard Song — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "immanuel_sign",
+          "chapterTitle": "Immanuel Sign",
+          "storyAction": "Carry hope to fearful King Ahaz.",
+          "mechanic": "route",
+          "title": "Immanuel Sign — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "the_assyrian_shadow",
+          "chapterTitle": "The Assyrian Shadow",
+          "storyAction": "Map the advancing empire and the surviving stump.",
+          "mechanic": "crossing",
+          "title": "The Assyrian Shadow — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "hezekiah_s_crisis",
+          "chapterTitle": "Hezekiah’s Crisis",
+          "storyAction": "Bring the threatening letter into prayer.",
+          "mechanic": "stack",
+          "title": "Hezekiah’s Crisis — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "comfort_my_people",
+          "chapterTitle": "Comfort My People",
+          "storyAction": "Build a road of return through the wilderness.",
+          "mechanic": "packing",
+          "title": "Comfort My People — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "the_servant",
+          "chapterTitle": "The Servant",
+          "storyAction": "Match suffering, justice, and healing motifs.",
+          "mechanic": "search",
+          "title": "The Servant — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "new_creation",
+          "chapterTitle": "New Creation",
+          "storyAction": "Restore a city garden where all can flourish.",
+          "mechanic": "picture",
+          "title": "New Creation — Nonogram adaptation",
+          "rules": "Fill a small picture grid from row and column clues; provide a reveal-one-cell hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/49-Nonogram-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Jeremiah",
+      "title": "Jeremiah",
+      "entry": "Jeremiah/",
+      "manifest": "Jeremiah/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 10,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Jeremiah: Built by Faith",
+        "chapter": 5,
+        "materials": [
+          "Clay",
+          "Water",
+          "Flax"
+        ],
+        "recipes": [
+          {
+            "result": "Wet Clay",
+            "ingredients": [
+              "Clay",
+              "Water"
+            ],
+            "hint": "Soft and workable."
+          },
+          {
+            "result": "Vessel",
+            "ingredients": [
+              "Wet Clay",
+              "Wet Clay"
+            ],
+            "hint": "Shaped on the wheel."
+          },
+          {
+            "result": "Belt",
+            "ingredients": [
+              "Flax",
+              "Flax"
+            ],
+            "hint": "A linen belt."
+          }
+        ],
+        "goals": [
+          "Vessel",
+          "Belt"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Jeremiah.html",
+          "__games/examples/Crafting_v2/bible-crafting/Jeremiah.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "the_call",
+          "chapterTitle": "The Call",
+          "storyAction": "Touch the right words to the young prophet’s mouth.",
+          "mechanic": "memory",
+          "title": "The Call — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "the_almond_branch",
+          "chapterTitle": "The Almond Branch",
+          "storyAction": "Spot signs that God is watching over the word.",
+          "mechanic": "sequence",
+          "title": "The Almond Branch — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "at_the_temple_gate",
+          "chapterTitle": "At the Temple Gate",
+          "storyAction": "Separate ritual confidence from justice.",
+          "mechanic": "route",
+          "title": "At the Temple Gate — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "the_scroll",
+          "chapterTitle": "The Scroll",
+          "storyAction": "Dictate to Baruch and rebuild the burned scroll.",
+          "mechanic": "stack",
+          "title": "The Scroll — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "the_potter",
+          "chapterTitle": "The Potter",
+          "storyAction": "Reshape the clay while it remains workable.",
+          "mechanic": "faith-crafting",
+          "title": "Jeremiah: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "the_yoke",
+          "chapterTitle": "The Yoke",
+          "storyAction": "Carry the warning despite Hananiah’s easy promise.",
+          "mechanic": "crossing",
+          "title": "The Yoke — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "the_cistern",
+          "chapterTitle": "The Cistern",
+          "storyAction": "Coordinate Ebed-melech’s rope rescue.",
+          "mechanic": "packing",
+          "title": "The Cistern — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "buy_the_field",
+          "chapterTitle": "Buy the Field",
+          "storyAction": "Complete a land purchase while siege closes in.",
+          "mechanic": "search",
+          "title": "Buy the Field — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "the_fall_of_jerusalem",
+          "chapterTitle": "The Fall of Jerusalem",
+          "storyAction": "Guide survivors through the breached city.",
+          "mechanic": "picture",
+          "title": "The Fall of Jerusalem — Nonogram adaptation",
+          "rules": "Fill a small picture grid from row and column clues; provide a reveal-one-cell hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/49-Nonogram-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "lament_and_hope",
+          "chapterTitle": "Lament and Hope",
+          "storyAction": "Pair grief lines with stubborn hope.",
+          "mechanic": "order",
+          "title": "Lament and Hope — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Daniel",
+      "title": "Daniel",
+      "entry": "Daniel/",
+      "manifest": "Daniel/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 5,
+      "requiresNarrativeReview": true,
+      "crafting": {
+        "title": "Daniel: Built by Faith",
+        "chapter": 1,
+        "materials": [
+          "Grain",
+          "Water",
+          "Wood",
+          "Flax"
+        ],
+        "recipes": [
+          {
+            "result": "Meal",
+            "ingredients": [
+              "Grain",
+              "Water"
+            ],
+            "hint": "Simple food for the faithful."
+          },
+          {
+            "result": "Window",
+            "ingredients": [
+              "Wood",
+              "Wood",
+              "Flax"
+            ],
+            "hint": "A frame open towards Jerusalem."
+          }
+        ],
+        "goals": [
+          "Meal",
+          "Window"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Daniel.html",
+          "__games/examples/Crafting_v2/bible-crafting/Daniel.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "table",
+          "chapterTitle": "The King's Table",
+          "storyAction": "Complete a visual task based on the “The King's Table” comic panels.",
+          "mechanic": "faith-crafting",
+          "title": "Daniel: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "statue",
+          "chapterTitle": "The Dream",
+          "storyAction": "Complete a visual task based on the “The Dream” comic panels.",
+          "mechanic": "memory",
+          "title": "The Dream — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "furnace",
+          "chapterTitle": "The Furnace",
+          "storyAction": "Complete a visual task based on the “The Furnace” comic panels.",
+          "mechanic": "sequence",
+          "title": "The Furnace — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "writing",
+          "chapterTitle": "The Writing on the Wall",
+          "storyAction": "Complete a visual task based on the “The Writing on the Wall” comic panels.",
+          "mechanic": "stack",
+          "title": "The Writing on the Wall — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "den",
+          "chapterTitle": "The Den",
+          "storyAction": "Complete a visual task based on the “The Den” comic panels.",
+          "mechanic": "route",
+          "title": "The Den — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Esther",
+      "title": "Esther",
+      "entry": "Esther/",
+      "manifest": "Esther/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 10,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Esther: Built by Faith",
+        "chapter": 1,
+        "materials": [
+          "Flax",
+          "Myrrh",
+          "Oil",
+          "Water"
+        ],
+        "recipes": [
+          {
+            "result": "Cloth",
+            "ingredients": [
+              "Flax",
+              "Flax"
+            ],
+            "hint": "Fine weave."
+          },
+          {
+            "result": "Royal Robe",
+            "ingredients": [
+              "Cloth",
+              "Cloth"
+            ],
+            "hint": "Cloth on cloth."
+          },
+          {
+            "result": "Perfume",
+            "ingredients": [
+              "Myrrh",
+              "Oil"
+            ],
+            "hint": "Resin and oil."
+          }
+        ],
+        "goals": [
+          "Royal Robe",
+          "Perfume"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Esther.html",
+          "__games/examples/Crafting_v2/bible-crafting/Esther.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "the_banquet",
+          "chapterTitle": "The Banquet",
+          "storyAction": "Navigate the palace feast and hear Vashti’s refusal.",
+          "mechanic": "faith-crafting",
+          "title": "Esther: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "a_new_queen",
+          "chapterTitle": "A New Queen",
+          "storyAction": "Prepare Esther while protecting her identity.",
+          "mechanic": "memory",
+          "title": "A New Queen — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "the_gate_plot",
+          "chapterTitle": "The Gate Plot",
+          "storyAction": "Carry Mordecai’s warning into the royal record.",
+          "mechanic": "sequence",
+          "title": "The Gate Plot — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "haman_s_decree",
+          "chapterTitle": "Haman’s Decree",
+          "storyAction": "Trace the decree as it spreads across the empire.",
+          "mechanic": "route",
+          "title": "Haman’s Decree — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "for_such_a_time",
+          "chapterTitle": "For Such a Time",
+          "storyAction": "Fast, gather courage, and approach the throne.",
+          "mechanic": "catch",
+          "title": "For Such a Time — Insect Catch adaptation",
+          "rules": "Tap the requested moving story objects; ignore unrelated objects without a penalty.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/26-Insect-Catch-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "the_first_banquet",
+          "chapterTitle": "The First Banquet",
+          "storyAction": "Invite the king and Haman without revealing too soon.",
+          "mechanic": "crossing",
+          "title": "The First Banquet — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "the_sleepless_night",
+          "chapterTitle": "The Sleepless Night",
+          "storyAction": "Find Mordecai’s forgotten service in the chronicles.",
+          "mechanic": "search",
+          "title": "The Sleepless Night — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "the_second_banquet",
+          "chapterTitle": "The Second Banquet",
+          "storyAction": "Name the threat clearly at the decisive moment.",
+          "mechanic": "stack",
+          "title": "The Second Banquet — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "a_new_decree",
+          "chapterTitle": "A New Decree",
+          "storyAction": "Send defensive orders before the deadline.",
+          "mechanic": "order",
+          "title": "A New Decree — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "purim",
+          "chapterTitle": "Purim",
+          "storyAction": "Assemble gifts, food, and remembrance for every district.",
+          "mechanic": "packing",
+          "title": "Purim — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    },
+    {
+      "storyId": "Nehemiah",
+      "title": "Nehemiah",
+      "entry": "Nehemiah/",
+      "manifest": "Nehemiah/data/manifest.json",
+      "status": "planned-not-integrated",
+      "chapterMapping": "live-manifest-order",
+      "canonicalChapterCount": 10,
+      "liveChapterCount": 10,
+      "requiresNarrativeReview": false,
+      "crafting": {
+        "title": "Nehemiah: Built by Faith",
+        "chapter": 8,
+        "materials": [
+          "Stone",
+          "Clay",
+          "Water",
+          "Wood"
+        ],
+        "recipes": [
+          {
+            "result": "Mortar",
+            "ingredients": [
+              "Clay",
+              "Water"
+            ],
+            "hint": "Clay slurry for binding."
+          },
+          {
+            "result": "Wall",
+            "ingredients": [
+              "Stone",
+              "Stone",
+              "Mortar"
+            ],
+            "hint": "Stones mortared together."
+          },
+          {
+            "result": "Gate",
+            "ingredients": [
+              "Wood",
+              "Wood",
+              "Clay"
+            ],
+            "hint": "Timber hung with clay hinges."
+          }
+        ],
+        "goals": [
+          "Wall",
+          "Wall",
+          "Gate"
+        ],
+        "loop": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+        "secondStage": "Use the crafted objects in the chapter action; do not replace the action with repeated presses.",
+        "referenceExamples": [
+          "__games/examples/Crafting_v1/bible-crafting/Nehemiah.html",
+          "__games/examples/Crafting_v2/bible-crafting/Nehemiah.html"
+        ]
+      },
+      "chapters": [
+        {
+          "chapter": 1,
+          "id": "bad_news",
+          "chapterTitle": "Bad News",
+          "storyAction": "Map Jerusalem’s broken gates while Nehemiah prays.",
+          "mechanic": "memory",
+          "title": "Bad News — Memory cards adaptation",
+          "rules": "Reveal pairs of illustrated story objects; matched pairs stay visible.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 2,
+          "id": "before_the_king",
+          "chapterTitle": "Before the King",
+          "storyAction": "Choose a clear request and realistic resources.",
+          "mechanic": "sequence",
+          "title": "Before the King — Simon Says adaptation",
+          "rules": "Repeat a short visual signal sequence; add one signal after each round.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/36-Simon-Says-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 3,
+          "id": "night_inspection",
+          "chapterTitle": "Night Inspection",
+          "storyAction": "Survey ruined walls without alerting opponents.",
+          "mechanic": "stack",
+          "title": "Night Inspection — Tower Blocks adaptation",
+          "rules": "Place a moving building piece over a marked foundation; use a wide timing window.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/13-Tower-Blocks",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 4,
+          "id": "rise_and_build",
+          "chapterTitle": "Rise and Build",
+          "storyAction": "Assign families to adjacent wall sections.",
+          "mechanic": "route",
+          "title": "Rise and Build — Tilting Maze adaptation",
+          "rules": "Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/21-Tilting-Maze-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 5,
+          "id": "sword_and_trowel",
+          "chapterTitle": "Sword and Trowel",
+          "storyAction": "Balance guarding with construction.",
+          "mechanic": "packing",
+          "title": "Sword and Trowel — Tetris adaptation",
+          "rules": "Rotate and place a small set of fixed pieces into an outline; no falling timer.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/20-Tetris-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 6,
+          "id": "the_outcry",
+          "chapterTitle": "The Outcry",
+          "storyAction": "Cancel exploitative debts and restore fields.",
+          "mechanic": "crossing",
+          "title": "The Outcry — Frogger adaptation",
+          "rules": "Move one lane at a time when the passage is clear; pause the lanes while reading.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/46-Frogger-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 7,
+          "id": "plots_and_rumours",
+          "chapterTitle": "Plots and Rumours",
+          "storyAction": "Recognise distractions designed to stop the work.",
+          "mechanic": "search",
+          "title": "Plots and Rumours — Minesweeper adaptation",
+          "rules": "Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/16-Minesweeper-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 8,
+          "id": "the_wall_completed",
+          "chapterTitle": "The Wall Completed",
+          "storyAction": "Close the final gap and set gatekeepers.",
+          "mechanic": "faith-crafting",
+          "title": "Nehemiah: Built by Faith",
+          "rules": "Gather materials → select recipe ingredients → combine → use the finished objects in the story scene.",
+          "source": "local-crafting-examples",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 9,
+          "id": "the_book_read",
+          "chapterTitle": "The Book Read",
+          "storyAction": "Rebuild the platform and help the people understand.",
+          "mechanic": "picture",
+          "title": "The Book Read — Nonogram adaptation",
+          "rules": "Fill a small picture grid from row and column clues; provide a reveal-one-cell hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/49-Nonogram-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        },
+        {
+          "chapter": 10,
+          "id": "reform",
+          "chapterTitle": "Reform",
+          "storyAction": "Inspect storerooms and restore shared commitments.",
+          "mechanic": "order",
+          "title": "Reform — Sliding Puzzle adaptation",
+          "rules": "Slide illustrated tiles into the story order; allow an easy reset and step hint.",
+          "source": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/37-Sliding-Puzzle-Game",
+          "status": "planned",
+          "success": "Show Well done! and Chapter complete! with comic SFX; show “You can continue the story.” then Continue →.",
+          "skip": "Skip → continues the adventure without recording a game win."
+        }
+      ]
+    }
+  ]
+}

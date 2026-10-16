@@ -10,7 +10,7 @@
     if (oldFooter) oldFooter.remove();
 
     const storyName = (document.title.split(/[—|]/)[0] || 'Bible Story').trim();
-    const libraries = ['Vanilla JavaScript', 'Web Audio API', 'HTML Canvas', 'Google Fonts'];
+    const libraries = ['Web Audio API', 'HTML Canvas', 'Google Fonts'];
     if (window.THREE) libraries.unshift(`Three.js ${window.THREE.REVISION ? `r${window.THREE.REVISION}` : ''}`.trim());
     if (window.gsap) libraries.unshift(`GSAP ${window.gsap.version || ''}`.trim());
 
@@ -49,6 +49,35 @@
         <p class="story-info-small">This project is an independent creative adaptation. Library names and trademarks belong to their respective owners.</p>
       </section>`;
     document.body.appendChild(modal);
+
+    // Escape the app's stacking context so credits cannot cover the controls.
+    const controls = document.createElement('div');
+    controls.id = 'storyControls';
+    controls.setAttribute('role', 'group');
+    controls.setAttribute('aria-label', 'Story controls');
+    for (const button of [audioButton, infoButton, document.getElementById('nextBtn'), document.getElementById('nextLineBtn')]) {
+      if (button) controls.appendChild(button);
+    }
+    document.body.appendChild(controls);
+    function attachEditorButton() {
+      const editButton = document.getElementById('storyEditorToggle');
+      if (!editButton) return false;
+      controls.appendChild(editButton);
+      return true;
+    }
+    if (!attachEditorButton()) {
+      const editorObserver = new MutationObserver(() => {
+        if (attachEditorButton()) editorObserver.disconnect();
+      });
+      editorObserver.observe(document.body, { childList: true });
+    }
+
+    const startScreen = document.getElementById('startScreen');
+    function syncControls() {
+      controls.hidden = Boolean(startScreen && !startScreen.hidden && !startScreen.classList.contains('hide') && getComputedStyle(startScreen).display !== 'none' && getComputedStyle(startScreen).visibility !== 'hidden');
+    }
+    if (startScreen) new MutationObserver(syncControls).observe(startScreen, { attributes: true, attributeFilter: ['style', 'class', 'hidden'] });
+    syncControls();
 
     const card = modal.querySelector('.story-info-card');
     const closeButton = modal.querySelector('.story-info-close');

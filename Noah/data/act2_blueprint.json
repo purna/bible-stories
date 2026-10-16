@@ -122,11 +122,11 @@
       "id": "blueprint_4",
       "choices": [
         {
-          "label": "Follow the specs exactly 📐",
+          "label": "Follow the specs exactly",
           "note": "Every joint measured twice. Every plank cut to the cubit."
         },
         {
-          "label": "Estimate a few measurements 🤷",
+          "label": "Estimate a few measurements",
           "note": "It'll look about right... but a joint or two will be weaker for it."
         }
       ],

@@ -1,0 +1,76 @@
+{
+  "story": "Ruth",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "leaving_moab",
+      "title": "Ch.1 \u00b7 Leaving Moab",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Ruth/data/act1_leaving_moab.json"
+    },
+    {
+      "chapter": 2,
+      "id": "your_people",
+      "title": "Ch.2 \u00b7 Your People",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Ruth/data/act2_your_people.json"
+    },
+    {
+      "chapter": 3,
+      "id": "gleaning",
+      "title": "Ch.3 \u00b7 Gleaning",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Ruth/data/act3_gleaning.json"
+    },
+    {
+      "chapter": 4,
+      "id": "boaz_notices",
+      "title": "Ch.4 \u00b7 Boaz Notices",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Ruth/data/act4_boaz_notices.json"
+    },
+    {
+      "chapter": 5,
+      "id": "threshing_floor",
+      "title": "Ch.5 \u00b7 Threshing Floor",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Ruth/data/act5_threshing_floor.json"
+    },
+    {
+      "chapter": 6,
+      "id": "at_the_gate",
+      "title": "Ch.6 \u00b7 At the Gate",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Ruth/data/act6_at_the_gate.json"
+    },
+    {
+      "chapter": 7,
+      "id": "redeemed",
+      "title": "Ch.7 \u00b7 Redeemed",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Ruth/data/act7_redeemed.json"
+    },
+    {
+      "chapter": 8,
+      "id": "obed",
+      "title": "Ch.8 \u00b7 Obed",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Ruth/data/act8_obed.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Ruth.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

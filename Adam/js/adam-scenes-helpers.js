@@ -39,6 +39,15 @@
         return new THREE.MeshToonMaterial(opts);
     };
 
+    // Snapshot source meshes before adding outline children or changing materials.
+    function collectSceneMeshes(root) {
+        var meshes = [];
+        root.traverse(function (child) {
+            if (child.isMesh && !child.userData.isToonOutline) meshes.push(child);
+        });
+        return meshes;
+    }
+
     // ── Shared outline material ────────────────────────────────────────
     var outlineMat = new THREE.MeshBasicMaterial({
         color: 0x000000,
@@ -51,7 +60,11 @@
     // The outline inherits position/rotation/scale automatically.
     // It renders back-faces only, scaled 8% larger to create the outline.
     global.addOutline = function (mesh, size) {
+        if (mesh.userData.isToonOutline) return mesh;
+        var existing = mesh.children.find(function (child) { return child.userData.isToonOutline; });
+        if (existing) return existing;
         var outline = new THREE.Mesh(mesh.geometry, outlineMat);
+        outline.userData.isToonOutline = true;
         outline.scale.setScalar(1 + (size || 0.08));
         outline.renderOrder = 0;
         mesh.add(outline);
@@ -370,7 +383,8 @@
             url,
             function (gltf) {
                 // Convert all meshes to toon shader + outlines
-                gltf.scene.traverse(function (child) {
+                group.add(gltf.scene);
+                collectSceneMeshes(gltf.scene).forEach(function (child) {
                     if (child.isMesh) {
                         if (child.material) {
                             var origMat = Array.isArray(child.material)
@@ -399,7 +413,6 @@
                         child.castShadow = true;
                         child.receiveShadow = true;
                         global.addOutline(child, 0.03);
-                        group.add(child);
                     }
                 });
                 if (callback) callback(group, gltf);
@@ -414,7 +427,7 @@
 
     // ── Helper: convert any loaded group to toon shader + outlines ─────
     global.toonizeGroup = function (group) {
-        group.traverse(function (child) {
+        collectSceneMeshes(group).forEach(function (child) {
             if (child.isMesh && child.material) {
                 var origMat = Array.isArray(child.material)
                     ? child.material[0]
@@ -610,7 +623,7 @@
                 window.initSceneLights(group);
             }
             // Convert all Phong materials to toon shader
-            group.traverse(function (child) {
+            collectSceneMeshes(group).forEach(function (child) {
                 if (child.isMesh && child.material) {
                     var origMat = Array.isArray(child.material)
                         ? child.material[0]

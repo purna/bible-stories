@@ -255,11 +255,11 @@
       "id": "court_9",
       "choices": [
         {
-          "label": "Run before the spear finds me 🏃",
+          "label": "Run before the spear finds me",
           "note": "Survival first. The calling can wait for safer ground."
         },
         {
-          "label": "Stay and face the king 🛡️",
+          "label": "Stay and face the king",
           "note": "A servant's trust does not leave when the master is afraid."
         }
       ],

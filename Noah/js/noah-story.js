@@ -162,6 +162,8 @@ function renderChoices(data) {
       b.textContent = c.label;
       b.onclick = () => {
         choicesBox.classList.remove('show');
+        choicesBox.replaceChildren();
+        delayNote.closest('.content-overlay')?.classList.add('choice-answered');
         delayNote.className = 'show';
         delayNote.textContent = c.note;
         choicePending = false;
@@ -182,7 +184,7 @@ function updateNextBtn() {
   const pal = `palette-act-${actIdx + 1}`;
   nextBtn.className = pal;
   nextBtn.classList.toggle('show', atEnd);
-  nextBtn.textContent = actIdx === STORY.length - 1 ? 'Read Again ↺' : 'Next Chapter ↴';
+  nextBtn.textContent = actIdx === STORY.length - 1 ? 'Finish story →' : 'Next Chapter ↴';
   nextBtn.classList.toggle('finale', actIdx === STORY.length - 1);
   nextLineBtn.className = pal;
   nextLineBtn.classList.toggle('show', notAtEnd);
@@ -219,9 +221,9 @@ async function renderLine() {
   const isWet     = ['flood', 'door', 'waiting'].includes(act.id) || act.particle === 'storm' || act.particle === 'flood';
   const isRainbow = act.id === 'covenant';
   const isDawn    = act.id === 'dryground' || act.particle === 'dawn';
-  el('#rainLayer').classList.toggle('active', isWet);
-  el('#ambientLayer').classList.toggle('active', isRainbow || isDawn);
-  el('#ambientLayer').classList.toggle('rainbow', isRainbow);
+  el('#rainLayer')?.classList.toggle('active', isWet);
+  el('#ambientLayer')?.classList.toggle('active', isRainbow || isDawn);
+  el('#ambientLayer')?.classList.toggle('rainbow', isRainbow);
 
   const frame = document.createElement('div');
   frame.className = `comic-frame popIn palette-act-${actIdx + 1}`;
@@ -253,7 +255,7 @@ async function renderLine() {
       const charBox = document.createElement('div');
       charBox.className = 'char-container';
       charBox.innerHTML = CHARACTERS[data.speaker];
-      overlay.appendChild(charBox);
+      if (frame.isConnected) frame.appendChild(charBox);
     }
 
     if (data.sfx) {
@@ -487,9 +489,13 @@ function startGatheringInteraction(container, deck) {
   }
 
   function cleanup() {
+    window.removeEventListener('story:chapterchanging', cancelForChapterChange);
     document.removeEventListener('keydown', keyHandler);
     if (window.StoryRuntime) StoryRuntime.unlock('gathering');
   }
+  function cancelForChapterChange(){ cleanup(); container.remove(); updateNextBtn(); }
+  window.addEventListener('story:chapterchanging',cancelForChapterChange);
+
 
   function keyHandler(event) {
     if (event.key === 'ArrowRight') { event.preventDefault(); moveFocus(1); }
@@ -498,8 +504,8 @@ function startGatheringInteraction(container, deck) {
     else if (event.key === 'End') { event.preventDefault(); updateFocus(cards.length - 1); }
   }
 
-  finishBtn.addEventListener('click', () => { cleanup(); container.remove(); });
-  skipBtn.addEventListener('click', () => { cleanup(); container.remove(); });
+  finishBtn.addEventListener('click', () => { cleanup(); container.remove(); updateNextBtn(); });
+  skipBtn.addEventListener('click', () => { cleanup(); container.remove(); updateNextBtn();lineIdx<currentAct().lines.length-1?goLine(1):goNextChapter(); });
 
   document.addEventListener('keydown', keyHandler);
   if (window.StoryRuntime) StoryRuntime.setMode('game', { lock: 'gathering' });
@@ -538,6 +544,7 @@ function fallTransition(mid) {
 
 function goNextChapter() {
   if (transitioning) return;
+  if(window.StoryProgress){StoryProgress.markChapter(actIdx,STORY.length);if(actIdx===STORY.length-1&&StoryProgress.allComplete(STORY.length)){StoryProgress.openMap();return;}}
   if (actIdx >= STORY.length - 1) {
     fallTransition(() => { actIdx = 0; lineIdx = 0; populateChapterSelect(); renderLine(); });
     return;
@@ -619,10 +626,7 @@ resizeCanvas();
 tickParticles();
 
 nextLineBtn.addEventListener('click', () => goLine(1));
-nextBtn.addEventListener('click', () => {
-  if (actIdx === STORY.length - 1) { jumpToChapter(0); }
-  else goNextChapter();
-});
+nextBtn.addEventListener('click', goNextChapter);
 
 el('#chapterSelect').addEventListener('change', e => jumpToChapter(parseInt(e.target.value)));
 

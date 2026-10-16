@@ -1,0 +1,92 @@
+{
+  "story": "Esther",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "the_banquet",
+      "title": "Ch.1 \u00b7 The Banquet",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Esther/data/act1_the_banquet.json"
+    },
+    {
+      "chapter": 2,
+      "id": "a_new_queen",
+      "title": "Ch.2 \u00b7 A New Queen",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Esther/data/act2_a_new_queen.json"
+    },
+    {
+      "chapter": 3,
+      "id": "the_gate_plot",
+      "title": "Ch.3 \u00b7 The Gate Plot",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Esther/data/act3_the_gate_plot.json"
+    },
+    {
+      "chapter": 4,
+      "id": "haman_s_decree",
+      "title": "Ch.4 \u00b7 Haman\u2019s Decree",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Esther/data/act4_haman_s_decree.json"
+    },
+    {
+      "chapter": 5,
+      "id": "for_such_a_time",
+      "title": "Ch.5 \u00b7 For Such a Time",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Esther/data/act5_for_such_a_time.json"
+    },
+    {
+      "chapter": 6,
+      "id": "the_first_banquet",
+      "title": "Ch.6 \u00b7 The First Banquet",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Esther/data/act6_the_first_banquet.json"
+    },
+    {
+      "chapter": 7,
+      "id": "the_sleepless_night",
+      "title": "Ch.7 \u00b7 The Sleepless Night",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Esther/data/act7_the_sleepless_night.json"
+    },
+    {
+      "chapter": 8,
+      "id": "the_second_banquet",
+      "title": "Ch.8 \u00b7 The Second Banquet",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Esther/data/act8_the_second_banquet.json"
+    },
+    {
+      "chapter": 9,
+      "id": "a_new_decree",
+      "title": "Ch.9 \u00b7 A New Decree",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Esther/data/act9_a_new_decree.json"
+    },
+    {
+      "chapter": 10,
+      "id": "purim",
+      "title": "Ch.10 \u00b7 Purim",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Esther/data/act10_purim.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Esther.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

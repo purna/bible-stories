@@ -1,0 +1,113 @@
+{
+  "story": "Jonah",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "escaping",
+      "title": "Dialogue: Escaping",
+      "status": "live-copy",
+      "kind": "jonah",
+      "source": "Jonah/data/act1_escaping.json",
+      "file": "chapter-01.html",
+      "line": null
+    },
+    {
+      "chapter": 2,
+      "id": "trapped",
+      "title": "Feeling Trapped",
+      "status": "live-copy",
+      "kind": "jonah",
+      "source": "Jonah/data/act2_trapped.json",
+      "file": "chapter-02.html",
+      "line": null
+    },
+    {
+      "chapter": 3,
+      "id": "mission",
+      "title": "The Mission",
+      "status": "live-copy",
+      "kind": "jonah",
+      "source": "Jonah/data/act3_mission.json",
+      "file": "chapter-03.html",
+      "line": null
+    },
+    {
+      "chapter": 4,
+      "id": "reflection",
+      "title": "Reflection",
+      "status": "live-copy",
+      "kind": "jonah",
+      "source": "Jonah/data/act4_reflection.json",
+      "file": "chapter-04.html",
+      "line": null
+    }
+  ],
+  "snapshotSources": [
+    {
+      "path": "Jonah/js/story-editor-config.js",
+      "sha256": "5c89bc026e702a7cc31b071f0e2cf955a6b2b418853e67a86fc06d9589e67f07"
+    },
+    {
+      "path": "Jonah/js/story-runtime.js",
+      "sha256": "9161d7d897a7d7be0653592aaea1351316b3c59701c2699bd017b0ef4f9ed11b"
+    },
+    {
+      "path": "Jonah/js/audio-manager.js",
+      "sha256": "c2a6a18e7879348283a22ce078cec76f9f093b798b48e1719fff2551af50a549"
+    },
+    {
+      "path": "Jonah/js/config.js",
+      "sha256": "e722cb3eb9a065dffb011c69101a782de5703b41bd9c87e894923e6b7850f9fa"
+    },
+    {
+      "path": "Jonah/js/compass.js",
+      "sha256": "d69587da5ca0fa8a286d3ba57f848cdfe3a504b8c9ee5da47f3b7145274ab2e1"
+    },
+    {
+      "path": "Jonah/js/dialogueEngine.js",
+      "sha256": "f8c4f43692fe0a4d8ea0032adac3c2eede49c61de5e2bec61cf2ed548ad6f228"
+    },
+    {
+      "path": "Jonah/js/isometricEngine.js",
+      "sha256": "19f4f8a5243517b956d427e3d97cbca081835fa314705c3bccd481e598ae483b"
+    },
+    {
+      "path": "Jonah/js/jonah-game-integration.js",
+      "sha256": "4b8c2336e0522475e71307971cb43935a3c90692c0b06cb42ac8c1029b0a4c2b"
+    },
+    {
+      "path": "Jonah/js/jonah-whale-scene.js",
+      "sha256": "181cedbf432dffaa4aa0df3dd1596c1514f54c4329ffeabc688a5b3e172e8dfd"
+    },
+    {
+      "path": "Jonah/js/jonah-story.js",
+      "sha256": "e94a31ef452c1e29508121bd0053c9f4fc56383b4469d757149150d73807c0da"
+    },
+    {
+      "path": "shared-tools/story-player.js",
+      "sha256": "6f0dfc1a27ee6e7e2bc8b0f27adea99601c3fe56e7a91fe3b61988786394500f"
+    },
+    {
+      "path": "Jonah/js/postProduction.js",
+      "sha256": "97d79440f3fbff9d1be85cbd6041213b46c1d2a8f02d719961f54e5c94615ee8"
+    },
+    {
+      "path": "shared-tools/story-text-rendering.js",
+      "sha256": "709bb8f7bc28aeaa0e169fd3ee4d936dcfbd63fa2a4dba0fc8fe7f6eb741c43c"
+    },
+    {
+      "path": "shared-tools/story-game-icons.js",
+      "sha256": "1f6e3be7d68578cfc899a39e1a2f78e3182d2fb574c23d6e98c8b7b6624d1070"
+    },
+    {
+      "path": "shared-tools/story-game-controls.js",
+      "sha256": "4c501f77588d34e94e480806292e3dfe8f6d924387077ae34e7f4cb855485b13"
+    }
+  ],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Jonah.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

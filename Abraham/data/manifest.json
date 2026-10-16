@@ -1,0 +1,96 @@
+{
+  "version": "2.0.0",
+  "storyId": "abraham",
+  "acts": [
+    {
+      "id": "act1_the_call",
+      "name": "Ch.1 · The Call",
+      "file": "act1_the_call.json",
+      "game": {
+        "module": "abraham",
+        "chapter": 1
+      }
+    },
+    {
+      "id": "act2_egypt_and_return",
+      "name": "Ch.2 · Egypt and Return",
+      "file": "act2_egypt_and_return.json",
+      "game": {
+        "module": "abraham",
+        "chapter": 2
+      }
+    },
+    {
+      "id": "act3_lot_chooses",
+      "name": "Ch.3 · Lot Chooses",
+      "file": "act3_lot_chooses.json",
+      "game": {
+        "module": "abraham",
+        "chapter": 3
+      }
+    },
+    {
+      "id": "act4_rescue_of_lot",
+      "name": "Ch.4 · Rescue of Lot",
+      "file": "act4_rescue_of_lot.json",
+      "game": {
+        "module": "abraham",
+        "chapter": 4
+      }
+    },
+    {
+      "id": "act5_covenant_stars",
+      "name": "Ch.5 · Covenant Stars",
+      "file": "act5_covenant_stars.json",
+      "game": {
+        "module": "abraham",
+        "chapter": 5
+      }
+    },
+    {
+      "id": "act6_hagar_in_the_wilderness",
+      "name": "Ch.6 · Hagar in the Wilderness",
+      "file": "act6_hagar_in_the_wilderness.json",
+      "game": {
+        "module": "abraham",
+        "chapter": 6
+      }
+    },
+    {
+      "id": "act7_the_visitors",
+      "name": "Ch.7 · The Visitors",
+      "file": "act7_the_visitors.json",
+      "game": {
+        "module": "abraham",
+        "chapter": 7
+      }
+    },
+    {
+      "id": "act8_sodom_and_gomorrah",
+      "name": "Ch.8 · Sodom and Gomorrah",
+      "file": "act8_sodom_and_gomorrah.json",
+      "game": {
+        "module": "abraham",
+        "chapter": 8
+      }
+    },
+    {
+      "id": "act9_isaac_is_born",
+      "name": "Ch.9 · Isaac Is Born",
+      "file": "act9_isaac_is_born.json",
+      "game": {
+        "module": "abraham",
+        "chapter": 9
+      }
+    },
+    {
+      "id": "act10_moriah",
+      "name": "Ch.10 · Moriah",
+      "file": "act10_moriah.json",
+      "game": {
+        "module": "abraham",
+        "chapter": 10
+      }
+    }
+  ]
+}

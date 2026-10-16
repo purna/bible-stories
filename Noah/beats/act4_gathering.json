@@ -150,11 +150,11 @@
       "id": "gathering_4",
       "choices": [
         {
-          "label": "Pack enough for a long journey 📦",
+          "label": "Pack enough for a long journey",
           "note": "Every stall stocked. Every animal fed for weeks."
         },
         {
-          "label": "Pack light — it won't last long 🤞",
+          "label": "Pack light — it won't last long",
           "note": "Maybe the flood will be brief. Maybe not."
         }
       ],

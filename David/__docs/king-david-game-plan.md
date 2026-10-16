@@ -282,3 +282,41 @@ Dates for David's life are not fixed in the historical record; scholarly estimat
 **Design note:** given the dating uncertainty, the game doesn't need to commit to exact years on-screen — relative sequencing and place names carry the historical weight better than precise dates would, and avoids the game overclaiming certainty the sources don't have.
 
 ⬆ [Back to Top](#table-of-contents)
+
+<!-- faith-games:start -->
+## Revised chapter games and faith crafting
+
+**Planning update — not yet integrated into the live games.** This section supersedes earlier prototype assignments. Every challenge follows the final comic panel. Shared native modules; no frames. Each chapter in this story uses a different mechanic. Cross-story adaptations must change rules or interaction, not just labels. Full unique-mechanic review remains required before implementation.
+
+Source: [HTML/CSS/JavaScript game collection](https://github.com/he-is-talha/html-css-javascript-games). Exact source folders and integration status are recorded in [the shared plan](../../__shared/chapter-games/story-game-plan.json). These are mechanic references, not imported code.
+
+| Chapter | Story beat | Mechanic | Story action | Proposed rules |
+|---:|---|---|---|---|
+| 1 | Anointed | memory | Identify the overlooked shepherd among Jesse’s sons. | Reveal pairs of illustrated story objects; matched pairs stay visible. |
+| 2 | Goliath | faith-crafting | Time a sling throw after refusing heavy armour. | Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. |
+| 3 | Saul's Court | sequence | Play a calming melody while watching Saul’s mood. | Repeat a short visual signal sequence; add one signal after each round. |
+| 4 | Covenant Friends | route | Exchange signals with Jonathan unseen. | Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt. |
+| 5 | The Wilderness | crossing | Escape Saul and spare him in the cave. | Move one lane at a time when the passage is clear; pause the lanes while reading. |
+| 6 | Abigail | stack | Deliver provisions before anger becomes violence. | Place a moving building piece over a marked foundation; use a wide timing window. |
+| 7 | The Throne | packing | Resolve petitions without favouritism. | Rotate and place a small set of fixed pieces into an outline; no falling timer. |
+| 8 | Bathsheba and Uriah | search | Confront the irreversible harm rather than hiding it. | Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion. |
+| 9 | Nathan's Parable | picture | Recognise the king inside the story and repent. | Fill a small picture grid from row and column clues; provide a reveal-one-cell hint. |
+| 10 | Absalom | order | Navigate divided loyalties without celebrating loss. | Slide illustrated tiles into the story order; allow an easy reset and step hint. |
+| 11 | The Census | code | Choose responsibility during the plague. | Arrange symbols and use position clues to revise the answer; clues remain visible. |
+| 12 | Solomon | catch | Pass plans and wisdom to the next king. | Tap the requested moving story objects; ignore unrelated objects without a penalty. |
+
+### Faith crafting: chapter 2
+
+Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. Materials: Stone, Flax, Water. Goal: **Sling, Smooth Stone, Smooth Stone**.
+
+- Flax + Flax → **Sling**. Braided strands with a pouch.
+- Stone + Water → **Smooth Stone**. Rubbed smooth in the brook.
+
+Use a visible recipe card and a three-slot bench; allow repeated ingredients. If a recipe has more than three ingredients, split it into sub-recipes. Materials are replenishable and unfinished work is saved. An unsuccessful combination returns every item. Use SVG material icons and visible labels, not emoji. Do not treat faith, patience or miracles as manufactured inventory items. The character prepares and responds; God acts in the narrative. Objects are a playful illustration, not a claim about historical manufacture.
+
+### Mobile and completion requirements
+
+At 320×568, use one scrolling column, 44px minimum targets, a two-column ingredient tray and a wrapping button row. Tap-select then tap-place must provide every drag action. Keep the chapter selector above the game. Text and buttons sit above the comic dots. Provide SVG icons, accessible labels, keyboard controls, visual equivalents for sound and reduced motion. No required typing, microphone, tilt or fast reaction. Skip → stays available until success; hide it after success and show Continue →. Save chapter reading, skipped challenges and game wins separately. Each game must expose mount, complete, skip and destroy hooks, including listener/timer cleanup.
+
+Chapter assignments follow the current manifest and canonical story actions.
+<!-- faith-games:end -->

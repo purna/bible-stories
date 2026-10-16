@@ -1,0 +1,127 @@
+{
+  "story": "Noah",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "warning",
+      "title": "Ch.1 \u00b7 The Warning",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Noah/data/act1_warning.json"
+    },
+    {
+      "chapter": 2,
+      "id": "blueprint",
+      "title": "Ch.2 \u00b7 The Blueprint",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Noah/data/act2_blueprint.json"
+    },
+    {
+      "chapter": 3,
+      "id": "build",
+      "title": "Ch.3 \u00b7 The Long Build",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Noah/data/act3_build.json"
+    },
+    {
+      "chapter": 4,
+      "id": "gathering",
+      "title": "Ch.4 \u00b7 The Gathering",
+      "status": "live-copy",
+      "kind": "gathering",
+      "source": "Noah/data/act4_gathering.json",
+      "file": "chapter-04.html",
+      "line": 1
+    },
+    {
+      "chapter": 5,
+      "id": "door",
+      "title": "Ch.5 \u00b7 The Door Shuts",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Noah/data/act5_door.json"
+    },
+    {
+      "chapter": 6,
+      "id": "flood",
+      "title": "Ch.6 \u00b7 Forty Days",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Noah/data/act6_flood.json"
+    },
+    {
+      "chapter": 7,
+      "id": "waiting",
+      "title": "Ch.7 \u00b7 The Long Wait",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Noah/data/act7_waiting.json"
+    },
+    {
+      "chapter": 8,
+      "id": "dryground",
+      "title": "Ch.8 \u00b7 Dry Ground",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Noah/data/act8_dryground.json"
+    },
+    {
+      "chapter": 9,
+      "id": "covenant",
+      "title": "Ch.9 \u00b7 The Altar & the Covenant",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Noah/data/act9_covenant.json"
+    },
+    {
+      "chapter": 10,
+      "id": "vineyard",
+      "title": "Ch.10 \u00b7 The Vineyard",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Noah/data/act10_vineyard.json"
+    }
+  ],
+  "snapshotSources": [
+    {
+      "path": "Noah/js/story-runtime.js",
+      "sha256": "9161d7d897a7d7be0653592aaea1351316b3c59701c2699bd017b0ef4f9ed11b"
+    },
+    {
+      "path": "Noah/js/audio-manager.js",
+      "sha256": "c2a6a18e7879348283a22ce078cec76f9f093b798b48e1719fff2551af50a549"
+    },
+    {
+      "path": "Noah/js/noah-story.js",
+      "sha256": "2852243006541f61339056e06304e02418050a759cb2443475ffd0747c064773"
+    },
+    {
+      "path": "Noah/js/story-editor-config.js",
+      "sha256": "596d9e990ee1bb8fbbf360be0ff13bc65302c7ad7b2cb259eaf2ac878568f3ec"
+    },
+    {
+      "path": "shared-tools/story-text-rendering.js",
+      "sha256": "709bb8f7bc28aeaa0e169fd3ee4d936dcfbd63fa2a4dba0fc8fe7f6eb741c43c"
+    },
+    {
+      "path": "shared-tools/ui-feedback.js",
+      "sha256": "9f5cc74c96ee2394e467c6efb627112acb901b29cea015858244ca03ed09dcfd"
+    },
+    {
+      "path": "shared-tools/story-game-icons.js",
+      "sha256": "1f6e3be7d68578cfc899a39e1a2f78e3182d2fb574c23d6e98c8b7b6624d1070"
+    },
+    {
+      "path": "shared-tools/story-game-controls.js",
+      "sha256": "4c501f77588d34e94e480806292e3dfe8f6d924387077ae34e7f4cb855485b13"
+    }
+  ],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Noah.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

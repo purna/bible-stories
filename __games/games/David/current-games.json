@@ -1,0 +1,108 @@
+{
+  "story": "David",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "anointed",
+      "title": "Ch.1 \u00b7 Anointed",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act1_anointed.json"
+    },
+    {
+      "chapter": 2,
+      "id": "goliath",
+      "title": "Ch.2 \u00b7 Goliath",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act2_goliath.json"
+    },
+    {
+      "chapter": 3,
+      "id": "court",
+      "title": "Ch.3 \u00b7 Saul's Court",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act3_court.json"
+    },
+    {
+      "chapter": 4,
+      "id": "friends",
+      "title": "Ch.4 \u00b7 Covenant Friends",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act4_friends.json"
+    },
+    {
+      "chapter": 5,
+      "id": "wilderness",
+      "title": "Ch.5 \u00b7 The Wilderness",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act5_wilderness.json"
+    },
+    {
+      "chapter": 6,
+      "id": "abigail",
+      "title": "Ch.6 \u00b7 Abigail",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act6_abigail.json"
+    },
+    {
+      "chapter": 7,
+      "id": "throne",
+      "title": "Ch.7 \u00b7 The Throne",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act7_throne.json"
+    },
+    {
+      "chapter": 8,
+      "id": "bathsheba",
+      "title": "Ch.8 \u00b7 Bathsheba and Uriah",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act8_bathsheba.json"
+    },
+    {
+      "chapter": 9,
+      "id": "nathan",
+      "title": "Ch.9 \u00b7 Nathan's Parable",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act9_nathan.json"
+    },
+    {
+      "chapter": 10,
+      "id": "absalom",
+      "title": "Ch.10 \u00b7 Absalom",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act10_absalom.json"
+    },
+    {
+      "chapter": 11,
+      "id": "census",
+      "title": "Ch.11 \u00b7 The Census",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act11_census.json"
+    },
+    {
+      "chapter": 12,
+      "id": "solomon",
+      "title": "Ch.12 \u00b7 Solomon",
+      "status": "not-connected",
+      "kind": null,
+      "source": "David/data/act12_solomon.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/David.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "story": "Enoch",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "a_family_record",
+      "title": "Ch.1 \u00b7 A Family Record",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Enoch/data/act1_a_family_record.json"
+    },
+    {
+      "chapter": 2,
+      "id": "the_first_walk",
+      "title": "Ch.2 \u00b7 The First Walk",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Enoch/data/act2_the_first_walk.json"
+    },
+    {
+      "chapter": 3,
+      "id": "a_son_named_methuselah",
+      "title": "Ch.3 \u00b7 A Son Named Methuselah",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Enoch/data/act3_a_son_named_methuselah.json"
+    },
+    {
+      "chapter": 4,
+      "id": "years_of_faithfulness",
+      "title": "Ch.4 \u00b7 Years of Faithfulness",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Enoch/data/act4_years_of_faithfulness.json"
+    },
+    {
+      "chapter": 5,
+      "id": "a_warning",
+      "title": "Ch.5 \u00b7 A Warning",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Enoch/data/act5_a_warning.json"
+    },
+    {
+      "chapter": 6,
+      "id": "walking_with_god",
+      "title": "Ch.6 \u00b7 Walking with God",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Enoch/data/act6_walking_with_god.json"
+    },
+    {
+      "chapter": 7,
+      "id": "taken",
+      "title": "Ch.7 \u00b7 Taken",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Enoch/data/act7_taken.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Enoch.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

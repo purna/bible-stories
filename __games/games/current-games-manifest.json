@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "storyCount": 24,
+  "currentGameCount": 26,
+  "stories": [
+    {
+      "story": "Adam",
+      "title": "Adam & Eve",
+      "folder": "Adam",
+      "index": "Adam/index.html",
+      "chapters": 6,
+      "currentGames": 1,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Adam.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Enoch",
+      "title": "Enoch",
+      "folder": "Enoch",
+      "index": "Enoch/index.html",
+      "chapters": 7,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Enoch.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Noah",
+      "title": "Noah",
+      "folder": "Noah",
+      "index": "Noah/index.html",
+      "chapters": 10,
+      "currentGames": 1,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Noah.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Babel",
+      "title": "Babel",
+      "folder": "Babel",
+      "index": "Babel/index.html",
+      "chapters": 5,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Ruth.html",
+        "status": "standalone-prototype",
+        "adapted": true
+      }
+    },
+    {
+      "story": "Abraham",
+      "title": "Abraham",
+      "folder": "Abraham",
+      "index": "Abraham/index.html",
+      "chapters": 10,
+      "currentGames": 10
+    },
+    {
+      "story": "Jacob",
+      "title": "Jacob",
+      "folder": "Jacob",
+      "index": "Jacob/index.html",
+      "chapters": 10,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Jacob.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Joseph",
+      "title": "Joseph",
+      "folder": "Joseph",
+      "index": "Joseph/index.html",
+      "chapters": 10,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Joseph.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Moses",
+      "title": "Moses",
+      "folder": "Moses",
+      "index": "Moses/index.html",
+      "chapters": 15,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Moses.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Joshua",
+      "title": "Joshua",
+      "folder": "Joshua",
+      "index": "Joshua/index.html",
+      "chapters": 10,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Joshua.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Deborah",
+      "title": "Deborah",
+      "folder": "Deborah",
+      "index": "Deborah/index.html",
+      "chapters": 7,
+      "currentGames": 7,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Deborah.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Gideon",
+      "title": "Gideon",
+      "folder": "Gideon",
+      "index": "Gideon/index.html",
+      "chapters": 7,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Ruth.html",
+        "status": "standalone-prototype",
+        "adapted": true
+      }
+    },
+    {
+      "story": "Ruth",
+      "title": "Ruth",
+      "folder": "Ruth",
+      "index": "Ruth/index.html",
+      "chapters": 8,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Ruth.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Hannah",
+      "title": "Hannah",
+      "folder": "Hannah",
+      "index": "Hannah/index.html",
+      "chapters": 8,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Hannah.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Samuel",
+      "title": "Samuel",
+      "folder": "Samuel",
+      "index": "Samuel/index.html",
+      "chapters": 10,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Samuel.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "David",
+      "title": "David",
+      "folder": "David",
+      "index": "David/index.html",
+      "chapters": 12,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/David.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Elijah",
+      "title": "Elijah",
+      "folder": "Elijah",
+      "index": "Elijah/index.html",
+      "chapters": 7,
+      "currentGames": 1,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Elijah.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Elisha",
+      "title": "Elisha",
+      "folder": "Elisha",
+      "index": "Elisha/index.html",
+      "chapters": 9,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Elisha.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Job",
+      "title": "Job",
+      "folder": "Job",
+      "index": "Job/index.html",
+      "chapters": 10,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Job.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Jonah",
+      "title": "Jonah",
+      "folder": "Jonah",
+      "index": "Jonah/index.html",
+      "chapters": 4,
+      "currentGames": 4,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Jonah.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Isaiah",
+      "title": "Isaiah",
+      "folder": "Isaiah",
+      "index": "Isaiah/index.html",
+      "chapters": 9,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Isaiah.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Jeremiah",
+      "title": "Jeremiah",
+      "folder": "Jeremiah",
+      "index": "Jeremiah/index.html",
+      "chapters": 10,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Jeremiah.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Daniel",
+      "title": "Daniel",
+      "folder": "Daniel",
+      "index": "Daniel/index.html",
+      "chapters": 5,
+      "currentGames": 2,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Daniel.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Esther",
+      "title": "Esther",
+      "folder": "Esther",
+      "index": "Esther/index.html",
+      "chapters": 10,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Esther.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    },
+    {
+      "story": "Nehemiah",
+      "title": "Nehemiah",
+      "folder": "Nehemiah",
+      "index": "Nehemiah/index.html",
+      "chapters": 10,
+      "currentGames": 0,
+      "craftingGame": {
+        "file": "crafting-v2.html",
+        "source": "__games/examples/Crafting_v2/bible-crafting/Nehemiah.html",
+        "status": "standalone-prototype",
+        "adapted": false
+      }
+    }
+  ],
+  "standaloneCraftingCount": 23
+}

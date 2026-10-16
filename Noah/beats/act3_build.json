@@ -97,11 +97,11 @@
       "id": "build_3",
       "choices": [
         {
-          "label": "Skip a coat of pitch to save time ⏩",
+          "label": "Skip a coat of pitch to save time",
           "note": "One thin section. The wood will probably hold... probably."
         },
         {
-          "label": "Seal every plank twice 🔨",
+          "label": "Seal every plank twice",
           "note": "Slow work. Honest work. Every seam watertight."
         }
       ],

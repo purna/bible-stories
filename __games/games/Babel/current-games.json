@@ -1,0 +1,52 @@
+{
+  "story": "Babel",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "the_brick",
+      "title": "Ch.1 \u00b7 The Brick",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Abraham/Babel/data/act1_the_brick.json"
+    },
+    {
+      "chapter": 2,
+      "id": "the_tower",
+      "title": "Ch.2 \u00b7 The Tower",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Abraham/Babel/data/act2_the_tower.json"
+    },
+    {
+      "chapter": 3,
+      "id": "the_summit",
+      "title": "Ch.3 \u00b7 The Summit",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Abraham/Babel/data/act3_the_summit.json"
+    },
+    {
+      "chapter": 4,
+      "id": "the_confusion",
+      "title": "Ch.4 \u00b7 The Confusion",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Abraham/Babel/data/act4_the_confusion.json"
+    },
+    {
+      "chapter": 5,
+      "id": "the_scattering",
+      "title": "Ch.5 \u00b7 The Scattering",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Abraham/Babel/data/act5_the_scattering.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Ruth.html",
+    "status": "standalone-prototype",
+    "adapted": true
+  }
+}

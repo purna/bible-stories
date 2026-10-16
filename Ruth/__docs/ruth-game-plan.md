@@ -29,39 +29,43 @@ How can loyal kindness create belonging after loss? The game stays simple: one u
 
 Use no more than one primary mechanic and one optional discovery per chapter. Reuse navigation, dialogue, audio, and layer-loading systems from `__Template`. Reserve 3D for actions that benefit from depth; otherwise keep the middle ground empty and use SVG layers.
 
-<!-- act-mini-games:start -->
-## Simple game in every act
 
-Each act contains one short, readable mini-game tied directly to its canonical story action. The target play time is **30–90 seconds** on a first attempt. These are participation mechanics, not alternate-history branches: completing the game advances the scripture-aligned event already defined by the story.
-
-| Act | Chapter | Mini-game | Game engine type | Example prototype | Objective | Input | Core loop | Completion and story payoff | Gentle retry / accessibility |
-|---:|---|---|---|---|---|---|---|---|---|
-| 1 | Leaving Moab | **Gather with Care** | `gather-with-care` | `manna_drop.html` | Pack lightly and choose whether to accompany Naomi. | Tap or drag the needed items into a basket, jar, pen, or marked area. | Read the short need list, collect one suitable item at a time, and stop when there is enough. | Complete the action, settle the scene, then reveal the canonical “Leaving Moab” outcome and scripture reference. | Extra or unsuitable items slide back with a calm hint; there is no timer unless the story requires urgency. |
-| 2 | Your People | **Find the Faithful Path** | `find-path` | `find_path_9x9.html` | Follow the road to Bethlehem together. | Tap/click adjacent waypoints or use arrow keys to move one step. | Read the environment, choose the next safe waypoint, and advance the group toward the destination. | Complete the action, settle the scene, then reveal the canonical “Your People” outcome and scripture reference. | A risky route pauses with a visual hint and returns the player to the last safe waypoint. |
-| 3 | Gleaning | **Gather with Care** | `gather-with-care` | `manna_drop.html` | Collect only grain left for gleaners. | Tap or drag the needed items into a basket, jar, pen, or marked area. | Read the short need list, collect one suitable item at a time, and stop when there is enough. | Complete the action, settle the scene, then reveal the canonical “Gleaning” outcome and scripture reference. | Extra or unsuitable items slide back with a calm hint; there is no timer unless the story requires urgency. |
-| 4 | Boaz Notices | **Gather with Care** | `gather-with-care` | `good_samaritan.html` | Deliver water and protection instructions to the workers. | Tap or drag the needed items into a basket, jar, pen, or marked area. | Read the short need list, collect one suitable item at a time, and stop when there is enough. | Complete the action, settle the scene, then reveal the canonical “Boaz Notices” outcome and scripture reference. | Extra or unsuitable items slide back with a calm hint; there is no timer unless the story requires urgency. |
-| 5 | At the Threshing Floor | **Find the Faithful Path** | `find-path` | `find_path_6x6.html` | Follow Naomi’s plan with restraint and clarity. | Tap/click adjacent waypoints or use arrow keys to move one step. | Read the environment, choose the next safe waypoint, and advance the group toward the destination. | Complete the action, settle the scene, then reveal the canonical “At the Threshing Floor” outcome and scripture reference. | A risky route pauses with a visual hint and returns the player to the last safe waypoint. |
-| 6 | At the Gate | **Look Closely** | `look-closely` | `look_closely_4x3.html` | Arrange witnesses and present the redemption choice. | Select evidence in the panel, then choose the statement it supports. | Inspect two or three clues, reveal their meaning, and make a considered response. | Complete the action, settle the scene, then reveal the canonical “At the Gate” outcome and scripture reference. | Unexamined evidence remains highlighted; the player can revise before confirming. |
-| 7 | Redeemed | **Ready, Then Act** | `ready-then-act` | `ready_then_act_multibar_balanced.html` | Transfer the sandal and join the households. | Press/hold and release inside a broad highlighted timing window. | Watch a slow readable rhythm, prepare the action, and release once at the story’s decisive beat. | Complete the action, settle the scene, then reveal the canonical “Redeemed” outcome and scripture reference. | The timing window widens after a miss and reduced-motion mode replaces movement with a clear progress ring. |
-| 8 | Obed | **Fit the Pieces** | `fit-pieces` | `fit_pieces_4x3.html` | Build the family line toward David. | Drag or select pieces and snap them into highlighted positions. | Inspect the outline, choose one piece, place it, then see the structure respond. | Complete the action, settle the scene, then reveal the canonical “Obed” outcome and scripture reference. | An incorrect piece returns gently to the tray; its correct area glows after two attempts. |
-
-### Shared mini-game rules
-
-- Teach the game inside the panel with one animated example; do not open a separate instruction screen.
-- Support pointer, touch, keyboard and switch-style sequential focus. Tap targets are at least 44×44 CSS pixels.
-- Do not require more than three simultaneous resources, eight draggable items, or one primary action verb per game.
-- A first play should take 30–90 seconds; experienced replay should take under 45 seconds.
-- No game-over screen, lives, score chasing, loot, combat grind, or canonical “bad ending.” Mistakes produce a clue and a quick retry.
-- Pause camera movement and decorative animation while the player is reading instructions or choosing.
-- Reduced-motion mode replaces timing, drag momentum and camera movement with discrete selection and progress states.
-- Sound confirms actions but never carries required information without captions, shape, colour-independent icons, or motion-safe highlights.
-- Save only completion and optional discovery flags. Restarting an act resets its mini-game locally without changing prior chapters.
-
-### Implementation contract
-
-Each act JSON should declare `game.id`, `game.type`, `game.objective`, `game.controls`, `game.success`, and `game.accessibility`. The interaction mounts inside the middle-ground layer, locks story navigation only while actively manipulated, calls the shared completion callback once, then settles all 3D/SVG elements before the scripture reference appears.
-<!-- act-mini-games:end -->
 
 ---
 
 **Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./ruth-design-source-of-truth.md) | [Music SOT](./ruth-music-source-of-truth.md) | [SFX SOT](./ruth-sfx-source-of-truth.md) | [Game Plan](./ruth-game-plan.md)
+
+<!-- faith-games:start -->
+## Revised chapter games and faith crafting
+
+**Planning update — not yet integrated into the live games.** This section supersedes earlier prototype assignments. Every challenge follows the final comic panel. Shared native modules; no frames. Each chapter in this story uses a different mechanic. Cross-story adaptations must change rules or interaction, not just labels. Full unique-mechanic review remains required before implementation.
+
+Source: [HTML/CSS/JavaScript game collection](https://github.com/he-is-talha/html-css-javascript-games). Exact source folders and integration status are recorded in [the shared plan](../../__shared/chapter-games/story-game-plan.json). These are mechanic references, not imported code.
+
+| Chapter | Story beat | Mechanic | Story action | Proposed rules |
+|---:|---|---|---|---|
+| 1 | Leaving Moab | memory | Pack lightly and choose whether to accompany Naomi. | Reveal pairs of illustrated story objects; matched pairs stay visible. |
+| 2 | Your People | sequence | Follow the road to Bethlehem together. | Repeat a short visual signal sequence; add one signal after each round. |
+| 3 | Gleaning | faith-crafting | Collect only grain left for gleaners. | Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. |
+| 4 | Boaz Notices | catch | Deliver water and protection instructions to the workers. | Tap the requested moving story objects; ignore unrelated objects without a penalty. |
+| 5 | Threshing Floor | packing | Follow Naomi’s plan with restraint and clarity. | Rotate and place a small set of fixed pieces into an outline; no falling timer. |
+| 6 | At the Gate | order | Arrange witnesses and present the redemption choice. | Slide illustrated tiles into the story order; allow an easy reset and step hint. |
+| 7 | Redeemed | route | Transfer the sandal and join the households. | Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt. |
+| 8 | Obed | stack | Build the family line toward David. | Place a moving building piece over a marked foundation; use a wide timing window. |
+
+### Faith crafting: chapter 3
+
+Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. Materials: Grain, Flax, Water. Goal: **Basket, Bread**.
+
+- Grain + Grain → **Sheaf**. Gathered grain tied up.
+- Flax + Flax → **Basket**. Woven reeds to carry the harvest.
+- Sheaf + Water → **Bread**. Gleaned grain ground with water.
+
+Use a visible recipe card and a three-slot bench; allow repeated ingredients. If a recipe has more than three ingredients, split it into sub-recipes. Materials are replenishable and unfinished work is saved. An unsuccessful combination returns every item. Use SVG material icons and visible labels, not emoji. Do not treat faith, patience or miracles as manufactured inventory items. The character prepares and responds; God acts in the narrative. Objects are a playful illustration, not a claim about historical manufacture.
+
+### Mobile and completion requirements
+
+At 320×568, use one scrolling column, 44px minimum targets, a two-column ingredient tray and a wrapping button row. Tap-select then tap-place must provide every drag action. Keep the chapter selector above the game. Text and buttons sit above the comic dots. Provide SVG icons, accessible labels, keyboard controls, visual equivalents for sound and reduced motion. No required typing, microphone, tilt or fast reaction. Skip → stays available until success; hide it after success and show Continue →. Save chapter reading, skipped challenges and game wins separately. Each game must expose mount, complete, skip and destroy hooks, including listener/timer cleanup.
+
+Chapter assignments follow the current manifest and canonical story actions.
+<!-- faith-games:end -->

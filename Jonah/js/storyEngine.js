@@ -162,4 +162,7 @@ const StoryEngine = (function () {
     return { init, next, prev, getCurrentScene };
 })();
 
-window.onload = () => StoryEngine.init();
+// The comic has its own game integration; this legacy reader needs its text UI.
+window.addEventListener('load', () => {
+    if (document.getElementById('text-box')) StoryEngine.init();
+});

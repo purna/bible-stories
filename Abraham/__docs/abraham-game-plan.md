@@ -31,41 +31,45 @@ Will Abraham trust the promise when fulfilment seems impossible? The game stays 
 
 Use no more than one primary mechanic and one optional discovery per chapter. Reuse navigation, dialogue, audio, and layer-loading systems from `__Template`. Reserve 3D for actions that benefit from depth; otherwise keep the middle ground empty and use SVG layers.
 
-<!-- act-mini-games:start -->
-## Simple game in every act
 
-Each act contains one short, readable mini-game tied directly to its canonical story action. The target play time is **30–90 seconds** on a first attempt. These are participation mechanics, not alternate-history branches: completing the game advances the scripture-aligned event already defined by the story.
-
-| Act | Chapter | Mini-game | Game engine type | Example prototype | Objective | Input | Core loop | Completion and story payoff | Gentle retry / accessibility |
-|---:|---|---|---|---|---|---|---|---|---|
-| 1 | The Call | **Find the Faithful Path** | `find-path` | `find_path_6x6.html` | Follow the road markers out of Haran. | Tap/click adjacent waypoints or use arrow keys to move one step. | Read the environment, choose the next safe waypoint, and advance the group toward the destination. | Complete the action, settle the scene, then reveal the canonical “The Call” outcome and scripture reference. | A risky route pauses with a visual hint and returns the player to the last safe waypoint. |
-| 2 | Egypt and Return | **Fit the Pieces** | `fit-pieces` | `fit_pieces_4x3.html` | Choose honest repairs after a fearful mistake. | Drag or select pieces and snap them into highlighted positions. | Inspect the outline, choose one piece, place it, then see the structure respond. | Complete the action, settle the scene, then reveal the canonical “Egypt and Return” outcome and scripture reference. | An incorrect piece returns gently to the tray; its correct area glows after two attempts. |
-| 3 | Lot Chooses | **Watch and Move** | `watch-and-move` | `watch_move_river_crossing_easy.html` | Survey the land and give Lot first choice. | Hold to observe; release or tap a destination when sight-lines are clear. | Observe a repeating movement pattern, move during a safe opening, and reach the marked point. | Complete the action, settle the scene, then reveal the canonical “Lot Chooses” outcome and scripture reference. | Detection freezes the moment and rewinds to the previous cover point without losing progress. |
-| 4 | Rescue of Lot | **Watch and Move** | `watch-and-move` | `watch_move_river_crossing_easy.html` | Plan a fast night rescue without taking spoil. | Hold to observe; release or tap a destination when sight-lines are clear. | Observe a repeating movement pattern, move during a safe opening, and reach the marked point. | Complete the action, settle the scene, then reveal the canonical “Rescue of Lot” outcome and scripture reference. | Detection freezes the moment and rewinds to the previous cover point without losing progress. |
-| 5 | Covenant Stars | **See the Pattern** | `match-it-up` | `match_it_up_3x4.html` | Trace the promised constellation. | Drag cards, symbols, people, or objects into matching slots. | Inspect visual clues, make one match, receive immediate context, and complete the small pattern. | Complete the action, settle the scene, then reveal the canonical “Covenant Stars” outcome and scripture reference. | A mismatch remains available and highlights one relevant clue rather than marking failure. |
-| 6 | Hagar in the Wilderness | **Gather with Care** | `gather-with-care` | `manna_drop.html` | Find water and listen before acting. | Tap or drag the needed items into a basket, jar, pen, or marked area. | Read the short need list, collect one suitable item at a time, and stop when there is enough. | Complete the action, settle the scene, then reveal the canonical “Hagar in the Wilderness” outcome and scripture reference. | Extra or unsuitable items slide back with a calm hint; there is no timer unless the story requires urgency. |
-| 7 | The Visitors | **Gather with Care** | `gather-with-care` | `good_samaritan.html` | Prepare hospitality before the guests depart. | Tap or drag the needed items into a basket, jar, pen, or marked area. | Read the short need list, collect one suitable item at a time, and stop when there is enough. | Complete the action, settle the scene, then reveal the canonical “The Visitors” outcome and scripture reference. | Extra or unsuitable items slide back with a calm hint; there is no timer unless the story requires urgency. |
-| 8 | Sodom and Gomorrah | **Find the Faithful Path** | `find-path` | `find_path_18x9_adv.html` | Guide Lot’s household away without looking back. | Tap/click adjacent waypoints or use arrow keys to move one step. | Read the environment, choose the next safe waypoint, and advance the group toward the destination. | Complete the action, settle the scene, then reveal the canonical “Sodom and Gomorrah” outcome and scripture reference. | A risky route pauses with a visual hint and returns the player to the last safe waypoint. |
-| 9 | Isaac Is Born | **Fit the Pieces** | `fit-pieces` | `fit_pieces_4x4.html` | Assemble a celebration tent. | Drag or select pieces and snap them into highlighted positions. | Inspect the outline, choose one piece, place it, then see the structure respond. | Complete the action, settle the scene, then reveal the canonical “Isaac Is Born” outcome and scripture reference. | An incorrect piece returns gently to the tray; its correct area glows after two attempts. |
-| 10 | Moriah | **Find the Faithful Path** | `find-path` | `find_path_9x9.html` | Climb, gather wood, and respond to the provided ram. | Tap/click adjacent waypoints or use arrow keys to move one step. | Read the environment, choose the next safe waypoint, and advance the group toward the destination. | Complete the action, settle the scene, then reveal the canonical “Moriah” outcome and scripture reference. | A risky route pauses with a visual hint and returns the player to the last safe waypoint. |
-
-### Shared mini-game rules
-
-- Teach the game inside the panel with one animated example; do not open a separate instruction screen.
-- Support pointer, touch, keyboard and switch-style sequential focus. Tap targets are at least 44×44 CSS pixels.
-- Do not require more than three simultaneous resources, eight draggable items, or one primary action verb per game.
-- A first play should take 30–90 seconds; experienced replay should take under 45 seconds.
-- No game-over screen, lives, score chasing, loot, combat grind, or canonical “bad ending.” Mistakes produce a clue and a quick retry.
-- Pause camera movement and decorative animation while the player is reading instructions or choosing.
-- Reduced-motion mode replaces timing, drag momentum and camera movement with discrete selection and progress states.
-- Sound confirms actions but never carries required information without captions, shape, colour-independent icons, or motion-safe highlights.
-- Save only completion and optional discovery flags. Restarting an act resets its mini-game locally without changing prior chapters.
-
-### Implementation contract
-
-Each act JSON should declare `game.id`, `game.type`, `game.objective`, `game.controls`, `game.success`, and `game.accessibility`. The interaction mounts inside the middle-ground layer, locks story navigation only while actively manipulated, calls the shared completion callback once, then settles all 3D/SVG elements before the scripture reference appears.
-<!-- act-mini-games:end -->
 
 ---
 
 **Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./abraham-design-source-of-truth.md) | [Music SOT](./abraham-music-source-of-truth.md) | [SFX SOT](./abraham-sfx-source-of-truth.md) | [Game Plan](./abraham-game-plan.md)
+
+<!-- faith-games:start -->
+## Revised chapter games and faith crafting
+
+**Planning update — not yet integrated into the live games.** This section supersedes earlier prototype assignments. Every challenge follows the final comic panel. Shared native modules; no frames. Each chapter in this story uses a different mechanic. Cross-story adaptations must change rules or interaction, not just labels. Full unique-mechanic review remains required before implementation.
+
+Source: [HTML/CSS/JavaScript game collection](https://github.com/he-is-talha/html-css-javascript-games). Exact source folders and integration status are recorded in [the shared plan](../../__shared/chapter-games/story-game-plan.json). These are mechanic references, not imported code.
+
+| Chapter | Story beat | Mechanic | Story action | Proposed rules |
+|---:|---|---|---|---|
+| 1 | The Call | stack | Follow the road markers out of Haran. | Place a moving building piece over a marked foundation; use a wide timing window. |
+| 2 | Egypt and Return | memory | Choose honest repairs after a fearful mistake. | Reveal pairs of illustrated story objects; matched pairs stay visible. |
+| 3 | Lot Chooses | sequence | Survey the land and give Lot first choice. | Repeat a short visual signal sequence; add one signal after each round. |
+| 4 | Rescue of Lot | packing | Plan a fast night rescue without taking spoil. | Rotate and place a small set of fixed pieces into an outline; no falling timer. |
+| 5 | Covenant Stars | picture | Trace the promised constellation. | Fill a small picture grid from row and column clues; provide a reveal-one-cell hint. |
+| 6 | Hagar in the Wilderness | route | Find water and listen before acting. | Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt. |
+| 7 | The Visitors | faith-crafting | Prepare hospitality before the guests depart. | Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. |
+| 8 | Sodom and Gomorrah | crossing | Guide Lot’s household away without looking back. | Move one lane at a time when the passage is clear; pause the lanes while reading. |
+| 9 | Isaac Is Born | search | Assemble a celebration tent. | Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion. |
+| 10 | Moriah | order | Climb, gather wood, and respond to the provided ram. | Slide illustrated tiles into the story order; allow an easy reset and step hint. |
+
+### Faith crafting: chapter 7
+
+Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. Materials: Flax, Wood, Grain, Water. Goal: **Tent, Bread**.
+
+- Flax + Flax → **Rope**. Twist fibre with fibre.
+- Rope + Rope + Wood → **Tent**. Cord, cord and a pole.
+- Grain + Grain + Water → **Bread**. Ground grain bound with water.
+
+Use a visible recipe card and a three-slot bench; allow repeated ingredients. If a recipe has more than three ingredients, split it into sub-recipes. Materials are replenishable and unfinished work is saved. An unsuccessful combination returns every item. Use SVG material icons and visible labels, not emoji. Do not treat faith, patience or miracles as manufactured inventory items. The character prepares and responds; God acts in the narrative. Objects are a playful illustration, not a claim about historical manufacture.
+
+### Mobile and completion requirements
+
+At 320×568, use one scrolling column, 44px minimum targets, a two-column ingredient tray and a wrapping button row. Tap-select then tap-place must provide every drag action. Keep the chapter selector above the game. Text and buttons sit above the comic dots. Provide SVG icons, accessible labels, keyboard controls, visual equivalents for sound and reduced motion. No required typing, microphone, tilt or fast reaction. Skip → stays available until success; hide it after success and show Continue →. Save chapter reading, skipped challenges and game wins separately. Each game must expose mount, complete, skip and destroy hooks, including listener/timer cleanup.
+
+Chapter assignments follow the current manifest and canonical story actions.
+<!-- faith-games:end -->

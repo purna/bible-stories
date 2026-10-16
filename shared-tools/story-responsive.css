@@ -1,0 +1,65 @@
+/* Shared story presentation: keep controls, choices and character staging consistent. */
+.comic-frame > .char-container { position:absolute;bottom:0;z-index:3;animation:none;display:flex;align-items:flex-end; }
+#choices { position:fixed;bottom:calc(var(--story-controls-bottom,6.2vh) + 68px);z-index:10030;max-height:45vh;overflow-y:auto;padding:4px 8px 10px 0;overscroll-behavior:contain;touch-action:pan-y; }
+.content-overlay.choice-answered > :not(#delayNote) { display:none!important; }
+.content-overlay.choice-answered #delayNote { top:50%;left:50%;right:auto;bottom:auto;transform:translate(-50%,-50%);width:85%;max-height:90%;overflow-y:auto; }
+.credits { position:fixed!important;bottom:.5rem!important;left:50%!important;right:auto!important;transform:translateX(-50%);text-align:center;font: .7rem sans-serif!important;color:#fff!important;background:rgba(0,0,0,.9)!important;padding:4px 10px!important;border-radius:6px 6px 0 0!important;white-space:nowrap;z-index:1000; }
+.credits a { color:inherit; }
+@media(max-width:760px),(max-height:560px) {
+ #hud { display:grid;grid-template-columns:minmax(0,1fr);justify-items:stretch;padding:14px 18px;gap:12px; }
+ #chapterSelect { width:100%;max-width:100%;min-width:0;font-size:9px;padding:10px 8px; }
+ #dots { grid-column:1;grid-row:2;width:100%;max-width:100%;display:flex;flex-wrap:wrap;justify-content:center;gap:6px; }
+ #choices { left:5vw;width:90vw; }
+ .choiceBtn { width:100%;min-height:48px;font-size:10px;padding:12px; }
+}
+@media(max-width:640px) {
+ #startScreen p { font-size:9px; }
+ #storyControls #nextBtn { line-height:12px;white-space:normal; }
+}
+.creation-panel,.gathering-panel,.hearing-panel { box-sizing:border-box;min-width:0;min-height:0;max-width:100%;overflow-x:hidden;overscroll-behavior-y:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch; }
+@media(max-width:760px),(max-height:560px) {
+ .creation-overlay,.gathering-overlay,.hearing-overlay { box-sizing:border-box;padding:8px; }
+ .creation-panel,.gathering-panel,.hearing-panel { max-height:100%;padding:14px 12px; }
+ .gathering-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+/* Jonah's original engine uses the same balloons without position attributes. */
+@media(max-width:640px) {
+ .content-overlay .caption { font-size:10px;line-height:1.5; }
+ .content-overlay .bubble-wrap > .bubble { font-size:clamp(14px,3.8vw,18px);line-height:1.35; }
+}
+/* Copyright and editing actions share a compact row below story navigation. */
+.story-footer { position:fixed;bottom:0;left:0;right:0;z-index:10040;display:flex;align-items:stretch;justify-content:center;gap:8px;pointer-events:none; }
+.story-footer .credits { position:static!important;transform:none;display:flex;align-items:center;justify-content:center;text-decoration:none;pointer-events:auto;min-height:28px; }
+.story-footer #storyEditorToggle { position:static!important;transform:none!important;margin:0!important;min-height:28px;height:auto;padding:4px 10px!important;border:0;border-radius:6px 6px 0 0;background:rgba(255,255,255,.5);color:#000;font:11px/1.2 sans-serif;box-shadow:none;pointer-events:auto;touch-action:manipulation; }
+.story-footer #storyEditorToggle[hidden] { display:none!important; }
+.story-footer a:focus-visible,.story-footer button:focus-visible { outline:2px solid #4ecdc4;outline-offset:-2px; }
+
+@media (max-width: 640px) {
+  #stageWrap { bottom: 12vh; }
+}
+/* Keep halftone on the setting and artwork, underneath dialogue and captions. */
+#halftoneOverlay { z-index:5; }
+#graphicContainer::after {
+ content:"";position:absolute;inset:0;z-index:20;pointer-events:none;
+ background:radial-gradient(circle,#fff 15%,#000 85%);background-size:8px 8px;
+ mix-blend-mode:multiply;opacity:.16;
+}
+/* Three matching icon controls and a separate next-page action. */
+#storyControls { grid-template-columns:52px 52px 52px minmax(0,1fr); }
+#storyControls #storyEditorToggle { grid-column:3;justify-self:start;width:52px!important;height:52px!important;min-height:52px!important;padding:7px!important;border:3px solid var(--ink,#0a0812)!important;border-radius:6px;background:#ffb45c;color:var(--ink,#0a0812);box-shadow:5px 5px 0 var(--ink,#0a0812);display:grid;place-items:center; }
+#storyControls #storyEditorToggle svg { width:32px;height:32px;display:block; }
+#storyControls #nextBtn,#storyControls #nextLineBtn { justify-self:end; }
+#storyControls #storyEditorToggle[hidden] { display:none!important; }
+@media(max-width:360px){#storyControls{column-gap:8px;}}
+/* Keep chapter navigation above full-page games. */
+body[data-chapter-game-active="true"] #hud { position:fixed;z-index:20050;background:#142534; }
+body[data-chapter-game-active="true"] #hud #dots { display:none; }
+body[data-chapter-game-active="true"] #abrahamGame,
+body[data-chapter-game-active="true"] #jonahGame,
+body[data-chapter-game-active="true"] #actGame { top:var(--story-hud-height,80px); }
+.shared-game-skip { position:relative;z-index:30;display:block;margin:10px 10px 16px auto;min-height:44px;padding:10px 14px;border:3px solid #17131f;background:#ffb45c;color:#17131f;box-shadow:4px 4px #17131f;font:900 14px Nunito,"Nunito Local",sans-serif;cursor:pointer;touch-action:manipulation; }
+#visionOverlay>.shared-game-skip { position:absolute;top:10px;right:10px; }
+/* Icon-only start control keeps a real, screen-reader-readable text label. */
+#startScreen #startBtn { display:inline-grid;place-items:center;width:76px;min-width:64px;min-height:64px;padding:10px;line-height:1; }
+#startBtn .start-story-icon { display:block;width:42px;height:42px;pointer-events:none; }
+#startBtn .start-button-label { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0; }

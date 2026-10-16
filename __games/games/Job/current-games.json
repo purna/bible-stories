@@ -1,0 +1,92 @@
+{
+  "story": "Job",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "a_blameless_life",
+      "title": "Ch.1 \u00b7 A Blameless Life",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Job/data/act1_a_blameless_life.json"
+    },
+    {
+      "chapter": 2,
+      "id": "the_accuser",
+      "title": "Ch.2 \u00b7 The Accuser",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Job/data/act2_the_accuser.json"
+    },
+    {
+      "chapter": 3,
+      "id": "loss_upon_loss",
+      "title": "Ch.3 \u00b7 Loss upon Loss",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Job/data/act3_loss_upon_loss.json"
+    },
+    {
+      "chapter": 4,
+      "id": "seven_days",
+      "title": "Ch.4 \u00b7 Seven Days",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Job/data/act4_seven_days.json"
+    },
+    {
+      "chapter": 5,
+      "id": "job_speaks",
+      "title": "Ch.5 \u00b7 Job Speaks",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Job/data/act5_job_speaks.json"
+    },
+    {
+      "chapter": 6,
+      "id": "the_friends",
+      "title": "Ch.6 \u00b7 The Friends",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Job/data/act6_the_friends.json"
+    },
+    {
+      "chapter": 7,
+      "id": "elihu",
+      "title": "Ch.7 \u00b7 Elihu",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Job/data/act7_elihu.json"
+    },
+    {
+      "chapter": 8,
+      "id": "out_of_the_whirlwind",
+      "title": "Ch.8 \u00b7 Out of the Whirlwind",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Job/data/act8_out_of_the_whirlwind.json"
+    },
+    {
+      "chapter": 9,
+      "id": "job_responds",
+      "title": "Ch.9 \u00b7 Job Responds",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Job/data/act9_job_responds.json"
+    },
+    {
+      "chapter": 10,
+      "id": "restoration",
+      "title": "Ch.10 \u00b7 Restoration",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Job/data/act10_restoration.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Job.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

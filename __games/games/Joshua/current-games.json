@@ -1,0 +1,92 @@
+{
+  "story": "Joshua",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "be_strong",
+      "title": "Ch.1 \u00b7 Be Strong",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joshua/data/act1_be_strong.json"
+    },
+    {
+      "chapter": 2,
+      "id": "rahab_and_the_spies",
+      "title": "Ch.2 \u00b7 Rahab and the Spies",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joshua/data/act2_rahab_and_the_spies.json"
+    },
+    {
+      "chapter": 3,
+      "id": "crossing_jordan",
+      "title": "Ch.3 \u00b7 Crossing Jordan",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joshua/data/act3_crossing_jordan.json"
+    },
+    {
+      "chapter": 4,
+      "id": "jericho",
+      "title": "Ch.4 \u00b7 Jericho",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joshua/data/act4_jericho.json"
+    },
+    {
+      "chapter": 5,
+      "id": "achan_s_hidden_goods",
+      "title": "Ch.5 \u00b7 Achan\u2019s Hidden Goods",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joshua/data/act5_achan_s_hidden_goods.json"
+    },
+    {
+      "chapter": 6,
+      "id": "ai",
+      "title": "Ch.6 \u00b7 Ai",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joshua/data/act6_ai.json"
+    },
+    {
+      "chapter": 7,
+      "id": "the_gibeonites",
+      "title": "Ch.7 \u00b7 The Gibeonites",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joshua/data/act7_the_gibeonites.json"
+    },
+    {
+      "chapter": 8,
+      "id": "the_long_campaign",
+      "title": "Ch.8 \u00b7 The Long Campaign",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joshua/data/act8_the_long_campaign.json"
+    },
+    {
+      "chapter": 9,
+      "id": "allot_the_land",
+      "title": "Ch.9 \u00b7 Allot the Land",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joshua/data/act9_allot_the_land.json"
+    },
+    {
+      "chapter": 10,
+      "id": "choose_this_day",
+      "title": "Ch.10 \u00b7 Choose This Day",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joshua/data/act10_choose_this_day.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Joshua.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

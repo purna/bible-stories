@@ -27,7 +27,7 @@
         "number": 1,
         "title": "The Call",
         "game": "Follow the road markers out of Haran.",
-        "engine": "find-path",
+        "engine": "road-markers",
         "sceneLayers": {
           "a_establish": {
             "background": "assets/svg/act_01_the_call/a_establish/abraham_act1_a_background.svg",
@@ -57,7 +57,7 @@
         "number": 2,
         "title": "Egypt and Return",
         "game": "Choose honest repairs after a fearful mistake.",
-        "engine": "fit-pieces",
+        "engine": "make-amends",
         "sceneLayers": {
           "a_establish": {
             "background": "assets/svg/act_02_egypt_and_return/a_establish/abraham_act2_a_background.svg",
@@ -87,7 +87,7 @@
         "number": 3,
         "title": "Lot Chooses",
         "game": "Survey the land and give Lot first choice.",
-        "engine": "watch-and-move",
+        "engine": "land-survey",
         "sceneLayers": {
           "a_establish": {
             "background": "assets/svg/act_03_lot_chooses/a_establish/abraham_act3_a_background.svg",
@@ -115,7 +115,7 @@
         "number": 4,
         "title": "Rescue of Lot",
         "game": "Plan a fast night rescue without taking spoil.",
-        "engine": "watch-and-move",
+        "engine": "rescue-signals",
         "sceneLayers": {
           "a_establish": {
             "background": "assets/svg/act_04_rescue_of_lot/a_establish/abraham_act4_a_background.svg",
@@ -144,7 +144,7 @@
         "number": 5,
         "title": "Covenant Stars",
         "game": "Trace the promised constellation.",
-        "engine": "match-it-up",
+        "engine": "constellation-trace",
         "sceneLayers": {
           "a_establish": {
             "background": "assets/svg/act_05_covenant_stars/a_establish/abraham_act5_a_background.svg",
@@ -174,7 +174,7 @@
         "number": 6,
         "title": "Hagar in the Wilderness",
         "game": "Find water and listen before acting.",
-        "engine": "gather-with-care",
+        "engine": "spring-search",
         "sceneLayers": {
           "a_establish": {
             "background": "assets/svg/act_06_hagar_in_the_wilderness/a_establish/abraham_act6_a_background.svg",
@@ -204,7 +204,7 @@
         "number": 7,
         "title": "The Visitors",
         "game": "Prepare hospitality before the guests depart.",
-        "engine": "gather-with-care",
+        "engine": "hospitality-kitchen",
         "sceneLayers": {
           "a_establish": {
             "background": "assets/svg/act_07_the_visitors/a_establish/abraham_act7_a_background.svg",
@@ -235,7 +235,7 @@
         "number": 8,
         "title": "Sodom and Gomorrah",
         "game": "Guide Lot’s household away without looking back.",
-        "engine": "find-path",
+        "engine": "household-evacuation",
         "sceneLayers": {
           "a_establish": {
             "background": "assets/svg/act_08_sodom_and_gomorrah/a_establish/abraham_act8_a_background.svg",
@@ -263,7 +263,7 @@
         "number": 9,
         "title": "Isaac Is Born",
         "game": "Assemble a celebration tent.",
-        "engine": "fit-pieces",
+        "engine": "tent-construction",
         "sceneLayers": {
           "a_establish": {
             "background": "assets/svg/act_09_isaac_is_born/a_establish/abraham_act9_a_background.svg",
@@ -292,7 +292,7 @@
         "number": 10,
         "title": "Moriah",
         "game": "Climb, gather wood, and respond to the provided ram.",
-        "engine": "find-path",
+        "engine": "mountain-provisions",
         "sceneLayers": {
           "a_establish": {
             "background": "assets/svg/act_10_moriah/a_establish/abraham_act10_a_background.svg",

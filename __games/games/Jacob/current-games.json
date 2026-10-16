@@ -1,0 +1,92 @@
+{
+  "story": "Jacob",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "the_birthright",
+      "title": "Ch.1 \u00b7 The Birthright",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jacob/data/act1_the_birthright.json"
+    },
+    {
+      "chapter": 2,
+      "id": "the_stolen_blessing",
+      "title": "Ch.2 \u00b7 The Stolen Blessing",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jacob/data/act2_the_stolen_blessing.json"
+    },
+    {
+      "chapter": 3,
+      "id": "bethel",
+      "title": "Ch.3 \u00b7 Bethel",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jacob/data/act3_bethel.json"
+    },
+    {
+      "chapter": 4,
+      "id": "rachel_at_the_well",
+      "title": "Ch.4 \u00b7 Rachel at the Well",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jacob/data/act4_rachel_at_the_well.json"
+    },
+    {
+      "chapter": 5,
+      "id": "laban_s_bargain",
+      "title": "Ch.5 \u00b7 Laban\u2019s Bargain",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jacob/data/act5_laban_s_bargain.json"
+    },
+    {
+      "chapter": 6,
+      "id": "the_flocks",
+      "title": "Ch.6 \u00b7 The Flocks",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jacob/data/act6_the_flocks.json"
+    },
+    {
+      "chapter": 7,
+      "id": "leaving_haran",
+      "title": "Ch.7 \u00b7 Leaving Haran",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jacob/data/act7_leaving_haran.json"
+    },
+    {
+      "chapter": 8,
+      "id": "the_night_wrestling",
+      "title": "Ch.8 \u00b7 The Night Wrestling",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jacob/data/act8_the_night_wrestling.json"
+    },
+    {
+      "chapter": 9,
+      "id": "meeting_esau",
+      "title": "Ch.9 \u00b7 Meeting Esau",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jacob/data/act9_meeting_esau.json"
+    },
+    {
+      "chapter": 10,
+      "id": "joseph_s_coats",
+      "title": "Ch.10 \u00b7 Joseph\u2019s Coats",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Jacob/data/act10_joseph_s_coats.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Jacob.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

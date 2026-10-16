@@ -256,11 +256,11 @@
       "id": "bathsheba_8",
       "choices": [
         {
-          "label": "Wait for the prophet's word 📜",
+          "label": "Wait for the prophet's word",
           "note": "Truth spoken by another is the only road back from here."
         },
         {
-          "label": "Build the palace higher and forget 🏗️",
+          "label": "Build the palace higher and forget",
           "note": "A greater roof might hide the old one from sight."
         }
       ],

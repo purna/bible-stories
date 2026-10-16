@@ -207,7 +207,7 @@
       "vision": true,
       "choices": [
         {
-          "label": "Daniel softens the message 😬",
+          "label": "Daniel softens the message",
           "note": "A flattering reading protects favor with the king now — but dents Discernment.",
           "decisionId": "statue_softened",
           "tags": [
@@ -216,7 +216,7 @@
           ]
         },
         {
-          "label": "Daniel delivers it plainly ✅",
+          "label": "Daniel delivers it plainly",
           "note": "The true reading, even the uncomfortable parts. That's what earns the king's respect.",
           "decisionId": "statue_plain",
           "tags": [

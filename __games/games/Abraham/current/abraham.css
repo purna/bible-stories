@@ -1,0 +1,130 @@
+.chapter-game{--game-ink:#182b37;--game-accent:#ffb34f;color:var(--game-ink);background:#fffaf0;border:2px solid #182b37;border-radius:12px;padding:clamp(12px,3vw,24px);width:100%;max-width:720px;margin:auto;box-sizing:border-box;font-family:Nunito,system-ui,sans-serif}
+.chapter-game *{box-sizing:border-box}.chapter-game h2{font-size:clamp(21px,5vw,30px);margin:0 0 8px;color:#182b37}.chapter-game p{line-height:1.5;margin:8px 0 14px}.chapter-game button{font:800 15px/1.3 Nunito,system-ui,sans-serif;min-width:44px;min-height:44px;border:2px solid #182b37;border-radius:8px;padding:10px;background:#ffcf76;color:#182b37;cursor:pointer;touch-action:manipulation;white-space:normal;overflow-wrap:anywhere}.chapter-game button:disabled{opacity:.55;cursor:default}.chapter-game button:focus-visible{outline:3px solid #087c9c;outline-offset:3px}.chapter-game button[aria-pressed=true],.chapter-game .selected{background:#47c8bc}.chapter-game .game-status{min-height:48px;font-weight:800;padding:10px;background:#e0f3ef;border-radius:8px}.chapter-game .game-grid{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:8px}.chapter-game .game-grid button{padding:8px 4px;min-width:0}.chapter-game .game-actions{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.chapter-game .game-actions>button{flex:1 1 100px}.chapter-game .game-cards{display:grid;gap:12px}.chapter-game .game-card{background:#fff;border:2px solid #c5d8df;padding:12px;border-radius:8px;min-width:0}.chapter-game .game-card h3{margin:0 0 8px;font-size:18px}.chapter-game .game-card p{margin:6px 0}.chapter-game .route-cell{aspect-ratio:1;position:relative}.chapter-game .route-cell[data-road=false]{background:#d7e1ca}.chapter-game .route-cell.visited{background:#47c8bc}.chapter-game .sky{background:#142b49;color:#fff;padding:14px;border-radius:12px}.chapter-game .sky button{border-radius:50%;background:#ffe08c}.chapter-game .sky button:disabled{opacity:1;background:#47c8bc}.chapter-game progress{width:100%;height:24px;accent-color:#087c9c}.chapter-game .quiet{font-size:13px;color:#405664}.chapter-game .game-success{background:#e0f3ef;border:2px solid #087c9c;padding:18px;border-radius:10px}.chapter-game .game-success h2{color:#135c4e}.chapter-game .game-card .game-actions{margin-bottom:0}
+@media(max-width:360px){.chapter-game{padding:12px}.chapter-game .game-grid{gap:6px}.chapter-game button{font-size:14px}.chapter-game .game-card{padding:10px}}
+
+.chapter-game .route-cell { display:grid;place-items:center;padding:4px; }
+.chapter-game .route-icon { width:100%;height:100%;max-width:64px;max-height:64px;display:block;pointer-events:none; }
+
+/* Comic game skin: shared by directly mounted chapter games and story puzzles. */
+.chapter-game,.creation-panel,.gathering-panel,.hearing-panel,#gamePanel {
+ --game-ink:var(--ink,#0a0812);--game-accent:#ffb45c;
+ color:#17131f;background-color:#fff4d6;
+ background-image:radial-gradient(#17131f12 1px,transparent 1px);background-size:8px 8px;
+ border:4px solid var(--game-ink);border-radius:3px;box-shadow:7px 7px 0 var(--game-ink);
+ font-family:Nunito,"Nunito Local",system-ui,sans-serif;
+}
+.chapter-game h2,.creation-title,.gathering-title,.hearing-title,.game-heading h2 { font-family:Bangers,"Bangers Local",cursive;color:#17131f;font-size:clamp(25px,6vw,36px);letter-spacing:.04em;text-shadow:none; }
+.chapter-game .game-card { border:3px solid #17131f;border-radius:2px;background:#fffaf0;box-shadow:3px 3px 0 #17131f; }
+.chapter-game .game-card h3 { font-family:Bangers,"Bangers Local",cursive;font-size:23px;letter-spacing:.04em; }
+.chapter-game button,.creation-btn,.gathering-btn,.hearing-btn,.game-retry,.game-shell>button,.game-shell>a,.game-shell header button {
+ border:3px solid #17131f;border-radius:3px;box-shadow:4px 4px 0 #17131f;
+ background:#ffb45c;color:#17131f;font-family:Nunito,"Nunito Local",system-ui,sans-serif;font-weight:900;line-height:1.3;min-height:44px;touch-action:manipulation;
+}
+.chapter-game button:active,.creation-btn:active,.gathering-btn:active { transform:translate(2px,2px);box-shadow:2px 2px 0 #17131f; }
+.chapter-game .game-status,.chapter-game .game-success { background:#bfe9de;color:#17131f;border:3px solid #17131f;border-radius:2px;box-shadow:3px 3px 0 #17131f; }
+.chapter-game .selected,.chapter-game button[aria-pressed=true],.chapter-game .route-cell.visited { background:#67d7e8; }
+.creation-kicker,.gathering-kicker,.hearing-kicker { color:#773312;text-shadow:none; }
+.creation-prompt,.gathering-prompt,.hearing-prompt,.creation-help,.gathering-help,.hearing-help,#gameInstructions { color:#302535;opacity:1; }
+.creation-status,.gathering-status,.hearing-status,.game-message { color:#81381a; }
+.creation-slot { background:#fffaf0;color:#302535; }
+.creation-tile { background:#ffcf76;color:#17131f;border-color:#17131f; }
+.creation-slot.filled { background:#bfe9de;color:#17131f; }
+.chapter-game .sky button { color:#17131f; }
+@media(max-width:360px){.chapter-game{padding:12px}.chapter-game button{font-size:13px}.chapter-game .game-grid{gap:6px}}
+.creation-axis,.creation-arrow { color:#733819; }
+.creation-status.hint,.gathering-status.hint,.hearing-status.hint { color:#92263c; }
+.creation-status.done,.gathering-status.done,.hearing-status.done { color:#145a47; }
+.vision-assembly,.game-objective,.game-choice,.game-hold {
+ border:4px solid var(--ink,#17131f);border-radius:3px;box-shadow:6px 6px 0 var(--ink,#17131f);
+ background-color:#fff4d6;color:#17131f;background-image:radial-gradient(#17131f12 1px,transparent 1px);background-size:8px 8px;
+}
+.vision-assembly-options button,.game-choice button,.game-hold button { border:3px solid #17131f;border-radius:3px;box-shadow:3px 3px 0 #17131f;background:#ffb45c;color:#17131f;min-height:44px; }
+/* Celebration lettering and badge remain clear above the panel texture. */
+.chapter-game[data-game-complete="true"] { text-align:center; }
+.chapter-game .game-celebration-title { font-size:clamp(40px,10vw,64px);color:#ffad43;-webkit-text-stroke:2px #17131f;paint-order:stroke fill;text-shadow:3px 3px 0 #17131f;transform:rotate(-2deg);margin:10px 0 20px; }
+.chapter-game .game-celebration { display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;background:#fffaf0; }
+.chapter-game .game-win-icon { width:clamp(86px,25vw,130px);height:auto;filter:drop-shadow(4px 4px 0 #17131f); }
+.chapter-game .game-complete-label { font:clamp(26px,7vw,38px)/1.2 Bangers,"Bangers Local",cursive;letter-spacing:.04em;color:#17131f;margin:8px 0; }
+#abrahamGame { background-image:radial-gradient(#fff2 1px,transparent 1px);background-size:8px 8px; }
+.chapter-game { position:relative;isolation:isolate;background-image:none; }
+.chapter-game::before { content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(#17131f20 1px,transparent 1px);background-size:8px 8px; }
+.chapter-game>h2,.chapter-game>p,.chapter-game>.game-cards { position:relative;z-index:1; }
+.shared-game-skip[hidden],#skipChapterGame[hidden],#game-skip-btn[hidden],[data-creation-skip][hidden],[data-gathering-skip][hidden],[data-hearing-skip][hidden] { display:none!important; }
+.shared-game-celebration { position:relative;z-index:5;display:grid;justify-items:center;gap:12px;margin:18px auto;padding:20px;max-width:480px;box-sizing:border-box;color:#17131f;background:#fffaf0;border:4px solid #17131f;box-shadow:6px 6px #17131f;text-align:center; }
+.shared-game-celebration h2 { margin:0;color:#ffad43;font:clamp(36px,9vw,56px)/1.1 Bangers,"Bangers Local",cursive;-webkit-text-stroke:2px #17131f;paint-order:stroke fill;text-shadow:3px 3px #17131f;transform:rotate(-2deg); }
+.shared-game-celebration .game-win-icon { width:100px;height:100px;filter:drop-shadow(4px 4px #17131f); }
+.shared-game-celebration p { margin:0;font:28px/1.2 Bangers,"Bangers Local",cursive;color:#17131f; }
+.game-ui-complete .creation-board,.game-ui-complete .creation-prompt,.game-ui-complete .creation-status,.game-ui-complete .creation-help,.game-ui-complete .gathering-grid,.game-ui-complete .gathering-stalls,.game-ui-complete .gathering-prompt,.game-ui-complete .gathering-status,.game-ui-complete .gathering-help { display:none; }
+#jonahGame>.shared-game-celebration { position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:calc(100% - 32px);max-height:calc(100% - 140px);overflow-y:auto; }
+
+.chapter-game .game-option-icon { display:flex;align-items:center;justify-content:center;gap:12px; }
+.chapter-game .game-option-icon svg,.chapter-game .game-task-panel>svg { width:36px;height:36px;flex-shrink:0; }
+.chapter-game .game-task-panel { display:flex;align-items:center;gap:12px;padding:14px;background:#bfe9de;border:3px solid #17131f;box-shadow:4px 4px #17131f;color:#17131f; }
+.chapter-game .game-task-panel[data-signal="east"] { background:#c5e5ff; }
+.chapter-game .game-task-panel[data-signal="west"] { background:#ead5f6; }
+.chapter-game .game-task-panel>div { display:grid;gap:4px; }
+.chapter-game .game-task-kicker { font:22px/1 Bangers,"Bangers Local",cursive;letter-spacing:.06em; }
+.chapter-game .game-task-panel span { font-weight:900;line-height:1.4; }
+/* Victory text uses the same loud, outlined lettering as comic sound effects. */
+.chapter-game .game-celebration-title,.shared-game-celebration h2 {
+ font-family:Bangers,"Bangers Local",Impact,sans-serif!important;
+ font-size:clamp(40px,11vw,76px)!important;font-weight:900;line-height:1.05;
+ text-transform:uppercase;letter-spacing:.035em;color:#ffd84d!important;
+ -webkit-text-stroke:3px #17131f;paint-order:stroke fill;
+ text-shadow:3px 3px 0 #ff6b5b,6px 6px 0 #17131f;
+ transform:rotate(-5deg) skew(-5deg);padding:10px 4px;margin:8px 0 18px;
+}
+.chapter-game .game-complete-label,.shared-game-celebration p {
+ position:relative;isolation:isolate;display:inline-block;
+ font-family:Bangers,"Bangers Local",Impact,sans-serif!important;
+ font-size:clamp(29px,8vw,48px)!important;font-weight:900;line-height:1.1;
+ text-transform:uppercase;letter-spacing:.045em;color:#fffaf0!important;
+ -webkit-text-stroke:2px #17131f;paint-order:stroke fill;
+ text-shadow:3px 3px 0 #17131f;transform:rotate(3deg) skew(-4deg);
+ padding:16px 20px;margin:4px 0;
+}
+.chapter-game .game-complete-label::before,.shared-game-celebration p::before {
+ content:"";position:absolute;inset:0 -4px;z-index:-1;background:#ff6b5b;
+ clip-path:polygon(0 25%,14% 22%,10% 0,30% 13%,42% 0,52% 14%,73% 0,76% 20%,100% 12%,91% 43%,100% 68%,82% 72%,87% 100%,65% 88%,50% 100%,36% 87%,15% 100%,18% 77%,0 84%,8% 53%);
+}
+@media(prefers-reduced-motion:no-preference){
+ .chapter-game[data-game-complete="true"] .game-celebration-title,.shared-game-celebration h2 { animation:comicVictoryPop .4s ease-out both; }
+ @keyframes comicVictoryPop { from{opacity:0;scale:.65} 70%{opacity:1;scale:1.08} to{opacity:1;scale:1} }
+}
+
+.chapter-game .game-celebration-description,.shared-game-celebration .game-celebration-description { font:700 16px/1.5 Nunito,"Nunito Local",system-ui,sans-serif;color:#17131f;text-transform:none;letter-spacing:normal;text-shadow:none;-webkit-text-stroke:0;transform:none;margin:0 0 16px; }
+/* Icons supplement labels, with stable semantic names for future translations. */
+.game-button-with-icon { display:flex!important;align-items:center;justify-content:center;gap:8px; }
+.game-action-picture { display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px;width:30px;height:30px;pointer-events:none; }
+.game-action-picture .game-action-icon { display:block;width:100%;height:100%; }
+.game-action-label { min-width:0;overflow-wrap:anywhere; }
+.chapter-game .game-grid .game-button-with-icon { flex-direction:column;gap:4px; }
+.chapter-game .game-grid .game-action-picture { width:30px;height:30px;flex-basis:30px; }
+.game-dpad .game-action-label { display:none; }
+.game-dpad .game-action-picture { width:24px;height:24px;flex-basis:24px; }
+@media(max-width:360px){.game-button-with-icon{gap:6px}.game-action-picture{width:26px;height:26px;flex-basis:26px}.chapter-game .game-actions>button{flex-basis:110px}}
+
+.chapter-game .survey-option { flex-wrap:nowrap; }
+.chapter-game .survey-option .game-action-label { white-space:nowrap; }
+@media(max-width:360px){.chapter-game .survey-option{font-size:13px;padding-left:8px;padding-right:8px}}
+
+.chapter-game button.needs-advance { outline:3px solid #21895c;outline-offset:3px; }
+@media(prefers-reduced-motion:no-preference){
+ .chapter-game button.needs-advance { animation:lanternActionBuzz 2.4s ease-in-out infinite; }
+ @keyframes lanternActionBuzz { 0%,14%,100%{transform:translateX(0)} 2%,6%,10%{transform:translateX(-2px) rotate(-.5deg)} 4%,8%,12%{transform:translateX(2px) rotate(.5deg)} }
+}
+
+.chapter-game .sky .constellation-star { background:transparent;border:0;border-radius:0;box-shadow:none;display:grid;place-items:center;padding:2px;min-height:64px;aspect-ratio:1; }
+.chapter-game .sky .constellation-star svg { width:100%;height:auto;max-width:110px;filter:drop-shadow(3px 3px 0 #080d1a); }
+.chapter-game .sky .constellation-star:disabled { background:transparent;opacity:1; }
+.chapter-game .sky .constellation-star:disabled svg path { fill:#67d7c0; }
+.chapter-game .sky .constellation-star:focus-visible { outline:3px solid #fffaf0;outline-offset:0; }
+
+/* Let grouped controls wrap by usable button width rather than squeezing words. */
+.chapter-game .game-actions { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:10px; }
+.chapter-game .game-actions>button { min-width:0;max-width:100%; }
+.chapter-game .game-action-label { overflow-wrap:normal;word-break:normal; }
+.chapter-game .game-actions.tent-parts { grid-template-columns:repeat(3,minmax(0,1fr));gap:8px; }
+.chapter-game .tent-parts>button { flex-direction:column;gap:6px;padding:10px 4px;min-height:88px; }
+.chapter-game .tent-parts .game-action-picture { width:32px;height:32px;flex-basis:32px; }
+.chapter-game .tent-parts .game-action-label { white-space:nowrap;font-size:14px; }

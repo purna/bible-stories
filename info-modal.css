@@ -95,3 +95,34 @@
   .story-info-card h2 { font-size: 34px; }
 }
 @media (prefers-reduced-motion: reduce) { #infoToggle { transition: none; } }
+
+/* One control row above credits; dialog remains above both controls and editor. */
+:root { --story-controls-bottom:max(38px,6.2vh,calc(env(safe-area-inset-bottom,0px) + 32px)); }
+#storyControls {position:fixed;left:0;right:0;bottom:var(--story-controls-bottom);height:52px;z-index:10040;pointer-events:none;}
+#storyControls[hidden] {display:none!important;}
+#storyControls #audioToggle,#storyControls #infoToggle {position:absolute;bottom:0;width:52px;height:52px;min-width:52px;min-height:52px;z-index:1;pointer-events:auto;touch-action:manipulation;}
+#storyControls #audioToggle {left:max(14px,4vw);}
+#storyControls #infoToggle {left:calc(max(14px,4vw) + 64px);}
+#storyControls #nextBtn,#storyControls #nextLineBtn {position:absolute;bottom:0;right:max(14px,4vw);height:52px;min-height:52px;box-sizing:border-box;z-index:1;touch-action:manipulation;}
+.story-info-modal {z-index:20000;}
+.story-info-header {padding-right:48px;}
+.story-info-close {z-index:10;touch-action:manipulation;min-width:44px;min-height:44px;}
+@media(max-width:480px) {
+ #storyEditorToggle {bottom:calc(var(--story-controls-bottom) + 65px)!important;}
+ #storyControls #nextBtn,#storyControls #nextLineBtn {max-width:calc(100vw - 155px);padding-left:12px;padding-right:12px;}
+}
+
+/* All footer actions share one grid row, including the editor button. */
+#storyControls {display:grid;grid-template-columns:52px 52px minmax(0,1fr) auto;column-gap:12px;align-items:center;left:max(14px,4vw);right:max(14px,4vw);}
+#storyControls #audioToggle,#storyControls #infoToggle,#storyControls #nextBtn,#storyControls #nextLineBtn,#storyControls #storyEditorToggle {position:static!important;left:auto!important;right:auto!important;bottom:auto!important;grid-row:1;height:52px;min-height:52px;box-sizing:border-box;transform:none!important;margin:0;}
+#storyControls #audioToggle {grid-column:1;}
+#storyControls #infoToggle {grid-column:2;}
+#storyControls #storyEditorToggle {grid-column:3;justify-self:center;pointer-events:auto;max-width:100%;padding:8px 10px;font-size:13px;line-height:1.1;touch-action:manipulation;}
+#storyControls #nextBtn,#storyControls #nextLineBtn {grid-column:4;max-width:125px;padding:8px 12px;}
+@media(max-width:360px) {
+ #storyControls {column-gap:8px;}
+ #storyControls #storyEditorToggle {font-size:11px;padding:6px;}
+ #storyControls #nextBtn,#storyControls #nextLineBtn {font-size:12px;max-width:90px;padding:8px;}
+}
+
+#storyControls #nextBtn:not(.show),#storyControls #nextLineBtn:not(.show) {display:none;}

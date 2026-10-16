@@ -1,0 +1,99 @@
+{
+  "id": "act3_lot_chooses",
+  "name": "Ch.3 · Lot Chooses",
+  "bg": "radial-gradient(circle at 40% 20%, #375568, #151729 75%)",
+  "particle": "dawn",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_03_lot_chooses/a_establish/abraham_act3_a_background.svg",
+      "middleGround": "assets/svg/act_03_lot_chooses/a_establish/abraham_act3_a_middle_ground.svg",
+      "foreground": "assets/svg/act_03_lot_chooses/a_establish/abraham_act3_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_03_lot_chooses/b_core_action/abraham_act3_b_background.svg",
+      "middleGround": "assets/svg/act_03_lot_chooses/b_core_action/abraham_act3_b_middle_ground.svg",
+      "foreground": "assets/svg/act_03_lot_chooses/b_core_action/abraham_act3_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_03_lot_chooses/c_resolve/abraham_act3_c_background.svg",
+      "middleGround": "assets/svg/act_03_lot_chooses/c_resolve/abraham_act3_c_middle_ground.svg",
+      "foreground": "assets/svg/act_03_lot_chooses/c_resolve/abraham_act3_c_foreground.svg"
+    }
+  },
+  "assetFolder": "act_03_lot_chooses",
+  "assetStem": "abraham_act3",
+  "lines": [
+    {
+      "id": "act3_lot_chooses_0",
+      "items": [
+        {
+          "id": "act3_lot_chooses_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Abram and Lot had so many animals that their shepherds began to quarrel over the grazing land.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act3_lot_chooses_1",
+      "items": [
+        {
+          "id": "act3_lot_chooses_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Abram said they should not fight. He offered Lot the first choice of where to live.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act3_lot_chooses_2",
+      "items": [
+        {
+          "id": "act3_lot_chooses_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Lot chose the green plain near the Jordan. Abram stayed in Canaan.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act3_lot_chooses_3",
+      "items": [
+        {
+          "id": "act3_lot_chooses_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "God renewed the promise of land and a great family. Abram could be generous because he trusted God.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    }
+  ]
+}

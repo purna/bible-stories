@@ -22,6 +22,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Bangers&amp;family=Nunito:wght@700;900&amp;family=Press+Start+2P&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+
+    <script>
+      window.__localStoryPreview = ['localhost', '127.0.0.1'].includes(location.hostname);
+      if (window.__localStoryPreview && 'serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(async registrations => {
+          const matching = registrations.filter(registration => location.href.startsWith(registration.scope));
+          await Promise.all(matching.map(registration => registration.unregister()));
+          if (matching.length && navigator.serviceWorker.controller) location.reload();
+        }).catch(() => {});
+      }
+    </script>
+    <link rel="stylesheet" href="../shared-tools/story-responsive.css?v=start-icon62">
+  <link rel="stylesheet" href="../shared-tools/story-games.css?v=mobile-parts63">
 </head>
  <body>
   <div id="startScreen">
@@ -36,7 +49,7 @@
       <div class="bigtorch"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
       <p>An interactive 10-chapter comic. Use arrow keys, swipe, or tap Next to navigate. Drag inside the panel to look around each scene.</p>
       <p class="faith-theme">Discover Jeremiah’s faith in God through difficult words, suffering, and hope.</p>
-            <button id="startBtn">LAUNCH COMIC</button>
+            <button id="startBtn" type="button" title="Begin the story"><svg class="start-story-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="20" fill="#fff4d6" stroke="#17131f" stroke-width="3"/><path d="m19 13 16 11-16 11z" fill="#39a96b" stroke="#17131f" stroke-width="3" stroke-linejoin="round"/></svg><span class="start-button-label">Begin the story</span></button>
     </div>
   </div>
   <div id="app">
@@ -70,21 +83,22 @@
     <a href="tools/texture-forge.html">Texture Forge</a>
     <a href="tools/scene_designer.html">Scene Designer</a>
   </footer>
-  <script src="js/asset-download-manager.js"></script>
-  <script src="js/story-runtime.js"></script>
+  <script src="../shared-tools/story-progress.js?v=journey64" data-story="Jeremiah"></script>
+<script src="js/asset-download-manager.js"></script>
+  <script src="js/story-runtime.js?v=skip47"></script>
   <script src="js/loading-screen.js"></script>
   <script src="js/audio-manager.js"></script>
-  <script src="js/info-modal.js"></script>
+  <script src="js/info-modal.js?v=credits48"></script>
   <script src="js/jeremiah-scenes-helpers.js"></script>
   <script src="js/jeremiah-field-background.js"></script>
   <script src="js/config.js"></script>
   <script src="js/compass.js"></script>
   <script src="assets/scenes/jeremiah-scenes.js"></script>
-  <script src="js/jeremiah-story.js"></script>
+  <script src="js/jeremiah-story.js?v=journey64"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        const registerStoryWorker = () => navigator.serviceWorker.register('sw.js');
+        const registerStoryWorker = () => (window.__localStoryPreview ? Promise.resolve() : navigator.serviceWorker.register('sw.js'));
         if (window.__storyAssetsReady) registerStoryWorker();
         else window.addEventListener('story:assetsready', registerStoryWorker, { once: true });
       });
@@ -149,8 +163,10 @@
 
     <!-- Temporary story editor integration -->
     <script src="js/story-editor-config.js"></script>
-    <script src="../shared-tools/story-text-rendering.js" defer></script>
-    <script src="../shared-tools/story-editor.js" defer></script>
+    <script src="../shared-tools/story-text-rendering.js?v=all-stories38" defer></script>
+    <script src="../shared-tools/story-editor.js?v=green-pen50" defer></script>
     <script src="../shared-tools/ui-feedback.js"></script>
+<script src="../shared-tools/story-game-icons.js?v=survey-icons57" defer></script>
+<script src="../shared-tools/story-game-controls.js?v=single-arrow61" defer></script>
 </body>
 </html>

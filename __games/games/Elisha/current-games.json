@@ -1,0 +1,84 @@
+{
+  "story": "Elisha",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "the_mantle",
+      "title": "Ch.1 \u00b7 The Mantle",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elisha/data/act1_the_mantle.json"
+    },
+    {
+      "chapter": 2,
+      "id": "the_jordan",
+      "title": "Ch.2 \u00b7 The Jordan",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elisha/data/act2_the_jordan.json"
+    },
+    {
+      "chapter": 3,
+      "id": "the_widow_s_oil",
+      "title": "Ch.3 \u00b7 The Widow\u2019s Oil",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elisha/data/act3_the_widow_s_oil.json"
+    },
+    {
+      "chapter": 4,
+      "id": "the_shunammite_room",
+      "title": "Ch.4 \u00b7 The Shunammite Room",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elisha/data/act4_the_shunammite_room.json"
+    },
+    {
+      "chapter": 5,
+      "id": "the_child",
+      "title": "Ch.5 \u00b7 The Child",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elisha/data/act5_the_child.json"
+    },
+    {
+      "chapter": 6,
+      "id": "naaman",
+      "title": "Ch.6 \u00b7 Naaman",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elisha/data/act6_naaman.json"
+    },
+    {
+      "chapter": 7,
+      "id": "the_floating_axe",
+      "title": "Ch.7 \u00b7 The Floating Axe",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elisha/data/act7_the_floating_axe.json"
+    },
+    {
+      "chapter": 8,
+      "id": "the_unseen_army",
+      "title": "Ch.8 \u00b7 The Unseen Army",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elisha/data/act8_the_unseen_army.json"
+    },
+    {
+      "chapter": 9,
+      "id": "a_blind_feast",
+      "title": "Ch.9 \u00b7 A Blind Feast",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Elisha/data/act9_a_blind_feast.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Elisha.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

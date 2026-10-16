@@ -1,4 +1,4 @@
-const CACHE_NAME = 'abraham-story-bundle-v3-story-music';
+const CACHE_NAME = 'journey64';
 const STORY_SCOPE = new URL('./', self.location.href);
 
 self.addEventListener('install', event => {

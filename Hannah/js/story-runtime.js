@@ -11,6 +11,8 @@
   function blockWhenLocked(event) {
     if (!isInputLocked()) return;
     if (event.type === 'keydown' && (event.key === 'Escape' || event.key === 'Tab')) return;
+    // Keep dialog buttons tappable while background story gestures are locked.
+    if (event.target?.closest?.('[role="dialog"], .story-info-modal, #chapterSelect')) return;
     if (isScrollableTarget(event.target)) return;
     event.stopImmediatePropagation();
     if (event.cancelable) event.preventDefault();

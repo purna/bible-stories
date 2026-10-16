@@ -226,11 +226,11 @@
       "id": "throne_7",
       "choices": [
         {
-          "label": "Keep the throne open to the small 🏛️",
+          "label": "Keep the throne open to the small",
           "note": "A ruler's first duty is to be reachable."
         },
         {
-          "label": "Let the court manage the crowd 👑",
+          "label": "Let the court manage the crowd",
           "note": "Protocol keeps order, but it also builds distance."
         }
       ],

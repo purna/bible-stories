@@ -1,0 +1,76 @@
+{
+  "story": "Hannah",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "the_journey_to_shiloh",
+      "title": "Ch.1 \u00b7 The Journey to Shiloh",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Hannah/data/act1_the_journey_to_shiloh.json"
+    },
+    {
+      "chapter": 2,
+      "id": "at_the_table",
+      "title": "Ch.2 \u00b7 At the Table",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Hannah/data/act2_at_the_table.json"
+    },
+    {
+      "chapter": 3,
+      "id": "silent_prayer",
+      "title": "Ch.3 \u00b7 Silent Prayer",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Hannah/data/act3_silent_prayer.json"
+    },
+    {
+      "chapter": 4,
+      "id": "misunderstood",
+      "title": "Ch.4 \u00b7 Misunderstood",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Hannah/data/act4_misunderstood.json"
+    },
+    {
+      "chapter": 5,
+      "id": "remembered",
+      "title": "Ch.5 \u00b7 Remembered",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Hannah/data/act5_remembered.json"
+    },
+    {
+      "chapter": 6,
+      "id": "the_little_robe",
+      "title": "Ch.6 \u00b7 The Little Robe",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Hannah/data/act6_the_little_robe.json"
+    },
+    {
+      "chapter": 7,
+      "id": "given_back",
+      "title": "Ch.7 \u00b7 Given Back",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Hannah/data/act7_given_back.json"
+    },
+    {
+      "chapter": 8,
+      "id": "hannah_s_song",
+      "title": "Ch.8 \u00b7 Hannah\u2019s Song",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Hannah/data/act8_hannah_s_song.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Hannah.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

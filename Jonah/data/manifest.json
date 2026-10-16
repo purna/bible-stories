@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "storyId": "jonah",
+  "acts": [
+    {
+      "id": "escaping",
+      "name": "Dialogue: Escaping",
+      "file": "act1_escaping.json",
+      "game": {
+        "plugin": "jonah",
+        "chapter": 0
+      }
+    },
+    {
+      "id": "trapped",
+      "name": "Feeling Trapped",
+      "file": "act2_trapped.json",
+      "game": {
+        "plugin": "jonah",
+        "chapter": 1
+      }
+    },
+    {
+      "id": "mission",
+      "name": "The Mission",
+      "file": "act3_mission.json",
+      "game": {
+        "plugin": "jonah",
+        "chapter": 2
+      }
+    },
+    {
+      "id": "reflection",
+      "name": "Reflection",
+      "file": "act4_reflection.json",
+      "game": {
+        "plugin": "jonah",
+        "chapter": 3
+      }
+    }
+  ]
+}

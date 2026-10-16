@@ -1,0 +1,99 @@
+{
+  "id": "act8_sodom_and_gomorrah",
+  "name": "Ch.8 · Sodom and Gomorrah",
+  "bg": "radial-gradient(circle at 40% 20%, #375568, #151729 75%)",
+  "particle": "dawn",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_08_sodom_and_gomorrah/a_establish/abraham_act8_a_background.svg",
+      "middleGround": "assets/svg/act_08_sodom_and_gomorrah/a_establish/abraham_act8_a_middle_ground.svg",
+      "foreground": "assets/svg/act_08_sodom_and_gomorrah/a_establish/abraham_act8_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_08_sodom_and_gomorrah/b_core_action/abraham_act8_b_background.svg",
+      "middleGround": "assets/svg/act_08_sodom_and_gomorrah/b_core_action/abraham_act8_b_middle_ground.svg",
+      "foreground": "assets/svg/act_08_sodom_and_gomorrah/b_core_action/abraham_act8_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_08_sodom_and_gomorrah/c_resolve/abraham_act8_c_background.svg",
+      "middleGround": "assets/svg/act_08_sodom_and_gomorrah/c_resolve/abraham_act8_c_middle_ground.svg",
+      "foreground": "assets/svg/act_08_sodom_and_gomorrah/c_resolve/abraham_act8_c_foreground.svg"
+    }
+  },
+  "assetFolder": "act_08_sodom_and_gomorrah",
+  "assetStem": "abraham_act8",
+  "lines": [
+    {
+      "id": "act8_sodom_and_gomorrah_0",
+      "items": [
+        {
+          "id": "act8_sodom_and_gomorrah_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "God heard the suffering caused by the evil in Sodom. Abraham asked God to show mercy to the righteous.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act8_sodom_and_gomorrah_1",
+      "items": [
+        {
+          "id": "act8_sodom_and_gomorrah_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Messengers warned Lot’s household that they must leave the city. They urged the family to hurry.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act8_sodom_and_gomorrah_2",
+      "items": [
+        {
+          "id": "act8_sodom_and_gomorrah_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Lot and his daughters escaped, but his wife looked back and was lost. It was a serious and sorrowful rescue.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act8_sodom_and_gomorrah_3",
+      "items": [
+        {
+          "id": "act8_sodom_and_gomorrah_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Abraham looked toward the plain. The story showed the weight of wrongdoing and the importance of mercy.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    }
+  ]
+}

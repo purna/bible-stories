@@ -7,6 +7,7 @@
   ];
 
   let active = false;
+  let launchSequence = 0;
   let initialized = false;
   let continuation = null;
   let lastProgress = 'Find the glowing story moments';
@@ -25,9 +26,12 @@
   async function launch(index, onContinue) {
     const chapter = chapters[index];
     if (!chapter || active) return;
+    const token = ++launchSequence;
     active = true;
+    delete overlay.dataset.gameComplete;
     continuation = onContinue;
     overlay.hidden = false;
+    document.body.classList.add('chapter-game-active');
     overlay.style.background = `radial-gradient(circle at 50% 30%, ${chapter.palette[1]}, ${chapter.palette[0]} 72%)`;
     title.textContent = chapter.title;
     instructions.textContent = chapter.instructions;
@@ -36,7 +40,7 @@
     choicePanel.hidden = true;
     holdPanel.hidden = true;
     document.body.style.overflow = 'hidden';
-    if (window.StoryRuntime) StoryRuntime.setMode('game');
+    if (window.StoryRuntime) StoryRuntime.setMode('game', {lock:'chapter-game'});
 
     try {
       await new Promise(requestAnimationFrame);
@@ -45,11 +49,13 @@
         initialized = true;
         if (window.Compass) Compass.init().catch(() => {});
       }
+      if (!active || token !== launchSequence) return;
       IsometricEngine.setEnabled(true);
       const loaded = await IsometricEngine.goToScene(chapter.scene);
+      if (!active || token !== launchSequence) { IsometricEngine.setEnabled(false); return; }
       if (loaded === false) showFallback(chapter);
     } catch (error) {
-      showFallback(chapter, error.message);
+      if (active && token === launchSequence) showFallback(chapter, error.message);
     }
   }
 
@@ -65,8 +71,11 @@
   function finish(advance) {
     if (!active) return;
     active = false;
+    launchSequence++;
     IsometricEngine.setEnabled(false);
     overlay.hidden = true;
+    document.body.classList.remove('chapter-game-active');
+    if (window.StoryRuntime) StoryRuntime.unlock('chapter-game');
     document.body.style.overflow = '';
     if (window.StoryRuntime) StoryRuntime.setMode('reading');
     const callback = continuation;
@@ -107,6 +116,8 @@
     setTimeout(() => banner.remove(), 1700);
   });
   window.addEventListener('isometric:actComplete', () => {
+    if(!active)return;
+    overlay.dataset.gameComplete='true';
     progress.textContent = 'Panel complete!';
     completeBtn.hidden = false;
   });
@@ -165,5 +176,6 @@
   completeBtn.addEventListener('click', () => finish(true));
   document.getElementById('game-skip-btn').addEventListener('click', () => finish(true));
 
+  window.addEventListener('story:chapterchanging',()=>finish(false));
   window.JonahGame = { launch, isActive: () => active, shouldLaunch: index => Boolean(chapters[index]) };
 })();

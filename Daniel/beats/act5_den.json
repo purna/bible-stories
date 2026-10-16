@@ -97,7 +97,7 @@
       "id": "den_3",
       "choices": [
         {
-          "label": "Daniel closes his window 🪟",
+          "label": "Daniel closes his window",
           "note": "He didn't. They couldn't find fault in him by catching him pray — so the window was always open.",
           "decisionId": "den_window",
           "tags": [
@@ -107,7 +107,7 @@
           ]
         },
         {
-          "label": "Daniel prays as usual ✅",
+          "label": "Daniel prays as usual",
           "note": "Three times a day. Window open. Facing Jerusalem. Exactly as he always had. Because that's what faithfulness looks like.",
           "decisionId": "den_pray",
           "tags": [

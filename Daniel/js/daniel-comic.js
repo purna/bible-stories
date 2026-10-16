@@ -202,7 +202,7 @@ async function renderLine() {
             const charBox = document.createElement('div');
             charBox.className = 'char-container';
             charBox.innerHTML = await getAsset(CHARACTERS[data.speaker]);
-            overlay.appendChild(charBox);
+            if (frame.isConnected) frame.appendChild(charBox);
         }
 
         if (data.sfx) {
@@ -274,6 +274,8 @@ function renderChoices(data) {
             b.onclick = () => {
                 handleChoiceSelected(c);
                 choicesBox.classList.remove('show');
+                choicesBox.replaceChildren();
+                delayNote.closest('.content-overlay')?.classList.add('choice-answered');
                 delayNote.textContent = c.note;
                 delayNote.classList.add('show');
                 choicePending = false;
@@ -527,6 +529,8 @@ function onDeliverySelected(c) {
     }
 
     choicesBox.classList.remove('show');
+    choicesBox.replaceChildren();
+    delayNote.closest('.content-overlay')?.classList.add('choice-answered');
     delayNote.textContent = c.note;
     if (!accurate) {
         delayNote.textContent += ' [The meaning slipped — something was off…]';
@@ -567,7 +571,7 @@ function updateNextBtn() {
     const atEnd = lineIdx === currentAct().lines.length - 1 && !choicePending;
     nextBtn.className = `palette-act-${actIdx + 1}`;
     nextBtn.classList.toggle('show', atEnd);
-    nextBtn.textContent = actIdx === STORY.length - 1 ? 'Read Again ↺' : 'Next Chapter ↴';
+    nextBtn.textContent = actIdx === STORY.length - 1 ? 'Finish story →' : 'Next Chapter ↴';
 
     const notAtEnd = lineIdx < currentAct().lines.length - 1 && !choicePending;
     nextLineBtn.className = `palette-act-${actIdx + 1}`;
@@ -601,6 +605,7 @@ async function goLine(delta) {
 
 function goNextChapter() {
     if (transitioning || visionMode) return;
+  if(window.StoryProgress){StoryProgress.markChapter(actIdx,STORY.length);if(actIdx===STORY.length-1&&StoryProgress.allComplete(STORY.length)){StoryProgress.openMap();return;}}
     if (actIdx === STORY.length - 1) { fallTransition(() => { actIdx = 0; lineIdx = 0; loadAct(); }); return; }
     fallTransition(() => { actIdx++; lineIdx = 0; loadAct(); });
 }
@@ -1089,3 +1094,17 @@ async function main() {
 }
 
 main();
+
+function dismissVisionGame() {
+ if(!visionMode)return false;
+ if(visionTimerTick)clearTimeout(visionTimerTick);
+ VisionEngine.reset();visionMode=false;choicePending=false;
+ visionOverlay.classList.remove('show','vision-urgent');visionOverlay.replaceChildren();
+ fragmentCounter.classList.add('hidden');choicesBox.classList.remove('show');
+ window.StoryRuntime?.setMode('reading');
+ if(typeof VFX!=='undefined')VFX.exitVision();
+ if(typeof Parallax!=='undefined')Parallax.attach(el('#svgLayer'));
+ updateNextBtn();return true;
+}
+window.addEventListener('story:skipgame',()=>{if(dismissVisionGame())lineIdx<currentAct().lines.length-1?goLine(1):goNextChapter();});
+window.addEventListener('story:chapterchanging',dismissVisionGame);

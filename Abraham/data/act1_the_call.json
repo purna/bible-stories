@@ -1,0 +1,99 @@
+{
+  "id": "act1_the_call",
+  "name": "Ch.1 · The Call",
+  "bg": "radial-gradient(circle at 40% 20%, #375568, #151729 75%)",
+  "particle": "dawn",
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_01_the_call/a_establish/abraham_act1_a_background.svg",
+      "middleGround": "assets/svg/act_01_the_call/a_establish/abraham_act1_a_middle_ground.svg",
+      "foreground": "assets/svg/act_01_the_call/a_establish/abraham_act1_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_01_the_call/b_core_action/abraham_act1_b_background.svg",
+      "middleGround": "assets/svg/act_01_the_call/b_core_action/abraham_act1_b_middle_ground.svg",
+      "foreground": "assets/svg/act_01_the_call/b_core_action/abraham_act1_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_01_the_call/c_resolve/abraham_act1_c_background.svg",
+      "middleGround": "assets/svg/act_01_the_call/c_resolve/abraham_act1_c_middle_ground.svg",
+      "foreground": "assets/svg/act_01_the_call/c_resolve/abraham_act1_c_foreground.svg"
+    }
+  },
+  "assetFolder": "act_01_the_call",
+  "assetStem": "abraham_act1",
+  "lines": [
+    {
+      "id": "act1_the_call_0",
+      "items": [
+        {
+          "id": "act1_the_call_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "God called Abram to leave his home in Haran and travel to a land God would show him.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act1_the_call_1",
+      "items": [
+        {
+          "id": "act1_the_call_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "God promised to bless Abram and make his family a blessing to others.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act1_the_call_2",
+      "items": [
+        {
+          "id": "act1_the_call_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Abram set out with Sarai, Lot and their household. He did not know every step, but he chose to trust God.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    },
+    {
+      "id": "act1_the_call_3",
+      "items": [
+        {
+          "id": "act1_the_call_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "In Canaan, Abram built an altar and worshipped God. His journey of faith had begun.",
+          "speaker": "narrator",
+          "position": "center",
+          "align": "center",
+          "width": "3/4",
+          "style": "comic",
+          "delay": 500,
+          "entryFx": "fade"
+        }
+      ]
+    }
+  ]
+}

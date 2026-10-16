@@ -1,0 +1,92 @@
+{
+  "story": "Joseph",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "the_coloured_robe",
+      "title": "Ch.1 \u00b7 The Coloured Robe",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joseph/data/act1_the_coloured_robe.json"
+    },
+    {
+      "chapter": 2,
+      "id": "dreams_and_the_pit",
+      "title": "Ch.2 \u00b7 Dreams and the Pit",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joseph/data/act2_dreams_and_the_pit.json"
+    },
+    {
+      "chapter": 3,
+      "id": "potiphar_s_house",
+      "title": "Ch.3 \u00b7 Potiphar\u2019s House",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joseph/data/act3_potiphar_s_house.json"
+    },
+    {
+      "chapter": 4,
+      "id": "the_prison",
+      "title": "Ch.4 \u00b7 The Prison",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joseph/data/act4_the_prison.json"
+    },
+    {
+      "chapter": 5,
+      "id": "pharaoh_s_dreams",
+      "title": "Ch.5 \u00b7 Pharaoh\u2019s Dreams",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joseph/data/act5_pharaoh_s_dreams.json"
+    },
+    {
+      "chapter": 6,
+      "id": "storehouses",
+      "title": "Ch.6 \u00b7 Storehouses",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joseph/data/act6_storehouses.json"
+    },
+    {
+      "chapter": 7,
+      "id": "the_brothers_arrive",
+      "title": "Ch.7 \u00b7 The Brothers Arrive",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joseph/data/act7_the_brothers_arrive.json"
+    },
+    {
+      "chapter": 8,
+      "id": "benjamin_s_cup",
+      "title": "Ch.8 \u00b7 Benjamin\u2019s Cup",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joseph/data/act8_benjamin_s_cup.json"
+    },
+    {
+      "chapter": 9,
+      "id": "revealed",
+      "title": "Ch.9 \u00b7 Revealed",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joseph/data/act9_revealed.json"
+    },
+    {
+      "chapter": 10,
+      "id": "goshen",
+      "title": "Ch.10 \u00b7 Goshen",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Joseph/data/act10_goshen.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Joseph.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

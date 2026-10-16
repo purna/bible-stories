@@ -114,6 +114,8 @@ function loadScene3D(sceneKey) {
   const factory = window.SCENE_FACTORIES[sceneKey]();
   if (!factory) return;
   currentScene = factory;
+  // Preserve the SVG background underneath the transparent 3D layer.
+  if (factory.scene) factory.scene.background = null;
   camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
   const cfg = factory.cameraConfig || { distance: 60, height: 20 };
   camera.position.set(0, cfg.height || 20, cfg.distance || 60);
@@ -201,6 +203,8 @@ function renderChoices(data) {
       b.textContent = c.label;
       b.onclick = () => {
         choicesBox.classList.remove('show');
+        choicesBox.replaceChildren();
+        delayNote.closest('.content-overlay')?.classList.add('choice-answered');
         delayNote.className = 'show';
         delayNote.textContent = c.note;
         choicePending = false;
@@ -221,7 +225,7 @@ function updateNextBtn() {
   const pal = `palette-act-${actIdx + 1}`;
   nextBtn.className = pal;
   nextBtn.classList.toggle('show', atEnd);
-  nextBtn.textContent = actIdx === STORY.length - 1 ? 'Read Again ↺' : 'Next Chapter ↴';
+  nextBtn.textContent = actIdx === STORY.length - 1 ? 'Finish story →' : 'Next Chapter ↴';
   nextBtn.classList.toggle('finale', actIdx === STORY.length - 1);
   nextLineBtn.className = pal;
   nextLineBtn.classList.toggle('show', notAtEnd);
@@ -292,7 +296,9 @@ async function renderLine() {
   const middleLayer = document.createElement('div');
   middleLayer.id = 'midLayer';
   middleLayer.classList.add('svg-middle');
-  middleLayer.innerHTML = await loadSvg(sceneAssetPath(act, 'middle_ground'));
+  // Babel has background and foreground artwork but no middle-ground files.
+  const middlePath = act.sceneLayers?.[sceneBeat(act).folder]?.middleGround;
+  middleLayer.innerHTML = middlePath ? await loadSvg(middlePath) : '';
   graphicContainer.appendChild(middleLayer);
 
   // Layer 3: 3D scene objects
@@ -331,7 +337,7 @@ async function renderLine() {
         charBox.className = 'char-container';
         if (data.align === 'right') charBox.classList.add('right');
         charBox.innerHTML = charSvg;
-        overlay.appendChild(charBox);
+        if (frame.isConnected) frame.appendChild(charBox);
       }
     }
     if (data.sfx) {
@@ -409,6 +415,7 @@ function fallTransition(mid) {
 }
 function goNextChapter() {
   if (transitioning) return;
+  if(window.StoryProgress){StoryProgress.markChapter(actIdx,STORY.length);if(actIdx===STORY.length-1&&StoryProgress.allComplete(STORY.length)){StoryProgress.openMap();return;}}
   if (actIdx >= STORY.length - 1) {
     fallTransition(() => { actIdx = 0; lineIdx = 0; populateChapterSelect(); renderLine(); });
     return;
@@ -471,10 +478,7 @@ tickParticles();
 requestAnimationFrame(tick3D);
 
 nextLineBtn.addEventListener('click', () => goLine(1));
-nextBtn.addEventListener('click', () => {
-  if (actIdx === STORY.length - 1) { jumpToChapter(0); }
-  else goNextChapter();
-});
+nextBtn.addEventListener('click', goNextChapter);
 el('#chapterSelect').addEventListener('change', e => jumpToChapter(parseInt(e.target.value)));
 
 let touchStartX = 0;

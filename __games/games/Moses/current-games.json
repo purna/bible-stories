@@ -1,0 +1,132 @@
+{
+  "story": "Moses",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "the_child_in_the_river",
+      "title": "Ch.1 \u00b7 The Child in the River",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act1_the_child_in_the_river.json"
+    },
+    {
+      "chapter": 2,
+      "id": "the_burning_bush",
+      "title": "Ch.2 \u00b7 The Burning Bush",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act2_the_burning_bush.json"
+    },
+    {
+      "chapter": 3,
+      "id": "before_the_throne",
+      "title": "Ch.3 \u00b7 Before the Throne",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act3_before_the_throne.json"
+    },
+    {
+      "chapter": 4,
+      "id": "passover_night",
+      "title": "Ch.4 \u00b7 Passover Night",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act4_passover_night.json"
+    },
+    {
+      "chapter": 5,
+      "id": "through_the_sea",
+      "title": "Ch.5 \u00b7 Through the Sea",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act5_through_the_sea.json"
+    },
+    {
+      "chapter": 6,
+      "id": "bread_in_the_wilderness",
+      "title": "Ch.6 \u00b7 Bread in the Wilderness",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act6_bread_in_the_wilderness.json"
+    },
+    {
+      "chapter": 7,
+      "id": "water_from_the_rock",
+      "title": "Ch.7 \u00b7 Water from the Rock",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act7_water_from_the_rock.json"
+    },
+    {
+      "chapter": 8,
+      "id": "jethro_s_counsel",
+      "title": "Ch.8 \u00b7 Jethro's Counsel",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act8_jethro_s_counsel.json"
+    },
+    {
+      "chapter": 9,
+      "id": "thunder_on_sinai",
+      "title": "Ch.9 \u00b7 Thunder on Sinai",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act9_thunder_on_sinai.json"
+    },
+    {
+      "chapter": 10,
+      "id": "the_golden_calf",
+      "title": "Ch.10 \u00b7 The Golden Calf",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act10_the_golden_calf.json"
+    },
+    {
+      "chapter": 11,
+      "id": "the_second_tablets",
+      "title": "Ch.11 \u00b7 The Second Tablets",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act11_the_second_tablets.json"
+    },
+    {
+      "chapter": 12,
+      "id": "the_spies_and_rebellion",
+      "title": "Ch.12 \u00b7 The Spies and Rebellion",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act12_the_spies_and_rebellion.json"
+    },
+    {
+      "chapter": 13,
+      "id": "the_long_wilderness",
+      "title": "Ch.13 \u00b7 The Long Wilderness",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act13_the_long_wilderness.json"
+    },
+    {
+      "chapter": 14,
+      "id": "moses_final_words",
+      "title": "Ch.14 \u00b7 Moses' Final Words",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act14_moses_final_words.json"
+    },
+    {
+      "chapter": 15,
+      "id": "mount_nebo",
+      "title": "Ch.15 \u00b7 Mount Nebo",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Moses/data/act15_mount_nebo.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Moses.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

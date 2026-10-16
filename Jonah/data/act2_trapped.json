@@ -1,0 +1,357 @@
+{
+  "id": "trapped",
+  "name": "Feeling Trapped",
+  "bg": "radial-gradient(circle at 50% 30%, #14335a, #0A1930 60%, #050b18)",
+  "particle": "storm",
+  "svg": "Act2_01_Sky_turned_the_color_of_a_bruise",
+  "audio": "assets/music/Act2_Beneath_the_Heavy_Current.mp3",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "audioSfx": "../shared/audio/jonah/sfx/storm_wind.mp3",
+      "fx": "shake",
+      "align": "left",
+      "svg": "Act2_01_Sky_turned_the_color_of_a_bruise",
+      "id": "trapped_0",
+      "items": [
+        {
+          "id": "trapped_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Out on the water, the sky turned the color of a bruise. The wind began to howl.",
+          "speaker": "narrator",
+          "align": "left",
+          "position": "middle-left",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "shake",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "sailors",
+      "fx": "shake",
+      "align": "center",
+      "svg": "Act2_02_The_sea_is_eating_the_ship",
+      "id": "trapped_1",
+      "items": [
+        {
+          "id": "trapped_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "ALL HANDS! THE SEA IS EATING THE SHIP!",
+          "speaker": "sailors",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "shake",
+          "delay": 800
+        },
+        {
+          "id": "trapped_1_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "CRASH!",
+          "position": "top-middle",
+          "style": "sfx-impact",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "shake",
+      "align": "right",
+      "svg": "Act2_03_Sailors_threw_cargo_overboard",
+      "choices": [
+        {
+          "label": "Jonah stays quiet below",
+          "note": "Jonah tries to sleep through it. The storm gets louder anyway."
+        },
+        {
+          "label": "Jonah grips the mast",
+          "note": "Jonah holds on tight. The storm doesn't care. It keeps roaring."
+        }
+      ],
+      "id": "trapped_2",
+      "items": [
+        {
+          "id": "trapped_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Waves the size of houses slammed the deck. The sailors threw cargo overboard, praying to anyone who'd listen.",
+          "speaker": "narrator",
+          "align": "right",
+          "position": "middle-right",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "shake",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "sailors",
+      "fx": "shake",
+      "svg": "Act2_04_Wake_up_Confess",
+      "id": "trapped_3",
+      "items": [
+        {
+          "id": "trapped_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Sleeping man! Wake up! Whoever's fault this storm is — CONFESS!",
+          "speaker": "sailors",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "shake",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "jonah",
+      "fx": "fade",
+      "svg": "Act2_05_Its_me_I_ran",
+      "id": "trapped_4",
+      "items": [
+        {
+          "id": "trapped_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "...It's me. I ran from something I was supposed to do.",
+          "speaker": "jonah",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "jonah",
+      "fx": "fade",
+      "svg": "Act2_06_Throw_me_in",
+      "id": "trapped_5",
+      "items": [
+        {
+          "id": "trapped_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Throw me in — maybe the sea will calm down.",
+          "speaker": "jonah",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "svg": "Act2_07_The_storm_gave_them_no_choice",
+      "id": "trapped_6",
+      "items": [
+        {
+          "id": "trapped_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "The sailors didn't want to. But the storm gave them no choice.",
+          "speaker": "narrator",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "audioSfx": "../shared/audio/jonah/sfx/ocean_splash.mp3",
+      "fx": "fade",
+      "svg": "Act2_08_Jonah_hit_the_water_the_storm_went_silent",
+      "id": "trapped_7",
+      "items": [
+        {
+          "id": "trapped_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jonah hit the cold, dark water — and the moment he did, the storm went silent.",
+          "speaker": "narrator",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "svg": "Act2_09_Down_down_something_HUGE_rose_up",
+      "id": "trapped_8",
+      "items": [
+        {
+          "id": "trapped_8_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Down, down, down he sank... until something HUGE rose up beneath him.",
+          "speaker": "narrator",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        },
+        {
+          "id": "trapped_8_sfx",
+          "type": "sfx",
+          "sfx": true,
+          "text": "GULP!",
+          "position": "top-middle",
+          "style": "sfx-impact",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "bounce",
+      "svg": "Act2_10_A_colossal_whale_opened_its_enormous_jaws",
+      "id": "trapped_9",
+      "items": [
+        {
+          "id": "trapped_9_text",
+          "type": "text",
+          "sfx": false,
+          "text": "A colossal whale opened its enormous jaws and swallowed Jonah whole.",
+          "speaker": "narrator",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "bounce",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "jonah",
+      "audioSfx": "../shared/audio/jonah/sfx/deep_bubbles.mp3",
+      "fx": "fade",
+      "svg": "Act2_11_Dark_warm_smells_like_the_sea",
+      "id": "trapped_10",
+      "items": [
+        {
+          "id": "trapped_10_text",
+          "type": "text",
+          "sfx": false,
+          "text": "It's... dark in here. And warm. And it smells like the bottom of the sea.",
+          "speaker": "jonah",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "svg": "Act2_12_Three_days_wrapped_in_ribs_like_a_cave",
+      "id": "trapped_11",
+      "items": [
+        {
+          "id": "trapped_11_text",
+          "type": "text",
+          "sfx": false,
+          "text": "For three days, Jonah sat inside the belly of the whale, wrapped in ribs like a cave, with nothing to do but think.",
+          "speaker": "narrator",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "jonah",
+      "fx": "type",
+      "svg": "Act2_13_I_ran_because_I_was_scared",
+      "id": "trapped_12",
+      "items": [
+        {
+          "id": "trapped_12_text",
+          "type": "text",
+          "sfx": false,
+          "text": "I ran because I was scared. Not of Nineveh — of what it would mean to actually go there.",
+          "speaker": "jonah",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "type",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "jonah",
+      "fx": "fade",
+      "svg": "Act2_14_Okay_I_hear_you_Ill_go",
+      "id": "trapped_13",
+      "items": [
+        {
+          "id": "trapped_13_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Okay. I hear you. I'll go. Just... please, get me out of this fish.",
+          "speaker": "jonah",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    }
+  ],
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_02_whale_map/a_establish/jonah_act2_a_background.svg",
+      "middleGround": "assets/svg/act_02_whale_map/a_establish/jonah_act2_a_middle_ground.svg",
+      "foreground": "assets/svg/act_02_whale_map/a_establish/jonah_act2_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_02_whale_map/b_core_action/jonah_act2_b_background.svg",
+      "middleGround": "assets/svg/act_02_whale_map/b_core_action/jonah_act2_b_middle_ground.svg",
+      "foreground": "assets/svg/act_02_whale_map/b_core_action/jonah_act2_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_02_whale_map/c_resolve/jonah_act2_c_background.svg",
+      "middleGround": "assets/svg/act_02_whale_map/c_resolve/jonah_act2_c_middle_ground.svg",
+      "foreground": "assets/svg/act_02_whale_map/c_resolve/jonah_act2_c_foreground.svg"
+    }
+  },
+  "assetFolder": "act_02_whale_map",
+  "assetStem": "jonah_act2"
+}

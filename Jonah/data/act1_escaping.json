@@ -1,0 +1,212 @@
+{
+  "id": "escaping",
+  "name": "Dialogue: Escaping",
+  "bg": "radial-gradient(circle at 30% 20%, #1c3a63, #0d2238 65%, #071220)",
+  "particle": "dusk",
+  "svg": "Act1_01_A_small_town_by_the_sea",
+  "audio": "assets/music/Act1_Salt_on_the_Tracks.mp3",
+  "lines": [
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "left",
+      "svg": "Act1_01_A_small_town_by_the_sea",
+      "id": "escaping_0",
+      "items": [
+        {
+          "id": "escaping_0_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Long ago, in a small town by the sea, there lived a man named Jonah.",
+          "speaker": "narrator",
+          "align": "left",
+          "position": "middle-left",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "god",
+      "fx": "bounce",
+      "align": "right",
+      "svg": "Act1_02_The_Call_to_Nineveh",
+      "id": "escaping_1",
+      "items": [
+        {
+          "id": "escaping_1_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jonah! Go to the great city of Nineveh. Tell them I see how they treat each other, and it must change.",
+          "speaker": "god",
+          "align": "right",
+          "position": "middle-right",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "bounce",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "jonah",
+      "fx": "type",
+      "align": "left",
+      "svg": "Act1_03_Nineveh",
+      "id": "escaping_2",
+      "items": [
+        {
+          "id": "escaping_2_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Nineveh?! Those people are loud, and rude, and NOT my problem.",
+          "speaker": "jonah",
+          "align": "left",
+          "position": "middle-left",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "type",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "jonah",
+      "fx": "wave",
+      "svg": "Act1_04_Nope_Going_the_other_way",
+      "id": "escaping_3",
+      "items": [
+        {
+          "id": "escaping_3_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Nope. Nope nope nope. I am going the other way. As far as boats can go.",
+          "speaker": "jonah",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "wave",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "align": "center",
+      "svg": "Act1_05_The_Docks_at_Joppa",
+      "choices": [
+        {
+          "label": "Buy a ticket super fast",
+          "note": "Jonah buys the very first ticket he sees. The ship is still headed to Tarshish."
+        },
+        {
+          "label": "Hide behind a crate first",
+          "note": "Jonah peeks around a crate... then buys a ticket anyway. Tarshish it is."
+        }
+      ],
+      "id": "escaping_4",
+      "items": [
+        {
+          "id": "escaping_4_text",
+          "type": "text",
+          "sfx": false,
+          "text": "So Jonah packed a bag, ran to the docks at Joppa, and looked for a ship.",
+          "speaker": "narrator",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "audioSfx": "../shared/audio/jonah/sfx/sea_waves.mp3",
+      "fx": "type",
+      "svg": "Act1_05_Found_a_ship_to_Tarshish",
+      "id": "escaping_5",
+      "items": [
+        {
+          "id": "escaping_5_text",
+          "type": "text",
+          "sfx": false,
+          "text": "He found a ship sailing to Tarshish — which was in the exact opposite direction of Nineveh.",
+          "speaker": "narrator",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "type",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "jonah",
+      "fx": "fade",
+      "svg": "Act1_07_Sail_away_fast_enough",
+      "id": "escaping_6",
+      "items": [
+        {
+          "id": "escaping_6_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Perfect. If I just sail away fast enough, maybe I can outrun a job I don't want to do.",
+          "speaker": "jonah",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    },
+    {
+      "speaker": "narrator",
+      "fx": "fade",
+      "svg": "Act1_08_Fast_asleep_below_deck",
+      "id": "escaping_7",
+      "items": [
+        {
+          "id": "escaping_7_text",
+          "type": "text",
+          "sfx": false,
+          "text": "Jonah climbed aboard, went below deck, curled up... and fell fast asleep.",
+          "speaker": "narrator",
+          "align": "center",
+          "position": "center",
+          "width": "1/2",
+          "style": "comic",
+          "entryFx": "fade",
+          "delay": 800
+        }
+      ]
+    }
+  ],
+  "sceneLayers": {
+    "a_establish": {
+      "background": "assets/svg/act_01_ship_map/a_establish/jonah_act1_a_background.svg",
+      "middleGround": "assets/svg/act_01_ship_map/a_establish/jonah_act1_a_middle_ground.svg",
+      "foreground": "assets/svg/act_01_ship_map/a_establish/jonah_act1_a_foreground.svg"
+    },
+    "b_core_action": {
+      "background": "assets/svg/act_01_ship_map/b_core_action/jonah_act1_b_background.svg",
+      "middleGround": "assets/svg/act_01_ship_map/b_core_action/jonah_act1_b_middle_ground.svg",
+      "foreground": "assets/svg/act_01_ship_map/b_core_action/jonah_act1_b_foreground.svg"
+    },
+    "c_resolve": {
+      "background": "assets/svg/act_01_ship_map/c_resolve/jonah_act1_c_background.svg",
+      "middleGround": "assets/svg/act_01_ship_map/c_resolve/jonah_act1_c_middle_ground.svg",
+      "foreground": "assets/svg/act_01_ship_map/c_resolve/jonah_act1_c_foreground.svg"
+    }
+  },
+  "assetFolder": "act_01_ship_map",
+  "assetStem": "jonah_act1"
+}

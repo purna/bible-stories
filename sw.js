@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v25-rich-warm';
+const CACHE_VERSION = 'v45-map-panel';
 const CACHE_NAME = 'bible-stories-cache-' + CACHE_VERSION;
 const RUNTIME_CACHE_NAME = 'bible-stories-runtime-' + CACHE_VERSION;
 const OFFLINE_PAGE = new URL('offline.html', self.location).href;

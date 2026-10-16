@@ -183,6 +183,8 @@ function loadScene3D(sceneKey) {
   const factory = window.SCENE_FACTORIES[sceneKey]();
   if (!factory) return;
   currentScene = factory;
+  // Preserve the SVG background underneath the transparent 3D layer.
+  if (factory.scene) factory.scene.background = null;
   camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
   const cfg = factory.cameraConfig || { distance: 60, height: 20 };
   camera.position.set(0, cfg.height || 20, cfg.distance || 60);
@@ -257,6 +259,8 @@ function renderChoices(data) {
       b.textContent = c.label;
       b.onclick = () => {
         choicesBox.classList.remove('show');
+        choicesBox.replaceChildren();
+        delayNote.closest('.content-overlay')?.classList.add('choice-answered');
         delayNote.className = 'show';
         delayNote.textContent = c.note;
         choicePending = false;
@@ -290,14 +294,14 @@ function updateNextBtn() {
 function applyAtmosphere(act) {
   const id = act.id;
   const particle = act.particle || 'dusk';
-  el('#rainLayer').classList.toggle('active', false);
-  el('#seaLayer').classList.toggle('active', id === 'horizon' || particle === 'flood');
-  el('#fireLayer').classList.toggle('active', id === 'decision');
-  el('#thunderLayer').classList.toggle('active', id === 'horizon' || particle === 'storm');
+  el('#rainLayer')?.classList.toggle('active', false);
+  el('#seaLayer')?.classList.toggle('active', id === 'horizon' || particle === 'flood');
+  el('#fireLayer')?.classList.toggle('active', id === 'decision');
+  el('#thunderLayer')?.classList.toggle('active', id === 'horizon' || particle === 'storm');
   const isDawn = id === 'opening' || id === 'horizon' || particle === 'dawn';
   const isLand = id === 'horizon';
-  el('#ambientLayer').classList.toggle('active', isDawn);
-  el('#ambientLayer').classList.toggle('land', isLand);
+  el('#ambientLayer')?.classList.toggle('active', isDawn);
+  el('#ambientLayer')?.classList.toggle('land', isLand);
 }
 
 /* ── Main render (layered: SVG bg → 3D → SVG fg → overlay) ──── */
@@ -382,7 +386,7 @@ async function renderLine() {
         charBox.className = 'char-container';
         if (data.align === 'right') charBox.classList.add('right');
         charBox.innerHTML = charSvg;
-        overlay.appendChild(charBox);
+        if (frame.isConnected) frame.appendChild(charBox);
       }
     }
     if (data.sfx) {
@@ -519,7 +523,8 @@ requestAnimationFrame(tick3D);
 
 nextLineBtn.addEventListener('click', () => goLine(1));
 nextBtn.addEventListener('click', goNextChapter);
-el('#actGameClose').addEventListener('click', closeActGame);
+el('#actGameClose').addEventListener('click',()=>{closeActGame();fallTransition(()=>{actIdx=(actIdx+1)%STORY.length;lineIdx=0;choicePending=false;populateChapterSelect();renderLine();});});
+window.addEventListener('story:chapterchanging',()=>{if(!actGameModal.hidden)closeActGame();});
 el('#actGameContinue').addEventListener('click', () => {
   if (!actGameCompleted) return;
   closeActGame();

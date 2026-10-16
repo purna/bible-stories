@@ -74,7 +74,7 @@
     @media(max-width:760px){#storyEditorPanel{width:100vw;height:55dvh;top:auto;bottom:0;border-radius:14px 14px 0 0}.se-selects{grid-template-columns:1fr 1fr}.se-formrow{grid-template-columns:1fr 1fr}.se-grid button{font-size:12px!important}.se-body{padding-top:4px}}
   `;
   const style = document.createElement('style'); style.textContent = styleText; document.head.appendChild(style);
-  const toggle = document.createElement('button'); toggle.id = 'storyEditorToggle'; toggle.type = 'button'; toggle.textContent = 'Edit story';
+  const toggle = document.createElement('button'); toggle.id = 'storyEditorToggle'; toggle.type = 'button'; toggle.title = 'Edit story'; toggle.setAttribute('aria-label','Edit story'); toggle.innerHTML = '<svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 25l2-8L19 7l6 6-10 10-8 2z" fill="#39a96b"/><path d="M19 7l4-4 6 6-4 4z" fill="#fff"/><path d="M7 25l2-8 6 6z" fill="#fff4d6"/><path d="M5 29h22"/></svg>';
   const panel = document.createElement('aside'); panel.id = 'storyEditorPanel'; panel.setAttribute('aria-label', 'Story text editor');
   panel.innerHTML = `<header class="se-head"><h2>Story editor</h2><button type="button" data-action="close" aria-label="Close editor">×</button></header>
     <div class="se-selects"><select data-field="act" aria-label="Chapter"></select><select data-field="line" aria-label="Chapter scene"></select></div>

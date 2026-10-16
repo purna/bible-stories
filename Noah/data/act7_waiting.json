@@ -201,11 +201,11 @@
       "id": "waiting_6",
       "choices": [
         {
-          "label": "Open the hatch and look 👀",
+          "label": "Open the hatch and look",
           "note": "Blue sky. Mud. The outline of mountains. Real."
         },
         {
-          "label": "Wait for God's word before moving 🙏",
+          "label": "Wait for God's word before moving",
           "note": "Noah waits. It's the right call. The word comes."
         }
       ],

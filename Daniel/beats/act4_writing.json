@@ -176,7 +176,7 @@
       "vision": true,
       "choices": [
         {
-          "label": "Daniel asks for the reward 💰",
+          "label": "Daniel asks for the reward",
           "note": "He doesn't. When there's nothing left to gain, the truth still costs something to tell.",
           "decisionId": "writing_reward",
           "tags": [
@@ -185,7 +185,7 @@
           ]
         },
         {
-          "label": "Daniel refuses the reward ✅",
+          "label": "Daniel refuses the reward",
           "note": "Integrity in a moment with no long game left to protect. That's the point.",
           "decisionId": "writing_refuse",
           "tags": [

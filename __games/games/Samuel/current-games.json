@@ -1,0 +1,92 @@
+{
+  "story": "Samuel",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "the_boy_at_shiloh",
+      "title": "Ch.1 \u00b7 The Boy at Shiloh",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Samuel/data/act1_the_boy_at_shiloh.json"
+    },
+    {
+      "chapter": 2,
+      "id": "the_voice_at_night",
+      "title": "Ch.2 \u00b7 The Voice at Night",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Samuel/data/act2_the_voice_at_night.json"
+    },
+    {
+      "chapter": 3,
+      "id": "a_hard_message",
+      "title": "Ch.3 \u00b7 A Hard Message",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Samuel/data/act3_a_hard_message.json"
+    },
+    {
+      "chapter": 4,
+      "id": "the_ark_captured",
+      "title": "Ch.4 \u00b7 The Ark Captured",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Samuel/data/act4_the_ark_captured.json"
+    },
+    {
+      "chapter": 5,
+      "id": "ebenezer",
+      "title": "Ch.5 \u00b7 Ebenezer",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Samuel/data/act5_ebenezer.json"
+    },
+    {
+      "chapter": 6,
+      "id": "a_king_demanded",
+      "title": "Ch.6 \u00b7 A King Demanded",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Samuel/data/act6_a_king_demanded.json"
+    },
+    {
+      "chapter": 7,
+      "id": "saul_chosen",
+      "title": "Ch.7 \u00b7 Saul Chosen",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Samuel/data/act7_saul_chosen.json"
+    },
+    {
+      "chapter": 8,
+      "id": "saul_s_first_victory",
+      "title": "Ch.8 \u00b7 Saul\u2019s First Victory",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Samuel/data/act8_saul_s_first_victory.json"
+    },
+    {
+      "chapter": 9,
+      "id": "the_rejected_king",
+      "title": "Ch.9 \u00b7 The Rejected King",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Samuel/data/act9_the_rejected_king.json"
+    },
+    {
+      "chapter": 10,
+      "id": "david_anointed",
+      "title": "Ch.10 \u00b7 David Anointed",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Samuel/data/act10_david_anointed.json"
+    }
+  ],
+  "snapshotSources": [],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Samuel.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "story": "Deborah",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "under_the_palm",
+      "title": "Ch.1 \u00b7 Under the Palm",
+      "status": "live-copy",
+      "kind": "deborah",
+      "source": "Deborah/data/act1_under_the_palm.json",
+      "file": "chapter-01.html",
+      "line": null
+    },
+    {
+      "chapter": 2,
+      "id": "the_summons",
+      "title": "Ch.2 \u00b7 The Summons",
+      "status": "live-copy",
+      "kind": "deborah",
+      "source": "Deborah/data/act2_the_summons.json",
+      "file": "chapter-02.html",
+      "line": null
+    },
+    {
+      "chapter": 3,
+      "id": "gather_at_tabor",
+      "title": "Ch.3 \u00b7 Gather at Tabor",
+      "status": "live-copy",
+      "kind": "deborah",
+      "source": "Deborah/data/act3_gather_at_tabor.json",
+      "file": "chapter-03.html",
+      "line": null
+    },
+    {
+      "chapter": 4,
+      "id": "the_storm",
+      "title": "Ch.4 \u00b7 The Storm",
+      "status": "live-copy",
+      "kind": "deborah",
+      "source": "Deborah/data/act4_the_storm.json",
+      "file": "chapter-04.html",
+      "line": null
+    },
+    {
+      "chapter": 5,
+      "id": "sisera_flees",
+      "title": "Ch.5 \u00b7 Sisera Flees",
+      "status": "live-copy",
+      "kind": "deborah",
+      "source": "Deborah/data/act5_sisera_flees.json",
+      "file": "chapter-05.html",
+      "line": null
+    },
+    {
+      "chapter": 6,
+      "id": "jaels_choice",
+      "title": "Ch.6 \u00b7 Jael\u2019s Choice",
+      "status": "live-copy",
+      "kind": "deborah",
+      "source": "Deborah/data/act6_jaels_choice.json",
+      "file": "chapter-06.html",
+      "line": null
+    },
+    {
+      "chapter": 7,
+      "id": "the_song",
+      "title": "Ch.7 \u00b7 The Song",
+      "status": "live-copy",
+      "kind": "deborah",
+      "source": "Deborah/data/act7_the_song.json",
+      "file": "chapter-07.html",
+      "line": null
+    }
+  ],
+  "snapshotSources": [
+    {
+      "path": "Deborah/js/story-runtime.js",
+      "sha256": "9161d7d897a7d7be0653592aaea1351316b3c59701c2699bd017b0ef4f9ed11b"
+    },
+    {
+      "path": "Deborah/js/audio-manager.js",
+      "sha256": "c2a6a18e7879348283a22ce078cec76f9f093b798b48e1719fff2551af50a549"
+    },
+    {
+      "path": "Deborah/js/deborah-scenes-helpers.js",
+      "sha256": "eaa3eedd7b5c606b20303a7cbb0b0fd27ad2cf90520a6da25b625e25859b377c"
+    },
+    {
+      "path": "Deborah/js/deborah-middle-ground.js",
+      "sha256": "832c5c696fd81254ebbc8bc0f766557f3707109187c51b5922e68b972aacf56a"
+    },
+    {
+      "path": "Deborah/js/config.js",
+      "sha256": "87ce382752fb5c29612d190d5655e7431c7bfe00f14e63cacfb1b9e4810fc372"
+    },
+    {
+      "path": "Deborah/js/compass.js",
+      "sha256": "df7d267f825c545949d5452d1b236d7774eb0082d6e75c5d0451648551d060ab"
+    },
+    {
+      "path": "Deborah/assets/scenes/act1_voice_beneath_palm.js",
+      "sha256": "f10fdd680c77ead377f0964c8fc697dc7617d0e799dea27ccda3a3d42d8d9972"
+    },
+    {
+      "path": "Deborah/assets/scenes/act2_call_to_courage.js",
+      "sha256": "64c429262fbd622d8094aad06ce29e70147b43d99fbda8036ed6237c3ccfe23a"
+    },
+    {
+      "path": "Deborah/assets/scenes/act3_river_rose.js",
+      "sha256": "68c7c7568e551706939d6d6b676accb4d6de454eed579263294d84dc95f30a0b"
+    },
+    {
+      "path": "Deborah/assets/scenes/act4_song_of_peace.js",
+      "sha256": "4c3c330f12813db190efa6f172115b2802ca9ed86e92d8fbf6395cad70f9a69b"
+    },
+    {
+      "path": "Deborah/js/deborah-story.js",
+      "sha256": "25255e0b4e490ca2981efc3c1874133f7a1e9cadb266429cdbd2cd764f7be86e"
+    },
+    {
+      "path": "Deborah/js/story-editor-config.js",
+      "sha256": "f49d7051c06d1602f5b13c7b742fc53e8824871671e9385569216ec58ed11bbe"
+    },
+    {
+      "path": "shared-tools/story-text-rendering.js",
+      "sha256": "709bb8f7bc28aeaa0e169fd3ee4d936dcfbd63fa2a4dba0fc8fe7f6eb741c43c"
+    },
+    {
+      "path": "shared-tools/ui-feedback.js",
+      "sha256": "9f5cc74c96ee2394e467c6efb627112acb901b29cea015858244ca03ed09dcfd"
+    },
+    {
+      "path": "shared-tools/story-game-icons.js",
+      "sha256": "1f6e3be7d68578cfc899a39e1a2f78e3182d2fb574c23d6e98c8b7b6624d1070"
+    },
+    {
+      "path": "shared-tools/story-game-controls.js",
+      "sha256": "4c501f77588d34e94e480806292e3dfe8f6d924387077ae34e7f4cb855485b13"
+    }
+  ],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Deborah.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "story": "Daniel",
+  "chapters": [
+    {
+      "chapter": 1,
+      "id": "table",
+      "title": "The King's Table",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Daniel/data/act1_table.json"
+    },
+    {
+      "chapter": 2,
+      "id": "statue",
+      "title": "The Dream",
+      "status": "live-copy",
+      "kind": "vision",
+      "source": "Daniel/data/act2_statue.json",
+      "file": "chapter-02.html",
+      "line": 6
+    },
+    {
+      "chapter": 3,
+      "id": "furnace",
+      "title": "The Furnace",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Daniel/data/act3_furnace.json"
+    },
+    {
+      "chapter": 4,
+      "id": "writing",
+      "title": "The Writing on the Wall",
+      "status": "live-copy",
+      "kind": "vision",
+      "source": "Daniel/data/act4_writing.json",
+      "file": "chapter-04.html",
+      "line": 5
+    },
+    {
+      "chapter": 5,
+      "id": "den",
+      "title": "The Den",
+      "status": "not-connected",
+      "kind": null,
+      "source": "Daniel/data/act5_den.json"
+    }
+  ],
+  "snapshotSources": [
+    {
+      "path": "Daniel/js/story-runtime.js",
+      "sha256": "9161d7d897a7d7be0653592aaea1351316b3c59701c2699bd017b0ef4f9ed11b"
+    },
+    {
+      "path": "Daniel/js/audio-manager.js",
+      "sha256": "c2a6a18e7879348283a22ce078cec76f9f093b798b48e1719fff2551af50a549"
+    },
+    {
+      "path": "Daniel/js/daniel-scenes-helpers.js",
+      "sha256": "a29aaa5da3a1343a5255bbbf2e72b010b74479300e566c86111ef8c2b29581b1"
+    },
+    {
+      "path": "Daniel/js/stateManager.js",
+      "sha256": "d778cad8ccd14eb04c8e66e8b4a14f97b0c064d009102aa3fd97d8721e24684e"
+    },
+    {
+      "path": "Daniel/js/decisionLog.js",
+      "sha256": "7bc57e685c5513d193016cf8425c45607180083d7243363d01b636310764fac8"
+    },
+    {
+      "path": "Daniel/js/visionEngine.js",
+      "sha256": "e98b3275f31cecde1ddab5016c5e71e517b3382c8e235adcfcd0108042e5116f"
+    },
+    {
+      "path": "Daniel/js/parallax.js",
+      "sha256": "bb163bdbc95f4d349b2e2641bec14a3fdb63275fe9cb8ad51ca02ae06e9f1a0b"
+    },
+    {
+      "path": "Daniel/js/vfx.js",
+      "sha256": "d0383ed580a26efd5fd52e0823e0dbfe071d6ef0b0fb18d190b1a7cc24396a8a"
+    },
+    {
+      "path": "Daniel/js/daniel-comic.js",
+      "sha256": "e3f70e3c2d7db9e3266046fcd6ab85006c24eef6cc5dd94d10271ad3eb3e4e92"
+    },
+    {
+      "path": "Daniel/js/story-editor-config.js",
+      "sha256": "38c407fd9800e816eb17a2c9c8870718f98c6c175645c65b9d32c11b0f7e88e0"
+    },
+    {
+      "path": "shared-tools/story-text-rendering.js",
+      "sha256": "709bb8f7bc28aeaa0e169fd3ee4d936dcfbd63fa2a4dba0fc8fe7f6eb741c43c"
+    },
+    {
+      "path": "shared-tools/ui-feedback.js",
+      "sha256": "9f5cc74c96ee2394e467c6efb627112acb901b29cea015858244ca03ed09dcfd"
+    },
+    {
+      "path": "shared-tools/story-game-icons.js",
+      "sha256": "1f6e3be7d68578cfc899a39e1a2f78e3182d2fb574c23d6e98c8b7b6624d1070"
+    },
+    {
+      "path": "shared-tools/story-game-controls.js",
+      "sha256": "4c501f77588d34e94e480806292e3dfe8f6d924387077ae34e7f4cb855485b13"
+    }
+  ],
+  "craftingGame": {
+    "file": "crafting-v2.html",
+    "source": "__games/examples/Crafting_v2/bible-crafting/Daniel.html",
+    "status": "standalone-prototype",
+    "adapted": false
+  }
+}

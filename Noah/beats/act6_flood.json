@@ -150,11 +150,11 @@
       "id": "flood_4",
       "choices": [
         {
-          "label": "Check on every animal yourself 🐘",
+          "label": "Check on every animal yourself",
           "note": "Exhausting. But every creature is calm and cared for."
         },
         {
-          "label": "Let the family manage on their own 🙏",
+          "label": "Let the family manage on their own",
           "note": "They cope. But an unattended pen floods at the worst moment."
         }
       ],

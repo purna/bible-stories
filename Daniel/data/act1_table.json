@@ -127,7 +127,7 @@
       "id": "table_4",
       "choices": [
         {
-          "label": "Tell the guard directly 🗣️",
+          "label": "Tell the guard directly",
           "note": "Daniel speaks plainly. The guard is surprised but hears him out.",
           "decisionId": "table_direct",
           "tags": [
@@ -137,7 +137,7 @@
           ]
         },
         {
-          "label": "Request a test instead 🌿",
+          "label": "Request a test instead",
           "note": "Daniel proposes ten days of simple food. The guard nervously agrees.",
           "decisionId": "table_test",
           "tags": [

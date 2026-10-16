@@ -31,41 +31,45 @@ Will faithful care persist through long preparation, crisis, and waiting? The ga
 
 Use no more than one primary mechanic and one optional discovery per chapter. Reuse navigation, dialogue, audio, and layer-loading systems from `__Template`. Reserve 3D for actions that benefit from depth; otherwise keep the middle ground empty and use SVG layers.
 
-<!-- act-mini-games:start -->
-## Simple game in every act
 
-Each act contains one short, readable mini-game tied directly to its canonical story action. The target play time is **30–90 seconds** on a first attempt. These are participation mechanics, not alternate-history branches: completing the game advances the scripture-aligned event already defined by the story.
-
-| Act | Chapter | Mini-game | Game engine type | Example prototype | Objective | Input | Core loop | Completion and story payoff | Gentle retry / accessibility |
-|---:|---|---|---|---|---|---|---|---|---|
-| 1 | The Warning | **Listen and Respond** | `listen-respond` | `listen_respond_3x2.html` | Accept the Ark blueprint. | Choose or hold the clearest phrase/sound when the visual noise settles. | Wait through competing signals, identify the meaningful cue, then respond with the matching action or phrase. | Complete the action, settle the scene, then reveal the canonical “The Warning” outcome and scripture reference. | Noise reduces gradually after a missed cue; captions and a visual pulse always provide equivalent information. |
-| 2 | The Blueprint | **Fit the Pieces** | `fit-pieces` | `fit_pieces_4x3.html` | Measure the hull to the given proportions. | Drag or select pieces and snap them into highlighted positions. | Inspect the outline, choose one piece, place it, then see the structure respond. | Complete the action, settle the scene, then reveal the canonical “The Blueprint” outcome and scripture reference. | An incorrect piece returns gently to the tray; its correct area glows after two attempts. |
-| 3 | The Long Build | **Fit the Pieces** | `fit-pieces` | `fit_pieces_4x4.html` | Gather timber, fit planks, and seal with pitch. | Drag or select pieces and snap them into highlighted positions. | Inspect the outline, choose one piece, place it, then see the structure respond. | Complete the action, settle the scene, then reveal the canonical “The Long Build” outcome and scripture reference. | An incorrect piece returns gently to the tray; its correct area glows after two attempts. |
-| 4 | The Gathering | **Gather with Care** | `look-closely` | `build_the_ark_9x4.html` | Pair animals and stock each pen. | Tap or drag the needed items into a basket, jar, pen, or marked area. | Read the short need list, collect one suitable item at a time, and stop when there is enough. | Complete the action, settle the scene, then reveal the canonical “The Gathering” outcome and scripture reference. | Extra or unsuitable items slide back with a calm hint; there is no timer unless the story requires urgency. |
-| 5 | The Door Shuts | **Complete the Story Beat** | `tap-sequence` | `tap_sequence_3x2.html` | Finish the final checks and surrender control. | Tap/click the highlighted story objects in a clear sequence. | Observe the panel, perform three small actions, and watch the canonical beat resolve. | Complete the action, settle the scene, then reveal the canonical “The Door Shuts” outcome and scripture reference. | The next valid object gains an outline after a pause; progress is never reset. |
-| 6 | Forty Days | **Gather with Care** | `gather-with-care` | `manna_drop.html` | Feed, calm, and clean animal pens during the storm. | Tap or drag the needed items into a basket, jar, pen, or marked area. | Read the short need list, collect one suitable item at a time, and stop when there is enough. | Complete the action, settle the scene, then reveal the canonical “Forty Days” outcome and scripture reference. | Extra or unsuitable items slide back with a calm hint; there is no timer unless the story requires urgency. |
-| 7 | The Long Wait | **Complete the Story Beat** | `tap-sequence` | `tap_sequence_3x2.html` | Send raven and doves at the right intervals. | Tap/click the highlighted story objects in a clear sequence. | Observe the panel, perform three small actions, and watch the canonical beat resolve. | Complete the action, settle the scene, then reveal the canonical “The Long Wait” outcome and scripture reference. | The next valid object gains an outline after a pause; progress is never reset. |
-| 8 | Dry Ground | **Gather with Care** | `gather-with-care` | `manna_drop.html` | Release animals habitat by habitat. | Tap or drag the needed items into a basket, jar, pen, or marked area. | Read the short need list, collect one suitable item at a time, and stop when there is enough. | Complete the action, settle the scene, then reveal the canonical “Dry Ground” outcome and scripture reference. | Extra or unsuitable items slide back with a calm hint; there is no timer unless the story requires urgency. |
-| 9 | The Covenant | **Fit the Pieces** | `story-builder` | `temple_builder_v1.html` | Build the altar and reveal the rainbow. | Drag or select pieces and snap them into highlighted positions. | Inspect the outline, choose one piece, place it, then see the structure respond. | Complete the action, settle the scene, then reveal the canonical “The Covenant” outcome and scripture reference. | An incorrect piece returns gently to the tray; its correct area glows after two attempts. |
-| 10 | The Vineyard | **Look Closely** | `look-closely` | `look_closely_4x3.html` | Witness Noah’s failure and choose how the sons respond. | Select evidence in the panel, then choose the statement it supports. | Inspect two or three clues, reveal their meaning, and make a considered response. | Complete the action, settle the scene, then reveal the canonical “The Vineyard” outcome and scripture reference. | Unexamined evidence remains highlighted; the player can revise before confirming. |
-
-### Shared mini-game rules
-
-- Teach the game inside the panel with one animated example; do not open a separate instruction screen.
-- Support pointer, touch, keyboard and switch-style sequential focus. Tap targets are at least 44×44 CSS pixels.
-- Do not require more than three simultaneous resources, eight draggable items, or one primary action verb per game.
-- A first play should take 30–90 seconds; experienced replay should take under 45 seconds.
-- No game-over screen, lives, score chasing, loot, combat grind, or canonical “bad ending.” Mistakes produce a clue and a quick retry.
-- Pause camera movement and decorative animation while the player is reading instructions or choosing.
-- Reduced-motion mode replaces timing, drag momentum and camera movement with discrete selection and progress states.
-- Sound confirms actions but never carries required information without captions, shape, colour-independent icons, or motion-safe highlights.
-- Save only completion and optional discovery flags. Restarting an act resets its mini-game locally without changing prior chapters.
-
-### Implementation contract
-
-Each act JSON should declare `game.id`, `game.type`, `game.objective`, `game.controls`, `game.success`, and `game.accessibility`. The interaction mounts inside the middle-ground layer, locks story navigation only while actively manipulated, calls the shared completion callback once, then settles all 3D/SVG elements before the scripture reference appears.
-<!-- act-mini-games:end -->
 
 ---
 
 **Navigation:** [← Source of Truth Overview](../../SOURCE-OF-TRUTH-OVERVIEW.md) | [Design SOT](./noah-design-source-of-truth.md) | [Music SOT](./noah-music-source-of-truth.md) | [SFX SOT](./noah-sfx-source-of-truth.md) | [Game Plan](./noah-game-plan.md)
+
+<!-- faith-games:start -->
+## Revised chapter games and faith crafting
+
+**Planning update — not yet integrated into the live games.** This section supersedes earlier prototype assignments. Every challenge follows the final comic panel. Shared native modules; no frames. Each chapter in this story uses a different mechanic. Cross-story adaptations must change rules or interaction, not just labels. Full unique-mechanic review remains required before implementation.
+
+Source: [HTML/CSS/JavaScript game collection](https://github.com/he-is-talha/html-css-javascript-games). Exact source folders and integration status are recorded in [the shared plan](../../__shared/chapter-games/story-game-plan.json). These are mechanic references, not imported code.
+
+| Chapter | Story beat | Mechanic | Story action | Proposed rules |
+|---:|---|---|---|---|
+| 1 | The Warning | stack | Accept the Ark blueprint. | Place a moving building piece over a marked foundation; use a wide timing window. |
+| 2 | The Blueprint | memory | Measure the hull to the given proportions. | Reveal pairs of illustrated story objects; matched pairs stay visible. |
+| 3 | The Long Build | faith-crafting | Gather timber, fit planks, and seal with pitch. | Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. |
+| 4 | The Gathering | catch | Pair animals and stock each pen. | Tap the requested moving story objects; ignore unrelated objects without a penalty. |
+| 5 | The Door Shuts | sequence | Finish the final checks and surrender control. | Repeat a short visual signal sequence; add one signal after each round. |
+| 6 | Forty Days | route | Feed, calm, and clean animal pens during the storm. | Choose adjacent route cells to guide a marker to the goal; use taps instead of device tilt. |
+| 7 | The Long Wait | crossing | Send raven and doves at the right intervals. | Move one lane at a time when the passage is clear; pause the lanes while reading. |
+| 8 | Dry Ground | packing | Release animals habitat by habitat. | Rotate and place a small set of fixed pieces into an outline; no falling timer. |
+| 9 | The Altar & the Covenant | search | Build the altar and reveal the rainbow. | Reveal safe locations using adjacent-count clues; a mistaken choice gives a hint, never an explosion. |
+| 10 | The Vineyard | picture | Witness Noah’s failure and choose how the sons respond. | Fill a small picture grid from row and column clues; provide a reveal-one-cell hint. |
+
+### Faith crafting: chapter 3
+
+Gather materials → select recipe ingredients → combine → use the finished objects in the story scene. Materials: Wood, Clay, Reed. Goal: **Ark**.
+
+- Wood + Wood → **Plank**. Two pieces of the same timber.
+- Wood + Clay → **Pitch**. Burn timber with earth for a sealant.
+- Plank + Plank + Pitch → **Ark**. Beams, sealed within and without.
+
+Use a visible recipe card and a three-slot bench; allow repeated ingredients. If a recipe has more than three ingredients, split it into sub-recipes. Materials are replenishable and unfinished work is saved. An unsuccessful combination returns every item. Use SVG material icons and visible labels, not emoji. Do not treat faith, patience or miracles as manufactured inventory items. The character prepares and responds; God acts in the narrative. Objects are a playful illustration, not a claim about historical manufacture.
+
+### Mobile and completion requirements
+
+At 320×568, use one scrolling column, 44px minimum targets, a two-column ingredient tray and a wrapping button row. Tap-select then tap-place must provide every drag action. Keep the chapter selector above the game. Text and buttons sit above the comic dots. Provide SVG icons, accessible labels, keyboard controls, visual equivalents for sound and reduced motion. No required typing, microphone, tilt or fast reaction. Skip → stays available until success; hide it after success and show Continue →. Save chapter reading, skipped challenges and game wins separately. Each game must expose mount, complete, skip and destroy hooks, including listener/timer cleanup.
+
+Chapter assignments follow the current manifest and canonical story actions.
+<!-- faith-games:end -->

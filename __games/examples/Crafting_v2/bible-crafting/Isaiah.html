@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Built by Faith – Isaiah</title>
+<style>
+:root{--bg:#f6f1e6;--card:#fffaf0;--ink:#2b2418;--mute:#7a6c52;--gold:#b8860b;--btn:#3b2f1a;--btnink:#fff6dc;--chip:#efe4c8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15110b;--card:#211a10;--ink:#f1e7d0;--mute:#b3a483;--gold:#e5b94a;--btn:#e5b94a;--btnink:#1a1408;--chip:#32281a}}
+:root[data-theme="dark"]{--bg:#15110b;--card:#211a10;--ink:#f1e7d0;--mute:#b3a483;--gold:#e5b94a;--btn:#e5b94a;--btnink:#1a1408;--chip:#32281a}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,serif}
+.w{max-width:600px;margin:0 auto;padding:14px 14px 40px}
+h1{font-size:1.4rem;text-align:center;margin:4px 0 10px}
+.card{background:var(--card);border:1px solid color-mix(in srgb,var(--gold) 40%,transparent);border-radius:14px;padding:12px;margin-bottom:12px}
+.ref{color:var(--gold);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.bar{display:flex;justify-content:space-between;margin-bottom:8px}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.chip{background:var(--chip);border:1px solid transparent;border-radius:999px;padding:8px 11px;font:inherit;color:var(--ink);cursor:pointer}
+.btn{background:var(--btn);color:var(--btnink);border:0;border-radius:10px;padding:11px 14px;font:inherit;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:disabled,.chip:disabled{opacity:.4}.w100{width:100%;text-align:center}
+.slots{display:flex;gap:8px;margin:8px 0}
+.slot{flex:1;height:54px;border:2px dashed var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;cursor:pointer}
+.mute{color:var(--mute);font-size:.9rem}
+.log{min-height:2.6em;font-style:italic;color:var(--mute)}
+.need{display:flex;gap:8px;flex-wrap:wrap}.need span{background:var(--chip);border-radius:8px;padding:6px 10px}.need .ok{outline:2px solid var(--gold)}
+.quote{border-left:3px solid var(--gold);padding-left:10px;margin:8px 0}
+h3{margin:0 0 6px;font-size:1rem}
+
+.plots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.plot{background:var(--chip);border-radius:12px;padding:10px 4px;text-align:center}.plot .e{font-size:2rem;min-height:2.6rem}.plot .btn{padding:7px 4px;font-size:.85rem;width:100%}
+</style></head><body><div class="w"><h1 id="h"></h1><div id="app"></div></div>
+<script>
+const ST=[{"f": "Isaiah", "n": "Isaiah", "r": "Isaiah 6", "raws": ["🪵 Wood", "⚫ Soot", "🌿 Reed", "💧 Water"], "rc": ["Ink|🖋️|Soot+Water|Soot mixed with water.", "Scroll|📜|Reed+Ink|Written prophecy.", "Coal|🔥|Wood+Soot|A burning ember."], "calls": [{"t": "Isaiah 6", "w": "Isaiah saw the LORD high and lifted up. A coal touched his lips, and he said, “Here am I.”", "goal": "Scroll,Coal", "v": "Isaiah's words carried hope for generations.", "l": "Faith says yes to God, even when the message is hard."}, {"t": "Comfort, Comfort", "raws": ["🪵 Wood", "⚫ Soot", "🌿 Reed", "💧 Water"], "rc": [], "goal": "Scroll,Comfort,Comfort", "w": "“Comfort, comfort my people.” Write words for an exile who thinks God forgot.", "v": "The exiles heard that God would return them.", "l": "Faith speaks hope into hard seasons.", "mg": {"t": "press", "title": "Prophesy", "verb": "Proclaim", "n": 3, "out": "Comfort", "oe": "🕊️"}}]}],FIX="Isaiah";
+let G,S,IC,NEED;
+const COMIC="https://purna.github.io/bible-stories/";
+function menu(){h.textContent="🛠️ Built by Faith";G=null;app.innerHTML=`<p class="mute" style="text-align:center">Pick a story. Gather, craft, and offer it in faith.</p><div class="grid">${ST.map(s=>s.x?`<a class="chip" style="text-decoration:none;text-align:center" target="_blank" rel="noopener" href="${s.x}">${s.n} ⭐</a>`:`<button class="chip" onclick="start('${s.f}')">${s.n} ⭐</button>`).join("")}</div>`}
+function start(f){G=ST.find(s=>s.f==f);IC={};
+const rw=a=>a.map(x=>{const i=x.indexOf(" ");IC[x.slice(i+1)]=x.slice(0,i);return x.slice(i+1)});
+G.W=[rw(G.raws),rw(G.calls[1].raws)];
+G.C=[...G.rc,...G.calls[1].rc].map(x=>{const[n,e,i,t]=x.split("|");IC[n]=e;return{n,e,ing:i.split("+"),t}});
+const m=G.calls[1].mg;IC[m.out]=m.oe;
+S={c:0,day:1,start:1,act:6,inv:{},disc:{},slots:[],pl:[0,0,0],pr:0,stars:0,rev:0,fin:false,log:"Gather materials, then combine them at the bench."};setN();draw()}
+function setN(){NEED={};G.calls[S.c].goal.split(",").forEach(k=>NEED[k]=(NEED[k]||0)+1)}
+const add=(k,n)=>S.inv[k]=(S.inv[k]||0)+n,has=k=>S.inv[k]||0;
+function gather(k){if(S.act<1)return;S.act--;const n=2+(Math.random()<.35?1:0);add(k,n);S.log=`You gathered ${n} ${k.toLowerCase()}.`;draw()}
+function pick(k){if(S.slots.length>=3||S.slots.filter(x=>x==k).length>=has(k))return;S.slots.push(k);draw()}
+function craft(){if(S.act<1||S.slots.length<2)return;const key=[...S.slots].sort().join();
+const r=G.C.find(r=>[...r.ing].sort().join()==key);S.act--;
+if(r){S.slots.forEach(k=>S.inv[k]--);add(r.n,1);const f=!S.disc[r.n];S.disc[r.n]=1;S.log=`${r.e} You made: ${r.n}${f?" (new recipe!)":""}.`}
+else S.log="Nothing useful came of that. Your materials are kept. Try another mix.";S.slots=[];draw()}
+function plant(i){const m=G.calls[1].mg;if(S.act<1||has(m.in)<1||S.pl[i])return;S.act--;S.inv[m.in]--;S.pl[i]=1;S.log="Planted. It needs water.";draw()}
+function water(i){const m=G.calls[1].mg;if(S.act<1||has(m.wet)<1||S.pl[i]!=1)return;S.act--;S.inv[m.wet]--;S.pl[i]=2;S.log="Watered. Now wait for the night.";draw()}
+function harvest(i){const m=G.calls[1].mg;if(S.act<1||S.pl[i]!=3)return;S.act--;S.pl[i]=0;add(m.out,2);S.log=`${m.oe} Two ${m.out.toLowerCase()} gathered.`;draw()}
+function press(){const m=G.calls[1].mg;if(S.act<1)return;S.act--;S.pr++;
+if(S.pr>=m.n){S.pr=0;add(m.out,1);S.log=`${m.oe} It came: ${m.out}.`}else S.log="You can't see the result yet. Keep going.";draw()}
+function rest(){S.day++;S.act=6;S.slots=[];S.pl=S.pl.map(p=>p==2?3:p);S.log=S.pl.includes(3)?"Overnight, something grew.":"A new day. Strength restored.";draw()}
+const can=()=>Object.entries(NEED).every(([k,n])=>has(k)>=n);
+function deliver(){Object.entries(NEED).forEach(([k,n])=>S.inv[k]-=n);const d=S.day-S.start+1;const st=d<=2?3:d<=4?2:1;S.stars+=st;S.rev=st;draw()}
+function nextC(){S.rev=0;S.c++;if(S.c>1)S.fin=true;else{S.start=S.day;S.act=6;S.slots=[];S.pl=[0,0,0];S.pr=0;S.log="A new calling.";setN()}draw()}
+function back(){FIX?location.href="index.html":menu()}
+function draw(){h.textContent=G.n;const c=G.calls[S.c]||G.calls[1],m=G.calls[1].mg;
+if(S.fin){app.innerHTML=`<div class="card"><div class="ref">${G.n} · ${G.r}</div><h3>Both callings complete</h3><p>${G.fin||"You made each thing before you saw the answer. That is how Hebrews 11 describes faith."}</p><p class="mute">Total ${S.stars} ✨ of 6</p></div>
+<div class="row"><button class="btn" onclick="start('${G.f}')">Play again</button><button class="btn" onclick="back()">All stories</button><a class="btn" href="${COMIC}${G.f}/">Read the comic</a></div>`;return}
+if(S.rev){app.innerHTML=`<div class="card"><div class="ref">${G.n} · ${c.t}</div><h3>The unseen is revealed</h3><p>${c.v}</p><div class="quote">${c.l}</div><p class="mute">${"✨".repeat(S.rev)}</p></div><button class="btn w100" onclick="nextC()">${S.c<1?"Next calling →":"Finish"}</button>`;return}
+const inv=Object.keys(S.inv).filter(k=>S.inv[k]>0);
+const need=Object.entries(NEED).map(([k,n])=>`<span class="${has(k)>=n?'ok':''}">${IC[k]} ${S.disc[k]||G.W[0].includes(k)||G.W[1].includes(k)||k==m.out?k:"???"} ×${n} (${has(k)})</span>`).join("");
+const notes=G.C.map(r=>`<div class="mute">${S.disc[r.n]?`${r.e} <b>${r.n}</b> = ${r.ing.map(i=>IC[i]).join(" + ")}`:`❓ ${r.t}`}</div>`).join("");
+let mg="";
+if(S.c==1){if(m.t=="grow")mg=`<div class="card"><h3>${m.title}</h3><div class="plots">${S.pl.map((p,i)=>`<div class="plot"><div class="e">${["🟫","🌱","💧",m.oe][p]}</div>${p==0?`<button class="btn" ${has(m.in)<1||S.act<1?'disabled':''} onclick="plant(${i})">Plant ${IC[m.in]}</button>`:p==1?`<button class="btn" ${has(m.wet)<1||S.act<1?'disabled':''} onclick="water(${i})">Water</button>`:p==2?`<div class="mute">Grows overnight</div>`:`<button class="btn" ${S.act<1?'disabled':''} onclick="harvest(${i})">Harvest</button>`}</div>`).join("")}</div><div class="mute">Plant uses ${IC[m.in]} ${m.in}, water uses ${IC[m.wet]} ${m.wet}. Each costs 1 ⚡.</div></div>`;
+else mg=`<div class="card"><h3>${m.title}</h3><div class="row" style="justify-content:center;font-size:1.5rem">${Array.from({length:m.n},(_,i)=>i<S.pr?"●":"○").join(" ")}</div><button class="btn w100" ${S.act<1?'disabled':''} onclick="press()">${m.verb} (1 ⚡)</button><div class="mute">The result is hidden until the last step. Trust and keep going.</div></div>`}
+app.innerHTML=`<div class="bar"><span>Day ${S.day}</span><span>⚡ ${S.act}/6</span><span>✨ ${S.stars}</span></div>
+<div class="card"><div class="ref">${c.t}</div><p style="margin:6px 0">${c.w}</p><div class="need">${need}</div></div>
+<div class="card"><h3>Gather (1 ⚡)</h3><div class="row">${G.W[S.c].map(k=>`<button class="chip" ${S.act<1?'disabled':''} onclick="gather('${k}')">${IC[k]} ${k}</button>`).join("")}</div></div>${mg}
+<div class="card"><h3>Bench (1 ⚡)</h3><div class="row">${inv.map(k=>`<button class="chip" onclick="pick('${k}')">${IC[k]} ${k} ×${S.inv[k]}</button>`).join("")||'<span class="mute">Empty. Go gather.</span>'}</div>
+<div class="slots">${[0,1,2].map(i=>`<div class="slot" onclick="S.slots.splice(${i},1);draw()">${S.slots[i]?IC[S.slots[i]]:""}</div>`).join("")}</div>
+<div class="row"><button class="btn" ${S.act<1||S.slots.length<2?'disabled':''} onclick="craft()">🔨 Combine</button><button class="btn" onclick="S.slots=[];draw()">Clear</button></div><div class="log">${S.log}</div></div>
+<div class="row"><button class="btn" style="flex:1" ${can()?'':'disabled'} onclick="deliver()">✅ Offer it in faith</button><button class="btn" onclick="rest()">🌙 End day</button><button class="btn" onclick="back()">☰</button></div>
+<div class="card"><h3>Recipe notes</h3>${notes}</div>`}
+FIX?start(FIX):menu();
+</script><!-- crafting-day-feedback:start --><script>/* Clear day boundaries without discarding inventory or planting progress. */
+(()=>{
+ const originalDraw=draw,originalRest=rest;let wasExhausted=false,newDayMessage='';
+ const style=document.createElement('style');style.textContent=`.craft-day-message{background:#dfcff2;color:#172b38;border:3px solid #172b38;border-radius:8px;padding:16px;margin:14px 0;box-shadow:4px 4px #172b38;font:700 16px/1.5 system-ui}.craft-day-message h2{font:900 25px/1.2 system-ui;margin:0 0 8px}.craft-day-message p{margin:0 0 12px}.craft-day-message button{min-height:48px;border:3px solid #172b38;border-radius:5px;background:#ffb45c;color:#172b38;padding:12px 18px;font:900 17px system-ui;cursor:pointer}.craft-day-message button:focus-visible{outline:4px solid #2885ce;outline-offset:4px}`;document.head.append(style);
+ draw=function(){
+  originalDraw();if(typeof S==='undefined'||!S)return;
+  const exhausted=S.act<=0&&!S.rev&&!S.fin;
+  if(exhausted||newDayMessage){
+   const panel=document.createElement('section');panel.className='craft-day-message';panel.id='craftDayMessage';panel.setAttribute('role','status');panel.setAttribute('aria-live','polite');
+   const title=document.createElement('h2');title.textContent=exhausted?'Day '+S.day+' is over!':'A new day begins!';
+   const description=document.createElement('p');description.textContent=exhausted?'You have used all six actions. Rest to get six new actions. Your materials and crafting progress are safe.':newDayMessage;
+   panel.append(title,description);
+   if(exhausted){const next=document.createElement('button');next.type='button';next.id='craftStartDay';next.textContent='Start new day →';next.setAttribute('aria-label','Start new day, day '+(S.day+1));next.onclick=()=>rest();panel.append(next);}
+   document.getElementById('app').prepend(panel);
+   if(exhausted&&!wasExhausted){const next=panel.querySelector('button');next.focus({preventScroll:true});panel.scrollIntoView({block:'nearest',behavior:'instant'});}
+  }
+  document.querySelectorAll('button[onclick="rest()" ]').forEach(button=>{button.hidden=exhausted;button.textContent='Rest until tomorrow';});
+  wasExhausted=exhausted;newDayMessage='';
+ };
+ rest=function(){newDayMessage='Day '+(S.day+1)+' has started. You have six fresh actions. Keep gathering and crafting!';wasExhausted=false;originalRest();};
+ if(typeof S!=='undefined'&&S)draw();
+})();
+</script><!-- crafting-day-feedback:end --></body></html>

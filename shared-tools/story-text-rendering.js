@@ -29,9 +29,9 @@
   const css=document.createElement('style');
   css.textContent=`
     .content-overlay [data-story-position],#stage [data-story-position]{position:absolute!important;z-index:5;max-width:min(95%,900px);margin:0!important}
-    [data-story-position="top-left"]{top:var(--story-margin,5%);left:var(--story-margin,5%);transform:rotate(var(--story-rotation,0deg))}[data-story-position="top-middle"]{top:var(--story-margin,5%);left:50%;transform:translateX(-50%) rotate(var(--story-rotation,0deg))}[data-story-position="top-right"]{top:var(--story-margin,5%);right:var(--story-margin,5%);transform:rotate(var(--story-rotation,0deg))}
-    [data-story-position="middle-left"]{top:50%;left:var(--story-margin,5%);transform:translateY(-50%) rotate(var(--story-rotation,0deg))}[data-story-position="center"]{top:50%;left:50%;transform:translate(-50%,-50%) rotate(var(--story-rotation,0deg))}[data-story-position="middle-right"]{top:50%;right:var(--story-margin,5%);transform:translateY(-50%) rotate(var(--story-rotation,0deg))}
-    [data-story-position="bottom-left"]{bottom:var(--story-margin,5%);left:var(--story-margin,5%);transform:rotate(var(--story-rotation,0deg))}[data-story-position="bottom-middle"]{bottom:var(--story-margin,5%);left:50%;transform:translateX(-50%) rotate(var(--story-rotation,0deg))}[data-story-position="bottom-right"]{bottom:var(--story-margin,5%);right:var(--story-margin,5%);transform:rotate(var(--story-rotation,0deg))}
+    [data-story-position="top-left"],#stage [data-story-position="top-left"]{top:var(--story-margin,5%);left:var(--story-margin,5%);transform:rotate(var(--story-rotation,0deg))}[data-story-position="top-middle"],#stage [data-story-position="top-middle"]{top:var(--story-margin,5%);left:50%;transform:translateX(-50%) rotate(var(--story-rotation,0deg))}[data-story-position="top-right"],#stage [data-story-position="top-right"]{top:var(--story-margin,5%);right:var(--story-margin,5%);transform:rotate(var(--story-rotation,0deg))}
+    [data-story-position="middle-left"],#stage [data-story-position="middle-left"]{top:50%;left:var(--story-margin,5%);transform:translateY(-50%) rotate(var(--story-rotation,0deg))}[data-story-position="center"],#stage [data-story-position="center"]{top:50%;left:50%;transform:translate(-50%,-50%) rotate(var(--story-rotation,0deg))}[data-story-position="middle-right"],#stage [data-story-position="middle-right"]{top:50%;right:var(--story-margin,5%);transform:translateY(-50%) rotate(var(--story-rotation,0deg))}
+    [data-story-position="bottom-left"],#stage [data-story-position="bottom-left"]{bottom:var(--story-margin,5%);left:var(--story-margin,5%);transform:rotate(var(--story-rotation,0deg))}[data-story-position="bottom-middle"],#stage [data-story-position="bottom-middle"]{bottom:var(--story-margin,5%);left:50%;transform:translateX(-50%) rotate(var(--story-rotation,0deg))}[data-story-position="bottom-right"],#stage [data-story-position="bottom-right"]{bottom:var(--story-margin,5%);right:var(--story-margin,5%);transform:rotate(var(--story-rotation,0deg))}
     [data-story-style="serif"]{font-family:Georgia,serif!important}[data-story-style="impact"]{font-weight:900!important;text-transform:uppercase;letter-spacing:.04em}
     [data-story-style="outline"]{color:#fff!important;text-shadow:2px 2px #111,-2px -2px #111,2px -2px #111,-2px 2px #111;background:#0004!important;border-color:transparent!important}
     [data-story-style="soft"]{border-radius:24px!important;border:1px solid #ffffff70!important;background:#332c40dd!important;color:#fff!important;font-weight:500!important}
@@ -50,12 +50,20 @@
     [data-story-sfx="true"][data-story-style="sfx-outline"]{color:#fff!important;-webkit-text-stroke:3px #17131f;text-shadow:4px 4px #ff6b5b}
     [data-story-sfx="true"][data-story-style="sfx-neon"]{color:#7df9ff!important;-webkit-text-stroke:1px #fff;text-shadow:0 0 8px #00eaff,0 0 20px #00eaff}
     [data-story-sfx="true"][data-story-style="sfx-burst"]{color:#ffcf36!important;-webkit-text-stroke:3px #e53b24;text-shadow:5px 5px #17131f}
+    .bubble-wrap[data-story-position]{padding:0!important;box-sizing:border-box}
+    .bubble-wrap[data-story-position]>.bubble{width:100%!important;max-width:100%;min-width:0;box-sizing:border-box;overflow-wrap:break-word}
+    .caption[data-story-position]{box-sizing:border-box;overflow-wrap:break-word}
+    @media(max-width:640px){
+      .content-overlay .bubble-wrap[data-story-position],.content-overlay .caption[data-story-position]{width:90%!important;max-width:calc(100% - var(--story-margin,5%) * 2)!important}
+      .content-overlay .bubble-wrap[data-story-position]>.bubble{font-size:clamp(14px,3.8vw,18px);line-height:1.35}
+      .content-overlay .caption[data-story-position]{font-size:10px;line-height:1.5}
+    }
     #nextLineBtn[data-story-items-pending],#nextBtn[data-story-items-pending]{visibility:hidden!important;pointer-events:none!important}
   `;
   document.head.appendChild(css);
   const sceneLayerCss=document.createElement('style');
   sceneLayerCss.textContent=`
-    #graphicContainer{position:relative;isolation:isolate}
+    #graphicContainer{position:absolute;inset:0;width:100%;height:100%;isolation:isolate}
     #svgLayer.svg-behind{position:absolute;inset:0;z-index:1;display:block;pointer-events:none}
     #svgLayer.svg-behind svg{width:100%;height:100%;max-height:none;filter:none}
     #midLayer.svg-middle{position:absolute;inset:0;z-index:2;display:block;pointer-events:none}
@@ -185,6 +193,7 @@
     window.setTimeout(()=>{if(element.isConnected)element.remove();},610);
   }
   function renderItems(layer,line){
+    if(!(layer instanceof Element) || !layer.isConnected)return;
     if(layer.dataset.storyItemsRendered)return;
     layer.dataset.storyItemsRendered='true';
     layer.querySelectorAll('.caption,.bubble-wrap,.sfx').forEach(el=>el.remove());
@@ -209,16 +218,22 @@
     });
   }
   function scan(root){
-    if(!root)return;
+    // Observer records can contain nodes removed by an earlier record in the same batch.
+    if(!root || !root.isConnected)return;
+    const sceneSvgs=[...root.querySelectorAll?.('#svgLayer svg,#midLayer svg,#fgLayer svg')||[]];
+    if(root.matches?.('svg')&&root.closest('#svgLayer,#midLayer,#fgLayer'))sceneSvgs.push(root);
+    sceneSvgs.forEach(svg=>svg.setAttribute('preserveAspectRatio','xMidYMid slice'));
     const candidates=[];
     if(root.matches?.('.caption,.bubble-wrap,.sfx'))candidates.push(root);
     root.querySelectorAll?.('.caption,.bubble-wrap,.sfx').forEach(el=>candidates.push(el));
     const choiceButtons=[];if(root.matches?.('.choiceBtn'))choiceButtons.push(root);root.querySelectorAll?.('.choiceBtn').forEach(el=>choiceButtons.push(el));
     for(const button of choiceButtons){const choice=byChoice.get(normalize(button.innerText||button.textContent));if(choice)applyChoiceStyle(button,choice);}
     for(const element of candidates){
+      if(!element.isConnected)continue;
       const text=normalize(element.innerText||element.textContent),line=byText.get(text);
       if(!line)continue;
       const layer=element.closest('.content-overlay')||element.parentElement;
+      if(!layer)continue;
       if(Array.isArray(line.items)){renderItems(layer,line);continue;}
       const target=element.matches('.bubble-wrap')?(element.querySelector('.bubble')||element):element;
       positionItem(element,{...line,sfx:element.matches('.sfx')},line);
