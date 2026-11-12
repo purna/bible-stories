@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Dusty Winding Road Gradient -->
+    <linearGradient id="roadDustGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A87A4A" />
+      <stop offset="50%" stop-color="#C89860" />
+      <stop offset="100%" stop-color="#DFB278" />
+    </linearGradient>
+
+    <!-- Terraced Barley Field Green-Gold Gradient -->
+    <linearGradient id="barleyFieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#788C45" />
+      <stop offset="60%" stop-color="#A2B054" />
+      <stop offset="100%" stop-color="#C0B456" />
+    </linearGradient>
+
+    <!-- Ground Slope Base -->
+    <linearGradient id="sandstoneSlope" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6B4B2D" />
+      <stop offset="100%" stop-color="#422D1A" />
+    </linearGradient>
+
+    <!-- Soft Long Dawn Shadow Filter -->
+    <filter id="dawnShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.12  0 0 0 0 0.08  0 0 0 0 0.06  0 0 0 0.5 0" />
+      <feOffset dx="-18" dy="12" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>
+
+  <!-- Midground Terrain Base -->
+  <g id="terrain-slopes">
+    <path d="M -10,680 Q 450,620 950,670 Q 1450,720 1930,640 L 1930,1080 L -10,1080 Z" fill="url(#sandstoneSlope)" />
+  </g>
+
+  <!-- Early Harvest Barley Terraces bordering Bethlehem approach -->
+  <g id="barley-harvest-terraces">
+    <!-- Left Terrace Field -->
+    <path d="M -10,720 Q 320,680 680,740 L 620,860 Q 250,790 -10,850 Z" fill="url(#barleyFieldGrad)" opacity="0.85" />
+    <path d="M -10,735 Q 310,695 660,755" stroke="#D4C860" stroke-width="2" fill="none" opacity="0.6" />
+    <path d="M -10,760 Q 290,720 630,780" stroke="#687838" stroke-width="2" fill="none" opacity="0.6" />
+
+    <!-- Right Terrace Field -->
+    <path d="M 1250,670 Q 1580,630 1930,660 L 1930,780 Q 1550,740 1180,800 Z" fill="url(#barleyFieldGrad)" opacity="0.85" />
+    <path d="M 1280,685 Q 1590,645 1930,675" stroke="#D4C860" stroke-width="2" fill="none" opacity="0.6" />
+  </g>
+
+  <!-- Winding Highway / Road to Bethlehem -->
+  <g id="road-to-bethlehem">
+    <path d="M 880,1080 
+             C 920,950 980,880 1080,800 
+             C 1180,720 1310,690 1380,620 
+             C 1405,595 1412,560 1408,520 
+             L 1385,520 
+             C 1388,550 1380,580 1358,605 
+             C 1290,670 1150,700 1040,780 
+             C 930,860 850,950 790,1080 Z" fill="url(#roadDustGrad)" />
+
+    <!-- Wheel Ruts and Foot Paths -->
+    <path d="M 840,1080 C 890,960 960,890 1050,810 C 1150,730 1280,700 1365,630" stroke="#8C5E32" stroke-width="3" fill="none" opacity="0.5" />
+    <path d="M 860,1080 C 910,960 975,890 1065,815 C 1165,735 1295,705 1375,635" stroke="#5A3A1E" stroke-width="2" fill="none" opacity="0.4" />
+  </g>
+
+  <!-- Distant Olive Trees bordering the Road -->
+  <g id="roadside-olive-trees" fill="#3D4D38">
+    <!-- Tree 1 -->
+    <path d="M 1420,530 Q 1410,510 1425,495 Q 1445,490 1450,510 Q 1455,530 1420,530 Z" />
+    <rect x="1432" y="525" width="4" height="12" fill="#281A10" />
+
+    <!-- Tree 2 -->
+    <path d="M 1460,520 Q 1450,500 1468,485 Q 1488,480 1492,502 Q 1495,520 1460,520 Z" />
+    <rect x="1473" y="515" width="3" height="10" fill="#281A10" />
+  </g>
+
+  <!-- Character Cast Shadows (Angled towards Left in Dawn Light) -->
+  <g id="character-dawn-shadows" opacity="0.65">
+    <!-- Naomi & Ruth Combined Dawn Shadow -->
+    <ellipse cx="1010" cy="805" rx="110" ry="16" fill="#24170D" transform="rotate(-18, 1010, 805)" />
+  </g>
+
+  <!-- Character Group: Naomi & Ruth walking together toward Bethlehem -->
+  <g id="naomi-and-ruth-travelers" transform="translate(980, 670) scale(0.95)" filter="url(#dawnShadow)">
+    
+    <!-- NAOMI (Elder Matriarch, Dark Umber Mantle, Walking Staff) -->
+    <g id="naomi-figure">
+      <!-- Outer Mantle (Dark Umber #4A331E) -->
+      <path d="M 35,140 
+               C 15,100 12,50 32,25 
+               C 52,2 78,12 88,38 
+               C 98,65 100,100 90,140 
+               C 72,145 52,145 35,140 Z" fill="#4A331E" />
+
+      <!-- Mantle Fold Highlights & Shadows -->
+      <path d="M 28,38 C 22,60 18,95 24,135 C 35,138 48,135 52,105 C 48,70 40,48 28,38 Z" fill="#6B4B2D" />
+      <path d="M 65,45 C 75,68 82,95 88,138 C 78,140 68,140 65,115 C 68,90 68,65 65,45 Z" fill="#2E1D10" />
+
+      <!-- Inner Robe (Muted Deep Teal) -->
+      <path d="M 42,60 C 40,82 38,110 36,138 L 62,138 C 60,110 58,82 55,60 Z" fill="#2C444E" />
+
+      <!-- Head Veil Silhouette -->
+      <path d="M 45,12 C 32,12 28,24 32,40 C 40,45 58,45 65,38 C 68,24 62,12 45,12 Z" fill="#2E1D10" />
+
+      <!-- Leaning Walking Staff -->
+      <line x1="20" y1="30" x2="8" y2="145" stroke="#24170D" stroke-width="4.5" stroke-linecap="round" />
+    </g>
+
+    <!-- RUTH (Younger Companion, Faded Turquoise & Gold Garment, Devoted Posture) -->
+    <g id="ruth-figure" transform="translate(48, 10)">
+      <!-- Outer Drapes (Restrained Amber Gold #C89860) -->
+      <path d="M 38,130 
+               C 22,95 20,52 38,28 
+               C 55,8 78,16 85,40 
+               C 92,65 88,95 78,130 
+               C 65,134 50,134 38,130 Z" fill="#C89860" />
+
+      <!-- Drape Shadows -->
+      <path d="M 32,40 C 26,62 24,92 30,128 C 40,131 52,128 55,98 C 50,68 42,48 32,40 Z" fill="#A8743B" />
+
+      <!-- Inner Shawl / Veil (Faded Turquoise #5A7C88) -->
+      <path d="M 45,18 C 32,18 28,28 32,44 C 40,48 58,48 65,42 C 68,28 60,18 45,18 Z" fill="#5A7C88" />
+      <path d="M 32,44 C 26,65 22,90 20,118 L 40,124 C 40,95 38,68 35,48 Z" fill="#3B5660" />
+
+      <!-- Arm Clasped around Naomi's Waist / Cloak -->
+      <path d="M 38,58 Q 18,52 2,58 Q 5,66 25,70 Z" fill="#C89860" />
+    </g>
+
+  </g>
+</svg>

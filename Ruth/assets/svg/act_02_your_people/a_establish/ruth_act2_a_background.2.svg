@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Dawn Sky Gradient: Faded Turquoise to Golden Amber -->
+    <linearGradient id="skyGradAct2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#405C68" />
+      <stop offset="30%" stop-color="#5A7C88" />
+      <stop offset="60%" stop-color="#9C8B74" />
+      <stop offset="82%" stop-color="#C89860" />
+      <stop offset="100%" stop-color="#E8B878" />
+    </linearGradient>
+
+    <!-- Dawn Horizon Sun Glow -->
+    <radialGradient id="dawnSunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF4D6" stop-opacity="1" />
+      <stop offset="25%" stop-color="#F7C882" stop-opacity="0.85" />
+      <stop offset="60%" stop-color="#C89860" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#C89860" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Mountain Parallax Gradients -->
+    <linearGradient id="farRidgeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5C6B73" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#8C7A68" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="midSandstoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5A4028" />
+      <stop offset="100%" stop-color="#8C6542" />
+    </linearGradient>
+
+    <!-- Bethlehem Hilltop City Wall Gradient -->
+    <linearGradient id="bethlehemWallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#422D1A" />
+      <stop offset="100%" stop-color="#6B4B2D" />
+    </linearGradient>
+
+    <!-- Heat Haze Gradient -->
+    <linearGradient id="heatHazeGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E8B878" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#C89860" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#5A7C88" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky Canvas -->
+  <rect width="1920" height="1080" fill="url(#skyGradAct2)" />
+
+  <!-- Morning Sun / Golden Horizon Glow -->
+  <g id="dawn-sun-assembly">
+    <circle cx="340" cy="280" r="170" fill="url(#dawnSunGlow)" />
+    <circle cx="340" cy="280" r="50" fill="#FFF8E7" />
+  </g>
+
+  <!-- Distant Clouds & Atmosphere -->
+  <g id="dawn-clouds" opacity="0.35">
+    <path d="M 0,200 Q 300,170 650,220 Q 1000,260 1350,200 Q 1700,160 1920,210 L 1920,290 L 0,290 Z" fill="#E8B878" />
+    <path d="M 150,140 Q 500,180 850,130 Q 1250,100 1650,150 L 1920,130 L 1920,190 L 0,190 Z" fill="#9C8B74" />
+  </g>
+
+  <!-- Distant Ridge Line (Layer 1) -->
+  <g id="far-mountain-ridges">
+    <path d="M -50,540 
+             L 180,480 L 340,510 L 520,430 L 710,490 L 890,410 
+             L 1080,460 L 1260,380 L 1450,440 L 1680,370 L 1970,430 
+             L 1970,720 L -50,720 Z" fill="url(#farRidgeGrad)" />
+  </g>
+
+  <!-- Mid-Distance Sandstone Hills (Layer 2) -->
+  <g id="mid-sandstone-hills">
+    <path d="M -20,600 
+             Q 280,520 620,560 
+             Q 980,470 1320,520 
+             Q 1650,450 1940,490 
+             L 1940,800 L -20,800 Z" fill="url(#midSandstoneGrad)" />
+  </g>
+
+  <!-- Distant Fortified City of Bethlehem on the Hilltop (Layer 3) -->
+  <g id="bethlehem-city-silhouette">
+    <!-- Hill Slope supporting Bethlehem -->
+    <path d="M 980,580 
+             Q 1250,490 1550,510 
+             L 1930,470 L 1930,750 L 980,750 Z" fill="#4A331E" />
+
+    <!-- Fortified Stone Wall & Towers -->
+    <g id="city-masonry" fill="url(#bethlehemWallGrad)">
+      <!-- Outer Wall Rampart -->
+      <path d="M 1220,520 L 1780,500 L 1780,540 L 1220,560 Z" />
+
+      <!-- Crenellations on Main Wall -->
+      <path d="M 1250,516 h12 v-8 h-12 z M 1280,515 h12 v-8 h-12 z M 1310,514 h12 v-8 h-12 z 
+               M 1340,513 h12 v-8 h-12 z M 1370,512 h12 v-8 h-12 z M 1400,511 h12 v-8 h-12 z
+               M 1430,510 h12 v-8 h-12 z M 1460,509 h12 v-8 h-12 z M 1490,508 h12 v-8 h-12 z" />
+
+      <!-- Bethlehem Gate Towers -->
+      <!-- Left Gate Tower -->
+      <rect x="1350" y="445" width="38" height="75" rx="2" />
+      <!-- Right Gate Tower -->
+      <rect x="1420" y="440" width="42" height="78" rx="2" />
+      <!-- Central Gate Arch Structure -->
+      <path d="M 1388,460 L 1420,460 L 1420,520 L 1388,520 Z" />
+      <path d="M 1393,485 Q 1404,472 1415,485 L 1415,520 L 1393,520 Z" fill="#24170D" /> <!-- Dark Gate Opening -->
+
+      <!-- Terraced Dwellings & Watchtowers inside City -->
+      <rect x="1470" y="465" width="45" height="40" />
+      <rect x="1520" y="475" width="55" height="30" />
+      <rect x="1580" y="482" width="60" height="25" />
+      <rect x="1650" y="488" width="45" height="20" />
+
+      <!-- High Watchtower Dome -->
+      <rect x="1485" y="442" width="22" height="25" />
+      <path d="M 1482,442 Q 1496,428 1510,442 Z" fill="#362314" />
+
+      <!-- Tower Windows with Golden Interior Light -->
+      <rect x="1362" y="460" width="5" height="10" fill="#F7C882" opacity="0.75" />
+      <rect x="1373" y="460" width="5" height="10" fill="#F7C882" opacity="0.75" />
+      <rect x="1432" y="455" width="6" height="12" fill="#F7C882" opacity="0.75" />
+      <rect x="1445" y="455" width="6" height="12" fill="#F7C882" opacity="0.75" />
+      <rect x="1492" y="448" width="4" height="8" stroke="#F7C882" fill="#F7C882" opacity="0.6" />
+    </g>
+  </g>
+
+  <!-- Atmospheric Heat Haze Layer across Horizon -->
+  <rect x="0" y="460" width="1920" height="380" fill="url(#heatHazeGrad)" />
+</svg>

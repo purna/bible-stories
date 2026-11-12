@@ -26,6 +26,12 @@ const V3 = THREE.Vector3,
 const reg = {};
 const $ = i => document.getElementById(i),
     sn = (t, f, s = 0) => Math.sin(t * f + s);
+const esc = t => String(t == null ? '' : t).replace(/[&<>"]/g, ch => ({
+    '&': '&',
+    '<': '<',
+    '>': '>',
+    '"': '"'
+}[ch]));
 
 function apply(m, u, t) {
     const e = EA[m.e || 'io'],
@@ -812,12 +818,16 @@ async function save(name, obj) {
     }
     box(data)
 }
-$('ex').onclick = () => save('nile-camera-chain.json', {
-    format: 'nile-camera-chain',
-    version: 1,
-    clips: seq.map(out)
-});
+$('ex').onclick = () => {
+    $('xm').hidden = true;
+    save('nile-camera-chain.json', {
+        format: 'nile-camera-chain',
+        version: 1,
+        clips: seq.map(out)
+    });
+};
 $('es').onclick = async () => {
+    $('xm').hidden = true;
     for (const [i, c] of seq.entries()) await save(`nile-clip-${i + 1}-${c.m.replace(/\W+/g, '-')}.json`, {
         format: 'nile-camera-clip',
         version: 1,
@@ -964,7 +974,10 @@ $('fi').onchange = async e => {
     ingest(await Promise.all(f.map(x => x.text())));
     e.target.value = ''
 };
-$('pj').onclick = () => box('');
+$('pj').onclick = () => {
+    $('xm').hidden = true;
+    box('')
+};
 $('jl').onclick = () => ingest([$('jt').value]);
 $('jx').onclick = () => $('jm').hidden = true;
 const dl = async (name, data) => {
@@ -1101,6 +1114,7 @@ const X = {
     png: () => withEx(async () => {
         const files = [];
         await sweep($('sf').value == '1' ? 1 : 1 / 12, async (i, n) => {
+            R.domElement.colorSpace = 'srgb';
             const b = atob(R.domElement.toDataURL('image/png').split(',')[1]);
             files.push([`frame_${String(i + 1).padStart(4, '0')}.png`, Uint8Array.from(b, c => c.charCodeAt(0))]);
             if (i % 4 == 0) {
@@ -1139,6 +1153,7 @@ const X = {
             framerate: fps
         });
         await sweep(1 / fps, async (i, n) => {
+            R.domElement.colorSpace = 'srgb';
             const f = new VideoFrame(R.domElement, {
                 timestamp: Math.round(i * 1e6 / fps)
             });
@@ -1160,8 +1175,281 @@ const X = {
             }));
             xp('Done')
         }
+    }),
+    rep: () => withEx(async () => {
+        await report()
     })
 };
+// ---- storyboard report (HTML, a screenshot of every keyframe) ----
+// For each shot: start + end keyframe screenshots, three orthographic scene
+// views with the camera path drawn on, the transition to the next shot, a
+// spec grid (lens, move, timing, XYZ, rotation, focus) and notes. The result is
+// one self-contained .html file (images embedded), print-friendly.
+const KW = 1280,
+    KH = 720,
+    VW = 640,
+    VH = 480,
+    lensMM = f => 10.125 / Math.tan(f * D2R / 2), // 36mm-wide full frame, 16:9 crop
+    xyz = p => `${p.x.toFixed(2)}, ${p.y.toFixed(2)}, ${p.z.toFixed(2)}`,
+    rpy = q => {
+        const e = new THREE.Euler().setFromQuaternion(q, 'YXZ');
+        return `yaw ${(e.y / D2R).toFixed(1)}° · pitch ${(e.x / D2R).toFixed(1)}° · roll ${(e.z / D2R).toFixed(1)}°`
+    };
+
+// Three orthographic views (top / left / right) framed around every camera
+// path, rendered once. Each shot then gets its own copy with its path drawn on.
+function sceneViews(path, kf) {
+    const box = new THREE.Box3();
+    path.forEach(a => a.forEach(p => box.expandByPoint(p)));
+    kf.forEach(k => k.forEach(o => box.expandByPoint(o.p.clone().add(new V3(0, 0, -15).applyQuaternion(o.q)))));
+    box.expandByScalar(Math.max(10, box.getSize(new V3()).length() * .2));
+    box.min.y = Math.min(box.min.y, -1.5);
+    const c = box.getCenter(new V3()),
+        s = box.getSize(new V3()),
+        span = Math.max(s.x, s.y, s.z);
+    const defs = [
+        ['Topdown view', new V3(0, -1, 0), new V3(0, 0, -1), s.x, s.z, s.y],
+        ['Left side view', new V3(1, 0, 0), new V3(0, 1, 0), s.z, s.y, s.x],
+        ['Right side view', new V3(-1, 0, 0), new V3(0, 1, 0), s.z, s.y, s.x]
+    ];
+    // Hide helpers, sky discs and fog so the views read as plain plans.
+    const hidden = [];
+    S.children.forEach(o => {
+        if ((o === aux || o.userData && o.userData.excludeFromBounds) && o.visible) {
+            o.visible = false;
+            hidden.push(o)
+        }
+    });
+    const fog = S.fog;
+    S.fog = null;
+    R.setSize(VW, VH, false);
+    try {
+        return defs.map(([name, dir, up, w, h, depth]) => {
+            const hh = Math.max(h / 2, w / 2 * .75, 6),
+                hw = hh * 4 / 3,
+                cm = new THREE.OrthographicCamera(-hw, hw, hh, -hh, 0, depth + 2);
+            cm.up.copy(up);
+            cm.position.copy(c).addScaledVector(dir, -(depth / 2 + 1));
+            cm.lookAt(c);
+            cm.updateMatrixWorld(true);
+            R.render(S, cm);
+            const base = document.createElement('canvas');
+            base.width = VW;
+            base.height = VH;
+            base.getContext('2d').drawImage(R.domElement, 0, 0);
+            return {
+                name,
+                cm,
+                base,
+                span
+            }
+        })
+    } finally {
+        S.fog = fog;
+        hidden.forEach(o => o.visible = true)
+    }
+}
+
+function drawView(v, i, path, kf) {
+    const cv = document.createElement('canvas');
+    cv.width = VW;
+    cv.height = VH;
+    const g = cv.getContext('2d'),
+        px = p => {
+            const q = p.clone().project(v.cm);
+            return [(q.x * .5 + .5) * VW, (-q.y * .5 + .5) * VH]
+        },
+        line = (pts, col, w) => {
+            g.beginPath();
+            pts.forEach((p, k) => k ? g.lineTo(...px(p)) : g.moveTo(...px(p)));
+            g.strokeStyle = col;
+            g.lineWidth = w;
+            g.lineJoin = 'round';
+            g.stroke()
+        };
+    g.drawImage(v.base, 0, 0);
+    path.forEach((a, j) => j != i && line(a, 'rgba(255,255,255,.4)', 1.5));
+    line(path[i], '#ffd24a', 3);
+    kf[i].forEach((k, e) => {
+        const [x, y] = px(k.p),
+            [x2, y2] = px(k.p.clone().add(new V3(0, 0, -1).applyQuaternion(k.q).multiplyScalar(v.span * .12)));
+        g.beginPath();
+        g.moveTo(x, y);
+        g.lineTo(x2, y2);
+        g.strokeStyle = '#fff';
+        g.lineWidth = 2;
+        g.stroke();
+        g.beginPath();
+        g.arc(x, y, 7, 0, 7);
+        g.fillStyle = e ? '#e53935' : '#4caf50';
+        g.fill();
+        g.strokeStyle = '#fff';
+        g.lineWidth = 2;
+        g.stroke()
+    });
+    return cv.toDataURL('image/jpeg', .85)
+}
+
+async function report() {
+    const n = seq.length,
+        all = seq.map((_, i) => i),
+        entry = library.entries.find(e => e.id == (library.current && library.current.id)),
+        sceneName = entry ? entry.name || entry.id : 'Imported scene',
+        sceneNotes = entry ? entry.notes || entry.description || '' : '',
+        o = offs(),
+        T = total();
+    // Camera poses at the start (u=0) and end (u=1) of each shot, chained the
+    // same way playback chains them, plus a sampled path for the scene views.
+    let kf, path;
+    withCam(() => {
+        const an = build(all, true);
+        kf = seq.map((c, i) => [0, 1].map(u => {
+            pose(c, u, 0, an[i]);
+            return {
+                p: C.position.clone(),
+                q: C.quaternion.clone(),
+                f: C.fov
+            }
+        }));
+        path = seq.map((c, i) => {
+            const a = [];
+            for (let k = 0; k <= 40; k++) {
+                pose(c, k / 40, 0, an[i]);
+                a.push(C.position.clone())
+            }
+            return a
+        })
+    });
+    const av = aux.visible;
+    aux.visible = false;
+    const shots = [];
+    try {
+        xp('Rendering scene views…');
+        await tick();
+        const views = sceneViews(path, kf);
+        for (let i = 0; i < n && !xcancel; i++) {
+            xp(`Capturing keyframes, shot ${i + 1}/${n}`);
+            await tick();
+            // Everything for one shot happens synchronously so the live render
+            // loop cannot interleave and change the camera or canvas size.
+            R.setSize(KW, KH, false);
+            C.aspect = KW / KH;
+            R.domElement.colorSpace = 'srgb';
+            const shotsImg = kf[i].map(k => {
+                C.position.copy(k.p);
+                C.quaternion.copy(k.q);
+                C.fov = k.f;
+                C.updateProjectionMatrix();
+                R.render(S, C);
+                return R.domElement.toDataURL('image/jpeg', .88)
+            });
+            shots.push({
+                keys: shotsImg,
+                views: views.map(v => drawView(v, i, path, kf))
+            })
+        }
+    } finally {
+        aux.visible = av
+    }
+    if (xcancel) return;
+
+    const esc2 = esc,
+        TRL = i => {
+            const c = seq[i],
+                t = c.tr;
+            if (i == n - 1) return 'End of sequence';
+            if (!t || t.type == 'none') return 'Cut to next shot';
+            const d = TRN.find(x => x[0] == t.type),
+                ps = d[2].map(k => k == 'col' ? `colour ${t.col}` : k == 'op' ? `opacity ${t.op}` : k == 'rot' ? `rotation ${t.rot}°` : k == 'amt' ? `amount ${t.amt}` : `ease ${t.spd}`);
+            return `Transition to next shot: ${d[1].toLowerCase()}, ${trL(i).toFixed(2)}s${ps.length ? ', ' + ps.join(', ') : ''}`
+        },
+        cell = (k, v) => `<div class="cell"><span>${esc2(k)}</span><b>${v}</b></div>`,
+        ease = c => c.cv ? `custom curve<br><small>cubic-bezier(${c.cv.map(r3).join(', ')})</small>` : esc2(reg[c.m].e || 'io'),
+        blur = c => c.b0 || c.b1 ? `${c.b0} → ${c.b1} px` : 'none',
+        lens = (a, b) => Math.abs(lensMM(a) - lensMM(b)) < .5 ? `${lensMM(a).toFixed(0)} mm` : `${lensMM(a).toFixed(0)} → ${lensMM(b).toFixed(0)} mm`,
+        notes = (t, s) => `<h4>${t}</h4>` + (s && s.trim() ? `<p class="nt">${esc2(s).replace(/\n/g, '<br>')}</p>` : `<p class="none">No notes recorded for this ${t.startsWith('Scene') ? 'scene' : 'shot'}.</p>`);
+
+    const cards = seq.map((c, i) => {
+        const [a, b] = kf[i],
+            s = shots[i],
+            t0 = o[i],
+            t1 = o[i] + dur(c);
+        return `<section class="shot">
+<div class="top"><div><div class="eye">${esc2(sceneName)}</div><h2>Shot ${i + 1}</h2></div><div class="pill">${esc2(TRL(i))}</div></div>
+<div class="two">
+<figure><img class="zoom" src="${s.keys[0]}" alt="Shot ${i + 1} start keyframe"><figcaption>Start keyframe (${c.st ? 'custom' : 'auto'}) · ${fmt(t0)}</figcaption></figure>
+<figure><img class="zoom" src="${s.keys[1]}" alt="Shot ${i + 1} end keyframe"><figcaption>End keyframe (${c.en ? 'custom' : 'auto'}) · ${fmt(t1)}</figcaption></figure>
+</div>
+<h3>Scene views</h3>
+<div class="three">${views3(s.views)}</div>
+<div class="grid">
+${cell('Camera', `Shot ${i + 1}`)}${cell('Lens', lens(a.f, b.f))}${cell('Field of view', `${a.f.toFixed(0)}°${Math.abs(a.f - b.f) < .5 ? '' : ' → ' + b.f.toFixed(0) + '°'}`)}${cell('Sensor', 'Full frame')}${cell('Aspect', '16:9')}
+${cell('Move', esc2(c.m))}${cell('Duration', dur(c).toFixed(1) + 's')}${cell('Speed', '×' + c.sp)}${cell('Easing', ease(c))}${cell('Timeline', `${fmt(t0)} – ${fmt(t1)}`)}
+${cell('Start XYZ', xyz(a.p))}${cell('End XYZ', xyz(b.p))}${cell('Start rotation', rpy(a.q))}${cell('End rotation', rpy(b.q))}${cell('Focus blur', blur(c))}
+</div>
+${notes('Scene notes', sceneNotes)}${notes('Camera / shot notes', c.notes)}
+</section>`
+    }).join('\n');
+
+    function views3(v) {
+        return v.map((u, k) => `<figure><img class="zoom" src="${u}" alt="${['Topdown', 'Left side', 'Right side'][k]} view"><figcaption>${['Topdown view', 'Left side view', 'Right side view'][k]}</figcaption></figure>`).join('')
+    }
+    const overview = seq.map((c, i) => `<tr><td>${i + 1}</td><td>${esc2(c.m)}</td><td>${fmt(o[i])}</td><td>${dur(c).toFixed(1)}s</td><td>${esc2(TRL(i).replace('Transition to next shot: ', ''))}</td></tr>`).join('');
+    const html = `<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Storyboard & Shot Report — ${esc2(sceneName)}</title>
+<style>
+:root{--tx:#111;--mu:#666;--ln:#d9d9de;--ac:#8a5a00;--bg:#fff;--cd:#f5f5f7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:980px;margin:0 auto;padding:40px 24px 64px}
+h1{font-size:34px;margin:0 0 4px;letter-spacing:-.5px}
+.sub{color:var(--mu);font-size:16px;margin:0 0 24px}
+table{border-collapse:collapse;width:100%;margin:0 0 32px;font-size:13px}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--ln)}
+th{color:var(--mu);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.shot{border:1px solid var(--ln);border-radius:16px;padding:22px;margin:0 0 28px;break-inside:avoid-page}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;border-bottom:1px solid var(--ln);padding-bottom:12px;margin-bottom:16px}
+.eye{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ac)}
+h2{margin:2px 0 0;font-size:24px}
+.pill{border:1px solid #333;border-radius:999px;padding:6px 14px;font-size:12.5px;max-width:60%;text-align:center}
+h3{color:#0a8f3c;font-size:14px;margin:18px 0 8px}
+h4{color:var(--ac);font-size:14px;margin:16px 0 2px}
+figure{margin:0}
+img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid #3b3b4a;background:#25274a}
+figcaption{color:var(--mu);font-size:12.5px;margin-top:5px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px}
+.cell{border:1px solid var(--ln);border-radius:10px;padding:9px 11px;min-width:0}
+.cell span{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);margin-bottom:3px}
+.cell b{font-size:14px;overflow-wrap:anywhere}
+.cell small{font-weight:400;color:var(--mu)}
+.nt{margin:2px 0 0;font-size:15px}
+.none{margin:2px 0 0;font-size:15px;color:#9a9aa8}
+img.zoom{cursor:zoom-in}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;place-items:center;z-index:9;cursor:zoom-out;padding:16px}
+.lb.on{display:grid}
+.lb img{max-width:100%;max-height:100%;width:auto;border:0;border-radius:0}
+@media (max-width:760px){.two,.three{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.pill{max-width:none}.top{flex-direction:column}}
+@media print{main{padding:0}.shot{page-break-inside:avoid}.zoom{cursor:default}}
+</style></head><body><main>
+<h1>Storyboard & Shot Report</h1>
+<p class="sub">${seq.length} shots across 1 scene(s) · ${esc2(sceneName)} · ${fmt(T)} total · ${new Date().toLocaleString()}</p>
+<table><thead><tr><th>#</th><th>Move</th><th>Starts</th><th>Length</th><th>Next</th></tr></thead><tbody>${overview}</tbody></table>
+${cards}
+</main>
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+var lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.addEventListener('click',function(e){var t=e.target;if(t.classList&&t.classList.contains('zoom')){li.src=t.src;lb.classList.add('on')}else lb.classList.remove('on')});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+</script></body></html>`;
+
+    const blob = new Blob([html], { type: 'text/html' });
+    await dl(`storyboard-report-${sceneName.replace(/\W+/g, '-')}.html`, blob);
+    xp('Report saved')
+}
 $('xm').onclick = e => {
     const k = e.target.closest('[data-x]');
     if (k) X[k.dataset.x]()

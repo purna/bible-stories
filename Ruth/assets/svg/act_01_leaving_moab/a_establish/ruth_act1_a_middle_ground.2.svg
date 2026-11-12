@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Desert Road Sand Gradient -->
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B3864E" />
+      <stop offset="50%" stop-color="#CFA15A" />
+      <stop offset="100%" stop-color="#E2B66E" />
+    </linearGradient>
+
+    <!-- Ground Earth Fill -->
+    <linearGradient id="groundEarth" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#734E35" />
+      <stop offset="100%" stop-color="#4A3120" />
+    </linearGradient>
+
+    <!-- Soft Cast Shadow Filter -->
+    <filter id="castShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.15  0 0 0 0 0.10  0 0 0 0 0.08  0 0 0 0.45 0" />
+      <feOffset dx="12" dy="18" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>
+
+  <!-- Midground Terrain Base -->
+  <g id="terrain-base">
+    <path d="M -10,720 Q 400,680 900,740 Q 1400,800 1930,710 L 1930,1080 L -10,1080 Z" fill="url(#groundEarth)" />
+  </g>
+
+  <!-- Winding Desert Track / Road -->
+  <g id="desert-road">
+    <path d="M 820,1080 
+             C 860,940 920,860 1020,780 
+             C 1120,700 1280,680 1420,620 
+             C 1510,580 1560,540 1580,515 
+             L 1550,515 
+             C 1520,535 1460,570 1370,605 
+             C 1220,660 1040,680 930,760 
+             C 830,830 760,930 710,1080 Z" fill="url(#roadGrad)" />
+    
+    <!-- Path Sand Striations / Wheel Ruts -->
+    <path d="M 770,1080 C 810,950 880,870 970,800 C 1060,730 1230,700 1370,640" stroke="#A3743B" stroke-width="3" fill="none" opacity="0.6" />
+    <path d="M 800,1080 C 840,950 900,870 1000,790 C 1090,720 1260,690 1400,630" stroke="#94642C" stroke-width="2" fill="none" opacity="0.5" />
+  </g>
+
+  <!-- Character Cast Shadows on Road -->
+  <g id="character-shadows" opacity="0.6">
+    <!-- Naomi & Ruth Combined Shadow -->
+    <ellipse cx="940" cy="800" rx="90" ry="18" fill="#2E1B10" transform="rotate(12, 940, 800)" />
+    <!-- Orpah Shadow -->
+    <ellipse cx="1320" cy="655" rx="35" ry="8" fill="#2E1B10" transform="rotate(10, 1320, 655)" />
+  </g>
+
+  <!-- Character Group (Naomi, Ruth, Orpah) -->
+  <g id="character-group">
+    
+    <!-- ORPAH (Background / Departing Figure looking back toward Moab) -->
+    <g id="orpah-character" transform="translate(1280, 560) scale(0.65)">
+      <!-- Mantle / Drapes (Muted Rose Umber & Cream) -->
+      <path d="M 40,110 C 20,80 25,40 45,25 C 65,10 80,30 85,55 C 90,80 80,110 75,140 L 30,140 Z" fill="#8C584C" />
+      <!-- Inner Tunic -->
+      <path d="M 48,60 C 45,80 40,110 35,140 L 68,140 C 65,110 62,80 58,60 Z" fill="#D9C8B0" />
+      <!-- Head Veil / Turning Silhouette -->
+      <path d="M 52,15 C 40,15 35,28 38,42 C 45,45 55,42 62,35 C 65,25 60,15 52,15 Z" fill="#5E3A32" />
+      <!-- Small Travel Sack in Hand -->
+      <ellipse cx="25" cy="115" rx="10" ry="14" fill="#543A2A" />
+    </g>
+
+    <!-- NAOMI (Matriarch leading, gesturing toward Bethlehem) -->
+    <g id="naomi-character" transform="translate(780, 610) scale(1.15)" filter="url(#castShadow)">
+      <!-- Outer Cloak / Mantle (Earth Umber #4A3520) -->
+      <path d="M 50,160 
+               C 20,120 15,60 40,30 
+               C 65,5 95,20 105,50 
+               C 115,80 120,120 110,160 
+               C 90,165 70,165 50,160 Z" fill="#4A3520" />
+
+      <!-- Cloak Fold Highlights & Drapes -->
+      <path d="M 42,45 C 35,70 30,110 38,155 C 50,158 65,155 70,120 C 65,80 55,55 42,45 Z" fill="#6E4A35" />
+      <path d="M 75,55 C 85,80 95,110 102,158 C 90,160 78,160 75,130 C 78,100 78,75 75,55 Z" fill="#3D2A1A" />
+
+      <!-- Inner Tunic (Muted Deep Teal #2B4C4C) -->
+      <path d="M 58,70 C 55,95 52,125 50,158 L 82,158 C 80,125 75,95 70,70 Z" fill="#2B4C4C" />
+
+      <!-- Head Veil & Silhouette -->
+      <path d="M 58,18 C 42,18 38,32 42,50 C 50,55 70,55 78,48 C 82,32 75,18 58,18 Z" fill="#362416" />
+      <!-- Face Profile in Shadow -->
+      <path d="M 72,32 C 76,35 78,40 75,44 C 72,45 68,42 68,38 Z" fill="#B88A68" />
+
+      <!-- Left Arm Gesturing Forward -->
+      <path d="M 75,65 Q 100,60 118,52 Q 112,65 90,78 Z" fill="#4A3520" />
+      <!-- Hand -->
+      <circle cx="120" cy="52" r="5" fill="#B88A68" />
+
+      <!-- Walking Staff in Right Hand -->
+      <line x1="32" y1="40" x2="18" y2="165" stroke="#2B1A0E" stroke-width="5" stroke-linecap="round" />
+    </g>
+
+    <!-- RUTH (Clinging to Naomi in devotion) -->
+    <g id="ruth-character" transform="translate(855, 625) scale(1.1)" filter="url(#castShadow)">
+      <!-- Outer Drapes (Restrained Gold / Amber #D4A359) -->
+      <path d="M 45,150 
+               C 25,110 25,60 45,32 
+               C 65,10 90,20 98,48 
+               C 105,75 100,110 90,150 
+               C 75,155 60,155 45,150 Z" fill="#D4A359" />
+
+      <!-- Drape Shadows & Folds -->
+      <path d="M 40,48 C 32,75 30,110 38,148 C 50,152 62,148 65,115 C 60,80 50,55 40,48 Z" fill="#B5823C" />
+      <path d="M 72,52 C 80,78 88,110 92,148 C 82,150 72,150 70,125 C 72,98 72,75 72,52 Z" fill="#8C6023" />
+
+      <!-- Inner Shawl / Veil (Muted Teal #3C6868) -->
+      <path d="M 52,22 C 38,22 35,35 38,52 C 48,58 68,58 75,50 C 78,35 70,22 52,22 Z" fill="#3C6868" />
+      <path d="M 38,52 C 32,75 28,105 25,135 L 48,142 C 48,110 45,78 42,55 Z" fill="#2B4C4C" />
+
+      <!-- Clasped Hands Holding Naomi's Cloak -->
+      <path d="M 45,68 Q 28,62 12,68 Q 15,76 35,80 Z" fill="#D4A359" />
+      <circle cx="10" cy="68" r="5" fill="#C49672" />
+
+      <!-- Head Inclined in Devotion -->
+      <path d="M 32,35 C 28,38 28,44 32,48 C 36,48 40,44 38,38 Z" fill="#C49672" />
+    </g>
+
+  </g>
+
+  <!-- Midground Rocks & Road Edge Vegetation -->
+  <g id="midground-details">
+    <path d="M 680,820 Q 720,800 760,835 Q 730,860 680,820 Z" fill="#523929" />
+    <path d="M 1210,710 Q 1240,695 1270,720 Q 1250,735 1210,710 Z" fill="#523929" />
+  </g>
+</svg>

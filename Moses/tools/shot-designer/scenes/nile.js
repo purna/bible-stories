@@ -54,7 +54,7 @@ export function build(group) {
     // submerged part is tinted to a light blue (see tintSubmerged) so the
     // channel reads as two shades of blue rather than blue-and-yellow.
     const WATER_Y = -0.4;
-    const CHANNEL_HALF = 10;
+    const CHANNEL_HALF = 16;
 
     function terr(w, d, cx, cz, y, jitter, color, segments) {
         const geo = new THREE.PlaneGeometry(w, d, segments, segments);
@@ -67,24 +67,26 @@ export function build(group) {
         const mesh = add(group, geo, color, cx, y, cz);
         tintSubmerged(geo, cz, y, color);
         // add() builds a fresh material per mesh, so this only affects terrain.
+        // The material colour must go white: with vertexColors enabled three.js
+        // multiplies it by the vertex colour, and sand x blue = muddy green.
         mesh.material.vertexColors = true;
+        mesh.material.color.setHex(0xffffff);
         return mesh;
     }
 
-    // Vertex colour = sand above the waterline, light blue below it, with a
-    // soft band across the shoreline.
+    // Vertex colour = the sand bank outside the channel, cloud-blue inside it.
+    // Everything within the channel is tinted, including the humps that rise
+    // above the waterline, so no yellow ever shows through the river.
     function tintSubmerged(geo, cz, baseY, sandHex) {
         const p = geo.attributes.position;
         const sand = new THREE.Color(sandHex);
-        const shallow = new THREE.Color(0x5fc0d6);
+        const shallow = new THREE.Color(0x4e9ec6);
         const c = new THREE.Color();
         const colors = new Float32Array(p.count * 3);
         for (let i = 0; i < p.count; i++) {
             const wz = p.getZ(i) + cz;          // world z
-            const wy = baseY + p.getY(i);      // world y
-            const inChannel = 1 - Math.min(1, Math.max(0, (Math.abs(wz) - CHANNEL_HALF) / 8));
-            const depth = Math.min(1, Math.max(0, (WATER_Y - wy) / 0.8));
-            c.copy(sand).lerp(shallow, inChannel * depth);
+            const inChannel = 1 - Math.min(1, Math.max(0, (Math.abs(wz) - CHANNEL_HALF) / 14));
+            c.copy(sand).lerp(shallow, inChannel);
             colors[i * 3] = c.r;
             colors[i * 3 + 1] = c.g;
             colors[i * 3 + 2] = c.b;
@@ -94,17 +96,43 @@ export function build(group) {
 
     terr(240, 60, 0, 20, -0.6, 0.8, 0xe3b26a, 24);    // near bank
     terr(260, 110, 0, -70, -0.6, 1.4, 0xdfa75c, 30);  // desert, far side
-    terr(240, 6, 0, -11, -0.2, 0.4, 0x7d9a3c, 40);    // green strip
+
+    /* ── Green river banks ─────────────────────────────────────
+     * Separate objects rather than more terrain, so they sit above the water
+     * and keep their green: the terrain inside the channel is tinted blue to
+     * read as riverbed, and anything sharing that material would go blue too.
+     */
+    function bank(w, d, cx, cz, color, segments) {
+        const geo = new THREE.PlaneGeometry(w, d, segments, Math.max(2, Math.round(segments * d / w)));
+        geo.rotateX(-Math.PI / 2);
+        const pos = geo.attributes.position;
+        for (let i = 0; i < pos.count; i++) {
+            const t = (pos.getZ(i) + d / 2) / d;        // 0 at water, 1 inland
+            pos.setY(i, 0.05 + t * 0.45 + (Math.random() - 0.5) * 0.14);
+        }
+        geo.computeVertexNormals();
+        const m = add(group, geo, color, cx, -0.25, cz);
+        return m;
+    }
+    bank(240, 8, 0, -14, 0x6f9438, 44);               // far bank  z -18..-10
+    bank(240, 10, 0, 15, 0x6f9438, 44);                // near bank z  10..20
+    bank(240, 5, 0, -20.5, 0x5c7f2e, 36);              // darker band behind it
+    bank(240, 6, 0, 22.5, 0x5c7f2e, 36);               // and inland of the near
 
     /* ── Water (animated in update) ───────────────────────────── */
-    // Two shades of blue: a deep channel that lightens toward the banks.
+    // Deep channel blue, with soft drifting cloud reflections on the surface.
     const WATER_D = 20;
+    // A near-white cloud colour renders cream under this scene's warm lights
+    // (0xfff0d0 hemisphere + 0xffe2b0 sun), so the reflection is a clear blue
+    // instead, and the water carries a blue emissive so it stays blue whatever
+    // colour the light is.
+    const CLOUD = new THREE.Color(0x86bcdd);
     const waterGeo = new THREE.PlaneGeometry(240, WATER_D, 60, 14);
     waterGeo.rotateX(-Math.PI / 2);
     {
         const p = waterGeo.attributes.position;
-        const deep = new THREE.Color(0x11506b);
-        const shallow = new THREE.Color(0x3f9fc0);
+        const deep = new THREE.Color(0x0d4660);
+        const shallow = new THREE.Color(0x2f86ad);
         const colors = new Float32Array(p.count * 3);
         const c = new THREE.Color();
         for (let i = 0; i < p.count; i++) {
@@ -116,16 +144,21 @@ export function build(group) {
         }
         waterGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
     }
+    const waterBase = Array.from(waterGeo.attributes.position.array);
+    const waterBaseCol = Float32Array.from(waterGeo.attributes.color.array);
+    const waterCol = waterGeo.attributes.color;
     const water = new THREE.Mesh(waterGeo, new THREE.MeshStandardMaterial({
         color: 0xffffff,
         vertexColors: true,
         flatShading: true,
         roughness: 0.35,
-        metalness: 0.1
+        metalness: 0.1,
+        // Keeps the river blue under the scene's warm sunlight.
+        emissive: 0x0d3b55,
+        emissiveIntensity: 0.55
     }));
     water.position.set(0, WATER_Y, 0);
     group.add(water);
-    const waterBase = Array.from(waterGeo.attributes.position.array);
 
     /* ── Dunes ────────────────────────────────────────────────── */
     [
@@ -224,10 +257,15 @@ export function build(group) {
     for (let i = 0; i < 22; i++) {
         palm(-95 + i * 9 + Math.random() * 5, -10.5 - Math.random() * 3, 0.8 + Math.random() * 0.5);
     }
-    for (let i = 0; i < 70; i++) {
-        const x = -90 + Math.random() * 180;
-        const z = (Math.random() < 0.5 ? -9.2 : 9.5) + Math.random() * 1.2;
-        add(group, new THREE.ConeGeometry(0.12, 1.6 + Math.random(), 3), 0x8faa3a, x, 0.7, z);
+    // Reeds in the shallows, and thicker stands up both green banks. The
+    // channel is z -10..10 and the bank objects run to about z -25 and z 27.
+    for (let i = 0; i < 520; i++) {
+        const x = -95 + Math.random() * 190;
+        const onBank = Math.random() < 0.6;
+        const dist = onBank ? 10.5 + Math.random() * 14 : 8.4 + Math.random() * 2.2;
+        const z = (Math.random() < 0.5 ? -1 : 1) * dist;
+        const h = (onBank ? 1.9 : 1.5) + Math.random() * 1.1;
+        add(group, new THREE.ConeGeometry(0.11, h, 3), onBank ? 0x6f9438 : 0x8faa3a, x, h / 2 - 0.35, z);
     }
 
     /* ── Near bank palms ──────────────────────────────────────── */
@@ -275,7 +313,9 @@ export function build(group) {
 
     return {
         background: new THREE.Color(SKY),
-        fog: new THREE.Fog(SKY, 60, 190),
+        // Pushed well back: a near fog start tints the far half of the river
+        // with the warm sky colour and the water reads as yellow.
+        fog: new THREE.Fog(SKY, 130, 460),
 
         update(t) {
             // Rolling swell on the river.
@@ -287,6 +327,24 @@ export function build(group) {
                 );
             }
             pos.needsUpdate = true;
+
+            // Clouds reflected on the surface: large, soft, slow-drifting
+            // patches of light blue.
+            const arr = waterCol.array;
+            for (let i = 0; i < pos.count; i++) {
+                const x = waterBase[i * 3];
+                const z = waterBase[i * 3 + 2];
+                const n =
+                    Math.sin(x * 0.045 + t * 0.16) * 0.5 +
+                    Math.sin(z * 0.07 - t * 0.11) * 0.3 +
+                    Math.sin((x + z) * 0.028 + t * 0.07) * 0.2;
+                const k = Math.min(0.55, Math.max(0, (n - 0.18) * 1.4));
+                const b = i * 3;
+                arr[b] = waterBaseCol[b] + (CLOUD.r - waterBaseCol[b]) * k;
+                arr[b + 1] = waterBaseCol[b + 1] + (CLOUD.g - waterBaseCol[b + 1]) * k;
+                arr[b + 2] = waterBaseCol[b + 2] + (CLOUD.b - waterBaseCol[b + 2]) * k;
+            }
+            waterCol.needsUpdate = true;
 
             // Boats drift downstream and bob.
             boats.forEach(([boat, speed], i) => {

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Milestone Sandstone Texture Gradient -->
+    <linearGradient id="milestoneStoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C89860" />
+      <stop offset="40%" stop-color="#A87A4A" />
+      <stop offset="80%" stop-color="#785230" />
+      <stop offset="100%" stop-color="#4A301A" />
+    </linearGradient>
+
+    <!-- Bottom Vignette Stone Frame Gradient -->
+    <linearGradient id="fgStoneVignette" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3A281A" />
+      <stop offset="40%" stop-color="#24170D" />
+      <stop offset="100%" stop-color="#120B05" />
+    </linearGradient>
+
+    <!-- Thorny Bramble Bush Gradient -->
+    <linearGradient id="brambleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3D4D38" />
+      <stop offset="100%" stop-color="#1F291D" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Foreground: Milestone Stone Marker ("10 FURLONGS TO BETHLEHEM" / Ancient Footprint Inscription) -->
+  <g id="fg-milestone-marker" transform="translate(140, 520)">
+    <!-- Milestone Shadow -->
+    <ellipse cx="110" cy="410" rx="130" ry="32" fill="#120B05" opacity="0.7" transform="rotate(-5, 110, 410)" />
+
+    <!-- Stone Pillar Body -->
+    <path d="M 30,390 
+             C 10,240 20,80 70,20 
+             C 120,-10 180,10 210,60 
+             C 240,120 230,260 210,390 
+             Z" fill="url(#milestoneStoneGrad)" />
+
+    <!-- Carved Inscription & Two Footprints Emblem -->
+    <g id="milestone-carvings" fill="#3A2210" opacity="0.85">
+      <!-- Ancient Text Lines -->
+      <rect x="75" y="90" width="90" height="8" rx="2" />
+      <rect x="65" y="110" width="110" height="7" rx="2" />
+      <rect x="80" y="128" width="80" height="7" rx="2" />
+
+      <!-- Carved Sandal Footprints Emblem -->
+      <!-- Left Footprint -->
+      <path d="M 85,185 C 75,180 72,165 80,155 C 90,145 102,150 108,162 C 112,172 105,190 95,190 Z" />
+      <!-- Right Footprint -->
+      <path d="M 125,185 C 115,180 112,165 120,155 C 130,145 142,150 148,162 C 152,172 145,190 135,190 Z" />
+    </g>
+
+    <!-- Stone Cracks & Texture Surface -->
+    <path d="M 70,20 Q 90,120 60,220 Q 80,310 50,390" stroke="#2B180B" stroke-width="4" fill="none" opacity="0.6" />
+    <path d="M 160,50 Q 140,140 180,250" stroke="#2B180B" stroke-width="3" fill="none" opacity="0.5" />
+  </g>
+
+  <!-- Framing Thorny Brambles & Desert Grass around Milestone (grass key) -->
+  <g id="fg-brambles-and-thorns">
+    <!-- Left Bush Base -->
+    <path d="M -10,850 Q 80,720 180,780 Q 280,820 340,750 Q 420,860 220,960 Z" fill="url(#brambleGrad)" />
+
+    <!-- Sharp Thorny Branches -->
+    <path d="M 60,920 Q 120,800 220,720" stroke="#1F291D" stroke-width="7" fill="none" stroke-linecap="round" />
+    <path d="M 180,880 Q 260,760 360,710" stroke="#1F291D" stroke-width="6" fill="none" stroke-linecap="round" />
+
+    <!-- Thorns -->
+    <path d="M 140,780 L 155,770 L 142,790 Z" fill="#0D120C" />
+    <path d="M 180,750 L 195,740 L 182,760 Z" fill="#0D120C" />
+    <path d="M 280,745 L 295,735 L 282,755 Z" fill="#0D120C" />
+
+    <!-- Dry Grass Tufts (grass key) -->
+    <path d="M 320,900 Q 360,810 390,790 M 330,900 Q 380,820 420,810 M 340,900 Q 400,840 450,850" stroke="#A88C4A" stroke-width="4" fill="none" />
+  </g>
+
+  <!-- Right Foreground: Low Stony Ridge & Dry Bramble Frame -->
+  <g id="fg-right-frame">
+    <path d="M 1580,920 Q 1720,810 1930,830 L 1930,1090 L 1500,1090 Z" fill="url(#brambleGrad)" />
+    <path d="M 1650,910 Q 1750,820 1880,780" stroke="#A88C4A" stroke-width="4" fill="none" />
+    <path d="M 1680,920 Q 1780,840 1910,820" stroke="#A88C4A" stroke-width="3" fill="none" />
+  </g>
+
+  <!-- Footprints in the Dust along the Bottom Path Margin -->
+  <g id="dusty-path-footprints" fill="#1A1109" opacity="0.55">
+    <ellipse cx="780" cy="980" rx="18" ry="8" transform="rotate(25, 780, 980)" />
+    <ellipse cx="830" cy="950" rx="16" ry="7" transform="rotate(22, 830, 950)" />
+    <ellipse cx="890" cy="920" rx="17" ry="7" transform="rotate(20, 890, 920)" />
+  </g>
+
+  <!-- Bottom Dark Vignette Threshold Frame (stone key) -->
+  <g id="fg-vignette-threshold">
+    <path d="M -10,950 
+             Q 450,890 960,940 
+             Q 1480,980 1930,910 
+             L 1930,1090 L -10,1090 Z" fill="url(#fgStoneVignette)" />
+    <path d="M -10,950 Q 450,890 960,940 Q 1480,980 1930,910" stroke="#5A3E2B" stroke-width="3" fill="none" opacity="0.5" />
+  </g>
+</svg>
