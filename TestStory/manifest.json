@@ -1,0 +1,16 @@
+{
+  "name": "MediaMesh Test Story",
+  "short_name": "Test Story",
+  "description": "A tiny offline comic package used to test story downloading in MediaMesh.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#17131f",
+  "theme_color": "#ffd84d",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

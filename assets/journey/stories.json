@@ -262,5 +262,16 @@
     "icon": "wall",
     "x": 43,
     "y": 93.39999999999999
+  },
+  {
+    "id": "TestStory",
+    "title": "MediaMesh Test Story",
+    "entry": "TestStory/",
+    "references": "Test package",
+    "description": "A tiny offline story package for testing downloads in MediaMesh.",
+    "chapters": 2,
+    "icon": "leaf",
+    "x": 24,
+    "y": 2.0
   }
 ]

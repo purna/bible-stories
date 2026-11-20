@@ -1,0 +1,16 @@
+{
+  "id": "welcome",
+  "name": "Chapter 1 · Welcome",
+  "lines": [
+    {
+      "id": "welcome_0",
+      "text": "This is a tiny test story. Everything you see came from the installed folder — no network needed.",
+      "art": "assets/art/scene-one.svg"
+    },
+    {
+      "id": "welcome_1",
+      "text": "The next chapter lets you make a choice, just like the full Bible stories do.",
+      "art": "assets/art/scene-one.svg"
+    }
+  ]
+}

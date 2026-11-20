@@ -1,0 +1,26 @@
+{
+  "id": "choice",
+  "name": "Chapter 2 · Your choice",
+  "lines": [
+    {
+      "id": "choice_0",
+      "text": "Which part of an offline story would you like to test next?",
+      "art": "assets/art/scene-two.svg",
+      "choices": [
+        {
+          "label": "Turn the pages",
+          "note": "Navigation works — the HTML, CSS and JavaScript all came from the local package."
+        },
+        {
+          "label": "Look at the pictures",
+          "note": "Images load from the local package, including a shared SVG one folder up."
+        }
+      ]
+    },
+    {
+      "id": "choice_1",
+      "text": "That is the end of the test. The full stories use the same download and reader mechanism.",
+      "art": "assets/art/scene-two.svg"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="A simple landscape with a sunrise">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c2340"/>
+      <stop offset="1" stop-color="#ffd84d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1400" cy="320" r="180" fill="#fff4d6" opacity="0.9"/>
+  <path d="M0 760 Q480 560 960 760 T1920 760 V1080 H0 Z" fill="#39a96b"/>
+  <path d="M0 900 Q600 740 1200 900 T1920 900 V1080 H0 Z" fill="#17131f" opacity="0.8"/>
+</svg>

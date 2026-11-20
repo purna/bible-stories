@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="A simple night sky with stars">
+  <rect width="1920" height="1080" fill="#17131f"/>
+  <g fill="#fff4d6">
+    <circle cx="220" cy="180" r="9"/><circle cx="480" cy="320" r="6"/>
+    <circle cx="760" cy="140" r="11"/><circle cx="1100" cy="280" r="7"/>
+    <circle cx="1480" cy="160" r="10"/><circle cx="1720" cy="360" r="6"/>
+    <circle cx="360" cy="600" r="8"/><circle cx="900" cy="520" r="7"/>
+    <circle cx="1360" cy="640" r="9"/><circle cx="1660" cy="560" r="6"/>
+  </g>
+  <path d="M0 880 Q480 760 960 880 T1920 880 V1080 H0 Z" fill="#2c2340"/>
+</svg>

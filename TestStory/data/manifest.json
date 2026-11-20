@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "storyId": "TestStory",
+  "acts": [
+    {
+      "id": "welcome",
+      "name": "Chapter 1 · Welcome",
+      "file": "act1_welcome.json",
+      "art": "assets/art/scene-one.svg"
+    },
+    {
+      "id": "choice",
+      "name": "Chapter 2 · Your choice",
+      "file": "act2_choice.json",
+      "art": "assets/art/scene-two.svg"
+    }
+  ]
+}

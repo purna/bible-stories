@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "description": "MediaMesh test story precache manifest",
+  "urls": [
+    "index.html",
+    "manifest.json",
+    "favicon.svg",
+    "css/story.css",
+    "js/story.js",
+    "data/manifest.json",
+    "data/act1_welcome.json",
+    "data/act2_choice.json",
+    "assets/art/scene-one.svg",
+    "assets/art/scene-two.svg",
+    "README.md",
+    "../shared/svg/balloons/caption-spoken.svg"
+  ]
+}

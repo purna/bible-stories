@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17131f">
+  <title>MediaMesh Test Story</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/story.css?v=1">
+</head>
+<body>
+  <div id="startScreen" class="screen">
+    <div class="cover">
+      <div class="eyebrow">MEDIAMESH · TEST PACKAGE</div>
+      <h1>Test Story</h1>
+      <p class="subtitle">A tiny offline comic used to check downloading and reading.</p>
+      <img class="cover-art" src="assets/art/scene-one.svg" alt="A simple illustrated landscape">
+      <button id="startBtn" type="button">Begin the story</button>
+    </div>
+  </div>
+
+  <div id="reader" class="screen hidden">
+    <header>
+      <span id="chapterName">Chapter</span>
+      <span id="chapterCount"></span>
+    </header>
+    <main>
+      <img id="scene" src="assets/art/scene-one.svg" alt="Story scene">
+      <div id="line" class="line"></div>
+      <div id="choices" class="choices"></div>
+    </main>
+    <footer>
+      <img class="balloon" src="../shared/svg/balloons/caption-spoken.svg" alt="">
+      <button id="nextBtn" type="button">Next</button>
+    </footer>
+  </div>
+
+  <div id="endScreen" class="screen hidden">
+    <div class="cover">
+      <div class="eyebrow">ALL DONE</div>
+      <h1>Thanks for reading!</h1>
+      <p class="subtitle">The story was loaded entirely from the installed package.</p>
+      <p id="picked" class="picked"></p>
+    </div>
+  </div>
+
+  <script src="js/story.js?v=1"></script>
+</body>
+</html>
