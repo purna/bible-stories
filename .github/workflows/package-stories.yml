@@ -1,0 +1,46 @@
+# Builds downloadable ZIP packages for story folders that opt in with a
+# mediamesh-package.json config. Results are committed to dist/ so they are
+# immediately available from GitHub Pages at /dist/<story-id>.zip.
+name: Package story folders
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "package-stories"
+  cancel-in-progress: false
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate story package configs
+        run: node scripts/package-stories.mjs --check
+
+      - name: Build story packages
+        run: node scripts/package-stories.mjs
+
+      - name: Commit dist/
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist
+          if git diff --cached --quiet; then
+            echo "No package changes to commit."
+          else
+            git commit -m "chore: rebuild story packages"
+            git push
+          fi

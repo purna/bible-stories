@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-11-20T10:01:07.493Z",
+  "format": "mediamesh-story-package-v1",
+  "packages": [
+    {
+      "id": "TestStory",
+      "title": "MediaMesh Test Story",
+      "version": "1.0.0",
+      "entry": "TestStory/",
+      "file": "TestStory.zip",
+      "files": 13,
+      "size": 7185,
+      "sha256": "d20811dd51e8201e80eba61ffec123947b668ff350e138a78e26d2530dce37ca"
+    }
+  ]
+}

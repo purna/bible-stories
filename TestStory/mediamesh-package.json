@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "id": "TestStory",
+  "title": "MediaMesh Test Story",
+  "version": "1.0.0",
+  "entry": "TestStory/",
+  "files": [
+    "index.html",
+    "manifest.json",
+    "favicon.svg",
+    "README.md",
+    "css/*.css",
+    "js/*.js",
+    "data/*.json",
+    "assets/**/*",
+    "../shared/svg/balloons/caption-spoken.svg"
+  ]
+}

@@ -21,3 +21,10 @@ https://purna.github.io/bible-stories/TestStory/
 
 `assets/journey/stories.json` has an entry with `"id": "TestStory"` and
 `"entry": "TestStory/"` so the MediaMesh app's story catalog includes it.
+
+`mediamesh-package.json` opts this folder into the packaging workflow. After a
+push to `main`, the finished download is available at:
+
+https://purna.github.io/bible-stories/dist/TestStory.zip
+
+See `PACKAGING.md` at the repository root for the config format and details.
