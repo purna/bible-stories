@@ -1,11 +1,20 @@
-# Builds downloadable ZIP packages for story folders that opt in with a
-# mediamesh-package.json config. Results are committed to dist/ so they are
-# immediately available from GitHub Pages at /dist/<story-id>.zip.
-name: Package story folders
+# Packages every complete story in assets/journey/stories.json.
+#
+# A story is complete when:
+#   - it is listed in assets/journey/stories.json
+#   - its folder contains index.html
+#   - its local assets can be resolved from precache-manifest.json or by
+#     crawling the story's HTML/CSS/JS references
+#
+# The generated ZIPs and dist/manifest.json are committed back to main so
+# MediaMesh can fetch them from /dist/<story-id>.zip on GitHub Pages.
+name: Package complete stories
 
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - "dist/**"
   workflow_dispatch:
 
 permissions:
@@ -21,13 +30,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Validate story package configs
+      - name: Validate complete story packages
         run: node scripts/package-stories.mjs --check
 
       - name: Build story packages
@@ -40,7 +51,8 @@ jobs:
           git add dist
           if git diff --cached --quiet; then
             echo "No package changes to commit."
-          else
-            git commit -m "chore: rebuild story packages"
-            git push
+            exit 0
           fi
+          git commit -m "chore: rebuild story packages"
+          git pull --rebase origin main
+          git push origin HEAD:main
