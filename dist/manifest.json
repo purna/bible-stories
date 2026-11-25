@@ -8,8 +8,8 @@
       "entry": "Abraham/",
       "file": "Abraham.zip",
       "files": 489,
-      "size": 4200303,
-      "sha256": "3234abeaea9040b765c874ae85b29e647ddf603d5d57495344d666620b6bf894"
+      "size": 4201089,
+      "sha256": "de9c8c7aa173a5759e2578ccf4f411cff20e37acb23fb79087ba9a7a53387071"
     },
     {
       "id": "Adam",
@@ -18,8 +18,8 @@
       "entry": "Adam/",
       "file": "Adam.zip",
       "files": 451,
-      "size": 45775674,
-      "sha256": "92bdb271545b4a8c394712f676389c3b25fe1bfa87194bad2ed91c32b22ebbd0"
+      "size": 45776460,
+      "sha256": "3d3cd24620e1e72c8d554f3bd2a360f1d300ff07a746c356b72ef59be94d3f99"
     },
     {
       "id": "Babel",
@@ -38,8 +38,8 @@
       "entry": "Daniel/",
       "file": "Daniel.zip",
       "files": 411,
-      "size": 45403174,
-      "sha256": "9a8eb54d825899c22ad4dc3707b73ccf48702d33259ecd185a195b70ccd17b49"
+      "size": 45403960,
+      "sha256": "7940cd5b044801cda86f4297f897653025754206d399bd4c86ec4774de97efe7"
     },
     {
       "id": "David",
@@ -48,8 +48,8 @@
       "entry": "David/",
       "file": "David.zip",
       "files": 507,
-      "size": 5108297,
-      "sha256": "d40c529b435275827b4b2a1164bde1e697c44a1d270c1ece7b8f91794b1f6689"
+      "size": 5109083,
+      "sha256": "42c3b5937353a8f0e5a07f35c755b423cd6034aa5b1db325bb84deef52960caf"
     },
     {
       "id": "Deborah",
@@ -58,8 +58,8 @@
       "entry": "Deborah/",
       "file": "Deborah.zip",
       "files": 332,
-      "size": 3989321,
-      "sha256": "2ab7f9327663b0e4376fb26942e33a062356a0ad4b07a5ca0a1aab86c3a940b0"
+      "size": 3990107,
+      "sha256": "ec27254fb7c17af642ff3c7f1ef223e2160387513c37276d6fbcf1b187e4b67f"
     },
     {
       "id": "Elijah",
@@ -68,8 +68,8 @@
       "entry": "Elijah/",
       "file": "Elijah.zip",
       "files": 400,
-      "size": 50637916,
-      "sha256": "8081399ecea5cfb5031fccfbdb7392fc9ac74a4173e621545616d2e843aa0c85"
+      "size": 50638702,
+      "sha256": "0dc271bb7c6427a9bea2964dae00d1d7382e1a7886737ea302f8461babe9699f"
     },
     {
       "id": "Elisha",
@@ -78,8 +78,8 @@
       "entry": "Elisha/",
       "file": "Elisha.zip",
       "files": 414,
-      "size": 4070817,
-      "sha256": "7bcd0be5ec4bdd4b4219f22c358504afc55803106832bc47101931d5f3999a22"
+      "size": 4071603,
+      "sha256": "a5b714c38cb71204701de96537bab8cdbd379cc0c2e58dd47befe03fe4315d05"
     },
     {
       "id": "Enoch",
@@ -88,8 +88,8 @@
       "entry": "Enoch/",
       "file": "Enoch.zip",
       "files": 367,
-      "size": 4022386,
-      "sha256": "a52db6e7cabc032bbaed22746d0f1548d6c9fab2f775707a6bf73edb008a0107"
+      "size": 4023172,
+      "sha256": "16aa892b445e85bfef62717ff4747ec8fc5673e20142a5179149f2f444b58f42"
     },
     {
       "id": "Esther",
@@ -98,8 +98,8 @@
       "entry": "Esther/",
       "file": "Esther.zip",
       "files": 430,
-      "size": 4100321,
-      "sha256": "11be9a5d000cce2f029ca20c6c1493fe456943c2c72f1a05b65c8a0e9906f041"
+      "size": 4101107,
+      "sha256": "6fa7654a14e850a6daba914bdbc0506cf0859d6aa1220f1a1895ec2b9f64769c"
     },
     {
       "id": "Gideon",
@@ -108,8 +108,8 @@
       "entry": "Gideon/",
       "file": "Gideon.zip",
       "files": 369,
-      "size": 4028480,
-      "sha256": "045de75b7ae1526ca194714b6901c7549426ba771befb5892209b7b2a1e4c000"
+      "size": 4029266,
+      "sha256": "d64a74659d4f95412e709f055cc6c4de3a9a7e90f337138a644811daa46f2430"
     },
     {
       "id": "Hannah",
@@ -118,8 +118,8 @@
       "entry": "Hannah/",
       "file": "Hannah.zip",
       "files": 385,
-      "size": 4040982,
-      "sha256": "360f3e2294baa3cc811eaabd7a6093fa9e918e261bb10d7ef982d0abff1d459e"
+      "size": 4041768,
+      "sha256": "9ade9d4923133413431d934dd5730acc015a2e8f331dcc0a7ac78d1cc344ba6c"
     },
     {
       "id": "Isaiah",
@@ -128,8 +128,8 @@
       "entry": "Isaiah/",
       "file": "Isaiah.zip",
       "files": 413,
-      "size": 4074183,
-      "sha256": "2120c69975c813599301fd24c3dfd98c71c5f600b0923883d59469a98b632422"
+      "size": 4074969,
+      "sha256": "b26c4e340aca51a6c1a7f56f72610ab7b300e93d2cdc462bbad1024f06d189fa"
     },
     {
       "id": "Jacob",
@@ -138,8 +138,8 @@
       "entry": "Jacob/",
       "file": "Jacob.zip",
       "files": 434,
-      "size": 4096402,
-      "sha256": "40793a7ccda26883ffd15cb7b080edc06d6a58e0daa323e31fe921a6b4657ace"
+      "size": 4097188,
+      "sha256": "ede98ce27d04e048c6f997d29ff892bf57a69ca2f2afdccfcf20ef80679e368c"
     },
     {
       "id": "Jeremiah",
@@ -148,8 +148,8 @@
       "entry": "Jeremiah/",
       "file": "Jeremiah.zip",
       "files": 433,
-      "size": 4103182,
-      "sha256": "399ac414a0d7e8384937461118b96ca1206846b2d6a5993fd70d348b92cae355"
+      "size": 4103968,
+      "sha256": "a26a4c9ef042ddb29bb0aef9dad835e702ac0bca695f7d70add0941047315cd9"
     },
     {
       "id": "Job",
@@ -158,8 +158,8 @@
       "entry": "Job/",
       "file": "Job.zip",
       "files": 432,
-      "size": 4096453,
-      "sha256": "e8adf58ec72d07d71416ff19c956dc09fd24003301bdeddeee7a4954338673fd"
+      "size": 4097239,
+      "sha256": "a12683bf981092487ef7d81d81a11a70549804e6fed139f601859e2b7fd2896a"
     },
     {
       "id": "Jonah",
@@ -168,8 +168,8 @@
       "entry": "Jonah/",
       "file": "Jonah.zip",
       "files": 440,
-      "size": 12954356,
-      "sha256": "33aa4801b955fd85b363f7093e33a74726c1669d61ec01bfd86ccc5ff318e753"
+      "size": 12955142,
+      "sha256": "8fd45922080f7548b87ff37ae17d32472b66189e4002bbbfb41db5f200ae441a"
     },
     {
       "id": "Joseph",
@@ -178,8 +178,8 @@
       "entry": "Joseph/",
       "file": "Joseph.zip",
       "files": 438,
-      "size": 4119664,
-      "sha256": "21143e80e8010d42f76df679337d8c810b68facaed4e09e5f86e976dc09a37d2"
+      "size": 4120450,
+      "sha256": "1fd9d4232d5ca5216ab76e495a6a5938e2c790dc3ffe0c50dc450f325a3f6acd"
     },
     {
       "id": "Joshua",
@@ -188,8 +188,8 @@
       "entry": "Joshua/",
       "file": "Joshua.zip",
       "files": 431,
-      "size": 4091186,
-      "sha256": "39e2d26506e0ce7c362c4ef3eb46ebfcbfec8280e40837c065aefc3e5c536f9c"
+      "size": 4091972,
+      "sha256": "4f802afa1461c74f328c7f2d2a247c8f65bd168963bcd1dce5086380cb1ed530"
     },
     {
       "id": "Moses",
@@ -198,8 +198,8 @@
       "entry": "Moses/",
       "file": "Moses.zip",
       "files": 504,
-      "size": 6339536,
-      "sha256": "f0912d0f50b8874e3c782c0f6d605bb3b001f558498dbe680c39f832da5314c2"
+      "size": 6340322,
+      "sha256": "bcf47e1e53840f8821aa37e29662a279f021cfb2d6f9c4d191bc991379224651"
     },
     {
       "id": "Nehemiah",
@@ -208,8 +208,8 @@
       "entry": "Nehemiah/",
       "file": "Nehemiah.zip",
       "files": 433,
-      "size": 4102988,
-      "sha256": "c3abdfdcecc42ee6a5cabe644e1eca6059e574af0261097e9165ce0d2c6ff382"
+      "size": 4103774,
+      "sha256": "2615872509aac7a65d648f2189e1f848ec4a684b087d879977e3539c59bc8e91"
     },
     {
       "id": "Noah",
@@ -218,8 +218,8 @@
       "entry": "Noah/",
       "file": "Noah.zip",
       "files": 431,
-      "size": 48178073,
-      "sha256": "28472b774466c4590e1b85092dfc740e4447c9182d7fc5082760300a64abe08f"
+      "size": 48178859,
+      "sha256": "dc440387fc84cf5b8c28c1ebdc1a8559faca88275a01ca8266e087e5e56b0e32"
     },
     {
       "id": "Ruth",
@@ -228,8 +228,8 @@
       "entry": "Ruth/",
       "file": "Ruth.zip",
       "files": 400,
-      "size": 7670630,
-      "sha256": "5dccb1b815a041801000027dab20874456993c6c228c43fb322801197e6827c3"
+      "size": 7671416,
+      "sha256": "36a18342bc14a1c30215a9cc7196d532127edd58207e0b1eb6b08aa587f17bb7"
     },
     {
       "id": "Samuel",
@@ -238,8 +238,8 @@
       "entry": "Samuel/",
       "file": "Samuel.zip",
       "files": 434,
-      "size": 4098913,
-      "sha256": "657c5ac1e2b8c27dd1f72d813b0fbcc092f61d5b0ceda537a31bf5246c019358"
+      "size": 4099699,
+      "sha256": "c7ad234ec1af3949e41de6175788330389c3f7c9163fde4657f308bcb4c7a0e7"
     },
     {
       "id": "TestStory",
