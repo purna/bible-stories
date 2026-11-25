@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T10:01:07.493Z",
+  "generatedAt": "2026-11-23T10:42:15.085Z",
   "format": "mediamesh-story-package-v1",
   "packages": [
     {
@@ -9,8 +9,8 @@
       "entry": "TestStory/",
       "file": "TestStory.zip",
       "files": 13,
-      "size": 7185,
-      "sha256": "d20811dd51e8201e80eba61ffec123947b668ff350e138a78e26d2530dce37ca"
+      "size": 7289,
+      "sha256": "2e89b3d2c000fd5cc4e6805b4d57066d3e25610b99def0cc05900a92356799e5"
     }
   ]
 }
