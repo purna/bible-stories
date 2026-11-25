@@ -8,7 +8,9 @@
     "chapters": 6,
     "icon": "leaf",
     "x": 43,
-    "y": 6.0
+    "y": 6.0,
+    "summary": "Creation, the garden, and the first choices that shape a family.",
+    "thumbnail": "Adam/mediamesh-thumbnail.svg"
   },
   {
     "id": "Enoch",
@@ -19,7 +21,9 @@
     "chapters": 7,
     "icon": "footsteps",
     "x": 64,
-    "y": 9.8
+    "y": 9.8,
+    "summary": "A faithful walk through an ordinary life that ends in God’s presence.",
+    "thumbnail": "Enoch/mediamesh-thumbnail.svg"
   },
   {
     "id": "Noah",
@@ -30,7 +34,9 @@
     "chapters": 10,
     "icon": "ark",
     "x": 84,
-    "y": 13.6
+    "y": 13.6,
+    "summary": "A long build, a global flood, and the covenant that follows.",
+    "thumbnail": "Noah/mediamesh-thumbnail.svg"
   },
   {
     "id": "Babel",
@@ -41,7 +47,9 @@
     "chapters": 5,
     "icon": "tower",
     "x": 84,
-    "y": 17.4
+    "y": 17.4,
+    "summary": "A united city reaches for heaven and scatters into many languages.",
+    "thumbnail": "Abraham/Babel/mediamesh-thumbnail.svg"
   },
   {
     "id": "Abraham",
@@ -52,7 +60,9 @@
     "chapters": 10,
     "icon": "tent",
     "x": 64,
-    "y": 21.2
+    "y": 21.2,
+    "summary": "A promise-driven journey from Ur to a costly test on the mountain.",
+    "thumbnail": "Abraham/mediamesh-thumbnail.svg"
   },
   {
     "id": "Jacob",
@@ -63,7 +73,9 @@
     "chapters": 10,
     "icon": "ladder",
     "x": 43,
-    "y": 25.0
+    "y": 25.0,
+    "summary": "A deceiver wrestles with family, blessing, and a new name.",
+    "thumbnail": "Jacob/mediamesh-thumbnail.svg"
   },
   {
     "id": "Joseph",
@@ -74,7 +86,9 @@
     "chapters": 10,
     "icon": "grain",
     "x": 43,
-    "y": 28.799999999999997
+    "y": 28.799999999999997,
+    "summary": "Betrayal, slavery, and prison become a path to forgiveness.",
+    "thumbnail": "Joseph/mediamesh-thumbnail.svg"
   },
   {
     "id": "Moses",
@@ -85,7 +99,9 @@
     "chapters": 15,
     "icon": "tablets",
     "x": 64,
-    "y": 32.599999999999994
+    "y": 32.599999999999994,
+    "summary": "A rescued child leads a people from slavery toward covenant.",
+    "thumbnail": "Moses/mediamesh-thumbnail.svg"
   },
   {
     "id": "Joshua",
@@ -96,7 +112,9 @@
     "chapters": 10,
     "icon": "trumpet",
     "x": 84,
-    "y": 36.4
+    "y": 36.4,
+    "summary": "A new generation crosses the Jordan and learns courageous obedience.",
+    "thumbnail": "Joshua/mediamesh-thumbnail.svg"
   },
   {
     "id": "Deborah",
@@ -107,7 +125,9 @@
     "chapters": 7,
     "icon": "palm",
     "x": 84,
-    "y": 40.199999999999996
+    "y": 40.199999999999996,
+    "summary": "A prophet and a general lead Israel out of oppression.",
+    "thumbnail": "Deborah/mediamesh-thumbnail.svg"
   },
   {
     "id": "Gideon",
@@ -118,7 +138,9 @@
     "chapters": 7,
     "icon": "lantern",
     "x": 64,
-    "y": 44.0
+    "y": 44.0,
+    "summary": "A hesitant judge learns that strength comes from faithful obedience.",
+    "thumbnail": "Gideon/mediamesh-thumbnail.svg"
   },
   {
     "id": "Ruth",
@@ -129,7 +151,9 @@
     "chapters": 8,
     "icon": "grain",
     "x": 43,
-    "y": 47.8
+    "y": 47.8,
+    "summary": "Loyal kindness turns loss into belonging and a new family line.",
+    "thumbnail": "Ruth/mediamesh-thumbnail.svg"
   },
   {
     "id": "Hannah",
@@ -140,7 +164,9 @@
     "chapters": 8,
     "icon": "prayer",
     "x": 43,
-    "y": 51.599999999999994
+    "y": 51.599999999999994,
+    "summary": "Honest prayer and a promised child given back to God.",
+    "thumbnail": "Hannah/mediamesh-thumbnail.svg"
   },
   {
     "id": "Samuel",
@@ -151,7 +177,9 @@
     "chapters": 10,
     "icon": "scroll",
     "x": 64,
-    "y": 55.4
+    "y": 55.4,
+    "summary": "A listening prophet guides Israel through the demand for a king.",
+    "thumbnail": "Samuel/mediamesh-thumbnail.svg"
   },
   {
     "id": "David",
@@ -162,7 +190,9 @@
     "chapters": 12,
     "icon": "harp",
     "x": 84,
-    "y": 59.199999999999996
+    "y": 59.199999999999996,
+    "summary": "A shepherd-king navigates power, failure, and repentance.",
+    "thumbnail": "David/mediamesh-thumbnail.svg"
   },
   {
     "id": "Elijah",
@@ -173,7 +203,9 @@
     "chapters": 7,
     "icon": "flame",
     "x": 84,
-    "y": 63.0
+    "y": 63.0,
+    "summary": "Zeal for God is refined through wilderness, stillness, and mercy.",
+    "thumbnail": "Elijah/mediamesh-thumbnail.svg"
   },
   {
     "id": "Elisha",
@@ -184,7 +216,9 @@
     "chapters": 9,
     "icon": "water",
     "x": 64,
-    "y": 66.8
+    "y": 66.8,
+    "summary": "Everyday mercy and faithful power continue Elijah’s mission.",
+    "thumbnail": "Elisha/mediamesh-thumbnail.svg"
   },
   {
     "id": "Job",
@@ -195,7 +229,9 @@
     "chapters": 10,
     "icon": "sun",
     "x": 43,
-    "y": 70.6
+    "y": 70.6,
+    "summary": "Honest suffering meets a God who answers from the whirlwind.",
+    "thumbnail": "Job/mediamesh-thumbnail.svg"
   },
   {
     "id": "Jonah",
@@ -206,7 +242,9 @@
     "chapters": 4,
     "icon": "fish",
     "x": 43,
-    "y": 74.39999999999999
+    "y": 74.39999999999999,
+    "summary": "A reluctant prophet discovers that mercy reaches beyond his borders.",
+    "thumbnail": "Jonah/mediamesh-thumbnail.svg"
   },
   {
     "id": "Isaiah",
@@ -217,7 +255,9 @@
     "chapters": 9,
     "icon": "scroll",
     "x": 64,
-    "y": 78.2
+    "y": 78.2,
+    "summary": "Holy vision calls a people to warning, comfort, and durable hope.",
+    "thumbnail": "Isaiah/mediamesh-thumbnail.svg"
   },
   {
     "id": "Jeremiah",
@@ -228,7 +268,9 @@
     "chapters": 10,
     "icon": "scroll",
     "x": 84,
-    "y": 82.0
+    "y": 82.0,
+    "summary": "Truth and hope are planted while Jerusalem collapses.",
+    "thumbnail": "Jeremiah/mediamesh-thumbnail.svg"
   },
   {
     "id": "Daniel",
@@ -239,7 +281,9 @@
     "chapters": 5,
     "icon": "lion",
     "x": 84,
-    "y": 85.8
+    "y": 85.8,
+    "summary": "Faithful courage endures inside an empire built on fear.",
+    "thumbnail": "Daniel/mediamesh-thumbnail.svg"
   },
   {
     "id": "Esther",
@@ -250,7 +294,9 @@
     "chapters": 10,
     "icon": "crown",
     "x": 64,
-    "y": 89.6
+    "y": 89.6,
+    "summary": "Hidden identity becomes courageous advocacy for her people.",
+    "thumbnail": "Esther/mediamesh-thumbnail.svg"
   },
   {
     "id": "Nehemiah",
@@ -261,7 +307,9 @@
     "chapters": 10,
     "icon": "wall",
     "x": 43,
-    "y": 93.39999999999999
+    "y": 93.39999999999999,
+    "summary": "Prayerful planning rebuilds walls and a community’s justice.",
+    "thumbnail": "Nehemiah/mediamesh-thumbnail.svg"
   },
   {
     "id": "TestStory",
@@ -272,6 +320,8 @@
     "chapters": 2,
     "icon": "leaf",
     "x": 24,
-    "y": 2.0
+    "y": 2.0,
+    "summary": "A tiny offline story used to verify package downloads.",
+    "thumbnail": "TestStory/mediamesh-thumbnail.svg"
   }
 ]
